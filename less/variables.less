@@ -1,18 +1,31 @@
 // Main colors
 // ===========
-@light-color:#fff;
-@dark-color:#333;
 @primary-color:#3eb4e4;
 @secondary-color:#1b87b2;
 @tertiary-color:darken(#1b87b2, 10%);
+
+@foreground-color:#333;
+@background-color:#fff;
+
+@inverted-foreground-color:#fff;
+@inverted-background-color:#3eb4e4;
+
 @transparency:rgba(255,255,255,0.8);
 
-// Highlight colors
-// ================
-@highlight-1:#c46372;
-@highlight-2:#354627;
-@highlight-3:#444555;
-@highlight-4:#456456;
+// Item colors
+// ===========
+@item-color:@primary-color;
+@item-hover-color:@secondary-color;
+@item-disabled-color:#666;
+@item-visited-color:@secondary-color;
+@item-selected-color:@secondary-color;
+@item-text-color:#fff;
+@item-text-hover-color:#fff;
+@item-text-disabled-color:#fff;
+@item-text-visited-color:#fff;
+@item-text-selected-color:#fff;
+@item-padding:8px 10px;
+@item-spacing:2px;
 
 // Button colors
 // =============
@@ -25,16 +38,20 @@
 
 // Global spacing
 // ==============
-@title-padding:40px 20px;
-@body-padding:40px 20px;
-@item-padding:8px 10px;
+@page-title-padding:40px 20px;
+@article-title-padding:40px 20px;
+@block-title-padding:40px 20px;
+@component-title-padding:40px 20px;
+@component-body-padding:40px 20px;
 
 // Fonts
 // =====
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 
 @font-family:'Open Sans', sans-serif;
-@font-color:#333;
+@font-color:@foreground-color;
 @font-light:300;
 @font-normal:400;
 @font-bold:600;
+
+@icon-size:24px;
