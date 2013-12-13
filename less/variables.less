@@ -12,8 +12,8 @@
 
 @transparency:rgba(255,255,255,0.8);
 
-// Item colors
-// ===========
+// Item setup
+// ==========
 @item-color:@primary-color;
 @item-hover-color:@secondary-color;
 @item-disabled-color:#666;
@@ -24,7 +24,14 @@
 @item-text-disabled-color:#fff;
 @item-text-visited-color:#fff;
 @item-text-selected-color:#fff;
-@item-padding:8px 10px;
+
+@item-padding-top:8px;
+@item-padding-right:10px;
+@item-padding-bottom:8px;
+@item-padding-left:10px;
+
+@item-padding:@item-padding-top @item-padding-right @item-padding-bottom @item-padding-left;
+
 @item-spacing:2px;
 
 // Button colors
