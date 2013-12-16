@@ -9,4 +9,12 @@
         </h3>
     </div>
     {{/if}}
+    {{! Check if page body exists and render it}}
+    {{#if body}}
+    <div class="block-body">
+        <div class="block-body-inner">
+            {{{body}}}
+        </div>
+    </div>
+    {{/if}}
 </div>

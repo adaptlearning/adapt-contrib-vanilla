@@ -1,26 +1,12 @@
 // Variable setup
 // ==============
 
-.desktop-size {
-    @media all and (min-width:1024px) {
-        width:1024px;
-        margin:0 auto;
-    }
-}
-
-.tablet-size {
-    @media all and (max-width:760px) and (min-width:520px) {
-        width:520px;
-        margin:0 auto;
-    }
-}
-
 .media-sizing {
-    .desktop-size;
-    .tablet-size;
+    .responsive-large;
+    .responsive-medium;
+    .responsive-small;
 }
 
-@content-padding:40px 20px;
 @navigation-height: 60px;
 @navigation-height-mobile: 40px;
 @navigation-padding: ((@navigation-height - @icon-size)/2);
@@ -123,6 +109,12 @@ h6 {
         padding:@article-title-padding;
         background-color:@background-color;
     }
+    .article-body {
+        .media-sizing;
+    }
+    .article-body-inner {
+        padding:@article-body-padding;
+    }
 }
 
 .block {
@@ -132,10 +124,12 @@ h6 {
     }
     .block-title {
         text-align:center;
-        margin-bottom:40px;
     }
     .block-title-inner {
         padding:@block-title-padding;
+    }
+    .block-body-inner {
+        padding:@block-body-padding;
     }
 }
 

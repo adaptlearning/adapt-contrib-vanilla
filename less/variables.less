@@ -34,20 +34,54 @@
 
 @item-spacing:2px;
 
-// Button colors
-// =============
-@button-color:#000;
-@button-hover-color:#333;
-@button-disabled-color:#666;
-@button-text-color:#000;
-@button-text-hover-color:#333;
-@button-text-disabled-color:#666;
+// Button
+// ======
+@button-color:#3eb4e4;
+@button-hover-color:#1b87b2;
+@button-disabled-color:#ccc;
+
+@button-text-color:#fff;
+@button-text-hover-color:#fff;
+@button-text-disabled-color:#aaa;
+
+@button-padding-top:8px;
+@button-padding-right:10px;
+@button-padding-bottom:8px;
+@button-padding-left:10px;
+
+@button-padding:@button-padding-top @button-padding-right @button-padding-bottom @button-padding-left;
+
+// Responsive breakpoints
+// ======================
+.responsive-large {
+    @media all and (min-width:1024px) {
+        width:1024px;
+        margin:0 auto;
+    }
+}
+
+.responsive-medium {
+    @media all and (max-width:760px) and (min-width:520px) {
+        width:520px;
+        margin:0 auto;
+    }
+}
+
+.responsive-small {
+    @media all and (max-width:519px) {
+        width:100%;
+        margin:0 auto;
+    }
+}
 
 // Global spacing
 // ==============
+@content-padding:40px 20px;
 @page-title-padding:40px 20px;
 @article-title-padding:40px 20px;
+@article-body-padding:10px 20px;
 @block-title-padding:40px 20px;
+@block-body-padding:10px 0px;
 @component-title-padding:40px 20px;
 @component-body-padding:40px 20px;
 
