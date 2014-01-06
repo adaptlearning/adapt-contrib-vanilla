@@ -7,9 +7,9 @@ define(function(require) {
     var BoxMenuView = MenuView.extend({
 
         preRender: function() {
+            this.$el.css('opacity', 0);
             this.listenTo(this.model, 'change:_isReady', this.isReady);
             $('.loading').fadeIn('fast');
-            this.$el.hide();
         },
         
         postRender: function() {
@@ -20,12 +20,13 @@ define(function(require) {
                     this.$('.menu-inner').append(new BoxMenuItemView({model:item, nthChild:nthChild}).$el);
                 }
             });
+
         },
         
         isReady: function() {
             _.defer(_.bind(function() {
                 $('.loading').hide();
-                this.$el.fadeIn('slow');
+                this.$el.animate({'opacity': 1}, 'fast');
                 Adapt.trigger('menuView:ready');
             }, this));
         }
@@ -49,12 +50,10 @@ define(function(require) {
         },
 
         clickItem: function() {
-            console.log('clicked');
             this.model.set('_isVisited', true);
         },
 
         preRender: function() {
-
         },
 
         postRender: function() {
@@ -68,7 +67,6 @@ define(function(require) {
     });
     
     Adapt.on('router:menu', function(model) {
-        console.log(model);
         $('#wrapper').append(new BoxMenuView({model:model}).$el);
     });
     
