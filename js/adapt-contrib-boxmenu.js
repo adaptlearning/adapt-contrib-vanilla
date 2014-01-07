@@ -17,7 +17,7 @@ define(function(require) {
             this.model.getChildren().each(function(item) {
                 if(item.get('_isAvailable')) {
                     nthChild ++;
-                    this.$('.menu-inner').append(new BoxMenuItemView({model:item, nthChild:nthChild}).$el);
+                    this.$('.menu-container-inner').append(new BoxMenuItemView({model:item, nthChild:nthChild}).$el);
                 }
             });
         },
