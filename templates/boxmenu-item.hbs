@@ -1,6 +1,8 @@
 <div class="menu-item-inner">
 	<div class="menu-graphic">
-		<img src="{{graphic.src}}" alt="{{graphic.alt}}" />
+		<a href="#/id/{{_id}}" class="{{#if _isVisited}}visited{{/if}}">
+			<img src="{{graphic.src}}" alt="{{graphic.alt}}" />
+		</a>
 	</div>
 	<div class="menu-item-title">
 		<h2 class="menu-item-title-inner">{{{title}}}</h2>
