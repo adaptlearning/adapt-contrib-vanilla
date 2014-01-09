@@ -5,12 +5,6 @@ define(function(require) {
     var MenuView = require('coreViews/menuView');
     
     var BoxMenuView = MenuView.extend({
-
-        preRender: function() {
-            this.listenTo(this.model, 'change:_isReady', this.isReady);
-            $('.loading').fadeIn('fast');
-            this.$el.hide();
-        },
         
         postRender: function() {
             var nthChild = 0;
@@ -20,14 +14,6 @@ define(function(require) {
                     this.$('.menu-container-inner').append(new BoxMenuItemView({model:item, nthChild:nthChild}).$el);
                 }
             });
-        },
-        
-        isReady: function() {
-            _.defer(_.bind(function() {
-                $('.loading').hide();
-                this.$el.fadeIn('slow');
-                Adapt.trigger('menuView:ready');
-            }, this));
         }
 
     }, {
