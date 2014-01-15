@@ -22,6 +22,7 @@ body {
     font-weight: @font-light;
     color:@font-color;
     font-size:16px;
+    line-height: @font-line-height;
 }
 
 h1 {
@@ -70,6 +71,7 @@ h6 {
     width:100%;
     background-color:@background-color;
     height:@navigation-height;
+    border-bottom:1px solid @primary-color;
     .navigation-inner {
         padding:@navigation-padding;
     }
@@ -88,6 +90,7 @@ h6 {
     .page-title {
         .media-sizing;
         text-align:center;
+        color: @inverted-foreground-color;
     }
     .page-title-inner {
         padding:@page-title-padding;
@@ -97,7 +100,7 @@ h6 {
 .article {
     background-color:@background-color;
     .article-inner {
-        padding-top:4px;
+        padding-top:1px;
     }
     .article-title {
         background-image: url(assets/backgroundB.jpg);
@@ -138,6 +141,23 @@ h6 {
         padding:@block-body-padding;
     }
 }
+
+.component {
+    .component-inner{
+    }
+    .component-title{
+        margin:@title-spacing;
+    }
+    .component-title-inner {
+        color:@primary-color;
+    }
+    .component-body{
+        margin:@body-spacing;
+    }
+    .component-body-inner{
+    }
+}
+
 
 .buttons {
     .button {
