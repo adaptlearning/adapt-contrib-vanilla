@@ -105,17 +105,16 @@ h6 {
     .article-title {
         background-image: url(assets/backgroundB.jpg);
         background-position: top;
-        background-repeat: no-repeat;
+        text-align: center;
+        padding-top: 280px;
         @media all and (max-width:700px) {
             background-image: url(assets/backgroundB-mobile.jpg);
             padding-top: 150px;
         }
     }
-    .article-title {
-        .media-sizing;
-    }
     .article-title-inner {
         padding:@article-title-padding;
+        background-color:@background-color;
     }
     .article-body {
         .media-sizing;
@@ -131,6 +130,7 @@ h6 {
         padding:0px 20px 40px;
     }
     .block-title {
+        text-align:center;
     }
     .block-title-inner {
         padding:@block-title-padding;
