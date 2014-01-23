@@ -75,6 +75,9 @@ h6 {
 
 .navigation {
     width:100%;
+    .ie8 & {
+        max-width:@ie8-max-width;
+    }
     background-color:@background-color;
     height:@navigation-height;
     border-bottom:1px solid @primary-color;
@@ -87,6 +90,14 @@ h6 {
             color:darken(@primary-color, 20%);
         }
     }
+}
+
+#wrapper {
+    width:100%;
+    .ie8 & {
+        max-width:@ie8-max-width;
+    }
+    padding-top:@navigation-height;
 }
 
 .page {
@@ -207,11 +218,6 @@ h6 {
 
 // Bespoke theme styling
 // =====================
-
-#wrapper {
-    width:100%;
-    padding-top:@navigation-height;
-}
 
 // Custom class to be added to article
 .image-1 {
