@@ -58,29 +58,11 @@
 @border-color:#c5c5c5;
 @border: @border-width @border-style @border-color;
 
-// Responsive breakpoints
-// ======================
-.responsive-large {
-    @media all and (min-width:1024px) {
-        width:1024px;
-        margin:0 auto;
-    }
-}
-
-.responsive-medium {
-    @media all and (max-width:760px) and (min-width:520px) {
-        width:520px;
-        margin:0 auto;
-    }
-}
-
-.responsive-small {
-    @media all and (max-width:519px) {
-        width:100%;
-        margin:0 auto;
-    }
-}
-
+// Device widths
+// =============
+@device-width-small: 520px;
+@device-width-medium: 760px;
+@device-width-large: 1024px;
 @ie8-max-width:1024px;
 
 // Global spacing
@@ -96,6 +78,11 @@
 
 @title-spacing:10px 0px;
 @body-spacing:0px 0px 20px;
+
+@navigation-height: 60px;
+@navigation-height-mobile: 50px;
+@navigation-padding: ((@navigation-height - @icon-size)/2);
+@navigation-padding-mobile: ((@navigation-height-mobile - @icon-size)/2);
 
 // Fonts
 // =====
