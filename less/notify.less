@@ -7,11 +7,11 @@
         position: fixed;
         top: 50%;
         width:100%;
-        background-color: @inverted-background-color;
-        color: @inverted-foreground-color;
+        background-color: @notify-color;
+        color: @notify-text-color;
         z-index: 550;
 
-         a {
+        a {
           outline: none;
           text-decoration: none;
         }
@@ -31,7 +31,7 @@
             font-size:60px;
             width:60px;
             height:60px;
-            color: @inverted-foreground-color;
+            color: @notify-icon-color;
             @media all and (max-width:(@device-width-medium - 1px)) {
                 float:none;
                 margin: 0 auto;
@@ -50,13 +50,13 @@
     }
 
     .notify-popup-button {
-        background-color:@inverted-foreground-color;
-        color:@inverted-background-color;
+        background-color:@notify-button-color;
+        color:@notify-button-text-color;
         padding:@button-padding;
         display:inline-block;
         &:hover {
-            background-color:darken(@inverted-background-color, 10%);
-            color:@inverted-foreground-color;
+            background-color:darken(@notify-button-hover-color, 10%);
+            color:@notify-button-text-hover-color;
         }
     }
 
@@ -77,8 +77,8 @@
     }
 
     .notify-popup-inner {
-        padding: @item-padding;
-        padding-bottom: (@navigation-padding*2);
+        padding: @notify-popup-padding;
+        padding-bottom: (@notify-popup-padding*2);
     }
 
     .notify-popup-toolbar {
@@ -92,9 +92,9 @@
     }
 
     .notify-popup-icon-close {
-        color: @inverted-foreground-color;
+        color: @notify-icon-color;
         &:hover {
-            color:darken(@inverted-background-color, 30%);
+            color:@notify-icon-hover-color;
         }
     }
 
