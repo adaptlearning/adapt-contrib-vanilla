@@ -1,0 +1,114 @@
+// Notify styling
+// ==============
+
+.notify {
+
+    .notify-popup {
+        position: fixed;
+        top: 50%;
+        width:100%;
+        background-color: @notify-color;
+        color: @notify-text-color;
+        z-index: 550;
+
+        a {
+          outline: none;
+          text-decoration: none;
+        }
+    }
+
+    .notify-type-prompt, .notify-type-alert {
+        .notify-popup-inner {
+            padding-top:(@navigation-padding*2);
+        }
+    }
+
+    .notify-popup-icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        .icon {
+            font-size:60px;
+            width:60px;
+            height:60px;
+            color: @notify-icon-color;
+            @media all and (max-width:(@device-width-medium - 1px)) {
+                float:none;
+                margin: 0 auto;
+            }
+        }
+        @media all and (max-width:(@device-width-medium - 1px)) {
+            float:none;
+            margin: 0px auto;
+            position:static;
+        }
+    }
+
+    .notify-popup-buttons {
+        text-align:center;
+        margin-top:10px;
+    }
+
+    .notify-popup-button {
+        background-color:@notify-button-color;
+        color:@notify-button-text-color;
+        padding:@button-padding;
+        display:inline-block;
+        &:hover {
+            background-color:darken(@notify-button-hover-color, 10%);
+            color:@notify-button-text-hover-color;
+        }
+    }
+
+    .notify-popup-content {
+        .responsive-layout
+        .ie8 & {
+            max-width: @ie8-max-width;
+            margin:0 auto;
+        }
+    }
+
+    .notify-popup-content-inner {
+        position:relative;
+        padding-left:80px;
+        @media all and (max-width:(@device-width-medium - 1px)) {
+            padding-left:0px;
+        }
+    }
+
+    .notify-popup-inner {
+        padding: @notify-popup-padding;
+        padding-bottom: (@notify-popup-padding*2);
+    }
+
+    .notify-popup-toolbar {
+        text-align:right;
+    }
+
+    .notify-popup-done {
+        padding-top:@navigation-padding;
+        padding-right:@navigation-padding;
+        display:inline-block;
+    }
+
+    .notify-popup-icon-close {
+        color: @notify-icon-color;
+        &:hover {
+            color:@notify-icon-hover-color;
+        }
+    }
+
+    .notify-shadow {
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 549;
+        .no-opacity & {
+            background-image:@transparency-fallback-png;
+        }
+        background-color: @transparency;
+    }
+}
