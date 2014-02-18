@@ -6,12 +6,12 @@
     .ie8 & {
         max-width:@ie8-max-width;
     }
-    background-color:@background-color;
+    background-color:@navigation-color;
     height:@navigation-height;
     @media all and (max-width:(@device-width-medium - 1px)) {
         height:@navigation-height-mobile;
     }
-    border-bottom:1px solid @primary-color;
+    border-bottom:@navigation-border;
     .navigation-inner {
     }
     .icon {
@@ -19,9 +19,9 @@
         @media all and (max-width:(@device-width-medium - 1px)) {
             padding:@navigation-padding-mobile;
         }
-        color:@primary-color;
+        color:@navigation-icon-color;
         &:hover {
-            color:darken(@primary-color, 20%);
+            color:@navigation-icon-hover-color;
         }
     }
     .navigation-back-button {
