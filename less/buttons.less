@@ -1,17 +1,17 @@
 // Button styling
 // ==============
 
-.buttons {
-    .button {
-        background-color:@button-color;
-        color:@button-text-color;
-        &:hover {
-            background-color:@button-hover-color;
-            color:@button-text-hover-color;
-        }
-        &.disabled {
-            background-color:@button-disabled-color;
-            color:@button-text-disabled-color;
-        }
+.button {
+    margin-top:@button-spacing-top;
+    margin-bottom:@button-spacing-bottom;
+    background-color:@button-color;
+    color:@button-text-color;
+    &:hover {
+        background-color:@button-hover-color;
+        color:@button-text-hover-color;
+    }
+    &.disabled {
+        background-color:@button-disabled-color;
+        color:@button-text-disabled-color;
     }
 }
