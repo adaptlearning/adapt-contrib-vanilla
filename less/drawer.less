@@ -2,16 +2,8 @@
 // ==============
 
 .drawer {
-    position:fixed;
-    width:320px;
-    height: 100%;
     background-color:@drawer-color;
     color: @drawer-text-color;
-    top:0px;
-    right:-320px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    z-index:-1;
     .drawer-toolbar {
         border-bottom: 1px solid darken(@item-color, 10%);
     }
@@ -20,19 +12,15 @@
         @media all and (max-width:(@device-width-small - 1px)) {
             padding:@navigation-padding-mobile;
         }
-        float: right;
         color: @drawer-icon-color;
         &:hover {
             color:@drawer-icon-hover-color;
         }
     }
     .drawer-inner {
-        height:100%;
         border-left: 5px solid darken(@drawer-color, 10%);
     }
     .drawer-item {
-        display: block;
-        width: 100%;
         .drawer-item-open {
             text-decoration: none;
             color: @drawer-item-text-color;
@@ -49,6 +37,5 @@
     }
     .drawer-item-open {
         padding:@drawer-item-padding;
-        display:block;
     }
 }
