@@ -15,7 +15,7 @@
 
     .notify-type-prompt, .notify-type-alert {
         .notify-popup-inner {
-            padding-top:(@navigation-padding*2);
+            padding-top:@navigation-padding;
         }
     }
 
@@ -38,7 +38,7 @@
         color:@notify-button-text-color;
         padding:@button-padding;
         display:inline-block;
-        &:hover {
+        .no-touch &:hover {
             background-color:darken(@notify-button-hover-color, 10%);
             color:@notify-button-text-hover-color;
         }
@@ -61,7 +61,6 @@
 
     .notify-popup-inner {
         padding: @notify-popup-padding;
-        padding-bottom: (@notify-popup-padding*2);
     }
 
     .notify-popup-toolbar {
@@ -76,7 +75,7 @@
 
     .notify-popup-icon-close {
         color: @notify-icon-color;
-        &:hover {
+        .no-touch &:hover {
             color:@notify-icon-hover-color;
         }
     }
