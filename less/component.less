@@ -5,19 +5,25 @@
     .component-inner{
     }
     .component-title{
-        margin:@title-spacing;
+        margin:@component-title-margin;
     }
     .component-title-inner {
+        padding:@component-title-padding;
     }
     .component-body{
-        margin:@body-spacing;
+        margin:@component-body-margin;
     }
     .component-body-inner{
+        padding:@component-body-padding;
     }
     .component-instruction {
-        margin:@instruction-spacing;
+        margin:@component-instruction-margin;
     }
     .component-instruction-inner {
+        padding:@component-instruction-padding;
         font-weight:bold;
+        &.validation-error {
+            color: @validation-error-text-color;
+        }
     }
 }

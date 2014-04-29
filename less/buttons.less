@@ -2,10 +2,14 @@
 // ==============
 
 .button {
-    margin-top:@button-spacing-top;
-    margin-bottom:@button-spacing-bottom;
+    margin-top:@button-margin-top;
+    margin-bottom:@button-margin-bottom;
     background-color:@button-color;
     color:@button-text-color;
+    padding:@button-padding;
+    text-decoration: none;
+    display:inline-block;
+    border:@button-border;
     &:hover {
         background-color:@button-hover-color;
         color:@button-text-hover-color;
@@ -14,4 +18,52 @@
         background-color:@button-disabled-color;
         color:@button-text-disabled-color;
     }
+
+    .component-widget & {
+        &.reset, &.user, &.model {
+            display:none;
+            visibility:hidden;
+        }
+    }
+    .component-widget.submitted & {
+        &.reset {
+            display:inline-block;
+            visibility:visible;
+        }
+        &.submit {
+            display:none;
+        }
+    }
+    .component-widget.user & {
+        &.submit {
+            display:none;
+        }
+        &.model {
+            display:inline-block;
+            visibility:visible;
+        }
+        &.reset {
+            display:none;
+        }
+    }
+    .component-widget.model & {
+        &.submit {
+            display:none;
+        }
+        &.user {
+            display:inline-block;
+            visibility:visible;
+        }
+        &.reset {
+            display:none;
+        }
+    }
+    .component-widget.submitted.correct & {
+        visibility: hidden;
+        display:none;
+        &.submit {
+            display: inline-block;
+        }
+    }
+
 }
