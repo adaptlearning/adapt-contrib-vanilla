@@ -2,10 +2,10 @@
 {{! .block-container: Adapt will place the articles blocks inside this class}}
 <div class="article-inner block-container">
     {{! Check if a page title exist and render it}}
-    {{#if title}}
+    {{#if displayTitle}}
     <div class="article-title">
         <h2 class="article-title-inner">
-            {{{title}}}
+            {{{displayTitle}}}
         </h2>
     </div>
     {{/if}}
