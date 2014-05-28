@@ -1,11 +1,11 @@
 {{! Maintainers - Daryl Hedley}}
 {{! .component-container: Adapt will place the blocks components inside this class}}
-<div class="block-inner">
+<div class="block-inner component-container">
     {{! Check if a page title exist and render it}}
-    {{#if displayTitle}}
+    {{#if title}}
     <div class="block-title">
         <h3 class="block-title-inner">
-            {{{displayTitle}}}
+            {{{title}}}
         </h3>
     </div>
     {{/if}}
@@ -17,6 +17,4 @@
         </div>
     </div>
     {{/if}}
-    <div class="component-container">
-    </div>
 </div>

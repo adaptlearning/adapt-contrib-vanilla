@@ -1,24 +1,121 @@
-// Bespoke theme styling
-// =====================
+// Variable setup
+// ==============
 
-// Custom class to be added to article
-// ===================================
+.media-sizing {
+    .responsive-large;
+    .responsive-medium;
+    .responsive-small;
+}
 
-.image-1 {
-    .article-inner {
-        padding-top:1px;
-        padding-top: 280px;
-        background-image: url(assets/backgroundA.jpg);
-        background-position: top;
-        background-repeat:no-repeat;
-        @media all and (max-width:700px) {
-            background-image: url(assets/backgroundA-mobile.jpg);
-            padding-top: 150px;
+.visibility-hidden {
+    visibility:hidden;
+}
+
+@navigation-height: 60px;
+@navigation-height-mobile: 40px;
+@navigation-padding: ((@navigation-height - @icon-size)/2);
+
+// Font setup
+// ==========
+body {
+    font-family: @font-family;
+    font-weight: @font-weight-light;
+    color:@font-color;
+    font-size:@font-size;
+    line-height: (@font-size + @font-line-height-extra);
+}
+
+h1 {
+    font-size:(@font-size*2.5);
+    line-height: ((@font-size*2.5) + @font-line-height-extra);
+    font-weight: @font-weight-light;
+}
+
+h2 {
+    font-size:(@font-size*2.25);
+    line-height: ((@font-size*2.25) + @font-line-height-extra);
+    font-weight: @font-weight-light;
+}
+
+h3 {
+    font-size:(@font-size*2);
+    line-height: ((@font-size*2) + @font-line-height-extra);
+    font-weight: @font-weight-light;
+}
+
+h4 {
+    font-size:(@font-size*1.75);
+    line-height: ((@font-size*1.75) + @font-line-height-extra);
+    font-weight: @font-weight-light;
+}
+
+h5 {
+    font-size:(@font-size*1.25);
+    line-height: ((@font-size*1.25) + @font-line-height-extra);
+    font-weight: @font-weight-light;
+}
+
+h6 {
+    font-size:(@font-size*1);
+    line-height: ((@font-size*1) + @font-line-height-extra);
+    font-weight: @font-weight-light;
+}
+
+// Icon setup
+// ==========
+
+.icon {
+    display:block;
+    width:@icon-size;
+    height:@icon-size;
+    font-size:@icon-size;
+    text-decoration:none;
+    color:@foreground-color;
+}
+
+.navigation {
+    width:100%;
+    .ie8 & {
+        max-width:@ie8-max-width;
+    }
+    background-color:@background-color;
+    height:@navigation-height;
+    border-bottom:1px solid @primary-color;
+    .navigation-inner {
+        padding:@navigation-padding;
+    }
+    .icon {
+        color:@primary-color;
+        &:hover {
+            color:darken(@primary-color, 20%);
         }
     }
 }
 
-.image-2 {
+#wrapper {
+    width:100%;
+    .ie8 & {
+        max-width:@ie8-max-width;
+    }
+    padding-top:@navigation-height;
+}
+
+.page {
+    background-color:@primary-color;
+    .page-inner {
+    }  
+    .page-title {
+        .media-sizing;
+        text-align:center;
+        color: @inverted-foreground-color;
+    }
+    .page-title-inner {
+        padding:@page-title-padding;
+    }
+}
+
+.article {
+    background-color:@background-color;
     .article-inner {
         padding-top:1px;
         padding-top: 280px;
@@ -30,18 +127,122 @@
             padding-top: 150px;
         }
     }
+    .article-title {
+        .media-sizing;
+        text-align: left;
+    }
+    .article-title-inner {
+        padding:@article-title-padding;
+        background-color:@background-color;
+    }
+    .article-body {
+        .media-sizing;
+    }
+    .article-body-inner {
+        padding:@article-body-padding;
+    }
+}
+
+.block {
+    .media-sizing;
+    .block-inner {
+        padding:0px 20px 40px;
+    }
+    .block-title {
+        text-align:left;
+    }
+    .block-title-inner {
+        padding:@block-title-padding;
+    }
+    .block-body{
+    }
+    .block-body-inner {
+        padding:@block-body-padding;
+    }
+}
+
+.component {
+    .component-inner{
+    }
+    .component-title{
+        margin:@title-spacing;
+    }
+    .component-title-inner {
+    }
+    .component-body{
+        margin:@body-spacing;
+    }
+    .component-body-inner{
+    }
+}
+
+
+.buttons {
+    .button {
+        background-color:@button-color;
+        color:@button-text-color;
+        &:hover {
+            background-color:@button-hover-color;
+            color:@button-text-hover-color;
+        }
+        &.disabled {
+            background-color:@button-disabled-color;
+            color:@button-text-disabled-color;
+        }
+    }
+}
+
+// Loading overlay
+// ===============
+
+.loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    background-color: rgba(255,255,255,0.8);
+    .loading-image {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        background-image: url(assets/ajax-loader.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+// Bespoke theme styling
+// =====================
+
+// Custom class to be added to article
+.image-1 {
+    .article-title {
+        background-image: url(assets/backgroundA.jpg);
+        @media all and (max-width:700px) {
+            background-image: url(assets/backgroundA-mobile.jpg);
+        }
+    }
+}
+
+.image-2 {
+    .article-title {
+        background-image: url(assets/backgroundB.jpg);
+        @media all and (max-width:700px) {
+            background-image: url(assets/backgroundB-mobile.jpg);
+        }
+    }
 }
 
 .image-3 {
-    .article-inner {
-        padding-top:1px;
-        padding-top: 280px;
+    .article-title {
         background-image: url(assets/backgroundC.jpg);
-        background-position: top;
-        background-repeat:no-repeat;
         @media all and (max-width:700px) {
             background-image: url(assets/backgroundC-mobile.jpg);
-            padding-top: 150px;
         }
     }
 }
