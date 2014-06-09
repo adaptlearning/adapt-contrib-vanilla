@@ -10,9 +10,11 @@
     text-decoration: none;
     display:inline-block;
     border:@button-border;
-    &:hover {
-        background-color:@button-hover-color;
-        color:@button-text-hover-color;
+    .no-touch & {
+        &:hover {
+            background-color:@button-hover-color;
+            color:@button-text-hover-color;
+        } 
     }
     &.disabled {
         background-color:@button-disabled-color;
