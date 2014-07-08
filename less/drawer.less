@@ -37,5 +37,9 @@
     }
     .drawer-item-open {
         padding:@drawer-item-padding;
+        //stops rollover of drawar items on touch devices    
+        &.touch:hover {
+             background-color: @drawer-color;
+       }
     }
 }
