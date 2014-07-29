@@ -5,6 +5,8 @@
   "authors": [
     "Daryl Hedley <darylhedley@hotmail.com>"
   ],
+  "displayName": "Vanilla",
+  "theme": "vanilla",
   "description": "A core bundled theme",
   "main": "js/vanilla.js",
   "keywords": [
