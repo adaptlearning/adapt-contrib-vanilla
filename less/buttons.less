@@ -33,6 +33,9 @@
     button {
         width:50%;
         float:left;
+        .dir-rtl & {
+            float:right;
+        }
     }
 
     .buttons-display {
@@ -45,6 +48,10 @@
     .buttons-marking-icon {
         position:absolute;
         left:50%;
+        .dir-rtl & {
+            left:inherit;
+            right:50%;
+        }
         top:50%;
         width:40px;
         height:40px;
@@ -53,6 +60,10 @@
         text-align:center;
         border-radius:50%;
         margin-left:-(40px/2);
+        .dir-rtl & {
+            margin-left:inherit;
+            margin-right:-(40px/2);
+        }
         margin-top:-(40px/2);
         background-color:@background-color;
         &.icon-tick {
