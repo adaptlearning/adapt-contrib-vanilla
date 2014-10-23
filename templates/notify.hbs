@@ -2,7 +2,7 @@
 <div class="notify-popup notify-type-{{_type}}" role="alertdialog">
     {{#if_value_equals _type "popup"}}
     <div class="notify-popup-toolbar">
-        <a href="#" class="notify-popup-done">
+        <a href="#" class="notify-popup-done" role="button" aria-label="{{_accessibility._ariaLabels.closePopup}}">
             <div class="notify-popup-icon-close icon icon-cross"></div>
         </a>
     </div>
