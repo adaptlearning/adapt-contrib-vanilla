@@ -1,3 +1,5 @@
-*:focus, textarea:focus, a:focus, input:focus + label {
-    outline: @focus-outline;
+.accessibility.no-touch {
+    .focused, button:focus, select:focus, textarea:focus, a:focus, input:focus + label {
+            outline: @focus-outline;
+        }
 }
