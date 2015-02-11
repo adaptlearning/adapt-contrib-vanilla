@@ -1,12 +1,12 @@
 {{! Maintainers - Daryl Hedley}}
 {{! .article-container: Adapt will place the pages articles inside this class}}
-<div class="page-inner article-container" role="main">
+<div class="page-inner article-container" role="main" aria-label="{{_globals._accessibility._ariaLabels.page}}">
     {{! Check if a page title exist and render it}}
     {{#if displayTitle}}
     <div class="page-title" role="heading">
-        <h1 class="page-title-inner">
+        <div class="page-title-inner h1" tabindex="0" role="heading" aria-level="1">
             {{{displayTitle}}}
-        </h1>
+        </div>
     </div>
     {{/if}}
 </div>
