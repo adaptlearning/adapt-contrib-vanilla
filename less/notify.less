@@ -71,6 +71,21 @@
     }
 
     .notify-popup-toolbar {
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+        text-align:right;
+        right: 0px;
+        left: initial;
+        .dir-rtl & {
+            text-align:left;
+            left: 0px;
+            right: initial;
+        }
+        
+    }
+
+    .notify-popup-toolbar {
         text-align:right;
         .dir-rtl & {
             text-align:left;
