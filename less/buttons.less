@@ -19,7 +19,7 @@
             border-color: @button-border-hover-color;
         } 
     }
-    &.disabled, &:disabled {
+    .disabled-style() {
         background-color:@button-disabled-color!important;
         color:@button-text-disabled-color!important;
         border-color: @button-border-disabled-color;
@@ -27,8 +27,10 @@
         &:hover {
             border-color: @button-border-disabled-color;
         }
-    }
-
+    }    
+    &.disabled, &:disabled { .disabled-style; }
+    // IE8 fix needed to be in its own line
+    &[disabled="disabled"] { .disabled-style; }
 }
 
 .buttons {
