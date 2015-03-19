@@ -29,6 +29,17 @@
         }
     }
 
+    // IE8 fix (duplicate code from above disabled)
+    &[disabled="disabled"] {
+        background-color:@button-disabled-color!important;
+        color:@button-text-disabled-color!important;
+        border-color: @button-border-disabled-color;
+        cursor:default;
+        &:hover {
+            border-color: @button-border-disabled-color;
+        }
+    }
+
 }
 
 .buttons {
