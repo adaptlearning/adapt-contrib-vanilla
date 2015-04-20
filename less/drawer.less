@@ -2,45 +2,55 @@
 // ==============
 
 .drawer {
-    background-color:@drawer-color;
+    background-color: @drawer-color;
     color: @drawer-text-color;
+
     .drawer-toolbar {
-        border-bottom: 1px solid darken(@item-color, 10%);
+        border-bottom: 1px solid @drawer-item-color;
     }
+
     .drawer-toolbar .icon {
-        padding:@navigation-padding;
-        @media all and (max-width:(@device-width-small - 1px)) {
-            padding:@navigation-padding-mobile;
-        }
         color: @drawer-icon-color;
+        padding: @navigation-padding;
+
         &:hover {
-            color:@drawer-icon-hover-color;
+            color: @drawer-icon-hover-color;
+        }
+
+        @media all and (max-width:(@device-width-small - 1px)) {
+            padding: @navigation-padding-mobile;
         }
     }
+
     .drawer-inner {
         border-left: 5px solid darken(@drawer-color, 10%);
+
         .dir-rtl & {
-            border-left:inherit;
+            border-left: inherit;
             border-right: 5px solid darken(@drawer-color, 10%);
         }
     }
+
     .drawer-item {
         .drawer-item-open {
-            text-decoration: none;
+            border-bottom: 1px solid @drawer-item-color;
             color: @drawer-item-text-color;
-            border-bottom: 1px solid darken(@item-color, 10%);
+            text-decoration: none;
+            
             .no-touch &:hover {
-                color:@drawer-item-text-hover-color;
                 background-color: @drawer-item-hover-color;
+                color: @drawer-item-text-hover-color;
             }
         }
+
         h5 {
-            font-size:16px;
-            font-weight:@font-weight-bold;
+            font-size: 16px;
+            font-weight: @font-weight-bold;
         }
     }
+
     .drawer-item-open {
-        padding:@drawer-item-padding;
+        padding: @drawer-item-padding;
         //stops rollover of drawar items on touch devices    
         &.touch:hover {
              background-color: @drawer-color;
