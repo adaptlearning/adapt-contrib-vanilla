@@ -2,86 +2,95 @@
 // ==============
 
 .button, button {
-    background-color:@button-color;
-    color:@button-text-color;
-    padding:@button-padding;
-    text-decoration: none;
-    display:inline-block;
-    border:@button-border;
+    background-color: @button-color;
+    border: none;
+    color: @button-text-color;
+    display: inline-block;
     font-family: @font-family;
+    font-size: (@font-size*1.25);
     font-weight: @font-weight-light;
-    font-size:@font-size;
     line-height: (@font-size + @font-extra-line-height);
+    padding: @button-padding;
+    text-decoration: none;
+
     .no-touch & {
         &:hover {
-            background-color:@button-hover-color;
-            color:@button-text-hover-color;
+            background-color: @button-hover-color;
             border-color: @button-border-hover-color;
+            color: @button-text-hover-color;
         } 
     }
+
     .disabled-style() {
-        background-color:@button-disabled-color!important;
-        color:@button-text-disabled-color!important;
+        background-color: @button-disabled-color!important;
         border-color: @button-border-disabled-color;
-        cursor:default;
+        color: @button-text-disabled-color!important;
+        cursor: default;
+
         &:hover {
             border-color: @button-border-disabled-color;
         }
-    }    
+    }
+
     &.disabled, &:disabled { .disabled-style; }
     // IE8 fix needed to be in its own line
     &[disabled="disabled"] { .disabled-style; }
 }
 
 .buttons {
-    margin-top:@button-margin-top;
-    margin-bottom:@button-margin-bottom;
-    position:relative;
+    margin-bottom: @button-margin-bottom;
+    margin-top: @button-margin-top;
+    position: relative;
+
     button {
-        width:50%;
-        float:left;
+        float: left;
+        width: 50%;
+        
         .dir-rtl & {
-            float:right;
+            float: right;
         }
     }
 
     .buttons-display {
-        position:relative;
-        border:@button-border;
-        border-top:none;
-        background-color:@inverted-background-color;
-        color:@inverted-foreground-color;
+        background-color: @inverted-background-color;
+        border: @button-border;
+        border-top: none;
+        color: @inverted-foreground-color;
+        position: relative;
     }
+
     .buttons-marking-icon {
-        position:absolute;
-        left:50%;
+        background-color: @background-color;
+        border-radius: 50%;
+        font-size: 32px;
+        height: 40px;
+        margin-left: -(40px/2);
+        margin-top: -(40px/2);
+        line-height: 40px;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 40px;
+
         .dir-rtl & {
-            left:inherit;
-            right:50%;
+            left: inherit;
+            margin-left: inherit;
+            margin-right: -(40px/2);
+            right: 50%;
         }
-        top:50%;
-        width:40px;
-        height:40px;
-        font-size:32px;
-        line-height:40px;
-        text-align:center;
-        border-radius:50%;
-        margin-left:-(40px/2);
-        .dir-rtl & {
-            margin-left:inherit;
-            margin-right:-(40px/2);
-        }
-        margin-top:-(40px/2);
-        background-color:@background-color;
+        
         &.icon-tick {
-            color:@icon-correct-color;
+            color: @icon-correct-color;
         }
+
         &.icon-cross {
-            color:@icon-incorrect-color;
+            color: @icon-incorrect-color;
         }
     }
+
     .buttons-display-inner {
-        text-align:center;
-        padding:@button-padding;
+        padding: @button-padding;
+        text-align: center;
     }
 }

@@ -2,11 +2,13 @@
 // =======================
 
 .loading {
-    text-align: center;
     background-color: @transparency;
+    text-align: center;
+    
     .no-opacity & {
-    	background-image:@transparency-fallback-png;
+    	background-image: @transparency-fallback-png;
     }
+
     .loading-image {
         background-image: url(assets/ajax-loader.gif);
         background-repeat: no-repeat;
