@@ -2,19 +2,43 @@
 // ============
 
 .page {
-    background-color: @primary-color;
+    background-color: @background-color;
 
-    .page-inner {
-    }  
+    .page-header {
+        background-color: @background-color-inverted;
+    }
 
-    .page-title {
-        .responsive-layout;
+    .page-header-inner {
+        padding: @page-header-padding 0;
 
-        color: #fff;
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: @page-header-padding 20px;
+        }
+
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: @page-header-padding 10px;
+        }
+    }
+
+    .page-header-content {
+        max-width: @page-content-max-width;
+        margin: auto;
+        color: @foreground-color-inverted;
+    }
+
+    .page-header-content-inner {
         text-align: center;
     }
-    
-    .page-title-inner {
-        padding: @page-title-padding;
+
+    .page-title {
+        margin-bottom: @block-body-margin-bottom;
+    }
+
+    .page-body {
+        margin-bottom: @block-body-margin-bottom;
+    }
+
+    .page-instruction {
+        margin-bottom: @block-instruction-margin-bottom;
     }
 }

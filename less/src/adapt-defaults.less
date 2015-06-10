@@ -1,7 +1,38 @@
-// IMPORTANT - THESE ARE THE DEFAULT VARIABLES FOR COMPATIBILITY WITH ADAPT OPEN SOURCE WHILST THEME IS IN WORKING PROCESS
+// IMPORTANT - THESE ARE THE DEFAULT VARIABLES / LESS FOR COMPATIBILITY WITH ADAPT OPEN SOURCE WHILST THEME IS IN WORKING PROCESS
 
 // THIS FILE WILL BE REMOVED BEFORE FINAL RELEASE - PLEASE COMMENT OUT VARIABLES AS THEY BECOME REDUNDANT
 
+
+// =================
+// Responsive Widths
+// =================
+
+.responsive-large {
+    @media all and (min-width:@device-width-large) {
+        width:@device-width-large;
+        margin:0 auto;
+    }
+}
+
+.responsive-medium {
+    @media all and (max-width:@device-width-medium) and (min-width:(@device-width-small)) {
+        width:@device-width-small;
+        margin:0 auto;
+    }
+}
+
+.responsive-small {
+    @media all and (max-width:(@device-width-small - 1px)) {
+        width:100%;
+        margin:0 auto;
+    }
+}
+
+.responsive-layout {
+    .responsive-large;
+    .responsive-medium;
+    .responsive-small;
+}
 
 // =========
 // Variables
@@ -147,23 +178,23 @@
 
 @menu-title-padding: @menu-title-padding-top @menu-title-padding-sides @menu-title-padding-bottom;
 
-@page-title-padding-top: 50px;
-@page-title-padding-sides: 10px;
-@page-title-padding-bottom: 50px;
+// @page-title-padding-top: 50px;
+// @page-title-padding-sides: 10px;
+// @page-title-padding-bottom: 50px;
 
-@page-title-padding: @page-title-padding-top @page-title-padding-sides @page-title-padding-bottom;
+// @page-title-padding: @page-title-padding-top @page-title-padding-sides @page-title-padding-bottom;
 
-@article-title-padding-top: 30px;
-@article-title-padding-sides: 20px;
-@article-title-padding-bottom: 20px;
+// @article-title-padding-top: 30px;
+// @article-title-padding-sides: 20px;
+// @article-title-padding-bottom: 20px;
 
-@article-title-padding: @article-title-padding-top @article-title-padding-sides @article-title-padding-bottom;
+// @article-title-padding: @article-title-padding-top @article-title-padding-sides @article-title-padding-bottom;
 
-@block-title-padding-top: 0px;
-@block-title-padding-sides: 0px;
-@block-title-padding-bottom: 0px;
+// @block-title-padding-top: 0px;
+// @block-title-padding-sides: 0px;
+// @block-title-padding-bottom: 0px;
 
-@block-title-padding: @block-title-padding-top @block-title-padding-sides @block-title-padding-bottom;
+// @block-title-padding: @block-title-padding-top @block-title-padding-sides @block-title-padding-bottom;
 
 @component-title-padding-top: 0px;
 @component-title-padding-sides: 0px;

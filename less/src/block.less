@@ -2,13 +2,32 @@
 // =============
 
 .block {
-    .responsive-layout;
+    background-color: @background-color;
+
+    &.hero-block {
+        background-color: @background-color-inverted;
+        color: @foreground-color-inverted;
+    }
+
+    .block-content-max-width {
+        max-width: @block-content-max-width;
+        margin: auto;
+    }
 
     .block-inner {
-        padding: 0px 20px 40px;
+        padding: @block-padding 0;
+
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: @block-padding 20px;
+        }
+
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: @block-padding 10px;
+        }
     }
 
     .block-title {
+        margin-bottom: @block-title-margin-bottom;
         text-align: left;
 
         .dir-rtl & {
@@ -16,14 +35,11 @@
         }
     }
 
-    .block-title-inner {
-        padding: @block-title-padding;
-    }
-
     .block-body{
+        margin-bottom: @block-body-margin-bottom;
     }
 
-    .block-body-inner {
-        padding: @block-body-padding;
+    .block-instruction {
+        margin-bottom: @block-instruction-margin-bottom;
     }
 }
