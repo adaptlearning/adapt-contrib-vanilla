@@ -1,0 +1,157 @@
+.menu {
+	background: @background-color;
+
+	.menu-container {
+		width: 100%;
+	}
+
+	.menu-container-inner {
+		padding: 0;
+	}
+
+	.menu-header {
+		background-color: @background-color-inverted;
+	}
+
+	.menu-header-inner {
+		max-width: @content-max-width;
+		margin: auto;
+		padding: @menu-header-padding-top 0 @menu-header-padding-bottom;
+		text-align: center;
+
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: (@menu-header-padding-top / 2) 20px @menu-header-padding-bottom;
+        }
+
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: 20px 10px 20px;
+        }
+	}
+
+	.menu-title {
+		margin: @menu-block-title-margin-bottom 0;
+		color: @inverted-foreground-color;
+	}
+
+	.menu-body {
+		margin: @menu-block-body-margin-bottom 0;
+		color: @inverted-foreground-color;
+	}
+
+	.menu-item {
+		margin: -5% auto 30px;
+
+		&.nth-child-even{
+			.menu-item-inner{
+				margin-left:2%;
+		        .dir-rtl & {
+		            margin-right:2%;
+		        }
+			}
+		}
+
+		&.nth-child-odd {
+			.menu-item-inner {
+				margin-right:2%;
+                .dir-rtl & {
+                    margin-left:2%;
+                }
+			}
+		}
+	}
+
+	.menu-item-inner {
+		position:relative;
+		max-width: (@content-max-width / 2) - (@item-padding * 2);
+		margin: auto;
+		padding: @menu-block-padding-top @menu-block-padding-right (@menu-block-padding-bottom + 10px) @menu-block-padding-left;
+		background-color: @menu-item-color;
+		color: @menu-item-text-color;
+	}
+	
+	.menu-item-title {
+		margin: @menu-block-title-margin-bottom 0;
+		padding: 0;
+	}
+
+	.menu-item-body {
+		margin-bottom: @menu-block-body-margin-bottom;
+		padding: 0;
+	}
+
+	.menu-item-instruction {
+		margin-bottom: @menu-block-instruction-margin-bottom;
+		padding: 0;
+	}
+
+	.page-level-progress-menu-item {
+		width: 60px;
+		height: 6px;
+		float: right;
+		padding: 0;
+	}
+
+	.page-level-progress-menu-item-indicator {
+		width: 60px;
+		height: 6px;
+		background-color: @menu-item-progress-color;
+		border: 2px solid @menu-item-progress-border-color;
+		border-radius: 25px;
+	}
+
+	.page-level-progress-menu-item-indicator-bar {
+		height: 6px;
+		background-color: @menu-item-progress-fill-color;
+		border-radius: 25px;
+	}
+
+	.menu-item-duration {
+		margin-top: -10px;
+	}
+
+	.menu-item-button {
+		padding: 0;
+		
+		a {
+			padding: @button-padding 40px;
+			background-color:@button-color;
+			color:@button-text-color;
+			
+			&:hover {
+				background-color:@button-color-hover;
+				color:@button-text-color-hover;
+			}
+			
+			&.visited {
+				background-color:@button-color-disabled;
+				color:@button-text-color-disabled;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 760px) {
+
+   	.menu{
+   		.menu-inner {
+			padding:0;
+		}
+
+		.menu-title-inner{
+			padding: 0;
+		}
+
+		.menu-body-inner{
+			padding: 0;
+		}
+
+		.menu-item{			
+			&.nth-child-even, 
+			&.nth-child-odd {
+				.menu-item-inner{
+					margin: 0 auto 30px;
+				}
+			}
+		}
+   	}
+}
