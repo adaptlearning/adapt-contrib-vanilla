@@ -5,20 +5,24 @@
     background-color: @background-color;
 
     .article-inner {
-        background-image: url(assets/backgroundB.jpg);
-        background-position: top;
-        background-repeat: no-repeat;
-        padding-top: 1px;
-        padding-top: 280px;
+        max-width: @content-max-width;
+        margin: auto;
+        padding: @article-padding 0;
+    }
 
-        @media all and (max-width:@device-width-medium) {
-            background-image: url(assets/backgroundB-mobile.jpg);
-            padding-top: 150px;
+    .article-header {
+        padding: 0;
+
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: 0 20px;
+        }
+
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: 0 10px;
         }
     }
 
     .article-title {
-        .responsive-layout;
         text-align: left;
 
         .dir-rtl & {
@@ -27,15 +31,14 @@
     }
 
     .article-title-inner {
-        background-color: @background-color;
-        padding: @article-title-padding;
+        margin-bottom: @article-title-margin-bottom;
     }
 
     .article-body {
-        .responsive-layout;
+        margin-bottom: @article-body-margin-bottom;
     }
 
-    .article-body-inner {
-        padding: @article-body-padding;
+    .article-instruction {
+        margin-bottom: @article-instruction-margin-bottom;
     }
 }
