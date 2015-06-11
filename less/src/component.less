@@ -6,7 +6,13 @@
     }
 
     .component-title{
-        margin: @component-title-margin;
+        margin-bottom: @component-title-margin-bottom;
+        color: @title-color;
+        
+        font-size: @component-title-font-size;
+        font-family: @component-title-font-family;
+        font-weight: @component-title-font-weight;
+        line-height: @component-title-line-height;
     }
 
     .component-title-inner {
@@ -22,13 +28,15 @@
     }
 
     .component-instruction {
-        margin: @component-instruction-margin;
+        margin-bottom: @component-instruction-margin-bottom;
+
+        font-size: @instruction-text-font-size;
+        font-family: @instruction-text-font-family;
+        font-weight: @instruction-text-font-weight;
+        line-height: @instruction-text-line-height;
     }
 
     .component-instruction-inner {
-        font-weight: bold;
-        padding: @component-instruction-padding;
-
         &.validation-error {
             color: @validation-error-text-color;
         }
