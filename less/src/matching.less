@@ -13,7 +13,7 @@
     overflow: hidden;
     background-color: @item-color;
 
-    @media all and (max-width:760px) {
+    @media all and (max-width:@device-width-medium) {
       width:100%;
     }
   }
@@ -23,12 +23,12 @@
   }
 
   .matching-correct-icon {
-    color: @icon-correct-color;
+    color: @validation-success;
     display: none;
   }
 
   .matching-incorrect-icon {
-    color: @icon-incorrect-color;
+    color: @validation-error;
     display: none;
   }
 
@@ -40,29 +40,29 @@
     -moz-border-radius: 0;
     border-radius: 0;
     background: transparent;
-    padding: 15px 35px 15px 20px;
+    padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-right;
 	.dir-rtl & {
-        padding: 15px 20px 15px 35px;
+        padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-left;
     }
     cursor: pointer;
     color: @item-text-color;
     width: 100%;
 
-    @media all and (max-width:760px) and (min-width:520px) {
+    @media all and (max-width:@device-width-medium) and (min-width:@device-width-small) {
         width:105%;
     }
       
-    @media all and (max-width:519px) {
+    @media all and (max-width:(@device-width-small - 1)) {
        width:110%;
     }
 
     &:focus {
-      background-color: @item-selected-color;
+      background-color: @item-color-selected;
     }
   }
 
  	.matching-select:disabled {
-		color: @item-text-disabled-color;
+		color: @item-text-color-disabled;
 	}
 
   .matching-select-state {
@@ -87,7 +87,7 @@
         cursor: default
       }
       .matching-select-container {
-        background-color: @item-disabled-color;
+        background-color: @item-color-disabled;
       }
     }
 
@@ -123,13 +123,13 @@
 .no-touch {
   .matching-select-icon {
     &:hover {
-      color: @item-text-hover-color;
+      color: @item-text-color-hover;
     }
   }
   .matching-select-container {
     &:hover {
-      color: @button-text-hover-color;
-      background-color: @item-hover-color;
+      color: @button-text-color-hover;
+      background-color: @item-color-hover;
     }
   }
 }
@@ -137,7 +137,7 @@
 .ie8 {
   .matching-select-container {
     &.disabled {
-      background-color: @item-disabled-color;
+      background-color: @item-color-disabled;
     }
   }
 }
