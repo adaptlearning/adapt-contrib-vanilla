@@ -1,0 +1,223 @@
+.gmcq-component {
+
+    .gmcq-item {
+        position:relative;
+        width:50%;
+        margin-bottom:8px;
+        float:left;
+        .dir-rtl & {
+            float:right;
+        }
+        &.even {
+            label {
+                margin-left:5%;
+		        .dir-rtl & {
+		            margin-left:inherit;
+		            margin-right:5%;
+		        }
+            }
+        }
+
+        &.odd {
+
+            label {
+                margin-right:5%;
+                .dir-rtl & {
+                    margin-right:inherit;
+                    margin-left:5%;
+                }
+            }
+        }
+
+        @media all and (max-width:760px) {
+            width:100%;
+            &.even, &.odd {
+                label {
+                    margin-left:0%;
+                    margin-right:0%;
+                }
+            }
+        }
+    }
+
+    .gmcq-item label {
+        color:@item-text-color;
+        display:block;
+        border:@item-border;
+        margin-bottom:2px;
+        position:relative;
+        z-index:1;
+        background-color:@item-color;
+        overflow:hidden;
+        cursor:pointer;
+
+        img {
+            vertical-align:bottom;
+        }
+
+        .gmcq-answer-icon {
+            color:@item-text-color;
+            &.radio {
+                width: @icon-size + 2;
+                height: @icon-size + 2;
+                &:before {
+                    content: "\e65e";
+                }
+            }
+            &.checkbox {
+                &:before {
+                    content: " ";
+                }
+                border: 3px solid @item-text-color;
+                width:18px;
+                height:18px;
+                font-size:18px;
+                font-weight: bold;
+                border-radius: 2px;
+            }
+        }
+
+        &.selected {
+            color:@item-text-selected-color;
+            background-color:@item-selected-color;
+            .gmcq-answer-icon {
+                &.radio {
+                    &:before {
+                        content: "\e65d";
+                    }
+                }
+                &.checkbox {
+                    &:before {
+                        content: "\e633";
+                    }
+                    border: 3px solid @item-text-selected-color;
+                    width:18px;
+                    height:18px;
+                    font-size:18px;
+                    font-weight: bold;
+                    border-radius: 2px;
+                }
+            }
+            .gmcq-item-icon {
+                color:@item-text-selected-color;
+            }
+        }
+    }
+
+    .gmcq-item-inner {
+        padding:14px;
+        margin-left:38px;
+        .dir-rtl & {
+            margin-left:inherit;
+            margin-right:38px;
+        }
+        padding-top:19px;
+    }
+
+    .gmcq-item input {
+        position:absolute;
+        bottom:14px;
+        left:25px;
+        .dir-rtl & {
+            left:inherit;
+            right:25px;
+        }
+    }
+
+    .gmcq-item-checkbox {
+        position:relative;
+    }
+
+    .gmcq-item-state {
+        background:none;
+        position:absolute;
+        left:10px;
+        .dir-rtl & {
+            left:inherit;
+            right:10px;
+        }
+        width:@icon-size;
+        height:@icon-size;
+        top:50%;
+        margin-top:-(@icon-size/2);
+        z-index:0;
+    }
+
+    .gmcq-correct-icon {
+        color:@icon-correct-color;
+        display:none;
+    }
+
+    .gmcq-incorrect-icon {
+        color:@icon-incorrect-color;
+        display:none;
+    }
+
+    .gmcq-widget {
+
+        &.show-user-answer {
+            .gmcq-item-icon {
+                display:none;
+            }
+            .incorrect {
+                .selected .gmcq-incorrect-icon {
+                    display:block;
+                }
+            }
+            .correct {
+                .selected .gmcq-correct-icon {
+                    display:block;
+                }
+            }
+        }
+
+        &.show-correct-answer {
+            .gmcq-item-icon {
+                display:none;
+            }
+            .selected .gmcq-correct-icon {
+                display:block;
+            }
+        }
+
+        &.disabled {
+            .gmcq-item label.selected.disabled {
+                background-color:@item-selected-color;
+                cursor:default;
+            }
+            .gmcq-item label.disabled {
+                color:@item-text-disabled-color;
+                background-color:@item-disabled-color;
+                border-color:@item-border-disabled-color;
+                cursor:default;
+            }
+
+            .gmcq-item.correct .selected .state {
+                color:@icon-correct-color;
+            }
+
+            .gmcq-item.incorrect .selected .state {
+                color:@icon-incorrect-color;
+            }
+        }
+
+    }
+}
+
+.no-touch {
+
+    .gmcq-component {
+
+        .gmcq-widget {
+            &:not(.disabled) {
+                .gmcq-item label:hover {
+                    color:@item-text-hover-color;
+                    background-color:@item-hover-color;
+                    .gmcq-item-icon {
+                        color:@item-text-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}
