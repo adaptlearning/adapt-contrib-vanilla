@@ -1,0 +1,164 @@
+.mcq-component {
+    .mcq-item {
+        background-color:@item-color;
+        position:relative;
+    }
+
+    .mcq-item label {
+        color:@item-text-color;
+        display:block;
+        margin-bottom:2px;
+        position:relative;
+        z-index:1;
+        background-color:@item-color;
+        cursor:pointer;
+
+        .mcq-answer-icon {
+            color:@item-text-color;
+            &.radio {
+                width: @icon-size + 2;
+                height: @icon-size + 2;
+                &:before {
+                    content: "\e65e";
+                }
+            }
+            &.checkbox {
+                &:before {
+                    content: " ";
+                }
+                border: 3px solid @item-text-color;
+                width:18px;
+                height:18px;
+                font-size:18px;
+                font-weight: bold;
+                border-radius: 2px;
+            }
+        }
+
+        &.selected {
+            color:@item-text-color-selected;
+            background-color:@item-color-selected;
+            border-color:@item-border-color-selected;
+            .mcq-answer-icon {
+                 &.radio {
+                    &:before {
+                        content: "\e65d";
+                    }
+                }
+                &.checkbox {
+                    &:before {
+                        content: "\e633";
+                    }
+                    border: 3px solid @item-text-color-selected;
+                    width:18px;
+                    height:18px;
+                    font-size:18px;
+                    font-weight: bold;
+                    border-radius: 2px;
+                }
+            }
+            .mcq-item-icon {
+                color:@item-text-color-selected;
+            }
+        }
+    }
+
+    .mcq-item-inner {
+        padding:@item-padding;
+        padding-left:(@icon-size+(@item-padding-left*2));
+        .dir-rtl & {
+            padding-left:inherit;
+            padding-right:(@icon-size+(@item-padding-left*2));
+      }
+    }
+
+    .mcq-item input {
+        position:absolute;
+        top:14px;
+        left:14px;
+        .dir-rtl & {
+            left:inherit;
+            right:14px;
+        }
+    }
+
+    .mcq-correct-icon {
+        color:@icon-correct-color;
+        display:none;
+    }
+
+    .mcq-incorrect-icon {
+        color:@icon-incorrect-color;
+        display:none;
+    }
+
+    .mcq-item-state {
+        background:none;
+        position:absolute;
+        left:@item-padding-left;
+        .dir-rtl & {
+            left:inherit;
+            right:@item-padding-left;
+        }
+        width:@icon-size;
+        height:@icon-size;
+        top:50%;
+        margin-top:-(@icon-size/2);
+        z-index:0;
+    }
+}
+
+.mcq-widget {
+
+    &.disabled {
+        .mcq-item label.selected.disabled {
+            color:@item-text-color-selected;
+            background-color:@item-color-selected;
+            border-color:@item-border-color-selected;
+            cursor:default;
+        }
+        .mcq-item label.disabled {
+            color:@item-text-color-disabled;
+            background-color:@item-color-disabled;
+            border-color:@item-border-color-disabled;
+            cursor:default;
+        }
+
+        .mcq-item.correct .selected .state {
+            color:@icon-correct-color;
+        }
+
+        .mcq-item.incorrect .selected .state {
+            color:@icon-incorrect-color;
+        }
+    }
+}
+
+.no-touch {
+
+    .mcq-widget {
+        &:not(.disabled) {
+            .mcq-item label:hover {
+                color:@item-text-color-hover;
+                background-color:@item-color-hover;
+                border-color:@item-border-color-hover;
+                .mcq-item-icon {
+                    color:@item-text-color-hover;
+                }
+            }
+            .mcq-item label.disabled {
+                color:@item-text-color-disabled;
+                background-color:@item-color-disabled;
+                border-color:@item-border-color-disabled;
+                &:hover {
+                    color:@item-text-color-disabled;
+                    background-color:@item-color-disabled;
+                    border-color:@item-border-color-disabled;
+                }
+                .mcq-item-icon {
+                    color:@item-text-color-disabled;
+                }
+            }
+        }
+    }
+}
