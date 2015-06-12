@@ -7,7 +7,7 @@
     .mcq-item label {
         color:@item-text-color;
         display:block;
-        margin-bottom:2px;
+        margin-bottom:@item-margin-bottom;
         position:relative;
         z-index:1;
         background-color:@item-color;
@@ -39,6 +39,16 @@
                 color:@item-text-color-selected;
             }
         }
+    }
+
+    .mcq-correct-icon {
+        color:@validation-success;
+        display:none;
+    }
+
+    .mcq-incorrect-icon {
+        color:@validation-error;
+        display:none;
     }
 
     .mcq-item-state {
@@ -74,11 +84,11 @@
         }
 
         .mcq-item.correct .selected .state {
-            color:@icon-correct-color;
+            color:@validation-success;
         }
 
         .mcq-item.incorrect .selected .state {
-            color:@icon-incorrect-color;
+            color:@validation-error;
         }
     }
 }
