@@ -50,7 +50,7 @@
 // Buttons
 @button-color: @secondary-color;
 @button-color-hover: darken(@button-color, 40%);
-@button-color-disabled: alpha(@button-color, 20%);
+@button-color-disabled: desaturate(@button-color, 75%);
 
 @button-text-color: @secondary-color-inverted;
 @button-text-color-hover: @secondary-color-inverted;
@@ -87,14 +87,14 @@
 @drawer-item-color: @drawer-color;
 @drawer-item-color-hover: darken(@drawer-item-color, 40%);
 @drawer-item-color-completed: @drawer-item-color-hover;
-@drawer-item-color-disabled: alpha(@drawer-item-color, 20%);
+@drawer-item-color-disabled: desaturate(@drawer-item-color, 75%);
 
 @drawer-item-border-color: @drawer-text-color;
 
 @drawer-item-text-color: @quaternary-color-inverted;
 @drawer-item-text-color-hover: @drawer-item-text-color;
 @drawer-item-text-color-completed: @drawer-item-text-color;
-@drawer-item-text-color-disabled: alpha(@drawer-item-text-color, 20%);
+@drawer-item-text-color-disabled: desaturate(@drawer-item-text-color, 75%);
 
 @drawer-progress-color: @drawer-item-text-color;
 @drawer-progress-color-hover: darken(@drawer-progress-color, 40%);
@@ -105,9 +105,9 @@
 
 // Components
 @item-color: @primary-color;
-@item-color-hover: darken(@item-color, 20%);;
-@item-color-disabled: alpha(@item-color, 20%);;
-@item-color-visited: desaturate(@item-color, 90%);;
+@item-color-hover: darken(@item-color, 20%);
+@item-color-disabled: desaturate(@item-color, 75%);
+@item-color-visited: desaturate(@item-color, 90%);
 @item-color-selected: @item-color-hover;
 @item-colour-inverted: @primary-color-inverted;
 
