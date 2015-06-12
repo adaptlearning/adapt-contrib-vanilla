@@ -2,32 +2,22 @@
 // ==================
 
 .navigation {
-    background-color: @navigation-color;
-    border-bottom: @navigation-border;
-    height: @navigation-height;
     width: 100%;
+    max-width: @max-width;
+    overflow: hidden;
+    background-color: @navigation-color;
 
     .ie8 & {
         max-width: @ie8-max-width;
     }
 
-    @media all and (max-width:(@device-width-medium - 1px)) {
-        height: @navigation-height-mobile;
-    }
-
-    .navigation-inner {
-    }
-
     .icon {
-        color: @navigation-icon-color;
         padding: @navigation-padding;
+        color: @navigation-icon-color;
+        .transition-color;
 
         .no-touch &:hover {
-            color: @navigation-icon-hover-color;
-        }
-
-        @media all and (max-width:(@device-width-medium - 1px)) {
-            padding: @navigation-padding-mobile;
+            color: @navigation-icon-color-hover;
         }
     }
 }
