@@ -1,0 +1,41 @@
+.textinput-item {
+    background-color: @item-color;
+    padding: (@item-padding*0.25);
+    position: relative;
+    border: @item-border;
+    margin-bottom: 2px;
+}
+
+.textinput-item label {
+    background-color: transparent;
+    line-height: 32px;
+    padding: 0px;
+    float: left;
+    .dir-rtl & {
+        float: right;
+    }
+    text-align: center;
+    cursor: default;
+    color: @item-text-color;
+}
+
+.textinput-item-prefix {
+    width: 20%;
+}
+
+.textinput-item-textbox {
+    padding: 0 5px 0 5px;
+    width: 54%;
+    float: left;
+    .dir-rtl & {
+        float: right;
+    }
+    height: 28px;
+    &.textinput-validation-error {
+        border: 2px solid @validation-error;
+    }
+}
+
+.textinput-item-suffix {
+    width: 10%;
+}
