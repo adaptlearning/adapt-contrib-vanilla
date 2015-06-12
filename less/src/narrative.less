@@ -1,0 +1,88 @@
+// Narrative styling
+// ==================
+.narrative-component {   
+
+    .narrative-controls {
+        display: block;
+        width: (@icon-size*2.5);
+        height: (@icon-size*2.5);
+        position: absolute;
+        top: 50%;
+        margin-top: -(@icon-size*2);
+        z-index: 10;
+        text-decoration: none;
+        background-color:@item-color;
+        &:hover {
+            background-color:@item-color-hover;
+            .icon {
+                color:@item-text-color-hover;
+            }
+        }
+        .icon {
+            font-size: (@icon-size*1.25);
+            font-weight: bold;
+            margin: (@icon-size/1.5);
+            color:@item-text-color;
+        }
+    }
+
+
+    .narrative-progress {
+        background-color: darken(@item-colour-inverted, 20%);
+        &.selected {
+            background-color: @item-color;
+        }
+        border:inherit;
+    }
+
+    .narrative-strapline-title {
+        position: relative;
+        float: left;
+        text-decoration: none;
+        background-color: @item-color;
+        color: @item-text-color;
+        .dir-rtl & {
+            float: right;
+        }
+        .icon {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            .dir-rtl & {
+              right: inherit;
+              left: 0;
+            }
+            padding: @item-padding-top @item-padding-right @item-padding-bottom;
+            color: @item-text-color;
+        }
+        &:hover {
+            background-color: @item-color-hover;
+            color: @item-text-color-hover;
+            .icon {
+                color: @item-text-color-hover;
+            }
+
+        }
+        &:focus .focus-rect {
+            position: absolute;
+            outline: @focus-outline;
+            right: extract(@focus-outline, 1);
+            bottom: extract(@focus-outline, 1);
+            top: extract(@focus-outline, 1);
+            left: extract(@focus-outline, 1);
+        }
+    }
+
+    .narrative-strapline-title-inner {
+        height: (@icon-size*2.5);
+        line-height: (@item-padding-top + @item-padding-bottom + @icon-size);
+        padding-left: (@item-padding-left);
+        padding-right: (@item-padding-left + @item-padding-right + @icon-size);
+        .dir-rtl & {
+          padding-right: (@item-padding-left);
+          padding-left: (@item-padding-left + @item-padding-right + @icon-size);
+        }
+    }
+
+}
