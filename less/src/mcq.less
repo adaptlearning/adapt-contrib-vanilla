@@ -13,28 +13,6 @@
         background-color:@item-color;
         cursor:pointer;
 
-        .mcq-answer-icon {
-            color:@item-text-color;
-            &.radio {
-                width: @icon-size + 2;
-                height: @icon-size + 2;
-                &:before {
-                    content: "\e65e";
-                }
-            }
-            &.checkbox {
-                &:before {
-                    content: " ";
-                }
-                border: 3px solid @item-text-color;
-                width:18px;
-                height:18px;
-                font-size:18px;
-                font-weight: bold;
-                border-radius: 2px;
-            }
-        }
-
         &.selected {
             color:@item-text-color-selected;
             background-color:@item-color-selected;
@@ -61,35 +39,6 @@
                 color:@item-text-color-selected;
             }
         }
-    }
-
-    .mcq-item-inner {
-        padding:@item-padding;
-        padding-left:(@icon-size+(@item-padding-left*2));
-        .dir-rtl & {
-            padding-left:inherit;
-            padding-right:(@icon-size+(@item-padding-left*2));
-      }
-    }
-
-    .mcq-item input {
-        position:absolute;
-        top:14px;
-        left:14px;
-        .dir-rtl & {
-            left:inherit;
-            right:14px;
-        }
-    }
-
-    .mcq-correct-icon {
-        color:@icon-correct-color;
-        display:none;
-    }
-
-    .mcq-incorrect-icon {
-        color:@icon-incorrect-color;
-        display:none;
     }
 
     .mcq-item-state {
