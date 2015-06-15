@@ -1,0 +1,52 @@
+.slider-component {
+    .slider-scaler {
+        background-color: lighten(@item-body-text-color, 60%);
+    }
+
+    .slider-sliderange {
+        background-color: lighten(@item-body-text-color, 60%);
+        box-shadow: none;
+    }
+
+
+    .slider-handle {
+        background-color: @item-colour-inverted;
+        color: @item-color;
+        .no-touch & {
+            &:hover {
+                background-color:@item-color-hover;
+            }
+        }
+    }
+
+    .slider-scale-marker {
+        box-shadow: none;
+    }
+
+    .slider-line {
+        background-color: lighten(@item-body-text-color, 60%);
+    }
+
+    .slider-outer-bar {
+        background-color: none;
+        border: none;
+        border-top: none;
+        border-bottom: none;
+        border-radius: none;
+        box-shadow: none;
+    }
+
+    .slider-model-answer {
+        box-shadow: none;
+    }
+
+    .slider-correct-icon {
+        color: @validation-success;
+        display: none;
+    }
+
+    .slider-incorrect-icon {
+        color: @validation-error;
+        display: none;
+    }
+}
