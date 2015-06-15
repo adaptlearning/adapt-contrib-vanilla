@@ -1,20 +1,13 @@
 .hotgraphic-component {
 
   .hotgraphic-graphic {
-    position: relative;
-
     img {
       width: 100%;
     }
   }
 
   .hotgraphic-graphic-pin {
-    display: block;
-    position: absolute;
-    top: 0%;
-    left: 0%;
     background-color: @item-text-color;
-    border-radius:50%;
 
     &.visited {
       .hotgraphic-graphic-pin-icon {
@@ -25,61 +18,25 @@
 
   .hotgraphic-graphic-pin-icon {
     color: @item-color;
-    font-size: (@icon-size*2);
-    width:auto;
-    height:auto;
   }
 
   .hotgraphic-popup {
-    display: none;
-    width: auto;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    height: auto;
-    margin: 40px;
     background-color: @item-body-color;
     color: @item-body-text-color;
     border: none;
-    z-index: 5;
   }
 
   .hotgraphic-popup-toolbar {
     padding: @item-padding-top @item-padding-right @item-padding-bottom @item-padding-left;
-    position: relative;
     background-color: @item-color;
   }
 
   .hotgraphic-popup-nav {
     background-color: @item-color;
-	&.first {
-		.hotgraphic-popup-controls.back {
-			cursor: default;
-			.icon-controls-small-left:before {
-				display:none;
-			}
-		}
-	}
-	&.last {
-		.hotgraphic-popup-controls.next {
-			cursor: default;
-			.icon-controls-small-right:before {
-				display:none;
-			}
-		}
-	}
   }
 
   .hotgraphic-popup-done {
     color: @item-text-color;
-    position: absolute;
-    top: @item-padding-top;
-    right: @item-padding-right;
-    .dir-rtl & {
-        right: inherit;
-        left: @item-padding-right;
-    }
   }
 
   .hotgraphic-popup-arrow-l {
@@ -96,64 +53,10 @@
 
   .hotgraphic-popup-count {
     color: @item-text-color;
-    float: left;
-    .dir-rtl & {
-        float: right;
-    }
-    height: 30px;
-    line-height: 30px;
-    margin-right: @item-padding-right;
-    .dir-rtl & {
-        margin-right: inherit;
-        margin-left: @item-padding-right;
-    }
-    vertical-align: baseline;
-  }
-
-  .hotgraphic-popup-controls {
-    float: left;
-    .dir-rtl & {
-        float: right;
-    }
-    margin-right: @item-padding-right;
-    .dir-rtl & {
-        margin-right: inherit;
-        margin-left: @item-padding-right;
-    }
-    padding: @item-spacing;
   }
 
   .hotgraphic-popup-inner {
     padding: @item-padding-top @item-padding-right @item-padding-bottom @item-padding-left;
-  }
-
-  .hotgraphic-item-graphic {
-    width: 50%;
-    float: right;
-    .dir-rtl & {
-        float: left;
-    }
-    text-align: center;
-  }
-
-  .hotgraphic-item-graphic-inner{
-    padding-left: @item-padding-left;
-    .dir-rtl & {
-        padding-left: inherit;
-        padding-right: @item-padding-left;
-    }
-  }
-
-  .hotgraphic-item-body {
-    width: 50%;
-    float: left;
-    .dir-rtl & {
-        float: right;
-    }
-  }
-
-  a {
-    text-decoration: none;
   }
 
 }
