@@ -1,0 +1,22 @@
+.resources {
+    .resources-filter a {
+        color: @drawer-item-text-color;
+        border-bottom: 1px solid @drawer-border-color;
+        .transition-all-colors;
+
+        span {
+            border: none;
+            padding: 15px 0px;
+        }
+
+        &.selected {
+            color: @drawer-item-text-color-completed;
+            background-color: @drawer-item-color-completed;
+        }
+
+        .no-touch &:hover {
+            color:  @drawer-item-text-color-hover;
+            background-color: @drawer-item-color-hover;
+        }
+    }
+}
