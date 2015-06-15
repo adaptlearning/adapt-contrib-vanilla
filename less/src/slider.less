@@ -1,48 +1,17 @@
 .slider-component {
     .slider-scaler {
-        width: 80%;
-        height: 2px;
         background-color: lighten(@item-body-text-color, 60%);
-        float: left;
-        position: relative;
-        border: none;
-        border-top: none;
-        border-bottom: none;
-        margin: 3px 5%;
-        top: 12px;
     }
 
     .slider-sliderange {
-        cursor: pointer;
-        width: 80%;
-        height: 6px;
         background-color: lighten(@item-body-text-color, 60%);
-        float: left;
-        position: relative;
-        border: none;
-        border-top: none;
-        border-bottom: none;
-        border-radius: 20px;
-        margin: 20px 5%;
-        top: 15px;
         box-shadow: none;
-        z-index:2;
     }
 
+
     .slider-handle {
-        display: block;
-        position: absolute;
-        height: 30px;
-        cursor: pointer;
-        width: 30px;
-        top: -15px;
-        border-radius: 50%;
-        margin-left: -15px;
         background-color: @item-colour-inverted;
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
         color: @item-color;
-        text-align: center;
-        z-index: 2;
         .no-touch & {
             &:hover {
                 background-color:@item-color-hover;
@@ -51,45 +20,11 @@
     }
 
     .slider-scale-marker {
-        display: none;
-        position: absolute;
-        height: 24px;
-        width: 24px;
-        top: -42px;
-        border-radius: 50%;
-        margin-left: -12px;
-        color: @item-text-color;
-        cursor:default;
-        line-height: 24px;
-        text-align: center;
-        z-index: 1;
-        background-color: @item-color;
         box-shadow: none;
     }
 
     .slider-line {
-        display: block;
-        width: 2px;
-        height: 10px;
-        top: 0px;
         background-color: lighten(@item-body-text-color, 60%);
-        position: absolute;
-        z-index: 0;
-        margin-left: -2px;
-    }
-
-    .slider-bar {
-        height: 6px;
-        background-color: @item-color;
-        float: left;
-        position: relative;
-        cursor: pointer;
-        border: none;
-        border-top: none;
-        border-bottom: none;
-        border-radius: 20px;
-        z-index:1;
-
     }
 
     .slider-outer-bar {
@@ -102,19 +37,6 @@
     }
 
     .slider-model-answer {
-        display: none;
-        position: absolute;
-        height: 24px;
-        width: 24px;
-        top: -42px;
-        border-radius: 50%;
-        margin-left: -12px;
-        color: @item-text-color;
-        cursor:default;
-        line-height: 24px;
-        text-align: center;
-        z-index: 1;
-        background-color: @item-color;
         box-shadow: none;
     }
 
