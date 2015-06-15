@@ -12,16 +12,13 @@
     }
 
     .accordion-item-title {
-        font-size: @item-title-font-size;
-        font-family: @item-title-font-family;
-        font-weight: @item-title-font-weight;
-        line-height: @item-title-line-height;
-
         color: @item-text-color;
         background-color: @item-color;
         padding-top: @item-padding-top;
         padding-bottom: @item-padding-bottom;
         padding-left: (@icon-size+(@item-padding-left*2));
+        .item-title;
+        
         .dir-rtl & {
             padding-left:inherit;
             padding-right:(@icon-size+(@item-padding-left*2));

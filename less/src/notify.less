@@ -59,6 +59,10 @@
         }
     }
 
+    .notify-popup-title {
+        margin-bottom: @notify-title-padding-bottom;
+    }
+
     .notify-popup-icon {
         .icon {
             font-size: 60px;
@@ -81,7 +85,8 @@
         border: none;
         min-width: 100px;
         .transition-all-colors;
-
+        .button-text;
+        
         .no-touch &:hover {
             background-color: @notify-button-color-hover;
             color: @notify-button-text-color-hover;
