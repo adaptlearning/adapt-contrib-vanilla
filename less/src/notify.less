@@ -15,42 +15,22 @@
     .notify-type-prompt, 
     .notify-type-alert {
         .notify-popup-inner {
-            padding-top: @notify-popup-padding;
+            padding: @notify-padding-top 0 @notify-padding-bottom;
         }
     }
 
-    .notify-popup-icon {
-        .icon {
-            font-size: 60px;
-            height: 60px;
-            width: 60px;
-            color: @notify-icon-color;
+    .notify-popup-inner {
+        position: relative;
+        max-width: @content-max-width; 
+        margin: auto;
+        padding: @notify-padding-top 0 @notify-padding-bottom;
+
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: @notify-padding-top 20px @notify-padding-bottom;
         }
-    }
 
-    .notify-popup-buttons {
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .notify-popup-title-inner {
-        font-size: 36px;
-    }
-
-    .notify-popup-button {
-        background-color: #fff;
-        color: #aaa;
-        padding: 10px;
-        text-decoration: none;
-        display:inline-block;
-        border: none;
-        font-size: 18px;
-        font-weight: 300;
-        min-width: 100px;
-        .transition-all-colors;
-
-        .no-touch &:hover {
-            background-color: darken(#fff, 20%);
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: @notify-padding-top 10px @notify-padding-bottom;
         }
     }
 
@@ -72,38 +52,39 @@
         @media all and (max-width:(@device-width-medium - 1px)) {
             padding-left: 0px;
 
-	        .dir-rtl & {
-	            padding-left: inherit;
-	            padding-right: 0px;
-	        }
+            .dir-rtl & {
+                padding-left: inherit;
+                padding-right: 0px;
+            }
         }
     }
 
-    .notify-popup-inner {
-        padding: @notify-popup-padding;
+    .notify-popup-icon {
+        .icon {
+            font-size: 60px;
+            height: 60px;
+            width: 60px;
+            color: @notify-icon-color;
+        }
     }
 
-    // .notify-popup-toolbar {
-    //     left: initial;
-    //     position: absolute;
-    //     right: 0px;
-    //     text-align: right;
-    //     top: 0px;
-    //     z-index: 1;
+    .notify-popup-buttons {
+        text-align: center;
+    }
 
-    //     .dir-rtl & {
-    //         left: 0px;
-    //         right: initial;
-    //         text-align: left;    
-    //     }
-        
-    // }
+    .notify-popup-button {
+        background-color: @notify-button-color;
+        color: @notify-button-text-color;
+        padding: 10px;
+        text-decoration: none;
+        display:inline-block;
+        border: none;
+        min-width: 100px;
+        .transition-all-colors;
 
-    .notify-popup-toolbar {
-        text-align: right;
-
-        .dir-rtl & {
-            text-align: left;
+        .no-touch &:hover {
+            background-color: @notify-button-color-hover;
+            color: @notify-button-text-color-hover;
         }
     }
 
@@ -111,17 +92,17 @@
         padding: 5px;
         margin: 10px;
         border-radius: 50%;
-        border: 2px solid #fff;
+        border: 2px solid @notify-icon-color;
         position:absolute;
         top: 0px;
         right:0px;
         .transition-border-color;
 
         .no-touch &:hover {
-            border-color: darken(#fff, 20%);
+            border-color: @notify-icon-color-hover;
 
             .notify-popup-icon-close {
-                color: darken(#fff, 20%);
+                color: @notify-icon-color-hover;
             }
         }
     }
@@ -130,7 +111,7 @@
         color: @notify-icon-color;
 
         .no-touch &:hover {
-            color:@notify-icon-hover-color;
+            color: @notify-icon-color-hover;
         }
     }
 
@@ -148,7 +129,7 @@
     top:(@navigation-height + 20px);
     right:20px;
     width:380px;
-    background-color:@notify-color;
+    background-color: @notify-color;
     transition:all 0.3s;
     opacity:0;
     margin-top:-30px;
@@ -210,7 +191,7 @@
         color: @notify-icon-color;
         
         .no-touch &:hover {
-            color: @notify-icon-hover-color;
+            color: @notify-icon-color-hover;
         }
     }
 }
