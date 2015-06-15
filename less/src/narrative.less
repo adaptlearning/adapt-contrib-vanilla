@@ -2,6 +2,11 @@
 // ==================
 .narrative-component {   
 
+    .narrative-content-title {
+        margin-bottom: @title-text-margin;
+        .item-title;
+    }
+
     .narrative-controls {
         display: block;
         width: (@icon-size*2.5);
@@ -12,12 +17,15 @@
         z-index: 10;
         text-decoration: none;
         background-color:@item-color;
+
         &:hover {
             background-color:@item-color-hover;
+            
             .icon {
                 color:@item-text-color-hover;
             }
         }
+
         .icon {
             font-size: (@icon-size*1.25);
             font-weight: bold;
@@ -29,10 +37,11 @@
 
     .narrative-progress {
         background-color: darken(@item-colour-inverted, 20%);
+        border:inherit;
+
         &.selected {
             background-color: @item-color;
         }
-        border:inherit;
     }
 
     .narrative-strapline-title {
@@ -41,9 +50,12 @@
         text-decoration: none;
         background-color: @item-color;
         color: @item-text-color;
+        .item-title;
+
         .dir-rtl & {
             float: right;
         }
+
         .icon {
             display: block;
             position: absolute;
@@ -56,14 +68,17 @@
             padding: @item-padding-top @item-padding-right @item-padding-bottom;
             color: @item-text-color;
         }
+
         &:hover {
             background-color: @item-color-hover;
             color: @item-text-color-hover;
+
             .icon {
                 color: @item-text-color-hover;
             }
 
         }
+
         &:focus .focus-rect {
             position: absolute;
             outline: @focus-outline;
@@ -75,14 +90,12 @@
     }
 
     .narrative-strapline-title-inner {
-        height: (@icon-size*2.5);
-        line-height: (@item-padding-top + @item-padding-bottom + @icon-size);
         padding-left: (@item-padding-left);
         padding-right: (@item-padding-left + @item-padding-right + @icon-size);
+        
         .dir-rtl & {
           padding-right: (@item-padding-left);
           padding-left: (@item-padding-left + @item-padding-right + @icon-size);
         }
     }
-
 }
