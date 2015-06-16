@@ -1,4 +1,4 @@
-// Additional theme classes to be applied in JSON for more custom style 
+// Additional theme classes or attributes to be applied in JSON for more custom style 
 // ====================================================================
 
 // Devider block - used to separate content or break up pages. 
@@ -6,15 +6,51 @@
 
 // Class applies alternative background color and component styling
 
-.divider-block {
+.devider-block {
     background-color: @background-color-inverted;
     color: @foreground-color-inverted;
     text-align: center;
 
+    .block-title,
+    .block-body,
+    .block-instruction,
     .component-title,
     .component-body,
     .component-instruction {
     	color: @foreground-color-inverted;
     	text-align: center;
     }
+}
+
+// Block background color - used to apply variable based background colors on blocks
+// ======================
+
+.block {
+	&.black {
+		background-color: @black;
+	}
+
+	&.blue {
+		background-color: @blue;
+	}
+
+	&.light-grey {
+		background-color: @light-grey;
+	}
+
+	&.mid-grey {
+		background-color: @mid-grey;
+	}
+
+	&.dark-grey {
+		background-color: @dark-grey;
+	}
+
+	&.red {
+		background-color: @red;
+	}
+
+	&.green {
+		background-color: @green;
+	}
 }
