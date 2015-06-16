@@ -15,6 +15,6 @@
         "_medium": 500,
         "_small": 300
     },
-    // Devider Block - break up page content by overriding block content style
-    "_isDeviderBlock": true
+    // Divider Block - break up page content by overriding block content style
+    "_isDividerBlock": true
 }
