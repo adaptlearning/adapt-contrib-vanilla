@@ -14,7 +14,7 @@ define(function(require) {
 		setStyles: function() {
 			this.setBackground();
 			this.setMinHeight();
-			this.setDeviderBlock();
+			this.setDividerBlock();
 		},
 
 		setBackground: function() {
@@ -45,13 +45,11 @@ define(function(require) {
 			});
 		},
 
-		setDeviderBlock: function() {
-			var deviderBlock = this.model.get('_themeBlockConfig')._isDeviderBlock;
+		setDividerBlock: function() {
+			var dividerBlock = this.model.get('_themeBlockConfig')._isDividerBlock;
 
-			if (deviderBlock) {
-				this.$el.addClass('devider-block');
-			} else {
-				console.log('false')
+			if (dividerBlock) {
+				this.$el.addClass('divider-block');
 			}
 		}
 	});
