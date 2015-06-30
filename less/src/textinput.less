@@ -1,9 +1,17 @@
 .textinput-item {
     background-color: @item-color;
-    padding: (@item-padding*0.25);
     position: relative;
     border: @item-border;
     margin-bottom: 2px;
+
+    .component-full & {
+        padding: 1%;
+    }
+
+    .component-left &,
+    .component-right & {
+        padding: 2%;
+    }
 }
 
 .textinput-item label {
@@ -24,13 +32,28 @@
 }
 
 .textinput-item-textbox {
-    padding: 0 5px 0 5px;
     width: 54%;
+    height: 28px;
+    padding: 0 5px 0 5px;
     float: left;
+
+    .component-full & {
+        width: 98%;
+    }
+
+    .component-left &,
+    .component-right & {
+        width: 96%;
+    }
+
+    &.prefix {
+        width: 60%;
+    }
+
     .dir-rtl & {
         float: right;
     }
-    height: 28px;
+
     &.textinput-validation-error {
         border: 2px solid @validation-error;
     }
@@ -39,3 +62,5 @@
 .textinput-item-suffix {
     width: 10%;
 }
+
+
