@@ -122,7 +122,16 @@
             }
             .gmcq-item-icon {
                 color: @item-color-selected;
+
+                &.gmcq-correct-icon {
+                    color:@validation-success;
+                }
+
+                &.gmcq-incorrect-icon {
+                    color:@validation-error;
+                }
             }
+            
             .gmcq-item-inner {
                 color: @item-color-selected;
             }
