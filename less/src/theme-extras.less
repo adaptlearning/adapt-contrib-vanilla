@@ -55,3 +55,16 @@
 	background-color: @component-background-color;
 	padding: @component-padding;
 }
+
+// Assessment - remove graphic components for mobile view (when components snap down to single span).
+// ==========
+
+.assessment {
+	.graphic-component {
+		display: block;
+
+		@media all and (max-width: @device-width-medium) {
+			display: none;
+		}
+	}
+}
