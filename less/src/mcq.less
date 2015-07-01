@@ -18,6 +18,8 @@
             background-color:@item-color-selected;
             border-color:@item-border-color-selected;
             .mcq-answer-icon {
+                color:@item-text-color-selected;
+
                  &.radio {
                     &:before {
                         content: "\e65d";
@@ -42,12 +44,12 @@
     }
 
     .mcq-correct-icon {
-        color:@validation-success;
+        color:@validation-success!important;//override .mcq-item-icon styling in ie8
         display:none;
     }
 
     .mcq-incorrect-icon {
-        color:@validation-error;
+        color:@validation-error!important;//override .mcq-item-icon styling in ie8
         display:none;
     }
 
@@ -103,7 +105,7 @@
                 background-color:@item-color-hover;
                 border-color:@item-border-color-hover;
                 .mcq-item-icon {
-                    color:@item-text-color-hover;
+                    color: none;
                 }
             }
             .mcq-item label.disabled {
@@ -116,8 +118,6 @@
                     border-color:@item-border-color-disabled;
                 }
                 .mcq-item-icon {
-                    color:@item-text-color-disabled;
-                    
                     &.mcq-correct-icon {
                         color:@validation-success;
                     }
