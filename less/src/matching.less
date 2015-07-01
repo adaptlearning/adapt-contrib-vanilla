@@ -67,6 +67,12 @@
   .matching-select-icon {
     &:hover {
       color: @item-text-color-hover;
+      &.matching-correct-icon {
+        color: @validation-success;
+      }
+      &.matching-incorrect-icon {
+         color: @validation-error;
+      }
     }
   }
   .matching-select-container {
