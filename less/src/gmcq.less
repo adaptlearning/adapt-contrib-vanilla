@@ -222,25 +222,25 @@
             .gmcq-item label.selected.disabled {
                 background-color: transparent;
                 cursor:default;
+
+                .gmcq-item-icon {
+                    &.gmcq-correct-icon {
+                        color:@validation-success;
+                    }
+                    &.gmcq-incorrect-icon {
+                        color:@validation-error;
+                    }
+                }
             }
+
             .gmcq-item label.disabled {
                 color: @item-color-disabled;
                 background-color: transparent;
                 border-color:@item-border-disabled-color;
                 cursor:default;
-
                 border: none;
             }
-
-            .gmcq-item.correct .selected .state {
-                color: @validation-success;
-            }
-
-            .gmcq-item.incorrect .selected .state {
-                color: @validation-error;
-            }
         }
-
     }
 }
 

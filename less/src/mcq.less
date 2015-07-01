@@ -81,14 +81,15 @@
             background-color:@item-color-disabled;
             border-color:@item-border-color-disabled;
             cursor:default;
-        }
 
-        .mcq-item.correct .selected .state {
-            color:@validation-success;
-        }
-
-        .mcq-item.incorrect .selected .state {
-            color:@validation-error;
+            .mcq-item-icon {
+                &.mcq-correct-icon {
+                    color:@validation-success;
+                }
+                &.mcq-incorrect-icon {
+                    color:@validation-error;
+                }
+            }
         }
     }
 }
@@ -116,6 +117,13 @@
                 }
                 .mcq-item-icon {
                     color:@item-text-color-disabled;
+                    
+                    &.mcq-correct-icon {
+                        color:@validation-success;
+                    }
+                    &.mcq-incorrect-icon {
+                        color:@validation-error;
+                    }
                 }
             }
         }
