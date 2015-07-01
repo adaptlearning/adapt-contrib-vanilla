@@ -39,17 +39,23 @@
             }
             .mcq-item-icon {
                 color:@item-text-color-selected;
+
+                &.mcq-correct-icon {
+                    color:@validation-success;
+                }
+
+                &.mcq-incorrect-icon {
+                    color:@validation-error;
+                }
             }
         }
     }
 
     .mcq-correct-icon {
-        color:@validation-success!important;//override .mcq-item-icon styling in ie8
         display:none;
     }
 
     .mcq-incorrect-icon {
-        color:@validation-error!important;//override .mcq-item-icon styling in ie8
         display:none;
     }
 
