@@ -8,13 +8,12 @@
         max-width: @device-width-large;
         margin: auto;
         padding: @block-padding 0;
-
+        // reduce padding as screen width decreases
         @media all and (max-width: (@device-width-large + 20px)) {
-            padding: @block-padding 20px;
+            padding: (@block-padding / 2) 20px;
         }
-
         @media all and (max-width: (@device-width-small + 20px)) {
-            padding: @block-padding 10px;
+            padding: (@block-padding / 3) 10px;
         }
     }
 
