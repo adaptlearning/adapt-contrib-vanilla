@@ -12,8 +12,9 @@
     .drawer-toolbar .icon {
         color: @drawer-icon-color;
         padding: @navigation-padding;
+        .transition-color;
 
-        &:hover {
+        .no-touch &:hover {
             color: @drawer-icon-color-hover;
         }
 
@@ -33,7 +34,7 @@
 
     .drawer-item {
         .drawer-item-title {
-            .sub-title
+            .sub-title;
         }
         
         .drawer-item-open {
@@ -50,8 +51,10 @@
 
     .drawer-item-open {
         padding: @drawer-item-padding-top @drawer-item-padding-right @drawer-item-padding-bottom @drawer-item-padding-left;
+        .transition-background-color;
+
         //stops rollover of drawar items on touch devices    
-        &.touch:hover {
+        .no-touch &:hover {
              background-color: @drawer-color;
        }
     }
