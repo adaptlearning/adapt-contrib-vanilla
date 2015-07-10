@@ -4,7 +4,6 @@
   "description": "A contributed vanilla theme",
   "main": "",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -16,8 +15,5 @@
     "url": "https://github.com/adaptlearning/adapt-contrib-vanilla/issues"
   },
   "devDependencies": {
-    "karma": "0.10",
-    "karma-mocha": "0.1.0",
-    "karma-expect": "1.1.0"
   }
 }
