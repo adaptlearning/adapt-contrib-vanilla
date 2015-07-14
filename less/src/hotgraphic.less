@@ -10,6 +10,8 @@
     background-color: @item-text-color;
 
     &.visited {
+      background-color: @item-text-color-visited; 
+
       .hotgraphic-graphic-pin-icon {
         color: @item-color-visited;
       }
@@ -63,6 +65,11 @@
 
 .no-touch {
   .hotgraphic-component {
+    .hotgraphic-graphic-pin {
+      &:hover {
+        background-color: @item-text-color-hover;
+      }
+    }
     .hotgraphic-graphic-pin-icon {
       &:hover {
         color: @item-color-hover;
