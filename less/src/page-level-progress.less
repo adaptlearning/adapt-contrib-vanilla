@@ -48,27 +48,35 @@
 // Drawer PLP
 // ==========
 
-.page-level-progress-item-title {
-	background-color: @drawer-item-color;
-	color: @drawer-item-text-color;
-    .transition-all-colors;
+.drawer {
+    .page-level-progress-item-title {
+    	background-color: @drawer-item-color;
+    	color: @drawer-item-text-color;
+        .transition-all-colors;
 
-	&.disabled {
-		background-color: @drawer-item-color-disabled;
-		color: @drawer-item-text-color-disabled;
+    	&.drawer-item-open.disabled {
+    		background-color: @drawer-item-color-disabled;
+    		color: @drawer-item-text-color-disabled;
+
+            .no-touch &:hover {
+                background-color: @drawer-item-color-disabled;
+                color: @drawer-item-text-color-disabled;
+                .page-level-progress-indicator {
+                    background-color: transparent;
+                }
+            }
+    	}
 
         &:hover {
-            background-color: @drawer-item-color-disabled!important;
-            color: @drawer-item-text-color-disabled!important;
-        }
-	}
+            background-color: @drawer-item-color-hover;
+            color: @drawer-item-text-color-hover;
 
-    &:hover {
-        background-color: @drawer-item-color-hover;
-        color: @drawer-item-text-color-hover;
-
-        .page-level-progress-indicator {
-            background-color: @drawer-progress-color-hover;
+            .page-level-progress-indicator {
+                background-color: @drawer-progress-color-hover;
+            }
+            .page-level-progress-indicator-incomplete {
+                background-color: @drawer-item-color;
+            }
         }
     }
 }
