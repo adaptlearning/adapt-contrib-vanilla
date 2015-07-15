@@ -9,14 +9,14 @@
     }
 
     .page-header-inner {
-        padding: @page-header-padding 0;
+        padding: @page-padding-top 0 @page-padding-bottom;
 
         @media all and (max-width: (@device-width-large + 20px)) {
-            padding: @page-header-padding 20px;
+            padding: @page-padding-top 20px @page-padding-bottom;
         }
 
         @media all and (max-width: (@device-width-small + 20px)) {
-            padding: @page-header-padding 10px;
+            padding: @page-padding-top 10px @page-padding-bottom;
         }
     }
 
