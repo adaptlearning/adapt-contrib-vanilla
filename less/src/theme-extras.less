@@ -68,3 +68,22 @@
 		}
 	}
 }
+
+// THIS CLASS IS FOR THE PURPOSE OF THE ADAPT DEMO 
+// blank component demo - applied at block level to add a background image in place of a blank component
+// ====================
+
+.blank-background {
+	background-image: url(assets/blank-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@media all and (max-width: @device-width-large) {
+		background-image: url(assets/blank-bg-900.jpg);
+		background-position: right;
+	}
+
+	@media all and (max-width: @device-width-medium) {
+		background-image: none;
+	}
+}
