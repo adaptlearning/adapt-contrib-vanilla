@@ -12,14 +12,9 @@
     }
 
     .narrative-controls {
-        display: block;
-        width: (@icon-size*2.5);
-        height: (@icon-size*2.5);
-        position: absolute;
-        top: 50%;
-        margin-top: -(@icon-size*2);
-        z-index: 10;
-        text-decoration: none;
+        width: (@icon-size * 2.5);
+        height: (@icon-size * 2.5);
+        margin-top: -(@icon-size * 2);
         background-color:@item-color;
 
         &:hover {
@@ -31,9 +26,9 @@
         }
 
         .icon {
-            font-size: (@icon-size*1.25);
+            font-size: (@icon-size * 1.25);
             font-weight: bold;
-            margin: (@icon-size/1.5);
+            margin: (@icon-size / 1.5);
             color:@item-text-color;
         }
     }
@@ -49,26 +44,11 @@
     }
 
     .narrative-strapline-title {
-        position: relative;
-        float: left;
-        text-decoration: none;
         background-color: @item-color;
         color: @item-text-color;
         .item-title;
 
-        .dir-rtl & {
-            float: right;
-        }
-
         .icon {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            .dir-rtl & {
-              right: inherit;
-              left: 0;
-            }
             padding: @item-padding-top @item-padding-right @item-padding-bottom;
             color: @item-text-color;
         }
@@ -82,17 +62,8 @@
             }
 
         }
-
-        &:focus .focus-rect {
-            position: absolute;
-            outline: @focus-outline;
-            right: extract(@focus-outline, 1);
-            bottom: extract(@focus-outline, 1);
-            top: extract(@focus-outline, 1);
-            left: extract(@focus-outline, 1);
-        }
     }
-
+    
     .narrative-strapline-title-inner {
         padding-left: (@item-padding-left);
         padding-right: (@item-padding-left + @item-padding-right + @icon-size);
