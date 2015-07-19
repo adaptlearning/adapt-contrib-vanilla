@@ -1,75 +1,76 @@
-# adapt-contrib-boxMenu  
+# adapt-contrib-vanilla  
 
-**Box Menu** is a *menu* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
+**Vanilla** is a *theme* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
 
-<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/boxMenu01.jpg" alt="image of two rectangular menu options produced by box menu">
+<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/vanilla01.jpg" alt="sample colors from the vanilla theme">  
 
-Menu choices are framed within a box element and arranged in a grid. **Box Menu** allows you to direct the learner to either further menus (sub menus) or to one or more pages of content. The **Box Menu** default is show a title, an image, some body text, duration, a progress indicator and a link button.
-
-[Visit the **Box Menu** wiki](https://github.com/adaptlearning/adapt-contrib-boxmenu/wiki) for more information about its functionality and for explanations of key properties. Options include an estimated time for completion (duration) and a progress bar to indicate the percentage of components that have been completed.
+It provides specific values to styles, including colors, padding, margins, and assets such as fonts and background images. [Visit the **Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about its functionality and for explanations of key properties. 
 
 ##Installation
 
-As Adapt's *[core menu](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#menu),* **Box Menu** is included with the [installation of the Adapt framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework#installation) and the [installation of the Adapt authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-Adapt-Origin).
+As Adapt's *[core theme](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#theme),* **Vanilla** is included with the [installation of the Adapt framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework#installation) and the [installation of the Adapt authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-Adapt-Origin).
 
-* If **Box Menu** has been uninstalled from the Adapt framework, it may be reinstalled.
+* If **Vanilla** has been uninstalled from the Adapt framework, it may be reinstalled.
 With the [Adapt CLI](https://github.com/cajones/adapt-cli) installed, run the following from the command line:  
-`adapt install adapt-contrib-boxMenu`
+`adapt install adapt-contrib-vanilla`
 
     Alternatively, this component can also be installed by adding the following line of code to the *adapt.json* file:  
-    `"adapt-contrib-boxMenu": "*"`  
+    `"adapt-contrib-vanilla": "*"`  
     Then running the command:  
     `adapt install`  
     (This second method will reinstall all plug-ins listed in *adapt.json*.)  
 
-* If **Box Menu** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).
+* If **Vanilla** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
 
 ##Uninstallation  
-The Adapt framework does not allow the installation of more than one menu at a time. In order to replace **Box Menu** it must be uninstalled. With the root of your framework installation as your current working directory, run the following command:  
-`adapt uninstall adapt-contrib-boxMenu`  
+The Adapt framework does not allow the installation of more than one theme at a time. In order to replace **Vanilla** it must be uninstalled. With the root of your framework installation as your current working directory, run the following command:  
+`adapt uninstall adapt-contrib-vanilla`  
 
-<div float align=right><a href="#top">Back to Top</a></div>  
+## Settings overview
 
-## Settings Overview
+Unlike most Adapt plug-ins, the **Vanilla** theme has no attributes that are required to be configured in the course JSON files. There is, however, an option to alter the background color of blocks as desired. Configure the attributes highlighted below in *blocks.json*. These attributes are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/example.json).
 
-The attributes listed below are used in *contentObjects.json* to configure **BoxMenu**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-boxMenu/blob/master/example.json). Visit the [**BoxMenu** wiki](https://github.com/adaptlearning/adapt-contrib-boxmenu/wiki) for more information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
+#### **blocks.json**
+**_theme** (object): The theme attributes group contains attributes that override those set in **Vanilla**. These include **_backgroundColor**, **_minimumHeights**, and **_isDividerBlock**.
 
-### Attributes
+>**_backgroundColor** (string): This value is the name of a color variable that has been defined in  *less/colors.less*. Omit the initial `@` that is a part of the variable declaration. For example, an acceptable value is `"background-color-inverted"`.  
 
-**_id** (string): This is a unique identifier that establishes relationships with other content structures. It is referenced in *articles.json* as the `_parentid` of an article model.   
+>**_minimumHeights** (object): The minimum heights attribute group specifies the minimum height of the block at different device widths (`_large`, `_medium`, and `_small`).   
 
-**_parentId** (string): This value is sourced from the parent element's `_id` found within *course.json*. It must match. 
+>>**_large** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_large"`.  
+        
+>>**_medium** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_medium"`.   
+        
+>>**_small** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_small"`.   
+ 
+>**_isDividerBlock** (boolean): - Determines whether the CSS class `divider-block` *(less/src/theme-extras.less)* will be applied. Acceptable values are `true` and `false`.
 
-**_type** (string): This value determines what the learner will access by clicking the provided link/button. Acceptable values are `"page"` and `"menu"`. `"page"` will direct the learner to a page structured with articles, blocks, and components. `"menu"` will direct the learner to a page with more menus. 
+Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.  
 
-**_classes** (string): CSS class name to be applied to menu item's `page` element (*src/core/js/views/pageView.js*). The class must be predefined in one of the Less files. Separate multiple classes with a space.
+## Structure  
 
-**title** (string): This text is a reference title for the content object.
+| Folder/File         | Description  |
+| :-------------      |:-------------|
+| theme.json          | Pixel values for `screenSize`(`small`, `medium`, and `large`)|
+| selection.json      | File used for selecting icons at [IcoMoon.io](https://icomoon.io/) that are packaged in fonts/vanilla.* |
+| assets              | Location of theme assets (for example: images, loading gif, etc.)|
+| fonts/vanilla.*     | Icon font referenced in the associated *.less* files      |   
+| js                  | JavaScript files on which the theme depends      |
+| less                | Location of any [LESS](http://lesscss.org/) based CSS files |
+| less/generic.less   | Variables that are not covered by those defined in colors.less, fonts.less, and paddings.less   |
+| less/src            | Location of LESS files for various Adapt elements |
+| less/src/theme-extras.less| Classes used for bespoke styling |
+| templates           | Location of pre-defined HTML (.hbs) templates |
+| templates/partials  | Location of pre-defined HTML (.hbs) templates required by other templates, specifically buttons.hbs, component.hbs, and state.hbs |  
 
-**displayTitle** (string):  This text is displayed on the menu item.
+##Templates  
 
-**body** (string):  Optional text that appears on the menu item. Often used to inform the learner about the menu choice. If no **pageBody** is supplied, this text will also appear as the body text of the page header.
-
-**pageBody** (string): Optional text that appears as the body text of the page header. If this text is not provided, the **body** text will be used (if it is supplied). Reference [*adapt-contrib-vanilla/templates/page.hbs*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/templates/page.hbs).
-
-**_graphic** (object): The image that appears on the menu item. It contains values for **alt** and **src**.
-
->**alt** (string): This text becomes the image’s `alt` attribute.
-
->**src** (string): File name (including path) of the image. Path should be relative to the *src* folder (e.g., *"course/en/images/t05.jpg"*).  
-       
-**linkText** (string): This text is displayed on the menu item's link/button.  
-
-**durationLabel** (string): Optional text which precedes **duration** (e.g., `"Duration:"`).  
-
-**duration** (string): Optional text which follows **durationLabel** (e.g., `"2 mins"`).  
-       
-<div float align=right><a href="#top">Back to Top</a></div>  
-
-### Accessibility
-Several menu-related elements are assigned an [Aria label](https://github.com/adaptlearning/adapt_framework/wiki/Aria-Labels) in *course.json*: menu, menuItem, menuViewButton, and menuLoaded. They are customizable. Aria labels are not visible elements. They are utilized by assistive technology such as screen readers.  
-
-<div float align=right><a href="#top">Back to Top</a></div>
+**Vanilla** supports customisation for the rendering of various Adapt elements through the use of [Handlebars](http://handlebarsjs.com/) templates.  The file name of the template indicates the element it affects. Among the available templates are:
+* article.hbs
+* block.hbs
+* loading.hbs 
+* navigation.hbs
+* page.hbs
 
 ## Limitations
  
