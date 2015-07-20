@@ -47,4 +47,16 @@
             color: @validation-error-text-color;
         }
     }
+
+    // to replicate padding between blocks when components drop into a single column
+    @media all and (max-width: (@device-width-small)) {
+    
+        &.component-left {
+            padding: 0 0 (@block-padding / 3);
+        }
+    
+        &.component-right {
+            padding: (@block-padding / 3) 0 0;
+        }   
+    }
 }
