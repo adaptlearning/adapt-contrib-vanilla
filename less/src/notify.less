@@ -61,9 +61,19 @@
 
     .notify-popup-title {
         margin-bottom: @notify-title-padding-bottom;
+        padding-right: 60px;
+        .dir-rtl & {
+            padding-right: inherit;
+            padding-left: 60px;
+        }
     }
 
     .notify-popup-body {
+        padding-right: 60px;
+        .dir-rtl & {
+            padding-right: inherit;
+            padding-left: 60px;
+        }
         a {
           text-decoration: underline;
           color: @notify-text-color;
@@ -76,6 +86,12 @@
             height: 60px;
             width: 60px;
             color: @notify-icon-color;
+        }
+        right: 0px;
+        left: inherit;
+        .dir-rtl & {
+            right: inherit;
+            left: 0px;
         }
     }
 
