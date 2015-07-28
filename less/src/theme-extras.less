@@ -92,3 +92,20 @@
 		background-image: none;
 	}
 }
+
+
+// Assessment - hide marking
+// requires a class called "assessment" on your assessment page
+// ==========
+
+ .assessment {
+	.buttons-marking-icon {
+		display: none;
+	}
+	.question-component {
+		.icon-tick,
+		.icon-cross {
+			display: none!important;
+		}
+	}
+}
