@@ -11,7 +11,7 @@
     background-color: @item-color;
     position: relative;
     border: @item-border;
-    margin-bottom: 2px;
+    margin-bottom: @item-margin-bottom;
 
     .component-full & {
         padding: 1%;
@@ -23,55 +23,13 @@
     }
 }
 
-.textinput-item label {
-    background-color: transparent;
-    line-height: 32px;
-    padding: 0px;
-    float: left;
-    .dir-rtl & {
-        float: right;
-    }
-    text-align: center;
-    cursor: default;
-    color: @item-text-color;
-}
-
-.textinput-item-prefix {
-    width: 20%;
-}
-
 .textinput-item-textbox {
-    width: 54%;
     height: 28px;
     line-height: 28px;
-    padding: 0 5px 0 5px;
-    float: left;
-
-    .component-full & {
-        width: 98%;
-    }
-
-    .component-left &,
-    .component-right & {
-        width: 96%;
-    }
-
-    &.prefix,
-    &.suffix {
-        width: 60%;
-    }
-
-    .dir-rtl & {
-        float: right;
-    }
 
     &.textinput-validation-error {
         border: 2px solid @validation-error;
     }
-}
-
-.textinput-item-suffix {
-    width: 10%;
 }
 
 .textinput-widget {
@@ -83,4 +41,3 @@
         color: @validation-error;
     }
 }
-
