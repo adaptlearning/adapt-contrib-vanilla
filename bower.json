@@ -3,9 +3,7 @@
   "version": "2.0.0",
   "framework": "^2.0.0",
   "homepage": "https://github.com/darylhedley/adapt-contrib-vanilla",
-  "authors": [
-    "Daryl Hedley <darylhedley@hotmail.com>"
-  ],
+  "issues": "https://adaptlearning.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=10100&issuetype=1&priority=6&summary=Issue+From+Link&components=10516",
   "displayName": "Vanilla",
   "theme": "vanilla",
   "description": "A core bundled theme",
