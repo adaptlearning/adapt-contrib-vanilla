@@ -61,9 +61,9 @@
 // Validation Error color
 // ======================
 
-@validation-error-text-color: #f55;
-@validation-error-icon-color: #f55;
-@validation-error-border-color: #f55;
+@validation-error-text-color: @validation-error;
+@validation-error-icon-color: @validation-error;
+@validation-error-border-color: @validation-error;
 
 // ==========
 // Item setup
@@ -154,7 +154,7 @@
 // @button-border-color: #c5c5c5;
 @button-border-hover-color: #c5c5c5;
 @button-border-disabled-color: #c5c5c5;
-@button-border: @button-border-width @button-border-style @button-border-color;
+// @button-border: @button-border-width @button-border-style @button-border-color;
 
 
 // Device widths
@@ -298,7 +298,7 @@
 
 @block-body-margin: @block-body-margin-top @block-body-margin-sides @block-body-margin-bottom;
 
-@component-body-margin-top: 20px;
+// @component-body-margin-top: 20px;
 @component-body-margin-sides: 0px;
 // @component-body-margin-bottom: 20px;
 
@@ -395,7 +395,7 @@
 // @font-family: 'Roboto', sans-serif;
 @font-size: 14px;
 // @font-extra-line-height: 10px;
-@font-color: @foreground-color;
+// @font-color: @foreground-color;
 // @font-weight-light: 300;
 // @font-weight-normal: 400;
 // @font-weight-bold: 700;
@@ -405,6 +405,6 @@
 // // =====
 
 // @icon-size: 24px;
-@icon-correct-color: #51FB66;
-@icon-incorrect-color: #F14E4E;
+@icon-correct-color: @validation-success;
+@icon-incorrect-color: @validation-error;
 
