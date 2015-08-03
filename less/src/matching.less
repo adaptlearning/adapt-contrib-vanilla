@@ -1,0 +1,111 @@
+.matching-component {
+
+  .matching-item {
+    padding-bottom: @item-padding-bottom;
+  }
+
+  .matching-item-title {
+    margin-bottom: @item-margin-top;
+  }
+
+  .matching-select-container {
+    background-color: @item-color;
+
+    @media all and (max-width:@device-width-medium) {
+      width:100%;
+    }
+  }
+
+  .matching-select-icon {
+    color: @item-text-color;
+  }
+
+  .matching-correct-icon {
+    color: @validation-success;
+  }
+
+  .matching-incorrect-icon {
+    color: @validation-error;
+  }
+
+  .matching-select {
+    padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-right;
+	.dir-rtl & {
+        padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-left;
+    }
+
+    @media all and (max-width:@device-width-medium) and (min-width:@device-width-small) {
+        width:105%;
+    }
+      
+    @media all and (max-width:(@device-width-small - 1)) {
+       width:110%;
+    }
+
+    &:focus {
+      background-color: @item-color-selected;
+    }
+  }
+
+ 	.matching-select:disabled {
+		color: @item-text-color-disabled;
+	}
+
+  .matching-widget {
+
+    &.submitted {
+      .matching-select-container {
+        background-color: @item-color-disabled;
+      }
+    }
+
+  }
+
+}
+
+.no-touch {
+  .matching-select-icon {
+    &:hover {
+      color: @item-text-color-hover;
+      &.matching-correct-icon {
+        color: @validation-success;
+      }
+      &.matching-incorrect-icon {
+        color: @validation-error;
+      }
+    }
+  }
+  .matching-select-container {
+    &:hover {
+      background-color: @item-color-hover;
+      .matching-select {
+        color: @item-text-color-hover;
+        &:disabled {
+          color: @item-text-color-disabled;
+        }
+      }
+      .matching-dropdown-icon {
+        color: @item-text-color-hover;
+      }
+    }
+  }
+}
+
+.ie8 {
+  .submitted.matching-widget .matching-select-container {
+    background-color: @white;
+  }
+  .matching-select-container {
+    &.disabled {
+      background-color: @item-color-disabled;
+    }
+  }
+}
+
+
+//*IE FIX FOR DISABLED ITEMS
+.matching-component {
+  select[disabled]::-ms-value{
+      color: @item-text-color;
+  }
+}

@@ -9,6 +9,7 @@
             </div>
         </div>
     {{/if}}
+
     {{! Check if page body exists and render it}}
     {{#if body}}
         <div class="block-body">
@@ -17,6 +18,16 @@
             </div>
         </div>
     {{/if}}
+
+    {{! Check if page body exists and render it}}
+    {{#if instruction}}
+        <div class="block-instruction">
+            <div class="block-instruction-inner">
+                {{{a11y_text instruction}}}
+            </div>
+        </div>
+    {{/if}}
+
     <div class="component-container">
     </div>
 </div>
