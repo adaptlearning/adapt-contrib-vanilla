@@ -26,11 +26,11 @@
         padding: @notify-padding-top 0 @notify-padding-bottom;
 
         @media all and (max-width: (@device-width-large + 20px)) {
-            padding: @notify-padding-top 20px @notify-padding-bottom;
+            padding: (@notify-padding-top / 2) 20px (@notify-padding-bottom / 2) !important;
         }
 
         @media all and (max-width: (@device-width-small + 20px)) {
-            padding: @notify-padding-top 10px @notify-padding-bottom;
+            padding: (@notify-padding-top / 3) 10px (@notify-padding-bottom / 3) !important;
         }
     }
 
@@ -81,14 +81,17 @@
     }
 
     .notify-popup-icon {
+        position: absolute!important;
         .icon {
             font-size: 60px;
             height: 60px;
             width: 60px;
             color: @notify-icon-color;
+            margin: 0!important;
         }
         right: 0px;
         left: inherit;
+        padding-bottom: (@notify-padding-bottom / 3);
         .dir-rtl & {
             right: inherit;
             left: 0px;
