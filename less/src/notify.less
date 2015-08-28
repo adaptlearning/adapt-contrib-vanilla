@@ -15,24 +15,21 @@
     .notify-type-prompt, 
     .notify-type-alert {
         .notify-popup-inner {
+            position: relative;
+            max-width: @device-width-large;
+            margin: auto;
             padding: @notify-padding-top 0 @notify-padding-bottom;
+
+            @media all and (max-width: (@device-width-large + 20px)) {
+                padding: (@notify-padding-top / 2) 20px (@notify-padding-bottom / 2);
+            }
+
+            @media all and (max-width: (@device-width-small + 20px)) {
+                padding: (@notify-padding-top / 3) 10px (@notify-padding-bottom / 3);
+            }
         }
     }
 
-    .notify-popup-inner {
-        position: relative;
-        max-width: @device-width-large;
-        margin: auto;
-        padding: @notify-padding-top 0 @notify-padding-bottom;
-
-        @media all and (max-width: (@device-width-large + 20px)) {
-            padding: (@notify-padding-top / 2) 20px (@notify-padding-bottom / 2) !important;
-        }
-
-        @media all and (max-width: (@device-width-small + 20px)) {
-            padding: (@notify-padding-top / 3) 10px (@notify-padding-bottom / 3) !important;
-        }
-    }
 
     .notify-popup-content {
         .ie8 & {
@@ -80,23 +77,26 @@
         }
     }
 
-    .notify-popup-icon {
-        position: absolute!important;
-        .icon {
-            font-size: 60px;
-            height: 60px;
-            width: 60px;
-            color: @notify-icon-color;
-            margin: 0!important;
-        }
-        right: 0px;
-        left: inherit;
-        padding-bottom: (@notify-padding-bottom / 3);
-        .dir-rtl & {
-            right: inherit;
-            left: 0px;
+    .notify-popup-content-inner {
+        .notify-popup-icon {
+            position: absolute;
+            .icon {
+                font-size: 60px;
+                height: 60px;
+                width: 60px;
+                color: @notify-icon-color;
+                margin: 0;
+            }
+            right: 0px;
+            left: inherit;
+            padding-bottom: (@notify-padding-bottom / 3);
+            .dir-rtl & {
+                right: inherit;
+                left: 0px;
+            }
         }
     }
+
 
     .notify-popup-buttons {
         text-align: center;
