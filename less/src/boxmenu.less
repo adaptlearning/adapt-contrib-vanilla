@@ -91,6 +91,10 @@
 		height: 6px;
 		float: right;
 		padding: 0;
+
+		.dir-rtl & {
+			float: left;
+		}
 	}
 
 	.page-level-progress-menu-item-indicator {
@@ -132,7 +136,7 @@
 	}
 }
 
-@media all and (max-width: 760px) {
+@media all and (max-width: @device-width-medium) {
 
    	.menu{
    		.menu-inner {
@@ -150,7 +154,8 @@
 		.menu-item{			
 			&.nth-child-even, 
 			&.nth-child-odd {
-				.menu-item-inner{
+				.menu-item-inner,
+				.dir-rtl & .menu-item-inner {
 					margin: 0 auto;
 				}
 			}
