@@ -12,24 +12,20 @@
         }
     }
 
-    .notify-type-prompt, 
-    .notify-type-alert {
-        .notify-popup-inner {
-            position: relative;
-            max-width: @device-width-large;
-            margin: auto;
-            padding: @notify-padding-top 0 @notify-padding-bottom;
+    .notify-popup-inner {
+        position: relative;
+        max-width: @device-width-large;
+        margin: auto;
+        padding: @notify-padding-top 0 @notify-padding-bottom;
 
-            @media all and (max-width: (@device-width-large + 20px)) {
-                padding: (@notify-padding-top / 2) 20px (@notify-padding-bottom / 2);
-            }
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: (@notify-padding-top / 2) 20px (@notify-padding-bottom / 2);
+        }
 
-            @media all and (max-width: (@device-width-small + 20px)) {
-                padding: (@notify-padding-top / 3) 10px (@notify-padding-bottom / 3);
-            }
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: (@notify-padding-top / 3) 10px (@notify-padding-bottom / 3);
         }
     }
-
 
     .notify-popup-content {
         .ie8 & {
@@ -43,7 +39,7 @@
 
         .dir-rtl & {
             padding-left: inherit;
-            padding-right: 80px;
+            padding-right: 0px;
         }
         
         @media all and (max-width:(@device-width-medium - 1px)) {
@@ -65,12 +61,17 @@
         }
     }
 
+    .notify-type-prompt {
+        .notify-popup-body {
+            padding-right: 60px;
+            .dir-rtl & {
+                padding-right: inherit;
+                padding-left: 60px;
+            }
+        }    
+    }
+    
     .notify-popup-body {
-        padding-right: 60px;
-        .dir-rtl & {
-            padding-right: inherit;
-            padding-left: 60px;
-        }
         a {
           text-decoration: underline;
           color: @notify-text-color;
@@ -136,6 +137,11 @@
             .notify-popup-icon-close {
                 color: @notify-icon-color-hover;
             }
+        }
+
+        .dir-rtl & {
+            left: 0px;
+            right: inherit;
         }
     }
 
