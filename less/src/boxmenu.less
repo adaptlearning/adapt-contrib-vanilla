@@ -65,7 +65,7 @@
 		position:relative;
 		max-width: (@device-width-large / 2) - (@item-padding * 2);
 		margin: auto;
-		padding: @menu-block-padding-top @menu-block-padding-right (@menu-block-padding-bottom + 10px) @menu-block-padding-left;
+		padding: @menu-block-padding-top @menu-block-padding-right @menu-block-padding-bottom @menu-block-padding-left;
 		background-color: @menu-item-color;
 		color: @menu-item-text-color;
 	}
@@ -89,11 +89,15 @@
 	.page-level-progress-menu-item {
 		width: 60px;
 		height: 6px;
-		float: right;
+		float: none;
 		padding: 0;
+		position: absolute;
+		right: (@menu-block-padding-right+4);
+		bottom: (@menu-block-padding-bottom+6);
 
 		.dir-rtl & {
-			float: left;
+			left: (@menu-block-padding-left+4);
+			right: auto;
 		}
 	}
 
@@ -112,14 +116,22 @@
 	}
 
 	.menu-item-duration {
-		margin-top: -10px;
+		position: absolute;
+		right: @menu-block-padding-right;
+		float: none;
+
+		.dir-rtl & {
+			float: none;
+			left: (@menu-block-padding-left);
+			right: auto;
+		}
 	}
 
 	.menu-item-button {
 		padding: 0;
 		
-		a {
-			padding: @button-padding 40px;
+		button {
+			padding: @button-padding-top (@button-padding-right*2) @button-padding-bottom (@button-padding-left*2);
 			background-color:@button-color;
 			color:@button-text-color;
 			
