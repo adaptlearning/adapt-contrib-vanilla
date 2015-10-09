@@ -13,12 +13,26 @@
     .transition-all-colors;
     .button-text;
 
-    .no-touch & {
-        &:hover {
-            background-color: @button-color-hover;
-            color: @button-text-color-hover;
-            border-color: @button-border-color-hover;
-        } 
+    .no-touch &:hover {
+        background-color: @button-color-hover;
+        color: @button-text-color-hover;
+        border-color: @button-border-color-hover;
+    }
+
+    &.base { 
+    	// Override button styles on <a> tags coverted to <button> tags
+    	// Could be improved so that buttons are divided into groups, default / submit / nav / icon
+    	background-color: transparent;
+    	padding: 0;
+    	text-align: left;
+	    -webkit-transition: none;
+	    -moz-transition: none;
+ 	    -ms-transition: none;
+ 	    transition: none;
+
+    	.no-touch &:hover {
+    		background-color: transparent;
+    	}
     }
 
     .disabled-style() {
@@ -27,7 +41,7 @@
         color: @button-text-color-disabled!important;
         cursor:default;
 
-        &:hover {
+        .no-touch &:hover {
             border-color: @button-border-color-disabled;
         }
     }
