@@ -24,12 +24,12 @@
 
                 <div class="notify-popup-buttons" role="button">
                     {{#if_value_equals _type "alert"}}
-                        <button class="base notify-popup-button notify-popup-alert-button" role="button" aria-label="{{{confirmText}}}">{{{confirmText}}}</button>
+                        <button class="notify-popup-button notify-popup-alert-button" role="button" aria-label="{{{confirmText}}}">{{{confirmText}}}</button>
                     {{/if_value_equals}}
 
                     {{#if_value_equals _type "prompt"}}
                         {{#each _prompts}}
-                            <button class="base notify-popup-button notify-popup-prompt-button" data-event="{{_callbackEvent}}" role="button" aria-label="{{{promptText}}}">{{{promptText}}}</button>
+                            <button class="notify-popup-button notify-popup-prompt-button" data-event="{{_callbackEvent}}" role="button" aria-label="{{{promptText}}}">{{{promptText}}}</button>
                         {{/each}}
                     {{/if_value_equals}}
                 </div>
@@ -38,7 +38,7 @@
         </div>
         {{! toolbar moved for AA purposes - last tabbable element}}
         {{#if_value_equals _type "popup"}}
-            <button class="base notify-popup-done" role="button" aria-label="{{_globals._accessibility._ariaLabels.closePopup}}">
+            <button class="notify-popup-done" role="button" aria-label="{{_globals._accessibility._ariaLabels.closePopup}}">
                 <div class="notify-popup-icon-close icon icon-cross"></div>
             </button>
         {{/if_value_equals}}
