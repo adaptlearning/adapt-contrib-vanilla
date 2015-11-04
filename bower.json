@@ -2,7 +2,7 @@
   "name": "adapt-contrib-vanilla",
   "version": "2.0.1",
   "framework": "^2.0.0",
-  "homepage": "https://github.com/darylhedley/adapt-contrib-vanilla",
+  "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
   "issues": "https://adaptlearning.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=10100&issuetype=1&priority=6&components=10516",
   "displayName": "Vanilla",
   "theme": "vanilla",
@@ -12,7 +12,7 @@
     "adapt-plugin",
     "adapt-theme"
   ],
-  "license": "GPL",
+  "license": "GPLv3",
   "ignore": [
     "**/.*",
     "node_modules",
