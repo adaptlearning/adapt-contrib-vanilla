@@ -12,7 +12,7 @@
     "adapt-plugin",
     "adapt-theme"
   ],
-  "license": "MIT",
+  "license": "GPL",
   "ignore": [
     "**/.*",
     "node_modules",
