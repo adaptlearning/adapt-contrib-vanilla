@@ -6,6 +6,9 @@
     color: @drawer-item-text-color;
 
     .drawer-toolbar {
+        position: absolute;
+        width:100%;
+        top:0;
         border-bottom: 1px solid @drawer-border-color;
     }
 
@@ -17,6 +20,10 @@
         .no-touch &:hover {
             color: @drawer-icon-color-hover;
         }
+    }
+    
+    .drawer-holder {
+        padding-top: ((@navigation-padding * 2) + @icon-size + 1);
     }
 
     .drawer-inner {
