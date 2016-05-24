@@ -37,7 +37,9 @@
         }
 
         input[type="range"]:focus + .rangeslider .rangeslider__handle {
-          outline: @focus-outline;
+            .accessibility & {
+                outline: @focus-outline;
+            }
         }
     }
 }
