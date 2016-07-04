@@ -1,54 +1,74 @@
 .slider-component {
-    .slider-scaler {
-        background-color: lighten(@item-body-text-color, 20%);
-    }
 
-    .slider-sliderange {
-        background-color: lighten(@item-body-text-color, 20%);
-        box-shadow: none;
-    }
+    .slider-scaler-wrapper {
 
-
-    .slider-handle {
-        background-color: @item-text-color;
-        color: @item-color;
-        .no-touch & {
-            &:hover {
-                background-color:@item-color-hover;
-            }
+        .slider-scaler {
+          background-color: @item-body-text-color;
         }
     }
 
+    .slider-model-answer,
     .slider-scale-marker {
-        box-shadow: none;
+        color: @item-text-color;
+        background-color: @item-color;
     }
 
     .slider-line {
-        background-color: lighten(@item-body-text-color, 20%);
-        height: 7px;
-        top: 0px;
+        background-color: @item-body-text-color;
     }
+}
 
-    .slider-outer-bar {
-        background-color: none;
-        border: none;
-        border-top: none;
-        border-bottom: none;
-        border-radius: none;
-        box-shadow: none;
+.slider-widget {
+    .slider-holder {
+        .rangeslider__handle {
+          background-color: @item-color;
+          &:hover {
+            .no-touch & {
+              background-color: @item-color-hover;
+            }
+          }
+        }
+        .rangeslider__fill {
+          background-color: @item-color;
+        }
+        .rangeslider {
+          background-color: @background-color;
+        }
+
+        input[type="range"]:focus + .rangeslider .rangeslider__handle {
+            .accessibility & {
+                outline: @focus-outline;
+            }
+        }
     }
+}
 
-    .slider-model-answer {
-        box-shadow: none;
-    }
+.slider-widget.show-user-answer.correct {
+  .slider-scale-marker,
+  .rangeslider__fill {
+    background-color: @validation-success;
+  }
+}
+.slider-widget.show-user-answer.incorrect {
+  .slider-scale-marker,
+  .rangeslider__fill {
+    background-color: @validation-error;
+  }
+}
 
-    .slider-correct-icon {
-        color: @validation-success;
-        display: none;
-    }
+.slider-widget.show-correct-answer {
+  .slider-scale-marker,
+  .slider-model-answer,
+  .rangeslider__fill {
+    background-color: @validation-success;
+  }
+}
 
-    .slider-incorrect-icon {
-        color: @validation-error;
-        display: none;
+// assessment adds no-marking class to article to hide marking icons
+.no-marking {
+    .component-inner .component-widget.disabled.submitted.complete .rangeslider__fill,
+    .component-inner .component-widget.disabled.submitted.complete .slider-scale-marker {
+      color: @item-text-disabled-color;
+      background-color: @item-disabled-color;
     }
 }
