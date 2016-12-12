@@ -33,13 +33,42 @@
         }
     }
 
-    .narrative-text-controls {
-        .narrative-controls {
-            width: auto;
-            height: auto;
-            .icon {
-                font-size: @icon-size;
+    .narrative-text-controls .narrative-content .narrative-content-inner {
+        
+        .narrative-controls-container {
+            top: 0;
+
+            .narrative-controls {
+                width: auto;
+                height: auto;
+                margin-top: (@icon-size * 1.5);
+                
+                .icon {
+                    font-size: @icon-size;
+                }
             }
+
+            .narrative-indicators {
+
+                margin-top: (@icon-size/2);
+                text-align: center;
+                width: 100%;
+                left: 0;
+
+                .narrative-progress {
+                    display: inline-block;
+                    background-color: darken(@item-color, 10%);
+
+                    &.selected {
+                        background-color: @component-background-color;
+                    }
+                }
+
+            }
+        }
+        
+        .narrative-content-item {
+            padding-top: (@icon-size * 2 + 16); // indicator height + controlls 
         }
     }
 
