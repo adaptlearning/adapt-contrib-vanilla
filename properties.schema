@@ -4,23 +4,133 @@
   "id": "http://jsonschema.net",
   "$ref": "http://localhost/plugins/content/theme/model.schema",
   "properties":{
-    "_screenSize": {
-      "type":"object",
-      "required":true,
-      "properties":{
-        "large": {
-          "type":"string",
-          "required":true
-        },
-        "medium": {
-          "type":"string",
-          "required":true
-        },
-        "small": {
-          "type":"string",
-          "required":true
-        }
-      }
-    }
+    "primary-color": {
+      "type": "String",
+      "required": false,
+      "default": "#078292",
+      "title": "Primary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "primary-color-inverted": {
+      "type": "String",
+      "required": false,
+      "default": "#ffffff",
+      "title": "Inverted primary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "secondary-color": {
+      "type": "String",
+      "required": false,
+      "default": "#000000",
+      "title": "Secondary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "secondary-color-inverted": {
+      "type": "String",
+      "required": false,
+      "default": "#ffffff",
+      "title": "Inverted secondary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "tertiary-color": {
+      "type": "String",
+      "required": false,
+      "default": "#ffffff",
+      "title": "Tertiary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "tertiary-color-inverted": {
+      "type": "String",
+      "required": false,
+      "default": "#000000",
+      "title": "Inverted tertiary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "quaternary-color": {
+      "type": "String",
+      "required": false,
+      "default": "#37474f",
+      "title": "Quaternary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "quaternary-color-inverted": {
+      "type": "String",
+      "required": false,
+      "default": "#ffffff",
+      "title": "Inverted quaternary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "foreground-color": {
+      "type": "String",
+      "required": false,
+      "default": "#000000",
+      "title": "Foreground colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "foreground-color-inverted": {
+      "type": "String",
+      "required": false,
+      "default": "#ffffff",
+      "title": "Inverted foreground colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "background-color": {
+      "type": "String",
+      "required": false,
+      "default": "#546e7a",
+      "title": "Background colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "background-color-inverted": {
+      "type": "String",
+      "required": false,
+      "default": "#ffffff",
+      "title": "Inverted background colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "validation-success": {
+      "type": "String",
+      "required": false,
+      "default": "#82ca9c",
+      "title": "Validation success colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "validation-error": {
+      "type": "String",
+      "required": false,
+      "default": "#f26c4f",
+      "title": "Validation error colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "disabled-color": {
+      "type": "String",
+      "required": false,
+      "default": "#727272",
+      "title": "Disabled colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "disabled-color-inverted": {
+      "type": "String",
+      "required": false,
+      "default": "#cccccc",
+      "title": "Inverted disabled colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    } 
   }
 }
