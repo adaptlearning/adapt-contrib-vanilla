@@ -131,6 +131,9 @@
       "title": "Inverted disabled colour",
       "inputType": "ColorPicker",
       "validators": []
-    } 
+    },
+    "pluginLocations": {
+      "type": "object"
+    }
   }
 }
