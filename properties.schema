@@ -133,7 +133,9 @@
       "validators": []
     },
     "pluginLocations": {
-      "type": "object"
+      "type": "object",
+      "required": true,
+      "properties": {}
     }
   }
 }
