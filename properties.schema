@@ -5,7 +5,7 @@
   "$ref": "http://localhost/plugins/content/theme/model.schema",
   "properties":{
     "primary-color": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#078292",
       "title": "Primary colour",
@@ -13,7 +13,7 @@
       "validators": []
     },
     "primary-color-inverted": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#ffffff",
       "title": "Inverted primary colour",
@@ -21,7 +21,7 @@
       "validators": []
     },
     "secondary-color": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#000000",
       "title": "Secondary colour",
@@ -29,7 +29,7 @@
       "validators": []
     },
     "secondary-color-inverted": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#ffffff",
       "title": "Inverted secondary colour",
@@ -37,7 +37,7 @@
       "validators": []
     },
     "tertiary-color": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#ffffff",
       "title": "Tertiary colour",
@@ -45,7 +45,7 @@
       "validators": []
     },
     "tertiary-color-inverted": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#000000",
       "title": "Inverted tertiary colour",
@@ -53,7 +53,7 @@
       "validators": []
     },
     "quaternary-color": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#37474f",
       "title": "Quaternary colour",
@@ -61,7 +61,7 @@
       "validators": []
     },
     "quaternary-color-inverted": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#ffffff",
       "title": "Inverted quaternary colour",
@@ -69,7 +69,7 @@
       "validators": []
     },
     "foreground-color": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#000000",
       "title": "Foreground colour",
@@ -77,7 +77,7 @@
       "validators": []
     },
     "foreground-color-inverted": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#ffffff",
       "title": "Inverted foreground colour",
@@ -85,7 +85,7 @@
       "validators": []
     },
     "background-color": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#546e7a",
       "title": "Background colour",
@@ -93,7 +93,7 @@
       "validators": []
     },
     "background-color-inverted": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#ffffff",
       "title": "Inverted background colour",
@@ -101,7 +101,7 @@
       "validators": []
     },
     "validation-success": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#82ca9c",
       "title": "Validation success colour",
@@ -109,7 +109,7 @@
       "validators": []
     },
     "validation-error": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#f26c4f",
       "title": "Validation error colour",
@@ -117,7 +117,7 @@
       "validators": []
     },
     "disabled-color": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#727272",
       "title": "Disabled colour",
@@ -125,7 +125,7 @@
       "validators": []
     },
     "disabled-color-inverted": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "default": "#cccccc",
       "title": "Inverted disabled colour",
