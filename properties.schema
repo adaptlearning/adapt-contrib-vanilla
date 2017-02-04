@@ -136,6 +136,7 @@
       "type": "string",
       "required": false,
       "default": "300",
+      "title": "Light font weight",
       "inputType": "Text",
       "validators": []
     },
@@ -143,6 +144,7 @@
       "type": "string",
       "required": false,
       "default": "400",
+      "title": "Regular font weight",
       "inputType": "Text",
       "validators": []
     },
@@ -150,6 +152,7 @@
       "type": "string",
       "required": false,
       "default": "700",
+      "title": "Bold font weight",
       "inputType": "Text",
       "validators": []
     },
@@ -157,6 +160,7 @@
       "type": "string",
       "required": false,
       "default": "48px",
+      "title": "Menu title font size",
       "inputType": "Text",
       "validators": []
     },
@@ -164,6 +168,7 @@
       "type": "string",
       "required": false,
       "default": "48px",
+      "title": "Page title font size",
       "inputType": "Text",
       "validators": []
     },
@@ -171,6 +176,7 @@
       "type": "string",
       "required": false,
       "default": "36px",
+      "title": "Component title font size",
       "inputType": "Text",
       "validators": []
     },
@@ -178,6 +184,7 @@
       "type": "string",
       "required": false,
       "default": "24px",
+      "title": "Item title font size",
       "inputType": "Text",
       "validators": []
     },
@@ -185,6 +192,7 @@
       "type": "string",
       "required": false,
       "default": "18px",
+      "title": "Sub-title font size",
       "inputType": "Text",
       "validators": []
     },
@@ -192,6 +200,7 @@
       "type": "string",
       "required": false,
       "default": "14px",
+      "title": "Body text font size",
       "inputType": "Text",
       "validators": []
     },
@@ -199,6 +208,7 @@
       "type": "string",
       "required": false,
       "default": "14px",
+      "title": "Instruction text font size",
       "inputType": "Text",
       "validators": []
     },
@@ -206,6 +216,7 @@
       "type": "string",
       "required": false,
       "default": "18px",
+      "title": "Button text font size",
       "inputType": "Text",
       "validators": []
     },
@@ -213,6 +224,7 @@
       "type": "string",
       "required": false,
       "default": "120%",
+      "title": "Title line height",
       "inputType": "Text",
       "validators": []
     },
@@ -220,6 +232,7 @@
       "type": "string",
       "required": false,
       "default": "140%",
+      "title": "Body line height",
       "inputType": "Text",
       "validators": []
     },
@@ -227,6 +240,7 @@
       "type": "string",
       "required": false,
       "default": "24px",
+      "title": "Icon size",
       "inputType": "Text",
       "validators": []
     },
@@ -234,6 +248,7 @@
       "type": "string",
       "required": false,
       "default": "520px",
+      "title": "Small device width",
       "inputType": "Text",
       "validators": []
     },
@@ -241,6 +256,7 @@
       "type": "string",
       "required": false,
       "default": "760px",
+      "title": "Medium device width",
       "inputType": "Text",
       "validators": []
     },
@@ -248,6 +264,7 @@
       "type": "string",
       "required": false,
       "default": "900px",
+      "title": "Large device width",
       "inputType": "Text",
       "validators": []
     },
@@ -255,6 +272,7 @@
       "type": "string",
       "required": false,
       "default": "1400px",
+      "title": "Max width",
       "inputType": "Text",
       "validators": []
     },
@@ -262,6 +280,7 @@
       "type": "string",
       "required": false,
       "default": "1024px",
+      "title": "IE8 max width",
       "inputType": "Text",
       "validators": []
     },
@@ -269,6 +288,7 @@
       "type": "string",
       "required": false,
       "default": "3px solid orange",
+      "title": "Focus outline",
       "inputType": "Text",
       "validators": []
     },
@@ -276,6 +296,7 @@
       "type": "string",
       "required": false,
       "default": "20px",
+      "title": "Item padding",
       "inputType": "Text",
       "validators": []
     },
@@ -283,6 +304,7 @@
       "type": "string",
       "required": false,
       "default": "5px",
+      "title": "Item margin",
       "inputType": "Text",
       "validators": []
     },
@@ -290,6 +312,7 @@
       "type": "string",
       "required": false,
       "default": "20px",
+      "title": "Component padding",
       "inputType": "Text",
       "validators": []
     },
@@ -297,6 +320,7 @@
       "type": "string",
       "required": false,
       "default": "60px",
+      "title": "Block padding",
       "inputType": "Text",
       "validators": []
     },
@@ -304,6 +328,7 @@
       "type": "string",
       "required": false,
       "default": "60px",
+      "title": "Article padding",
       "inputType": "Text",
       "validators": []
     },
@@ -311,6 +336,7 @@
       "type": "string",
       "required": false,
       "default": "100px",
+      "title": "Page header padding",
       "inputType": "Text",
       "validators": []
     },
@@ -318,6 +344,7 @@
       "type": "string",
       "required": false,
       "default": "100px",
+      "title": "Menu header padding",
       "inputType": "Text",
       "validators": []
     },
@@ -325,12 +352,14 @@
       "type": "string",
       "required": false,
       "default": "20px",
+      "title": "Title text margin",
       "inputType": "Text",
       "validators": []
     },
     "body-text-margin": {
       "type": "string",
       "required": false,
+      "title": "Body text margin",
       "default": "30px",
       "inputType": "Text",
       "validators": []
@@ -339,6 +368,7 @@
       "type": "string",
       "required": false,
       "default": "14px",
+      "title": "Instruction text margin",
       "inputType": "Text",
       "validators": []
     },
@@ -346,6 +376,7 @@
       "type": "string",
       "required": false,
       "default": "14px",
+      "title": "Button padding",
       "inputType": "Text",
       "validators": []
     },
@@ -353,6 +384,7 @@
       "type": "string",
       "required": false,
       "default": "30px",
+      "title": "Button margin",
       "inputType": "Text",
       "validators": []
     },
@@ -360,6 +392,7 @@
       "type": "string",
       "required": false,
       "default": "60px",
+      "title": "Notify padding",
       "inputType": "Text",
       "validators": []
     },
@@ -367,6 +400,7 @@
       "type": "string",
       "required": false,
       "default": "20px",
+      "title": "Navigation padding",
       "inputType": "Text",
       "validators": []
     },
