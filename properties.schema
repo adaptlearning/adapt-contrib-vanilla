@@ -95,7 +95,7 @@
 		"background-color-inverted": {
 			"type": "string",
 			"required": false,
-			"default": "#ffffff",
+			"default": "#546e7a",
 			"title": "Inverted background colour",
 			"inputType": "ColorPicker",
 			"validators": []
