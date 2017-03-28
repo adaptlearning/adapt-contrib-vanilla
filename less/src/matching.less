@@ -1,111 +1,95 @@
 .matching-component {
-
-  .matching-item {
-    padding-bottom: @item-padding-bottom;
-  }
-
-  .matching-item-title {
-    margin-bottom: @item-margin-top;
-  }
-
-  .matching-select-container {
-    background-color: @item-color;
-
-    @media all and (max-width:@device-width-medium) {
-      width:100%;
-    }
-  }
-
-  .matching-select-icon {
-    color: @item-text-color;
-  }
-
-  .matching-correct-icon {
-    color: @validation-success;
-  }
-
-  .matching-incorrect-icon {
-    color: @validation-error;
-  }
-
-  .matching-select {
-    padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-right;
-	.dir-rtl & {
-        padding: @item-padding-top @item-padding-left @item-padding-bottom @item-padding-left;
-    }
-
-    @media all and (max-width:@device-width-medium) and (min-width:@device-width-small) {
-        width:105%;
-    }
-      
-    @media all and (max-width:(@device-width-small - 1)) {
-       width:110%;
-    }
-
-    &:focus {
-      background-color: @item-color-selected;
-    }
-  }
-
- 	.matching-select:disabled {
-		color: @item-text-color-disabled;
+	.matching-select-container {
+		background-color: @item-color;
 	}
 
-  .matching-widget {
+	.matching-select-state {
+		.matching-select-icon {
+			color: @item-text-color;
+		}
 
-    &.submitted {
-      .matching-select-container {
-        background-color: @item-color-disabled;
-      }
-    }
+		.matching-correct-icon {
+			color: @validation-success;
+		}
 
-  }
+		.matching-incorrect-icon {
+			color: @validation-error;
+		}
+	}
 
+	.select2-container {
+		.select2-selection--single {
+			padding: @item-padding-top 0 @item-padding-bottom 0;
+			background-color: @item-color;
+			color: @item-text-color;
+
+
+			&:hover {
+				.no-touch & {
+					background-color: @item-color-hover;
+					color: @item-text-color-hover;
+				}
+			}
+
+			.select2-selection__rendered {
+				color: @item-text-color;
+			}
+
+			.select2-selection__arrow {
+				b {
+					border-color: @item-text-color transparent transparent transparent;
+				}
+			}
+		}
+
+		&.select2-container--open.select2-container--default {
+			.select2-selection--single .select2-selection__arrow b {
+				border-color: transparent transparent @item-text-color transparent;
+			}
+		}
+	}
+
+	.matching-widget {
+		&.submitted {
+			.matching-select-container {
+				background-color: @item-color-disabled;
+			}
+		}
+	}
 }
 
 .no-touch {
-  .matching-select-icon {
-    &:hover {
-      color: @item-text-color-hover;
-      &.matching-correct-icon {
-        color: @validation-success;
-      }
-      &.matching-incorrect-icon {
-        color: @validation-error;
-      }
-    }
-  }
-  .matching-select-container {
-    &:hover {
-      background-color: @item-color-hover;
-      .matching-select {
-        color: @item-text-color-hover;
-        &:disabled {
-          color: @item-text-color-disabled;
-        }
-      }
-      .matching-dropdown-icon {
-        color: @item-text-color-hover;
-      }
-    }
-  }
+	.matching-select-icon {
+		&:hover {
+			color: @item-text-color-hover;
+		}
+	}
+	.matching-select-container {
+		&:hover {
+			color: @button-text-color-hover;
+			background-color: @item-color-hover;
+		}
+	}
 }
 
-.ie8 {
-  .submitted.matching-widget .matching-select-container {
-    background-color: @white;
-  }
-  .matching-select-container {
-    &.disabled {
-      background-color: @item-color-disabled;
-    }
-  }
-}
+.select2-container--default,
+.dir-rtl .select2-container--default {
+	span.select2-dropdown {
+		background-color: @item-color;
+		color: @item-text-color;
+	}
 
+	li.select2-results__option--highlighted[aria-selected],
+	li.select2-results__option[aria-selected=true] {
+		background-color: @item-color-hover;
+		color: @item-text-color-hover;
+	}
 
-//*IE FIX FOR DISABLED ITEMS
-.matching-component {
-  select[disabled]::-ms-value{
-      color: @item-text-color;
-  }
+	&.select2-container--disabled {
+		span.select2-selection--single,
+		.no-touch & span.select2-selection--single:hover {
+			background-color: @item-color-disabled;
+			color: @item-text-color-disabled;
+		}
+	}
 }
