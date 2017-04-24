@@ -6,7 +6,7 @@
 
 It provides specific values to styles, including colors, padding, margins, and assets such as fonts and background images. [Visit the **Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about its functionality and for explanations of key properties. 
 
-##Installation
+## Installation
 
 As Adapt's *[core theme](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#theme),* **Vanilla** is included with the [installation of the Adapt framework](https://github.com/adaptlearning/adapt_framework/wiki/Manual-installation-of-the-Adapt-framework#installation) and the [installation of the Adapt authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki/Installing-Adapt-Origin).
 
@@ -22,7 +22,8 @@ With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run 
 
 * If **Vanilla** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
 
-##Uninstallation  
+## Uninstallation
+
 The Adapt framework does not allow the installation of more than one theme at a time. In order to replace **Vanilla** it must be uninstalled. With the root of your framework installation as your current working directory, run the following command:  
 `adapt uninstall adapt-contrib-vanilla`  
 
@@ -51,19 +52,19 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 
 | Folder/File         | Description  |
 | :-------------      |:-------------|
-| theme.json          | Pixel values for `screenSize`(`small`, `medium`, and `large`)|
-| selection.json      | File used for selecting icons at [IcoMoon.io](https://icomoon.io/) that are packaged in fonts/vanilla.* |
-| assets              | Location of theme assets (for example: images, loading gif, etc.)|
-| fonts/vanilla.*     | Icon font referenced in the associated *.less* files      |   
-| js                  | JavaScript files on which the theme depends      |
-| less                | Location of any [LESS](http://lesscss.org/) based CSS files |
-| less/generic.less   | Variables that are not covered by those defined in colors.less, fonts.less, and paddings.less   |
-| less/src            | Location of LESS files for various Adapt elements |
-| less/src/theme-extras.less| Classes used for bespoke styling |
-| templates           | Location of pre-defined HTML (.hbs) templates |
-| templates/partials  | Location of pre-defined HTML (.hbs) templates required by other templates, specifically buttons.hbs, component.hbs, and state.hbs |  
+| 📄 theme.json        | Pixel values for `screenSize`(`small`, `medium`, and `large`)|
+| 📄 selection.json    | File used for selecting icons at [IcoMoon.io](https://icomoon.io/) that are packaged in fonts/vanilla.* |
+| 📁 assets            | Location of theme assets (for example: images, loading gif, etc.)|
+| 📁 fonts             | Location of any theme font files |
+| 📁 js                | JavaScript files on which the theme depends      |
+| 📁 less              | Location of any [LESS](http://lesscss.org/) based CSS files |
+| 📄 less/generic.less | Variables that are not covered by those defined in colors.less, fonts.less, and paddings.less   |
+| 📁 less/src          | Location of LESS files for various Adapt elements |
+| 📄 less/src/theme-extras.less| Classes used for bespoke styling |
+| 📁 templates         | Location of overridden HTML (.hbs) templates |
+| 📁 templates/partials| Location of overridden HTML (.hbs) templates required by other templates, specifically buttons.hbs, component.hbs, and state.hbs |  
 
-##Templates  
+## Templates
 
 **Vanilla** supports customisation for the rendering of various Adapt elements through the use of [Handlebars](http://handlebarsjs.com/) templates.  The file name of the template indicates the element it affects. Among the available templates are:
 * article.hbs
@@ -77,8 +78,8 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 No known limitations.  
 
 ----------------------------
-**Version number:**  2.0.5   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a> 
-**Framework versions:**  2.0     
+**Version number:**  2.0.6   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a> 
+**Framework versions:**  2.0.12     
 **Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)    
 **Accessibility support:** WAI AA   
 **RTL support:** yes  
