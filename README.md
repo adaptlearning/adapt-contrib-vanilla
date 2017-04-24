@@ -54,14 +54,14 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 | theme.json          | Pixel values for `screenSize`(`small`, `medium`, and `large`)|
 | selection.json      | File used for selecting icons at [IcoMoon.io](https://icomoon.io/) that are packaged in fonts/vanilla.* |
 | assets              | Location of theme assets (for example: images, loading gif, etc.)|
-| fonts/vanilla.*     | Icon font referenced in the associated *.less* files      |   
 | js                  | JavaScript files on which the theme depends      |
+| fonts               | Location of any theme font files |
 | less                | Location of any [LESS](http://lesscss.org/) based CSS files |
 | less/generic.less   | Variables that are not covered by those defined in colors.less, fonts.less, and paddings.less   |
 | less/src            | Location of LESS files for various Adapt elements |
 | less/src/theme-extras.less| Classes used for bespoke styling |
-| templates           | Location of pre-defined HTML (.hbs) templates |
-| templates/partials  | Location of pre-defined HTML (.hbs) templates required by other templates, specifically buttons.hbs, component.hbs, and state.hbs |  
+| templates           | Location of overridden HTML (.hbs) templates |
+| templates/partials  | Location of overridden HTML (.hbs) templates required by other templates, specifically buttons.hbs, component.hbs, and state.hbs |  
 
 ##Templates  
 
@@ -77,8 +77,8 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 No known limitations.  
 
 ----------------------------
-**Version number:**  2.0.5   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a> 
-**Framework versions:**  2.0     
+**Version number:**  2.0.6   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a> 
+**Framework versions:**  2.0.12     
 **Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)    
 **Accessibility support:** WAI AA   
 **RTL support:** yes  
