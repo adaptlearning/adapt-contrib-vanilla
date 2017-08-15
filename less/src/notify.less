@@ -10,6 +10,52 @@
         a {
           text-decoration: none;
         }
+
+        &.has-image {
+            .notify-popup-content {
+                font-size: 0;
+            }
+
+            .notify-popup-body {
+                display: inline-block;
+                font-size: @body-text-font-size;
+                margin-right: 2%;
+                width: 68%;
+                vertical-align: top;
+
+                .dir-rtl & {
+                    margin-left: 2%;
+                    margin-right: inherit;
+                }
+
+                @media (max-width: @device-width-medium) {
+                    margin-bottom: 20px;
+                    margin-right: inherit;
+                    width: 100%;
+                }
+            }
+
+            .notify-popup-image {
+                display: inline-block;
+                width: 30%;
+                vertical-align: top;
+
+                @media (max-width: @device-width-medium) {
+                    display: block;
+                    margin: auto;
+                    width: 60%;
+                }
+            }
+
+            .notify-popup-image-attribution {
+                font-size:12px;
+                display: inline-block;
+                width: 30%;
+                height: 30px;
+                margin-left: 70%;
+                vertical-align: top;
+            }
+        }
     }
 
     .notify-popup-inner {
