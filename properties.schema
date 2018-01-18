@@ -1,26 +1,413 @@
 {
-  "type":"object",
-  "$schema": "http://json-schema.org/draft-04/schema",
-  "id": "http://jsonschema.net",
-  "$ref": "http://localhost/plugins/content/theme/model.schema",
-  "properties":{
-    "_screenSize": {
-      "type":"object",
-      "required":true,
-      "properties":{
-        "large": {
-          "type":"string",
-          "required":true
-        },
-        "medium": {
-          "type":"string",
-          "required":true
-        },
-        "small": {
-          "type":"string",
-          "required":true
-        }
-      }
-    }
-  }
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"$ref": "http://localhost/plugins/content/theme/model.schema",
+	"properties": {
+		"primary-color": {
+			"type": "string",
+			"required": false,
+			"default": "#078292",
+			"title": "Primary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"primary-color-inverted": {
+			"type": "string",
+			"required": false,
+			"default": "#ffffff",
+			"title": "Inverted primary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"secondary-color": {
+			"type": "string",
+			"required": false,
+			"default": "#000000",
+			"title": "Secondary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"secondary-color-inverted": {
+			"type": "string",
+			"required": false,
+			"default": "#ffffff",
+			"title": "Inverted secondary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"tertiary-color": {
+			"type": "string",
+			"required": false,
+			"default": "#ffffff",
+			"title": "Tertiary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"tertiary-color-inverted": {
+			"type": "string",
+			"required": false,
+			"default": "#000000",
+			"title": "Inverted tertiary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"quaternary-color": {
+			"type": "string",
+			"required": false,
+			"default": "#37474f",
+			"title": "Quaternary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"quaternary-color-inverted": {
+			"type": "string",
+			"required": false,
+			"default": "#ffffff",
+			"title": "Inverted quaternary colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"foreground-color": {
+			"type": "string",
+			"required": false,
+			"default": "#000000",
+			"title": "Foreground colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"foreground-color-inverted": {
+			"type": "string",
+			"required": false,
+			"default": "#ffffff",
+			"title": "Inverted foreground colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"background-color": {
+			"type": "string",
+			"required": false,
+			"default": "#546e7a",
+			"title": "Background colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"background-color-inverted": {
+			"type": "string",
+			"required": false,
+			"default": "#546e7a",
+			"title": "Inverted background colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"validation-success": {
+			"type": "string",
+			"required": false,
+			"default": "#82ca9c",
+			"title": "Validation success colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"validation-error": {
+			"type": "string",
+			"required": false,
+			"default": "#f26c4f",
+			"title": "Validation error colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"disabled-color": {
+			"type": "string",
+			"required": false,
+			"default": "#727272",
+			"title": "Disabled colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"disabled-color-inverted": {
+			"type": "string",
+			"required": false,
+			"default": "#cccccc",
+			"title": "Inverted disabled colour",
+			"inputType": "ColorPicker",
+			"validators": []
+		},
+		"font-weight-light": {
+			"type": "string",
+			"required": false,
+			"default": "300",
+			"title": "Light font weight",
+			"inputType": "Text",
+			"validators": []
+		},
+		"font-weight-regular": {
+			"type": "string",
+			"required": false,
+			"default": "400",
+			"title": "Regular font weight",
+			"inputType": "Text",
+			"validators": []
+		},
+		"font-weight-bold": {
+			"type": "string",
+			"required": false,
+			"default": "700",
+			"title": "Bold font weight",
+			"inputType": "Text",
+			"validators": []
+		},
+		"menu-title-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "48px",
+			"title": "Menu title font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"page-title-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "48px",
+			"title": "Page title font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"component-title-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "36px",
+			"title": "Component title font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"item-title-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "24px",
+			"title": "Item title font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"sub-title-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "18px",
+			"title": "Sub-title font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"body-text-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "14px",
+			"title": "Body text font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"instruction-text-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "14px",
+			"title": "Instruction text font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"button-text-font-size": {
+			"type": "string",
+			"required": false,
+			"default": "18px",
+			"title": "Button text font size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"title-line-height": {
+			"type": "string",
+			"required": false,
+			"default": "120%",
+			"title": "Title line height",
+			"inputType": "Text",
+			"validators": []
+		},
+		"body-line-height": {
+			"type": "string",
+			"required": false,
+			"default": "140%",
+			"title": "Body line height",
+			"inputType": "Text",
+			"validators": []
+		},
+		"icon-size": {
+			"type": "string",
+			"required": false,
+			"default": "24px",
+			"title": "Icon size",
+			"inputType": "Text",
+			"validators": []
+		},
+		"device-width-small": {
+			"type": "string",
+			"required": false,
+			"default": "520px",
+			"title": "Small device width",
+			"inputType": "Text",
+			"validators": []
+		},
+		"device-width-medium": {
+			"type": "string",
+			"required": false,
+			"default": "760px",
+			"title": "Medium device width",
+			"inputType": "Text",
+			"validators": []
+		},
+		"device-width-large": {
+			"type": "string",
+			"required": false,
+			"default": "900px",
+			"title": "Large device width",
+			"inputType": "Text",
+			"validators": []
+		},
+		"max-width": {
+			"type": "string",
+			"required": false,
+			"default": "1400px",
+			"title": "Max width",
+			"inputType": "Text",
+			"validators": []
+		},
+		"ie8-max-width": {
+			"type": "string",
+			"required": false,
+			"default": "1024px",
+			"title": "IE8 max width",
+			"inputType": "Text",
+			"validators": []
+		},
+		"focus-outline": {
+			"type": "string",
+			"required": false,
+			"default": "3px solid orange",
+			"title": "Focus outline",
+			"inputType": "Text",
+			"validators": []
+		},
+		"item-padding": {
+			"type": "string",
+			"required": false,
+			"default": "20px",
+			"title": "Item padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"item-margin": {
+			"type": "string",
+			"required": false,
+			"default": "5px",
+			"title": "Item margin",
+			"inputType": "Text",
+			"validators": []
+		},
+		"component-padding": {
+			"type": "string",
+			"required": false,
+			"default": "20px",
+			"title": "Component padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"block-padding": {
+			"type": "string",
+			"required": false,
+			"default": "60px",
+			"title": "Block padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"article-padding": {
+			"type": "string",
+			"required": false,
+			"default": "60px",
+			"title": "Article padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"page-header-padding": {
+			"type": "string",
+			"required": false,
+			"default": "100px",
+			"title": "Page header padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"menu-header-padding": {
+			"type": "string",
+			"required": false,
+			"default": "100px",
+			"title": "Menu header padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"title-text-margin": {
+			"type": "string",
+			"required": false,
+			"default": "20px",
+			"title": "Title text margin",
+			"inputType": "Text",
+			"validators": []
+		},
+		"body-text-margin": {
+			"type": "string",
+			"required": false,
+			"title": "Body text margin",
+			"default": "30px",
+			"inputType": "Text",
+			"validators": []
+		},
+		"instruction-text-margin": {
+			"type": "string",
+			"required": false,
+			"default": "14px",
+			"title": "Instruction text margin",
+			"inputType": "Text",
+			"validators": []
+		},
+		"button-padding": {
+			"type": "string",
+			"required": false,
+			"default": "14px",
+			"title": "Button padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"button-margin": {
+			"type": "string",
+			"required": false,
+			"default": "30px",
+			"title": "Button margin",
+			"inputType": "Text",
+			"validators": []
+		},
+		"notify-padding": {
+			"type": "string",
+			"required": false,
+			"default": "60px",
+			"title": "Notify padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"navigation-padding": {
+			"type": "string",
+			"required": false,
+			"default": "20px",
+			"title": "Navigation padding",
+			"inputType": "Text",
+			"validators": []
+		},
+		"pluginLocations": {
+			"type": "object",
+			"required": true,
+			"properties": {}
+		}
+	}
 }
