@@ -5,7 +5,7 @@
     padding:  @navigation-padding!important; // Override defaults in extension
     margin: 5px 0;
     
-    .no-touch &:hover {
+    @{non-mobile} &:hover {
 
         .page-level-progress-navigation-completion {
             background-color: @navigation-progress-background-color-hover;
@@ -65,7 +65,7 @@
     		font-size: @button-text-font-size;
 	        font-weight: @font-weight-light;
 
-            .no-touch &:hover {
+            @{non-mobile} &:hover {
                 background-color: @drawer-item-color-disabled;
                 color: @drawer-item-text-color-disabled;
                 .page-level-progress-indicator {
@@ -74,7 +74,7 @@
             }
     	}
 
-        .no-touch &:hover {
+        @{non-mobile} &:hover {
             background-color: @drawer-item-color-hover;
             color: @drawer-item-text-color-hover;
 

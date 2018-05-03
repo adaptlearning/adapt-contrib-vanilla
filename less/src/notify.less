@@ -115,7 +115,7 @@
         .transition-all-colors;
         .button-text;
         
-        .no-touch &:hover {
+        @{non-mobile} &:hover {
             background-color: @notify-button-color-hover;
             color: @notify-button-text-color-hover;
         }
@@ -131,7 +131,7 @@
         right:0px;
         .transition-border-color;
 
-        .no-touch &:hover {
+        @{non-mobile} &:hover {
             border-color: @notify-icon-color-hover;
 
             .notify-popup-icon-close {
@@ -149,7 +149,7 @@
         color: @notify-icon-color;
         .transition-color;
 
-        .no-touch &:hover {
+        @{non-mobile} &:hover {
             color: @notify-icon-color-hover;
         }
     }
@@ -227,7 +227,7 @@
     .icon {
         color: @notify-icon-color;
         
-        .no-touch &:hover {
+        @{non-mobile} &:hover {
             color: @notify-icon-color-hover;
         }
     }

@@ -17,7 +17,7 @@
         padding: @navigation-padding;
         .transition-color;
 
-        .no-touch &:hover {
+        @{non-mobile} &:hover {
             color: @drawer-icon-color-hover;
         }
     }
@@ -51,7 +51,7 @@
             text-decoration: none;
             width: 100%;
             
-            .no-touch &:hover {
+            @{non-mobile} &:hover {
                 background-color: @drawer-item-color-hover;
                 color: @drawer-item-text-color-hover;
             }
@@ -63,7 +63,7 @@
         .transition-background-color;
 
         //stops rollover of drawar items on touch devices    
-        .no-touch &:hover {
+        @{non-mobile} &:hover {
              background-color: @drawer-color;
        }
     }

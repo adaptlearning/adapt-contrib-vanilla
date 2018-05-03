@@ -23,7 +23,7 @@
         .rangeslider__handle {
           background-color: @item-color;
           &:hover {
-            .no-touch & {
+            @{non-mobile} & {
               background-color: @item-color-hover;
             }
           }

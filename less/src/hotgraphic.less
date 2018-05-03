@@ -8,7 +8,7 @@
 				color: @item-color-visited;
 			}
 		}
-		.no-touch &:hover {
+		@{non-mobile} &:hover {
 			background-color: @item-text-color;
 			
 			.hotgraphic-graphic-pin-icon {
@@ -35,7 +35,7 @@
 	}
 
 	.hotgraphic-popup-done {
-		.no-touch &:hover {
+		@{non-mobile} &:hover {
 			.hotgraphic-popup-close {
 				color: @button-text-color-hover;
 			}
@@ -55,7 +55,7 @@
 	}
 
 	.hotgraphic-popup-controls {
-		.no-touch &:hover {
+		@{non-mobile} &:hover {
 			.hotgraphic-popup-arrow-l,
 			.hotgraphic-popup-arrow-r {
 				color: @button-text-color-hover;
