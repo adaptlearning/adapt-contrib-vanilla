@@ -1,4 +1,4 @@
-.menu {
+.boxmenu-menu {
 	background: @background-color;
 
 	.menu-container {
@@ -20,13 +20,13 @@
 		padding: @menu-header-padding-top 0 @menu-header-padding-bottom;
 		text-align: center;
 
-        @media all and (max-width: (@device-width-large + 20px)) {
-            padding: (@menu-header-padding-top / 2) 20px @menu-header-padding-bottom;
-        }
+		@media all and (max-width: (@device-width-large + 20px)) {
+			padding: (@menu-header-padding-top / 2) 20px @menu-header-padding-bottom;
+		}
 
-        @media all and (max-width: (@device-width-small + 20px)) {
-            padding: 20px 10px 20px;
-        }
+		@media all and (max-width: (@device-width-small + 20px)) {
+			padding: 20px 10px 20px;
+		}
 	}
 
 	.menu-title {
@@ -49,18 +49,18 @@
 		&.nth-child-even{
 			.menu-item-inner{
 				margin-left:2%;
-		        .dir-rtl & {
-		            margin-right:2%;
-		        }
+				.dir-rtl & {
+					margin-right:2%;
+				}
 			}
 		}
 
 		&.nth-child-odd {
 			.menu-item-inner {
 				margin-right:2%;
-                .dir-rtl & {
-                    margin-left:2%;
-                }
+				.dir-rtl & {
+					margin-left:2%;
+				}
 			}
 		}
 	}
@@ -154,8 +154,8 @@
 
 @media all and (max-width: @device-width-medium) {
 
-   	.menu{
-   		.menu-inner {
+	.boxmenu-menu{
+		.menu-inner {
 			padding:0;
 		}
 
@@ -176,5 +176,5 @@
 				}
 			}
 		}
-   	}
+	}
 }
