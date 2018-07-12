@@ -13,8 +13,11 @@
         }
 
         .pagelevelprogress-indicator-inner {
-            background-color: @navigation-progress-color-hover;
             border-color: @navigation-progress-background-color-hover;
+        }
+
+        .pagelevelprogress-indicator-bar {
+            background-color: @navigation-progress-color-hover;
         }
 
         .page-level-progress-plus-icon {
@@ -30,8 +33,12 @@
     }
 
     .pagelevelprogress-indicator-inner {
-        left: 0;
         border: 1px solid @navigation-progress-background-color;
+
+    }
+
+    .pagelevelprogress-indicator-bar {
+        left: 0;
         background-color: @navigation-progress-color;
         transition: all 0.3s ease-in;
         .transition-all-colors;
@@ -76,9 +83,13 @@
             background-color: @drawer-item-color;
             border-color: @drawer-progress-color;
         }
+
         .pagelevelprogress-indicator-inner {
-            background-color: @drawer-progress-color;
             border-color: @drawer-item-color;
+        }
+
+        .pagelevelprogress-indicator-bar {
+            background-color: @drawer-progress-color;
         }
 
         .no-touch &:hover {
@@ -89,9 +100,13 @@
                 background-color: @drawer-item-color-hover;
                 border-color: @drawer-progress-color-hover;
             }
+
             .pagelevelprogress-indicator-inner {
-                background-color: @drawer-progress-color-hover;
                 border-color: @drawer-item-color-hover;
+            }
+
+            .pagelevelprogress-indicator-bar {
+                background-color: @drawer-progress-color-hover;
             }
 
         }
@@ -106,14 +121,18 @@
 // =================
 .menu-header,
 .page-header {
+
     .pagelevelprogress-indicator {
         background-color: @background-color-inverted;
         border-color: @navigation-progress-background-color;
     }
 
     .pagelevelprogress-indicator-inner {
-        background-color: @navigation-progress-background-color;
         border-color: @background-color-inverted;
+    }
+
+    .pagelevelprogress-indicator-bar {
+        background-color: @navigation-progress-background-color;
     }
 }
 
@@ -123,29 +142,17 @@
 .article,
 .block,
 .component {
+
     .pagelevelprogress-indicator {
         background-color: @navigation-progress-background-color;
         border-color: @navigation-progress-border-color;
     }
 
     .pagelevelprogress-indicator-inner {
-        background-color: @navigation-progress-color;
         border-color: @navigation-progress-background-color;
     }
-}
 
-// Page, Article, Block and Component PLP
-// ======================================
-.page,
-.article,
-.block,
-.component {
-    .page-level-progress-completion-indicator {
-        background-color: @navigation-progress-background-color;
-        border-color: @navigation-progress-border-color;
-    }
-
-    .page-level-progress-completion-inner-indicator {
+    .pagelevelprogress-indicator-bar {
         background-color: @navigation-progress-color;
     }
 }
