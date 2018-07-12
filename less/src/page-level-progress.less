@@ -3,46 +3,43 @@
 
 .page-level-progress-navigation {
     padding:  @navigation-padding!important; // Override defaults in extension
-    margin: 5px 0;
-    
+    margin: 0;
+
     .no-touch &:hover {
 
-        .page-level-progress-navigation-completion {
+        .pagelevelprogress-indicator {
             background-color: @navigation-progress-background-color-hover;
             border-color: @navigation-progress-border-color;
         }
 
-        .page-level-progress-navigation-bar {
+        .pagelevelprogress-indicator-inner {
             background-color: @navigation-progress-color-hover;
-            border-color: @navigation-progress-color-hover;
+            border-color: @navigation-progress-background-color-hover;
         }
 
         .page-level-progress-plus-icon {
             color: @navigation-progress-color;
         }
     }
-}
 
-.page-level-progress-navigation-completion {
-    height: 8px;
-    background-color: @navigation-progress-background-color;
-    border: 2px solid @navigation-progress-border-color;
-    -webkit-border-radius: 50px; 
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    .transition-all-colors;
-}
+    .pagelevelprogress-indicator {
+        background-color: @navigation-progress-background-color;
+        border: 2px solid @navigation-progress-border-color;
+        border-radius: 50px;
+        .transition-all-colors;
+    }
 
-.page-level-progress-navigation-bar {
-    left: 0;
-    border: 2px solid @navigation-progress-color;
-    background-color: @navigation-progress-color;
-    transition: all 0.3s ease-in;
-    .transition-all-colors;
-    
-    .dir-rtl & {
-        right: 0;
-        left: auto;
+    .pagelevelprogress-indicator-inner {
+        left: 0;
+        border: 1px solid @navigation-progress-background-color;
+        background-color: @navigation-progress-color;
+        transition: all 0.3s ease-in;
+        .transition-all-colors;
+
+        .dir-rtl & {
+            right: 0;
+            left: auto;
+        }
     }
 }
 
@@ -74,16 +71,29 @@
             }
     	}
 
+        .pagelevelprogress-indicator {
+            width: 15%;
+            background-color: @drawer-progress-border-color;
+            border-color: @drawer-progress-color;
+        }
+        .pagelevelprogress-indicator-inner {
+            background-color: @drawer-progress-color;
+            border-color: @drawer-progress-border-color;
+        }
+
         .no-touch &:hover {
             background-color: @drawer-item-color-hover;
             color: @drawer-item-text-color-hover;
 
-            .page-level-progress-indicator {
-                background-color: @drawer-progress-color-hover;
-            }
-            .page-level-progress-indicator-incomplete {
+            .pagelevelprogress-indicator {
                 background-color: @drawer-item-color;
+                border-color: @drawer-progress-color-hover;
             }
+            .pagelevelprogress-indicator-inner {
+                background-color: @drawer-progress-color-hover;
+                border-color: @drawer-item-color;
+            }
+
         }
     }
 }
@@ -92,23 +102,35 @@
 	width:80%;
 }
 
-.page-level-progress-indicator {
-    width: 15%;
-    height: 8px;
-    border: 1px solid @drawer-progress-border-color;
-	background-color: transparent;
-    .transition-background-color;
+// Header indicators
+// =================
+.menu-header,
+.page-header {
+    .pagelevelprogress-indicator {
+        background-color: @background-color-inverted;
+        border-color: @navigation-progress-background-color;
+    }
+
+    .pagelevelprogress-indicator-inner {
+        background-color: @navigation-progress-background-color;
+        border-color: @background-color-inverted;
+    }
 }
 
-.page-level-progress-indicator-complete {
+// Page, Article, Block and Component PLP
+// ======================================
+.page,
+.article,
+.block,
+.component {
+    .pagelevelprogress-indicator {
+        background-color: @navigation-progress-background-color;
+        border-color: @navigation-progress-border-color;
+    }
 
-    .page-level-progress-indicator-bar {
-        background-color: @drawer-progress-color;
-        .transition-background-color;
-
-        &:hover {
-            background-color: @drawer-progress-color-hover;
-        }
+    .pagelevelprogress-indicator-inner {
+        background-color: @navigation-progress-color;
+        border-color: @navigation-progress-background-color;
     }
 }
 
