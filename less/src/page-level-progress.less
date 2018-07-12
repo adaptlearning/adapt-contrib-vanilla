@@ -1,9 +1,14 @@
+// General
+// =======
+.pagelevelprogress-indicator-bar {
+    transition: width 0.3s ease-in;
+}
+
 // Navigation PLP
 // ==============
 
-.page-level-progress-navigation {
-    padding:  @navigation-padding!important; // Override defaults in extension
-    margin: 0;
+.pagelevelprogress-navigation.base {
+    padding: @navigation-padding;
 
     .no-touch &:hover {
 
@@ -26,10 +31,10 @@
     }
 
     .pagelevelprogress-indicator {
+        transition: all 0.3s ease-in;
         background-color: @navigation-progress-background-color;
         border: 2px solid @navigation-progress-border-color;
         border-radius: 50px;
-        .transition-all-colors;
     }
 
     .pagelevelprogress-indicator-inner {
@@ -40,8 +45,7 @@
     .pagelevelprogress-indicator-bar {
         left: 0;
         background-color: @navigation-progress-color;
-        transition: all 0.3s ease-in;
-        .transition-all-colors;
+
 
         .dir-rtl & {
             right: 0;
@@ -50,24 +54,19 @@
     }
 }
 
-.page-level-progress-plus-icon {
-    right: 9px;
-}
-
 // Drawer PLP
 // ==========
 
 .drawer {
-    .page-level-progress-item-title {
-    	background-color: @drawer-item-color;
-    	color: @drawer-item-text-color;
-        .transition-all-colors;
+    .pagelevelprogress-item-title {
+        background-color: @drawer-item-color;
+        color: @drawer-item-text-color;
 
-    	&.drawer-item-open.disabled {
-    		background-color: @drawer-item-color-disabled;
-    		color: @drawer-item-text-color-disabled;
-    		font-size: @button-text-font-size;
-	        font-weight: @font-weight-light;
+        &.drawer-item-open.disabled {
+            background-color: @drawer-item-color-disabled;
+            color: @drawer-item-text-color-disabled;
+            font-size: @button-text-font-size;
+            font-weight: @font-weight-light;
 
             .no-touch &:hover {
                 background-color: @drawer-item-color-disabled;
@@ -76,7 +75,7 @@
                     background-color: transparent;
                 }
             }
-    	}
+        }
 
         .pagelevelprogress-indicator {
             width: 15%;
@@ -111,10 +110,6 @@
 
         }
     }
-}
-
-.page-level-progress-item-title-inner {
-	width:80%;
 }
 
 // Header indicators
