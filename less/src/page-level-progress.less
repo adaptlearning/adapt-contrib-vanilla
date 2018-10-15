@@ -1,69 +1,72 @@
+// General
+// =======
+.pagelevelprogress-indicator-bar {
+    transition: width 0.3s ease-in;
+}
+
 // Navigation PLP
 // ==============
 
-.page-level-progress-navigation {
-    padding:  @navigation-padding!important; // Override defaults in extension
-    margin: 5px 0;
-    
+.pagelevelprogress-navigation.base {
+    padding: @navigation-padding;
+
     .no-touch &:hover {
 
-        .page-level-progress-navigation-completion {
+        .pagelevelprogress-indicator {
             background-color: @navigation-progress-background-color-hover;
             border-color: @navigation-progress-border-color;
         }
 
-        .page-level-progress-navigation-bar {
+        .pagelevelprogress-indicator-inner {
+            border-color: @navigation-progress-background-color-hover;
+        }
+
+        .pagelevelprogress-indicator-bar {
             background-color: @navigation-progress-color-hover;
-            border-color: @navigation-progress-color-hover;
         }
 
         .page-level-progress-plus-icon {
             color: @navigation-progress-color;
         }
     }
-}
 
-.page-level-progress-navigation-completion {
-    height: 8px;
-    background-color: @navigation-progress-background-color;
-    border: 2px solid @navigation-progress-border-color;
-    -webkit-border-radius: 50px; 
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    .transition-all-colors;
-}
-
-.page-level-progress-navigation-bar {
-    left: 0;
-    border: 2px solid @navigation-progress-color;
-    background-color: @navigation-progress-color;
-    transition: all 0.3s ease-in;
-    .transition-all-colors;
-    
-    .dir-rtl & {
-        right: 0;
-        left: auto;
+    .pagelevelprogress-indicator {
+        transition: all 0.3s ease-in;
+        background-color: @navigation-progress-background-color;
+        border: 2px solid @navigation-progress-border-color;
+        border-radius: 50px;
     }
-}
 
-.page-level-progress-plus-icon {
-    right: 9px;
+    .pagelevelprogress-indicator-inner {
+        border: 1px solid @navigation-progress-background-color;
+
+    }
+
+    .pagelevelprogress-indicator-bar {
+        left: 0;
+        background-color: @navigation-progress-color;
+
+
+        .dir-rtl & {
+            right: 0;
+            left: auto;
+        }
+    }
 }
 
 // Drawer PLP
 // ==========
 
 .drawer {
-    .page-level-progress-item-title {
-    	background-color: @drawer-item-color;
-    	color: @drawer-item-text-color;
-        .transition-all-colors;
+    .pagelevelprogress-item-title {
+        background-color: @drawer-item-color;
+        color: @drawer-item-text-color;
 
-    	&.drawer-item-open.disabled {
-    		background-color: @drawer-item-color-disabled;
-    		color: @drawer-item-text-color-disabled;
-    		font-size: @button-text-font-size;
-	        font-weight: @font-weight-light;
+        &.drawer-item-open.disabled {
+            background-color: @drawer-item-color-disabled;
+            color: @drawer-item-text-color-disabled;
+            font-size: @button-text-font-size;
+            font-weight: @font-weight-light;
 
             .no-touch &:hover {
                 background-color: @drawer-item-color-disabled;
@@ -72,42 +75,79 @@
                     background-color: transparent;
                 }
             }
-    	}
+        }
+
+        .pagelevelprogress-indicator {
+            width: 15%;
+            background-color: @drawer-item-color;
+            border-color: @drawer-progress-color;
+        }
+
+        .pagelevelprogress-indicator-inner {
+            border-color: @drawer-item-color;
+        }
+
+        .pagelevelprogress-indicator-bar {
+            background-color: @drawer-progress-color;
+        }
 
         .no-touch &:hover {
             background-color: @drawer-item-color-hover;
             color: @drawer-item-text-color-hover;
 
-            .page-level-progress-indicator {
+            .pagelevelprogress-indicator {
+                background-color: @drawer-item-color-hover;
+                border-color: @drawer-progress-color-hover;
+            }
+
+            .pagelevelprogress-indicator-inner {
+                border-color: @drawer-item-color-hover;
+            }
+
+            .pagelevelprogress-indicator-bar {
                 background-color: @drawer-progress-color-hover;
             }
-            .page-level-progress-indicator-incomplete {
-                background-color: @drawer-item-color;
-            }
+
         }
     }
 }
 
-.page-level-progress-item-title-inner {
-	width:80%;
+// Header indicators
+// =================
+.menu-header,
+.page-header {
+
+    .pagelevelprogress-indicator {
+        background-color: @background-color-inverted;
+        border-color: @navigation-progress-background-color;
+    }
+
+    .pagelevelprogress-indicator-inner {
+        border-color: @background-color-inverted;
+    }
+
+    .pagelevelprogress-indicator-bar {
+        background-color: @navigation-progress-background-color;
+    }
 }
 
-.page-level-progress-indicator {
-    width: 15%;
-    height: 8px;
-    border: 1px solid @drawer-progress-border-color;
-	background-color: transparent;
-    .transition-background-color;
-}
+// Page, Article, Block and Component PLP
+// ======================================
+.page,
+.article,
+.block,
+.component {
 
-.page-level-progress-indicator-complete {
+    .pagelevelprogress-indicator {
+        background-color: @navigation-progress-background-color;
+        border-color: @navigation-progress-border-color;
+    }
 
-    .page-level-progress-indicator-bar {
-        background-color: @drawer-progress-color;
-        .transition-background-color;
+    .pagelevelprogress-indicator-inner {
+        border-color: @navigation-progress-background-color;
+    }
 
-        &:hover {
-            background-color: @drawer-progress-color-hover;
-        }
+    .pagelevelprogress-indicator-bar {
+        background-color: @navigation-progress-color;
     }
 }
