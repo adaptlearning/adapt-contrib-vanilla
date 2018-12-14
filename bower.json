@@ -1,18 +1,18 @@
 {
   "name": "adapt-contrib-vanilla",
-  "version": "3.0.0",
+  "version": "0.0.1",
   "framework": ">=2.1",
-  "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
-  "issues": "https://github.com/adaptlearning/adapt_framework/issues/new?title=contrib-vanilla%3A%20please%20enter%20a%20brief%20summary%20of%20the%20issue%20here&body=please%20provide%20a%20full%20description%20of%20the%20problem,%20including%20steps%20on%20how%20to%20replicate,%20what%20browser(s)/device(s)%20the%20problem%20occurs%20on%20and,%20where%20helpful,%20screenshots.",
-  "displayName": "Vanilla",
-  "theme": "vanilla",
-  "description": "A core bundled theme",
-  "main": "js/vanilla.js",
+  "homepage": "https://github.com/apolitical/adapt-contrib-apolitical-theme",
+  "issues": "https://github.com/apolitical/adapt-contrib-apolitical-theme.git/issues/new?title=contrib-adapt-contrib-apolitical%3A%20please%20enter%20a%20brief%20summary%20of%20the%20issue%20here&body=please%20provide%20a%20full%20description%20of%20the%20problem,%20including%20steps%20on%20how%20to%20replicate,%20what%20browser(s)/device(s)%20the%20problem%20occurs%20on%20and,%20where%20helpful,%20screenshots.",
+  "displayName": "Apolitical",
+  "theme": "apolitical",
+  "description": "Default theme for Apolitical courses",
+  "main": "js/apolitical.js",
   "keywords": [
     "adapt-plugin",
     "adapt-theme"
   ],
-  "license": "GPLv3",
+  "license": "TBC",
   "ignore": [
     "**/.*",
     "node_modules",
