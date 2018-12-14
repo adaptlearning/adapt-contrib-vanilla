@@ -21,9 +21,10 @@ Editing this theme is best done from within the adapt_framework.
 1. Clone the [Apolitical Adapt Framework](https://github.com/apolitical/adapt_framework)
 2. Replace `src/theme/` with this repo (adapt-contrib-apolitical-theme)
 3. run `npm i`
-4. In one terminal run `grunt dev`
-5. In another run `grunt server`
-6. Visit http://localhost:9001/
+4. run`adapt install` (if you don't already you'll need to install the adapt cli)
+5. In one terminal run `grunt dev`
+6. In another run `grunt server` 
+7. Visit http://localhost:9001/
 
 ## Settings overview
 
