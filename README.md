@@ -1,4 +1,4 @@
-# adapt-contrib-apolitical-them  
+# adapt-contrib-apolitical-theme
 
 Apolitical's default course style.
 
