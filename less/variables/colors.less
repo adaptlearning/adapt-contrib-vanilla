@@ -67,6 +67,7 @@
 @button-border-color-disabled: @button-color-disabled;
 
 // Navigation
+// The bar that is fixed to the top of the browser window.
 @navigation-color: @tertiary-color;
 
 @navigation-icon-color: @tertiary-color-inverted;
@@ -81,6 +82,7 @@
 @navigation-progress-border-color: @navigation-icon-color;
 
 // Drawer
+// The panel that slides out from the right of the browser window.
 @drawer-color: @quaternary-color;
 @drawer-border-color: darken(@drawer-color, 20%);
 
@@ -103,15 +105,15 @@
 @drawer-progress-border-color: darken(@drawer-item-color, 20%);
 
 // Components
-@component-background-color: darken(@background-color, 10%);
+@component-background-color: @white;
 
-@item-color: @primary-color;
+@item-color: @white;
 @item-color-hover: darken(@item-color, 20%);
 @item-color-disabled: @disabled-color;
 @item-color-visited: desaturate(@item-color, 90%);
 @item-color-selected: @item-color-hover;
 
-@item-text-color: @primary-color-inverted;
+@item-text-color: @teal;
 @item-text-color-hover: @item-text-color;
 @item-text-color-disabled: @item-text-color;
 @item-text-color-visited: @item-text-color;
@@ -128,21 +130,23 @@
 @item-border-color-inverted: @item-text-color;
 
 // Menu
-@menu-item-color: @primary-color;
+// An index of all the component elements
+@menu-item-color: purple;
 @menu-item-text-color: @primary-color-inverted;
 @menu-item-progress-color: @primary-color;
 @menu-item-progress-fill-color: @primary-color-inverted;
 @menu-item-progress-border-color: @primary-color-inverted;
 
 // Notify
+// Most modal pop-ups like you see with a question's feedback.
 @notify-color: @primary-color;
 @notify-text-color: @primary-color-inverted;
 
 @notify-icon-color: @notify-text-color;
 @notify-icon-color-hover: darken(@notify-color, 20%);
 
-@notify-button-color: @notify-text-color;
+@notify-button-color: @pink;
 @notify-button-color-hover: darken(@notify-color, 20%);
 
-@notify-button-text-color: @notify-color;
+@notify-button-text-color: @white;
 @notify-button-text-color-hover: @notify-text-color;
