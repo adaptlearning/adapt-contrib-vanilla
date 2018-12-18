@@ -38,7 +38,7 @@
 @validation-error: @red;
 @validation-success: @green;
 // Disabled States
-@disabled-color: #727272;
+@disabled-color: #636466;
 @disabled-color-inverted: #ccc;
 
 @transparency: rgba(255,255,255,0.8);
@@ -54,17 +54,17 @@
 @title-color-inverted: @primary-color-inverted;
 
 // Buttons
-@button-color: @secondary-color;
+@button-color: @primary-color;
 @button-color-hover: darken(@button-color, 40%);
-@button-color-disabled: @disabled-color;
+@button-color-disabled: @transparency;
 
 @button-text-color: @secondary-color-inverted;
 @button-text-color-hover: @secondary-color-inverted;
-@button-text-color-disabled: @disabled-color-inverted;
+@button-text-color-disabled: @disabled-color;
 
 @button-border-color: @button-color;
 @button-border-color-hover: @button-color-hover;
-@button-border-color-disabled: @button-color-disabled;
+@button-border-color-disabled: @disabled-color;
 
 // Navigation
 // The bar that is fixed to the top of the browser window.
@@ -131,7 +131,7 @@
 
 // Menu
 // An index of all the component elements
-@menu-item-color: purple;
+@menu-item-color: @primary-color;
 @menu-item-text-color: @primary-color-inverted;
 @menu-item-progress-color: @primary-color;
 @menu-item-progress-fill-color: @primary-color-inverted;

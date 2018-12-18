@@ -3,7 +3,9 @@
 
 .button, button {
     font-family: @font-family;
+    font-weight: @font-weight-regular;
     background-color: @button-color;
+    border-radius: @rounded-corners;
     color: @button-text-color;
     padding: @button-padding-top @button-padding-right+10 @button-padding-bottom @button-padding-left+10; // Added left / right padding in case buttons aren't centrally aligned
     text-decoration: none;
@@ -19,7 +21,7 @@
         border-color: @button-border-color-hover;
     }
 
-    &.base { 
+    &.base {
     	// Override button styles on <a> tags coverted to <button> tags
     	// Could be improved so that buttons are divided into groups, default / submit / nav / icon
     	background-color: transparent;
@@ -33,7 +35,7 @@
     	.no-touch &:hover {
     		background-color: transparent;
     	}
-    	
+
     	.dir-rtl & {
     		text-align: right;
     	}
@@ -108,7 +110,7 @@
         margin-top: -21px;
         color: @button-text-color;
         border: @button-border;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        box-shadow: 0 2px 6px rgba(0,0,0,.4);
 
         .dir-rtl & {
             left: inherit;
@@ -116,7 +118,7 @@
             margin-right: -(40px/2);
             right: 50%;
         }
-        
+
         &.icon-tick {
             background-color: @validation-success;
         }
