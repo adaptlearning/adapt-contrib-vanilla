@@ -1,0 +1,40 @@
+.search-button {
+	width: 4rem;
+	padding: 0;
+	opacity: 0.7;
+	overflow: visible;
+	background: none;
+	border: 0;
+	border-radius: .25rem;
+	color: #313233; //TODO: To variable
+	font-size: .8125rem;
+	line-height: 1.125rem;
+	text-align: center;
+	text-decoration: none;
+	margin-right: -4rem;
+}
+
+.search-icon {
+	font-family: 'icomoon'; //TODO: Include in fonts
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.search-icon:before {
+	content: "\e912";
+	color: @teal;
+	font-size: 2rem;
+	line-height: 2rem;
+	@media only screen and (max-width: 767px) { //TODO: To variable
+		margin-right: 0;
+		color: #231f20; //TODO: To variable
+		font-size: 28px;
+		line-height: 28px;
+	}
+}

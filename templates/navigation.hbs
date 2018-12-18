@@ -5,23 +5,14 @@
   <SupraNavBar />
   <div class="header-main-wrapper">
     <div class="header-wrapper-inner">
-      {{#if me}} {{! Replace Later with me}}
-        {{> siteNavBarLoggedOut me }}
-      {{else}}
-        {{> siteNavBarLoggedIn me }}
-      {{/if}}
       <div class="header-left">
         {{> apolLogo }}
         {{> chevron }}
       </div>
       {{> searchForm }}
+      {{> siteNavBarLoggedOut }}
       <div class="header-right">
-        {{#if me}} {{! Replace Later with me}}
-          {{> headerLoggedInNav me}}
-          {{> searchButton }}
-        {{else}}
-          {{>headerLoggedOutNav}}
-        {{/if}}
+        {{> headerLoggedOutNav}}
       </div>
     </div>
   </div>

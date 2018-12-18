@@ -1,0 +1,23 @@
+.chevron {
+	display: none;
+	@media only screen and (max-width: 939px) {
+    display: inline-block;
+	text-decoration: none;
+	padding: 20px 15px;
+	i {
+    	font-family: 'FontAwesome';
+    	font-style: normal;
+    	font-weight: 400;
+    	color: rgb(99, 100, 102);
+    	font-size: 2.8rem;
+    	line-height: 1;
+    	-webkit-font-smoothing: antialiased;
+    	-moz-osx-font-smoothing: grayscale;
+    }
+    i {
+    	&:before {
+    		content: "\\f107";
+    	}
+    }
+  }
+}

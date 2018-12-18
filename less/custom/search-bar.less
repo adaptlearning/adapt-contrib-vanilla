@@ -1,0 +1,31 @@
+.screen-reader-text {
+  display: none;
+}
+
+.search-wrapper {
+	transition: opacity .45s ease, transform .45s ease;
+	display: flex;
+	flex-direction: row;
+	border: solid .1rem rgb(240, 241, 243);
+	border-radius: .4rem;
+	height: 4.3rem;
+	margin-left: 2rem;
+	transform: translate3d(0, 0, 0);
+	@media only screen and (max-width: 767px) {
+    transition: opacity .45s ease, transform .45s ease;
+  	padding-left: 4rem;
+  	padding-right: 15px;
+  	margin-left: 0;
+  	width: 100%;
+  	font-weight: 100;
+  	border: 0;
+  	background: @white;
+  	border-bottom: solid 2px rgb(240, 241, 243);
+  	transform: translate3d(0, -19px, 0);
+  	opacity: 1;
+  	height: 5.4rem;
+  	button {
+      display: none;
+    }
+  }
+}

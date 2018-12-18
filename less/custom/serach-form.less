@@ -1,0 +1,24 @@
+.header-search {
+    justify-content: flex-start;
+    width: 389px;
+    transition: all .3s ease;
+    transform: translate3d(0, 0, 0);
+}
+
+@media only screen and (max-width: 939px) {
+    .header-search {
+        flex-grow: .75;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header-search {
+        height: 5.625rem;
+        position: absolute;
+        top: 7rem;
+        right: 0;
+        width: 100%;
+        padding: 0rem 1.25rem;
+        transform: translate3d(0, -19px, 0);
+    }
+}
