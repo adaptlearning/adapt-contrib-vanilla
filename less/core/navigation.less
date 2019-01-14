@@ -3,17 +3,9 @@
 @navigation-height: (@navigation-padding * 2) + @icon-size;
 
 .navigation {
-    width: 100%;
     overflow: hidden;
     background-color: @navigation-color;
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-    height: @navigation-height;
-
-    .ie8 & {
-        max-width: @ie8-max-width;
-        left: 0;
-        right: 0;
-    }
 
     .icon {
         padding: @navigation-padding;
