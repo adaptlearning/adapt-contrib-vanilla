@@ -1,0 +1,26 @@
+.textinput {
+  &__item-textbox-container {
+    position: relative;
+  }
+
+  &__item-textbox {
+    padding: @item-padding (@icon-size + (@item-padding * 2)) @item-padding @item-padding;
+
+    .dir-rtl & {
+      padding-left: @icon-size + (@item-padding * 2);
+      padding-right: @item-padding;
+    }
+  }
+
+  &__item-state {
+    position: absolute;
+    top: 50%;
+    right: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      right: inherit;
+      left: @item-padding;
+    }
+  }
+}
