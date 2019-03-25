@@ -1,7 +1,10 @@
-.block {
-  &__inner {
+.page {
+  .l-container-responsive(@max-width);
+  .l-container-padding(0, 0.5em);
+
+  &__header {
     .l-container-responsive(@device-width-large);
-    .l-container-padding(@block-padding-ver, 0);
+    .l-container-padding(0, 0.5em);
   }
 
   &__title {
