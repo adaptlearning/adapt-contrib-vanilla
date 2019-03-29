@@ -7,14 +7,14 @@
 // ============
 
 "_theme": {
-    // Background Color - set background color based on color variables defined in colors.less
-    "_backgroundColor": "background-color-inverted",
-    // Minimum Heights - set minimum heights on blocks at different device widths
-    "_minimumHeights": {
-        "_large": 500,
-        "_medium": 500,
-        "_small": 300
-    },
-    // Divider Block - break up page content by overriding block content style
-    "_isDividerBlock": true
+  // Background Color - set background color based on color variables defined in colors.less
+  "_backgroundColor": "background-color-inverted",
+  // Minimum Heights - set minimum heights on blocks at different device widths
+  "_minimumHeights": {
+    "_large": 500,
+    "_medium": 500,
+    "_small": 300
+  },
+  // Divider Block - break up page content by overriding block content style
+  "_isDividerBlock": true
 }
