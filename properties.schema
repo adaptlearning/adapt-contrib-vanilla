@@ -119,7 +119,7 @@
           "help": "This is the inverted disabled colour, and is applied to text on elements which have been disabled.",
           "type": "string",
           "inputType": "ColourPicker",
-          "default": "#ccc"
+          "default": "#cccccc"
         }
       }
     }
