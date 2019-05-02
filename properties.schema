@@ -4,21 +4,124 @@
   "id": "http://jsonschema.net",
   "$ref": "http://localhost/plugins/content/theme/model.schema",
   "properties":{
-    "_screenSize": {
-      "type":"object",
-      "required":true,
-      "properties":{
-        "large": {
-          "type":"string",
-          "required":true
-        },
-        "medium": {
-          "type":"string",
-          "required":true
-        },
-        "small": {
-          "type":"string",
-          "required":true
+    "variables": {
+      "_colors": {
+        "type": "object",
+        "required": false,
+        "title": "Colours",
+        "properties": {
+          "primary-color": {
+            "title": "Primary",
+            "help": "This is the primary colour used to style the course, and is applied to component items and pop-up notifications.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#078292"
+          },
+          "primary-color-inverted": {
+            "title": "Primary Inverted",
+            "help": "This is the inverted primary colour, and is applied to text that is displayed on elements coloured with primary.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
+          "secondary-color": {
+            "title": "Secondary",
+            "help": "This is the secondary colour used to style the course, and is applied to buttons.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#4b4e4f"
+          },
+          "secondary-color-inverted": {
+            "title": "Secondary Inverted",
+            "help": "This is the inverted secondary colour, and is applied to text that is displayed on elements coloured with secondary.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
+          "tertiary-color": {
+            "title": "Tertiary",
+            "help": "This is the tertiary colour used to style the course, and is applied to the navigation bar.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
+          "tertiary-color-inverted": {
+            "title": "Tertiary Inverted",
+            "help": "This is the inverted tertiary colour, and is applied to text that is displayed on elements coloured with tertiary.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#4b4e4f"
+          },
+          "quaternary-color": {
+            "title": "Quaternary",
+            "help": "This is the quaternary colour used to style the course, and is applied to the drawer.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#37474f"
+          },
+          "quaternary-color-inverted": {
+            "title": "Quaternary Inverted",
+            "help": "This is the inverted quaternary colour, and is applied to text that is displayed on elements coloured with quaternary.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
+          "foreground-color": {
+            "title": "Foreground",
+            "help": "This is the foreground colour, and is applied to all body text.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#4b4e4f"
+          },
+          "background-color": {
+            "title": "Background",
+            "help": "This is the background colour, and is applied to many elements including pages, articles and blocks.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
+          "foreground-color-inverted": {
+            "title": "Foreground Inverted",
+            "help": "This is the inverted foreground colour, and is applied to text on menus and page headers.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
+          "background-color-inverted": {
+            "title": "Background Inverted",
+            "help": "This is the inverted background colour, and is applied to menus and page headers.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#546e7a"
+          },
+          "validation-error": {
+            "title": "Validation error",
+            "help": "This is the validation error colour, and is applied to elements which display an incorrect field.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#f26c4f"
+          },
+          "validation-success": {
+            "title": "Validation success",
+            "help": "This is the validation success colour, and is applied to elements which display a correct field.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#82ca9c"
+          },
+          "disabled-color": {
+            "title": "Disabled",
+            "help": "This is the disabled colour, and is applied to elements which have been disabled.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#727272"
+          },
+          "disabled-color-inverted": {
+            "title": "Disabled Inverted",
+            "help": "This is the inverted disabled colour, and is applied to text on elements which have been disabled.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#cccccc"
+          }
         }
       }
     }
