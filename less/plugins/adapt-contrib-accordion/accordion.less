@@ -1,15 +1,37 @@
 .accordion {
+  &__item {
+    margin-bottom: @item-margin / 2;
+  }
+
   &__item-btn {
     position: relative;
     padding: @item-padding;
     padding-left: @icon-size + (@item-padding * 2);
     text-align: left;
+    background-color: @item-color;
+    color: @item-color-inverted;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
 
     .dir-rtl & {
       padding-left: @item-padding;
       padding-right: @icon-size + (@item-padding * 2);
       text-align: right;
     }
+  }
+
+  &__item-btn.is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  &__item-btn.is-selected {
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
   }
 
   &__item-icon {
@@ -22,5 +44,11 @@
       left: inherit;
       right: @item-padding;
     }
+  }
+
+  &__item-content {
+    padding: @item-padding / 2;
+    background-color: @item-color;
+    color: @item-color-inverted;
   }
 }
