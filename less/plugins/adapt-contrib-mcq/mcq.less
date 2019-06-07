@@ -1,4 +1,27 @@
 .mcq {
+  &__item-label {
+    margin-bottom: @item-margin / 2;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: 5px;
+
+    .no-touch &:not(.is-disabled):hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__item-label.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__item-label.is-selected {
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
+  }
+
   &__item-state {
     position: absolute;
     top: 50%;
