@@ -1,18 +1,20 @@
 .article {
   &__header {
-    .l-container-responsive(@device-width-large);
-    .l-container-padding(0, 0.5em);
+    .l-container-padding(@article-header-padding-ver, @article-header-padding-hoz);
   }
 
   &__title {
-    margin-bottom: 1em;
+    margin-bottom: @article-title-margin;
+    color: @heading-color;
+    .article-title;
   }
 
   &__body {
-    margin-bottom: 1em;
+    margin-bottom: @article-body-margin;
   }
 
   &__instruction {
-    margin-bottom: 1em;
+    margin-bottom: @article-instruction-margin;
+    .instruction-text;
   }
 }

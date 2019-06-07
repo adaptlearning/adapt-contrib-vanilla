@@ -1,12 +1,13 @@
 .nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 80;
-  background-color: red;
+  background-color: @nav;
 
-  &__inner {
-    margin: auto;
-    max-width: @max-width;
+  &__btn {
+    background-color: @nav-icon;
+    color: @nav-icon-inverted;
+
+    .no-touch &:hover {
+      background-color: @nav-icon-hover;
+      color: @nav-icon-inverted-hover;
+    }
   }
 }

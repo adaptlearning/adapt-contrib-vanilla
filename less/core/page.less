@@ -1,21 +1,27 @@
 .page {
-  .l-container-responsive(@max-width);
-  .l-container-padding(0, 0.5em);
+  .l-container-padding(@page-padding-ver, @page-padding-hoz);
 
   &__header {
-    .l-container-responsive(@device-width-large);
-    .l-container-padding(0, 0.5em);
+    .l-container-padding(@page-header-padding-ver, @page-header-padding-hoz);
   }
 
   &__title {
-    margin-bottom: 1em;
+    margin-bottom: @page-title-margin;
+    .page-title;
+  }
+
+  &__subtitle {
+    margin-bottom: @page-subtitle-margin;
+    .page-subtitle;
   }
 
   &__body {
-    margin-bottom: 1em;
+    margin-bottom: @page-body-margin;
+    .page-body;
   }
 
   &__instruction {
-    margin-bottom: 1em;
+    margin-bottom: @page-instruction-margin;
+    .page-instruction;
   }
 }

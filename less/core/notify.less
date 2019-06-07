@@ -1,24 +1,27 @@
 .notify {
+  &__popup {
+    background-color: @notify;
+    color: @notify-inverted;
+  }
+
   &__popup-inner {
     position: relative;
-    .l-container-responsive(@device-width-large);
     .l-container-padding(@block-padding-ver, @block-padding-hoz);
   }
 
-  // --------------------------------------------------
-  //
-  // --------------------------------------------------
-  // &__icon {
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
+  &__title {
+    margin-bottom: @notify-title-margin;
+    .notify-title;
+  }
 
-  //   .dir-rtl & {
-  //     right: inherit;
-  //     left: 0;
-  //   }
-  // }
-  // --------------------------------------------------
+  &__body {
+    margin-bottom: @notify-body-margin;
+  }
+
+  &__instruction {
+    margin-bottom: @notify-instruction-margin;
+    .instruction-text;
+  }
 
   &__close-btn {
     position: absolute;
@@ -32,37 +35,17 @@
   }
 
   // --------------------------------------------------
-  // Sets up full width title and 50/50 text/image split below
+  // Notify prompt type icon
   // --------------------------------------------------
-  @media (min-width: @device-width-medium) {
-    &__content.has-image {
-      .notify__content-inner {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
+  // &__icon {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
 
-      .notify__title {
-        width: 100%;
-      }
-
-      .notify__body,
-      .notify__image-container {
-        width: 50%;
-      }
-    }
-  }
-  // --------------------------------------------------
-
-  // --------------------------------------------------
-  // Left aligns image in notify pop up
-  // --------------------------------------------------
-  @media (min-width: @device-width-medium) {
-    &__content.align-image-left {
-      .notify__content-inner {
-        flex-direction: row-reverse;
-      }
-    }
-  }
+  //   .dir-rtl & {
+  //     right: inherit;
+  //     left: 0;
+  //   }
+  // }
   // --------------------------------------------------
 }

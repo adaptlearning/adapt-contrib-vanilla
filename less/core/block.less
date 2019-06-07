@@ -1,18 +1,20 @@
 .block {
   &__inner {
-    .l-container-responsive(@device-width-large);
-    .l-container-padding(@block-padding-ver, 0);
+    .l-container-padding(@block-padding-ver, @block-padding-hoz);
   }
 
   &__title {
-    margin-bottom: 1em;
+    margin-bottom: @block-title-margin;
+    color: @heading-color;
+    .block-title;
   }
 
   &__body {
-    margin-bottom: 1em;
+    margin-bottom: @block-body-margin;
   }
 
   &__instruction {
-    margin-bottom: 1em;
+    margin-bottom: @block-instruction-margin;
+    .instruction-text;
   }
 }
