@@ -1,7 +1,11 @@
 .boxmenu-item {
-  @media (min-width: @device-width-medium) {
-    &__inner {
-      margin: 0.5em;
+  &__inner {
+    padding: @item-padding;
+    border: 0.063em solid @disabled;
+    border-radius: 5px;
+
+    @media (min-width: @device-width-medium) {
+      margin: 0 0.5em 1em;
     }
   }
 
@@ -10,12 +14,12 @@
   }
 
   &__title {
-    margin-bottom: 0.75em;
+    margin-bottom: @menu-item-title-margin;;
     font-size: 1.5em;
   }
 
   &__body {
-    margin-bottom: 1em;
+    margin-bottom: @menu-item-body-margin;
   }
 
   &__duration {

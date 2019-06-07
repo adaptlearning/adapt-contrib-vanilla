@@ -1,18 +1,27 @@
 .boxmenu {
-  .l-container-responsive(@max-width);
-  .l-container-padding(0, 0.5em);
+  .l-container-padding(@menu-padding-ver, @menu-padding-hoz);
 
   &__header {
-    .l-container-responsive(@device-width-large);
-    .l-container-padding(0, 0.5em);
+    .l-container-padding(@menu-header-padding-ver, @menu-header-padding-hoz);
   }
 
   &__title {
-    margin-bottom: 1em;
+    margin-bottom: @menu-title-margin;
+    .menu-title;
   }
 
-  &__item-container {
-    .l-container-responsive(@device-width-large);
-    // .l-container-padding(0, 0.5em);
+  &__subtitle {
+    margin-bottom: @menu-subtitle-margin;
+    .menu-title;
+  }
+
+  &__body {
+    margin-bottom: @menu-body-margin;
+    .menu-body;
+  }
+
+  &__instruction {
+    margin-bottom: @menu-instruction-margin;
+    .menu-instruction;
   }
 }
