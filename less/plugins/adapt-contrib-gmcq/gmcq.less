@@ -1,12 +1,48 @@
 .gmcq {
+  &__item-label {
+    margin: @item-margin;
+  }
+
+  // -------------------------------------------------
+  // Layout #1
+  // --------------------------------------------------
   &__item-option {
-    margin-top: 0.5em;
+    margin-top: @item-margin;
+    padding: @item-padding / 2;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: 5px;
+  }
+
+  .no-touch &__item-label:not(.is-disabled):hover .gmcq__item-option {
+    background-color: @item-color-hover;
+    color: @item-color-inverted-hover;
+    .transition(background-color @duration ease-in, color @duration ease-in;);
+  }
+
+  &__item-label.is-disabled .gmcq__item-option {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__item-label.is-selected .gmcq__item-option {
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
+  }
+
+  &__item-state {
+    min-height: @icon-size;
   }
 
   &__item-text {
-    padding: @item-padding;
+    margin-top: @item-margin;
+    text-align: center;
   }
+  // --------------------------------------------------
 
+  // --------------------------------------------------
+  // Layout #2
+  // --------------------------------------------------
   // &__item-option {
   //   position: relative;
   // }
@@ -31,4 +67,5 @@
   //     padding-right: @icon-size + (@item-padding * 2);
   //   }
   // }
+  // --------------------------------------------------
 }
