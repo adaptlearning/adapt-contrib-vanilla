@@ -1,0 +1,96 @@
+
+
+
+
+//
+
+.img-zoom(@scale: 1.1; @duration: .25s; @easing: ease;) {
+  overflow: hidden;
+
+  img {
+    transition: transform @duration @easing;
+
+    .no-touch &:hover {
+      transform: scale(@scale);
+    }
+  }
+}
+
+
+
+
+
+// --------------------------------------------------
+// Duration
+// --------------------------------------------------
+@duration: 0.2s;
+// --------------------------------------------------
+
+
+
+
+// @navigation-height: @icon-size + (@icon-padding * 2);
+
+// @focus-outline: 0; // deprecated - reverting to browser outline
+
+// @drawer-width: 20em;
+
+
+
+
+
+
+
+
+
+// ====================================================================================================
+// Spacings
+// ====================================================================================================
+
+// // Globals
+// // ==================================================
+// @button-margin: 30px;
+// @button-padding: 14px;
+
+// @title-text-margin: 0;
+// @body-text-margin: 20px;
+// @instruction-text-margin: 0;
+
+// // Navigation
+// // ==================================================
+// @navigation-padding: 20px;
+
+// // Menu
+// // ==================================================
+// @menu-header-padding: 100px;
+
+// // Page header
+// // ==================================================
+// @page-header-padding: 100px;
+
+// // Article
+// // ==================================================
+// @first-article-top-padding: 0px;
+
+// @article-padding: 0px;
+// @article-header-padding: 0px;
+
+// // Block
+// // ==================================================
+// @block-padding: 60px;
+
+// // Component
+// // ==================================================
+// @component-margin: 20px;
+// @component-padding: 20px;
+
+// // Notify
+// // ==================================================
+// @notify-padding: 60px;
+
+// // Item
+// // ==================================================
+// @item-margin: 2px;
+// @item-padding: 20px;
+
+
