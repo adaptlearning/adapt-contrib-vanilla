@@ -1,0 +1,18 @@
+.hotgraphic {
+  &__graphic-pin {
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: 50%;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__graphic-pin.is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+}
