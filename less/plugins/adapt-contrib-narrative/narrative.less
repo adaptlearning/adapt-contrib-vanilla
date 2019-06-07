@@ -1,0 +1,46 @@
+.narrative {
+  &__content-title {
+    margin-bottom: @item-title-margin;
+    .item-title;
+  }
+
+  &__controls {
+    background-color: @item-color;
+    color: @item-color-inverted;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__progress {
+    background-color: @item-color;
+    border-radius: 50%;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      .transition(background-color @duration ease-in);
+    }
+  }
+
+  &__progress.is-selected {
+    background-color: @item-color-selected;
+  }
+
+  &__strapline-btn {
+    background-color: @item-color;
+    color: @item-color-inverted;
+    text-align: left;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+    }
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+}
