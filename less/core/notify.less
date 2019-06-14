@@ -6,7 +6,11 @@
 
   &__popup-inner {
     position: relative;
-    .l-container-padding(@block-padding-ver, @block-padding-hoz);
+    .l-container-padding(@notify-padding-ver, @notify-padding-hoz);
+  }
+
+  &__icon {
+    display: none;
   }
 
   &__title {
@@ -22,6 +26,57 @@
     margin-bottom: @notify-instruction-margin;
     .instruction-text;
   }
+
+  &__body a,
+  &__instruction a {
+    .link-text;
+    color: @notify-link;
+
+    .no-touch &:hover {
+      color: @notify-link-hover;
+      .transition(color @duration ease-in);
+    }
+  }
+
+  &__btn-container {
+    margin-top: @btn-margin;
+  }
+
+  &__btn.is-generic {
+    background-color: @notify-btn;
+    color: @notify-btn-inverted;
+
+    .no-touch &:not(.is-disabled):hover {
+      background-color: @notify-btn-hover;
+      color: @notify-btn-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__btn-icon {
+    margin: @btn-margin / 2;
+    padding: @btn-padding / 2;
+    background-color: transparent;
+    color: @notify-icon-inverted;
+    border-radius: 50%;
+
+    .no-touch &:hover {
+      background-color: @notify-icon-hover;
+      color: @notify-icon-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  // &__btn-icon {
+  //   background-color: @notify-icon;
+  //   color: @notify-icon-inverted;
+
+  //   .no-touch &:hover {
+  //     background-color: @notify-icon-hover;
+  //     color: @notify-icon-inverted-hover;
+  //     .transition(background-color @duration ease-in, color @duration ease-in;);
+  //   }
+  // }
 
   &__close-btn {
     position: absolute;
