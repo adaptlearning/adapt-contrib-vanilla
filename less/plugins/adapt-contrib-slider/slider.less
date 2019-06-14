@@ -1,0 +1,83 @@
+.slider {
+  // --------------------------------------------------
+  // Numbers
+  // --------------------------------------------------
+  &__number-container {
+    min-height: 2.5em;
+  }
+
+  &__number,
+  &__number-selection,
+  &__number-model-answer {
+    height: 2.5em;
+    width: 2.5em;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  &__number {
+    background-color: @item-color;
+    color: @item-color-inverted;
+  }
+
+  &__widget:not(.is-disabled) .slider__number {
+    cursor: pointer;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__number-selection {
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
+    z-index: 5;
+  }
+
+  &__number-model-answer {
+    z-index: 10;
+  }
+  // --------------------------------------------------
+
+  // --------------------------------------------------
+  // Scale
+  // --------------------------------------------------
+  &__scale-container {
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+    background-color: @black;
+  }
+
+  &__scale-notch {
+    background-color: @black;
+  }
+  // --------------------------------------------------
+
+  // --------------------------------------------------
+  // Slider bar
+  // --------------------------------------------------
+  &__item {
+    margin-bottom: 2em;
+  }
+  // --------------------------------------------------
+}
+
+// --------------------------------------------------
+// Rangeslider
+// --------------------------------------------------
+.rangeslider {
+  background-color: @disabled;
+
+  &--horizontal {
+    box-shadow: none;
+  }
+
+  &__fill {
+    background-color: @item-color;
+  }
+}
+// --------------------------------------------------
