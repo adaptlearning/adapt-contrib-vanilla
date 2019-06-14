@@ -3,12 +3,11 @@
     margin-top: @btn-margin;
   }
 
-  &-icon {
-
-  }
-
   &-text {
     .btn-text;
+  }
+
+  &-text.is-generic {
     background-color: @btn-color;
     color: @btn-color-inverted;
     border-radius: 5px;
@@ -20,7 +19,7 @@
     }
   }
 
-  &-text.is-disabled {
+  &-text.is-generic.is-disabled {
     background-color: @disabled;
     color: @disabled-inverted;
   }
