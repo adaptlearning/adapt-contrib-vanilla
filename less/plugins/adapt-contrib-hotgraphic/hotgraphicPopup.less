@@ -1,4 +1,40 @@
 .hotgraphic {
+  // --------------------------------------------------
+  // Increase toolbar padding top so the browser outline of the
+  // item title is not hidden by toolbar
+  // --------------------------------------------------
+  &__popup-inner.has-toolbar {
+    padding-top: (@icon-size + (@icon-padding * 2)) + (@item-padding / 2);
+  }
+  // --------------------------------------------------
+
+  &__popup-controls,
+  &__popup-close {
+    margin: @btn-margin / 2;
+    padding: @btn-padding / 2;
+    background-color: transparent;
+    color: @notify-icon-inverted;
+    border-radius: 50%;
+
+    .no-touch &:hover {
+      background-color: @notify-icon-hover;
+      color: @notify-icon-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  // &__popup-controls,
+  // &__popup-close {
+  //   background-color: @notify-icon;
+  //   color: @notify-icon-inverted;
+
+  //   .no-touch &:hover {
+  //     background-color: @notify-icon-hover;
+  //     color: @notify-icon-inverted-hover;
+  //     .transition(background-color @duration ease-in, color @duration ease-in;);
+  //   }
+  // }
+
   &__item-title {
     margin-bottom: @item-title-margin;
     .item-title;
