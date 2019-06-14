@@ -90,6 +90,87 @@
 
 
 
+
+
+
+
+// --------------------------------------------------
+//
+// --------------------------------------------------
+.keyframes(@name; @args) {
+  @keyframes @name { @args(); }
+}
+
+.animation(@args) {
+  animation: @args;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+//
+// --------------------------------------------------
+.effect-scalePulse() {
+
+  .keyframes(scalePulse; {
+    0% { transform: none; }
+    50% { transform: scale( 1.2, 1.2 ); }
+    100% { transform: none; }
+  });
+
+  .animation(scalePulse 0.5s 0s 1 normal ease-in-out none);
+
+}
+// --------------------------------------------------
+
+
+
+
+// @-webkit-keyframes scalePulse {
+// 	0% { -webkit-transform: none; }
+// 	50% { -webkit-transform: scale( 1.2, 1.2 ); }
+// 	100% { -webkit-transform: none; }
+// }
+
+// @keyframes scalePulse {
+// 	0% { transform: none; }
+// 	50% { transform: scale( 1.2, 1.2 ); }
+// 	100% { transform: none; }
+// }
+
+// .effect-scalePulse() {
+//   -webkit-animation-name: scalePulse;
+// 	-webkit-animation-duration: 0.6s;
+// 	-webkit-animation-delay: 0s;
+// 	-webkit-animation-iteration-count: 1;
+// 	-webkit-animation-direction: normal; // reverse / alternate / alternate-reverse
+// 	-webkit-animation-timing-function: ease-in-out;
+//   -webkit-animation-fill-mode: none; // forwards / backwards
+
+// 	animation-name: scalePulse;
+// 	animation-duration: 0.6s;
+// 	animation-delay: 0s;
+// 	animation-iteration-count: 1;
+// 	animation-direction: normal; // reverse / alternate / alternate-reverse
+// 	animation-timing-function: ease-in-out;
+//   animation-fill-mode: none; // forwards / backwards
+// }
+
+// --------------------------------------------------
+
+
+
+
+// // scalePulse - used in mcq.less and gmcq.less
+// // ==================================================
+
+
+
+
+
+
+
+
+
 // // ====================================================================================================
 // // Core Animations
 // // ====================================================================================================
@@ -173,27 +254,7 @@
 // 	animation-timing-function: ease-in-out;
 // }
 
-// // scalePulse - used in mcq.less and gmcq.less
-// // ==================================================
-// @-webkit-keyframes scalePulse {
-// 	0% { -webkit-transform: none; }
-// 	50% { -webkit-transform: scale(1.4,1.4); }
-// 	100% { -webkit-transform: none; }
-// }
 
-// @keyframes scalePulse {
-// 	0% { transform: none; }
-// 	50% { transform: scale(1.4,1.4); }
-// 	100% { transform: none; }
-// }
-
-// .effect-scalePulse () {
-// 	animation-name: scalePulse;
-// 	animation-duration: 0.6s;
-// 	animation-iteration-count: 1;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
 
 // // bounceDownTwice - used in page.less
 // // ==================================================
