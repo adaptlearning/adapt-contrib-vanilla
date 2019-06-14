@@ -5,10 +5,14 @@
     color: @item-color-inverted;
     border-radius: 5px;
 
-    .no-touch &:not(.is-disabled):hover {
+    .no-touch &:not(.is-disabled):not(.is-selected):hover {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+
+    .no-touch &:not(.is-disabled):not(.is-selected):hover .mcq__item-icon {
+      .effect-scalePulse;
     }
   }
 

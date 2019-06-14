@@ -19,7 +19,7 @@
     background-color: @item-color;
     border-radius: 50%;
 
-    .no-touch &:hover {
+    .no-touch &:not(.is-selected):hover {
       background-color: @item-color-hover;
       .transition(background-color @duration ease-in);
     }
@@ -30,9 +30,9 @@
   }
 
   &__strapline-btn {
+    text-align: left;
     background-color: @item-color;
     color: @item-color-inverted;
-    text-align: left;
 
     .no-touch &:hover {
       background-color: @item-color-hover;

@@ -14,7 +14,7 @@
     border-radius: 5px;
   }
 
-  .no-touch &__item-label:not(.is-disabled):hover .gmcq__item-option {
+  .no-touch &__item-label:not(.is-disabled):not(.is-selected):hover .gmcq__item-option {
     background-color: @item-color-hover;
     color: @item-color-inverted-hover;
     .transition(background-color @duration ease-in, color @duration ease-in;);

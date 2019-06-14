@@ -11,7 +11,7 @@
     background-color: @item-color;
     color: @item-color-inverted;
 
-    .no-touch &:hover {
+    .no-touch &:not(.is-selected):hover {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);

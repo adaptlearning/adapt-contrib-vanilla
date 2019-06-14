@@ -6,7 +6,7 @@
     background-color: @item-color;
     color: @item-color-inverted;
 
-    .no-touch &:not(.is-disabled):hover {
+    .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
@@ -46,21 +46,25 @@
     background-color: @item-color;
     border-bottom: 1px solid @item-color-hover;
     color: @item-color-inverted;
+
+    .no-touch &:not(:focus):not([aria-selected="true"]):hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
   }
 
   &__item {
-    .no-touch &:hover,
     &:focus,
-    &[aria-selected=true] {
+    &[aria-selected="true"] {
       // This code can be used to style a non-native dropdown as closely
       // as possible to the default browser settings
       // background-color: Highlight;
       // background-color: -webkit-focus-ring-color;
       // color: white;
 
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      background-color: @item-color-selected;
+      color: @item-color-inverted-selected;
     }
   }
 }
