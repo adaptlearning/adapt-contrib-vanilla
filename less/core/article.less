@@ -5,8 +5,8 @@
 
   &__title {
     margin-bottom: @article-title-margin;
-    color: @heading-color;
     .article-title;
+    color: @heading-color;
   }
 
   &__body {
@@ -16,5 +16,10 @@
   &__instruction {
     margin-bottom: @article-instruction-margin;
     .instruction-text;
+  }
+
+  &__body a,
+  &__instruction a {
+    .link-text;
   }
 }

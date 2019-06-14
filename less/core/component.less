@@ -1,8 +1,8 @@
 .component {
   &__title {
     margin-bottom: @component-title-margin;
-    color: @heading-color;
     .component-title;
+    color: @heading-color;
   }
 
   &__body {
@@ -12,5 +12,10 @@
   &__instruction {
     margin-bottom: @component-instruction-margin;
     .instruction-text;
+  }
+
+  &__body a,
+  &__instruction a {
+    .link-text;
   }
 }

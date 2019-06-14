@@ -5,8 +5,8 @@
 
   &__title {
     margin-bottom: @block-title-margin;
-    color: @heading-color;
     .block-title;
+    color: @heading-color;
   }
 
   &__body {
@@ -17,4 +17,18 @@
     margin-bottom: @block-instruction-margin;
     .instruction-text;
   }
+
+  &__body a,
+  &__instruction a {
+    .link-text;
+  }
+
+// --------------------------------------------------
+// Custom class added to block
+// Aligns child components centrally on the vertical axis
+// --------------------------------------------------
+  &.align-vert-center .component__container {
+    align-items: center;
+  }
+// --------------------------------------------------
 }
