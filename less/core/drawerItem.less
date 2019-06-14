@@ -1,0 +1,38 @@
+.drawer {
+  &__item-btn {
+    display: block;
+    padding: 1em;
+    background-color: @drawer-item;
+    border-bottom: 1px solid @drawer-item-hover;
+    color: @drawer-item-inverted;
+
+    .no-touch &:not(.is-disabled):hover {
+      background-color: @drawer-item-hover;
+      color: @drawer-item-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__item-btn.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__item-title {
+    .drawer-item-title;
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+
+  &__item-body {
+    .drawer-item-body;
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+}
