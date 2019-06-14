@@ -10,7 +10,54 @@
 .block,
 .component {
   &__title-inner {
-    display: inline-block;
+    display: inline;
     vertical-align: middle;
   }
 }
+
+.pagelevelprogress__indicator-inner {
+  background-color: @progress-inverted;
+}
+
+.pagelevelprogress__indicator {
+  border-color: @progress-border;
+}
+
+.pagelevelprogress__indicator-bar {
+  background-color: @progress;
+}
+
+// --------------------------------------------------
+// Nav
+// --------------------------------------------------
+.pagelevelprogress__nav-btn {
+  .pagelevelprogress__indicator-inner {
+    background-color: @nav-progress-inverted;
+  }
+
+  .pagelevelprogress__indicator {
+    border-color: @nav-progress-border;
+  }
+
+  .pagelevelprogress__indicator-bar {
+    background-color: @nav-progress;
+  }
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// --------------------------------------------------
+.pagelevelprogress__item-btn {
+  .pagelevelprogress__indicator-inner {
+    background-color: @drawer-progress-inverted;
+  }
+
+  .pagelevelprogress__indicator {
+    border-color: @drawer-progress-border;
+  }
+
+  .pagelevelprogress__indicator-bar {
+    background-color: @drawer-progress;
+  }
+}
+// --------------------------------------------------
