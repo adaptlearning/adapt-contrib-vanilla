@@ -1,5 +1,7 @@
 // --------------------------------------------------
-//
+// Smooths the font on the pixel level rather than the subpixel.
+// Switching from subpixel rendering to antialiasing for
+// light text on dark backgrounds makes it look lighter.
 // --------------------------------------------------
 .font-smoothing() {
   -webkit-font-smoothing: antialiased;
@@ -12,6 +14,8 @@
 // --------------------------------------------------
 body {
   .font-smoothing;
+  // color: @font-color;
+  color: @font-color;
   font-family: @body-family;
   font-size: @body-size;
   font-weight: @body-weight;
@@ -38,10 +42,23 @@ body {
   font-weight: @btn-weight;
   line-height: @btn-line-height;
 }
+
+.link-text() {
+  color: @link;
+  font-family: @link-family;
+  font-size: @link-size;
+  font-weight: @link-weight;
+  line-height: @link-line-height;
+
+  .no-touch &:hover {
+    color: @link-hover;
+    .transition(color @duration ease-in);
+  }
+}
 // --------------------------------------------------
 
 // --------------------------------------------------
-//
+// Menu header
 // --------------------------------------------------
 .menu-title() {
   font-family: @menu-title-family;
@@ -74,7 +91,7 @@ body {
 // --------------------------------------------------
 
 // --------------------------------------------------
-//
+// Menu item
 // --------------------------------------------------
 .menu-item-title() {
   font-family: @menu-item-title-family;
@@ -92,7 +109,7 @@ body {
 // --------------------------------------------------
 
 // --------------------------------------------------
-//
+// Page header
 // --------------------------------------------------
 .page-title() {
   font-family: @page-title-family;
@@ -125,7 +142,7 @@ body {
 // --------------------------------------------------
 
 // --------------------------------------------------
-//
+// Page
 // --------------------------------------------------
 .article-title() {
   font-family: @article-title-family;
@@ -165,6 +182,34 @@ body {
   line-height: @item-title-line-height;
 }
 // --------------------------------------------------
+
+
+
+// --------------------------------------------------
+// Drawer
+// --------------------------------------------------
+.drawer-item-title() {
+  font-family: @drawer-item-title-family;
+  font-size: @drawer-item-title-size;
+  font-weight: @drawer-item-title-weight;
+  line-height: @drawer-item-title-line-height;
+}
+
+.drawer-item-body() {
+  font-family: @drawer-item-body-family;
+  font-size: @drawer-item-body-size;
+  font-weight: @drawer-item-body-weight;
+  line-height: @drawer-item-body-line-height;
+}
+
+.resources-filter-btn() {
+  font-family: @resources-filter-btn-family;
+  font-size: @resources-filter-btn-size;
+  font-weight: @resources-filter-btn-weight;
+  line-height: @resources-filter-btn-line-height;
+}
+// --------------------------------------------------
+
 
 
 
