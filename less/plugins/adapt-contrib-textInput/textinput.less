@@ -12,6 +12,16 @@
     }
   }
 
+  &__widget.is-disabled .textinput__item-textbox {
+    background-color: @disabled;
+    border-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__widget.is-disabled .textinput__item-icon {
+    color: @disabled-inverted;
+  }
+
   &__item-state {
     position: absolute;
     top: 50%;
