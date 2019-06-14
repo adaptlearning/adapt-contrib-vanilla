@@ -1,30 +1,31 @@
 // --------------------------------------------------
 // Colour definitions
 // --------------------------------------------------
-
-// blue: #36CDE8
-// grey: #
-
 @red: #ff0000;
 @green: #065f28;
+
+@blue: #36CDE8;
+@blueDark: #263944;
+@grey: #9096A0;
+@greyDark: #4D4D4D;
 // --------------------------------------------------
 
 // --------------------------------------------------
 // Colour variables
 // --------------------------------------------------
-@primary: orange;
+@primary: @blue;
 @primary-inverted: @white;
 
-@secondary: blue;
+@secondary: @blue;
 @secondary-inverted: @white;
 
-@tertiary: red;
+@tertiary: @grey;
 @tertiary-inverted: @white;
 
-@quaternary: green;
+@quaternary: @blue;
 @quaternary-inverted: @white;
 
-@quinary: salmon;
+@quinary: @blueDark;
 @quinary-inverted: @white;
 
 @visited: #727272;
@@ -52,10 +53,16 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
-// Fonts
+// Body and link colour
 // --------------------------------------------------
-@font-color: @black;
+@font-color: @greyDark;
 @font-color-inverted: @white;
+
+@link: @greyDark;
+@link-inverted: @white;
+
+@link-hover: @link;
+@link-hover-inverted: @link-inverted;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -95,6 +102,15 @@
 // @btn-ui-color-inverted: ;
 // --------------------------------------------------
 
+
+// --------------------------------------------------
+// Progress
+// --------------------------------------------------
+@progress: @tertiary;
+@progress-inverted: @tertiary-inverted;
+@progress-border: @tertiary;
+// --------------------------------------------------
+
 // --------------------------------------------------
 // Navigation
 // --------------------------------------------------
@@ -107,9 +123,9 @@
 @nav-icon-hover: darken(@nav-icon, 10%);
 @nav-icon-inverted-hover: @nav-icon-inverted;
 
-@nav-progress: @primary;
-@nav-progress-inverted: @primary-inverted;
-@nav-progress-border: @primary;
+@nav-progress: @tertiary;
+@nav-progress-inverted: @tertiary-inverted;
+@nav-progress-border: @tertiary;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -117,15 +133,51 @@
 // --------------------------------------------------
 @notify: @quaternary;
 @notify-inverted: @quaternary-inverted;
+
+@notify-link: @quaternary-inverted;
+@notify-link-inverted: @quaternary;
+
+@notify-link-hover: @notify-link;
+@notify-link-inverted-hover: @notify-link-inverted;
+
+@notify-btn: @secondary-inverted;
+@notify-btn-inverted: @secondary;
+
+@notify-btn-hover: darken(@notify-btn, 10%);
+@notify-btn-inverted-hover: @notify-btn-inverted;
+
+@notify-icon: @secondary;
+@notify-icon-inverted: @secondary-inverted;
+
+@notify-icon-hover: darken(@notify-icon, 10%);
+@notify-icon-inverted-hover: @notify-icon-inverted;
 // --------------------------------------------------
 
 // --------------------------------------------------
 // Drawer
 // --------------------------------------------------
-// @drawer: @quinary;
-// @drawer-inverted: @quinary-inverted;
-// --------------------------------------------------
+@drawer: @quinary;
+@drawer-inverted: @quinary-inverted;
 
+@drawer-icon: @quinary;
+@drawer-icon-inverted: @quinary-inverted;
+
+@drawer-icon-hover: darken(@drawer-icon, 10%);
+@drawer-icon-inverted-hover: @drawer-icon-inverted;
+
+@drawer-item: @quinary;
+@drawer-item-inverted: @quinary-inverted;
+
+@drawer-item-hover: darken(@drawer-item, 10%);
+@drawer-item-inverted-hover: @drawer-item-inverted;
+
+@drawer-item-selected: darken(@drawer-item, 20%);
+@drawer-item-inverted-selected: @drawer-item-inverted;
+
+@drawer-progress: @quinary-inverted;
+@drawer-progress-inverted: @quinary;
+@drawer-progress-border: @quinary-inverted;
+// --------------------------------------------------
 
 
 
