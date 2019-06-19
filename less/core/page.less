@@ -1,7 +1,13 @@
 .page {
   .l-container-padding(@page-padding-ver, @page-padding-hoz);
 
-  &__header {
+  &__header.has-bg-image {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__header-inner {
     .l-container-padding(@page-header-padding-ver, @page-header-padding-hoz);
   }
 
