@@ -1,71 +1,86 @@
 {
-  "type":"object",
+  "type": "object",
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://jsonschema.net",
   "$ref": "http://localhost/plugins/content/theme/model.schema",
-  "properties":{
+  "properties": {
     "variables": {
       "_colors": {
         "type": "object",
         "required": false,
         "title": "Colours",
         "properties": {
-          "primary-color": {
+          "primary": {
             "title": "Primary",
             "help": "This is the primary colour used to style the course, and is applied to component items and pop-up notifications.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#078292"
           },
-          "primary-color-inverted": {
+          "primary-inverted": {
             "title": "Primary Inverted",
             "help": "This is the inverted primary colour, and is applied to text that is displayed on elements coloured with primary.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#ffffff"
           },
-          "secondary-color": {
+          "secondary": {
             "title": "Secondary",
             "help": "This is the secondary colour used to style the course, and is applied to buttons.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#4b4e4f"
           },
-          "secondary-color-inverted": {
+          "secondary-inverted": {
             "title": "Secondary Inverted",
             "help": "This is the inverted secondary colour, and is applied to text that is displayed on elements coloured with secondary.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#ffffff"
           },
-          "tertiary-color": {
+          "tertiary": {
             "title": "Tertiary",
             "help": "This is the tertiary colour used to style the course, and is applied to the navigation bar.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#ffffff"
           },
-          "tertiary-color-inverted": {
+          "tertiary-inverted": {
             "title": "Tertiary Inverted",
             "help": "This is the inverted tertiary colour, and is applied to text that is displayed on elements coloured with tertiary.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#4b4e4f"
           },
-          "quaternary-color": {
+          "quaternary": {
             "title": "Quaternary",
             "help": "This is the quaternary colour used to style the course, and is applied to the drawer.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#37474f"
           },
-          "quaternary-color-inverted": {
+          "quaternary-inverted": {
             "title": "Quaternary Inverted",
             "help": "This is the inverted quaternary colour, and is applied to text that is displayed on elements coloured with quaternary.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#ffffff"
           },
+          "quinary": {
+            "title": "Quinary",
+            "help": "This is the quinary colour used to style the course, and is applied to the drawer.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#37474f"
+          },
+          "quinary-inverted": {
+            "title": "Quinary Inverted",
+            "help": "This is the inverted quinary colour, and is applied to text that is displayed on elements coloured with quinary.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
+
           "foreground-color": {
             "title": "Foreground",
             "help": "This is the foreground colour, and is applied to all body text.",
@@ -123,6 +138,198 @@
             "default": "#cccccc"
           }
         }
+      }
+    },
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {},
+        "course": {},
+        "contentobject": {
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "_pageHeader": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Page Header",
+                  "properties": {
+                    "_backgroundImage": {
+                      "type": "object",
+                      "required": false,
+                      "title": "Page header background image",
+                      "properties": {
+                        "_large": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Large background image - used on desktop"
+                        },
+                        "_medium": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Medium background image - used on tablet"
+                        },
+                        "_small": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Small background image - used on mobile"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "article": {
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "type": "object",
+                "required": false,
+                "title": "Page Header",
+                "properties": {
+                  "_backgroundImage": {
+                    "type": "object",
+                    "required": false,
+                    "title": "Page header background image",
+                    "properties": {
+                      "_large": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Asset:image",
+                        "validators": [],
+                        "help": "Large background image - used on desktop"
+                      },
+                      "_medium": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Asset:image",
+                        "validators": [],
+                        "help": "Medium background image - used on tablet"
+                      },
+                      "_small": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Asset:image",
+                        "validators": [],
+                        "help": "Small background image - used on mobile"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "block": {
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "type": "object",
+                "required": false,
+                "title": "Page Header",
+                "properties": {
+                  "_backgroundImage": {
+                    "type": "object",
+                    "required": false,
+                    "title": "Page header background image",
+                    "properties": {
+                      "_large": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Asset:image",
+                        "validators": [],
+                        "help": "Large background image - used on desktop"
+                      },
+                      "_medium": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Asset:image",
+                        "validators": [],
+                        "help": "Medium background image - used on tablet"
+                      },
+                      "_small": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Asset:image",
+                        "validators": [],
+                        "help": "Small background image - used on mobile"
+                      }
+                    }
+                  }
+                },
+                "_minimumHeights": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Minimum height",
+                  "properties": {
+                    "_large": {
+                      "type": "number",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Number",
+                      "validators": ["number"],
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Number",
+                      "validators": ["number"],
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                    },
+                    "_small": {
+                      "type": "number",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Number",
+                      "validators": ["number"],
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                    }
+                  }
+                },
+                "_isDividerBlock": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": false,
+                  "title": "Divider block?",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "If enabled, applies a divider class to the block"
+                }
+              }
+            }
+          }
+        },
+        "component": {}
       }
     }
   }

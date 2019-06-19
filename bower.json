@@ -1,13 +1,13 @@
 {
   "name": "adapt-contrib-vanilla",
   "version": "4.1.0",
-  "framework": ">=4",
+  "framework": ">=5",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
   "issues": "https://github.com/adaptlearning/adapt_framework/issues/new",
   "displayName": "Vanilla",
   "theme": "vanilla",
   "description": "A core bundled theme",
-  "main": "js/vanilla.js",
+  "main": "js/theme.js",
   "keywords": [
     "adapt-plugin",
     "adapt-theme"
@@ -19,5 +19,6 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "_targetAttribute": "_vanilla"
 }
