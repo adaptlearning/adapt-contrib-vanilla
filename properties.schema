@@ -188,6 +188,37 @@
                           "help": "Small background image - used on mobile"
                         }
                       }
+                    },
+                    "_minimumHeights": {
+                      "type": "object",
+                      "required": false,
+                      "title": "Minimum height",
+                      "properties": {
+                        "_large": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                        },
+                        "_medium": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                        },
+                        "_small": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                        }
+                      }
                     }
                   }
                 }
@@ -234,6 +265,37 @@
                         "inputType": "Asset:image",
                         "validators": [],
                         "help": "Small background image - used on mobile"
+                      }
+                    }
+                  },
+                  "_minimumHeights": {
+                    "type": "object",
+                    "required": false,
+                    "title": "Minimum height",
+                    "properties": {
+                      "_large": {
+                        "type": "number",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Number",
+                        "validators": ["number"],
+                        "help": "Minimum height should only be used in instances where the article height needs to be greater than the content e.g. to prevent a background image being cropped"
+                      },
+                      "_medium": {
+                        "type": "number",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Number",
+                        "validators": ["number"],
+                        "help": "Minimum height should only be used in instances where the article height needs to be greater than the content e.g. to prevent a background image being cropped"
+                      },
+                      "_small": {
+                        "type": "number",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Number",
+                        "validators": ["number"],
+                        "help": "Minimum height should only be used in instances where the article height needs to be greater than the content e.g. to prevent a background image being cropped"
                       }
                     }
                   }

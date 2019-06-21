@@ -8,10 +8,10 @@ define([
     className: function() {},
 
     setCustomStyles: function() {
-      this.processHeaderAndFooter();
+      this.processHeader();
     },
 
-    processHeaderAndFooter: function() {
+    processHeader: function() {
       var header = this.model.get('_pageHeader');
       var $header = this.$('.page__header');
 
