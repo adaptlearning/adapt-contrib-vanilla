@@ -1,0 +1,78 @@
+.hotgrid {
+  &__item-btn {
+    position: relative;
+  }
+
+  &__item-btn.is-round .hotgrid__item-title {
+    margin-top: @item-margin;
+  }
+
+  &__item-btn-inner {
+    margin: @item-margin;
+  }
+
+  &__item-title {
+    padding: @item-padding;
+    .item-title;
+  }
+
+  &__item-icon {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    .transform(translateX(-50%));
+    border-radius: 50%;
+  }
+
+  // --------------------------------------------------
+  // Hotgrid item theme
+  // --------------------------------------------------
+  &__item-btn {
+    .hotgrid__item-title,
+    .hotgrid__item-icon {
+      background-color: @item-color;
+      color: @item-color-inverted;
+    }
+
+    .no-touch &:hover {
+      .hotgrid__item-title,
+      .hotgrid__item-icon {
+        background-color: @item-color-hover;
+        color: @item-color-inverted-hover;
+        .transition(background-color @duration ease-in, color @duration ease-in;);
+      }
+    }
+  }
+
+  &__item-btn.is-visited {
+    .hotgrid__item-title,
+    .hotgrid__item-icon {
+      background-color: @visited;
+      color: @visited-inverted;
+    }
+  }
+  // --------------------------------------------------
+
+  // --------------------------------------------------
+  // Hotgrid CSS border states
+  // --------------------------------------------------
+  &__item-btn.is-css {
+    .hotgrid__item-image {
+      border: 3px solid @item-color;
+    }
+
+    .no-touch &:hover {
+      .hotgrid__item-image {
+        border-color: @item-color-hover;
+        .transition(border-color @duration ease-in);
+      }
+    }
+  }
+
+  &__item-btn.is-visited.is-css {
+    .hotgrid__item-image {
+      border-color: @visited;
+    }
+  }
+  // --------------------------------------------------
+}
