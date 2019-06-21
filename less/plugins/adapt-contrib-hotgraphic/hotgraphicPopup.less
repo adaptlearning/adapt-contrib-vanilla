@@ -1,15 +1,15 @@
-.hotgraphic {
+.hotgraphic-popup {
   // --------------------------------------------------
   // Increase toolbar padding top so the browser outline of the
   // item title is not hidden by toolbar
   // --------------------------------------------------
-  &__popup-inner.has-toolbar {
+  &__inner.has-toolbar {
     padding-top: (@icon-size + (@icon-padding * 2)) + (@item-padding / 2);
   }
   // --------------------------------------------------
 
-  &__popup-controls,
-  &__popup-close {
+  &__controls,
+  &__close {
     margin: @btn-margin / 2;
     padding: @btn-padding / 2;
     background-color: transparent;
@@ -23,8 +23,8 @@
     }
   }
 
-  // &__popup-controls,
-  // &__popup-close {
+  // &__controls,
+  // &__close {
   //   background-color: @notify-icon;
   //   color: @notify-icon-inverted;
 
