@@ -1,0 +1,20 @@
+.glossary {
+  &__checkbox-container {
+    padding: @item-padding;
+  }
+
+  &__checkbox-input,
+  &__checkbox-label {
+    vertical-align: middle;
+  }
+
+  &__checkbox-label {
+    margin-left: @item-margin;
+    color: @drawer-item-inverted;
+
+    .dir-rtl &  {
+      margin-left: inherit;
+      margin-right: @item-margin;
+    }
+  }
+}
