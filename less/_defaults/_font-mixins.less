@@ -14,12 +14,11 @@
 // --------------------------------------------------
 body {
   .font-smoothing;
-  // color: @font-color;
-  color: @font-color;
   font-family: @body-family;
   font-size: @body-size;
   font-weight: @body-weight;
   line-height: @body-line-height;
+  color: @font-color;
 
   // p {
   //   // Override base.less <p> tag margin
@@ -27,6 +26,25 @@ body {
   //   margin-bottom: 0;
   // }
 }
+
+// html {
+// 	// preserve HTML font-size (iPhone orientation change)
+// 	-ms-text-size-adjust: 100%;
+// 	-webkit-text-size-adjust: 100%;
+// }
+
+// select {
+// 	font-family: @body-text-font-family;
+// 	font-size: @body-text-font-size;
+// 	font-weight: @body-text-font-weight;
+// 	line-height: @body-text-line-height;
+// }
+
+// button::-moz-focus-inner {
+// 	border: 0;
+// 	padding: 0;
+// }
+
 
 .instruction-text() {
   font-family: @instruction-family;
@@ -44,11 +62,11 @@ body {
 }
 
 .link-text() {
-  color: @link;
   font-family: @link-family;
   font-size: @link-size;
   font-weight: @link-weight;
   line-height: @link-line-height;
+  color: @link;
 
   .no-touch &:hover {
     color: @link-hover;
@@ -222,179 +240,3 @@ body {
   line-height: @pull-quote-body-line-height;
 }
 // --------------------------------------------------
-
-
-// // Variable set font styling
-// // ==================================================
-// body {
-// 	.font-smoothing;
-// 	color: @font-body-color;
-// 	font-family: @body-text-font-family;
-// 	font-size: @body-text-font-size;
-// 	font-weight: @body-text-font-weight;
-// 	line-height: @body-text-line-height;
-
-// 	.ie8 & {
-// 		font-family: Arial, sans-serif;
-// 	}
-// }
-
-
-
-// .button-text {
-// 	.font-smoothing;
-// 	font-family: @button-text-font-family;
-// 	font-size: @button-text-font-size;
-// 	font-weight: @button-text-font-weight;
-// 	line-height: @button-text-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @button-text-font-size * 0.85;
-// 	}
-// }
-
-// // Menu
-// // ==================================================
-// .menu-title {
-// 	.font-smoothing;
-// 	font-family: @menu-title-font-family;
-// 	font-size: @menu-title-font-size;
-// 	font-weight: @menu-title-font-weight;
-// 	line-height: @menu-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @menu-title-font-size * 0.85;
-// 	}
-// }
-
-// .menu-item-title {
-// 	.font-smoothing;
-// 	font-family: @menu-item-title-font-family;
-// 	font-size: @menu-item-title-font-size;
-// 	font-weight: @menu-item-title-font-weight;
-// 	line-height: @menu-item-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @menu-item-title-font-size * 0.85;
-// 	}
-// }
-
-// // Page header
-// // ==================================================
-// .page-title {
-// 	.font-smoothing;
-// 	font-family: @page-title-font-family;
-// 	font-size: @page-title-font-size;
-// 	font-weight: @page-title-font-weight;
-// 	line-height: @page-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @page-title-font-size * 0.85;
-// 	}
-// }
-
-// .page-body {
-// 	.font-smoothing;
-// 	font-family: @page-body-font-family;
-// 	font-size: @page-body-font-size;
-// 	font-weight: @page-body-font-weight;
-// 	line-height: @page-body-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @page-body-font-size * 0.8;
-// 	}
-// }
-
-// // Page
-// // ==================================================
-// .article-title {
-// 	.font-smoothing;
-// 	font-family: @article-title-font-family;
-// 	font-size: @article-title-font-size;
-// 	font-weight: @article-title-font-weight;
-// 	line-height: @article-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @article-title-font-size * 0.85;
-// 	}
-// }
-
-// .block-title {
-// 	.font-smoothing;
-// 	font-family: @block-title-font-family;
-// 	font-size: @block-title-font-size;
-// 	font-weight: @block-title-font-weight;
-// 	line-height: @block-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @block-title-font-size * 0.85;
-// 	}
-// }
-
-// .component-title {
-// 	.font-smoothing;
-// 	font-family: @component-title-font-family;
-// 	font-size: @component-title-font-size;
-// 	font-weight: @component-title-font-weight;
-// 	line-height: @component-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @component-title-font-size * 0.85;
-// 	}
-// }
-
-// .notify-popup-title {
-// 	.font-smoothing;
-// 	font-family: @notify-title-font-family;
-// 	font-size: @notify-title-font-size;
-// 	font-weight: @notify-title-font-weight;
-// 	line-height: @notify-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @notify-title-font-size * 0.85;
-// 	}
-// }
-
-// // Misc
-// // ==================================================
-// .item-title {
-// 	.font-smoothing;
-// 	font-family: @item-title-font-family;
-// 	font-size: @item-title-font-size;
-// 	font-weight: @item-title-font-weight;
-// 	line-height: @item-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @item-title-font-size * 0.85;
-// 	}
-// }
-
-// .sub-title {
-// 	.font-smoothing;
-// 	font-family: @sub-title-font-family;
-// 	font-size: @sub-title-font-size;
-// 	font-weight: @sub-title-font-weight;
-// 	line-height: @sub-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @sub-title-font-size * 0.85;
-// 	}
-// }
-
-// .mcq-item {
-// 	// mirror item title line-height
-// 	.mcq-item-inner {
-// 		line-height: (@item-title-font-size * 0.85) * @item-title-line-height;
-// 	}
-// }
-
-// .drawer-title {
-// 	font-family: @drawer-title-font-family;
-// 	font-size: @drawer-title-font-size;
-// 	font-weight: @drawer-title-font-weight;
-// 	line-height: @drawer-title-line-height;
-
-// 	@media (max-width: @device-width-small) {
-// 		font-size: @drawer-title-font-size * 0.85;
-// 	}
-// }
