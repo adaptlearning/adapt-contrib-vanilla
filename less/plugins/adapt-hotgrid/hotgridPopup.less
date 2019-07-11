@@ -36,7 +36,21 @@
   // }
 
   &__item-title {
-    margin-bottom: @item-title-margin;
+    margin-bottom: @notify-title-margin;
     .item-title;
+  }
+
+  &__item-body {
+    margin-bottom: @notify-body-margin;
+  }
+
+  &__item-body a {
+    .link-text;
+    color: @notify-link;
+
+    .no-touch &:hover {
+      color: @notify-link-hover;
+      .transition(color @duration ease-in);
+    }
   }
 }
