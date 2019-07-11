@@ -46,20 +46,22 @@
   // --------------------------------------------------
   // Animated list
   // --------------------------------------------------
-  &__container.is-animated-list {
-    overflow: hidden;
-  }
+  html:not(.touch) & {
+    .list__container.is-animated-list {
+      overflow: hidden;
+    }
 
-  &__container.is-animated-list .list__item {
-    position: relative;
-    right: -100%;
-    opacity: 0;
-    .transition(all .8s ease-in-out);
-  }
+    .list__container.is-animated-list .list__item {
+      position: relative;
+      right: -100%;
+      opacity: 0;
+      .transition(all .8s ease-in-out);
+    }
 
-  &__container.is-animated-list .list__item.is-animating {
-    right: 0;
-    opacity: 1;
+    .list__container.is-animated-list .list__item.is-animating {
+      right: 0;
+      opacity: 1;
+    }
   }
   // --------------------------------------------------
 
