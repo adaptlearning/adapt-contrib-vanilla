@@ -1,7 +1,7 @@
 .boxmenu-item {
   &__inner {
     padding: @item-padding;
-    border: 0.063em solid @disabled;
+    border: 1px solid @disabled;
     border-radius: 5px;
 
     @media (min-width: @device-width-medium) {
@@ -10,7 +10,7 @@
   }
 
   &__image-container {
-    margin-bottom: 1em;
+    margin-bottom: @menu-item-image-margin;
   }
 
   &__title {
@@ -27,10 +27,10 @@
   }
 
   &__duration {
-    margin-bottom: 1em;
+    margin-bottom: @menu-item-duration-margin;
   }
 
   &__progress {
-    margin-bottom: 1em;
+    margin-bottom: @menu-item-progress-margin;
   }
 }
