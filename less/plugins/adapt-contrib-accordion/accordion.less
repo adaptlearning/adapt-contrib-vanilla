@@ -6,7 +6,7 @@
   &__item-btn {
     position: relative;
     padding: @item-padding;
-    padding-left: @icon-size + (@item-padding * 2);
+    padding-right: @icon-size + (@item-padding * 2);
     text-align: left;
     background-color: @item-color;
     color: @item-color-inverted;
@@ -18,8 +18,8 @@
     }
 
     .dir-rtl & {
-      padding-left: @item-padding;
-      padding-right: @icon-size + (@item-padding * 2);
+      padding-right: @item-padding;
+      padding-left: @icon-size + (@item-padding * 2);
       text-align: right;
     }
   }
@@ -37,12 +37,12 @@
   &__item-icon {
     position: absolute;
     top: 50%;
-    left: @item-padding;
+    right: @item-padding;
     .transform(translateY(-50%));
 
     .dir-rtl & {
-      left: inherit;
-      right: @item-padding;
+      right: inherit;
+      left: @item-padding;
     }
   }
 
