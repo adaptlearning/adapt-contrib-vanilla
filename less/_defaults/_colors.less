@@ -1,9 +1,6 @@
 // --------------------------------------------------
 // Colour definitions
 // --------------------------------------------------
-@green: #065f28;
-@red: #ff0000;
-
 @blue: #36CDE8;
 @blueDark: #263944;
 @grey: #9096A0;
@@ -11,59 +8,10 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
-// Colour variables
-// --------------------------------------------------
-@primary: @blue;
-@primary-inverted: @white;
-
-@secondary: @blue;
-@secondary-inverted: @white;
-
-@tertiary: @grey;
-@tertiary-inverted: @white;
-
-@quaternary: @blue;
-@quaternary-inverted: @white;
-
-@quinary: @blueDark;
-@quinary-inverted: @white;
-
-@visited: #727272;
-@visited-inverted: @white;
-
-@disabled: #DDDDDD;
-@disabled-inverted: @black;
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Background
-// --------------------------------------------------
-@background: @black;
-@background-inverted: @white;
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Shadow
-// --------------------------------------------------
-@shadow: @black;
-@shadow-inverted: @white;
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Validation states
-// --------------------------------------------------
-@validation-success: @green;
-@validation-success-inverted: @white;
-
-@validation-error: @red;
-@validation-error-inverted: @white;
-// --------------------------------------------------
-
-// --------------------------------------------------
 // Headings
 // --------------------------------------------------
-@heading-color: @primary;
-@heading-color-inverted: @primary-inverted;
+@heading-color: @blue;
+@heading-color-inverted: @white;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -80,10 +28,10 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
-// Item
+// Items - components
 // --------------------------------------------------
-@item-color: @primary;
-@item-color-inverted: @primary-inverted;
+@item-color: @blue;
+@item-color-inverted: @white;
 
 @item-color-hover: darken(@item-color, 10%);
 @item-color-inverted-hover: @item-color-inverted;
@@ -93,60 +41,84 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
-// Button
+// Buttons
 // --------------------------------------------------
-@btn-color: @secondary;
-@btn-color-inverted: @secondary-inverted;
+@btn-color: @greyDark;
+@btn-color-inverted: @white;
 
 @btn-color-hover: darken(@btn-color, 10%);
 @btn-color-inverted-hover: @btn-color-inverted;
 // --------------------------------------------------
 
 // --------------------------------------------------
+// Disabled - question components
+// --------------------------------------------------
+@disabled: #DDDDDD;
+@disabled-inverted: @black;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Visited - presentation components
+// --------------------------------------------------
+@visited: #727272;
+@visited-inverted: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Validation states - question marking
+// --------------------------------------------------
+@validation-success: #065f28;
+@validation-success-inverted: @white;
+
+@validation-error: #ff0000;
+@validation-error-inverted: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
 // Progress
 // --------------------------------------------------
-@progress: @tertiary;
-@progress-inverted: @tertiary-inverted;
-@progress-border: @tertiary;
+@progress: @grey;
+@progress-inverted: @white;
+@progress-border: @grey;
 // --------------------------------------------------
 
 // --------------------------------------------------
 // Navigation
 // --------------------------------------------------
-@nav: @tertiary;
-@nav-inverted: @tertiary-inverted;
+@nav: @grey;
+@nav-inverted: @white;
 
-@nav-icon: @tertiary-inverted;
-@nav-icon-inverted: @tertiary;
+@nav-icon: @nav-inverted;
+@nav-icon-inverted: @nav;
 
 @nav-icon-hover: darken(@nav-icon, 10%);
 @nav-icon-inverted-hover: @nav-icon-inverted;
 
-@nav-progress: @tertiary;
-@nav-progress-inverted: @tertiary-inverted;
-@nav-progress-border: @tertiary;
+@nav-progress: @grey;
+@nav-progress-inverted: @white;
+@nav-progress-border: @grey;
 // --------------------------------------------------
 
 // --------------------------------------------------
 // Notify
 // --------------------------------------------------
-@notify: @quaternary;
-@notify-inverted: @quaternary-inverted;
+@notify: @blue;
+@notify-inverted: @white;
 
-@notify-link: @quaternary-inverted;
-@notify-link-inverted: @quaternary;
+@notify-link: @notify-inverted;
+@notify-link-inverted: @notify;
 
 @notify-link-hover: @notify-link;
 @notify-link-inverted-hover: @notify-link-inverted;
 
-@notify-btn: @secondary-inverted;
-@notify-btn-inverted: @secondary;
+@notify-btn: @btn-color-inverted;
+@notify-btn-inverted: @btn-color;
 
 @notify-btn-hover: darken(@notify-btn, 10%);
 @notify-btn-inverted-hover: @notify-btn-inverted;
 
-@notify-icon: @secondary;
-@notify-icon-inverted: @secondary-inverted;
+@notify-icon: @btn-color;
+@notify-icon-inverted: @btn-color-inverted;
 
 @notify-icon-hover: darken(@notify-icon, 10%);
 @notify-icon-inverted-hover: @notify-icon-inverted;
@@ -155,23 +127,23 @@
 // --------------------------------------------------
 // Drawer
 // --------------------------------------------------
-@drawer: @quinary;
-@drawer-inverted: @quinary-inverted;
+@drawer: @blueDark;
+@drawer-inverted: @white;
 
-@drawer-link: @quinary-inverted;
-@drawer-link-inverted: @quinary;
+@drawer-link: @drawer-inverted;
+@drawer-link-inverted: @drawer;
 
 @drawer-link-hover: @drawer-link;
 @drawer-link-inverted-hover: @drawer-link-inverted;
 
-@drawer-icon: @quinary;
-@drawer-icon-inverted: @quinary-inverted;
+@drawer-icon: @drawer;
+@drawer-icon-inverted: @drawer-inverted;
 
 @drawer-icon-hover: darken(@drawer-icon, 10%);
 @drawer-icon-inverted-hover: @drawer-icon-inverted;
 
-@drawer-item: @quinary;
-@drawer-item-inverted: @quinary-inverted;
+@drawer-item: @drawer;
+@drawer-item-inverted: @drawer-inverted;
 
 @drawer-item-hover: darken(@drawer-item, 10%);
 @drawer-item-inverted-hover: @drawer-item-inverted;
@@ -179,9 +151,23 @@
 @drawer-item-selected: darken(@drawer-item, 20%);
 @drawer-item-inverted-selected: @drawer-item-inverted;
 
-@drawer-progress: @quinary-inverted;
-@drawer-progress-inverted: @quinary;
-@drawer-progress-border: @quinary-inverted;
+@drawer-progress: @white;
+@drawer-progress-inverted: @blueDark;
+@drawer-progress-border: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Background
+// --------------------------------------------------
+@background: @black;
+@background-inverted: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Shadow
+// --------------------------------------------------
+@shadow: @black;
+@shadow-inverted: @white;
 // --------------------------------------------------
 
 
