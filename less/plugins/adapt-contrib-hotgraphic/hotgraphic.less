@@ -1,5 +1,5 @@
 .hotgraphic {
-  &__graphic-pin {
+  &__pin:not(.has-pin-image) {
     background-color: @item-color;
     color: @item-color-inverted;
     border-radius: 50%;
@@ -11,7 +11,7 @@
     }
   }
 
-  &__graphic-pin.is-visited {
+  &__pin:not(.has-pin-image).is-visited {
     background-color: @visited;
     color: @visited-inverted;
   }
