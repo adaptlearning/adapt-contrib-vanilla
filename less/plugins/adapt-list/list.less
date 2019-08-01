@@ -46,19 +46,17 @@
   // --------------------------------------------------
   // Animated list
   // --------------------------------------------------
-  html:not(.touch) & {
-    .list__container.is-animated-list {
-      overflow: hidden;
-    }
+  html:not(.touch) &.is-animated-list {
+    overflow: hidden;
 
-    .list__container.is-animated-list .list__item {
+    .list__container .list__item {
       position: relative;
       right: -100%;
       opacity: 0;
       .transition(all .8s ease-in-out);
     }
 
-    .list__container.is-animated-list .list__item.is-animating {
+    .list__container .list__item.is-animating {
       right: 0;
       opacity: 1;
     }
