@@ -1,6 +1,10 @@
 .nav {
   background-color: @nav;
 
+  &__inner {
+    max-width: inherit;
+  }
+
   &__btn {
     background-color: @nav-icon;
     color: @nav-icon-inverted;
@@ -13,6 +17,6 @@
   }
 
   .hide-nav-back-btn &__back-btn {
-    display: none;
+    .u-display-none;
   }
 }
