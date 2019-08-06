@@ -16,6 +16,15 @@
   &__title {
     margin-bottom: @notify-title-margin;
     .notify-title;
+
+    @media (max-width: @device-width-medium) {
+      padding-right: unit(@icon-size + @btn-margin + @btn-padding, rem);
+
+      .dir-rtl & {
+        padding-right: inherit;
+        padding-left: unit(@icon-size + @btn-margin + @btn-padding, rem);
+      }
+    }
   }
 
   &__body {
