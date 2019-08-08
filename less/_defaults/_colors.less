@@ -94,9 +94,13 @@
 @nav-icon-hover: darken(@nav-icon, 10%);
 @nav-icon-inverted-hover: @nav-icon-inverted;
 
-@nav-progress: @grey;
-@nav-progress-inverted: @white;
-@nav-progress-border: @grey;
+@nav-progress: @nav-icon-inverted;
+@nav-progress-inverted: @nav-icon;
+@nav-progress-border: @nav-icon-inverted;
+
+@nav-progress-hover: @nav-icon-inverted-hover;
+@nav-progress-inverted-hover: @nav-progress-inverted;
+@nav-progress-border-hover: @nav-progress-border;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -151,9 +155,13 @@
 @drawer-item-selected: darken(@drawer-item, 20%);
 @drawer-item-inverted-selected: @drawer-item-inverted;
 
-@drawer-progress: @white;
-@drawer-progress-inverted: @blueDark;
-@drawer-progress-border: @white;
+@drawer-progress: @drawer-item-inverted;
+@drawer-progress-inverted: @drawer-item;
+@drawer-progress-border: @drawer-item-inverted;
+
+@drawer-progress-hover: @drawer-item-inverted-hover;
+@drawer-progress-inverted-hover: @drawer-item-hover;
+@drawer-progress-border-hover: @drawer-progress-border;
 // --------------------------------------------------
 
 // --------------------------------------------------
