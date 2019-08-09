@@ -5,9 +5,7 @@ define([
 
   var ThemeBlockView = ThemeView.extend({
 
-    className: function() {
-      return this.model.get("_isDividerBlock") ? "divider-block" : "";
-    },
+    className: function() {},
 
     setCustomStyles: function() {},
 
