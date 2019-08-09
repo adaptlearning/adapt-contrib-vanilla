@@ -235,7 +235,7 @@
               "properties": {
                 "type": "object",
                 "required": false,
-                "title": "Page Header",
+                "title": "Article",
                 "properties": {
                   "_backgroundImage": {
                     "type": "object",
@@ -313,7 +313,7 @@
               "properties": {
                 "type": "object",
                 "required": false,
-                "title": "Page Header",
+                "title": "Block",
                 "properties": {
                   "_backgroundImage": {
                     "type": "object",
@@ -377,15 +377,6 @@
                       "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
                     }
                   }
-                },
-                "_isDividerBlock": {
-                  "type": "boolean",
-                  "required": false,
-                  "default": false,
-                  "title": "Divider block?",
-                  "inputType": "Checkbox",
-                  "validators": [],
-                  "help": "If enabled, applies a divider class to the block"
                 }
               }
             }
