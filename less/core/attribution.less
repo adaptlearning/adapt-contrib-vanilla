@@ -1,0 +1,19 @@
+.has-attribution {
+  position: relative;
+}
+
+.component__attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: @item-padding;
+  background-color: fade(@background, 50%);
+  color: @background-inverted;
+  transform: translate3d(0,0,0);
+}
+
+// Override position: absolute; as it won't work with current GMCQ structure
+.gmcq__attribution {
+  position: relative;
+}
