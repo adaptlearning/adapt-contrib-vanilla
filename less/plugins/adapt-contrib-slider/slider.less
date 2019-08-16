@@ -32,14 +32,18 @@
   }
 
   &__number-selection {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    // background-color: @item-color-selected;
+    // color: @item-color-inverted-selected;
     z-index: 5;
   }
 
   &__number-model-answer {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    // background-color: @item-color-selected;
+    // color: @item-color-inverted-selected;
     z-index: 10;
   }
   // --------------------------------------------------
@@ -80,6 +84,16 @@
   &__fill {
     background-color: @item-color;
     box-shadow: none;
+  }
+
+  &__handle {
+    background-image: none;
+    border: 0;
+    box-shadow: 0 2px 5px fade(@black, 30%);
+  }
+
+  &__handle:after {
+    background-image: none;
   }
 }
 // --------------------------------------------------
