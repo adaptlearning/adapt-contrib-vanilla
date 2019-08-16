@@ -8,23 +8,15 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
-// Headings
-// --------------------------------------------------
-@heading-color: @blue;
-@heading-color-inverted: @white;
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Body and link colour
+// Body, link, and heading colour
 // --------------------------------------------------
 @font-color: @greyDark;
-@font-color-inverted: @white;
 
 @link: @greyDark;
-@link-inverted: @white;
 
 @link-hover: @link;
-@link-hover-inverted: @link-inverted;
+
+@heading-color: @blue;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -38,6 +30,13 @@
 
 @item-color-selected: darken(@item-color, 20%);
 @item-color-inverted-selected: @item-color-inverted;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Visited - presentation components
+// --------------------------------------------------
+@visited: #727272;
+@visited-inverted: @white;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -55,13 +54,6 @@
 // --------------------------------------------------
 @disabled: #DDDDDD;
 @disabled-inverted: @black;
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Visited - presentation components
-// --------------------------------------------------
-@visited: #727272;
-@visited-inverted: @white;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -85,8 +77,8 @@
 // --------------------------------------------------
 // Navigation
 // --------------------------------------------------
-@nav: @grey;
-@nav-inverted: @white;
+@nav: @white;
+@nav-inverted: @grey;
 
 @nav-icon: @nav-inverted;
 @nav-icon-inverted: @nav;
@@ -110,10 +102,8 @@
 @notify-inverted: @white;
 
 @notify-link: @notify-inverted;
-@notify-link-inverted: @notify;
 
 @notify-link-hover: @notify-link;
-@notify-link-inverted-hover: @notify-link-inverted;
 
 @notify-btn: @btn-color-inverted;
 @notify-btn-inverted: @btn-color;
@@ -135,10 +125,8 @@
 @drawer-inverted: @white;
 
 @drawer-link: @drawer-inverted;
-@drawer-link-inverted: @drawer;
 
 @drawer-link-hover: @drawer-link;
-@drawer-link-inverted-hover: @drawer-link-inverted;
 
 @drawer-icon: @drawer;
 @drawer-icon-inverted: @drawer-inverted;
