@@ -31,20 +31,46 @@ The Adapt framework does not allow the installation of more than one theme at a 
 
 Unlike most Adapt plug-ins, the **Vanilla** theme has no attributes that are required to be configured in the course JSON files. There is, however, an option to alter the background color of blocks as desired. Configure the attributes highlighted below in *blocks.json*. These attributes are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/example.json).
 
-#### **blocks.json**
-**_theme** (object): The theme attributes group contains attributes that override those set in **Vanilla**. These include **_backgroundColor**, **_minimumHeights**, and **_isDividerBlock**.
+#### **contentobjects.json**
 
->**_backgroundColor** (string): This value is the name of a color variable that has been defined in  *less/colors.less*. Omit the initial `@` that is a part of the variable declaration. For example, an acceptable value is `"background-color-inverted"`.  
+**\_vanilla** (object): The following attributes configure the defaults for **Vanilla**. These include **\_pageHeader** and **\_minimumHeights**.
+
+>**\_pageHeader** (object): The backgroundImage object that contains values for **\_large**, **\_medium** and **\_small**.
+
+>>**\_large** (string): File name (including path) of the image used with large device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-one.jpg*).
+
+>>**\_medium** (string): File name (including path) of the image used with medium device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-one.jpg*).
+
+>>**\_small** (string): File name (including path) of the image used with small device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-one.jpg*).
+
+>**_minimumHeights** (object): The minimum heights attribute group specifies the minimum height of the page header at different device widths (`_large`, `_medium`, and `_small`).   
+
+>>**\_large** (number): The minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped.
+
+>>**\_medium** (number): The minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped.
+
+>>**\_small** (number): The minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped.
+
+#### **blocks.json**
+**\_vanilla** (object): The following attributes configure the defaults for **Vanilla**. These include **\_backgroundImage** and **\_minimumHeights**.
+
+>**\_backgroundImage** (object): The backgroundImage object that contains values for **\_large**, **\_medium** and **\_small**.
+
+>>**\_large** (string): File name (including path) of the image used with large device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-one.jpg*).
+
+>>**\_medium** (string): File name (including path) of the image used with medium device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-one.jpg*).
+
+>>**\_small** (string): File name (including path) of the image used with small device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-one.jpg*).
 
 >**_minimumHeights** (object): The minimum heights attribute group specifies the minimum height of the block at different device widths (`_large`, `_medium`, and `_small`).   
 
->>**_large** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_large"`.  
-        
->>**_medium** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_medium"`.   
-        
->>**_small** (number): This value specifies the CSS minimum height when `Adapt.device.screenSize'` evaluates to `"_small"`.   
+>>**\_large** (number): The minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped.
+
+>>**\_medium** (number): The minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped.
+
+>>**\_small** (number): The minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped.
  
->**_isDividerBlock** (boolean): - Determines whether the CSS class `divider-block` *(less/src/theme-extras.less)* will be applied. Acceptable values are `true` and `false`.
+>**_isDividerBlock** (boolean): - Determines whether the CSS class `is-divider-block` will be applied. Acceptable values are `true` and `false`.
 
 Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.  
 
@@ -52,35 +78,31 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 
 | Folder/File         | Description  |
 | :-------------      |:-------------|
-| 📄 theme.json        | Pixel values for `screenSize`(`small`, `medium`, and `large`)|
-| 📄 selection.json    | File used for selecting icons at [IcoMoon.io](https://icomoon.io/) that are packaged in fonts/vanilla.* |
-| 📁 assets            | Location of theme assets (for example: images, loading gif, etc.)|
-| 📁 fonts             | Location of any theme font files |
-| 📁 js                | JavaScript files on which the theme depends      |
+| 📁 js                | JavaScript files on which the theme depends |
 | 📁 less              | Location of any [LESS](http://lesscss.org/) based CSS files |
-| 📄 less/generic.less | Variables that are not covered by those defined in colors.less, fonts.less, and paddings.less   |
-| 📁 less/src          | Location of LESS files for various Adapt elements |
-| 📄 less/src/theme-extras.less| Classes used for bespoke styling |
-| 📁 templates         | Location of overridden HTML (.hbs) templates |
-| 📁 templates/partials| Location of overridden HTML (.hbs) templates required by other templates, specifically buttons.hbs, component.hbs, and state.hbs |  
+| 📁 less/_defaults          | Location of configuration LESS files |
+| 📄 less/_defaults/colors.less | Variables that are not covered by those defined in colors.less, fonts.less, and paddings.less   |
+| 📁 less/core          | Location of Adapt Framework LESS file styles |
+| 📁 less/plugins          | Location of Adapt plugin LESS file styles |
 
 ## Templates
 
-**Vanilla** supports customisation for the rendering of various Adapt elements through the use of [Handlebars](http://handlebarsjs.com/) templates.  The file name of the template indicates the element it affects. Among the available templates are:
+**Vanilla** supports customisation for the rendering of various Adapt elements through the use of [Handlebars](http://handlebarsjs.com/) templates. The file name of the template indicates the element it affects. Among the available templates are:
+
 * article.hbs
 * block.hbs
 * loading.hbs 
-* navigation.hbs
+* nav.hbs
 * page.hbs
 
 ## Limitations
- 
-No known limitations.  
+
+No known limitations.
 
 ----------------------------
-**Version number:**  4.1   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
-**Framework versions:**  4+     
-**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)    
-**Accessibility support:** WAI AA   
-**RTL support:** yes  
+**Version number:**  5.0.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
+**Framework versions:**  5+  
+**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)  
+**Accessibility support:** WAI AA  
+**RTL support:** Yes  
 **Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, IE Mobile 11, Safari 10+11 for macOS+iOS, Opera  
