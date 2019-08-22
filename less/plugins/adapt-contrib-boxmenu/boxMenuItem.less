@@ -1,12 +1,9 @@
 .boxmenu-item {
   &__inner {
+    margin: 0 @item-margin (@item-margin * 2);
     padding: @item-padding;
     border: 1px solid @item-color;
     border-radius: 5px;
-
-    @media (min-width: @device-width-medium) {
-      margin: 0 @item-margin (@item-margin * 2);
-    }
   }
 
   &__image-container {
