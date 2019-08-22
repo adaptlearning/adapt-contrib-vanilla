@@ -81,7 +81,7 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 | 📁 js                | JavaScript files on which the theme depends |
 | 📁 less              | Location of any [LESS](http://lesscss.org/) based CSS files |
 | 📁 less/_defaults          | Location of configuration LESS files |
-| 📄 less/_defaults/colors.less | Variables that are not covered by those defined in colors.less, fonts.less, and paddings.less   |
+| 📄 less/_defaults/colors.less | Location of global colour variables   |
 | 📁 less/core          | Location of Adapt Framework LESS file styles |
 | 📁 less/plugins          | Location of Adapt plugin LESS file styles |
 
