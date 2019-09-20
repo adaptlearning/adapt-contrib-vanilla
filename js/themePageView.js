@@ -47,28 +47,28 @@ define([
     },
 
     setElementMinHeight: function(config, $element) {
-      var minHeights = config._minHeight;
+      var minimumHeights = config._minimumHeights;
 
-      if (!minHeights) return;
+      if (!minimumHeights) return;
 
-      var minHeight;
+      var minimumHeight;
 
       switch (Adapt.device.screenSize) {
         case "large":
-          minHeight = minHeights._large;
+          minimumHeight = minimumHeights._large;
           break;
         case "medium":
-          minHeight = minHeights._medium;
+          minimumHeight = minimumHeights._medium;
           break;
         default:
-          minHeight = minHeights._small;
+          minimumHeight = minimumHeights._small;
       }
 
-      if (!minHeight) return;
+      if (!minimumHeight) return;
 
       $element
         .addClass('has-min-height')
-        .css("min-height", minHeight + "px");
+        .css("min-height", minimumHeight + "px");
     },
 
     onRemove: function() {}
