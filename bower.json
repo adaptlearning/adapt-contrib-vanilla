@@ -20,5 +20,5 @@
     "test",
     "tests"
   ],
-  "_targetAttribute": "_vanilla"
+  "targetAttribute": "_vanilla"
 }

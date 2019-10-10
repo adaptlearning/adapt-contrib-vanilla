@@ -593,8 +593,12 @@
       "type": "object",
       "required": true,
       "properties": {
-        "config": {},
-        "course": {},
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object"
+        },
         "contentobject": {
           "type": "object",
           "properties": {
@@ -840,7 +844,9 @@
             }
           }
         },
-        "component": {}
+        "component": {
+          "type": "object"
+        }
       }
     }
   }
