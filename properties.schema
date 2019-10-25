@@ -642,7 +642,7 @@
                   "required": false,
                   "legend": "Page background image styles",
                   "properties": {
-                    "backgroundRepeat": {
+                    "_backgroundRepeat": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -650,7 +650,7 @@
                       "title": "Set if/how the background image repeats",
                       "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
                     },
-                    "backgroundSize": {
+                    "_backgroundSize": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -658,7 +658,7 @@
                       "title": "Set the size of the background image",
                       "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
                     },
-                    "backgroundPosition": {
+                    "_backgroundPosition": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -708,7 +708,7 @@
                       "required": false,
                       "legend": "Page header background image styles",
                       "properties": {
-                        "backgroundRepeat": {
+                        "_backgroundRepeat": {
                           "type": "string",
                           "required": false,
                           "default": "",
@@ -716,7 +716,7 @@
                           "title": "Set if/how the background image repeats",
                           "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
                         },
-                        "backgroundSize": {
+                        "_backgroundSize": {
                           "type": "string",
                           "required": false,
                           "default": "",
@@ -724,7 +724,7 @@
                           "title": "Set the size of the background image",
                           "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
                         },
-                        "backgroundPosition": {
+                        "_backgroundPosition": {
                           "type": "string",
                           "required": false,
                           "default": "",
@@ -814,7 +814,7 @@
                   "required": false,
                   "legend": "Article background image styles",
                   "properties": {
-                    "backgroundRepeat": {
+                    "_backgroundRepeat": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -822,7 +822,7 @@
                       "title": "Set if/how the background image repeats",
                       "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
                     },
-                    "backgroundSize": {
+                    "_backgroundSize": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -830,7 +830,7 @@
                       "title": "Set the size of the background image",
                       "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
                     },
-                    "backgroundPosition": {
+                    "_backgroundPosition": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -887,7 +887,7 @@
                   "required": false,
                   "legend": "Block background image styles",
                   "properties": {
-                    "backgroundRepeat": {
+                    "_backgroundRepeat": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -895,7 +895,7 @@
                       "title": "Set if/how the background image repeats",
                       "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
                     },
-                    "backgroundSize": {
+                    "_backgroundSize": {
                       "type": "string",
                       "required": false,
                       "default": "",
@@ -903,7 +903,7 @@
                       "title": "Set the size of the background image",
                       "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
                     },
-                    "backgroundPosition": {
+                    "_backgroundPosition": {
                       "type": "string",
                       "required": false,
                       "default": "",

@@ -58,9 +58,9 @@ define([
       if (!styles) return;
 
       $header.css({
-        'background-repeat': styles.backgroundRepeat,
-        'background-size': styles.backgroundSize,
-        'background-position': styles.backgroundPosition
+        'background-repeat': styles._backgroundRepeat,
+        'background-size': styles._backgroundSize,
+        'background-position': styles._backgroundPosition
       });
     },
 

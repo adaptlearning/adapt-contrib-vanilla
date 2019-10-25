@@ -8,9 +8,9 @@ Background images, styles, and minimum heights
             "_small": "course/en/images/example.jpg"
         },
         "_backgroundStyles": {
-            "backgroundSize": "contain",
-            "backgroundRepeat": "repeat",
-            "backgroundPosition": "center center"
+            "_backgroundSize": "contain",
+            "_backgroundRepeat": "repeat",
+            "_backgroundPosition": "center center"
         },
         "_pageHeader": {
             "_backgroundImage": {
@@ -19,9 +19,9 @@ Background images, styles, and minimum heights
                 "_small": "course/en/images/example.jpg"
             },
             "_backgroundStyles": {
-                "backgroundSize": "contain",
-                "backgroundRepeat": "repeat",
-                "backgroundPosition": "center center"
+                "_backgroundSize": "contain",
+                "_backgroundRepeat": "repeat",
+                "_backgroundPosition": "center center"
             },
             "_minimumHeights": {
                 "_large": 600,
@@ -39,9 +39,9 @@ Background images, styles, and minimum heights
             "_small": "course/en/images/example.jpg"
         },
         "_backgroundStyles": {
-            "backgroundSize": "contain",
-            "backgroundRepeat": "repeat",
-            "backgroundPosition": "center center"
+            "_backgroundSize": "contain",
+            "_backgroundRepeat": "repeat",
+            "_backgroundPosition": "center center"
         }
     }
 
@@ -53,9 +53,9 @@ Background images, styles, and minimum heights
             "_small": "course/en/images/example.jpg"
         },
         "_backgroundStyles": {
-            "backgroundSize": "contain",
-            "backgroundRepeat": "repeat",
-            "backgroundPosition": "center center"
+            "_backgroundSize": "contain",
+            "_backgroundRepeat": "repeat",
+            "_backgroundPosition": "center center"
         },
         "_minimumHeights": {
             "_large": 600,
