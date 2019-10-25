@@ -10,7 +10,7 @@ define([
       this.setStyles();
 
       this.listenTo(Adapt, {
-        "device:resize": this.onDeviceResize,
+        "device:changed": this.onDeviceResize,
         "remove": this.remove
       });
     },
@@ -28,7 +28,8 @@ define([
     setStyles: function() {
       this.setClasses();
       this.setBackgroundImage();
-      this.setMinHeight();
+      this.setBackgroundStyles();
+      this.setMinimumHeight();
       this.setCustomStyles();
     },
 
@@ -54,14 +55,30 @@ define([
           backgroundImage = backgroundImages._small;
       }
 
-      if (!backgroundImage) return;
-
-      this.$el
-        .addClass("has-bg-image")
-        .css("background-image", "url(" + backgroundImage + ")");
+      if (backgroundImage) {
+        this.$el
+          .addClass("has-bg-image")
+          .css("background-image", "url(" + backgroundImage + ")");
+      } else {
+        this.$el
+          .removeClass("has-bg-image")
+          .css("background-image", "");
+      }
     },
 
-    setMinHeight: function() {
+    setBackgroundStyles: function () {
+      var styles = this.model.get("_backgroundStyles");
+
+      if (!styles) return;
+
+      this.$el.css({
+        'background-repeat': styles.backgroundRepeat,
+        'background-size': styles.backgroundSize,
+        'background-position': styles.backgroundPosition
+      });
+    },
+
+    setMinimumHeight: function() {
       var minimumHeights = this.model.get("_minimumHeights");
 
       if (!minimumHeights) return;
@@ -79,11 +96,15 @@ define([
           minimumHeight = minimumHeights._small;
       }
 
-      if (!minimumHeight) return;
-
-      this.$el
-        .addClass('has-min-height')
-        .css("min-height", minimumHeight + "px");
+      if (minimumHeight) {
+        this.$el
+          .addClass("has-min-height")
+          .css("min-height", minimumHeight + "px");
+      } else {
+        this.$el
+          .removeClass("has-min-height")
+          .css("min-height", "");
+      }
     },
 
     setCustomStyles: function() {},

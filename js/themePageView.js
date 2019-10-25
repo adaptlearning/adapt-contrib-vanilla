@@ -13,15 +13,17 @@ define([
 
     processHeader: function() {
       var header = this.model.get('_pageHeader');
-      var $header = this.$('.page__header');
 
       if (!header) return;
 
-      this.setElementBackground(header, $header);
-      this.setElementMinHeight(header, $header);
+      var $header = this.$('.page__header');
+
+      this.setHeaderBackgroundImage(header, $header);
+      this.setHeaderBackgroundStyles(header, $header);
+      this.setHeaderMinimumHeight(header, $header);
     },
 
-    setElementBackground: function(config, $element) {
+    setHeaderBackgroundImage: function(config, $header) {
       var backgroundImages = config._backgroundImage;
 
       if (!backgroundImages) return;
@@ -39,14 +41,30 @@ define([
           backgroundImage = backgroundImages._small;
       }
 
-      if (!backgroundImage) return;
-
-      $element
-        .addClass("has-bg-image")
-        .css("background-image", "url(" + backgroundImage + ")");
+      if (backgroundImage) {
+        $header
+          .addClass("has-bg-image")
+          .css("background-image", "url(" + backgroundImage + ")");
+      } else {
+        $header
+          .removeClass("has-bg-image")
+          .css("background-image", "");
+      }
     },
 
-    setElementMinHeight: function(config, $element) {
+    setHeaderBackgroundStyles: function (config, $header) {
+      var styles = config._backgroundStyles;
+
+      if (!styles) return;
+
+      $header.css({
+        'background-repeat': styles.backgroundRepeat,
+        'background-size': styles.backgroundSize,
+        'background-position': styles.backgroundPosition
+      });
+    },
+
+    setHeaderMinimumHeight: function(config, $header) {
       var minimumHeights = config._minimumHeights;
 
       if (!minimumHeights) return;
@@ -64,11 +82,15 @@ define([
           minimumHeight = minimumHeights._small;
       }
 
-      if (!minimumHeight) return;
-
-      $element
-        .addClass('has-min-height')
-        .css("min-height", minimumHeight + "px");
+      if (minimumHeight) {
+        $header
+          .addClass("has-min-height")
+          .css("min-height", minimumHeight + "px");
+      } else {
+        $header
+          .removeClass("has-min-height")
+          .css("min-height", "");
+      }
     },
 
     onRemove: function() {}
