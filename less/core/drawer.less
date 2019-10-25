@@ -5,11 +5,10 @@
     border-bottom: 1px solid @drawer-item-hover;
   }
 
-  // --------------------------------------------------
   &__btn {
     margin: @btn-margin / 2;
     padding: @btn-padding / 2;
-    background-color: transparent;
+    background-color: @drawer-icon;
     color: @drawer-icon-inverted;
     border-radius: 50%;
 
@@ -19,18 +18,4 @@
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
   }
-  // --------------------------------------------------
-
-  // --------------------------------------------------
-  // &__btn {
-  //   background-color: @drawer-icon;
-  //   color: @drawer-icon-inverted;
-
-  //   .no-touch &:hover {
-  //     background-color: @drawer-icon-hover;
-  //     color: @drawer-icon-inverted-hover;
-  //     .transition(background-color @duration ease-in, color @duration ease-in;);
-  //   }
-  // }
-  // --------------------------------------------------
 }
