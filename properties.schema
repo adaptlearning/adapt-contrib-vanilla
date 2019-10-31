@@ -18,12 +18,26 @@
             "default": "#4D4D4D",
             "help": "Global body font colour"
           },
+          "font-color-inverted": {
+            "title": "Font colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#4D4D4D",
+            "help": "Global body font colour inverted. Either a lightened/darkened alternative to Font colour."
+          },
           "link": {
             "title": "Link colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#4D4D4D",
             "help": "Global link font colour"
+          },
+          "link-inverted": {
+            "title": "Link colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#4D4D4D",
+            "help": "Global link font colour inverted. Either a lightened/darkened alternative to Link colour."
           },
           "link-hover": {
             "title": "Link hover colour",
@@ -32,12 +46,26 @@
             "default": "",
             "help": "Global link font colour when hovered over"
           },
+          "link-inverted-hover": {
+            "title": "Link hover colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Global link font colour when hovered over inverted. Either a lightened/darkened alternative to Link hover colour."
+          },
           "heading-color": {
             "title": "Heading colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#36CDE8",
             "help": "Global title colour"
+          },
+          "heading-color-inverted": {
+            "title": "Heading colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#36CDE8",
+            "help": "Global title colour inverted. Either a lightened/darkened alternative to Title colour."
           }
         }
       },
