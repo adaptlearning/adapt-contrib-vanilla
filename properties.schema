@@ -19,7 +19,7 @@
             "help": "Global body font colour"
           },
           "font-color-inverted": {
-            "title": "Font colour",
+            "title": "Font colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#4D4D4D",
@@ -33,7 +33,7 @@
             "help": "Global link font colour"
           },
           "link-inverted": {
-            "title": "Link colour",
+            "title": "Link colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#4D4D4D",
@@ -47,7 +47,7 @@
             "help": "Global link font colour when hovered over"
           },
           "link-inverted-hover": {
-            "title": "Link hover colour",
+            "title": "Link hover colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
@@ -61,7 +61,7 @@
             "help": "Global title colour"
           },
           "heading-color-inverted": {
-            "title": "Heading colour",
+            "title": "Heading colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#36CDE8",
