@@ -22,21 +22,21 @@
             "title": "Font colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4D4D4D",
+            "default": "#FFFFFF",
             "help": "Global body font colour inverted. Either a lightened/darkened alternative to Font colour."
           },
           "link": {
             "title": "Link colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4D4D4D",
+            "default": "",
             "help": "Global link font colour"
           },
           "link-inverted": {
             "title": "Link colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4D4D4D",
+            "default": "",
             "help": "Global link font colour inverted. Either a lightened/darkened alternative to Link colour."
           },
           "link-hover": {
@@ -64,7 +64,7 @@
             "title": "Heading colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#36CDE8",
+            "default": "#FFFFFF",
             "help": "Global title colour inverted. Either a lightened/darkened alternative to Title colour."
           }
         }

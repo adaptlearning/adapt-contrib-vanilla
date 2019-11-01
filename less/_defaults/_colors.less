@@ -5,6 +5,13 @@
 @blueDark: #263944;
 @grey: #9096A0;
 @greyDark: #4D4D4D;
+
+// These variables are used to change the colour of text
+// Primary use is for altering the text colour over a background image
+// See ../project/theme-extras.less for block mixin
+// --------------------------------------------------
+@transparent-light: transparent;
+@transparent-dark: transparent;
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -13,11 +20,11 @@
 @font-color: @greyDark;
 @font-color-inverted: @white;
 
-@link: @greyDark;
-@link-inverted: @white;
+@link: @font-color;
+@link-inverted: @font-color-inverted;
 
 @link-hover: @link;
-@link-inverted-hover: @link;
+@link-inverted-hover: @link-inverted;
 
 @heading-color: @blue;
 @heading-color-inverted: @white;
