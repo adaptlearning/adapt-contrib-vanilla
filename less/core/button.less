@@ -1,0 +1,31 @@
+.btn {
+  &__container {
+    margin-top: @btn-margin;
+  }
+
+  &-text {
+    .button-text;
+  }
+
+  &-text {
+    background-color: @btn-color;
+    color: @btn-color-inverted;
+    border-radius: 5px;
+
+    .no-touch &:not(.is-disabled):hover {
+      background-color: @btn-color-hover;
+      color: @btn-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &-text.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__marking {
+    padding: @item-padding * 0.75;
+    border-radius: 50%;
+  }
+}

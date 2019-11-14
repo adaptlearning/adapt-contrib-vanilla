@@ -1,77 +1,84 @@
-.slider-component {
+.slider {
+  // --------------------------------------------------
+  // Numbers
+  // --------------------------------------------------
+  &__number-container {
+    min-height: 2.5rem;
+  }
 
-    .slider-scaler-wrapper {
+  &__number,
+  &__number-selection,
+  &__number-model-answer {
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: 50%;
+  }
 
-        .slider-scaler {
-          background-color: @item-body-text-color;
-        }
-    }
+  &__widget:not(.is-disabled) .slider__number {
+    cursor: pointer;
+  }
 
-    .slider-model-answer,
-    .slider-scale-marker {
-        color: @item-text-color;
-        background-color: @item-color;
-    }
+  &__number-selection {
+    background-color: @item-color;
+    color: @item-color-inverted;
+    z-index: 5;
+  }
 
-    .slider-line {
-        background-color: @item-body-text-color;
-    }
+  &__number-model-answer {
+    background-color: @item-color;
+    color: @item-color-inverted;
+    z-index: 10;
+  }
+  // --------------------------------------------------
+
+  // --------------------------------------------------
+  // Scale
+  // --------------------------------------------------
+  &__scale-container {
+    margin-top: @item-margin * 2;
+    margin-bottom: @item-margin * 4;
+    background-color: lighten(@black, 75%);
+  }
+
+  &__scale-notch {
+    background-color: lighten(@black, 75%);
+  }
+  // --------------------------------------------------
+
+  // --------------------------------------------------
+  // Slider bar
+  // --------------------------------------------------
+  &__item {
+    margin-bottom: @item-margin * 4;
+  }
+  // --------------------------------------------------
 }
 
-.slider-widget {
-    .slider-holder {
-        .rangeslider__handle {
-          background-color: @item-color;
-          &:hover {
-            .no-touch & {
-              background-color: @item-color-hover;
-            }
-          }
-        }
-        .rangeslider__fill {
-          background-color: @item-color;
-        }
-        .rangeslider {
-          background-color: @background-color;
-        }
+// --------------------------------------------------
+// Rangeslider
+// --------------------------------------------------
+.rangeslider {
+  background-color: @disabled;
 
-        input[type="range"]:focus + .rangeslider .rangeslider__handle {
-            .accessibility & {
-                outline: @focus-outline;
-            }
-        }
-        .slider-scale-marker {
-          font-size: @button-text-font-size;
-        }
-    }
-}
+  &--horizontal {
+    box-shadow: none;
+  }
 
-.slider-widget.show-user-answer.correct {
-  .slider-scale-marker,
-  .rangeslider__fill {
-    background-color: @validation-success;
+  &__fill {
+    background-color: @item-color;
+    box-shadow: none;
+  }
+
+  &__handle {
+    background-image: none;
+    border: 0;
+    box-shadow: 0 2px 5px fade(@black, 30%);
+  }
+
+  &__handle:after {
+    background-image: none;
   }
 }
-.slider-widget.show-user-answer.incorrect {
-  .slider-scale-marker,
-  .rangeslider__fill {
-    background-color: @validation-error;
-  }
-}
-
-.slider-widget.show-correct-answer {
-  .slider-scale-marker,
-  .slider-model-answer,
-  .rangeslider__fill {
-    background-color: @validation-success;
-  }
-}
-
-// assessment adds no-marking class to article to hide marking icons
-.no-marking {
-    .component-inner .component-widget.disabled.submitted.complete .rangeslider__fill,
-    .component-inner .component-widget.disabled.submitted.complete .slider-scale-marker {
-      color: @item-text-disabled-color;
-      background-color: @item-disabled-color;
-    }
-}
+// --------------------------------------------------

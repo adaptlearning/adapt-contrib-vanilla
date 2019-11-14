@@ -1,0 +1,35 @@
+.boxmenu-item {
+  &__inner {
+    margin: 0 @item-margin (@item-margin * 2);
+    padding: @item-padding;
+    border: 1px solid @item-color;
+    border-radius: 5px;
+  }
+
+  &__image-container {
+    margin-bottom: @menu-item-image-margin;
+    .img-zoom();
+  }
+
+  &__title {
+    margin-bottom: @menu-item-title-margin;;
+    .menu-item-title;
+  }
+
+  &__body {
+    margin-bottom: @menu-item-body-margin;
+    .menu-item-body;
+  }
+
+  &__body a {
+    .link-text;
+  }
+
+  &__duration {
+    margin-bottom: @menu-item-duration-margin;
+  }
+
+  &__progress {
+    margin-bottom: @menu-item-progress-margin;
+  }
+}

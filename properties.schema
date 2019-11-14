@@ -1,127 +1,992 @@
 {
-  "type":"object",
+  "type": "object",
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://jsonschema.net",
   "$ref": "http://localhost/plugins/content/theme/model.schema",
-  "properties":{
+  "properties": {
     "variables": {
-      "_colors": {
+
+      "_global": {
         "type": "object",
         "required": false,
-        "title": "Colours",
+        "title": "Global",
         "properties": {
-          "primary-color": {
-            "title": "Primary",
-            "help": "This is the primary colour used to style the course, and is applied to component items and pop-up notifications.",
+          "font-color": {
+            "title": "Font colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#078292"
+            "default": "#4D4D4D",
+            "help": "Global body font colour"
           },
-          "primary-color-inverted": {
-            "title": "Primary Inverted",
-            "help": "This is the inverted primary colour, and is applied to text that is displayed on elements coloured with primary.",
+          "font-color-inverted": {
+            "title": "Font colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ffffff"
+            "default": "#FFFFFF",
+            "help": "Global body font colour inverted. Either a lightened/darkened alternative to Font colour."
           },
-          "secondary-color": {
-            "title": "Secondary",
-            "help": "This is the secondary colour used to style the course, and is applied to buttons.",
+          "link": {
+            "title": "Link colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4b4e4f"
+            "default": "",
+            "help": "Global link font colour"
           },
-          "secondary-color-inverted": {
-            "title": "Secondary Inverted",
-            "help": "This is the inverted secondary colour, and is applied to text that is displayed on elements coloured with secondary.",
+          "link-inverted": {
+            "title": "Link colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ffffff"
+            "default": "",
+            "help": "Global link font colour inverted. Either a lightened/darkened alternative to Link colour."
           },
-          "tertiary-color": {
-            "title": "Tertiary",
-            "help": "This is the tertiary colour used to style the course, and is applied to the navigation bar.",
+          "link-hover": {
+            "title": "Link hover colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ffffff"
+            "default": "",
+            "help": "Global link font colour when hovered over"
           },
-          "tertiary-color-inverted": {
-            "title": "Tertiary Inverted",
-            "help": "This is the inverted tertiary colour, and is applied to text that is displayed on elements coloured with tertiary.",
+          "link-inverted-hover": {
+            "title": "Link hover colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4b4e4f"
+            "default": "",
+            "help": "Global link font colour when hovered over inverted. Either a lightened/darkened alternative to Link hover colour."
           },
-          "quaternary-color": {
-            "title": "Quaternary",
-            "help": "This is the quaternary colour used to style the course, and is applied to the drawer.",
+          "heading-color": {
+            "title": "Heading colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#37474f"
+            "default": "#36CDE8",
+            "help": "Global title colour"
           },
-          "quaternary-color-inverted": {
-            "title": "Quaternary Inverted",
-            "help": "This is the inverted quaternary colour, and is applied to text that is displayed on elements coloured with quaternary.",
+          "heading-color-inverted": {
+            "title": "Heading colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ffffff"
+            "default": "#FFFFFF",
+            "help": "Global title colour inverted. Either a lightened/darkened alternative to Title colour."
+          }
+        }
+      },
+
+      "_items": {
+        "type": "object",
+        "required": false,
+        "title": "Items (Components)",
+        "properties": {
+          "item-color": {
+            "title": "Item colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#36CDE8",
+            "help": "Item background colour"
           },
-          "foreground-color": {
-            "title": "Foreground",
-            "help": "This is the foreground colour, and is applied to all body text.",
+          "item-color-inverted": {
+            "title": "Item colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4b4e4f"
+            "default": "#FFFFFF",
+            "help": "Item foreground colour"
           },
-          "background-color": {
-            "title": "Background",
-            "help": "This is the background colour, and is applied to many elements including pages, articles and blocks.",
+          "item-color-hover": {
+            "title": "Item colour - hover",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ffffff"
+            "default": "",
+            "help": "Item background colour when hovered over"
           },
-          "foreground-color-inverted": {
-            "title": "Foreground Inverted",
-            "help": "This is the inverted foreground colour, and is applied to text on menus and page headers.",
+          "item-color-inverted-hover": {
+            "title": "Item colour - inverted hover",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ffffff"
+            "default": "",
+            "help": "Item foreground colour when hovered over"
           },
-          "background-color-inverted": {
-            "title": "Background Inverted",
-            "help": "This is the inverted background colour, and is applied to menus and page headers.",
+          "item-color-selected": {
+            "title": "Item colour - selected",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#546e7a"
+            "default": "",
+            "help": "Item background colour when selected"
+          },
+          "item-color-inverted-selected": {
+            "title": "Item colour - inverted selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Item foreground colour when selected"
+          },
+          "visited": {
+            "title": "Visited colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#727272",
+            "help": "Item visited background colour"
+          },
+          "visited-inverted": {
+            "title": "Visited colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": "Item visited foreground colour"
+          }
+        }
+      },
+
+      "_buttons": {
+        "type": "object",
+        "required": false,
+        "title": "Buttons",
+        "properties": {
+          "btn-color": {
+            "title": "Button colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#4D4D4D",
+            "help": "Question button background colour"
+          },
+          "btn-color-inverted": {
+            "title": "Button colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": "Question button foreground colour"
+          },
+          "btn-color-hover": {
+            "title": "Button colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Question button background colour when hovered over"
+          },
+          "btn-color-inverted-hover": {
+            "title": "Button colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Question button foreground colour when hovered over"
+          },
+          "disabled": {
+            "title": "Disabled colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#DDDDDD",
+            "help": "Question button disabled background colour"
+          },
+          "disabled-inverted": {
+            "title": "Disabled colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#000000",
+            "help": "Question button disabled foreground colour"
+          }
+        }
+      },
+
+      "_validation": {
+        "type": "object",
+        "required": false,
+        "title": "Validation states",
+        "properties": {
+          "validation-success": {
+            "title": "Validation success colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#065f28",
+            "help": "Question marking success background colour"
+          },
+          "validation-success-inverted": {
+            "title": "Validation success colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": "Question marking success foreground colour"
           },
           "validation-error": {
-            "title": "Validation error",
-            "help": "This is the validation error colour, and is applied to elements which display an incorrect field.",
+            "title": "Validation error colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#f26c4f"
+            "default": "#ff0000",
+            "help": "Question marking error background colour"
           },
-          "validation-success": {
-            "title": "Validation success",
-            "help": "This is the validation success colour, and is applied to elements which display a correct field.",
+          "validation-error-inverted": {
+            "title": "Validation error colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#82ca9c"
-          },
-          "disabled-color": {
-            "title": "Disabled",
-            "help": "This is the disabled colour, and is applied to elements which have been disabled.",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": "#727272"
-          },
-          "disabled-color-inverted": {
-            "title": "Disabled Inverted",
-            "help": "This is the inverted disabled colour, and is applied to text on elements which have been disabled.",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": "#cccccc"
+            "default": "#FFFFFF",
+            "help": "Question marking error foreground colour"
           }
+        }
+      },
+
+      "_progress": {
+        "type": "object",
+        "required": false,
+        "title": "Progress",
+        "properties": {
+          "progress": {
+            "title": "Progress colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#9096A0",
+            "help": "Global progress fill colour"
+          },
+          "progress-inverted": {
+            "title": "Progress colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": "Global progress background colour"
+          },
+          "progress-border": {
+            "title": "Progress border colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#9096A0",
+            "help": "Global progress border colour"
+          }
+        }
+      },
+
+      "_nav": {
+        "type": "object",
+        "required": false,
+        "title": "Navigation",
+        "properties": {
+          "nav": {
+            "title": "Nav colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": "Navigation background colour"
+          },
+          "nav-inverted": {
+            "title": "Nav colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#9096A0",
+            "help": "Navigation foreground colour"
+          },
+          "nav-icon": {
+            "title": "Nav icon colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation icon background colour"
+          },
+          "nav-icon-inverted": {
+            "title": "Nav icon colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation icon foreground colour"
+          },
+          "nav-icon-hover": {
+            "title": "Nav icon colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation icon background colour when hovered over"
+          },
+          "nav-icon-inverted-hover": {
+            "title": "Nav icon colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation icon foreground colour when hovered over"
+          },
+          "nav-progress": {
+            "title": "Nav progress",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation progress fill colour"
+          },
+          "nav-progress-inverted": {
+            "title": "Nav progress - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation progress background colour"
+          },
+          "nav-progress-border": {
+            "title": "Nav progress border colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation progress border colour"
+          },
+          "nav-progress-hover": {
+            "title": "Nav progress - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation progress fill colour when hovered over"
+          },
+          "nav-progress-inverted-hover": {
+            "title": "Nav progress - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation progress background colour when hovered over"
+          },
+          "nav-progress-border-hover": {
+            "title": "Nav progress border colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Navigation progress border colour when hovered over"
+          }
+        }
+      },
+
+      "_notify": {
+        "type": "object",
+        "required": false,
+        "title": "Notify",
+        "properties": {
+          "notify": {
+            "title": "Notify colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#36CDE8",
+            "help": "Notify background colour"
+          },
+          "notify-inverted": {
+            "title": "Notify colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": "Notify foreground colour"
+          },
+          "notify-link": {
+            "title": "Notify link colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify link font colour"
+          },
+          "notify-link-hover": {
+            "title": "Notify link colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify link font colour when hovered over"
+          },
+          "notify-btn": {
+            "title": "Notify button colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify button background colour"
+          },
+          "notify-btn-inverted": {
+            "title": "Notify button colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify button foreground colour"
+          },
+          "notify-btn-hover": {
+            "title": "Notify button colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify button backgroound colour when hovered over"
+          },
+          "notify-btn-inverted-hover": {
+            "title": "Notify button colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify button foreground colour when hovered over"
+          },
+          "notify-icon": {
+            "title": "Notify icon colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify icon background colour"
+          },
+          "notify-icon-inverted": {
+            "title": "Notify icon colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify icon foreground colour"
+          },
+          "notify-icon-hover": {
+            "title": "Notify icon colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify icon background colour when hovered over"
+          },
+          "notify-icon-inverted-hover": {
+            "title": "Notify icon colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Notify icon foregroound colour when hovered over"
+          }
+        }
+      },
+
+      "_drawer": {
+        "type": "object",
+        "required": false,
+        "title": "Drawer",
+        "properties": {
+          "drawer": {
+            "title": "Drawer colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#263944",
+            "help": "Drawer background colour"
+          },
+          "drawer-inverted": {
+            "title": "Drawer colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": "Drawer foreground colour"
+          },
+          "drawer-link": {
+            "title": "Drawer link colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer link font colour"
+          },
+          "drawer-link-hover": {
+            "title": "Drawer link colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer link font colour when hovered over"
+          },
+          "drawer-icon": {
+            "title": "Drawer icon colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer icon background colour"
+          },
+          "drawer-icon-inverted": {
+            "title": "Drawer icon colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer icon foreground colour"
+          },
+          "drawer-icon-hover": {
+            "title": "Drawer icon colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer icon background colour when hovered over"
+          },
+          "drawer-icon-inverted-hover": {
+            "title": "Drawer icon colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer icon foreground colour when hovered over"
+          },
+          "drawer-item": {
+            "title": "Drawer item colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer item background colour"
+          },
+          "drawer-item-inverted": {
+            "title": "Drawer item colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer item foreground colour"
+          },
+          "drawer-item-hover": {
+            "title": "Drawer item colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer item background colour when hovered over"
+          },
+          "drawer-item-inverted-hover": {
+            "title": "Drawer item colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer item foreground colour when hovered over"
+          },
+          "drawer-item-selected": {
+            "title": "Drawer item colour - selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer item background colour when selected"
+          },
+          "drawer-item-inverted-selected": {
+            "title": "Drawer item colour - inverted selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer item foreground colour when selected"
+          },
+          "drawer-progress": {
+            "title": "Drawer progress colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer progress fill colour"
+          },
+          "drawer-progress-inverted": {
+            "title": "Drawer progress colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer progress background colour"
+          },
+          "drawer-progress-border": {
+            "title": "Drawer progress border colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer progress border colour"
+          },
+          "drawer-progress-hover": {
+            "title": "Drawer progress colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer progress fill colour when hovered over"
+          },
+          "drawer-progress-inverted-hover": {
+            "title": "Drawer progress colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer progress backgroud colour when hovered over"
+          },
+          "drawer-progress-border-hover": {
+            "title": "Drawer progress border colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Drawer progress border colour when hovered over"
+          }
+        }
+      },
+
+      "_misc": {
+        "type": "object",
+        "required": false,
+        "title": "Misc",
+        "properties": {
+          "background": {
+            "title": "Background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#000000",
+            "help": ""
+          },
+          "background-inverted": {
+            "title": "Background colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": ""
+          },
+          "shadow": {
+            "title": "Shadow colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#000000",
+            "help": ""
+          },
+          "shadow-inverted": {
+            "title": "Shadow colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#FFFFFF",
+            "help": ""
+          }
+        }
+      }
+    },
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object"
+        },
+        "contentobject": {
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "_backgroundImage": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Page background image",
+                  "properties": {
+                    "_large": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Large background image - used on desktop"
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Medium background image - used on tablet"
+                    },
+                    "_small": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Small background image - used on mobile"
+                    }
+                  }
+                },
+                "_backgroundStyles": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Page background image styles",
+                  "properties": {
+                    "_backgroundRepeat": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+                      "title": "Set if/how the background image repeats",
+                      "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
+                    },
+                    "_backgroundSize": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                      "title": "Set the size of the background image",
+                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                    },
+                    "_backgroundPosition": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+                      "title": "Set the position of the background image",
+                      "help": "The first value is the horizontal position and the second value is the vertical."
+                    }
+                  }
+                },
+                "_pageHeader": {
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "_backgroundImage": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Page header background image",
+                      "properties": {
+                        "_large": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Large background image - used on desktop"
+                        },
+                        "_medium": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Medium background image - used on tablet"
+                        },
+                        "_small": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Small background image - used on mobile"
+                        }
+                      }
+                    },
+                    "_backgroundStyles": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Page header background image styles",
+                      "properties": {
+                        "_backgroundRepeat": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+                          "title": "Set if/how the background image repeats",
+                          "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
+                        },
+                        "_backgroundSize": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                          "title": "Set the size of the background image",
+                          "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                        },
+                        "_backgroundPosition": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+                          "title": "Set the position of the background image",
+                          "help": "The first value is the horizontal position and the second value is the vertical."
+                        }
+                      }
+                    },
+                    "_minimumHeights": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Page header minimum height",
+                      "properties": {
+                        "_large": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                        },
+                        "_medium": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                        },
+                        "_small": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "article": {
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "_backgroundImage": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Article background image",
+                  "properties": {
+                    "_large": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Large background image - used on desktop"
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Medium background image - used on tablet"
+                    },
+                    "_small": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Small background image - used on mobile"
+                    }
+                  }
+                },
+                "_backgroundStyles": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Article background image styles",
+                  "properties": {
+                    "_backgroundRepeat": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+                      "title": "Set if/how the background image repeats",
+                      "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
+                    },
+                    "_backgroundSize": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                      "title": "Set the size of the background image",
+                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                    },
+                    "_backgroundPosition": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+                      "title": "Set the position of the background image",
+                      "help": "The first value is the horizontal position and the second value is the vertical."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "block": {
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "_backgroundImage": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Block background image",
+                  "properties": {
+                    "_large": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Large background image - used on desktop"
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Medium background image - used on tablet"
+                    },
+                    "_small": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Small background image - used on mobile"
+                    }
+                  }
+                },
+                "_backgroundStyles": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Block background image styles",
+                  "properties": {
+                    "_backgroundRepeat": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+                      "title": "Set if/how the background image repeats",
+                      "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
+                    },
+                    "_backgroundSize": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                      "title": "Set the size of the background image",
+                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                    },
+                    "_backgroundPosition": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+                      "title": "Set the position of the background image",
+                      "help": "The first value is the horizontal position and the second value is the vertical."
+                    }
+                  }
+                },
+                "_minimumHeights": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Block minimum height",
+                  "properties": {
+                    "_large": {
+                      "type": "number",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Number",
+                      "validators": ["number"],
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Number",
+                      "validators": ["number"],
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                    },
+                    "_small": {
+                      "type": "number",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Number",
+                      "validators": ["number"],
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                    }
+                  }
+                },
+                "_isDividerBlock": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": false,
+                  "title": "Divider block?",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "If enabled, applies a divider class to the block"
+                }
+              }
+            }
+          }
+        },
+        "component": {
+          "type": "object"
         }
       }
     }
