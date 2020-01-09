@@ -8,7 +8,6 @@
 
   &__image-container {
     margin-bottom: @menu-item-image-margin;
-    .img-zoom();
   }
 
   &__title {
@@ -31,5 +30,9 @@
 
   &__progress {
     margin-bottom: @menu-item-progress-margin;
+  }
+
+  .boxmenu-item.has-img-zoom &__image-container {
+    .img-zoom();
   }
 }
