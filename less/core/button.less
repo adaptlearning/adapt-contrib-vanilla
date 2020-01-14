@@ -28,4 +28,14 @@
     padding: @item-padding * 0.75;
     border-radius: 50%;
   }
+
+  .can-show-marking &__action.is-full-width,
+  .can-show-marking &__feedback.is-full-width {
+    margin-right: @icon-size + (@item-margin * 2) + ((@item-padding * 0.75) * 2);
+
+    .dir-rtl & {
+      margin-right: inherit;
+      margin-left: @icon-size + (@item-margin * 2) + ((@item-padding * 0.75) * 2);
+    }
+  }
 }
