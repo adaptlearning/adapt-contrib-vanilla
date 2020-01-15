@@ -249,6 +249,84 @@
         }
       },
 
+      "_menu": {
+        "type": "object",
+        "required": false,
+        "title": "Menu",
+        "properties": {
+          "menu-item": {
+            "title": "Menu item colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item background colour"
+          },
+          "menu-item-inverted": {
+            "title": "Menu item colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item foreground colour"
+          },
+          "menu-item-border-color": {
+            "title": "Menu item border colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item border colour"
+          },
+          "menu-item-progress": {
+            "title": "Menu item progress colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item progress fill colour"
+          },
+          "menu-item-progress-inverted": {
+            "title": "Menu item progress colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item progress background colour"
+          },
+          "menu-item-progress-border": {
+            "title": "Menu item progress border colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item progres border colour"
+          },
+          "menu-item-btn-color": {
+            "title": "Menu item button colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item button background colour"
+          },
+          "menu-item-btn-color-inverted": {
+            "title": "Menu item button colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item button foreground colour"
+          },
+          "menu-item-btn-color-hover": {
+            "title": "Menu item button colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item button background colour when hovered over"
+          },
+          "menu-item-btn-color-inverted-hover": {
+            "title": "Menu item button colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Menu item button foreground colour when hovered over"
+          }
+        }
+      },
+
       "_nav": {
         "type": "object",
         "required": false,
