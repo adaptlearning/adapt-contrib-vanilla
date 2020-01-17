@@ -44,7 +44,12 @@
     }
   }
 
-  &__slider-image-container {
+  &__strapline-btn.is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  &.has-img-zoom &__slider-image-container {
     .img-zoom();
   }
 }

@@ -10,7 +10,7 @@ define([
       this.setStyles();
 
       this.listenTo(Adapt, {
-        "device:resize": this.onDeviceResize,
+        "device:changed": this.onDeviceResize,
         "remove": this.remove
       });
     },
@@ -28,7 +28,8 @@ define([
     setStyles: function() {
       this.setClasses();
       this.setBackgroundImage();
-      this.setMinHeight();
+      this.setBackgroundStyles();
+      this.setMinimumHeight();
       this.setCustomStyles();
     },
 
@@ -54,36 +55,56 @@ define([
           backgroundImage = backgroundImages._small;
       }
 
-      if (!backgroundImage) return;
-
-      this.$el
-        .addClass("has-bg-image")
-        .css("background-image", "url(" + backgroundImage + ")");
+      if (backgroundImage) {
+        this.$el
+          .addClass("has-bg-image")
+          .css("background-image", "url(" + backgroundImage + ")");
+      } else {
+        this.$el
+          .removeClass("has-bg-image")
+          .css("background-image", "");
+      }
     },
 
-    setMinHeight: function() {
-      var minHeights = this.model.get("_minHeight");
+    setBackgroundStyles: function () {
+      var styles = this.model.get("_backgroundStyles");
 
-      if (!minHeights) return;
+      if (!styles) return;
 
-      var minHeight;
+      this.$el.css({
+        'background-repeat': styles._backgroundRepeat,
+        'background-size': styles._backgroundSize,
+        'background-position': styles._backgroundPosition
+      });
+    },
+
+    setMinimumHeight: function() {
+      var minimumHeights = this.model.get("_minimumHeights");
+
+      if (!minimumHeights) return;
+
+      var minimumHeight;
 
       switch (Adapt.device.screenSize) {
         case "large":
-          minHeight = minHeights._large;
+          minimumHeight = minimumHeights._large;
           break;
         case "medium":
-          minHeight = minHeights._medium;
+          minimumHeight = minimumHeights._medium;
           break;
         default:
-          minHeight = minHeights._small;
+          minimumHeight = minimumHeights._small;
       }
 
-      if (!minHeight) return;
-
-      this.$el
-        .addClass('has-min-height')
-        .css("min-height", minHeight + "px");
+      if (minimumHeight) {
+        this.$el
+          .addClass("has-min-height")
+          .css("min-height", minimumHeight + "px");
+      } else {
+        this.$el
+          .removeClass("has-min-height")
+          .css("min-height", "");
+      }
     },
 
     setCustomStyles: function() {},

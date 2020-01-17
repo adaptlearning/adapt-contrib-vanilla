@@ -3,6 +3,19 @@
     margin-top: @item-margin;
   }
 
+  &__transcript-btn {
+    padding: @item-padding;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: 5px;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
   &__transcript-body-inline {
     margin-top: @item-margin;
     padding: @item-padding;

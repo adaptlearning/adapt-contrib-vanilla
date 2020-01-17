@@ -3,43 +3,32 @@
   // Numbers
   // --------------------------------------------------
   &__number-container {
-    min-height: 2.5em;
+    min-height: 2.5rem;
   }
 
   &__number,
   &__number-selection,
   &__number-model-answer {
-    height: 2.5em;
-    width: 2.5em;
+    height: 2.5rem;
+    width: 2.5rem;
     line-height: 2.5;
     text-align: center;
     border-radius: 50%;
   }
 
-  // &__number {
-  //   background-color: @item-color;
-  //   color: @item-color-inverted;
-  // }
-
   &__widget:not(.is-disabled) .slider__number {
     cursor: pointer;
-
-    // .no-touch &:hover {
-    //   background-color: @item-color-hover;
-    //   color: @item-color-inverted-hover;
-    //   .transition(background-color @duration ease-in, color @duration ease-in;);
-    // }
   }
 
   &__number-selection {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    background-color: @item-color;
+    color: @item-color-inverted;
     z-index: 5;
   }
 
   &__number-model-answer {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    background-color: @item-color;
+    color: @item-color-inverted;
     z-index: 10;
   }
   // --------------------------------------------------
@@ -80,6 +69,16 @@
   &__fill {
     background-color: @item-color;
     box-shadow: none;
+  }
+
+  &__handle {
+    background-image: none;
+    border: 0;
+    box-shadow: 0 2px 5px fade(@black, 30%);
+  }
+
+  &__handle:after {
+    background-image: none;
   }
 }
 // --------------------------------------------------

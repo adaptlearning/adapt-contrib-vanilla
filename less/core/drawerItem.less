@@ -18,7 +18,13 @@
     color: @disabled-inverted;
   }
 
+  &__item-btn.is-selected {
+    background-color: @drawer-item-selected;
+    color: @drawer-item-inverted-selected;
+  }
+
   &__item-title {
+    margin-bottom: @drawer-title-margin;
     .drawer-item-title;
     text-align: left;
 
@@ -28,6 +34,7 @@
   }
 
   &__item-body {
+    margin-bottom: @drawer-body-margin;
     .drawer-item-body;
     text-align: left;
 

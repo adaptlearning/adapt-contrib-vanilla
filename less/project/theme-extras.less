@@ -1,0 +1,104 @@
+// --------------------------------------------------
+// --------------------------------------------------
+// contentObject
+// --------------------------------------------------
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Hide nav back button
+// --------------------------------------------------
+.hide-nav-back-btn .nav__back-btn {
+  .u-display-none;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// --------------------------------------------------
+// Block
+// --------------------------------------------------
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Custom class added to block
+// Aligns child components centrally on the vertical axis
+// --------------------------------------------------
+.block.align-vert-center .component__container {
+  align-items: center;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Extend width of block to max page width
+// --------------------------------------------------
+.block.extend-container .block__inner {
+  max-width: @max-width;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Remove top padding from block
+// --------------------------------------------------
+.block.remove-top-padding .block__inner {
+  padding-top: 0;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Remove bottom padding from block
+// --------------------------------------------------
+.block.remove-bottom-padding .block__inner {
+  padding-bottom: 0;
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Background color mixin
+// Add to block to enable
+// e.g. 'block-color black'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.block-color-mixin(transparent-light, black);
+.block-color-mixin(transparent-dark, white);
+.block-color-mixin(black, white);
+.block-color-mixin(background, background-inverted);
+
+.block-color-mixin(@color, @color-inverted) {
+
+.block-color.@{color} {
+  background-color: @@color;
+  color: @@color-inverted;
+
+  .block,
+  .component {
+    &__title,
+    &__body a,
+    &__instruction a {
+      color: @@color-inverted;
+    }
+  }
+
+  .pagelevelprogress {
+    &__indicator {
+      border-color: @@color-inverted;
+    }
+    &__indicator-inner {
+      background-color: @@color;
+    }
+    &__indicator-bar {
+      background-color: @@color-inverted;
+    }
+  }
+
+  .narrative {
+    &__progress {
+      background-color: fade(@@color-inverted, 50%);
+    }
+
+    &__progress.is-selected {
+      background-color: @@color-inverted;
+    }
+  }
+}
+
+}
+// --------------------------------------------------
