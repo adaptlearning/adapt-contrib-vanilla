@@ -12,7 +12,7 @@
     color: @btn-color-inverted;
     border-radius: 5px;
 
-    .no-touch &:not(.is-disabled):hover {
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
       background-color: @btn-color-hover;
       color: @btn-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
@@ -22,6 +22,12 @@
   &-text.is-disabled {
     background-color: @disabled;
     color: @disabled-inverted;
+  }
+
+  &-text.is-locked {
+    background-color: @disabled;
+    color: @disabled-inverted;
+    cursor: not-allowed;
   }
 
   &__marking {
