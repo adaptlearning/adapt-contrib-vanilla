@@ -10,7 +10,7 @@
     text-align: left;
     background-color: @item-color;
     color: @item-color-inverted;
-    border-radius: 5px;
+    border-radius: @item-border-radius;
 
     .no-touch &:not(.is-selected):hover {
       background-color: @item-color-hover;
@@ -51,7 +51,7 @@
     padding: @item-padding;
     background-color: @item-color;
     color: @item-color-inverted;
-    border-radius: 5px;
+    border-radius: @item-border-radius;
   }
 
   &.has-img-zoom &__item-image-container {
