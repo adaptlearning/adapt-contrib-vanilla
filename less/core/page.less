@@ -2,10 +2,16 @@
   max-width: inherit;
   .l-container-padding(@page-padding-ver, @page-padding-hoz);
 
-  &__header.has-bg-image {
-    background-position: center top;
+  &.has-bg-image {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top;
+  }
+
+  &__header.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
   }
 
   &__header-inner {
@@ -15,6 +21,7 @@
   &__title {
     margin-bottom: @page-title-margin;
     .page-title;
+    color: @heading-color;
   }
 
   &__subtitle {

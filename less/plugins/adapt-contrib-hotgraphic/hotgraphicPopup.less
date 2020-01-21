@@ -3,7 +3,7 @@
   // Increase toolbar padding top so the browser outline of the
   // item title is not hidden by toolbar
   // --------------------------------------------------
-  &__inner.has-toolbar {
+  &__inner {
     padding-top: (@icon-size + (@icon-padding * 2)) + (@item-padding / 2);
   }
   // --------------------------------------------------
@@ -12,7 +12,7 @@
   &__close {
     margin: @btn-margin / 2;
     padding: @btn-padding / 2;
-    background-color: transparent;
+    background-color: @notify-icon;
     color: @notify-icon-inverted;
     border-radius: 50%;
 
@@ -23,21 +23,9 @@
     }
   }
 
-  // &__controls,
-  // &__close {
-  //   background-color: @notify-icon;
-  //   color: @notify-icon-inverted;
-
-  //   .no-touch &:hover {
-  //     background-color: @notify-icon-hover;
-  //     color: @notify-icon-inverted-hover;
-  //     .transition(background-color @duration ease-in, color @duration ease-in;);
-  //   }
-  // }
-
   &__item-title {
     margin-bottom: @notify-title-margin;
-    .item-title;
+    .notify-title;
   }
 
   &__item-body {
@@ -54,7 +42,7 @@
     }
   }
 
-  &__item-image-container {
+  .hotgraphic.has-img-zoom &__item-image-container {
     .img-zoom();
   }
 }

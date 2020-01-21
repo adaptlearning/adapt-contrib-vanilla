@@ -2,6 +2,7 @@
 // Variables
 // --------------------------------------------------
 @duration: 0.2s;
+@progress-duration: 0.5s;
 
 @animation-duration: 2000ms;
 @animation-easing: cubic-bezier(.23,1,.32,1);
@@ -10,8 +11,12 @@
 // --------------------------------------------------
 // Basic image zoom on hover animation
 // Apply to image container
+//
+// .img-zoom();
+// .img-zoom(@duration: .5s;);
+// .img-zoom(1.25; .1s; ease-out;);
 // --------------------------------------------------
-.img-zoom(@scale: 1.2; @duration: .25s; @easing: ease-in-out;) {
+.img-zoom(@scale: 1.1; @duration: .75s; @easing: ease-in-out;) {
   overflow: hidden;
 
   img {
@@ -114,10 +119,9 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
-//
+// Scale Pulse Animation
 // --------------------------------------------------
 .effect-scalePulse() {
-
   .keyframes(scalePulse; {
     0% { transform: none; }
     50% { transform: scale( 1.2, 1.2 ); }
@@ -125,9 +129,12 @@
   });
 
   .animation(scalePulse 0.5s 0s 1 normal ease-in-out none);
-
+  // name, duration, delay, iteration count, direction, timing-function, fill mode
 }
 // --------------------------------------------------
+
+
+
 
 
 // --------------------------------------------------
