@@ -255,74 +255,64 @@
         "title": "Menu",
         "properties": {
           "menu-item": {
-            "title": "Menu item colour",
+            "title": "Menu item background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item background colour"
+            "default": ""
           },
           "menu-item-inverted": {
-            "title": "Menu item colour - inverted",
+            "title": "Menu item foreground colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item foreground colour"
+            "default": ""
           },
           "menu-item-border-color": {
             "title": "Menu item border colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item border colour"
+            "default": ""
           },
           "menu-item-progress": {
-            "title": "Menu item progress colour",
+            "title": "Menu item progress fill colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item progress fill colour"
+            "default": ""
           },
           "menu-item-progress-inverted": {
-            "title": "Menu item progress colour - inverted",
+            "title": "Menu item progress background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item progress background colour"
+            "default": ""
           },
           "menu-item-progress-border": {
             "title": "Menu item progress border colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item progres border colour"
+            "default": ""
           },
           "menu-item-btn-color": {
-            "title": "Menu item button colour",
+            "title": "Menu item button background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item button background colour"
+            "default": ""
           },
           "menu-item-btn-color-inverted": {
-            "title": "Menu item button colour - inverted",
+            "title": "Menu item button foreground colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item button foreground colour"
+            "default": ""
           },
           "menu-item-btn-color-hover": {
-            "title": "Menu item button colour - hover",
+            "title": "Menu item button background hover colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item button background colour when hovered over"
+            "default": ""
           },
           "menu-item-btn-color-inverted-hover": {
-            "title": "Menu item button colour - inverted hover",
+            "title": "Menu item button foreground hover colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Menu item button foreground colour when hovered over"
+            "default": ""
           }
         }
       },
