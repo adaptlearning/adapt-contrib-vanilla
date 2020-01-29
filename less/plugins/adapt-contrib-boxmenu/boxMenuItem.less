@@ -1,8 +1,10 @@
 .boxmenu-item {
   &__inner {
-    margin: 0 @item-margin (@item-margin * 2);
-    padding: @item-padding;
-    border: 1px solid @item-color;
+    margin: 0 0.5rem 1rem;
+    padding: 1rem;
+    background-color: @menu-item;
+    color: @menu-item-inverted;
+    border: 1px solid @menu-item-border-color;
     border-radius: @item-border-radius;
   }
 
@@ -26,10 +28,22 @@
 
   &__duration {
     margin-bottom: @menu-item-duration-margin;
+    .menu-item-body;
   }
 
   &__progress {
     margin-bottom: @menu-item-progress-margin;
+  }
+
+  &__button {
+    background-color: @menu-item-btn-color;
+    color: @menu-item-btn-color-inverted;
+
+    .no-touch &:not(.is-disabled):hover {
+      background-color: @menu-item-btn-color-hover;
+      color: @menu-item-btn-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
   }
 
   &.has-img-zoom &__image-container {
