@@ -1,0 +1,45 @@
+.drawer {
+  &__item-btn {
+    display: block;
+    padding: @item-padding;
+    background-color: @drawer-item;
+    border-bottom: 1px solid @drawer-item-hover;
+    color: @drawer-item-inverted;
+
+    .no-touch &:not(.is-disabled):hover {
+      background-color: @drawer-item-hover;
+      color: @drawer-item-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__item-btn.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__item-btn.is-selected {
+    background-color: @drawer-item-selected;
+    color: @drawer-item-inverted-selected;
+  }
+
+  &__item-title {
+    margin-bottom: @drawer-title-margin;
+    .drawer-item-title;
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+
+  &__item-body {
+    margin-bottom: @drawer-body-margin;
+    .drawer-item-body;
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+}
