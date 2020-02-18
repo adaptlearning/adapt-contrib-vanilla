@@ -1,0 +1,196 @@
+// --------------------------------------------------
+// Colour definitions
+// --------------------------------------------------
+@blue: #36CDE8;
+@blueDark: #263944;
+@grey: #9096A0;
+@greyDark: #4D4D4D;
+
+// These variables are used to change the colour of text
+// Primary use is for altering the text colour over a background image
+// See ../project/theme-extras.less for block mixin
+// --------------------------------------------------
+@transparent-light: transparent;
+@transparent-dark: transparent;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Body, link, and heading colour
+// --------------------------------------------------
+@font-color: @greyDark;
+@font-color-inverted: @white;
+
+@link: @font-color;
+@link-inverted: @font-color-inverted;
+
+@link-hover: @link;
+@link-inverted-hover: @link-inverted;
+
+@heading-color: @blue;
+@heading-color-inverted: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Items - components
+// --------------------------------------------------
+@item-color: @blue;
+@item-color-inverted: @white;
+
+@item-color-hover: darken(@item-color, 10%);
+@item-color-inverted-hover: @item-color-inverted;
+
+@item-color-selected: darken(@item-color, 20%);
+@item-color-inverted-selected: @item-color-inverted;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Visited - presentation components
+// --------------------------------------------------
+@visited: #727272;
+@visited-inverted: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Buttons
+// --------------------------------------------------
+@btn-color: @greyDark;
+@btn-color-inverted: @white;
+
+@btn-color-hover: darken(@btn-color, 10%);
+@btn-color-inverted-hover: @btn-color-inverted;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Disabled - question components
+// --------------------------------------------------
+@disabled: #DDDDDD;
+@disabled-inverted: @black;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Validation states - question marking
+// --------------------------------------------------
+@validation-success: #065f28;
+@validation-success-inverted: @white;
+
+@validation-error: #ff0000;
+@validation-error-inverted: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Progress
+// --------------------------------------------------
+@progress: @grey;
+@progress-inverted: @white;
+@progress-border: @grey;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Menu
+// --------------------------------------------------
+@menu-item: @white;
+@menu-item-inverted: @font-color;
+@menu-item-border-color: @item-color;
+
+@menu-item-progress: @progress;
+@menu-item-progress-inverted: @progress-inverted;
+@menu-item-progress-border: @progress-border;
+
+@menu-item-btn-color: @btn-color;
+@menu-item-btn-color-inverted: @btn-color-inverted;
+
+@menu-item-btn-color-hover: @btn-color-hover;
+@menu-item-btn-color-inverted-hover: @btn-color-inverted-hover;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Navigation
+// --------------------------------------------------
+@nav: @white;
+@nav-inverted: @grey;
+
+@nav-icon: @nav-inverted;
+@nav-icon-inverted: @nav;
+
+@nav-icon-hover: darken(@nav-icon, 10%);
+@nav-icon-inverted-hover: @nav-icon-inverted;
+
+@nav-progress: @nav-icon-inverted;
+@nav-progress-inverted: @nav-icon;
+@nav-progress-border: @nav-icon-inverted;
+
+@nav-progress-hover: @nav-icon-inverted-hover;
+@nav-progress-inverted-hover: @nav-progress-inverted;
+@nav-progress-border-hover: @nav-progress-border;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Notify
+// --------------------------------------------------
+@notify: @blue;
+@notify-inverted: @white;
+
+@notify-link: @notify-inverted;
+
+@notify-link-hover: @notify-link;
+
+@notify-btn: @btn-color-inverted;
+@notify-btn-inverted: @btn-color;
+
+@notify-btn-hover: darken(@notify-btn, 10%);
+@notify-btn-inverted-hover: @notify-btn-inverted;
+
+@notify-icon: @notify;
+@notify-icon-inverted: @notify-inverted;
+
+@notify-icon-hover: darken(@notify-icon, 10%);
+@notify-icon-inverted-hover: @notify-icon-inverted;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Drawer
+// --------------------------------------------------
+@drawer: @blueDark;
+@drawer-inverted: @white;
+
+@drawer-link: @drawer-inverted;
+
+@drawer-link-hover: @drawer-link;
+
+@drawer-icon: @drawer;
+@drawer-icon-inverted: @drawer-inverted;
+
+@drawer-icon-hover: darken(@drawer-icon, 10%);
+@drawer-icon-inverted-hover: @drawer-icon-inverted;
+
+@drawer-item: @drawer;
+@drawer-item-inverted: @drawer-inverted;
+
+@drawer-item-hover: darken(@drawer-item, 10%);
+@drawer-item-inverted-hover: @drawer-item-inverted;
+
+@drawer-item-selected: darken(@drawer-item, 20%);
+@drawer-item-inverted-selected: @drawer-item-inverted;
+
+@drawer-progress: @drawer-item-inverted;
+@drawer-progress-inverted: @drawer-item;
+@drawer-progress-border: @drawer-item-inverted;
+
+@drawer-progress-hover: @drawer-item-inverted-hover;
+@drawer-progress-inverted-hover: @drawer-item-hover;
+@drawer-progress-border-hover: @drawer-progress-border;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Background
+// --------------------------------------------------
+@background: @black;
+@background-inverted: @white;
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Shadow
+// --------------------------------------------------
+@shadow: @black;
+@shadow-inverted: @white;
+// --------------------------------------------------

@@ -1,0 +1,24 @@
+.glossary {
+  &__item-description {
+    padding: @item-padding;
+    border-bottom: 1px solid @drawer-item-hover;
+    color: @drawer-item-inverted;
+  }
+
+  &__item-description a {
+    .link-text;
+    color: @drawer-link;
+
+    .no-touch &:hover {
+      color: @drawer-link-hover;
+      .transition(color @duration ease-in);
+    }
+  }
+
+  &__item-not-found {
+    padding: @item-padding;
+    line-height: @title-line-height;
+    border-bottom: 1px solid @drawer-item-hover;
+    color: @drawer-item-inverted;
+  }
+}

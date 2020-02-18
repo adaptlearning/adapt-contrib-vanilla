@@ -1,53 +1,31 @@
-// Article styling
-// ===============
-
 .article {
-    background-color: @background-color;
+  &.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
 
-    .article-inner {
-        padding: @article-padding-top 0 @article-padding-bottom;
-        @media all and (max-width: (@device-width-large + 20px)) {
-            padding: (@article-padding-top / 2) 0 (@article-padding-bottom / 2);
-        }
-        @media all and (max-width: (@device-width-small + 20px)) {
-            padding: (@article-padding-top / 3) 0 (@article-padding-bottom / 3);
-        }
-    }
+  &__header-inner {
+    .l-container-padding(@article-header-padding-ver, @article-header-padding-hoz);
+  }
 
-    .article-header {
-        max-width: @device-width-large;
-        margin: auto;
-        padding: 0;
+  &__title {
+    margin-bottom: @article-title-margin;
+    .article-title;
+    color: @heading-color;
+  }
 
-        @media all and (max-width: (@device-width-large + 20px)) {
-            padding: 0 20px;
-        }
+  &__body {
+    margin-bottom: @article-body-margin;
+  }
 
-        @media all and (max-width: (@device-width-small + 20px)) {
-            padding: 0 10px;
-        }
-    }
+  &__instruction {
+    margin-bottom: @article-instruction-margin;
+    .instruction-text;
+  }
 
-    .article-title {
-        margin-bottom: @article-title-margin-bottom;
-        color: @title-color;
-        text-align: left;
-
-        .dir-rtl & {
-            text-align: right;
-        }
-    }
-
-    .article-title-inner {
-        margin-bottom: @article-title-margin-bottom;
-    }
-
-    .article-body {
-        margin-bottom: @article-body-margin-bottom;
-    }
-
-    .article-instruction {
-        margin-bottom: @article-instruction-margin-bottom;
-        .instruction-text;
-    }
+  &__body a,
+  &__instruction a {
+    .link-text;
+  }
 }

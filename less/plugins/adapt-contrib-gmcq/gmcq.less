@@ -1,160 +1,71 @@
-.gmcq-component {
-    .gmcq-item {
-        @media all and (max-width:@device-width-medium) {
-            width:100%;
-            &.even, &.odd {
-                label {
-                    margin-left:0%;
-                    margin-right:0%;
-                }
-            }
-        }
-    }
+.gmcq {
+  &__item-label {
+    margin: @item-margin;
+  }
 
-    &.col-4 {
-        .gmcq-item {
-            width: 25%;
+  // -------------------------------------------------
+  // Layout #1
+  // --------------------------------------------------
+  &__item-option {
+    margin-top: @item-margin;
+    padding: @item-padding / 2;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: @item-border-radius;
+  }
 
-            &.item-1, &.item-2 {
-                label {
-                    margin-left: 2.5%;
-                    margin-right: 2.5%;
-                }
-            }
-        
-            @media all and (max-width:@device-width-medium) {
-                width:100%;
-                &.even, &.odd {
-                    label {
-                        margin-left:0%;
-                        margin-right:0%;
-                    }
-                }
-            }
-        }
-    }
+  .no-touch &__item-label:not(.is-disabled):not(.is-selected):hover .gmcq__item-option {
+    background-color: @item-color-hover;
+    color: @item-color-inverted-hover;
+    .transition(background-color @duration ease-in, color @duration ease-in;);
+  }
 
-    .gmcq-item label {
-        color: @item-text-color;
-        border: none;
-        background-color: transparent;
+  &__item-label.is-disabled .gmcq__item-option {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
 
-        .gmcq-answer-icon {
-            color: @item-color;
-        }
+  &__item-label.is-selected .gmcq__item-option {
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
+  }
 
-        &.selected {
-            color: @item-color-selected;
-            background-color: transparent;
-            
-            .gmcq-item-icon {
-                color: @item-color-selected;
+  &__item-state {
+    min-height: @icon-size;
+  }
 
-                &.gmcq-correct-icon {
-                    color:@validation-success;
-                }
+  &__item-text {
+    margin-top: @item-margin;
+    text-align: center;
+  }
+  // --------------------------------------------------
 
-                &.gmcq-incorrect-icon {
-                    color:@validation-error;
-                }
-            }
-            
-            .gmcq-item-inner {
-                color: @item-color-selected;
-            }
-        }
+  // --------------------------------------------------
+  // Layout #2
+  // --------------------------------------------------
+  // &__item-option {
+  //   position: relative;
+  // }
 
-        &.disabled {
-            .gmcq-item-icon {
-                color: @item-color-disabled;
-            }
-            .gmcq-item-inner {
-                color: @item-color-disabled;
-            }
-        }
-    }
+  // &__item-state {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: @item-padding;
+  //   .transform(translateY(-50%));
 
-    .gmcq-item-inner {
-        margin-left: @icon-size * 2;
-        color: @item-color;
-        padding-bottom: @item-padding-bottom;
-        padding-top: @item-padding-top;
-        padding-left: 0;
-        padding-right: 0;
-        .dir-rtl & {
-            margin-left: inherit;
-            margin-right: @icon-size * 2;
-        }
-    }
+  //   .dir-rtl & {
+  //     left: inherit;
+  //     right: @item-padding;
+  //   }
+  // }
 
-    .gmcq-item input {
-        filter: alpha(opacity=0); // ie8 fix for opacity on input
-        opacity: 0;
-    }
+  // &__item-text {
+  //   padding: @item-padding @item-padding @item-padding (@icon-size + (@item-padding * 2));
 
-    .gmcq-correct-icon {
-        color: @validation-success;
-    }
-
-    .gmcq-incorrect-icon {
-        color: @validation-error;
-    }
-
-    .gmcq-widget {
-        &.show-user-answer {
-            label.selected {
-                .gmcq-item-inner {
-                    color: @item-color-selected;
-                }
-            }
-        }
-
-        &.show-correct-answer {
-            label.selected {
-                .gmcq-item-inner {
-                    color: @item-color-selected;
-                }
-            }
-        }
-
-        &.disabled {
-            .gmcq-item label.selected.disabled {
-                background-color: transparent;
-                .gmcq-item-icon {
-                    &.gmcq-correct-icon {
-                        color:@validation-success;
-                    }
-                    &.gmcq-incorrect-icon {
-                        color:@validation-error;
-                    }
-                }
-            }
-
-            .gmcq-item label.disabled {
-                color: @item-color-disabled;
-                background-color: transparent;
-                border-color: @item-border-color-disabled;
-                border: none;
-            }
-        }
-    }
-}
-
-.no-touch {
-    .gmcq-component {
-        .gmcq-widget {
-            &:not(.disabled) {
-                .gmcq-item label:hover {
-                    color: @item-color-hover;
-                    background-color: transparent;
-                    .gmcq-item-icon {
-                        color: @item-color-hover;
-                    }
-                    .gmcq-item-inner {
-                        color: @item-color-hover;
-                    }
-                }
-            }
-        }
-    }
+  //   .dir-rtl & {
+  //     padding-left: @item-padding;
+  //     padding-right: @icon-size + (@item-padding * 2);
+  //   }
+  // }
+  // --------------------------------------------------
 }

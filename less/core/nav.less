@@ -1,0 +1,18 @@
+.nav {
+  background-color: @nav;
+
+  &__inner {
+    max-width: inherit;
+  }
+
+  &__btn {
+    background-color: @nav-icon;
+    color: @nav-icon-inverted;
+
+    .no-touch &:hover {
+      background-color: @nav-icon-hover;
+      color: @nav-icon-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+}
