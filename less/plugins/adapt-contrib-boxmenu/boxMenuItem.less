@@ -39,7 +39,7 @@
     background-color: @menu-item-btn-color;
     color: @menu-item-btn-color-inverted;
 
-    .no-touch &:not(.is-disabled):hover {
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
       background-color: @menu-item-btn-color-hover;
       color: @menu-item-btn-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
