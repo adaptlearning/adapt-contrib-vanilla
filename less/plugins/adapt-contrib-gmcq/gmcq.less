@@ -14,7 +14,8 @@
     border-radius: @item-border-radius;
   }
 
-  .no-touch &__item-label:not(.is-disabled):not(.is-selected):hover .gmcq__item-option {
+  .no-touch &__item-label:not(.is-disabled):not(.is-selected):hover .gmcq__item-option,
+  html:not(.a11y-disable-focusoutline) .gmcq__item-input:focus + &__item-label &__item-option {
     background-color: @item-color-hover;
     color: @item-color-inverted-hover;
     .transition(background-color @duration ease-in, color @duration ease-in;);
