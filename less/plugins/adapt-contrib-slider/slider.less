@@ -81,4 +81,17 @@
     background-image: none;
   }
 }
+
+// --------------------------------------------------
+// Rangeslider focus styles
+// --------------------------------------------------
+input[type='range']:focus + .rangeslider .rangeslider__handle {
+  html:not(.a11y-disable-focusoutline) & {
+    box-shadow: 0 2px 5px fade(@black, 60%);
+  }
+
+  html.a11y-disable-focusoutline & {
+    box-shadow: 0 2px 5px fade(@black, 30%);
+  }
+}
 // --------------------------------------------------
