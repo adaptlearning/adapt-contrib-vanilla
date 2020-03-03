@@ -4,13 +4,11 @@
 // --------------------------------------------------
 // --------------------------------------------------
 
-// --------------------------------------------------
 // Hide nav back button
 // --------------------------------------------------
 .hide-nav-back-btn .nav__back-btn {
   .u-display-none;
 }
-// --------------------------------------------------
 
 // --------------------------------------------------
 // --------------------------------------------------
@@ -18,38 +16,66 @@
 // --------------------------------------------------
 // --------------------------------------------------
 
-// --------------------------------------------------
 // Custom class added to block
 // Aligns child components centrally on the vertical axis
 // --------------------------------------------------
 .block.align-vert-center .component__container {
   align-items: center;
 }
-// --------------------------------------------------
 
+// Reverses the visual layout of the components above the medium breakpoint
+// e.g. Left layout components would still render first in the DOM order
+// but visually appear on the right hand side above the medium breakpoint. The
+// components woud vertically stack as per the DOM order below the breakpoint
 // --------------------------------------------------
+.block.reverse-desktop-order .component {
+  @media (min-width: @device-width-medium) {
+    &__container {
+      flex-direction: row-reverse;
+    }
+
+    &.is-left {
+      padding-right: inherit;
+      padding-left: 0.5rem;
+
+      .dir-rtl & {
+        padding-left: inherit;
+        padding-right: 0.5rem;
+      }
+    }
+
+    &.is-right {
+      // margin-left: auto;
+      padding-left: inherit;
+      padding-right: 0.5rem;
+
+      .dir-rtl & {
+        // margin-left: inherit;
+        // margin-right: auto;
+        padding-right: inherit;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
 // Extend width of block to max page width
 // --------------------------------------------------
 .block.extend-container .block__inner {
   max-width: @max-width;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Remove top padding from block
 // --------------------------------------------------
 .block.remove-top-padding .block__inner {
   padding-top: 0;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Remove bottom padding from block
 // --------------------------------------------------
 .block.remove-bottom-padding .block__inner {
   padding-bottom: 0;
 }
-// --------------------------------------------------
 
 // --------------------------------------------------
 // Background color mixin
