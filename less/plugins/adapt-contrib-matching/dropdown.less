@@ -7,7 +7,8 @@
     background-color: @item-color;
     color: @item-color-inverted;
 
-    .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
+    .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover,
+    html:not(.a11y-disable-focusoutline) &:focus {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
