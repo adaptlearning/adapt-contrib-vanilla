@@ -31,9 +31,56 @@
 
 // --------------------------------------------------
 // --------------------------------------------------
-// Animations
+// _onScreen Animations
 // --------------------------------------------------
 // --------------------------------------------------
+
+// Add an overflow to the animation container to stop horizontal scrolling
+// on smaller devices
+// https://github.com/adaptlearning/adapt_framework/issues/2675
+// --------------------------------------------------
+.has-animation {
+  overflow: hidden;
+}
+
+// Fade in
+// --------------------------------------------------
+.fade-in-before > div {
+  opacity: 0;
+  transition: all @animation-duration @animation-easing;
+}
+
+.fade-in-after > div {
+  opacity: 1;
+}
+
+// _onScreen animation mixin for 'fade-in-top', 'fade-in-bottom', 
+// 'fade-in-left', and 'fade-in-right'
+// --------------------------------------------------
+.on-screen-anim(fade-in-top; 0; 1; translateY(-100px); translateY(0));
+.on-screen-anim(fade-in-bottom; 0; 1; translateY(100px); translateY(0));
+.on-screen-anim(fade-in-left; 0; 1; translateX(-100px); translateX(0));
+.on-screen-anim(fade-in-right; 0; 1; translateX(100px); translateX(0));
+
+.on-screen-anim(@selector; @opacity-before; @opacity-after; @transform-before; @transform-after) {
+  .@{selector}-before > div {
+    opacity: @opacity-before;
+    transform: @transform-before;
+    transition: all @animation-duration @animation-easing;
+  }
+
+  .@{selector}-after > div {
+    opacity: @opacity-after;
+    transform: @transform-after;
+  }
+}
+
+// --------------------------------------------------
+// --------------------------------------------------
+// Keyframe Animations
+// --------------------------------------------------
+// --------------------------------------------------
+
 .keyframes(@name; @args) {
   @keyframes @name { @args(); }
 }
@@ -41,85 +88,8 @@
 .animation(@args) {
   animation: @args;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
-// Fade in
-// --------------------------------------------------
-.fade-in-before {
-  opacity: 0;
-  // transform: translate3d(0, 0, 0);
-  transition: all @animation-duration @animation-easing;
-}
-
-.fade-in-after {
-  opacity: 1;
-  // transform: translate3d(0, 0, 0);
-}
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Fade in from top
-// --------------------------------------------------
-.fade-in-top-before {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: all @animation-duration @animation-easing;
-}
-
-.fade-in-top-after {
-  opacity: 1;
-  transform: translateY(0);
-}
-// --------------------------------------------------
-
-// --------------------------------------------------
-// From in from bottom
-// --------------------------------------------------
-.fade-in-bottom-before {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all @animation-duration @animation-easing;
-}
-
-.fade-in-bottom-after {
-  opacity: 1;
-  transform: translateY(0);
-}
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Fade in from left
-// --------------------------------------------------
-.fade-in-left-before {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all @animation-duration @animation-easing;
-}
-
-.fade-in-left-after {
-  opacity: 1;
-  transform: translateY(0);
-}
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Fade in from right
-// --------------------------------------------------
-.fade-in-right-before {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all @animation-duration @animation-easing;
-}
-
-.fade-in-right-after {
-  opacity: 1;
-  transform: translateY(0);
-}
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Scale Pulse Animation
+// scalePulse animation
 // --------------------------------------------------
 .effect-scalePulse() {
   .keyframes(scalePulse; {
@@ -131,435 +101,29 @@
   .animation(scalePulse 0.5s 0s 1 normal ease-in-out none);
   // name, duration, delay, iteration count, direction, timing-function, fill mode
 }
+
+// bounceLeftOnce animation
 // --------------------------------------------------
+.effect-bounceLeftOnce() {
+  .keyframes(bounceLeftOnce; {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  });
 
+  .animation(bounceLeftOnce 0.5s 0s 1 normal ease-in-out none);
+  // name, duration, delay, iteration count, direction, timing-function, fill mode
+}
 
-
-
-
+// bounceRightOnce animation
 // --------------------------------------------------
-// Previous animations / transitions - to sort
-// --------------------------------------------------
-// @-webkit-keyframes scalePulse {
-// 	0% { -webkit-transform: none; }
-// 	50% { -webkit-transform: scale( 1.2, 1.2 ); }
-// 	100% { -webkit-transform: none; }
-// }
-
-// @keyframes scalePulse {
-// 	0% { transform: none; }
-// 	50% { transform: scale( 1.2, 1.2 ); }
-// 	100% { transform: none; }
-// }
-
-// .effect-scalePulse() {
-//   -webkit-animation-name: scalePulse;
-// 	-webkit-animation-duration: 0.6s;
-// 	-webkit-animation-delay: 0s;
-// 	-webkit-animation-iteration-count: 1;
-// 	-webkit-animation-direction: normal; // reverse / alternate / alternate-reverse
-// 	-webkit-animation-timing-function: ease-in-out;
-//   -webkit-animation-fill-mode: none; // forwards / backwards
-
-// 	animation-name: scalePulse;
-// 	animation-duration: 0.6s;
-// 	animation-delay: 0s;
-// 	animation-iteration-count: 1;
-// 	animation-direction: normal; // reverse / alternate / alternate-reverse
-// 	animation-timing-function: ease-in-out;
-//   animation-fill-mode: none; // forwards / backwards
-// }
-
-// --------------------------------------------------
-
-
-
-// // ====================================================================================================
-// // Core Animations
-// // ====================================================================================================
-
-// // Timings
-// // ==================================================
-// @duration: 0.2s; // for consistency with vanilla
-// @colorGlobalDuration: 0.2s;
-// @widthGlobalDuration: 0.6s;
-// @allGlobalDuration: 0.6s;
-
-// // Core colour transitions
-// // ==================================================
-// .transition-all-colors (@duration: @colorGlobalDuration) {
-// 	-webkit-transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
-// 	-moz-transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
-// 	-ms-transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
-// 	transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
-// }
-
-// .transition-background-color (@duration: @colorGlobalDuration) {
-// 	-webkit-transition: background-color @duration ease-in;
-// 	-moz-transition: background-color @duration ease-in;
-// 	-ms-transition: background-color @duration ease-in;
-// 	transition: background-color @duration ease-in;
-// }
-
-// .transition-border-color (@duration: @colorGlobalDuration) {
-// 	-webkit-transition: border-color @duration ease-in;
-// 	-moz-transition: border-color @duration ease-in;
-// 	-ms-transition: border-color @duration ease-in;
-// 	transition: border-color @duration ease-in;
-// }
-
-// .transition-color (@duration: @colorGlobalDuration) {
-// 	-webkit-transition: color @duration ease-in;
-// 	-moz-transition: color @duration ease-in;
-// 	-ms-transition: color @duration ease-in;
-// 	transition: color @duration ease-in;
-// }
-
-// // Core object transitions
-// // ==================================================
-// .transition-all (@duration: @allGlobalDuration) {
-// 	-webkit-transition: all @duration ease-in;
-// 	-moz-transition: all @duration ease-in;
-// 	-ms-transition: all @duration ease-in;
-// 	transition: all @duration ease-in;
-// }
-
-// .transition-width (@duration: @widthGlobalDuration) {
-// 	-webkit-transition: width @duration ease-in;
-// 	-moz-transition: width @duration ease-in;
-// 	-ms-transition: width @duration ease-in;
-// 	transition: width @duration ease-in;
-// }
-
-
-
-// // Core effects
-// // ==================================================
-
-// // Pulse - used in page-level-progress.less
-// // ==================================================
-// @-webkit-keyframes pulse {
-// 	from { }
-// 	to { background-color: rgba(255,255,255,1); }
-// }
-
-// @keyframes pulse {
-// 	from { }
-// 	to { background-color: rgba(255,255,255,1); }
-// }
-
-// .effect-pulse (@delay: @widthGlobalDuration) {
-// 	animation-name: pulse;
-// 	animation-duration: 0.6s;
-// 	animation-delay: @widthGlobalDuration;
-// 	animation-iteration-count: 6;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
-
-
-
-// // bounceDownTwice - used in page.less
-// // ==================================================
-// @-webkit-keyframes bounceDownTwice {
-// 	0% { -webkit-transform: translateY(0px); }
-// 	100% { -webkit-transform: translateY(5px); }
-// }
-
-// @keyframes bounceDownTwice {
-// 	0% { transform: translateY(0px); }
-// 	100% { transform: translateY(5px); }
-// }
-
-// .effect-bounceDownTwice () {
-// 	animation-name: bounceDownTwice;
-// 	animation-duration: 0.25s;
-// 	animation-iteration-count: 4;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
-
-// // bounceLeftTwice - used in navigation.less
-// // ==================================================
-// @-webkit-keyframes bounceLeftTwice {
-// 	0% { -webkit-transform: translateX(0px); }
-// 	100% { -webkit-transform: translateX(-5px); }
-// }
-
-// @keyframes bounceLeftTwice {
-// 	0% { transform: translateX(0px); }
-// 	100% { transform: translateX(-5px); }
-// }
-
-// .effect-bounceLeftTwice () {
-// 	animation-name: bounceLeftTwice;
-// 	animation-duration: 0.25s;
-// 	animation-iteration-count: 4;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
-
-// // bounceLeftOnce - used in articleBlockSlider.less, narrative.less, and quicknav.less
-// // ==================================================
-// @-webkit-keyframes bounceLeftOnce {
-// 	0% { -webkit-transform: translateX(0px); }
-// 	100% { -webkit-transform: translateX(-5px); }
-// }
-
-// @keyframes bounceLeftOnce {
-// 	0% { transform: translateX(0px); }
-// 	100% { transform: translateX(-5px); }
-// }
-
-// .effect-bounceLeftOnce () {
-// 	animation-name: bounceLeftOnce;
-// 	animation-duration: 0.25s;
-// 	animation-iteration-count: 2;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
-
-// // bounceRightOnce - used in articleBlockSlider.less, narrative.less, and quicknav.less
-// // ==================================================
-// @-webkit-keyframes bounceRightOnce {
-// 	0% { -webkit-transform: translateX(0px); }
-// 	100% { -webkit-transform: translateX(5px); }
-// }
-
-// @keyframes bounceRightOnce {
-// 	0% { transform: translateX(0px); }
-// 	100% { transform: translateX(5px); }
-// }
-
-// .effect-bounceRightOnce () {
-// 	animation-name: bounceRightOnce;
-// 	animation-duration: 0.25s;
-// 	animation-iteration-count: 2;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
-
-// // bounceLeftOnceSmall - used in hotgraphic.less
-// // ==================================================
-// @-webkit-keyframes bounceLeftOnceSmall {
-// 	0% { -webkit-transform: translateX(0px); }
-// 	100% { -webkit-transform: translateX(-2px); }
-// }
-
-// @keyframes bounceLeftOnceSmall {
-// 	0% { transform: translateX(0px); }
-// 	100% { transform: translateX(-2px); }
-// }
-
-// .effect-bounceLeftOnceSmall () {
-// 	animation-name: bounceLeftOnceSmall;
-// 	animation-duration: 0.25s;
-// 	animation-iteration-count: 2;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
-
-// // bounceRightOnceSmall - used in hotgraphic.less
-// // ==================================================
-// @-webkit-keyframes bounceRightOnceSmall {
-// 	0% { -webkit-transform: translateX(0px); }
-// 	100% { -webkit-transform: translateX(2px); }
-// }
-
-// @keyframes bounceRightOnceSmall {
-// 	0% { transform: translateX(0px); }
-// 	100% { transform: translateX(2px); }
-// }
-
-// .effect-bounceRightOnceSmall () {
-// 	animation-name: bounceRightOnceSmall;
-// 	animation-duration: 0.2s;
-// 	animation-iteration-count: 2;
-// 	animation-direction: alternate;
-// 	animation-timing-function: ease-in-out;
-// }
-
-
-
-
-
-
-// // ====================================================================================================
-// // Animations
-// // ====================================================================================================
-// .effect(@name, @delay, @duration, @count, @direction, @fill, @timing) {
-// 	-webkit-animation-name: @name;
-// 	-webkit-animation-delay: @delay;
-// 	-webkit-animation-duration: @duration;
-// 	-webkit-animation-iteration-count: @count;
-// 	-webkit-animation-direction: @direction;
-// 	-webkit-animation-fill-mode: @fill;
-// 	-webkit-animation-timing-function: @timing;
-
-// 	animation-name: @name;
-// 	animation-delay: @delay;
-// 	animation-duration: @duration;
-// 	animation-iteration-count: @count;
-// 	animation-direction: @direction;
-// 	animation-fill-mode: @fill;
-// 	animation-timing-function: @timing;
-// }
-
-// // Key Frames
-// // ==================================================
-
-// // Fade In
-// // ==================================================
-// @-webkit-keyframes animFadeIn {
-// 	0% { opacity: 0; }
-// 	100% { opacity: 1; }
-// }
-
-// @keyframes animFadeIn {
-// 	0% { opacity: 0; }
-// 	100% { opacity: 1; }
-// }
-
-// // Fade Out
-// // ==================================================
-// @-webkit-keyframes animFadeOut {
-// 	0% { opacity: 1; }
-// 	100% { opacity: 0; }
-// }
-
-// @keyframes animFadeOut {
-// 	0% { opacity: 1; }
-// 	100% { opacity: 0; }
-// }
-
-// // 0% - 100% Width
-// // ==================================================
-// @-webkit-keyframes animWidthFill {
-// 	0% { width: 0%; }
-// 	100% { width: 100%; }
-// }
-
-// @keyframes animWidthFill {
-// 	0% { width: 0%; }
-// 	100% { width: 100%; }
-// }
-
-// // 100% - 0% Width
-// // ==================================================
-// @-webkit-keyframes animWidthEmpty {
-// 	0% { width: 100%; }
-// 	100% { width: 0%; }
-// }
-
-// @keyframes animWidthEmpty {
-// 	0% { width: 100%; }
-// 	100% { width: 0%; }
-// }
-
-// // Scale Animation
-// // ==================================================
-// @-webkit-keyframes animScale {
-// 	0% { -webkit-transform: scale(0); opacity: 0; }
-// 	100% { -webkit-transform: scale(1); opacity: 1; }
-// }
-
-// @keyframes animScale {
-// 	0% { transform: scale(0); opacity: 0; }
-// 	100% { transform: scale(1); opacity: 1; }
-// }
-
-// // Fade In and Translate from Left Direction
-// // ==================================================
-// @-webkit-keyframes animFadeInLeft {
-// 	0% { -webkit-transform: translateX(-20px); opacity: 0; }
-// 	100% { -webkit-transform: translateX(0); opacity: 1; }
-// }
-
-// @keyframes animFadeInLeft {
-// 	0% { transform: translateX(-20px); opacity: 0; }
-// 	100% { transform: translateX(0); opacity: 1; }
-// }
-
-// // Fade Out and Translate from Left Direction
-// // ==================================================
-// @-webkit-keyframes animFadeOutLeft {
-// 	0% { -webkit-transform: translateX(-20px); opacity: 1; }
-// 	100% { -webkit-transform: translateX(0); opacity: 0; }
-// }
-
-// @keyframes animFadeOutLeft {
-// 	0% { transform: translateX(-20px); opacity: 1; }
-// 	100% { transform: translateX(0); opacity: 0; }
-// }
-
-// // Fade In and Translate from Right Direction
-// // ==================================================
-// @-webkit-keyframes animFadeInRight {
-// 	0% { -webkit-transform: translateX(20px); opacity: 0; }
-// 	100% { -webkit-transform: translateX(0); opacity: 1; }
-// }
-
-// @keyframes animFadeInRight {
-// 	0% { transform: translateX(20px); opacity: 0; }
-// 	100% { transform: translateX(0); opacity: 1; }
-// }
-
-// // Fade Out and Translate from Right Direction
-// // ==================================================
-// @-webkit-keyframes animFadeOutRight {
-// 	0% { -webkit-transform: translateX(20px); opacity: 1; }
-// 	100% { -webkit-transform: translateX(0); opacity: 0; }
-// }
-
-// @keyframes animFadeOutRight {
-// 	0% { transform: translateX(20px); opacity: 1; }
-// 	100% { transform: translateX(0); opacity: 0; }
-// }
-
-// // Fade In and Translate from Top Direction
-// // ==================================================
-// @-webkit-keyframes animFadeInTop {
-// 	0% { -webkit-transform: translateY(-20px); opacity: 0; }
-// 	100% { -webkit-transform: translateY(0); opacity: 1; }
-// }
-
-// @keyframes animFadeInTop {
-// 	0% { transform: translateY(-20px); opacity: 0; }
-// 	100% { transform: translateY(0); opacity: 1; }
-// }
-
-// // Fade Out and Translate from Top Direction
-// // ==================================================
-// @-webkit-keyframes animFadeOutTop {
-// 	0% { -webkit-transform: translateY(0); opacity: 1; }
-// 	100% { -webkit-transform: translateY(-20px); opacity: 0; }
-// }
-
-// @keyframes animFadeOutTop {
-// 	0% { transform: translateY(0); opacity: 1; }
-// 	100% { transform: translateY(-20px); opacity: 0; }
-// }
-
-// // Fade In and Translate from Bottom Direction
-// // ==================================================
-// @-webkit-keyframes animFadeInBottom {
-// 	0% { -webkit-transform: translateY(20px); opacity: 0; }
-// 	100% { -webkit-transform: translateY(0); opacity: 1; }
-// }
-
-// @keyframes animFadeInBottom {
-// 	0% { transform: translateY(20px); opacity: 0; }
-// 	100% { transform: translateY(0); opacity: 1; }
-// }
-
-// // Fade Out and Translate from Bottom Direction
-// // ==================================================
-// @-webkit-keyframes animFadeOutBottom {
-// 	0% { -webkit-transform: translateY(0); opacity: 1; }
-// 	100% { -webkit-transform: translateY(20px); opacity: 0; }
-// }
-
-// @keyframes animFadeOutBottom {
-// 	0% { transform: translateY(0); opacity: 1; }
-// 	100% { transform: translateY(20px); opacity: 0; }
-// }
+.effect-bounceRightOnce() {
+  .keyframes(bounceRightOnce; {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  });
+
+  .animation(bounceRightOnce 0.5s 0s 1 normal ease-in-out none);
+  // name, duration, delay, iteration count, direction, timing-function, fill mode
+}
