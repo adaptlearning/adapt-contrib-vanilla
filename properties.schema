@@ -15,14 +15,14 @@
             "title": "Font colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#4D4D4D",
             "help": "Global body font colour"
           },
           "font-color-inverted": {
             "title": "Font colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Global body font colour inverted. Either a lightened/darkened alternative to Font colour."
           },
           "link": {
@@ -57,14 +57,14 @@
             "title": "Heading colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#36CDE8",
             "help": "Global title colour"
           },
           "heading-color-inverted": {
             "title": "Heading colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Global title colour inverted. Either a lightened/darkened alternative to Title colour."
           }
         }
@@ -79,14 +79,14 @@
             "title": "Item colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#36CDE8",
             "help": "Item background colour"
           },
           "item-color-inverted": {
             "title": "Item colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Item foreground colour"
           },
           "item-color-hover": {
@@ -121,14 +121,14 @@
             "title": "Visited colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#727272",
             "help": "Item visited background colour"
           },
           "visited-inverted": {
             "title": "Visited colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Item visited foreground colour"
           }
         }
@@ -143,14 +143,14 @@
             "title": "Button colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#4D4D4D",
             "help": "Question button background colour"
           },
           "btn-color-inverted": {
             "title": "Button colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Question button foreground colour"
           },
           "btn-color-hover": {
@@ -171,14 +171,14 @@
             "title": "Disabled colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#DDDDDD",
             "help": "Question button disabled background colour"
           },
           "disabled-inverted": {
             "title": "Disabled colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#000000",
             "help": "Question button disabled foreground colour"
           }
         }
@@ -193,28 +193,28 @@
             "title": "Validation success colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#065f28",
             "help": "Question marking success background colour"
           },
           "validation-success-inverted": {
             "title": "Validation success colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Question marking success foreground colour"
           },
           "validation-error": {
             "title": "Validation error colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#ff0000",
             "help": "Question marking error background colour"
           },
           "validation-error-inverted": {
             "title": "Validation error colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Question marking error foreground colour"
           }
         }
@@ -229,21 +229,21 @@
             "title": "Progress colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#9096A0",
             "help": "Global progress fill colour"
           },
           "progress-inverted": {
             "title": "Progress colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Global progress background colour"
           },
           "progress-border": {
             "title": "Progress border colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#9096A0",
             "help": "Global progress border colour"
           }
         }
@@ -326,14 +326,14 @@
             "title": "Nav colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Navigation background colour"
           },
           "nav-inverted": {
             "title": "Nav colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#9096A0",
             "help": "Navigation foreground colour"
           },
           "nav-icon": {
@@ -418,14 +418,14 @@
             "title": "Notify colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#36CDE8",
             "help": "Notify background colour"
           },
           "notify-inverted": {
             "title": "Notify colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Notify foreground colour"
           },
           "notify-link": {
@@ -510,14 +510,14 @@
             "title": "Drawer colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#263944",
             "help": "Drawer background colour"
           },
           "drawer-inverted": {
             "title": "Drawer colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": "Drawer foreground colour"
           },
           "drawer-link": {
@@ -658,28 +658,28 @@
             "title": "Background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#000000",
             "help": ""
           },
           "background-inverted": {
             "title": "Background colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#FFFFFF",
             "help": ""
           },
           "shadow": {
             "title": "Shadow colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#000000",
             "help": ""
           },
           "shadow-inverted": {
             "title": "Shadow colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#000000",
             "help": ""
           }
         }
