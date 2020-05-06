@@ -679,7 +679,7 @@
             "title": "Shadow colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#000000",
+            "default": "#FFFFFF",
             "help": ""
           }
         }
