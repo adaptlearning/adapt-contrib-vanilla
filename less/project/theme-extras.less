@@ -4,9 +4,17 @@
 // --------------------------------------------------
 // --------------------------------------------------
 
+// "_htmlClasses"
 // Hide nav back button
 // --------------------------------------------------
 .hide-nav-back-btn .nav__back-btn {
+  .u-display-none;
+}
+
+// "_classes"
+// Hide the page header
+// --------------------------------------------------
+.hide-page-header .page__header {
   .u-display-none;
 }
 
@@ -21,6 +29,12 @@
 // --------------------------------------------------
 .block.align-vert-center .component__container {
   align-items: center;
+}
+
+// Aligns child components to the bottom of the parent block on the vertical axis
+// --------------------------------------------------
+.block.align-vert-bottom .component__container {
+  align-items: flex-end;
 }
 
 // Reverses the visual layout of the components above the medium breakpoint
@@ -64,14 +78,40 @@
 
 // Remove top padding from block
 // --------------------------------------------------
+.block.remove-padding-top .block__inner,
 .block.remove-top-padding .block__inner {
   padding-top: 0;
 }
 
 // Remove bottom padding from block
 // --------------------------------------------------
+.block.remove-padding-bottom .block__inner,
 .block.remove-bottom-padding .block__inner {
   padding-bottom: 0;
+}
+
+// Reduce the blocks top padding by half
+// --------------------------------------------------
+.block.reduce-padding-top .block__inner {
+  padding-top: @block-padding-ver / 2;
+}
+
+// Reduce the blocks bottom padding by half
+// --------------------------------------------------
+.block.reduce-padding-bottom .block__inner {
+  padding-bottom: @block-padding-ver / 2;
+}
+
+// Double the blocks top padding
+// --------------------------------------------------
+.block.increase-padding-top .block__inner {
+  padding-top: @block-padding-ver * 2;
+}
+
+// Double the blocks bottom padding
+// --------------------------------------------------
+.block.increase-padding-bottom .block__inner {
+  padding-bottom: @block-padding-ver * 2;
 }
 
 // --------------------------------------------------
