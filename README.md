@@ -31,6 +31,8 @@ The Adapt framework does not allow the installation of more than one theme at a 
 
 Unlike most Adapt plug-ins, the **Vanilla** theme has no attributes that are required to be configured in the course JSON files. There is, however, additional functionality available to apply background images and supporting styles for pages, articles and blocks as desired. These attributes are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/example.json) and available as configurable attributes in the Adapt authoring tool.
 
+Alongside this, the [*example.json*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/example.json#L86) contains a collection of custom classes that Adapt and the Vanilla theme support as standard. These classes are mostly designed to provide additional visual options to increase flexibility.
+
 The **Vanilla** theme also exposes [*colour variables*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/_defaults/colors.less) in the Adapt authoring tool for theme editing. This feature allows you to apply and save 'preset' theme styles.
 
 **\_vanilla** (object): The following attributes configure the defaults for **Vanilla**. These include **\_backgroundImage**, **\_backgroundStyles** and **\_minimumHeights**. Global attributes are available at page, article and block level.
@@ -80,13 +82,16 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 
 | Folder/File         | Description  |
 | :-------------      |:-------------|
-| 📁 js                | JavaScript files on which the theme depends |
-| 📁 less              | Location of any [LESS](http://lesscss.org/) based CSS files |
-| 📁 less/_defaults          | Location of configuration LESS files |
-| 📄 less/_defaults/colors.less | Location of global colour variables   |
-| 📁 less/core          | Location of Adapt Framework LESS file styles |
-| 📁 less/plugins          | Location of Adapt plugin LESS file styles |
-| 📁 less/project          | Location of additional LESS file styles |
+| 📁 assets                     | Optional global assets can be added here |
+| 📁 fonts                      | Optional global fonts can be added here |
+| 📁 js                         | JavaScript files on which the theme depends |
+| 📁 less                       | Location of any [LESS](http://lesscss.org/) based CSS files |
+| 📁 less/_defaults             | Location of configuration LESS files |
+| 📄 less/_defaults/colors.less | Location of global colour variables |
+| 📁 less/core                  | Location of Adapt Framework LESS file styles |
+| 📁 less/plugins               | Location of Adapt plugin LESS file styles |
+| 📁 less/project               | Location of additional LESS file styles |
+| 📁 templates                  | Optional global template overrides can be added here |
 
 ## Templates
 
