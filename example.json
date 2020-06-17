@@ -1,52 +1,23 @@
-Background images, styles, and minimum heights
+--------------------------------------------------
+JSON
+--------------------------------------------------
 
-    // contentObjects.json
-    "_vanilla": {
-        "_backgroundImage": {
-            "_large": "course/en/images/example.jpg",
-            "_medium": "course/en/images/example.jpg",
-            "_small": "course/en/images/example.jpg"
-        },
-        "_backgroundStyles": {
-            "_backgroundSize": "contain",
-            "_backgroundRepeat": "repeat",
-            "_backgroundPosition": "center center"
-        },
-        "_pageHeader": {
-            "_backgroundImage": {
-                "_large": "course/en/images/example.jpg",
-                "_medium": "course/en/images/example.jpg",
-                "_small": "course/en/images/example.jpg"
-            },
-            "_backgroundStyles": {
-                "_backgroundSize": "contain",
-                "_backgroundRepeat": "repeat",
-                "_backgroundPosition": "center center"
-            },
-            "_minimumHeights": {
-                "_large": 600,
-                "_medium": 400,
-                "_small": 200
-            }
-        }
-    }
+Background images, styles, and minimum heights json config
+--------------------------------------------------
 
-    // articles.json
-    "_vanilla": {
-        "_backgroundImage": {
-            "_large": "course/en/images/example.jpg",
-            "_medium": "course/en/images/example.jpg",
-            "_small": "course/en/images/example.jpg"
-        },
-        "_backgroundStyles": {
-            "_backgroundSize": "contain",
-            "_backgroundRepeat": "repeat",
-            "_backgroundPosition": "center center"
-        }
-    }
-
-    // blocks.json
-    "_vanilla": {
+contentObjects.json
+"_vanilla": {
+    "_backgroundImage": {
+        "_large": "course/en/images/example.jpg",
+        "_medium": "course/en/images/example.jpg",
+        "_small": "course/en/images/example.jpg"
+    },
+    "_backgroundStyles": {
+        "_backgroundSize": "contain",
+        "_backgroundRepeat": "repeat",
+        "_backgroundPosition": "center center"
+    },
+    "_pageHeader": {
         "_backgroundImage": {
             "_large": "course/en/images/example.jpg",
             "_medium": "course/en/images/example.jpg",
@@ -61,24 +32,133 @@ Background images, styles, and minimum heights
             "_large": 600,
             "_medium": 400,
             "_small": 200
-        },
-        // Divider Block - adds class to `.block` element
-        "_isDividerBlock": false
+        }
     }
+}
 
-On screen animation classes
-
-    "_onScreen": {
-        "_isEnabled": true,
-        "_comment": "Supported classes = 'fade-in' | 'fade-in-left' | 'fade-in-right' | 'fade-in-top' | 'fade-in-bottom'. Additional classes can be used but they must be predefined in one of the Less files",
-        "_classes": "fade-in-bottom",
-        "_percentInviewVertical": 50
+articles.json
+"_vanilla": {
+    "_backgroundImage": {
+        "_large": "course/en/images/example.jpg",
+        "_medium": "course/en/images/example.jpg",
+        "_small": "course/en/images/example.jpg"
+    },
+    "_backgroundStyles": {
+        "_backgroundSize": "contain",
+        "_backgroundRepeat": "repeat",
+        "_backgroundPosition": "center center"
     }
+}
+
+blocks.json
+"_vanilla": {
+    "_backgroundImage": {
+        "_large": "course/en/images/example.jpg",
+        "_medium": "course/en/images/example.jpg",
+        "_small": "course/en/images/example.jpg"
+    },
+    "_backgroundStyles": {
+        "_backgroundSize": "contain",
+        "_backgroundRepeat": "repeat",
+        "_backgroundPosition": "center center"
+    },
+    "_minimumHeights": {
+        "_large": 600,
+        "_medium": 400,
+        "_small": 200
+    },
+    // Divider Block - adds class to `.block` element
+    "_isDividerBlock": false
+}
+
+On screen animation json config
+--------------------------------------------------
+
+blocks.json / components.json
+"_onScreen": {
+    "_isEnabled": true,
+    "_comment": "Supported classes = 'fade-in' | 'fade-in-left' | 'fade-in-right' | 'fade-in-top' | 'fade-in-bottom'. Additional classes can be used but they must be predefined in one of the Less files",
+    "_classes": "fade-in-bottom",
+    "_percentInviewVertical": 50
+}
+
+--------------------------------------------------
+Classes
+--------------------------------------------------
+
+Content Object classes
+--------------------------------------------------
+
+"_htmlClasses": "hide-nav-back-btn",
+"_comment": "Hides the navigation back button on the page.",
+
+"_classes": "hide-page-header",
+"_comment": "Hides the page header on the page",
 
 Block classes
+--------------------------------------------------
 
-    "_comment": "Aligns child components centrally on the vertical axis",
-    "_classes": "align-vert-center"
+"_classes": "align-vert-center",
+"_comment": "Aligns the blocks child components centrally on the vertical axis.",
 
-    "_comment": "Background color mixin. 'block-color' class is set up to be a common class that can be used for style generic overrides. The second class must match a predefined variable in the theme or added in Project Settings > Custom CSS/Less code.",
-    "_classes": "block-color black"
+"_classes": "align-vert-bottom",
+"_comment": "Aligns child components to the bottom of the parent block on the vertical axis.",
+
+"_classes": "reverse-desktop-order",
+"_comment": "Reverses the visual layout of the components above the medium breakpoint (default is 760px). e.g. Left layout components would still render first in the DOM order but visually appear on the right-hand side above the medium breakpoint. The components would vertically stack as per the DOM order below the breakpoint.",
+
+"_classes": "extend-container",
+"_comment": "Extend width of block to max page width (default is 1440px).",
+
+"_classes": "remove-padding-top | remove-top-padding",
+"_comment": "Removes the top padding from block.",
+
+"_classes": "remove-padding-bottom | remove-bottom-padding",
+"_comment": "Removes the bottom padding from block.",
+
+"_classes": "reduce-padding-top",
+"_comment": "Reduce the blocks top padding by half",
+
+"_classes": "reduce-padding-bottom",
+"_comment": "Reduce the blocks bottom padding by half",
+
+"_classes": "increase-padding-top",
+"_comment": "Double the blocks top padding",
+
+"_classes": "increase-padding-bottom",
+"_comment": "Double the blocks bottom padding",
+
+"_classes": "block-color",
+"_comment": "Sets up the block solid background colour mixin. Combine with one of the following classes e.g. 'block-color black'. Note: the following class must be a predefined variable. Mixin can be extended to include client colours.",
+
+"_classes": "transparent-light",
+"_comment": "Sets the background colour of the block to transparent and changes the font colour to black. Useful for displaying text over a light background image.",
+
+"_classes": "transparent-dark",
+"_comment": "Sets the background colour of the block to transparent and changes the font colour to white. Useful for displaying text over a dark background image.",
+
+"_classes": "black",
+"_comment": "Sets the background colour of the block to black and changes the font colour to white.",
+
+"_classes": "background",
+"_comment": "Sets the background colour of the block to use the variable @background (default is black) and changes the font colour to use the variable @background-inverted (default is white). These variables can be changed in the ‘_colors.less’ file.",
+
+Component classes
+--------------------------------------------------
+
+Accordion item
+"_classes": "align-image-left",
+"_comment": "Aligns the image to the left of the body text on desktop, defaults to underneath on smaller screens.",
+
+"_classes": "align-image-right",
+"_comment": "Aligns the image to the right of the body text on desktop, defaults to underneath on smaller screens.",
+
+Hotgraphic item
+"_classes": "align-image-left",
+"_comment": "Align the hotgraphic pop up image to the left on desktop.",
+
+"_classes": "hide-desktop-image",
+"_comment": "Hide the hotgraphic pop up image on desktop.",
+
+"_classes": "hide-popup-image",
+"_comment": "Hide the hotgraphic pop up image for all screen sizes",
