@@ -18,6 +18,38 @@
   .u-display-none;
 }
 
+// Header color mixin
+// Add to menu/page to enable
+// e.g. 'header-color transparent-dark'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.header-color-mixin(background, background-inverted);
+.header-color-mixin(transparent-light, font-color);
+.header-color-mixin(transparent-dark, font-color-inverted);
+
+.header-color-mixin(@color, @color-inverted) {
+
+.header-color.@{color} {
+  .menu,
+  .page {
+    &__header {
+      background-color: @@color;
+    }
+  }
+  .menu,
+  .page {
+    &__title,
+    &__subtitle,
+    &__body,
+    &__body a,
+    &__instruction,
+    &__instruction a {
+     color: @@color-inverted;
+    }
+  }
+}
+}
+
 // --------------------------------------------------
 // --------------------------------------------------
 // Block
