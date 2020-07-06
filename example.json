@@ -95,6 +95,18 @@ Content Object classes
 "_classes": "hide-page-header",
 "_comment": "Hides the page header on the page",
 
+"_classes": "header-color",
+"_comment": "Sets up the header solid background colour mixin. Combine with one of the following classes e.g. 'header-color background'. Note: the following class must be a predefined variable. Mixin can be extended to include client colours. Can be set for menu and/or page header.",
+
+"_classes": "transparent-light",
+"_comment": "Sets the background colour of the header to transparent and changes the font colour to @font-color. Useful for displaying text over a light background image.",
+
+"_classes": "transparent-dark",
+"_comment": "Sets the background colour of the header to transparent and changes the font colour to @font-color-inverted. Useful for displaying text over a dark background image.",
+
+"_classes": "background",
+"_comment": "Sets the background colour of the header to use the variable @background (default is black) and changes the font colour to use the variable @background-inverted (default is white). These variables can be changed in the ‘_colors.less’ file.",
+
 Block classes
 --------------------------------------------------
 
