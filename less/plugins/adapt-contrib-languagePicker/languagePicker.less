@@ -30,3 +30,48 @@
   }
 }
 // --------------------------------------------------
+
+// Language picker notify confirmation override
+// Resolves https://github.com/adaptlearning/adapt_framework/issues/2818 
+// Uncomment, amend and extend mixin to cover languages / fonts required. 
+// --------------------------------------------------
+// .notify-lp-mixin(en, @body-family, @title-family, @btn-family);
+// .notify-lp-mixin(de, Impact, Impact, Impact);
+// .notify-lp-mixin(ar, Arial, Arial, Arial);
+
+// .notify-lp-mixin(@language, @body, @title, @btn) {
+
+// .notify.is-lang-@{language} .notify {
+//    &__popup {
+//     font-family: @body;
+//   }
+
+//   &__title {
+//     font-family: @title;
+//   }
+
+//   &__btn {
+//     font-family: @btn;
+//   }
+// }
+
+// }
+
+// Language picker drawer title override 
+// Resolves https://github.com/adaptlearning/adapt_framework/issues/2818 
+// Uncomment, amend and extend mixin to cover languages / fonts required. 
+// --------------------------------------------------
+// .drawer-lp-mixin(en, @drawer-item-title-family);
+// .drawer-lp-mixin(de, Impact);
+// .drawer-lp-mixin(ar, Arial);
+
+// .drawer-lp-mixin(@language, @title) {
+
+// .languagepicker-drawer {
+//   &__item.is-@{language} &__title {
+//   // &__item-btn[data-language='@{language}'] &__title {
+//     font-family: @title;
+//   }
+// }
+
+// }

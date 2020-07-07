@@ -19,6 +19,14 @@ body {
   font-weight: @body-weight;
   line-height: @body-line-height;
   color: @font-color;
+
+  // Set up a language specific font override. 
+  // This will need to be uncommented out, duplicated and updated if there are 
+  // more languages that require overriding. All overrides must be duplicated 
+  // and added to each of the font mixins below.
+  // html[lang="de"] & {
+  //   font-family: Impact;
+  // }
 }
 
 .instruction-text() {
