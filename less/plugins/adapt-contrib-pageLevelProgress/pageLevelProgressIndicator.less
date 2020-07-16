@@ -1,35 +1,42 @@
+// Allows the progress lozenge to appear alongside the title
+// --------------------------------------------------
 .js-heading + .pagelevelprogress__indicator {
   display: inline-block;
   vertical-align: middle;
 }
 
-.menu,
-.menu-item,
-.page,
-.article,
-.block,
-.component {
-  &__title-inner {
-    display: inline;
-    vertical-align: middle;
+.pagelevelprogress__indicator {
+  & + .menu,
+  & + .menu-item,
+  & + .page,
+  & + .article,
+  & + .block,
+  & + .component {
+    &__title-inner {
+      display: inline;
+      vertical-align: middle;
+    }
   }
 }
 
-.pagelevelprogress__indicator {
-  border-color: @progress-border;
-}
-
-.pagelevelprogress__indicator-inner {
-  background-color: @progress-inverted;
-}
-
-.pagelevelprogress__indicator-bar {
-  background-color: @progress;
-  .transition(width @progress-duration linear);
-}
-
+// Global progress lozenge
 // --------------------------------------------------
-// Menu
+.pagelevelprogress {
+  &__indicator {
+    border-color: @progress-border;
+  }
+
+  &__indicator-inner {
+    background-color: @progress-inverted;
+  }
+
+  &__indicator-bar {
+    background-color: @progress;
+    .transition(width @progress-duration linear);
+  }
+}
+
+// Menu overrides
 // --------------------------------------------------
 .menu-item__progress {
   .pagelevelprogress__indicator {
@@ -44,10 +51,8 @@
     background-color: @menu-item-progress;
   }
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
-// Nav
+// Nav overrides
 // --------------------------------------------------
 .pagelevelprogress__nav-btn {
   .pagelevelprogress__indicator {
@@ -79,10 +84,8 @@
     }
   }
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
-// Drawer
+// Drawer overrides
 // --------------------------------------------------
 .pagelevelprogress__item-btn {
   .pagelevelprogress__indicator {
@@ -114,4 +117,3 @@
     }
   }
 }
-// --------------------------------------------------
