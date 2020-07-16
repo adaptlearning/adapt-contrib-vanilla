@@ -22,6 +22,52 @@
 @mejs-cc-size: 0.75rem;
 
 .mejs-container {
+
+  // Play icon override
+  // --------------------------------------------------
+  .mejs-overlay {
+    .mejs-overlay-button {
+      .transform(translate(-50%,-50%));
+      height: (@icon-size * 2) + @icon-padding;
+      width: (@icon-size * 2) + @icon-padding;
+      margin: 0;
+      padding: @icon-padding / 2;
+      background: none;
+      box-shadow: 0 0 0 3px @white;
+      border-radius: 50%;
+      color: @white;
+      opacity: .75;
+
+      @media (min-width: @device-width-small) {
+        height: (@icon-size * 3) + @icon-padding;
+        width: (@icon-size * 3) + @icon-padding;
+      }
+    }
+
+    .invert-play-icon & .mejs-overlay-button {
+      color: @black;
+      box-shadow: 0 0 0 3px @black;
+    }
+
+    .no-touch &:hover .mejs-overlay-button {
+      background-position: 0 0;
+      opacity: 1;
+      .transition(opacity @duration ease-in);
+    }
+
+    .icon {
+      .icon-video-play;
+    }
+
+    .icon:before {
+      font-size: @icon-size * 2;
+
+      @media (min-width: @device-width-small) {
+        font-size: @icon-size * 3;
+      }
+    }
+  }
+
   // Colour overrides
   // --------------------------------------------------
   .mejs-controls {
@@ -67,7 +113,7 @@
   }
 
   // Icon overrides
-  // icon classes must be defined in core/fonts/vanilla or
+  // Icon classes must be defined in core/fonts/vanilla or
   // a custom font must be set up in the theme
   // --------------------------------------------------
   .mejs-controls .mejs-play button {
