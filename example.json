@@ -174,3 +174,7 @@ Hotgraphic item
 
 "_classes": "hide-popup-image",
 "_comment": "Hide the hotgraphic pop up image for all screen sizes",
+
+Media
+"_classes": "invert-play-icon",
+"_comment": "Inverts the media player play icon from white to black",
