@@ -249,13 +249,13 @@
         "title": "Menu",
         "properties": {
           "menu-item": {
-            "title": "Menu item background colour",
+            "title": "Menu item colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": ""
           },
           "menu-item-inverted": {
-            "title": "Menu item background colour",
+            "title": "Menu item colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
