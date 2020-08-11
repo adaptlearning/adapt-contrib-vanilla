@@ -21,7 +21,11 @@
 }
 
 .component.is-left + .component.is-right {
-  @media (max-width: (@device-width-medium - .0625rem)) {
-    padding-top: @block-padding-ver;
+  // Converted media query to use min width to sync responsive trigger with js
+  // https://github.com/adaptlearning/adapt_framework/issues/2865
+  padding-top: @block-padding-ver;
+
+  @media (min-width: @device-width-medium) {
+    padding-top: 0;
   }
 }
