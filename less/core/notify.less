@@ -17,7 +17,7 @@
     margin-bottom: @notify-title-margin;
     .notify-title;
 
-    @media (max-width: @device-width-medium) {
+    @media (max-width: (@device-width-medium - .0625rem)) {
       padding-right: unit(@icon-size + @btn-margin + @btn-padding, rem);
 
       .dir-rtl & {
