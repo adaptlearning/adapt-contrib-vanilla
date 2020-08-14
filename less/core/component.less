@@ -18,10 +18,14 @@
   &__instruction a {
     .link-text;
   }
+}
 
-  @media (max-width: @device-width-medium) {
-    &.is-left {
-      padding-bottom: @block-padding-ver;
-    }
+.component.is-left + .component.is-right {
+  // Converted media query to use min width to sync responsive trigger with js
+  // https://github.com/adaptlearning/adapt_framework/issues/2865
+  padding-top: @block-padding-ver;
+
+  @media (min-width: @device-width-medium) {
+    padding-top: 0;
   }
 }
