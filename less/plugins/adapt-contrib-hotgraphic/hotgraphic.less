@@ -26,4 +26,39 @@
     text-align: center;
   }
   // --------------------------------------------------
+  // _useGraphicsAsPins config
+  // --------------------------------------------------
+  // _use
+  &__tile-item {
+    position: relative;
+    z-index: 4;
+
+    .hotgraphic__tile {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: fadeout(@item-color, 100%);
+        transition: background @duration ease-in;
+      } 
+    }
+
+    .no-touch &:hover {
+      z-index: 5;
+      
+      .hotgraphic__tile {
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+        box-shadow: 0 2px 5px fade(@black, 20%);
+        .transition(transform @duration ease-in, box-shadow @duration ease-in;);
+
+        &:before {
+          background: fadeout(@item-color, 85%);
+        }
+      }
+    }
+  }
 }
