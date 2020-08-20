@@ -21,9 +21,12 @@
   }
 
   &__number-selection {
-    background-color: @item-color;
-    color: @item-color-inverted;
+    background-color: @item-color-inverted;
+    border: 0.125rem solid @item-color;
+    box-sizing: border-box;
+    color: @item-color;
     z-index: 5;
+    line-height: 2.25rem;
   }
 
   &__number-model-answer {
@@ -67,11 +70,12 @@
   }
 
   &__fill {
-    background-color: @item-color;
+    background-color: @greyDark;
     box-shadow: none;
   }
 
   &__handle {
+    background-color: @item-color;
     background-image: none;
     border: 0;
     box-shadow: 0 2px 5px fade(@black, 30%);
