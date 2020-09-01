@@ -1,4 +1,3 @@
-// --------------------------------------------------
 // Smooths the font on the pixel level rather than the subpixel.
 // Switching from subpixel rendering to antialiasing for
 // light text on dark backgrounds makes it look lighter.
@@ -7,9 +6,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Globals
 // --------------------------------------------------
 body {
@@ -20,9 +17,9 @@ body {
   line-height: @body-line-height;
   color: @font-color;
 
-  // Set up a language specific font override. 
-  // This will need to be uncommented out, duplicated and updated if there are 
-  // more languages that require overriding. All overrides must be duplicated 
+  // Set up a language specific font override.
+  // This will need to be uncommented out, duplicated and updated if there are
+  // more languages that require overriding. All overrides must be duplicated
   // and added to each of the font mixins below.
   // html[lang="de"] & {
   //   font-family: Impact;
@@ -56,9 +53,7 @@ body {
     .transition(color @duration ease-in);
   }
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Menu header
 // --------------------------------------------------
 .menu-title() {
@@ -89,9 +84,7 @@ body {
   line-height: @menu-instruction-line-height;
   font-style: italic;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Menu item
 // --------------------------------------------------
 .menu-item-title() {
@@ -107,9 +100,7 @@ body {
   font-weight: @menu-item-body-weight;
   line-height: @menu-item-body-line-height;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Page header
 // --------------------------------------------------
 .page-title() {
@@ -140,9 +131,7 @@ body {
   line-height: @page-instruction-line-height;
   font-style: italic;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Page
 // --------------------------------------------------
 .article-title() {
@@ -172,9 +161,7 @@ body {
   font-weight: @notify-title-weight;
   line-height: @notify-title-line-height;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Drawer
 // --------------------------------------------------
 .drawer-item-title() {
@@ -197,9 +184,7 @@ body {
   font-weight: @resources-filter-btn-weight;
   line-height: @resources-filter-btn-line-height;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Components
 // --------------------------------------------------
 .item-title() {
@@ -224,9 +209,7 @@ body {
   font-weight: @pull-quote-body-weight;
   line-height: @pull-quote-body-line-height;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Left over - to sort
 // --------------------------------------------------
 // p {
@@ -252,4 +235,3 @@ body {
 // 	border: 0;
 // 	padding: 0;
 // }
-// --------------------------------------------------
