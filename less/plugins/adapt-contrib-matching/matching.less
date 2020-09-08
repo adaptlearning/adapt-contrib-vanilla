@@ -23,17 +23,13 @@
     }
   }
 
-  &__widget.is-disabled {
-    .matching__select-icon {
-      color: @disabled-inverted;
-    }
+  &__widget.is-disabled &__select-icon {
+    color: @disabled-inverted;
   }
 
-  // --------------------------------------------------
   // Error highlight
   // --------------------------------------------------
-  &__widget:not(.is-complete) .matching__select-container.has-error .dropdown__btn {
+  &__widget:not(.is-complete) &__select-container.has-error .dropdown__btn {
     box-shadow: 0 0 0 1px @validation-error inset;
   }
-  // --------------------------------------------------
 }
