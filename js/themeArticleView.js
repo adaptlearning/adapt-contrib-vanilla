@@ -1,7 +1,6 @@
 define([
-  "./themeView",
-  "core/js/adapt"
-], function(ThemeView, Adapt) {
+  './themeView'
+], function(ThemeView) {
 
   var ThemeArticleView = ThemeView.extend({
 
