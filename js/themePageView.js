@@ -31,10 +31,10 @@ define([
       var backgroundImage;
 
       switch (Adapt.device.screenSize) {
-        case "large":
+        case 'large':
           backgroundImage = backgroundImages._large;
           break;
-        case "medium":
+        case 'medium':
           backgroundImage = backgroundImages._medium;
           break;
         default:
@@ -43,12 +43,12 @@ define([
 
       if (backgroundImage) {
         $header
-          .addClass("has-bg-image")
-          .css("background-image", "url(" + backgroundImage + ")");
+          .addClass('has-bg-image')
+          .css('background-image', 'url(' + backgroundImage + ')');
       } else {
         $header
-          .removeClass("has-bg-image")
-          .css("background-image", "");
+          .removeClass('has-bg-image')
+          .css('background-image', '');
       }
     },
 
@@ -72,10 +72,10 @@ define([
       var minimumHeight;
 
       switch (Adapt.device.screenSize) {
-        case "large":
+        case 'large':
           minimumHeight = minimumHeights._large;
           break;
-        case "medium":
+        case 'medium':
           minimumHeight = minimumHeights._medium;
           break;
         default:
@@ -84,12 +84,12 @@ define([
 
       if (minimumHeight) {
         $header
-          .addClass("has-min-height")
-          .css("min-height", minimumHeight + "px");
+          .addClass('has-min-height')
+          .css('min-height', minimumHeight + 'px');
       } else {
         $header
-          .removeClass("has-min-height")
-          .css("min-height", "");
+          .removeClass('has-min-height')
+          .css('min-height', '');
       }
     },
 
