@@ -46,6 +46,12 @@
     }
   }
 
+  &__button.is-locked,
+  &__button.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
   &.has-img-zoom &__image-container {
     .img-zoom();
   }
