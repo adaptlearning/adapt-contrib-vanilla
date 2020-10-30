@@ -58,16 +58,24 @@ body {
 // --------------------------------------------------
 .menu-title() {
   font-family: @menu-title-family;
-  font-size: @menu-title-size;
+  font-size: @menu-title-size * @menu-title-mobile-percentage;
   font-weight: @menu-title-weight;
   line-height: @menu-title-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @menu-title-size;
+  }
 }
 
 .menu-subtitle() {
   font-family: @menu-subtitle-family;
-  font-size: @menu-subtitle-size;
+  font-size: @menu-subtitle-size * @menu-subtitle-mobile-percentage;
   font-weight: @menu-subtitle-weight;
   line-height: @menu-subtitle-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @menu-subtitle-size;
+  }
 }
 
 .menu-body() {
@@ -105,16 +113,24 @@ body {
 // --------------------------------------------------
 .page-title() {
   font-family: @page-title-family;
-  font-size: @page-title-size;
+  font-size: @page-title-size * @page-title-mobile-percentage;
   font-weight: @page-title-weight;
   line-height: @page-title-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @page-title-size;
+  }
 }
 
 .page-subtitle() {
   font-family: @page-subtitle-family;
-  font-size: @page-subtitle-size;
+  font-size: @page-subtitle-size * @page-subtitle-mobile-percentage;
   font-weight: @page-subtitle-weight;
   line-height: @page-subtitle-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @page-subtitle-size;
+  }
 }
 
 .page-body() {
@@ -136,30 +152,46 @@ body {
 // --------------------------------------------------
 .article-title() {
   font-family: @article-title-family;
-  font-size: @article-title-size;
+  font-size: @article-title-size * @article-title-mobile-percentage;
   font-weight: @article-title-weight;
   line-height: @article-title-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @article-title-size;
+  }
 }
 
 .block-title() {
   font-family: @block-title-family;
-  font-size: @block-title-size;
+  font-size: @block-title-size * @block-title-mobile-percentage;
   font-weight: @block-title-weight;
   line-height: @block-title-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @block-title-size;
+  }
 }
 
 .component-title() {
   font-family: @component-title-family;
-  font-size: @component-title-size;
+  font-size: @component-title-size * @component-title-mobile-percentage;
   font-weight: @component-title-weight;
   line-height: @component-title-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @component-title-size;
+  }
 }
 
 .notify-title() {
   font-family: @notify-title-family;
-  font-size: @notify-title-size;
+  font-size: @notify-title-size * @notify-title-mobile-percentage;
   font-weight: @notify-title-weight;
   line-height: @notify-title-line-height;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @notify-title-size;
+  }
 }
 
 // Drawer
