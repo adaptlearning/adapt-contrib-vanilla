@@ -1,0 +1,227 @@
+{
+  "$anchor": "vanilla-contentobject",
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "contentobject"
+    },
+    "with": {
+      "properties": {
+        "_vanilla": {
+          "type": "object",
+          "title": "Vanilla",
+          "default": {},
+          "properties": {
+            "_backgroundImage": {
+              "type": "object",
+              "title": "Page background image",
+              "default": {},
+              "properties": {
+                "_large": {
+                  "type": "string",
+                  "title": "Large",
+                  "description": "Large background image - used on desktop",
+                  "default": "",
+                  "_backboneForms": {
+                    "type": "Asset",
+                    "media": "image"
+                  }
+                },
+                "_medium": {
+                  "type": "string",
+                  "title": "Medium",
+                  "description": "Medium background image - used on tablet",
+                  "default": "",
+                  "_backboneForms": {
+                    "type": "Asset",
+                    "media": "image"
+                  }
+                },
+                "_small": {
+                  "type": "string",
+                  "title": "Small",
+                  "description": "Small background image - used on mobile",
+                  "default": "",
+                  "_backboneForms": {
+                    "type": "Asset",
+                    "media": "image"
+                  }
+                }
+              }
+            },
+            "_backgroundStyles": {
+              "type": "object",
+              "title": "Page background image styles",
+              "default": {},
+              "properties": {
+                "_backgroundRepeat": {
+                  "type": "string",
+                  "title": "Set if/how the background image repeats",
+                  "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically.",
+                  "default": "",
+                  "enum": [
+                    "repeat",
+                    "repeat-x",
+                    "repeat-y",
+                    "no-repeat"
+                  ],
+                  "_backboneForms": "Select"
+                },
+                "_backgroundSize": {
+                  "type": "string",
+                  "title": "Set the size of the background image",
+                  "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible.",
+                  "default": "",
+                  "enum": [
+                    "auto",
+                    "cover",
+                    "contain"
+                  ],
+                  "_backboneForms": "Select"
+                },
+                "_backgroundPosition": {
+                  "type": "string",
+                  "title": "Set the position of the background image",
+                  "description": "The first value is the horizontal position and the second value is the vertical.",
+                  "default": "",
+                  "enum": [
+                    "left top",
+                    "left center",
+                    "left bottom",
+                    "center top",
+                    "center center",
+                    "center bottom",
+                    "right top",
+                    "right center",
+                    "right bottom"
+                  ],
+                  "_backboneForms": "Select"
+                }
+              }
+            },
+            "_pageHeader": {
+              "type": "object",
+              "title": "Page header",
+              "default": {},
+              "properties": {
+                "_backgroundImage": {
+                  "type": "object",
+                  "title": "Page header background image",
+                  "default": {},
+                  "properties": {
+                    "_large": {
+                      "type": "string",
+                      "title": "Large",
+                      "description": "Large background image - used on desktop",
+                      "default": "",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "title": "Medium",
+                      "description": "Medium background image - used on tablet",
+                      "default": "",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "_small": {
+                      "type": "string",
+                      "title": "Small",
+                      "description": "Small background image - used on mobile",
+                      "default": "",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    }
+                  }
+                },
+                "_backgroundStyles": {
+                  "type": "object",
+                  "title": "Page header background image styles",
+                  "default": {},
+                  "properties": {
+                    "_backgroundRepeat": {
+                      "type": "string",
+                      "title": "Set if/how the background image repeats",
+                      "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically.",
+                      "default": "",
+                      "enum": [
+                        "repeat",
+                        "repeat-x",
+                        "repeat-y",
+                        "no-repeat"
+                      ],
+                      "_backboneForms": "Select"
+                    },
+                    "_backgroundSize": {
+                      "type": "string",
+                      "title": "Set the size of the background image",
+                      "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible.",
+                      "default": "",
+                      "enum": [
+                        "auto",
+                        "cover",
+                        "contain"
+                      ],
+                      "_backboneForms": "Select"
+                    },
+                    "_backgroundPosition": {
+                      "type": "string",
+                      "title": "Set the position of the background image",
+                      "description": "The first value is the horizontal position and the second value is the vertical.",
+                      "default": "",
+                      "enum": [
+                        "left top",
+                        "left center",
+                        "left bottom",
+                        "center top",
+                        "center center",
+                        "center bottom",
+                        "right top",
+                        "right center",
+                        "right bottom"
+                      ],
+                      "_backboneForms": "Select"
+                    }
+                  }
+                },
+                "_minimumHeights": {
+                  "type": "object",
+                  "title": "Page header minimum height",
+                  "default": {},
+                  "properties": {
+                    "_large": {
+                      "type": "number",
+                      "title": "Large",
+                      "description": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped",
+                      "default": 0
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "title": "Medium",
+                      "description": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped",
+                      "default": 0
+                    },
+                    "_small": {
+                      "type": "number",
+                      "title": "Small",
+                      "description": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped",
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
