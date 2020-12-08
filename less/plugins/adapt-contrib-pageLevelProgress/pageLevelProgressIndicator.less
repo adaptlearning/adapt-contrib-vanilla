@@ -73,7 +73,7 @@
 
 // Drawer overrides
 // --------------------------------------------------
-.pagelevelprogress__item-btn {
+.pagelevelprogress__item-btn:not(.is-disabled) {
   .pagelevelprogress__indicator {
     border-color: @drawer-progress-border;
   }
@@ -101,5 +101,19 @@
       background-color: @drawer-progress-hover;
       .transition(background-color @duration ease-in);
     }
+  }
+}
+
+.pagelevelprogress__item-btn.is-disabled {
+  .pagelevelprogress__indicator {
+    border-color: @disabled-inverted;
+  }
+
+  .pagelevelprogress__indicator-inner {
+    background-color: @disabled;
+  }
+
+  .pagelevelprogress__indicator-bar {
+    background-color: @disabled-inverted;
   }
 }
