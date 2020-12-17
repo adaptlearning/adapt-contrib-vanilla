@@ -112,30 +112,9 @@ define([
       var responsiveClasses = this.model.get('_responsiveClasses');
       if (!responsiveClasses) return;
 
-      var responsiveClassesLarge = responsiveClasses._large;
-      var responsiveClassesMedium = responsiveClasses._medium;
-      var responsiveClassesSmall = responsiveClasses._small;
-
       this.$el
-        .removeClass(responsiveClassesLarge)
-        .removeClass(responsiveClassesMedium)
-        .removeClass(responsiveClassesSmall);
-
-      var responsiveClass;
-
-      switch (Adapt.device.screenSize) {
-        case 'large':
-          responsiveClass = responsiveClasses._large;
-          break;
-        case 'medium':
-          responsiveClass = responsiveClasses._medium;
-          break;
-        default:
-          responsiveClass = responsiveClasses._small;
-          break;
-      }
-
-      if (responsiveClass) this.$el.addClass(responsiveClass);
+        .removeClass(Object.values(responsiveClasses))
+        .addClass(responsiveClasses[`_${Adapt.device.screenSize}`]);
     },
 
     setCustomStyles: function() {},
