@@ -742,6 +742,37 @@
                     }
                   }
                 },
+                "_responsiveClasses: {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Responsive classes",
+                  "properties": {
+                    "_large": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Large CSS class - used on desktop"
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Medium CSS class - used on tablet"
+                    },
+                    "_small": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Small CSS class - used on mobile"
+                    }
+                  }
+                },
                 "_pageHeader": {
                   "type": "object",
                   "required": false,
@@ -913,6 +944,37 @@
                       "help": "The first value is the horizontal position and the second value is the vertical."
                     }
                   }
+                },
+                "_responsiveClasses: {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Responsive classes",
+                  "properties": {
+                    "_large": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Large CSS class - used on desktop"
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Medium CSS class - used on tablet"
+                    },
+                    "_small": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Small CSS class - used on mobile"
+                    }
+                  }
                 }
               }
             }
@@ -1015,6 +1077,37 @@
                       "inputType": "Number",
                       "validators": ["number"],
                       "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                    }
+                  }
+                },
+                "_responsiveClasses: {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Responsive classes",
+                  "properties": {
+                    "_large": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Large CSS class - used on desktop"
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Medium CSS class - used on tablet"
+                    },
+                    "_small": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Small CSS class - used on mobile"
                     }
                   }
                 },

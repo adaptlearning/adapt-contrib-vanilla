@@ -64,6 +64,15 @@ Auto: The background image is displayed in its original size. Cover: Resize the 
 
 >>**\_small** (number): The minimum height should only be used in instances where the image container height needs to be greater than the content e.g. to prevent a background image being cropped.
 
+#### Global responsive classes
+>**_responsiveClasses_** (object): The responsive classes object adds the associated CSS class(es) to the container element at different device widths (`_large`, `_medium`, `_small`). The class(es) are removed between each device width.
+
+>>**\_large** (string): Custom CSS class that is applied at the large device width. 
+
+>>**\_medium** (string): Custom CSS class that is applied at the medium device width. 
+
+>>**\_small** (string): Custom CSS class that is applied at the small device width. 
+
 #### **contentObject.json**
 >**\_pageHeader** (object): The backgroundImage object that contains values for **\_large**, **\_medium** and **\_small**.
 
