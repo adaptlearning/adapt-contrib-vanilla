@@ -109,7 +109,7 @@ define([
     },
 
     setResponsiveClasses: function() {
-      var responsiveClasses = this.model.get('_responsiveClasses');
+      const responsiveClasses = this.model.get('_responsiveClasses');
       if (!responsiveClasses) return;
 
       this.$el
