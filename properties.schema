@@ -742,7 +742,7 @@
                     }
                   }
                 },
-                "_responsiveClasses: {
+                "_responsiveClasses": {
                   "type": "object",
                   "required": false,
                   "legend": "Responsive classes",
@@ -945,7 +945,7 @@
                     }
                   }
                 },
-                "_responsiveClasses: {
+                "_responsiveClasses": {
                   "type": "object",
                   "required": false,
                   "legend": "Responsive classes",
@@ -1080,7 +1080,7 @@
                     }
                   }
                 },
-                "_responsiveClasses: {
+                "_responsiveClasses": {
                   "type": "object",
                   "required": false,
                   "legend": "Responsive classes",
