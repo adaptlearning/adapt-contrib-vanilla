@@ -15,7 +15,7 @@
           "properties": {
             "_backgroundImage": {
               "type": "object",
-              "title": "Article background image",
+              "title": "Background image",
               "default": {},
               "properties": {
                 "_large": {
@@ -52,15 +52,16 @@
             },
             "_backgroundStyles": {
               "type": "object",
-              "title": "Article background image styles",
+              "title": "Background image styles",
               "default": {},
               "properties": {
                 "_backgroundRepeat": {
                   "type": "string",
-                  "title": "Set if/how the background image repeats",
-                  "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically.",
+                  "title": "Repeat",
+                  "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically",
                   "default": "",
                   "enum": [
+                    "",
                     "repeat",
                     "repeat-x",
                     "repeat-y",
@@ -70,10 +71,11 @@
                 },
                 "_backgroundSize": {
                   "type": "string",
-                  "title": "Set the size of the background image",
-                  "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible.",
+                  "title": "Size",
+                  "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible",
                   "default": "",
                   "enum": [
+                    "",
                     "auto",
                     "cover",
                     "contain"
@@ -82,10 +84,11 @@
                 },
                 "_backgroundPosition": {
                   "type": "string",
-                  "title": "Set the position of the background image",
-                  "description": "The first value is the horizontal position and the second value is the vertical.",
+                  "title": "Position",
+                  "description": "The first value is the horizontal position and the second value is the vertical",
                   "default": "",
                   "enum": [
+                    "",
                     "left top",
                     "left center",
                     "left bottom",
