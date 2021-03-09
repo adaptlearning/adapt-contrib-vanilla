@@ -41,7 +41,7 @@
 // --------------------------------------------------
 .fade-in-before > div {
   opacity: 0;
-  transition: all @animation-duration @animation-easing;
+  transition: all @animation-duration @animation-easing, visibility 0s linear 0s;
 }
 
 .fade-in-after > div {
@@ -60,7 +60,7 @@
   .@{selector}-before > div {
     opacity: @opacity-before;
     transform: @transform-before;
-    transition: all @animation-duration @animation-easing;
+    transition: all @animation-duration @animation-easing, visibility 0s linear 0s;
   }
 
   .@{selector}-after > div {
