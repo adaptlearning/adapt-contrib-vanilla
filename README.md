@@ -67,11 +67,11 @@ Auto: The background image is displayed in its original size. Cover: Resize the 
 #### Global responsive classes
 >**\_responsiveClasses** (object): The responsive classes object adds the associated CSS class(es) to the container element at different device widths (`_large`, `_medium`, `_small`). The class(es) are removed between each device width. Useful for applying styles for a particular device width only rather than applying a global `_classes` style.
 
->>**\_large** (string): Custom CSS class that is applied at the large device width. 
+>>**\_large** (string): Custom CSS class that is applied at the large device width.
 
->>**\_medium** (string): Custom CSS class that is applied at the medium device width. 
+>>**\_medium** (string): Custom CSS class that is applied at the medium device width.
 
->>**\_small** (string): Custom CSS class that is applied at the small device width. 
+>>**\_small** (string): Custom CSS class that is applied at the small device width.
 
 #### **contentObject.json**
 >**\_pageHeader** (object): The backgroundImage object that contains values for **\_large**, **\_medium** and **\_small**.
@@ -111,9 +111,9 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 No known limitations.
 
 ----------------------------
-**Version number:**  5.3.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
-**Framework versions:**  5.3+  
-**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)  
-**Accessibility support:** WAI AA  
-**RTL support:** Yes  
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 14 for macOS/iOS/iPadOS, Opera  
+**Version number:**  5.4.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a><br>
+**Framework versions:**  5.3+<br>
+**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)<br>
+**Accessibility support:** WAI AA<br>
+**RTL support:** Yes<br>
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 14 for macOS/iOS/iPadOS, Opera<br>
