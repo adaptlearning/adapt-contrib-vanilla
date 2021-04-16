@@ -30,6 +30,7 @@ define([
       this.setBackgroundImage();
       this.setBackgroundStyles();
       this.setMinimumHeight();
+      this.setResponsiveClasses();
       this.setCustomStyles();
     },
 
@@ -105,6 +106,15 @@ define([
           .removeClass('has-min-height')
           .css('min-height', '');
       }
+    },
+
+    setResponsiveClasses: function() {
+      const responsiveClasses = this.model.get('_responsiveClasses');
+      if (!responsiveClasses) return;
+
+      this.$el
+        .removeClass(Object.values(responsiveClasses))
+        .addClass(responsiveClasses[`_${Adapt.device.screenSize}`]);
     },
 
     setCustomStyles: function() {},
