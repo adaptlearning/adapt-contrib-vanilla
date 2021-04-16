@@ -20,9 +20,9 @@
               "properties": {
                 "_large": {
                   "type": "string",
+                  "isObjectId": true,
                   "title": "Large",
                   "description": "Large background image - used on desktop",
-                  "default": "",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -30,9 +30,9 @@
                 },
                 "_medium": {
                   "type": "string",
+                  "isObjectId": true,
                   "title": "Medium",
                   "description": "Medium background image - used on tablet",
-                  "default": "",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -40,9 +40,9 @@
                 },
                 "_small": {
                   "type": "string",
+                  "isObjectId": true,
                   "title": "Small",
                   "description": "Small background image - used on mobile",
-                  "default": "",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -103,6 +103,31 @@
                 }
               }
             },
+            "_responsiveClasses": {
+              "type": "object",
+              "title": "Responsive classes",
+              "default": {},
+              "properties": {
+                "_large": {
+                  "type": "string",
+                  "title": "Large",
+                  "description": "Large CSS class - used on desktop",
+                  "default": ""
+                },
+                "_medium": {
+                  "type": "string",
+                  "title": "Medium",
+                  "description": "Medium CSS class - used on tablet",
+                  "default": ""
+                },
+                "_small": {
+                  "type": "string",
+                  "title": "Small",
+                  "description": "Small CSS class - used on mobile",
+                  "default": ""
+                }
+              }
+            },
             "_pageHeader": {
               "type": "object",
               "title": "Header",
@@ -115,9 +140,9 @@
                   "properties": {
                     "_large": {
                       "type": "string",
+                      "isObjectId": true,
                       "title": "Large",
                       "description": "Large background image - used on desktop",
-                      "default": "",
                       "_backboneForms": {
                         "type": "Asset",
                         "media": "image"
@@ -125,9 +150,9 @@
                     },
                     "_medium": {
                       "type": "string",
+                      "isObjectId": true,
                       "title": "Medium",
                       "description": "Medium background image - used on tablet",
-                      "default": "",
                       "_backboneForms": {
                         "type": "Asset",
                         "media": "image"
@@ -135,9 +160,9 @@
                     },
                     "_small": {
                       "type": "string",
+                      "isObjectId": true,
                       "title": "Small",
                       "description": "Small background image - used on mobile",
-                      "default": "",
                       "_backboneForms": {
                         "type": "Asset",
                         "media": "image"
