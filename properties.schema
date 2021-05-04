@@ -166,14 +166,14 @@
             "title": "Button icon colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4D4D4D",
+            "default": "",
             "help": "Defines the standardised icon button background colour."
           },
           "btn-icon-color-inverted": {
             "title": "Button icon colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the button icon colour. Should be a colour that provides good contrast against the button colour."
           },
           "btn-icon-color-hover": {
