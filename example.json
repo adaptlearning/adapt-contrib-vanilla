@@ -2,7 +2,7 @@
 JSON
 --------------------------------------------------
 
-Background images, styles, and minimum heights json config
+Background images, styles, minimum heights, and responsive classes json config
 --------------------------------------------------
 
 contentObjects.json
@@ -16,6 +16,11 @@ contentObjects.json
         "_backgroundSize": "contain",
         "_backgroundRepeat": "repeat",
         "_backgroundPosition": "center center"
+    },
+    "_responsiveClasses": {
+        "_large": "class-large",
+        "_medium": "class-medium",
+        "_small": "class-small"
     },
     "_pageHeader": {
         "_backgroundImage": {
@@ -47,6 +52,11 @@ articles.json
         "_backgroundSize": "contain",
         "_backgroundRepeat": "repeat",
         "_backgroundPosition": "center center"
+    },
+    "_responsiveClasses": {
+        "_large": "class-large",
+        "_medium": "class-medium",
+        "_small": "class-small"
     }
 }
 
@@ -66,6 +76,11 @@ blocks.json
         "_large": 600,
         "_medium": 400,
         "_small": 200
+    },
+    "_responsiveClasses": {
+        "_large": "class-large",
+        "_medium": "class-medium",
+        "_small": "class-small"
     },
     // Divider Block - adds class to `.block` element
     "_isDividerBlock": false

@@ -35,19 +35,21 @@
 @body-size: 1rem;
 @body-weight: @font-weight-regular;
 
-@instruction-size: 1rem;
+@instruction-size: @body-size;
 @instruction-family: @body-family;
 @instruction-weight: @font-weight-regular;
 @instruction-line-height: @body-line-height;
+@instruction-font-style: italic;
 
-@btn-size: 1rem;
+@btn-size: @body-size;
 @btn-weight: @font-weight-regular;
+@btn-letter-spacing: normal;
 
 @icon-size: 1.5rem;
 @icon-weight: @font-weight-regular;
 @icon-line-height: 1;
 
-@link-size: 1rem;
+@link-size: @body-size;
 @link-family: @body-family;
 @link-weight: @font-weight-regular;
 @link-line-height: @body-line-height;
@@ -59,22 +61,25 @@
 @menu-title-weight: @font-weight-regular;
 @menu-title-line-height: @title-line-height;
 @menu-title-mobile-percentage: .75;
+@menu-title-letter-spacing: normal;
 
 @menu-subtitle-size: 2rem;
 @menu-subtitle-family: @title-family;
 @menu-subtitle-weight: @font-weight-light;
 @menu-subtitle-line-height: @title-line-height;
 @menu-subtitle-mobile-percentage: .75;
+@menu-subtitle-letter-spacing: normal;
 
 @menu-body-size: 1.25rem;
 @menu-body-family: @body-family;
 @menu-body-weight: @font-weight-regular;
 @menu-body-line-height: @body-line-height;
 
-@menu-instruction-size: 1.25rem;
+@menu-instruction-size: @menu-body-size;
 @menu-instruction-family: @body-family;
 @menu-instruction-weight: @font-weight-regular;
 @menu-instruction-line-height: @body-line-height;
+@menu-instruction-font-style: @instruction-font-style;
 
 // Menu item
 // --------------------------------------------------
@@ -82,8 +87,9 @@
 @menu-item-title-family: @title-family;
 @menu-item-title-weight: @font-weight-regular;
 @menu-item-title-line-height: @title-line-height;
+@menu-item-title-letter-spacing: normal;
 
-@menu-item-body-size: 1rem;
+@menu-item-body-size: @body-size;
 @menu-item-body-family: @body-family;
 @menu-item-body-weight: @font-weight-light;
 @menu-item-body-line-height: @body-line-height;
@@ -95,22 +101,25 @@
 @page-title-weight: @font-weight-regular;
 @page-title-line-height: @title-line-height;
 @page-title-mobile-percentage: .75;
+@page-title-letter-spacing: normal;
 
 @page-subtitle-size: 2rem;
 @page-subtitle-family: @title-family;
 @page-subtitle-weight: @font-weight-light;
 @page-subtitle-line-height: @title-line-height;
 @page-subtitle-mobile-percentage: .75;
+@page-subtitle-letter-spacing: normal;
 
 @page-body-size: 1.25rem;
 @page-body-family: @body-family;
 @page-body-weight: @font-weight-regular;
 @page-body-line-height: @body-line-height;
 
-@page-instruction-size: 1.25rem;
+@page-instruction-size: @page-body-size;
 @page-instruction-family: @body-family;
 @page-instruction-weight: @font-weight-regular;
 @page-instruction-line-height: @body-line-height;
+@page-instruction-font-style: @instruction-font-style;
 
 // Page
 // --------------------------------------------------
@@ -119,29 +128,34 @@
 @article-title-weight: @font-weight-regular;
 @article-title-line-height: @title-line-height;
 @article-title-mobile-percentage: .75;
+@article-title-letter-spacing: normal;
 
 @block-title-size: 2.5rem;
 @block-title-family: @title-family;
 @block-title-weight: @font-weight-regular;
 @block-title-line-height: @title-line-height;
 @block-title-mobile-percentage: .75;
+@block-title-letter-spacing: normal;
 
 @component-title-size: 2.5rem;
 @component-title-family: @title-family;
 @component-title-weight: @font-weight-regular;
 @component-title-line-height: @title-line-height;
 @component-title-mobile-percentage: .75;
+@component-title-letter-spacing: normal;
 
 @notify-title-size: 2.5rem;
 @notify-title-family: @title-family;
 @notify-title-weight: @font-weight-regular;
 @notify-title-line-height: @title-line-height;
 @notify-title-mobile-percentage: .75;
+@notify-title-letter-spacing: normal;
 
 @item-title-size: 1.25rem;
 @item-title-family: @title-family;
 @item-title-weight: @font-weight-regular;
 @item-title-line-height: @title-line-height;
+@item-title-letter-spacing: normal;
 
 // Pull quote
 // --------------------------------------------------
@@ -149,6 +163,8 @@
 @pull-quote-title-family: @title-family;
 @pull-quote-title-weight: @font-weight-regular;
 @pull-quote-title-line-height: @title-line-height;
+@pull-quote-font-style: italic;
+@pull-quote-letter-spacing: normal;
 
 @pull-quote-body-size: 1rem;
 @pull-quote-body-family: @body-family;
@@ -161,6 +177,7 @@
 @drawer-item-title-family: @title-family;
 @drawer-item-title-weight: @font-weight-regular;
 @drawer-item-title-line-height: @title-line-height;
+@drawer-item-title-letter-spacing: normal;
 
 @drawer-item-body-size: 0.875rem;
 @drawer-item-body-family: @body-family;
