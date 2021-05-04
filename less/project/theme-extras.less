@@ -198,7 +198,7 @@
 // Supports values from 10 to 90
 // e.g. 'fade-bg black-50'
 // Can be extended to include more colours
-// Note: argument must be predefined variables
+// Note: colour arguments must be predefined variables
 // --------------------------------------------------
 .fade-bg:before {
   content: '';
@@ -211,12 +211,10 @@
 
 .fade(@name; @color; @steps; @index: 1) when (@index =< @steps) {
 
-  @value: @index * 10;
+  @percentage: @index * 10;
 
-  .@{name}.@{color}-@{value}:before {
+  .@{name}.@{color}-@{percentage}:before {
     background-color: fade(@@color, (@index * 10));
-    // width: ( percentage(@index / @columns) );
-    // color: contrast(fade(@color, (@index * 10)));
   }
 
   .fade(@name; @color; @steps; (@index + 1));
@@ -224,3 +222,59 @@
 
 .fade(fade-bg; black; 9);
 .fade(fade-bg; white; 9);
+
+// Linear gradient mixin
+// Can be applied to any level but some levels may work better than others
+// e.g. 'linear-gradient-bg to-left from-white from-0 to-black to-100'
+// Can be extended to include more colours and different stops
+// Note: colour arguments must be predefined variables
+// --------------------------------------------------
+.linear-gradient-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.linear-gradient-bg(top; white; black);
+.linear-gradient-bg(top; black; white);
+
+.linear-gradient-bg(top; transparent-light; black);
+.linear-gradient-bg(bottom; transparent-light; black);
+.linear-gradient-bg(left; transparent-light; black);
+.linear-gradient-bg(right; transparent-light; black);
+
+.linear-gradient-bg(top; transparent-dark; white);
+.linear-gradient-bg(bottom; transparent-dark; white);
+.linear-gradient-bg(left; transparent-dark; white);
+.linear-gradient-bg(right; transparent-dark; white);
+
+.linear-gradient-bg(top; transparent-light; black; 0; 50);
+.linear-gradient-bg(bottom; transparent-light; black; 0; 50);
+.linear-gradient-bg(left; transparent-light; black; 0; 50);
+.linear-gradient-bg(right; transparent-light; black; 0; 50);
+
+.linear-gradient-bg(top; black; transparent-light; 0; 50);
+.linear-gradient-bg(bottom; black; transparent-light; 0; 50);
+.linear-gradient-bg(left; black; transparent-light; 0; 50);
+.linear-gradient-bg(right; black; transparent-light; 0; 50);
+
+.linear-gradient-bg(top; transparent-dark; white; 0; 50);
+.linear-gradient-bg(bottom; transparent-dark; white; 0; 50);
+.linear-gradient-bg(left; transparent-dark; white; 0; 50);
+.linear-gradient-bg(right; transparent-dark; white; 0; 50);
+
+.linear-gradient-bg(top; white; transparent-dark; 0; 50);
+.linear-gradient-bg(bottom; white; transparent-dark; 0; 50);
+.linear-gradient-bg(left; white; transparent-dark; 0; 50);
+.linear-gradient-bg(right; white; transparent-dark; 0; 50);
+
+.linear-gradient-bg(@direction; @color-from; @color-to; @color-from-stop: 0; @color-to-stop: 100;) {
+
+  .linear-gradient-bg.to-@{direction}.from-@{color-from}.from-@{color-from-stop}.to-@{color-to}.to-@{color-to-stop}:before {
+    background-image: linear-gradient(to @direction, @@color-from unit(@color-from-stop,~'%'), @@color-to unit(@color-to-stop,~'%'));
+  }
+
+}
