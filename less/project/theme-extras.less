@@ -192,3 +192,35 @@
 }
 
 }
+
+// Fade background mixin
+// Can be applied to any level but some levels may work better than others
+// Supports values from 10 to 90
+// e.g. 'fade-bg black-50'
+// Can be extended to include more colours
+// Note: argument must be predefined variables
+// --------------------------------------------------
+.fade-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.fade(@name; @color; @steps; @index: 1) when (@index =< @steps) {
+
+  @value: @index * 10;
+
+  .@{name}.@{color}-@{value}:before {
+    background-color: fade(@@color, (@index * 10));
+    // width: ( percentage(@index / @columns) );
+    // color: contrast(fade(@color, (@index * 10)));
+  }
+
+  .fade(@name; @color; @steps; (@index + 1));
+}
+
+.fade(fade-bg; black; 9);
+.fade(fade-bg; white; 9);
