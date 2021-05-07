@@ -200,13 +200,18 @@
 // Can be extended to include more colours
 // Note: colour arguments must be predefined variables
 // --------------------------------------------------
-.fade-bg:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+.fade-bg {
+  z-index: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
 }
 
 .fade(@name; @color; @steps; @index: 1) when (@index =< @steps) {
@@ -214,7 +219,7 @@
   @percentage: @index * 10;
 
   .@{name}.@{color}-@{percentage}:before {
-    background-color: fade(@@color, (@index * 10));
+    background-color: fade(@@color, @percentage);
   }
 
   .fade(@name; @color; @steps; (@index + 1));
