@@ -162,6 +162,33 @@
             "default": "",
             "help": "Defines the button text / icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour."
           },
+          "btn-icon-color": {
+            "title": "Button icon colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the standardised icon button background colour."
+          },
+          "btn-icon-color-inverted": {
+            "title": "Button icon colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the button icon colour. Should be a colour that provides good contrast against the button colour."
+          },
+          "btn-icon-color-hover": {
+            "title": "Button icon colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "btn-icon-color-inverted-hover": {
+            "title": "Button icon colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the button icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour."
+          },
           "disabled": {
             "title": "Disabled colour",
             "type": "string",
