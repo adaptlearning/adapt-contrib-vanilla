@@ -143,18 +143,24 @@
   padding-bottom: @block-padding-ver * 2;
 }
 
+
+// --------------------------------------------------
+// Common
+// --------------------------------------------------
+
 // Background color mixin
-// Add to block to enable
-// e.g. 'block-color black'
+// Can be added to course, contentObject, article, block, or component to enable
+// e.g. 'bg-color black'
 // Note: both arguments must be predefined variables
 // --------------------------------------------------
-.block-color-mixin(transparent-light, black);
-.block-color-mixin(transparent-dark, white);
-.block-color-mixin(black, white);
-.block-color-mixin(background, background-inverted);
+.bg-color-mixin(black, white);
+.bg-color-mixin(background, background-inverted);
+.bg-color-mixin(transparent-light, black);
+.bg-color-mixin(transparent-dark, white);
 
-.block-color-mixin(@color, @color-inverted) {
+.bg-color-mixin(@color, @color-inverted) {
 
+.bg-color.@{color},
 .block-color.@{color} {
   background-color: @@color;
   color: @@color-inverted;
