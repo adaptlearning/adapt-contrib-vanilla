@@ -134,6 +134,9 @@ Block classes
 "_classes": "reverse-desktop-order",
 "_comment": "Reverses the visual layout of the components above the medium breakpoint (default is 760px). e.g. Left layout components would still render first in the DOM order but visually appear on the right-hand side above the medium breakpoint. The components would vertically stack as per the DOM order below the breakpoint.",
 
+"_classes": "extend-content-container",
+"_comment": "Extend width of block to 70rem (default is 1120px).",
+
 "_classes": "extend-container",
 "_comment": "Extend width of block to max page width (default is 1440px).",
 
