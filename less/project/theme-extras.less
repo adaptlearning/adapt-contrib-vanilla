@@ -143,6 +143,51 @@
   padding-bottom: @block-padding-ver * 2;
 }
 
+// DEPRECATED in favour of bg-color-mixin
+// Block background color mixin
+// Add to block to enable
+// e.g. 'block-color black'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.block-color-mixin(@color, @color-inverted) {
+
+.block-color.@{color} {
+  background-color: @@color;
+  color: @@color-inverted;
+
+  .block,
+  .component {
+    &__title,
+    &__body a,
+    &__instruction a {
+      color: @@color-inverted;
+    }
+  }
+
+  .pagelevelprogress {
+    &__indicator {
+      border-color: @@color-inverted;
+    }
+    &__indicator-inner {
+      background-color: @@color;
+    }
+    &__indicator-bar {
+      background-color: @@color-inverted;
+    }
+  }
+
+  .narrative {
+    &__progress {
+      background-color: fade(@@color-inverted, 50%);
+    }
+
+    &__progress.is-selected {
+      background-color: @@color-inverted;
+    }
+  }
+}
+
+}
 
 // --------------------------------------------------
 // Common
@@ -160,8 +205,7 @@
 
 .bg-color-mixin(@color, @color-inverted) {
 
-.bg-color.@{color},
-.block-color.@{color} {
+.bg-color.@{color} {
   background-color: @@color;
   color: @@color-inverted;
 
