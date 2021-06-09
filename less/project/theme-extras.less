@@ -198,3 +198,76 @@
 }
 
 }
+
+.mix-blend-mode-mixin(color);
+.mix-blend-mode-mixin(color-burn);
+.mix-blend-mode-mixin(color-dodge);
+.mix-blend-mode-mixin(darken);
+.mix-blend-mode-mixin(difference);
+.mix-blend-mode-mixin(exclusion);
+.mix-blend-mode-mixin(hard-light);
+.mix-blend-mode-mixin(hue);
+.mix-blend-mode-mixin(lighten);
+.mix-blend-mode-mixin(luminosity);
+.mix-blend-mode-mixin(multiply);
+.mix-blend-mode-mixin(overlay);
+.mix-blend-mode-mixin(saturation);
+.mix-blend-mode-mixin(screen);
+.mix-blend-mode-mixin(soft-light);
+
+.mix-blend-mode-mixin(@selector) {
+
+.mix-blend-mode.@{selector} img {
+  mix-blend-mode: @selector;
+}
+
+}
+
+.background-blend-mode-mixin(color);
+.background-blend-mode-mixin(color-burn);
+.background-blend-mode-mixin(color-dodge);
+.background-blend-mode-mixin(darken);
+.background-blend-mode-mixin(difference);
+.background-blend-mode-mixin(exclusion);
+.background-blend-mode-mixin(hard-light);
+.background-blend-mode-mixin(hue);
+.background-blend-mode-mixin(lighten);
+.background-blend-mode-mixin(luminosity);
+.background-blend-mode-mixin(multiply);
+.background-blend-mode-mixin(overlay);
+.background-blend-mode-mixin(saturation);
+.background-blend-mode-mixin(screen);
+.background-blend-mode-mixin(soft-light);
+
+.background-blend-mode-mixin(@selector) {
+
+.background-blend-mode.@{selector} {
+  background-blend-mode: @selector;
+}
+
+}
+
+//
+
+.filter-mixin(blur, blur(1px));
+.filter-mixin(brightness, brightness(.5));
+.filter-mixin(contrast, contrast(.5));
+.filter-mixin(drop-shadow, drop-shadow(2px 4px 6px black));
+.filter-mixin(grayscale, grayscale(1));
+.filter-mixin(hue-rotate, hue-rotate(45deg));
+.filter-mixin(invert, invert(1));
+.filter-mixin(opacity, opacity(.5));
+.filter-mixin(saturate, saturate(.5));
+.filter-mixin(sepia, sepia(1));
+
+.filter-mixin(@selector, @args) {
+  .filter.@{selector} img {
+    filter: @args;
+  }
+}
+
+//
+
+.filter(@args) {
+  filter: @args;
+}
