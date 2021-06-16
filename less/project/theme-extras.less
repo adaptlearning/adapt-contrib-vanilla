@@ -298,28 +298,3 @@
 }
 
 }
-
-//
-
-.filter-mixin(blur, blur(1px));
-.filter-mixin(brightness, brightness(.5));
-.filter-mixin(contrast, contrast(.5));
-.filter-mixin(drop-shadow, drop-shadow(2px 4px 6px black));
-.filter-mixin(grayscale, grayscale(1));
-.filter-mixin(hue-rotate, hue-rotate(45deg));
-.filter-mixin(invert, invert(1));
-.filter-mixin(opacity, opacity(.5));
-.filter-mixin(saturate, saturate(.5));
-.filter-mixin(sepia, sepia(1));
-
-.filter-mixin(@selector, @args) {
-  .filter.@{selector} img {
-    filter: @args;
-  }
-}
-
-//
-
-.filter(@args) {
-  filter: @args;
-}
