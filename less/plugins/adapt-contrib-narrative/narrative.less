@@ -12,7 +12,7 @@
     background-color: @item-color;
     color: @item-color-inverted;
 
-    .no-touch &:hover {
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
@@ -42,17 +42,25 @@
     background-color: @item-color;
     color: @item-color-inverted;
 
-    .no-touch &:hover {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-    }
-
     .dir-rtl & {
       text-align: right;
     }
   }
 
-  &__strapline-btn.is-visited {
+  &__strapline-icon {
+    background-color: @item-color;
+    color: @item-color-inverted;
+  }
+
+  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover,
+  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover &__strapline-icon {
+    background-color: @item-color-hover;
+    color: @item-color-inverted-hover;
+    .transition(background-color @duration ease-in, color @duration ease-in;);
+  }
+
+  &__strapline-btn.is-visited,
+  &__strapline-btn.is-visited &__strapline-icon {
     background-color: @visited;
     color: @visited-inverted;
   }

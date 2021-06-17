@@ -99,6 +99,12 @@
   }
 }
 
+// Extend width of block to 70rem (1120px)
+// --------------------------------------------------
+.block.extend-content-container .block__inner {
+  max-width: 70rem;
+}
+
 // Extend width of block to max page width
 // --------------------------------------------------
 .block.extend-container .block__inner {
@@ -143,19 +149,69 @@
   padding-bottom: @block-padding-ver * 2;
 }
 
-// Background color mixin
+// DEPRECATED in favour of bg-color-mixin
+// Block background color mixin
 // Add to block to enable
 // e.g. 'block-color black'
 // Note: both arguments must be predefined variables
 // --------------------------------------------------
-.block-color-mixin(transparent-light, black);
-.block-color-mixin(transparent-dark, white);
-.block-color-mixin(black, white);
-.block-color-mixin(background, background-inverted);
-
 .block-color-mixin(@color, @color-inverted) {
 
 .block-color.@{color} {
+  background-color: @@color;
+  color: @@color-inverted;
+
+  .block,
+  .component {
+    &__title,
+    &__body a,
+    &__instruction a {
+      color: @@color-inverted;
+    }
+  }
+
+  .pagelevelprogress {
+    &__indicator {
+      border-color: @@color-inverted;
+    }
+    &__indicator-inner {
+      background-color: @@color;
+    }
+    &__indicator-bar {
+      background-color: @@color-inverted;
+    }
+  }
+
+  .narrative {
+    &__progress {
+      background-color: fade(@@color-inverted, 50%);
+    }
+
+    &__progress.is-selected {
+      background-color: @@color-inverted;
+    }
+  }
+}
+
+}
+
+// --------------------------------------------------
+// Common
+// --------------------------------------------------
+
+// Background color mixin
+// Can be added to course, contentObject, article, block, or component to enable
+// e.g. 'bg-color black'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.bg-color-mixin(black, white);
+.bg-color-mixin(background, background-inverted);
+.bg-color-mixin(transparent-light, black);
+.bg-color-mixin(transparent-dark, white);
+
+.bg-color-mixin(@color, @color-inverted) {
+
+.bg-color.@{color} {
   background-color: @@color;
   color: @@color-inverted;
 
@@ -281,5 +337,4 @@
   .linear-gradient-bg.to-@{direction}.from-@{color-from}.from-@{color-from-stop}.to-@{color-to}.to-@{color-to-stop}:before {
     background-image: linear-gradient(to @direction, @@color-from unit(@color-from-stop,~'%'), @@color-to unit(@color-to-stop,~'%'));
   }
-
 }
