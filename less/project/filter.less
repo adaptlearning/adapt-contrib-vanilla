@@ -1,20 +1,17 @@
 // Filter mixin
 // Pass in single or multi arguments to apply filter effects
 // Can only be used in CSS
+// e.g. .filter(blur(1px));
+// e.g. .filter(blur(1px) drop-shadow(0 5px 10px @black));
 // --------------------------------------------------
 .filter(@args) {
   filter: @args;
 }
 
-// Examples
-// --------------------------------------------------
-// e.g. .filter(blur(1px));
-// e.g. .filter(blur(1px) drop-shadow(0 5px 10px @black));
-
 // Filter custom class mixin
 // Can be added to course, contentObject, article, block, or component to enable
-// e.g. 'filter grayscale'
 // Limited in scope to only affect img tags 
+// e.g. 'filter grayscale'
 // --------------------------------------------------
 .filter-mixin(grayscale, grayscale(1));
 .filter-mixin(invert, invert(1));
