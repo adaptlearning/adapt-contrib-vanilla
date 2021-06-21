@@ -3,7 +3,7 @@
 // e.g. 'background-blend-mode multiply'
 // e.g. 'mix-blend-mode multiply'
 // --------------------------------------------------
-@blend-modes: color, color-burn, color-dodge, darken, difference, exclusion, hard-ligt, hue, lighten, luminosity, multiply, overlay, saturation, screen, soft-light;
+@blend-modes: color, color-burn, color-dodge, darken, difference, exclusion, hard-light, hue, lighten, luminosity, multiply, overlay, saturation, screen, soft-light;
 
 .-(@i: length(@blend-modes)) when (@i > 0) {
   @blend: extract(@blend-modes, @i);
