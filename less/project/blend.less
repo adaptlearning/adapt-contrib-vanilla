@@ -1,0 +1,20 @@
+// Blend mode loop for background and mix
+// Can be added to course, contentObject, article, block, or component to enable
+// e.g. 'background-blend-mode multiply'
+// e.g. 'mix-blend-mode multiply'
+// --------------------------------------------------
+@blend-modes: color, color-burn, color-dodge, darken, difference, exclusion, hard-ligt, hue, lighten, luminosity, multiply, overlay, saturation, screen, soft-light;
+
+.-(@i: length(@blend-modes)) when (@i > 0) {
+  @blend: extract(@blend-modes, @i);
+
+  .background-blend-mode.@{blend} {
+    background-blend-mode: @blend;
+  }
+
+  .mix-blend-mode.@{blend} {
+    mix-blend-mode: @blend;
+  }
+
+  .-((@i - 1));
+} .-;
