@@ -157,6 +157,33 @@
           "default": "",
           "_backboneForms": "ColourPicker"
         },
+        "btn-icon-color": {
+          "type": "string",
+          "title": "Button icon colour",
+          "description": "Defines the standardised icon button background colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "btn-icon-color-inverted": {
+          "type": "string",
+          "title": "Button icon colour - inverted",
+          "description": "Defines the button icon colour. Should be a colour that provides good contrast against the button colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "btn-icon-color-hover": {
+          "type": "string",
+          "title": "Button icon colour - hover",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "btn-icon-color-inverted-hover": {
+          "type": "string",
+          "title": "Button icon colour - inverted hover",
+          "description": "Defines the button icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
         "disabled": {
           "type": "string",
           "title": "Disabled colour",
