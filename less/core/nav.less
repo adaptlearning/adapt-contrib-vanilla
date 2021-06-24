@@ -9,7 +9,7 @@
     background-color: @nav-icon;
     color: @nav-icon-inverted;
 
-    .no-touch &:hover {
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
       background-color: @nav-icon-hover;
       color: @nav-icon-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);

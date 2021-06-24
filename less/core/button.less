@@ -3,6 +3,17 @@
     margin-top: @btn-margin;
   }
 
+  &-icon {
+    background-color: @btn-icon-color;
+    color: @btn-icon-color-inverted;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      background-color: @btn-icon-color-hover;
+      color: @btn-icon-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
   &-text {
     .button-text;
   }
@@ -19,11 +30,13 @@
     }
   }
 
+  &-icon.is-disabled,
   &-text.is-disabled {
     background-color: @disabled;
     color: @disabled-inverted;
   }
 
+  &-icon.is-locked,
   &-text.is-locked {
     background-color: @disabled;
     color: @disabled-inverted;

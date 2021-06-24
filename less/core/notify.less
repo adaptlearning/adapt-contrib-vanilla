@@ -77,7 +77,7 @@
     color: @notify-icon-inverted;
     border-radius: 50%;
 
-    .no-touch &:hover {
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
       background-color: @notify-icon-hover;
       color: @notify-icon-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);

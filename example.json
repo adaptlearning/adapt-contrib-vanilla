@@ -101,6 +101,23 @@ blocks.json / components.json
 Classes
 --------------------------------------------------
 
+Common classes
+--------------------------------------------------
+"_classes": "bg-color",
+"_comment": "Sets up the solid background colour mixin. Combine with one of the following classes e.g. 'bg-color black'. Note: the following class must be a predefined variable. Mixin can be extended to include custom colours.",
+
+"_classes": "transparent-light",
+"_comment": "Sets the background colour of the block to transparent and changes the font colour to black. Useful for displaying text over a light background image.",
+
+"_classes": "transparent-dark",
+"_comment": "Sets the background colour of the block to transparent and changes the font colour to white. Useful for displaying text over a dark background image.",
+
+"_classes": "black",
+"_comment": "Sets the background colour of the block to black and changes the font colour to white.",
+
+"_classes": "background",
+"_comment": "Sets the background colour of the block to use the variable @background (default is black) and changes the font colour to use the variable @background-inverted (default is white). These variables can be changed in the ‘_colors.less’ file.",
+
 Content Object classes
 --------------------------------------------------
 
@@ -108,7 +125,7 @@ Content Object classes
 "_comment": "Hides the navigation back button on the page.",
 
 "_classes": "hide-page-header",
-"_comment": "Hides the page header on the page",
+"_comment": "Hides the page header on the page.",
 
 "_classes": "header-color",
 "_comment": "Sets up the header solid background colour mixin. Combine with one of the following classes e.g. 'header-color background'. Note: the following class must be a predefined variable. Mixin can be extended to include client colours. Can be set for menu and/or page header.",
@@ -134,6 +151,9 @@ Block classes
 "_classes": "reverse-desktop-order",
 "_comment": "Reverses the visual layout of the components above the medium breakpoint (default is 760px). e.g. Left layout components would still render first in the DOM order but visually appear on the right-hand side above the medium breakpoint. The components would vertically stack as per the DOM order below the breakpoint.",
 
+"_classes": "extend-content-container",
+"_comment": "Extend width of block to 70rem (default is 1120px).",
+
 "_classes": "extend-container",
 "_comment": "Extend width of block to max page width (default is 1440px).",
 
@@ -144,31 +164,16 @@ Block classes
 "_comment": "Removes the bottom padding from block.",
 
 "_classes": "reduce-padding-top",
-"_comment": "Reduce the blocks top padding by half",
+"_comment": "Reduce the blocks top padding by half.",
 
 "_classes": "reduce-padding-bottom",
-"_comment": "Reduce the blocks bottom padding by half",
+"_comment": "Reduce the blocks bottom padding by half.",
 
 "_classes": "increase-padding-top",
-"_comment": "Double the blocks top padding",
+"_comment": "Double the blocks top padding.",
 
 "_classes": "increase-padding-bottom",
-"_comment": "Double the blocks bottom padding",
-
-"_classes": "block-color",
-"_comment": "Sets up the block solid background colour mixin. Combine with one of the following classes e.g. 'block-color black'. Note: the following class must be a predefined variable. Mixin can be extended to include client colours.",
-
-"_classes": "transparent-light",
-"_comment": "Sets the background colour of the block to transparent and changes the font colour to black. Useful for displaying text over a light background image.",
-
-"_classes": "transparent-dark",
-"_comment": "Sets the background colour of the block to transparent and changes the font colour to white. Useful for displaying text over a dark background image.",
-
-"_classes": "black",
-"_comment": "Sets the background colour of the block to black and changes the font colour to white.",
-
-"_classes": "background",
-"_comment": "Sets the background colour of the block to use the variable @background (default is black) and changes the font colour to use the variable @background-inverted (default is white). These variables can be changed in the ‘_colors.less’ file.",
+"_comment": "Double the blocks bottom padding.",
 
 Component classes
 --------------------------------------------------
@@ -188,8 +193,12 @@ Hotgraphic item
 "_comment": "Hide the hotgraphic pop up image on desktop.",
 
 "_classes": "hide-popup-image",
-"_comment": "Hide the hotgraphic pop up image for all screen sizes",
+"_comment": "Hide the hotgraphic pop up image for all screen sizes.",
 
 Media
 "_classes": "invert-play-icon",
-"_comment": "Inverts the media player play icon from white to black",
+"_comment": "Inverts the media player play icon from white to black.",
+
+Narrative
+"_classes": "items-are-full-width",
+"_comment": "Increases the width of the narrative elements to 100% in desktop view.",
