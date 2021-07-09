@@ -304,26 +304,42 @@
 }
 
 .linear-gradient-bg(top; black; transparent;);
-.linear-gradient-bg(right; black; transparent;);
-.linear-gradient-bg(bottom; black; transparent;);
-.linear-gradient-bg(left; black; transparent);
+// .linear-gradient-bg(right; black; transparent;);
+// .linear-gradient-bg(bottom; black; transparent;);
+// .linear-gradient-bg(left; black; transparent);
 
 .linear-gradient-bg(top; transparent; black;);
-.linear-gradient-bg(right; transparent; black;);
-.linear-gradient-bg(bottom; transparent; black;);
-.linear-gradient-bg(left; transparent; black;);
+// .linear-gradient-bg(right; transparent; black;);
+// .linear-gradient-bg(bottom; transparent; black;);
+// .linear-gradient-bg(left; transparent; black;);
 
 .linear-gradient-bg(top; black; transparent; 0; 100;);
-.linear-gradient-bg(right; black; transparent; 0; 100;);
-.linear-gradient-bg(bottom; black; transparent; 0; 100;);
-.linear-gradient-bg(left; black; transparent; 0; 100;);
+// .linear-gradient-bg(right; black; transparent; 0; 100;);
+// .linear-gradient-bg(bottom; black; transparent; 0; 100;);
+// .linear-gradient-bg(left; black; transparent; 0; 100;);
 
 .linear-gradient-bg(top; transparent; black; 0; 100;);
-.linear-gradient-bg(right; transparent; black; 0; 100;);
-.linear-gradient-bg(bottom; transparent; black; 0; 100;);
-.linear-gradient-bg(left; transparent; black; 0; 100;);
+// .linear-gradient-bg(right; transparent; black; 0; 100;);
+// .linear-gradient-bg(bottom; transparent; black; 0; 100;);
+// .linear-gradient-bg(left; transparent; black; 0; 100;);
+
+.linear-gradient-bg(top; black; transparent; 50; 90;);
+
+.linear-gradient-bg(top; black; transparent; 2; 75;);
+
+//
+
+.linear-gradient-bg(45deg; black; transparent;);
+
+.linear-gradient-bg(45deg; black; transparent; 0; 100);
+
+.linear-gradient-bg(75deg; black; transparent; 50; 90;);
+
+.linear-gradient-bg(50deg; black; transparent; 50; 90;);
 
 .linear-gradient-bg(@direction; @color-from; @color-to; @color-from-stop: 50; @color-to-stop: 75;) {
+
+  & when not (isunit(@direction, deg)) {
   & when (@color-from-stop = 50) and (@color-to-stop = 75) {
     .linear-gradient-bg.to-@{direction}.from-@{color-from}.to-@{color-to}:before {
       background-image: linear-gradient(
@@ -333,11 +349,34 @@
       );
     }
   }
+  }
 
-  & when not (@color-from-stop = 50) and not (@color-to-stop = 75) {
+  & when not (isunit(@direction, deg)) {
     .linear-gradient-bg.to-@{direction}.from-@{color-from}.from-@{color-from-stop}.to-@{color-to}.to-@{color-to-stop}:before {
       background-image: linear-gradient(
         to @direction,
+        @@color-from unit(@color-from-stop, ~'%'),
+        @@color-to unit(@color-to-stop, ~'%')
+      );
+    }
+  }
+
+  & when (isunit(@direction, deg)) {
+  & when (@color-from-stop = 50) and (@color-to-stop = 75) {
+    .linear-gradient-bg.to-@{direction}.from-@{color-from}.to-@{color-to}:before {
+      background-image: linear-gradient(
+        @direction,
+        @@color-from unit(@color-from-stop, ~'%'),
+        @@color-to unit(@color-to-stop, ~'%')
+      );
+    }
+  }
+  }
+
+  & when (isunit(@direction, deg)) {
+    .linear-gradient-bg.to-@{direction}.from-@{color-from}.from-@{color-from-stop}.to-@{color-to}.to-@{color-to-stop}:before {
+      background-image: linear-gradient(
+        @direction,
         @@color-from unit(@color-from-stop, ~'%'),
         @@color-to unit(@color-to-stop, ~'%')
       );
@@ -352,55 +391,55 @@
 // e.g. 'linear-bg to-right from-black to-transparent'
 // Can be extended to include more colours and different stops
 // Note: colour arguments must be predefined variables
-@colors: 
-  top black 50% transparent 75%, 
-  right black 50% transparent 75%, 
-  bottom black 50% transparent 75%, 
+@colors:
+  top black 50% transparent 75%,
+  right black 50% transparent 75%,
+  bottom black 50% transparent 75%,
   left black 50% transparent 75%,
 
-  top transparent 50% black 75%, 
-  right transparent 50% black 75%, 
-  bottom transparent 50% black 75%, 
+  top transparent 50% black 75%,
+  right transparent 50% black 75%,
+  bottom transparent 50% black 75%,
   left transparent 50% black 75%,
 
-  top white 50% transparent 75%, 
-  right white 50% transparent 75%, 
-  bottom white 50% transparent 75%, 
+  top white 50% transparent 75%,
+  right white 50% transparent 75%,
+  bottom white 50% transparent 75%,
   left white 50% transparent 75%,
 
-  top transparent 50% white 75%, 
-  right transparent 50% white 75%, 
-  bottom transparent 50% white 75%, 
+  top transparent 50% white 75%,
+  right transparent 50% white 75%,
+  bottom transparent 50% white 75%,
   left transparent 50% white 75%
 ;
 
 
-.linear-bg:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
+// .linear-bg:before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+// }
 
-.linear-grads(@i: 1) when (@i <= length(@colors)) {
+// .linear-grads(@i: 1) when (@i <= length(@colors)) {
 
-  @name: extract(extract(@colors, @i), 1);
-  @color-from: extract(extract(@colors, @i), 2);
-  @color-from-stop: extract(extract(@colors, @i), 3);
-  @color-to: extract(extract(@colors, @i), 4);
-  @color-to-stop: extract(extract(@colors, @i), 5);
+//   @name: extract(extract(@colors, @i), 1);
+//   @color-from: extract(extract(@colors, @i), 2);
+//   @color-from-stop: extract(extract(@colors, @i), 3);
+//   @color-to: extract(extract(@colors, @i), 4);
+//   @color-to-stop: extract(extract(@colors, @i), 5);
 
-  .linear-bg.to-@{name}.from-@{color-from}.to-@{color-to}:before {
-    background-image: linear-gradient(
-      to @name, 
-      @@color-from @color-from-stop, 
-      @@color-to @color-to-stop
-    );
-  }
-  
-  .linear-grads(@i + 1);
-}
+//   .linear-bg.to-@{name}.from-@{color-from}.to-@{color-to}:before {
+//     background-image: linear-gradient(
+//       to @name,
+//       @@color-from @color-from-stop,
+//       @@color-to @color-to-stop
+//     );
+//   }
 
-.linear-grads();
+//   .linear-grads(@i + 1);
+// }
+
+// .linear-grads();
