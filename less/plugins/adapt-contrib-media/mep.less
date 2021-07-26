@@ -279,3 +279,15 @@
     color: @white;
   }
 }
+
+// Offset player controls
+// --------------------------------------------------
+.offset-media-controls {
+  .media__widget {
+    padding-bottom: @mejs-controls-height;
+  }
+
+  .mejs-video:not(.mejs-container-fullscreen) .mejs-controls {
+    bottom: -@mejs-controls-height;
+  }
+}

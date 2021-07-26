@@ -199,6 +199,9 @@ Media
 "_classes": "invert-play-icon",
 "_comment": "Inverts the media player play icon from white to black.",
 
+"_classes": "offset-media-controls",
+"_comment": "Offset control bar to display underneath the video element instead of overlaid. Useful for videos which contain subtitles or text within the bottom area of the video frame.",
+
 Narrative
 "_classes": "items-are-full-width",
 "_comment": "Increases the width of the narrative elements to 100% in desktop view.",
