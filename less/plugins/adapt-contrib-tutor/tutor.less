@@ -38,6 +38,15 @@
     color: @notify-inverted;
   }
 
+  &-type-overlay &__title {
+    padding-right: @icon-size + @icon-padding;
+
+    .dir-rtl & {
+      padding-right: inherit;
+      padding-left: @icon-size + @icon-padding;
+    }
+  }
+
   &-type-overlay &__body a {
     .link-text;
     color: @notify-link;
