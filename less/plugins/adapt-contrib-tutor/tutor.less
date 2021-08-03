@@ -1,0 +1,71 @@
+.tutor {
+  &__content-inner {
+    .l-container-padding(@notify-padding-ver, @notify-padding-hoz);
+    padding: @item-padding;
+  }
+
+  &__title {
+    .notify-title;
+    margin-bottom: @notify-title-margin;
+  }
+
+  &__body {
+    margin-bottom: @notify-body-margin;
+  }
+
+  &__btn {
+    margin-top: @btn-margin;
+  }
+
+  &__btn-icon {
+    margin: @btn-margin / 2;
+    padding: @btn-padding / 2;
+    background-color: @notify-icon;
+    color: @notify-icon-inverted;
+    border-radius: 50%;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      background-color: @notify-icon-hover;
+      color: @notify-icon-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  // overlay
+  // --------------------------------------------------
+  &-type-overlay &__inner {
+    background-color: @notify;
+    color: @notify-inverted;
+  }
+
+  &-type-overlay &__body a {
+    .link-text;
+    color: @notify-link;
+
+    .no-touch &:hover {
+      color: @notify-link-hover;
+      .transition(color @duration ease-in);
+    }
+  }
+
+  &-type-overlay &__btn {
+    background-color: @notify-btn;
+    color: @notify-btn-inverted;
+
+    .no-touch &:hover {
+      background-color: @notify-btn-hover;
+      color: @notify-btn-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &-type-overlay &__btn-icon {
+    background-color: @notify-icon;
+    color: @notify-icon-inverted;
+
+    .no-touch &:hover {
+      background-color: @notify-icon-hover;
+      color: @notify-icon-inverted-hover;
+    }
+  }
+}
