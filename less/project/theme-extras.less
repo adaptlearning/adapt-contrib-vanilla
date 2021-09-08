@@ -196,6 +196,52 @@
 }
 
 // --------------------------------------------------
+// Component
+// --------------------------------------------------
+
+// Component header bg color mixin
+// Can be added to component to enable
+// e.g. 'comp-header-bg-color black'
+// Note: both arguments must be predefined variables
+.component-header-bg-mixin(black, white);
+
+.component-header-bg-mixin(@color, @color-inverted) {
+
+.comp-header-bg-color.@{color} {
+  .component {
+    &__inner {
+      margin: -@component-padding-ver -@component-padding-hoz;
+    }
+
+    &__header {
+      padding: @component-padding-ver @component-padding-ver;
+      background-color: @@color;
+      color: @@color-inverted;
+    }
+
+    &__title,
+    &__body a,
+    &__instruction a {
+      color: @@color-inverted;
+    }
+  }
+
+  .pagelevelprogress {
+    &__indicator {
+      border-color: @@color-inverted;
+    }
+    &__indicator-inner {
+      background-color: @@color;
+    }
+    &__indicator-bar {
+      background-color: @@color-inverted;
+    }
+  }
+}
+
+}
+
+// --------------------------------------------------
 // Common
 // --------------------------------------------------
 
