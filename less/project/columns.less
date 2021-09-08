@@ -1,14 +1,4 @@
-// @device-width-small: unit(@adapt-device-small, rem);
-// @device-width-medium: unit(@adapt-device-medium, rem);
-// @device-width-large: unit(@adapt-device-large, rem);
-
-// @max-width: 90rem;
-
-@gutters-left: 1rem;
-@gutters-right: 1rem;
-
 .make-columns(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
-
   @media (min-width: @media-query) {
     .component.col-@{size}-@{iteration} {
       width: (@iteration * 100% / @count);
@@ -18,75 +8,25 @@
   .make-columns(@size, @media-query, @count, (@iteration + 1));
 }
 
-// needs improvement
-// too large a gap between large (900px) and max (1440px) 
+// Custom classes
+// e.g. 'col-sm-8 col-md-10'
+// min small viewport takes up 8 out of 12 columns
+// min medium viewport takes up 10 columns
+// if undefined element defaults to 100% width
 .make-columns(xs, 0, 12);
 .make-columns(sm, @device-width-small, 12);
 .make-columns(md, @device-width-medium, 12);
 .make-columns(lg, @device-width-large, 12);
 .make-columns(xl, @max-width, 12);
 
-// suggest something along these lines
-// New breakpoints TBD: 
-// value         |0px     640px    960px    1200px   1440px   1920px
-// value         |0px     40rem    60rem    75rem    90rem    120rem
-// key           |xs      sm       md       lg       xl       max
-// screen width  |--------|--------|--------|--------|--------|
-// range         |   xs   |   sm   |   md   |   lg   |   xl   |   max
-
-// custom classes
-// e.g. 'col-sm-8 col-md-10'
-// min small viewport takes up 8 out of 12 columns
-// min medium viewport takes up 10 columns
-// if undefined element defaults to 100% width
-
 .component {
-  // width: 100%;
-
   &__container {
-    // display: flex;
     flex-direction: unset;
-    // flex-wrap: wrap;
-    // align-items: flex-start;
-
-    // @media (min-width: @device-width-medium) {
-    //   flex-direction: row;
-    // }
-
-    margin-left: @gutters-left;
-    margin-right: @gutters-right;
+    margin-left: -@component-padding-hoz;
+    margin-right: -@component-padding-hoz;
   }
 
-  // @media (min-width: @device-width-medium) {
-    &.is-left {
-      // padding-right: @component-padding-hoz;
-      // width: 50%;
-      padding-left: @gutters-left;
-      padding-right: @gutters-right;
-
-      .dir-rtl & {
-        // padding-right: inherit;
-        // padding-left: @component-padding-hoz;
-        padding-left: @gutters-left;
-        padding-right: @gutters-right;
-      }
-    }
-
-    &.is-right {
-      // margin-left: auto;
-      // padding-left: @component-padding-hoz;
-      // width: 50%;
-      padding-left: @gutters-left;
-      padding-right: @gutters-right;
-
-      .dir-rtl & {
-        // margin-left: inherit;
-        // margin-right: auto;
-        // padding-left: inherit;
-        // padding-right: @component-padding-hoz;
-        padding-left: @gutters-left;
-        padding-right: @gutters-right;
-      }
-    }
-  // }
+  &__inner {
+    padding: @component-padding-ver @component-padding-hoz;
+  }
 }
