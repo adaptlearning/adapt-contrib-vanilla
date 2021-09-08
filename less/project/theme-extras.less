@@ -27,25 +27,25 @@
 
 .header-color-mixin(@color, @color-inverted) {
 
-.header-color.@{color} {
-  .menu,
-  .page {
-    &__header {
-      background-color: @@color;
+  .header-color.@{color} {
+    .menu,
+    .page {
+      &__header {
+        background-color: @@color;
+      }
+    }
+    .menu,
+    .page {
+      &__title,
+      &__subtitle,
+      &__body,
+      &__body a,
+      &__instruction,
+      &__instruction a {
+      color: @@color-inverted;
+      }
     }
   }
-  .menu,
-  .page {
-    &__title,
-    &__subtitle,
-    &__body,
-    &__body a,
-    &__instruction,
-    &__instruction a {
-     color: @@color-inverted;
-    }
-  }
-}
 
 }
 
@@ -157,41 +157,41 @@
 // --------------------------------------------------
 .block-color-mixin(@color, @color-inverted) {
 
-.block-color.@{color} {
-  background-color: @@color;
-  color: @@color-inverted;
+  .block-color.@{color} {
+    background-color: @@color;
+    color: @@color-inverted;
 
-  .block,
-  .component {
-    &__title,
-    &__body a,
-    &__instruction a {
-      color: @@color-inverted;
+    .block,
+    .component {
+      &__title,
+      &__body a,
+      &__instruction a {
+        color: @@color-inverted;
+      }
+    }
+
+    .pagelevelprogress {
+      &__indicator {
+        border-color: @@color-inverted;
+      }
+      &__indicator-inner {
+        background-color: @@color;
+      }
+      &__indicator-bar {
+        background-color: @@color-inverted;
+      }
+    }
+
+    .narrative {
+      &__progress {
+        background-color: fade(@@color-inverted, 50%);
+      }
+
+      &__progress.is-selected {
+        background-color: @@color-inverted;
+      }
     }
   }
-
-  .pagelevelprogress {
-    &__indicator {
-      border-color: @@color-inverted;
-    }
-    &__indicator-inner {
-      background-color: @@color;
-    }
-    &__indicator-bar {
-      background-color: @@color-inverted;
-    }
-  }
-
-  .narrative {
-    &__progress {
-      background-color: fade(@@color-inverted, 50%);
-    }
-
-    &__progress.is-selected {
-      background-color: @@color-inverted;
-    }
-  }
-}
 
 }
 
@@ -207,37 +207,37 @@
 
 .component-header-bg-mixin(@color, @color-inverted) {
 
-.comp-header-bg-color.@{color} {
-  .component {
-    &__inner {
-      margin: -@component-padding-ver -@component-padding-hoz;
+  .comp-header-bg-color.@{color} {
+    .component {
+      &__inner {
+        margin: -@component-padding-ver -@component-padding-hoz;
+      }
+
+      &__header {
+        padding: @component-padding-ver @component-padding-ver;
+        background-color: @@color;
+        color: @@color-inverted;
+      }
+
+      &__title,
+      &__body a,
+      &__instruction a {
+        color: @@color-inverted;
+      }
     }
 
-    &__header {
-      padding: @component-padding-ver @component-padding-ver;
-      background-color: @@color;
-      color: @@color-inverted;
-    }
-
-    &__title,
-    &__body a,
-    &__instruction a {
-      color: @@color-inverted;
+    .pagelevelprogress {
+      &__indicator {
+        border-color: @@color-inverted;
+      }
+      &__indicator-inner {
+        background-color: @@color;
+      }
+      &__indicator-bar {
+        background-color: @@color-inverted;
+      }
     }
   }
-
-  .pagelevelprogress {
-    &__indicator {
-      border-color: @@color-inverted;
-    }
-    &__indicator-inner {
-      background-color: @@color;
-    }
-    &__indicator-bar {
-      background-color: @@color-inverted;
-    }
-  }
-}
 
 }
 
@@ -257,40 +257,40 @@
 
 .bg-color-mixin(@color, @color-inverted) {
 
-.bg-color.@{color} {
-  background-color: @@color;
-  color: @@color-inverted;
+  .bg-color.@{color} {
+    background-color: @@color;
+    color: @@color-inverted;
 
-  .block,
-  .component {
-    &__title,
-    &__body a,
-    &__instruction a {
-      color: @@color-inverted;
+    .block,
+    .component {
+      &__title,
+      &__body a,
+      &__instruction a {
+        color: @@color-inverted;
+      }
+    }
+
+    .pagelevelprogress {
+      &__indicator {
+        border-color: @@color-inverted;
+      }
+      &__indicator-inner {
+        background-color: @@color;
+      }
+      &__indicator-bar {
+        background-color: @@color-inverted;
+      }
+    }
+
+    .narrative {
+      &__progress {
+        background-color: fade(@@color-inverted, 50%);
+      }
+
+      &__progress.is-selected {
+        background-color: @@color-inverted;
+      }
     }
   }
-
-  .pagelevelprogress {
-    &__indicator {
-      border-color: @@color-inverted;
-    }
-    &__indicator-inner {
-      background-color: @@color;
-    }
-    &__indicator-bar {
-      background-color: @@color-inverted;
-    }
-  }
-
-  .narrative {
-    &__progress {
-      background-color: fade(@@color-inverted, 50%);
-    }
-
-    &__progress.is-selected {
-      background-color: @@color-inverted;
-    }
-  }
-}
 
 }
