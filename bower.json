@@ -1,9 +1,9 @@
 {
   "name": "adapt-contrib-vanilla",
-  "version": "5.6.0",
+  "version": "5.7.0",
   "framework": ">=5.3",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
-  "issues": "https://github.com/adaptlearning/adapt_framework/issues/new",
+  "bugs": "https://github.com/adaptlearning/adapt-contrib-vanilla/issues",
   "theme": "vanilla",
   "displayName": "Vanilla",
   "description": "A core bundled theme",
@@ -13,12 +13,5 @@
     "adapt-theme"
   ],
   "license": "GPL-3.0",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "targetAttribute": "_vanilla"
 }

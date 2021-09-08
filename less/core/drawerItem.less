@@ -6,7 +6,7 @@
     border-bottom: 1px solid @drawer-item-hover;
     color: @drawer-item-inverted;
 
-    .no-touch &:not(.is-disabled):hover {
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
       background-color: @drawer-item-hover;
       color: @drawer-item-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
