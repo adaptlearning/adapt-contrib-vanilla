@@ -66,15 +66,15 @@
       color: @notify-btn-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
-  }
-
-  &-type-overlay &__btn-icon {
-    background-color: @notify-icon;
-    color: @notify-icon-inverted;
-
-    .no-touch &:hover {
-      background-color: @notify-icon-hover;
-      color: @notify-icon-inverted-hover;
+     
+     &-icon {
+      background-color: @notify-icon;
+      color: @notify-icon-inverted;
+  
+      .no-touch &:hover {
+        background-color: @notify-icon-hover;
+        color: @notify-icon-inverted-hover;
+      }
     }
   }
 }
