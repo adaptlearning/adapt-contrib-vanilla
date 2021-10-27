@@ -755,9 +755,9 @@
                       "type": "string",
                       "required": false,
                       "default": "",
-                      "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                      "inputType": {"type":"Select", "options":["auto","cover","contain","100% 100%"]},
                       "title": "Set the size of the background image",
-                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container."
                     },
                     "_backgroundPosition": {
                       "type": "string",
@@ -852,9 +852,9 @@
                           "type": "string",
                           "required": false,
                           "default": "",
-                          "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                          "inputType": {"type":"Select", "options":["auto","cover","contain","100% 100%"]},
                           "title": "Set the size of the background image",
-                          "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                          "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container."
                         },
                         "_backgroundPosition": {
                           "type": "string",
@@ -958,9 +958,9 @@
                       "type": "string",
                       "required": false,
                       "default": "",
-                      "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                      "inputType": {"type":"Select", "options":["auto","cover","contain","100% 100%"]},
                       "title": "Set the size of the background image",
-                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container."
                     },
                     "_backgroundPosition": {
                       "type": "string",
@@ -1062,9 +1062,9 @@
                       "type": "string",
                       "required": false,
                       "default": "",
-                      "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+                      "inputType": {"type":"Select", "options":["auto","cover","contain","100% 100%"]},
                       "title": "Set the size of the background image",
-                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+                      "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container."
                     },
                     "_backgroundPosition": {
                       "type": "string",
