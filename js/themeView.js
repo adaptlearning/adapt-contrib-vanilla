@@ -1,128 +1,124 @@
-define([
-  'core/js/adapt'
-], function(Adapt) {
+import Adapt from 'core/js/adapt';
 
-  var ThemeView = Backbone.View.extend({
+export default class ThemeView extends Backbone.View {
 
-    className: function() {},
+  className() {}
 
-    initialize: function() {
-      this.setStyles();
+  initialize() {
+    this.setStyles();
 
-      this.listenTo(Adapt, {
-        'device:changed': this.onDeviceResize,
-        'remove': this.remove
-      });
-    },
+    this.listenTo(Adapt, {
+      'device:changed': this.onDeviceResize,
+      remove: this.remove
+    });
+  }
 
-    onDeviceResize: function() {
-      this.setStyles();
-    },
+  onDeviceResize() {
+    this.setStyles();
+  }
 
-    remove: function() {
-      Backbone.View.prototype.remove.call(this);
+  remove() {
+    super.remove();
 
-      this.onRemove();
-    },
+    this.onRemove();
+  }
 
-    setStyles: function() {
-      this.setClasses();
-      this.setBackgroundImage();
-      this.setBackgroundStyles();
-      this.setMinimumHeight();
-      this.setResponsiveClasses();
-      this.setCustomStyles();
-    },
+  setStyles() {
+    this.setClasses();
+    this.setBackgroundImage();
+    this.setBackgroundStyles();
+    this.setMinimumHeight();
+    this.setResponsiveClasses();
+    this.setCustomStyles();
+  }
 
-    setClasses: function() {
-      this.$el.addClass(this.className());
-    },
+  setClasses() {
+    this.$el.addClass(this.className());
+  }
 
-    setBackgroundImage: function() {
-      var backgroundImages = this.model.get('_backgroundImage');
+  setBackgroundImage() {
+    const backgroundImages = this.model.get('_backgroundImage');
 
-      if (!backgroundImages) return;
+    if (!backgroundImages) return;
 
-      var backgroundImage;
+    let backgroundImage;
 
-      switch (Adapt.device.screenSize) {
-        case 'large':
-          backgroundImage = backgroundImages._large;
-          break;
-        case 'medium':
-          backgroundImage = backgroundImages._medium;
-          break;
-        default:
-          backgroundImage = backgroundImages._small;
-      }
+    switch (Adapt.device.screenSize) {
+      case 'large':
+        backgroundImage = backgroundImages._large;
+        break;
+      case 'medium':
+        backgroundImage = backgroundImages._medium;
+        break;
+      default:
+        backgroundImage = backgroundImages._small;
+    }
 
-      if (backgroundImage) {
-        this.$el
-          .addClass('has-bg-image')
-          .css('background-image', 'url(' + backgroundImage + ')');
-      } else {
-        this.$el
-          .removeClass('has-bg-image')
-          .css('background-image', '');
-      }
-    },
-
-    setBackgroundStyles: function () {
-      var styles = this.model.get('_backgroundStyles');
-
-      if (!styles) return;
-
-      this.$el.css({
-        'background-repeat': styles._backgroundRepeat,
-        'background-size': styles._backgroundSize,
-        'background-position': styles._backgroundPosition
-      });
-    },
-
-    setMinimumHeight: function() {
-      var minimumHeights = this.model.get('_minimumHeights');
-
-      if (!minimumHeights) return;
-
-      var minimumHeight;
-
-      switch (Adapt.device.screenSize) {
-        case 'large':
-          minimumHeight = minimumHeights._large;
-          break;
-        case 'medium':
-          minimumHeight = minimumHeights._medium;
-          break;
-        default:
-          minimumHeight = minimumHeights._small;
-      }
-
-      if (minimumHeight) {
-        this.$el
-          .addClass('has-min-height')
-          .css('min-height', minimumHeight + 'px');
-      } else {
-        this.$el
-          .removeClass('has-min-height')
-          .css('min-height', '');
-      }
-    },
-
-    setResponsiveClasses: function() {
-      const responsiveClasses = this.model.get('_responsiveClasses');
-      if (!responsiveClasses) return;
-
+    if (backgroundImage) {
       this.$el
-        .removeClass(Object.values(responsiveClasses))
-        .addClass(responsiveClasses[`_${Adapt.device.screenSize}`]);
-    },
+        .addClass('has-bg-image')
+        .css('background-image', 'url(' + backgroundImage + ')');
+      return;
+    }
 
-    setCustomStyles: function() {},
+    this.$el
+      .removeClass('has-bg-image')
+      .css('background-image', '');
+  }
 
-    onRemove: function() {}
+  setBackgroundStyles() {
+    const styles = this.model.get('_backgroundStyles');
 
-  });
+    if (!styles) return;
 
-  return ThemeView;
+    this.$el.css({
+      'background-repeat': styles._backgroundRepeat,
+      'background-size': styles._backgroundSize,
+      'background-position': styles._backgroundPosition
+    });
+  }
 
-});
+  setMinimumHeight() {
+    const minimumHeights = this.model.get('_minimumHeights');
+
+    if (!minimumHeights) return;
+
+    let minimumHeight;
+
+    switch (Adapt.device.screenSize) {
+      case 'large':
+        minimumHeight = minimumHeights._large;
+        break;
+      case 'medium':
+        minimumHeight = minimumHeights._medium;
+        break;
+      default:
+        minimumHeight = minimumHeights._small;
+    }
+
+    if (minimumHeight) {
+      this.$el
+        .addClass('has-min-height')
+        .css('min-height', minimumHeight + 'px');
+      return;
+    }
+
+    this.$el
+      .removeClass('has-min-height')
+      .css('min-height', '');
+  }
+
+  setResponsiveClasses() {
+    const responsiveClasses = this.model.get('_responsiveClasses');
+    if (!responsiveClasses) return;
+
+    this.$el
+      .removeClass(Object.values(responsiveClasses))
+      .addClass(responsiveClasses[`_${Adapt.device.screenSize}`]);
+  }
+
+  setCustomStyles() {}
+
+  onRemove() {}
+
+}
