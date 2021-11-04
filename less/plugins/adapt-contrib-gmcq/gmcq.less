@@ -1,11 +1,11 @@
-.gmcq {
-  &__item-label {
+.gmcq-item {
+  &__label {
     margin: @item-margin;
   }
 
   // Layout #1
   // --------------------------------------------------
-  &__item-option {
+  &__option {
     margin-top: @item-margin;
     padding: @item-padding / 2;
     background-color: @item-color;
@@ -13,39 +13,39 @@
     border-radius: @item-border-radius;
   }
 
-  .no-touch &__item-label:not(.is-disabled):not(.is-selected):hover .gmcq__item-option,
-  html:not(.a11y-disable-focusoutline) .gmcq__item-input:focus + &__item-label &__item-option {
+  .no-touch &__label:not(.is-disabled):not(.is-selected):hover &__option,
+  html:not(.a11y-disable-focusoutline) &__input:focus + &__label &__option {
     background-color: @item-color-hover;
     color: @item-color-inverted-hover;
     .transition(background-color @duration ease-in, color @duration ease-in;);
   }
 
-  &__item-label.is-disabled .gmcq__item-option {
+  &__label.is-disabled &__option {
     background-color: @disabled;
     color: @disabled-inverted;
   }
 
-  &__item-label.is-selected .gmcq__item-option {
+  &__label.is-selected &__option {
     background-color: @item-color-selected;
     color: @item-color-inverted-selected;
   }
 
-  &__item-state {
+  &__state {
     min-height: @icon-size;
   }
 
-  &__item-text {
+  &__text {
     margin-top: @item-margin;
     text-align: center;
   }
 
   // Layout #2
   // --------------------------------------------------
-  // &__item-option {
+  // &__option {
   //   position: relative;
   // }
 
-  // &__item-state {
+  // &__state {
   //   position: absolute;
   //   top: 50%;
   //   left: @item-padding;
@@ -57,7 +57,7 @@
   //   }
   // }
 
-  // &__item-text {
+  // &__text {
   //   padding: @item-padding @item-padding @item-padding (@icon-size + (@item-padding * 2));
 
   //   .dir-rtl & {
