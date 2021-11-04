@@ -1,9 +1,7 @@
-.accordion {
-  &__item {
-    margin-bottom: @item-margin / 2;
-  }
+.accordion-item {
+  margin-bottom: @item-margin / 2;
 
-  &__item-btn {
+  &__btn {
     position: relative;
     padding: @item-padding;
     padding-right: @icon-size + (@item-padding * 2);
@@ -25,17 +23,17 @@
     }
   }
 
-  &__item-btn.is-visited {
+  &__btn.is-visited {
     background-color: @visited;
     color: @visited-inverted;
   }
 
-  &__item-btn.is-selected {
+  &__btn.is-selected {
     background-color: @item-color-selected;
     color: @item-color-inverted-selected;
   }
 
-  &__item-icon {
+  &__icon {
     position: absolute;
     top: 50%;
     right: @item-padding;
@@ -47,16 +45,16 @@
     }
   }
 
-  &__item-content {
+  &__content {
     padding: @item-padding;
     border-radius: @item-border-radius;
   }
 
-  &__item-body a {
+  &__body a {
     .link-text;
   }
 
-  &.has-img-zoom &__item-image-container {
+  &.has-img-zoom &__image-container {
     .img-zoom();
   }
 }
