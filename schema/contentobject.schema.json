@@ -72,13 +72,14 @@
                 "_backgroundSize": {
                   "type": "string",
                   "title": "Size",
-                  "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible",
+                  "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container",
                   "default": "",
                   "enum": [
                     "",
                     "auto",
                     "cover",
-                    "contain"
+                    "contain",
+                    "100% 100%"
                   ],
                   "_backboneForms": "Select"
                 },
@@ -192,13 +193,14 @@
                     "_backgroundSize": {
                       "type": "string",
                       "title": "Size",
-                      "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible",
+                      "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container",
                       "default": "",
                       "enum": [
                         "",
                         "auto",
                         "cover",
-                        "contain"
+                        "contain",
+                        "100% 100%"
                       ],
                       "_backboneForms": "Select"
                     },

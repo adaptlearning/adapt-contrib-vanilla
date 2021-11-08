@@ -1,17 +1,11 @@
-define([
-  './themeView'
-], function(ThemeView) {
+import ThemeView from './themeView';
 
-  var ThemeArticleView = ThemeView.extend({
+export default class ThemeArticleView extends ThemeView {
 
-    className: function() {},
+  className() {}
 
-    setCustomStyles: function() {},
+  setCustomStyles() {}
 
-    onRemove: function() {}
+  onRemove() {}
 
-  });
-
-  return ThemeArticleView;
-
-});
+}

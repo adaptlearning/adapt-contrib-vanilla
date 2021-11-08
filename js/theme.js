@@ -1,38 +1,43 @@
-define([
-  'core/js/adapt',
-  './themePageView',
-  './themeArticleView',
-  './themeBlockView',
-  './themeView'
-], function(Adapt, ThemePageView, ThemeArticleView, ThemeBlockView, ThemeView) {
+import Adapt from 'core/js/adapt';
+import ThemePageView from './themePageView';
+import ThemeArticleView from './themeArticleView';
+import ThemeBlockView from './themeBlockView';
+import ThemeView from './themeView';
 
-  function onDataReady() {
+export default class Theme extends Backbone.Controller {
+
+  initialize() {
+    this.listenTo(Adapt, {
+      'app:dataReady': this.onDataReady,
+      'pageView:postRender articleView:postRender blockView:postRender': this.onPostRender
+    });
+  }
+
+  onDataReady() {
     $('html').addClass(Adapt.course.get('_courseStyle'));
   }
 
-  function onPostRender(view) {
-    var model = view.model;
-    var theme = model.get('_vanilla');
+  onPostRender(view) {
+    const viewModel = view.model;
+    const theme = viewModel.get('_vanilla');
+    const model = new Backbone.Model(theme);
+    const el = view.$el;
 
     if (!theme) return;
 
-    switch (model.get('_type')) {
+    switch (viewModel.get('_type')) {
       case 'page':
-        new ThemePageView({ model: new Backbone.Model(theme), el: view.$el });
+        new ThemePageView({ model, el });
         break;
       case 'article':
-        new ThemeArticleView({ model: new Backbone.Model(theme), el: view.$el });
+        new ThemeArticleView({ model, el });
         break;
       case 'block':
-        new ThemeBlockView({ model: new Backbone.Model(theme), el: view.$el });
+        new ThemeBlockView({ model, el });
         break;
       default:
-        new ThemeView({ model: new Backbone.Model(theme), el: view.$el });
+        new ThemeView({ model, el });
     }
   }
 
-  Adapt.on({
-    'app:dataReady': onDataReady,
-    'pageView:postRender articleView:postRender blockView:postRender': onPostRender
-  });
-});
+}

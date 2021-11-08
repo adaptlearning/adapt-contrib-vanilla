@@ -1,19 +1,13 @@
-define([
-  './themeView'
-], function(ThemeView) {
+import ThemeView from './themeView';
 
-  var ThemeBlockView = ThemeView.extend({
+export default class ThemeBlockView extends ThemeView {
 
-    className: function() {
-      return this.model.get('_isDividerBlock') ? 'is-divider-block' : '';
-    },
+  className() {
+    return this.model.get('_isDividerBlock') ? 'is-divider-block' : '';
+  }
 
-    setCustomStyles: function() {},
+  setCustomStyles() {}
 
-    onRemove: function() {}
+  onRemove() {}
 
-  });
-
-  return ThemeBlockView;
-
-});
+}

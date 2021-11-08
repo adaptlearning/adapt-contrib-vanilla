@@ -52,8 +52,8 @@ The **Vanilla** theme also exposes [*colour variables*](https://github.com/adapt
 >>**\_backgroundRepeat** (string): This attribute defines how the background image repeats. Properties include **repeat**, **repeat-x**, **repeat-y** and **no-repeat**.
 Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically.
 
->>**\_backgroundSize** (string): This attribute defines the size the background image display. Properties include **auto**, **cover** and **contain**.
-Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible.
+>>**\_backgroundSize** (string): This attribute defines the size the background image display. Properties include **auto**, **cover**, **contain**, and **100% 100%**.
+Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container.
 
 #### Global minimum heights
 >**_minimumHeights** (object): The minimum heights attribute group specifies the minimum height of the image container at different device widths (`_large`, `_medium`, and `_small`).
@@ -111,8 +111,8 @@ Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vani
 No known limitations.
 
 ----------------------------
-**Version number:**  5.7  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a><br>
-**Framework versions:**  5.3+<br>
+**Version number:**  5.8.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a><br>
+**Framework versions:**  5.8+<br>
 **Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-vanilla/graphs/contributors)<br>
 **Accessibility support:** WAI AA<br>
 **RTL support:** Yes<br>
