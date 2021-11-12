@@ -1,33 +1,33 @@
-.mcq {
-  &__item-label {
+.mcq-item {
+  &__label {
     margin-bottom: @item-margin / 2;
     background-color: @item-color;
     color: @item-color-inverted;
     border-radius: @item-border-radius;
 
     .no-touch &:not(.is-disabled):not(.is-selected):hover,
-    html:not(.a11y-disable-focusoutline) .mcq__item-input:focus + & {
+    html:not(.a11y-disable-focusoutline) .mcq-item__input:focus + & {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
 
-    .no-touch &:not(.is-disabled):not(.is-selected):hover .mcq__item-icon {
+    .no-touch &:not(.is-disabled):not(.is-selected):hover .mcq-item__icon {
       .effect-scalePulse;
     }
   }
 
-  &__item-label.is-disabled {
+  &__label.is-disabled {
     background-color: @disabled;
     color: @disabled-inverted;
   }
 
-  &__item-label.is-selected {
+  &__label.is-selected {
     background-color: @item-color-selected;
     color: @item-color-inverted-selected;
   }
 
-  &__item-state {
+  &__state {
     position: absolute;
     top: 50%;
     left: @item-padding;
@@ -39,7 +39,7 @@
     }
   }
 
-  &__item-text {
+  &__text {
     padding: @item-padding @item-padding @item-padding (@icon-size + (@item-padding * 2));
 
     .dir-rtl & {
