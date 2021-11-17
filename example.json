@@ -178,6 +178,24 @@ Block classes
 Component classes
 --------------------------------------------------
 
+Columns
+Breakpoints are assigned from the smallest screen resolution to the widest until they reach the max width value. Multiple column classes can be defined on a singular component to change the layout responsively. The column number assigned to a component is configurable and can be any number between 1 and 12. It is advisable to not exceed a combined total of 12 columns for all components within a block for each breakpoint.
+
+"_classes": "col-xs-8",
+"_comment": "On screens ranging from 0px to 520px the component fills 8 out of the 12 columns available.",
+
+"_classes": "col-sm-8",
+"_comment": "On screens ranging from 520px to 760px the component fills 8 out of the 12 columns available.",
+
+"_classes": "col-md-8",
+"_comment": "On screens ranging from 760px to 900px the component fills 8 out of the 12 columns available.",
+
+"_classes": "col-lg-8",
+"_comment": "On screens ranging from 900px to 1440px the component fills 8 out of the 12 columns available.",
+
+"_classes": "col-xl-8",
+"_comment": "On screens above 1440px the component fills 8 out of the 12 columns available.",
+
 Accordion item
 "_classes": "align-image-left",
 "_comment": "Aligns the image to the left of the body text on desktop, defaults to underneath on smaller screens.",
@@ -205,3 +223,5 @@ Media
 Narrative
 "_classes": "items-are-full-width",
 "_comment": "Increases the width of the narrative elements to 100% in desktop view.",
+
+

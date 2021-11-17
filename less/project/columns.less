@@ -1,0 +1,26 @@
+.make-columns(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
+  @media (min-width: @media-query) {
+    .component.col-@{size}-@{iteration} {
+      width: (@iteration * 100% / @count);
+    }
+  }
+
+  .make-columns(@size, @media-query, @count, (@iteration + 1));
+}
+
+// Custom classes
+// e.g. 'col-sm-8 col-md-10'
+// min small viewport takes up 8 out of 12 columns
+// min medium viewport takes up 10 columns
+// if undefined element defaults to 100% width
+.make-columns(xs, 0, 12);
+.make-columns(sm, @device-width-small, 12);
+.make-columns(md, @device-width-medium, 12);
+.make-columns(lg, @device-width-large, 12);
+.make-columns(xl, @max-width, 12);
+
+.component {
+  &__container {
+    flex-direction: unset;
+  }
+}
