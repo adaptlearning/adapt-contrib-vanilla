@@ -4,7 +4,7 @@ import ThemeArticleView from './themeArticleView';
 import ThemeBlockView from './themeBlockView';
 import ThemeView from './themeView';
 
-export default class Theme extends Backbone.Controller {
+class Theme extends Backbone.Controller {
 
   initialize() {
     this.listenTo(Adapt, {
@@ -41,3 +41,5 @@ export default class Theme extends Backbone.Controller {
   }
 
 }
+
+export default new Theme();
