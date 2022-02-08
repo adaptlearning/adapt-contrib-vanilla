@@ -1,14 +1,26 @@
 .textinput {
-  &__item-prefix-container,
-  &__item-suffix-container {
+  &__widget.is-disabled &-item__textbox {
+    background-color: @disabled;
+    border-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__widget.is-disabled &-item__icon {
+    color: @disabled-inverted;
+  }
+}
+
+.textinput-item {
+  &__prefix-container,
+  &__suffix-container {
     text-align: center;
   }
 
-  &__item-textbox-container {
+  &__textbox-container {
     position: relative;
   }
 
-  &__item-textbox {
+  &__textbox {
     padding: @item-padding (@icon-size + (@item-padding * 2)) @item-padding @item-padding;
     line-height: @body-line-height;
 
@@ -18,17 +30,7 @@
     }
   }
 
-  &__widget.is-disabled &__item-textbox {
-    background-color: @disabled;
-    border-color: @disabled;
-    color: @disabled-inverted;
-  }
-
-  &__widget.is-disabled &__item-icon {
-    color: @disabled-inverted;
-  }
-
-  &__item-state {
+  &__state {
     position: absolute;
     top: 50%;
     right: @item-padding;
