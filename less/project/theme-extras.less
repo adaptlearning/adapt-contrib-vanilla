@@ -295,3 +295,17 @@
 }
 
 }
+
+// classes to hide content above / below medium breakpoint
+// --------------------------------------------------
+.hide-on-desktop {
+  @media (min-width: @device-width-medium) {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @media (max-width: @device-width-medium) {
+    display: none;
+  }
+}
