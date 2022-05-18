@@ -51,16 +51,17 @@
 // _onScreen animation mixin for 'fade-in-top', 'fade-in-bottom',
 // 'fade-in-left', and 'fade-in-right'
 // --------------------------------------------------
-.on-screen-anim(fade-in-top; 0; 1; translateY(-100px); translateY(0));
-.on-screen-anim(fade-in-bottom; 0; 1; translateY(100px); translateY(0));
-.on-screen-anim(fade-in-left; 0; 1; translateX(-100px); translateX(0));
-.on-screen-anim(fade-in-right; 0; 1; translateX(100px); translateX(0));
+.on-screen-anim(fade-in-top; 0; 1; 1s; translateY(-100px); translateY(0));
+.on-screen-anim(fade-in-bottom; 0; 1; 1s; translateY(100px); translateY(0));
+.on-screen-anim(fade-in-left; 0; 1; 1s; translateX(-100px); translateX(0));
+.on-screen-anim(fade-in-right; 0; 1; 1s; translateX(100px); translateX(0));
 
 .on-screen-anim(@selector; @opacity-before; @opacity-after; @transform-before; @transform-after) {
   .@{selector}-before > div {
     opacity: @opacity-before;
     transform: @transform-before;
     transition: all @animation-duration @animation-easing, visibility 0s linear 0s;
+    transition-delay: @transition-delay;
   }
 
   .@{selector}-after > div {
