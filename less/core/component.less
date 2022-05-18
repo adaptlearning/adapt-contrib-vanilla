@@ -1,4 +1,14 @@
 .component {
+  &__container {
+    flex-direction: unset;
+    margin-left: -@component-padding-hoz;
+    margin-right: -@component-padding-hoz;
+  }
+
+  &__inner {
+    padding: @component-padding-ver @component-padding-hoz;
+  }
+
   &__title {
     margin-bottom: @component-title-margin;
     .component-title;
