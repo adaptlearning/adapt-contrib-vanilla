@@ -56,7 +56,7 @@
 .on-screen-anim(fade-in-left; 0; 1; 1s; translateX(-100px); translateX(0));
 .on-screen-anim(fade-in-right; 0; 1; 1s; translateX(100px); translateX(0));
 
-.on-screen-anim(@selector; @opacity-before; @opacity-after; @transform-before; @transform-after) {
+.on-screen-anim(@selector; @opacity-before; @opacity-after; @transition-delay; @transform-before; @transform-after) {
   .@{selector}-before > div {
     opacity: @opacity-before;
     transform: @transform-before;
