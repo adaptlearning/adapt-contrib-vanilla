@@ -1,14 +1,31 @@
 .boxmenu {
+  position: relative;
   max-width: inherit;
   .l-container-padding(@menu-padding-ver, @menu-padding-hoz);
 
-  &.has-bg-image {
+  & > .has-bg-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
   }
 
-  &__header.has-bg-image {
+  &__header {
+    position: relative;
+  }
+
+  &__header > .has-bg-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;

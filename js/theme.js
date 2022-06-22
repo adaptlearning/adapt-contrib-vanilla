@@ -20,11 +20,9 @@ class Theme extends Backbone.Controller {
   onPostRender(view) {
     const viewModel = view.model;
     const theme = viewModel.get('_vanilla');
+    if (!theme) return;
     const model = new Backbone.Model(theme);
     const el = view.$el;
-
-    if (!theme) return;
-
     switch (viewModel.get('_type')) {
       case 'page':
         new ThemePageView({ model, el });

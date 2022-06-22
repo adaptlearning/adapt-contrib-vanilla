@@ -1,5 +1,13 @@
 .article {
-  &.has-bg-image {
+  position: relative;
+
+  & > .has-bg-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;

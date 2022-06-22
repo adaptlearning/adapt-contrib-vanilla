@@ -40,13 +40,15 @@ export default class ThemePageView extends ThemeView {
     }
 
     if (backgroundImage) {
-      $header
+      $('<div></div>')
+        .prependTo($header)
         .addClass('has-bg-image')
         .css('background-image', 'url(' + backgroundImage + ')');
       return;
     }
 
     $header
+      .find('> .has-bg-image')
       .removeClass('has-bg-image')
       .css('background-image', '');
   }

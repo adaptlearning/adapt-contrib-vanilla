@@ -55,13 +55,15 @@ export default class ThemeView extends Backbone.View {
     }
 
     if (backgroundImage) {
-      this.$el
+      $('<div></div>')
+        .prependTo(this.$el)
         .addClass('has-bg-image')
         .css('background-image', 'url(' + backgroundImage + ')');
       return;
     }
 
     this.$el
+      .find('> .has-bg-image')
       .removeClass('has-bg-image')
       .css('background-image', '');
   }
