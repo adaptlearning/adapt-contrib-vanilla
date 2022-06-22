@@ -40,7 +40,7 @@ export default class ThemePageView extends ThemeView {
     }
 
     if (backgroundImage) {
-      $('<div></div>')
+      $('<div aria-hidden="true"></div>')
         .prependTo($header)
         .addClass('has-bg-image')
         .css('background-image', 'url(' + backgroundImage + ')');

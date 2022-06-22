@@ -55,7 +55,7 @@ export default class ThemeView extends Backbone.View {
     }
 
     if (backgroundImage) {
-      $('<div></div>')
+      $('<div aria-hidden="true"></div>')
         .prependTo(this.$el)
         .addClass('has-bg-image')
         .css('background-image', 'url(' + backgroundImage + ')');
