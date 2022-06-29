@@ -24,4 +24,16 @@
     line-height: @body-size;
     text-align: center;
   }
+
+  // Hotgraphic as tiles
+  // --------------------------------------------------
+  &__tile {
+    .icon {
+      .is-visited& {
+        background-color: @visited;
+        color: @visited-inverted;
+        border-radius: 50%;
+      }
+    }
+  }
 }
