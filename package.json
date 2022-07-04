@@ -15,10 +15,8 @@
   "private": true,
   "license": "GPL-3.0",
   "targetAttribute": "_vanilla",
-  "dependencies": {
-    "semantic-release": "^19.0.3"
-  },
   "devDependencies": {
+    "semantic-release": "^19.0.3",
     "@semantic-release/git": "^10.0.1"
   },
   "release": {
@@ -26,6 +24,7 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/npm",
+      "@semantic-release/github",
       [
         "@semantic-release/git",
         {
