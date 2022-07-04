@@ -12,6 +12,7 @@
     "adapt-plugin",
     "adapt-theme"
   ],
+  "private": true,
   "license": "GPL-3.0",
   "targetAttribute": "_vanilla",
   "dependencies": {
