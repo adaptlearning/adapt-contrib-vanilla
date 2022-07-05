@@ -27,13 +27,9 @@
 
   // Hotgraphic as tiles
   // --------------------------------------------------
-  &__tile {
-    .icon {
-      .is-visited& {
-        background-color: @visited;
-        color: @visited-inverted;
-        border-radius: 50%;
-      }
-    }
+  &__tile.is-visited .icon {
+    background-color: @visited;
+    color: @visited-inverted;
+    border-radius: 50%;
   }
 }
