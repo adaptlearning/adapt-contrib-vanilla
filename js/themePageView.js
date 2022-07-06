@@ -24,7 +24,7 @@ export default class ThemePageView extends ThemeView {
 
   addHeaderBackgroundLayer($header) {
     if ($header.find(' > .background').length) return;
-    this.$background = $('<div class="background" aria-hidden="true"></div>')
+    this.$headerBackground = $('<div class="background" aria-hidden="true"></div>')
       .prependTo($header);
   }
 
@@ -48,19 +48,19 @@ export default class ThemePageView extends ThemeView {
 
     if (backgroundImage) {
       $header.addClass('has-bg-image');
-      this.$background
+      this.$headerBackground
         .css('background-image', 'url(' + backgroundImage + ')');
       return;
     }
 
     $header.removeClass('has-bg-image');
-    this.$background.css('background-image', '');
+    this.$headerBackground.css('background-image', '');
   }
 
   setHeaderBackgroundStyles(config, $header) {
     const styles = config._backgroundStyles;
     if (!styles) return;
-    this.$background
+    this.$headerBackground
       .css({
         'background-repeat': styles._backgroundRepeat,
         'background-size': styles._backgroundSize,
