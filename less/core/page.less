@@ -3,7 +3,7 @@
   max-width: inherit;
   .l-container-padding(@page-padding-ver, @page-padding-hoz);
 
-  & > .has-bg-image {
+  &.has-bg-image > .background {
     position: absolute;
     top: 0;
     height: 100%;
@@ -19,19 +19,16 @@
     position: relative;
   }
 
-  &__header > .has-bg-image {
+  &__header.has-bg-image > .background {
     position: absolute;
     top: 0;
     height: 100%;
     left: 0;
     width: 100%;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
   }
 
   &__header-inner {
+    position: relative;
     .l-container-padding(@page-header-padding-ver, @page-header-padding-hoz);
   }
 
