@@ -4,6 +4,7 @@ import ThemeArticleView from './themeArticleView';
 import ThemeBlockView from './themeBlockView';
 import ThemeView from './themeView';
 
+// Useless comment
 class Theme extends Backbone.Controller {
 
   initialize() {
