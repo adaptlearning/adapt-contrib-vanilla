@@ -1,4 +1,5 @@
 import Adapt from 'core/js/adapt';
+import device from 'core/js/device';
 
 export default class ThemeView extends Backbone.View {
 
@@ -25,6 +26,7 @@ export default class ThemeView extends Backbone.View {
 
   setStyles() {
     this.setClasses();
+    this.addBackgroundLayer();
     this.setBackgroundImage();
     this.setBackgroundStyles();
     this.setMinimumHeight();
@@ -36,6 +38,12 @@ export default class ThemeView extends Backbone.View {
     this.$el.addClass(this.className());
   }
 
+  addBackgroundLayer() {
+    if (this.$el.find(' > .background').length) return;
+    this.$background = $('<div class="background" aria-hidden="true"></div>')
+      .prependTo(this.$el);
+  }
+
   setBackgroundImage() {
     const backgroundImages = this.model.get('_backgroundImage');
 
@@ -43,7 +51,7 @@ export default class ThemeView extends Backbone.View {
 
     let backgroundImage;
 
-    switch (Adapt.device.screenSize) {
+    switch (device.screenSize) {
       case 'large':
         backgroundImage = backgroundImages._large;
         break;
@@ -55,27 +63,25 @@ export default class ThemeView extends Backbone.View {
     }
 
     if (backgroundImage) {
-      this.$el
-        .addClass('has-bg-image')
+      this.$el.addClass('has-bg-image');
+      this.$background
         .css('background-image', 'url(' + backgroundImage + ')');
       return;
     }
 
-    this.$el
-      .removeClass('has-bg-image')
-      .css('background-image', '');
+    this.$el.removeClass('has-bg-image');
+    this.$background.css('background-image', '');
   }
 
   setBackgroundStyles() {
     const styles = this.model.get('_backgroundStyles');
-
     if (!styles) return;
-
-    this.$el.css({
-      'background-repeat': styles._backgroundRepeat,
-      'background-size': styles._backgroundSize,
-      'background-position': styles._backgroundPosition
-    });
+    this.$background
+      .css({
+        'background-repeat': styles._backgroundRepeat,
+        'background-size': styles._backgroundSize,
+        'background-position': styles._backgroundPosition
+      });
   }
 
   setMinimumHeight() {

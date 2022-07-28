@@ -1,20 +1,40 @@
 .page {
+  position: relative;
   max-width: inherit;
   .l-container-padding(@page-padding-ver, @page-padding-hoz);
 
-  &.has-bg-image {
+  &.has-bg-image > .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
   }
 
-  &__header.has-bg-image {
+  &__inner {
+    position: relative;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__header.has-bg-image > .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
   }
 
   &__header-inner {
+    position: relative;
     .l-container-padding(@page-header-padding-ver, @page-header-padding-hoz);
   }
 
