@@ -83,8 +83,18 @@ blocks.json
         "_small": "class-small"
     },
     // Divider Block - adds class to `.block` element
-    "_isDividerBlock": false
+    "_isDividerBlock": false,
+    // Defines the vertical alignment of the child component(s) in relation to the block.
+    // Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block.
+    // The default alignment is `top`.
+    "_componentVerticalAlignment": "center"
 }
+
+"_classes": "align-vert-center",
+"_comment": "Aligns the blocks child components centrally on the vertical axis.",
+
+"_classes": "align-vert-bottom",
+"_comment": "Aligns child components to the bottom of the parent block on the vertical axis.",
 
 On screen animation json config
 --------------------------------------------------
@@ -141,12 +151,6 @@ Content Object classes
 
 Block classes
 --------------------------------------------------
-
-"_classes": "align-vert-center",
-"_comment": "Aligns the blocks child components centrally on the vertical axis.",
-
-"_classes": "align-vert-bottom",
-"_comment": "Aligns child components to the bottom of the parent block on the vertical axis.",
 
 "_classes": "reverse-desktop-order",
 "_comment": "Reverses the visual layout of the components above the medium breakpoint (default is 760px). e.g. Left layout components would still render first in the DOM order but visually appear on the right-hand side above the medium breakpoint. The components would vertically stack as per the DOM order below the breakpoint.",
