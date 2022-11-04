@@ -164,9 +164,8 @@
               "type": "string",
               "title": "Set the vertical alignment of the child component(s).",
               "description": "Defines the vertical alignment of the child component(s) in relation to the block. Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block. The default alignment is `top`.",
-              "default": "",
+              "default": "top",
               "enum": [
-                "",
                 "top",
                 "center",
                 "bottom"
