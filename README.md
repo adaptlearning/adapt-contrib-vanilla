@@ -85,6 +85,8 @@ Auto: The background image is displayed in its original size. Cover: Resize the 
 #### **blocks.json**
 >**\_isDividerBlock** (boolean): - Determines whether the CSS class `is-divider-block` will be applied. Acceptable values are `true` and `false`.
 
+>**\_componentVerticalAlignment** (string): Defines the vertical alignment of the child component(s) in relation to the block.
+
 Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.
 
 ## Structure
