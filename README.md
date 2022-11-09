@@ -83,11 +83,11 @@ Auto: The background image is displayed in its original size. Cover: Resize the 
 >>**\_small** (string): File name (including path) of the image used with small device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-one.jpg*).
 
 #### **blocks.json**
->**\_isDividerBlock** (boolean): - Determines whether the CSS class `is-divider-block` will be applied. Acceptable values are `true` and `false`.
+>**\_isDividerBlock** (boolean): Determines whether the CSS class `is-divider-block` will be applied. Acceptable values are `true` and `false`.
 
->**\_paddingTop** (string): - Changes the value of the blocks top spacing.
+>**\_paddingTop** (string): Changes the value of the blocks top spacing.
 
->**\_paddingBottom** (string): - Changes the value of the blocks bottom spacing.
+>**\_paddingBottom** (string): Changes the value of the blocks bottom spacing.
 
 Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.
 
