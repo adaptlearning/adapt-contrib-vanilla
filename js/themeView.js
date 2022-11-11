@@ -56,7 +56,6 @@ export default class ThemeView extends Backbone.View {
 
   setBackgroundImage() {
     const backgroundImages = this.model.get('_backgroundImage');
-
     if (!backgroundImages) return;
 
     let backgroundImage;
@@ -86,6 +85,7 @@ export default class ThemeView extends Backbone.View {
   setBackgroundStyles() {
     const styles = this.model.get('_backgroundStyles');
     if (!styles) return;
+
     this.$background
       .css({
         'background-repeat': styles._backgroundRepeat,
@@ -96,7 +96,6 @@ export default class ThemeView extends Backbone.View {
 
   setMinimumHeight() {
     const minimumHeights = this.model.get('_minimumHeights');
-
     if (!minimumHeights) return;
 
     let minimumHeight;
