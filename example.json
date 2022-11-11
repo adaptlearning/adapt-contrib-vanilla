@@ -23,6 +23,11 @@ contentObjects.json
         "_small": "class-small"
     },
     "_pageHeader": {
+        "_textAlignment": {
+            "_title": "left",
+            "_body": "center",
+            "_instruction": "right",
+        },
         "_backgroundImage": {
             "_large": "course/en/images/example.jpg",
             "_medium": "course/en/images/example.jpg",
@@ -43,6 +48,11 @@ contentObjects.json
 
 articles.json
 "_vanilla": {
+    "_textAlignment": {
+        "_title": "left",
+        "_body": "center",
+        "_instruction": "right",
+    },
     "_backgroundImage": {
         "_large": "course/en/images/example.jpg",
         "_medium": "course/en/images/example.jpg",
@@ -62,6 +72,11 @@ articles.json
 
 blocks.json
 "_vanilla": {
+    "_textAlignment": {
+        "_title": "left",
+        "_body": "center",
+        "_instruction": "right",
+    },
     "_backgroundImage": {
         "_large": "course/en/images/example.jpg",
         "_medium": "course/en/images/example.jpg",
@@ -88,6 +103,15 @@ blocks.json
     // Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block.
     // The default alignment is `top`.
     "_componentVerticalAlignment": "center"
+}
+
+components.json
+"_vanilla": {
+    "_textAlignment": {
+        "_title": "left",
+        "_body": "center",
+        "_instruction": "right",
+    }
 }
 
 "_classes": "align-vert-center",

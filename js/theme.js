@@ -2,6 +2,7 @@ import Adapt from 'core/js/adapt';
 import ThemePageView from './themePageView';
 import ThemeArticleView from './themeArticleView';
 import ThemeBlockView from './themeBlockView';
+import ThemeComponentView from './themeComponentView';
 import ThemeView from './themeView';
 
 class Theme extends Backbone.Controller {
@@ -9,7 +10,7 @@ class Theme extends Backbone.Controller {
   initialize() {
     this.listenTo(Adapt, {
       'app:dataReady': this.onDataReady,
-      'pageView:postRender articleView:postRender blockView:postRender': this.onPostRender
+      'pageView:postRender articleView:postRender blockView:postRender componentView:postRender': this.onPostRender
     });
   }
 
@@ -32,6 +33,9 @@ class Theme extends Backbone.Controller {
         break;
       case 'block':
         new ThemeBlockView({ model, el });
+        break;
+      case 'component':
+        new ThemeComponentView({ model, el });
         break;
       default:
         new ThemeView({ model, el });

@@ -134,6 +134,52 @@
               "title": "Header",
               "default": {},
               "properties": {
+                "_textAlignment": {
+                  "type": "object",
+                  "title": "Text alignment",
+                  "default": {},
+                  "properties": {
+                    "_title": {
+                      "type": "string",
+                      "title": "Title alignment",
+                      "description": "Set the alignment of the page title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                      "default": "",
+                      "enum": [
+                        "",
+                        "left",
+                        "center",
+                        "right"
+                      ],
+                      "_backboneForms": "Select"
+                    },
+                    "_body": {
+                      "type": "string",
+                      "title": "Body alignment",
+                      "description": "Set the alignment of the page body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                      "default": "",
+                      "enum": [
+                        "",
+                        "left",
+                        "center",
+                        "right"
+                      ],
+                      "_backboneForms": "Select"
+                    },
+                    "_instruction": {
+                      "type": "string",
+                      "title": "Instruction alignment",
+                      "description": "Set the alignment of the page instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                      "default": "",
+                      "enum": [
+                        "",
+                        "left",
+                        "center",
+                        "right"
+                      ],
+                      "_backboneForms": "Select"
+                    }
+                  }
+                },
                 "_backgroundImage": {
                   "type": "object",
                   "title": "Header background image",
