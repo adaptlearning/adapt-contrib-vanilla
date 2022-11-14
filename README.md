@@ -38,7 +38,7 @@ The **Vanilla** theme also exposes [*colour variables*](https://github.com/adapt
 **\_vanilla** (object): The following attributes configure the defaults for **Vanilla**. These include **\_backgroundImage**, **\_backgroundStyles** and **\_minimumHeights**. Global attributes are available at page, article and block level.
 
 #### Global text alignment
->**\_textAlignment** (object): The text alignment object that contains values for **\_title**, **\_bodyy**, and **\_instruction**.
+>**\_textAlignment** (object): The text alignment object that contains values for **\_title**, **\_body**, and **\_instruction**.
 
 >>**\_title**: (string): This attribute defines the alignment of the title element. Properties include **left**, **center**, and **right**.
 Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.
