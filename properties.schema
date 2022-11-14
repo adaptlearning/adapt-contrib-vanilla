@@ -832,7 +832,7 @@
                           "inputType": {"type":"Select", "options":["","left","center","right"]},
                           "title": "Instruction alignment",
                           "help": "Set the alignment of the page instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
-                        },
+                        }
                       }
                     },
                     "_backgroundImage": {
@@ -969,7 +969,7 @@
                       "inputType": {"type":"Select", "options":["","left","center","right"]},
                       "title": "Instruction alignment",
                       "help": "Set the alignment of the article instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
-                    },
+                    }
                   }
                 },
                 "_backgroundImage": {
@@ -1104,7 +1104,7 @@
                       "inputType": {"type":"Select", "options":["","left","center","right"]},
                       "title": "Instruction alignment",
                       "help": "Set the alignment of the block instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
-                    },
+                    }
                   }
                 },
                 "_backgroundImage": {
