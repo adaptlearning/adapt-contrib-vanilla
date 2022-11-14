@@ -89,6 +89,8 @@ Auto: The background image is displayed in its original size. Cover: Resize the 
 
 >**\_paddingBottom** (string): Changes the value of the blocks bottom spacing.
 
+>**\_componentVerticalAlignment** (string): Defines the vertical alignment of the child component(s) in relation to the block.
+
 Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.
 
 ## Structure
