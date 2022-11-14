@@ -102,6 +102,8 @@ The first value is the horizontal position and the second value is the vertical
 #### **blocks.json**
 >**\_isDividerBlock** (boolean): - Determines whether the CSS class `is-divider-block` will be applied. Acceptable values are `true` and `false`.
 
+>**\_componentVerticalAlignment** (string): Defines the vertical alignment of the child component(s) in relation to the block.
+
 Visit the [**Vanilla** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.
 
 ## Structure
