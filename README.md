@@ -85,9 +85,9 @@ Auto: The background image is displayed in its original size. Cover: Resize the 
 #### **blocks.json**
 >**\_isDividerBlock** (boolean): Determines whether the CSS class `is-divider-block` will be applied. Acceptable values are `true` and `false`.
 
->**\_paddingTop** (string): Changes the value of the blocks top spacing.
+>**\_paddingTop** (string): Changes the value of the blocks top spacing. Double: Doubles the blocks top spacing. Standard: Retains the standard blocks top spacing. Half: Halves the blocks top spacing. Remove: Removes the blocks top spacing. The default value is `standard`.
 
->**\_paddingBottom** (string): Changes the value of the blocks bottom spacing.
+>**\_paddingBottom** (string): Changes the value of the blocks bottom spacing. Double: Doubles the blocks bottom spacing. Standard: Retains the standard blocks bottom spacing. Half: Halves the blocks bottom spacing. Remove: Removes the blocks bottom spacing. The default value is `standard`.
 
 >**\_componentVerticalAlignment** (string): Defines the vertical alignment of the child component(s) in relation to the block.
 
