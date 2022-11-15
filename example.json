@@ -90,12 +90,6 @@ blocks.json
     "_componentVerticalAlignment": "center"
 }
 
-"_classes": "align-vert-center",
-"_comment": "Aligns the blocks child components centrally on the vertical axis.",
-
-"_classes": "align-vert-bottom",
-"_comment": "Aligns child components to the bottom of the parent block on the vertical axis.",
-
 On screen animation json config
 --------------------------------------------------
 
