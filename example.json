@@ -26,7 +26,7 @@ contentObjects.json
         "_textAlignment": {
             "_title": "left",
             "_body": "center",
-            "_instruction": "right",
+            "_instruction": "right"
         },
         "_backgroundImage": {
             "_large": "course/en/images/example.jpg",
@@ -51,7 +51,7 @@ articles.json
     "_textAlignment": {
         "_title": "left",
         "_body": "center",
-        "_instruction": "right",
+        "_instruction": "right"
     },
     "_backgroundImage": {
         "_large": "course/en/images/example.jpg",
@@ -75,7 +75,7 @@ blocks.json
     "_textAlignment": {
         "_title": "left",
         "_body": "center",
-        "_instruction": "right",
+        "_instruction": "right"
     },
     "_backgroundImage": {
         "_large": "course/en/images/example.jpg",
@@ -110,7 +110,7 @@ components.json
     "_textAlignment": {
         "_title": "left",
         "_body": "center",
-        "_instruction": "right",
+        "_instruction": "right"
     }
 }
 
