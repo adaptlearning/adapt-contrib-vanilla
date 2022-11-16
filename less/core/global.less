@@ -6,3 +6,25 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+
+// Quote related styling
+// override browser defined margins with rem unit
+blockquote,
+figure {
+  margin: @item-margin * 2;
+}
+
+// styled quote with attribution
+.figure-quote blockquote,
+.figure-quote q {
+  .quote-body;
+}
+
+.figure-quote blockquote {
+  margin: 0;
+}
+
+.figure-quote figcaption {
+  .quote-attribution;
+}
+
