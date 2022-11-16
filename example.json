@@ -194,17 +194,7 @@ Breakpoints are assigned from the smallest screen resolution to the widest until
 "_classes": "col-xl-8",
 "_comment": "On screens above 1440px the component fills 8 out of the 12 columns available.",
 
-Accordion item
-"_classes": "align-image-left",
-"_comment": "Aligns the image to the left of the body text on desktop, defaults to underneath on smaller screens.",
-
-"_classes": "align-image-right",
-"_comment": "Aligns the image to the right of the body text on desktop, defaults to underneath on smaller screens.",
-
 Hotgraphic item
-"_classes": "align-image-left",
-"_comment": "Align the hotgraphic pop up image to the left on desktop.",
-
 "_classes": "hide-desktop-image",
 "_comment": "Hide the hotgraphic pop up image on desktop.",
 
@@ -221,5 +211,3 @@ Media
 Narrative
 "_classes": "items-are-full-width",
 "_comment": "Increases the width of the narrative elements to 100% in desktop view.",
-
-
