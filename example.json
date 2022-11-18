@@ -1,37 +1,33 @@
---------------------------------------------------
-JSON
---------------------------------------------------
+// Available properties
+// --------------------------------------------------
 
-Background images, styles, minimum heights, and responsive classes json config
---------------------------------------------------
-
-contentObjects.json
+// contentObjects.json
 "_vanilla": {
     "_backgroundImage": {
-        "_large": "course/en/images/example.jpg",
-        "_medium": "course/en/images/example.jpg",
-        "_small": "course/en/images/example.jpg"
+        "_large": "",
+        "_medium": "",
+        "_small": ""
     },
     "_backgroundStyles": {
-        "_backgroundSize": "contain",
-        "_backgroundRepeat": "repeat",
-        "_backgroundPosition": "center center"
+        "_backgroundSize": "",
+        "_backgroundRepeat": "",
+        "_backgroundPosition": ""
     },
     "_responsiveClasses": {
-        "_large": "class-large",
-        "_medium": "class-medium",
-        "_small": "class-small"
+        "_large": "",
+        "_medium": "",
+        "_small": ""
     },
     "_pageHeader": {
         "_backgroundImage": {
-            "_large": "course/en/images/example.jpg",
-            "_medium": "course/en/images/example.jpg",
-            "_small": "course/en/images/example.jpg"
+            "_large": "",
+            "_medium": "",
+            "_small": ""
         },
         "_backgroundStyles": {
-            "_backgroundSize": "contain",
-            "_backgroundRepeat": "repeat",
-            "_backgroundPosition": "center center"
+            "_backgroundSize": "",
+            "_backgroundRepeat": "",
+            "_backgroundPosition": ""
         },
         "_minimumHeights": {
             "_large": 600,
@@ -41,36 +37,36 @@ contentObjects.json
     }
 }
 
-articles.json
+// articles.json
 "_vanilla": {
     "_backgroundImage": {
-        "_large": "course/en/images/example.jpg",
-        "_medium": "course/en/images/example.jpg",
-        "_small": "course/en/images/example.jpg"
+        "_large": "",
+        "_medium": "",
+        "_small": ""
     },
     "_backgroundStyles": {
-        "_backgroundSize": "contain",
-        "_backgroundRepeat": "repeat",
-        "_backgroundPosition": "center center"
+        "_backgroundSize": "",
+        "_backgroundRepeat": "",
+        "_backgroundPosition": ""
     },
     "_responsiveClasses": {
-        "_large": "class-large",
-        "_medium": "class-medium",
-        "_small": "class-small"
+        "_large": "",
+        "_medium": "",
+        "_small": ""
     }
 }
 
-blocks.json
+// blocks.json
 "_vanilla": {
     "_backgroundImage": {
-        "_large": "course/en/images/example.jpg",
-        "_medium": "course/en/images/example.jpg",
-        "_small": "course/en/images/example.jpg"
+        "_large": "",
+        "_medium": "",
+        "_small": ""
     },
     "_backgroundStyles": {
-        "_backgroundSize": "contain",
-        "_backgroundRepeat": "repeat",
-        "_backgroundPosition": "center center"
+        "_backgroundSize": "",
+        "_backgroundRepeat": "",
+        "_backgroundPosition": ""
     },
     "_minimumHeights": {
         "_large": 600,
@@ -78,136 +74,27 @@ blocks.json
         "_small": 200
     },
     "_responsiveClasses": {
-        "_large": "class-large",
-        "_medium": "class-medium",
-        "_small": "class-small"
+        "_large": "",
+        "_medium": "",
+        "_small": ""
     },
-    // Divider Block - adds class to `.block` element
     "_isDividerBlock": false,
-    // Defines the vertical alignment of the child component(s) in relation to the block.
-    // Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block.
-    // The default alignment is `top`.
     "_componentVerticalAlignment": "center"
 }
 
-On screen animation json config
---------------------------------------------------
+A detailed breakdown of each property can be found on wiki at https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/onScreen-Animation
 
-blocks.json / components.json
+// onScreen Animation
+// --------------------------------------------------
 "_onScreen": {
-    "_isEnabled": true,
-    "_comment": "Supported classes = 'fade-in' | 'fade-in-left' | 'fade-in-right' | 'fade-in-top' | 'fade-in-bottom'. Additional classes can be used but they must be predefined in one of the Less files",
-    "_classes": "fade-in-bottom",
-    "_percentInviewVertical": 50
+  "_isEnabled": true,
+  "_classes": "fade-in",
+  "_percentInviewVertical": 50
 }
 
---------------------------------------------------
-Classes
---------------------------------------------------
+Further information regarding onScreen animation can be found on the wiki at https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/onScreen-Animation
 
-Common classes
---------------------------------------------------
-"_classes": "bg-color",
-"_comment": "Sets up the solid background colour mixin. Combine with one of the following classes e.g. 'bg-color black'. Note: the following class must be a predefined variable. Mixin can be extended to include custom colours.",
+// Vanilla Custom Classes
+// --------------------------------------------------
 
-"_classes": "transparent-light",
-"_comment": "Sets the background colour of the block to transparent and changes the font colour to black. Useful for displaying text over a light background image.",
-
-"_classes": "transparent-dark",
-"_comment": "Sets the background colour of the block to transparent and changes the font colour to white. Useful for displaying text over a dark background image.",
-
-"_classes": "black",
-"_comment": "Sets the background colour of the block to black and changes the font colour to white.",
-
-"_classes": "background",
-"_comment": "Sets the background colour of the block to use the variable @background (default is black) and changes the font colour to use the variable @background-inverted (default is white). These variables can be changed in the ‘_colors.less’ file.",
-
-Content Object classes
---------------------------------------------------
-
-"_htmlClasses": "hide-nav-back-btn",
-"_comment": "Hides the navigation back button on the page.",
-
-"_classes": "hide-page-header",
-"_comment": "Hides the page header on the page.",
-
-"_classes": "header-color",
-"_comment": "Sets up the header solid background colour mixin. Combine with one of the following classes e.g. 'header-color background'. Note: the following class must be a predefined variable. Mixin can be extended to include client colours. Can be set for menu and/or page header.",
-
-"_classes": "transparent-light",
-"_comment": "Sets the background colour of the header to transparent and changes the font colour to @font-color. Useful for displaying text over a light background image.",
-
-"_classes": "transparent-dark",
-"_comment": "Sets the background colour of the header to transparent and changes the font colour to @font-color-inverted. Useful for displaying text over a dark background image.",
-
-"_classes": "background",
-"_comment": "Sets the background colour of the header to use the variable @background (default is black) and changes the font colour to use the variable @background-inverted (default is white). These variables can be changed in the ‘_colors.less’ file.",
-
-Block classes
---------------------------------------------------
-
-"_classes": "reverse-desktop-order",
-"_comment": "Reverses the visual layout of the components above the medium breakpoint (default is 760px). e.g. Left layout components would still render first in the DOM order but visually appear on the right-hand side above the medium breakpoint. The components would vertically stack as per the DOM order below the breakpoint.",
-
-"_classes": "extend-content-container",
-"_comment": "Extend width of block to 70rem (default is 1120px).",
-
-"_classes": "extend-container",
-"_comment": "Extend width of block to max page width (default is 1440px).",
-
-"_classes": "remove-padding-top | remove-top-padding",
-"_comment": "Removes the top padding from block.",
-
-"_classes": "remove-padding-bottom | remove-bottom-padding",
-"_comment": "Removes the bottom padding from block.",
-
-"_classes": "reduce-padding-top",
-"_comment": "Reduce the blocks top padding by half.",
-
-"_classes": "reduce-padding-bottom",
-"_comment": "Reduce the blocks bottom padding by half.",
-
-"_classes": "increase-padding-top",
-"_comment": "Double the blocks top padding.",
-
-"_classes": "increase-padding-bottom",
-"_comment": "Double the blocks bottom padding.",
-
-Component classes
---------------------------------------------------
-
-Columns
-Breakpoints are assigned from the smallest screen resolution to the widest until they reach the max width value. Multiple column classes can be defined on a singular component to change the layout responsively. The column number assigned to a component is configurable and can be any number between 1 and 12. It is advisable to not exceed a combined total of 12 columns for all components within a block for each breakpoint.
-
-"_classes": "col-xs-8",
-"_comment": "On screens ranging from 0px to 520px the component fills 8 out of the 12 columns available.",
-
-"_classes": "col-sm-8",
-"_comment": "On screens ranging from 520px to 760px the component fills 8 out of the 12 columns available.",
-
-"_classes": "col-md-8",
-"_comment": "On screens ranging from 760px to 900px the component fills 8 out of the 12 columns available.",
-
-"_classes": "col-lg-8",
-"_comment": "On screens ranging from 900px to 1440px the component fills 8 out of the 12 columns available.",
-
-"_classes": "col-xl-8",
-"_comment": "On screens above 1440px the component fills 8 out of the 12 columns available.",
-
-Hotgraphic item
-"_classes": "hide-desktop-image",
-"_comment": "Hide the hotgraphic pop up image on desktop.",
-
-"_classes": "hide-popup-image",
-"_comment": "Hide the hotgraphic pop up image for all screen sizes.",
-
-Media
-"_classes": "invert-play-icon",
-"_comment": "Inverts the media player play icon from white to black.",
-
-"_classes": "offset-media-controls",
-"_comment": "Offset control bar to display underneath the video element instead of overlaid. Useful for videos which contain subtitles or text within the bottom area of the video frame.",
-
-Narrative
-"_classes": "items-are-full-width",
-"_comment": "Increases the width of the narrative elements to 100% in desktop view.",
+All supported custom classes defined in the Vanilla theme can be found on the wiki at https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/Custom-Classes
