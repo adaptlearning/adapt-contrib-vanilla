@@ -78,44 +78,6 @@
   max-width: @max-width;
 }
 
-// Remove top padding from block
-// --------------------------------------------------
-.block.remove-padding-top .block__inner,
-.block.remove-top-padding .block__inner {
-  padding-top: 0;
-}
-
-// Remove bottom padding from block
-// --------------------------------------------------
-.block.remove-padding-bottom .block__inner,
-.block.remove-bottom-padding .block__inner {
-  padding-bottom: 0;
-}
-
-// Reduce the blocks top padding by half
-// --------------------------------------------------
-.block.reduce-padding-top .block__inner {
-  padding-top: @block-padding-ver / 2;
-}
-
-// Reduce the blocks bottom padding by half
-// --------------------------------------------------
-.block.reduce-padding-bottom .block__inner {
-  padding-bottom: @block-padding-ver / 2;
-}
-
-// Double the blocks top padding
-// --------------------------------------------------
-.block.increase-padding-top .block__inner {
-  padding-top: @block-padding-ver * 2;
-}
-
-// Double the blocks bottom padding
-// --------------------------------------------------
-.block.increase-padding-bottom .block__inner {
-  padding-bottom: @block-padding-ver * 2;
-}
-
 // DEPRECATED in favour of bg-color-mixin
 // Block background color mixin
 // Add to block to enable
