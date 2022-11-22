@@ -33,7 +33,7 @@ Unlike most Adapt plug-ins, the **Vanilla** theme has no attributes that are req
 
 Alongside these settings, there's a collection of [custom classes](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/Custom-Classes) that the Vanilla theme supports as standard. These classes are mostly designed to provide additional visual options to increase flexibility.
 
-The **Vanilla** theme also exposes [*colour variables*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/_defaults/_colors.less) in the Adapt Authoring Tool for theme-by-config editing. This feature allows you to apply and save color presets.
+The **Vanilla** theme also exposes [*color variables*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/less/_defaults/_colors.less) in the Adapt Authoring Tool for theme-by-config editing. This feature allows you to apply and save color presets.
 
 ## JSON Config and Authoring Tool Options
 
