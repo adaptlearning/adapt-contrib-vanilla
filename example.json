@@ -79,6 +79,8 @@
         "_small": ""
     },
     "_isDividerBlock": false,
+    "_paddingTop": "double",
+    "_paddingBottom": "half",
     "_componentVerticalAlignment": "center"
 }
 
