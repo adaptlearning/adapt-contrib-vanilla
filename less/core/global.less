@@ -6,3 +6,40 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+
+.text-align-mixin(page);
+.text-align-mixin(article);
+.text-align-mixin(block);
+.text-align-mixin(component);
+
+.text-align-mixin(@selector) {
+
+.@{selector} {
+  &.title-align-left &__title,
+  &.body-align-left &__body,
+  &.instruction-align-left &__instruction {
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+
+  &.title-align-center &__title,
+  &.body-align-center &__body,
+  &.instruction-align-center &__instruction {
+    text-align: center;
+  }
+
+  &.title-align-right &__title,
+  &.body-align-right &__body,
+  &.instruction-align-right &__instruction {
+    text-align: right;
+
+    .dir-rtl & {
+      text-align: left;
+    }
+  }
+}
+
+}
