@@ -26,3 +26,18 @@ figure {
 .figure-quote figcaption {
   .quote-attribution;
 }
+
+// styled pull quote
+.aside-pull-quote {
+  margin: @item-margin * 2;
+  padding: @item-padding;
+  border-bottom: 2px solid @pull-quote-border;
+  background-color: @pull-quote;
+  color: @pull-quote-inverted;
+ .pull-quote-body;
+
+  @media (min-width: @device-width-medium) {
+    margin: @item-margin * 4;
+    padding: @item-padding * 2;
+  }
+}

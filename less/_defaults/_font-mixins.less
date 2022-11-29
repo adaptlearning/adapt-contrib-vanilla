@@ -263,6 +263,21 @@ strong {
   letter-spacing: @quote-attribution-letter-spacing;
 }
 
+// Pull quote
+// --------------------------------------------------
+.pull-quote-body() {
+  font-size: @pull-quote-body-size * @pull-quote-body-mobile-percentage;
+  font-family: @pull-quote-body-family;
+  font-weight: @pull-quote-body-weight;
+  line-height: @pull-quote-body-line-height;
+  font-style: @pull-quote-body-font-style;
+  letter-spacing: @pull-quote-body-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @pull-quote-body-size;
+  }
+}
+
 // Left over - to sort
 // --------------------------------------------------
 // p {
