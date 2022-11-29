@@ -804,6 +804,37 @@
                   "type": "object",
                   "required": false,
                   "properties": {
+                    "_textAlignment": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Text alignment",
+                      "properties": {
+                        "_title": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Title alignment",
+                          "help": "Set the alignment of the page title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        },
+                        "_body": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Body alignment",
+                          "help": "Set the alignment of the page body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        },
+                        "_instruction": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Instruction alignment",
+                          "help": "Set the alignment of the page instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        }
+                      }
+                    },
                     "_backgroundImage": {
                       "type": "object",
                       "required": false,
@@ -910,6 +941,37 @@
               "type": "object",
               "required": false,
               "properties": {
+                "_textAlignment": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Text alignment",
+                  "properties": {
+                    "_title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Title alignment",
+                      "help": "Set the alignment of the article title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    },
+                    "_body": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Body alignment",
+                      "help": "Set the alignment of the article body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    },
+                    "_instruction": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Instruction alignment",
+                      "help": "Set the alignment of the article instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    }
+                  }
+                },
                 "_backgroundImage": {
                   "type": "object",
                   "required": false,
@@ -1014,6 +1076,37 @@
               "type": "object",
               "required": false,
               "properties": {
+                "_textAlignment": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Text alignment",
+                  "properties": {
+                    "_title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Title alignment",
+                      "help": "Set the alignment of the block title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    },
+                    "_body": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Body alignment",
+                      "help": "Set the alignment of the block body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    },
+                    "_instruction": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Instruction alignment",
+                      "help": "Set the alignment of the block instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    }
+                  }
+                },
                 "_backgroundImage": {
                   "type": "object",
                   "required": false,
@@ -1176,7 +1269,46 @@
           }
         },
         "component": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "_textAlignment": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Text alignment",
+                  "properties": {
+                    "_title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Title alignment",
+                      "help": "Set the alignment of the component title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    },
+                    "_body": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Body alignment",
+                      "help": "Set the alignment of the component body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    },
+                    "_instruction": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": {"type":"Select", "options":["","left","center","right"]},
+                      "title": "Instruction alignment",
+                      "help": "Set the alignment of the component instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

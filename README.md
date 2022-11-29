@@ -37,6 +37,18 @@ The **Vanilla** theme also exposes [_colour variables_](https://github.com/adapt
 
 **\_vanilla** (object): The following attributes configure the defaults for **Vanilla**. These include **\_backgroundImage**, **\_backgroundStyles** and **\_minimumHeights**. Global attributes are available at page, article and block level.
 
+#### Global text alignment
+>**\_textAlignment** (object): The text alignment object that contains values for **\_title**, **\_body**, and **\_instruction**.
+
+>>**\_title**: (string): This attribute defines the alignment of the title element. Properties include **left**, **center**, and **right**.
+Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.
+
+>>**\_body**: (string): This attribute defines the alignment of the body element. Properties include **left**, **center**, and **right**.
+Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.
+
+>>**\_instruction**: (string): This attribute defines the alignment of the instruction element. Properties include **left**, **center**, and **right**.
+Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.
+
 #### Global background image
 
 > **\_backgroundImage** (object): The backgroundImage object that contains values for **\_large**, **\_medium** and **\_small**.
@@ -56,6 +68,9 @@ The **Vanilla** theme also exposes [_colour variables_](https://github.com/adapt
 
 > > **\_backgroundSize** (string): This attribute defines the size the background image display. Properties include **auto**, **cover**, **contain**, and **100% 100%**.
 > > Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container.
+
+>>**\_backgroundPosition** (string): This attribute defines the size the background image position. Properties include **left top**, **left center**, **left bottom**, **center top**, **center center**, **center bottom**, **right top**, **right center**, and **right bottom**.
+The first value is the horizontal position and the second value is the vertical
 
 #### Global minimum heights
 
@@ -78,14 +93,15 @@ The **Vanilla** theme also exposes [_colour variables_](https://github.com/adapt
 > > **\_small** (string): Custom CSS class that is applied at the small device width.
 
 #### **contentObject.json**
+>**\_pageHeader** (object): The page header object that contains objects for **\_textAlignment**, **\_backgroundImage**, **\_backgroundStyles**, and **\_minimumHeights**.
 
-> **\_pageHeader** (object): The backgroundImage object that contains values for **\_large**, **\_medium** and **\_small**.
+>>**\_textAlignment** (object): See global text alignment for more details.
 
-> > **\_large** (string): File name (including path) of the image used with large device width. Path should be relative to the _src_ folder (e.g., _course/en/images/origami-menu-one.jpg_).
+>>**\_backgroundImage** (object): See global background image for more details.
 
-> > **\_medium** (string): File name (including path) of the image used with medium device width. Path should be relative to the _src_ folder (e.g., _course/en/images/origami-menu-one.jpg_).
+>>**\_backgroundStyles** (object): See global background image styles for more details.
 
-> > **\_small** (string): File name (including path) of the image used with small device width. Path should be relative to the _src_ folder (e.g., _course/en/images/origami-menu-one.jpg_).
+>>**\_minimumHeights** (object): See global minimum heights for more details.
 
 #### **blocks.json**
 

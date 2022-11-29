@@ -26,6 +26,7 @@ export default class ThemeView extends Backbone.View {
 
   setStyles() {
     this.setClasses();
+    this.setTextAlignment();
     this.addBackgroundLayer();
     this.setBackgroundImage();
     this.setBackgroundStyles();
@@ -38,6 +39,15 @@ export default class ThemeView extends Backbone.View {
     this.$el.addClass(this.className());
   }
 
+  setTextAlignment() {
+    const textAlignment = this.model.get('_textAlignment');
+    if (!textAlignment) return;
+
+    if (textAlignment._title) this.$el.addClass(`title-align-${textAlignment._title}`);
+    if (textAlignment._body) this.$el.addClass(`body-align-${textAlignment._body}`);
+    if (textAlignment._instruction) this.$el.addClass(`instruction-align-${textAlignment._instruction}`);
+  }
+
   addBackgroundLayer() {
     if (this.$el.find(' > .background').length) return;
     this.$background = $('<div class="background" aria-hidden="true"></div>')
@@ -46,7 +56,6 @@ export default class ThemeView extends Backbone.View {
 
   setBackgroundImage() {
     const backgroundImages = this.model.get('_backgroundImage');
-
     if (!backgroundImages) return;
 
     let backgroundImage;
@@ -76,6 +85,7 @@ export default class ThemeView extends Backbone.View {
   setBackgroundStyles() {
     const styles = this.model.get('_backgroundStyles');
     if (!styles) return;
+
     this.$background
       .css({
         'background-repeat': styles._backgroundRepeat,
@@ -86,7 +96,6 @@ export default class ThemeView extends Backbone.View {
 
   setMinimumHeight() {
     const minimumHeights = this.model.get('_minimumHeights');
-
     if (!minimumHeights) return;
 
     let minimumHeight;
