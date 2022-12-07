@@ -43,3 +43,45 @@ body {
 }
 
 }
+
+// Quote related styling
+// override browser defined margins with rem unit
+blockquote,
+figure {
+  margin: @item-margin * 2;
+}
+
+// styled quote with attribution
+.figure-quote {
+  margin: 0;
+  .quote-body;
+}
+
+.figure-quote figcaption {
+  margin: @item-margin * 2;
+  .quote-attribution;
+}
+
+// styled pull quote
+.aside-pull-quote {
+  margin: @item-margin * 2;
+  padding: @item-padding;
+  border-bottom: 2px solid @pull-quote-border;
+  background-color: @pull-quote;
+  color: @pull-quote-inverted;
+ .pull-quote-body;
+
+  @media (min-width: @device-width-medium) {
+    margin: @item-margin * 4;
+    padding: @item-padding * 2;
+  }
+}
+
+// non-semantic visual font styles
+.is-bold {
+  font-weight: @font-weight-bold;
+}
+
+.is-italic {
+  font-style: italic;
+}
