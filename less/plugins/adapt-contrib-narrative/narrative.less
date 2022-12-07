@@ -47,22 +47,39 @@
     }
   }
 
+  // set icon background color to transparent to 'inherit' strapline styling
   &__strapline-icon {
-    background-color: @item-color;
+    background-color: transparent;
     color: @item-color-inverted;
   }
 
   .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover,
   .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover &__strapline-icon {
-    background-color: @item-color-hover;
     color: @item-color-inverted-hover;
     .transition(background-color @duration ease-in, color @duration ease-in;);
   }
 
+  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover {
+    background-color: @item-color-hover;
+  }
+
+  // set icon hover background color to transparent to 'inherit' strapline styling
+  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover &__strapline-icon {
+    background-color: transparent;
+  }
+
   &__strapline-btn.is-visited,
   &__strapline-btn.is-visited &__strapline-icon {
-    background-color: @visited;
     color: @visited-inverted;
+  }
+
+  &__strapline-btn.is-visited {
+    background-color: @visited;
+  }
+
+  // set icon visited background color to transparent to 'inherit' strapline styling
+  &__strapline-btn.is-visited &__strapline-icon {
+    background-color: transparent;
   }
 
   &.has-img-zoom &__slider-image-container {

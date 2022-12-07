@@ -12,7 +12,7 @@
   }
 
   .no-touch &__label:not(.is-disabled):not(.is-selected):hover &__option,
-  html:not(.a11y-disable-focusoutline) &__input:focus + &__label &__option {
+  html:not(.a11y-disable-focusoutline) &__input:focus-visible + &__label &__option {
     background-color: @item-color-hover;
     color: @item-color-inverted-hover;
     .transition(background-color @duration ease-in, color @duration ease-in;);
