@@ -21,6 +21,7 @@
 // e.g. 'header-color transparent-dark'
 // Note: both arguments must be predefined variables
 // --------------------------------------------------
+.header-color-mixin(black, white);
 .header-color-mixin(background, background-inverted);
 .header-color-mixin(transparent-light, font-color);
 .header-color-mixin(transparent-dark, font-color-inverted);
@@ -133,6 +134,9 @@
 // e.g. 'comp-header-bg-color black'
 // Note: both arguments must be predefined variables
 .component-header-bg-mixin(black, white);
+.component-header-bg-mixin(background, background-inverted);
+.component-header-bg-mixin(transparent-light, font-color);
+.component-header-bg-mixin(transparent-dark, font-color-inverted);
 
 .component-header-bg-mixin(@color, @color-inverted) {
 

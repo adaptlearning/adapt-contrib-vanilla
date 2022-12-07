@@ -243,21 +243,39 @@ strong {
   letter-spacing: @item-title-letter-spacing;
 }
 
-.pull-quote-title() {
-  font-size: @pull-quote-title-size;
-  font-family: @pull-quote-title-family;
-  font-weight: @pull-quote-title-weight;
-  line-height: @pull-quote-title-line-height;
-  font-style: @pull-quote-font-style;
-  letter-spacing: @pull-quote-letter-spacing;
-  color: inherit;
+// Quote
+// --------------------------------------------------
+.quote-body() {
+  font-size: @quote-body-size;
+  font-family: @quote-body-family;
+  font-weight: @quote-body-weight;
+  line-height: @quote-body-line-height;
+  font-style: @quote-body-font-style;
+  letter-spacing: @quote-body-letter-spacing;
 }
 
+.quote-attribution() {
+  font-size: @quote-attribution-size;
+  font-family: @quote-attribution-family;
+  font-weight: @quote-attribution-weight;
+  line-height: @quote-attribution-line-height;
+  font-style: @quote-attribution-font-style;
+  letter-spacing: @quote-attribution-letter-spacing;
+}
+
+// Pull quote
+// --------------------------------------------------
 .pull-quote-body() {
-  font-size: @pull-quote-body-size;
+  font-size: @pull-quote-body-size * @pull-quote-body-mobile-percentage;
   font-family: @pull-quote-body-family;
   font-weight: @pull-quote-body-weight;
   line-height: @pull-quote-body-line-height;
+  font-style: @pull-quote-body-font-style;
+  letter-spacing: @pull-quote-body-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @pull-quote-body-size;
+  }
 }
 
 // Left over - to sort

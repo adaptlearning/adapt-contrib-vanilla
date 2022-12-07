@@ -19,6 +19,11 @@
         "_small": ""
     },
     "_pageHeader": {
+        "_textAlignment": {
+            "_title": "left",
+            "_body": "center",
+            "_instruction": "right"
+        },
         "_backgroundImage": {
             "_large": "",
             "_medium": "",
@@ -39,6 +44,11 @@
 
 // articles.json
 "_vanilla": {
+    "_textAlignment": {
+        "_title": "left",
+        "_body": "center",
+        "_instruction": "right"
+    },
     "_backgroundImage": {
         "_large": "",
         "_medium": "",
@@ -58,6 +68,11 @@
 
 // blocks.json
 "_vanilla": {
+    "_textAlignment": {
+        "_title": "left",
+        "_body": "center",
+        "_instruction": "right"
+    },
     "_backgroundImage": {
         "_large": "",
         "_medium": "",
@@ -85,6 +100,10 @@
 }
 
 A detailed breakdown of each property can be found on wiki at https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/onScreen-Animation
+components.json
+
+On screen animation json config
+--------------------------------------------------
 
 // onScreen Animation
 // --------------------------------------------------
