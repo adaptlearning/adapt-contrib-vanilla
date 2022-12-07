@@ -20,9 +20,9 @@
     },
     "_pageHeader": {
         "_textAlignment": {
-            "_title": "left",
-            "_body": "center",
-            "_instruction": "right"
+            "_title": "",
+            "_body": "",
+            "_instruction": ""
         },
         "_backgroundImage": {
             "_large": "",
@@ -45,9 +45,9 @@
 // articles.json
 "_vanilla": {
     "_textAlignment": {
-        "_title": "left",
-        "_body": "center",
-        "_instruction": "right"
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
     },
     "_backgroundImage": {
         "_large": "",
@@ -69,9 +69,9 @@
 // blocks.json
 "_vanilla": {
     "_textAlignment": {
-        "_title": "left",
-        "_body": "center",
-        "_instruction": "right"
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
     },
     "_backgroundImage": {
         "_large": "",
@@ -97,6 +97,15 @@
     "_paddingTop": "double",
     "_paddingBottom": "half",
     "_componentVerticalAlignment": "center"
+}
+
+// components.json
+"_vanilla": {
+    "_textAlignment": {
+        "_title": "",
+        "_body": "",
+        "_instruction": ""
+    }
 }
 
 A detailed breakdown of each property can be found on wiki at https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/onScreen-Animation
