@@ -6,7 +6,7 @@
     border-radius: @item-border-radius;
 
     .no-touch &:not(.is-disabled):not(.is-selected):hover,
-    html:not(.a11y-disable-focusoutline) .mcq-item__input:focus + & {
+    html:not(.a11y-disable-focusoutline) .mcq-item__input:focus-visible + & {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
