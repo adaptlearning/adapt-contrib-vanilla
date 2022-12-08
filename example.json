@@ -35,9 +35,9 @@
             "_backgroundPosition": ""
         },
         "_minimumHeights": {
-            "_large": 600,
-            "_medium": 400,
-            "_small": 200
+            "_large": 0,
+            "_medium": 0,
+            "_small": 0
         }
     }
 }
@@ -84,9 +84,9 @@
         "_backgroundPosition": ""
     },
     "_minimumHeights": {
-        "_large": 600,
-        "_medium": 400,
-        "_small": 200
+        "_large": 0,
+        "_medium": 0,
+        "_small": 0
     },
     "_responsiveClasses": {
         "_large": "",
@@ -94,9 +94,9 @@
         "_small": ""
     },
     "_isDividerBlock": false,
-    "_paddingTop": "double",
-    "_paddingBottom": "half",
-    "_componentVerticalAlignment": "center"
+    "_paddingTop": "",
+    "_paddingBottom": "",
+    "_componentVerticalAlignment": ""
 }
 
 // components.json
@@ -108,11 +108,8 @@
     }
 }
 
-A detailed breakdown of each property can be found on wiki at https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/onScreen-Animation
+A detailed breakdown of each property can be found on wiki at https://github.com/adaptlearning/adapt-contrib-vanilla/wiki/JSON-Config-and-Authoring-Tool-Options
 components.json
-
-On screen animation json config
---------------------------------------------------
 
 // onScreen Animation
 // --------------------------------------------------
