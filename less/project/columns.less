@@ -1,5 +1,8 @@
 .make-columns(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
   @media (min-width: @media-query) {
+    .boxmenu-item.col-@{size}-@{iteration} {
+      width: (@iteration * 100% / @count);
+    }
     .component.col-@{size}-@{iteration} {
       width: (@iteration * 100% / @count);
     }
