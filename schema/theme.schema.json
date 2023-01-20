@@ -643,6 +643,35 @@
         }
       }
     },
+    "_font": {
+      "type": "object",
+      "title": "Fonts",
+      "default": {},
+      "properties": {
+        "woff": {
+          "type": "string",
+          "isObjectId": true,
+          "required": false,
+          "title": "Woff Font",
+          "default": "",
+          "_backboneForms": {
+            "type": "Asset",
+            "media": "font"
+          }
+        },
+        "woff2": {
+          "type": "string",
+          "isObjectId": true,
+          "required": false,
+          "title": "Woff2 Font",
+          "default": "",
+          "_backboneForms": {
+            "type": "Asset",
+            "media": "font"
+          }
+        }
+      }
+    },
     "_misc": {
       "type": "object",
       "title": "Miscellaneous",
