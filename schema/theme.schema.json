@@ -645,29 +645,115 @@
     },
     "_font": {
       "type": "object",
-      "title": "Fonts",
+      "title": "Font config",
       "default": {},
       "properties": {
-        "woff": {
-          "type": "string",
-          "isObjectId": true,
-          "required": false,
-          "title": "Woff Font",
-          "default": "",
-          "_backboneForms": {
-            "type": "Asset",
-            "media": "font"
+        "_items": {
+          "type": "array",
+          "title": "Font Files",
+          "description": "The possible answers available to the learner",
+          "items": {
+            "type": "object",
+            "properties": {
+              "font-family": {
+                "type": "string",
+                "isObjectId": false,
+                "required": false,
+                "title": "Font Family",
+                "default": ""
+              },
+              "woff2-light": {
+                "type": "string",
+                "isObjectId": true,
+                "required": false,
+                "title": "Light Woff2 Font",
+                "default": "",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "font"
+                }
+              },
+              "woff2-lightItalic": {
+                "type": "string",
+                "isObjectId": true,
+                "required": false,
+                "title": "Light Italic Woff2 Font",
+                "default": "",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "font"
+                }
+              },
+              "woff2-regular": {
+                "type": "string",
+                "isObjectId": true,
+                "required": false,
+                "title": "Regular Woff2 Font",
+                "default": "",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "font"
+                }
+              },
+              "woff2-regularItalic": {
+                "type": "string",
+                "isObjectId": true,
+                "required": false,
+                "title": "Regular Italic Woff2 Font",
+                "default": "",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "font"
+                }
+              },
+              "woff2-bold": {
+                "type": "string",
+                "isObjectId": true,
+                "required": false,
+                "title": "Bold Woff2 Font",
+                "default": "",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "font"
+                }
+              },
+              "woff2-boldItalic": {
+                "type": "string",
+                "isObjectId": true,
+                "required": false,
+                "title": "Bold Italic Woff2 Font",
+                "default": "",
+                "_backboneForms": {
+                  "type": "Asset",
+                  "media": "font"
+                }
+              }
+            }
           }
         },
-        "woff2": {
-          "type": "string",
-          "isObjectId": true,
-          "required": false,
-          "title": "Woff2 Font",
-          "default": "",
-          "_backboneForms": {
-            "type": "Asset",
-            "media": "font"
+        "_fontAssignments": {
+          "type": "object",
+          "title": "Font config",
+          "default": {},
+          "properties": {
+            "title-family": {
+              "type": "string",
+              "title": "Title Family",
+              "description": "",
+              "default": ""
+            },
+            "body-family": {
+              "type": "string",
+              "title": "Body Family",
+              "description": "",
+              "default": ""
+            },
+            "btn-family": {
+              "type": "string",
+              "title": "Button Family",
+              "description": "",
+              "default": ""
+            }
           }
         }
       }
