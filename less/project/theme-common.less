@@ -1,0 +1,106 @@
+// --------------------------------------------------
+// Common
+// --------------------------------------------------
+
+// Background color mixin
+// Can be added to course, contentObject, article, block, or component to enable
+// e.g. 'bg-color black'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.bg-color-mixin(black, white);
+.bg-color-mixin(background, background-inverted);
+.bg-color-mixin(transparent-light, black);
+.bg-color-mixin(transparent-dark, white);
+
+.bg-color-mixin(@color, @color-inverted) {
+
+.bg-color.@{color} {
+  background-color: @@color;
+  color: @@color-inverted;
+
+  .block,
+  .component {
+    &__title,
+    &__body a,
+    &__instruction a {
+      color: @@color-inverted;
+    }
+  }
+
+  .pagelevelprogress {
+    &__indicator {
+      border-color: @@color-inverted;
+    }
+    &__indicator-inner {
+      background-color: @@color;
+    }
+    &__indicator-bar {
+      background-color: @@color-inverted;
+    }
+  }
+
+  .narrative {
+    &__progress {
+      background-color: fade(@@color-inverted, 50%);
+    }
+
+    &__progress.is-selected {
+      background-color: @@color-inverted;
+    }
+  }
+}
+
+}
+
+// styles associated with _textAlignment property
+// --------------------------------------------------
+.text-align-mixin(page);
+.text-align-mixin(article);
+.text-align-mixin(block);
+.text-align-mixin(component);
+
+.text-align-mixin(@selector) {
+
+.@{selector} {
+  &.title-align-left &__title,
+  &.body-align-left &__body,
+  &.instruction-align-left &__instruction {
+    text-align: left;
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+
+  &.title-align-center &__title,
+  &.body-align-center &__body,
+  &.instruction-align-center &__instruction {
+    text-align: center;
+  }
+
+  &.title-align-right &__title,
+  &.body-align-right &__body,
+  &.instruction-align-right &__instruction {
+    text-align: right;
+
+    .dir-rtl & {
+      text-align: left;
+    }
+  }
+}
+
+}
+
+// classes to hide content above / below medium breakpoint
+// --------------------------------------------------
+.hide-on-desktop {
+  @media (min-width: @device-width-medium) {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @media (max-width: @device-width-medium) {
+    display: none;
+  }
+}
