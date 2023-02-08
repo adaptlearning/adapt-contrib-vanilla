@@ -1,0 +1,73 @@
+// --------------------------------------------------
+// Block
+// --------------------------------------------------
+
+// Reverses the visual layout of the components above the medium breakpoint
+// e.g. Left layout components would still render first in the DOM order
+// but visually appear on the right hand side above the medium breakpoint. The
+// components woud vertically stack as per the DOM order below the breakpoint
+.block.reverse-desktop-order .component {
+  @media (min-width: @device-width-medium) {
+    &__container {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// Extend width of block to 70rem (1120px)
+// --------------------------------------------------
+.block.extend-content-container .block__inner {
+  max-width: 70rem;
+}
+
+// Extend width of block to max page width
+// --------------------------------------------------
+.block.extend-container .block__inner {
+  max-width: @max-page-width;
+}
+
+// DEPRECATED in favour of bg-color-mixin
+// Block background color mixin
+// Add to block to enable
+// e.g. 'block-color black'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.block-color-mixin(@color, @color-inverted) {
+
+.block-color.@{color} {
+  background-color: @@color;
+  color: @@color-inverted;
+
+  .block,
+  .component {
+    &__title,
+    &__body a,
+    &__instruction a {
+      color: @@color-inverted;
+    }
+  }
+
+  .pagelevelprogress {
+    &__indicator {
+      border-color: @@color-inverted;
+    }
+    &__indicator-inner {
+      background-color: @@color;
+    }
+    &__indicator-bar {
+      background-color: @@color-inverted;
+    }
+  }
+
+  .narrative {
+    &__progress {
+      background-color: fade(@@color-inverted, 50%);
+    }
+
+    &__progress.is-selected {
+      background-color: @@color-inverted;
+    }
+  }
+}
+
+}
