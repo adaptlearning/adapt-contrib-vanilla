@@ -651,7 +651,7 @@
         "_items": {
           "type": "array",
           "title": "Font Files",
-          "description": "The possible answers available to the learner",
+          "description": "Specify the font family and upload all files required",
           "items": {
             "type": "object",
             "properties": {
@@ -671,7 +671,7 @@
                     "type": "string",
                     "isObjectId": true,
                     "required": false,
-                    "title": "Light Woff2 Font",
+                    "title": "Light",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -682,7 +682,7 @@
                     "type": "string",
                     "isObjectId": true,
                     "required": false,
-                    "title": "Light Italic Woff2 Font",
+                    "title": "Light Italic",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -693,7 +693,7 @@
                     "type": "string",
                     "isObjectId": true,
                     "required": false,
-                    "title": "Regular Woff2 Font",
+                    "title": "Regular",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -704,7 +704,7 @@
                     "type": "string",
                     "isObjectId": true,
                     "required": false,
-                    "title": "Regular Italic Woff2 Font",
+                    "title": "Regular Italic",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -715,7 +715,7 @@
                     "type": "string",
                     "isObjectId": true,
                     "required": false,
-                    "title": "Bold Woff2 Font",
+                    "title": "Bold",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -726,7 +726,7 @@
                     "type": "string",
                     "isObjectId": true,
                     "required": false,
-                    "title": "Bold Italic Woff2 Font",
+                    "title": "Bold Italic",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -740,26 +740,220 @@
         },
         "_fontAssignments": {
           "type": "object",
-          "title": "Font config",
+          "title": "Font Assignments",
           "default": {},
           "properties": {
             "title-family": {
               "type": "string",
-              "title": "Title Family",
+              "title": "Title",
               "description": "",
               "default": ""
+            },
+            "menu-title-weight": {
+              "type": "string",
+              "title": "Menu Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "menu-subtitle-weight": {
+              "type": "string",
+              "title": "Menu Subtitle Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "menu-item-title-weight": {
+              "type": "string",
+              "title": "Menu Item Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "page-title-weight": {
+              "type": "string",
+              "title": "Page Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "page-subtitle-weight": {
+              "type": "string",
+              "title": "Page Subtitle Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "article-title-weight": {
+              "type": "string",
+              "title": "Article Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "block-title-weight": {
+              "type": "string",
+              "title": "Block Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "component-title-weight": {
+              "type": "string",
+              "title": "Component Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "notify-title-weight": {
+              "type": "string",
+              "title": "Notify Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "item-title-weight": {
+              "type": "string",
+              "title": "Item Title Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
             },
             "body-family": {
               "type": "string",
-              "title": "Body Family",
+              "title": "Body",
               "description": "",
               "default": ""
             },
+            "body-weight": {
+              "type": "string",
+              "title": "Body Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "instruction-weight": {
+              "type": "string",
+              "title": "Instruction Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
+            "instruction-font-style": {
+              "type": "string",
+              "title": "Instruction Font Style",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "normal",
+                "italic"
+              ],
+              "_backboneForms": "Select"
+            },
+            "menu-instruction-weight": {
+              "type": "string",
+              "title": "Menu Instruction Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
+            },
             "btn-family": {
               "type": "string",
-              "title": "Button Family",
+              "title": "Button",
               "description": "",
               "default": ""
+            },
+            "btn-weight": {
+              "type": "string",
+              "title": "Button Weight",
+              "description": "",
+              "default": "",
+              "enum": [
+                "",
+                "300",
+                "400",
+                "700"
+              ],
+              "_backboneForms": "Select"
             }
           }
         }
