@@ -35,6 +35,12 @@
     margin-bottom: @menu-item-progress-margin;
   }
 
+  &__button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: @menu-item-progress-margin;
+  }
+
   &__button {
     background-color: @menu-item-btn-color;
     color: @menu-item-btn-color-inverted;
@@ -50,6 +56,10 @@
   &__button.is-disabled {
     background-color: @disabled;
     color: @disabled-inverted;
+  }
+
+  &__status {
+    margin-left: @menu-item-status-margin;
   }
 
   &.has-img-zoom &__image-container {
