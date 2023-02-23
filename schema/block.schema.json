@@ -243,6 +243,18 @@
                 "bottom"
               ],
               "_backboneForms": "Select"
+            },
+            "_componentHorizontalAlignment": {
+              "type": "string",
+              "title": "Set the horizontal alignment of the child component(s)",
+              "description": "Defines the horizontal alignment of the child component(s) in relation to the block. The default alignment is `left`.",
+              "default": "left",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ],
+              "_backboneForms": "Select"
             }
           }
         }
