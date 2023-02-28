@@ -657,8 +657,6 @@
             "properties": {
               "font-family": {
                 "type": "string",
-                "isObjectId": false,
-                "required": false,
                 "title": "Font Family",
                 "default": ""
               },
@@ -670,7 +668,6 @@
                   "woff2-light": {
                     "type": "string",
                     "isObjectId": true,
-                    "required": false,
                     "title": "Light",
                     "default": "",
                     "_backboneForms": {
@@ -681,7 +678,6 @@
                   "woff2-normal": {
                     "type": "string",
                     "isObjectId": true,
-                    "required": false,
                     "title": "Normal",
                     "default": "",
                     "_backboneForms": {
@@ -692,7 +688,6 @@
                   "woff2-bold": {
                     "type": "string",
                     "isObjectId": true,
-                    "required": false,
                     "title": "Bold",
                     "default": "",
                     "_backboneForms": {
@@ -703,7 +698,6 @@
                   "woff2-lightItalic": {
                     "type": "string",
                     "isObjectId": true,
-                    "required": false,
                     "title": "Light Italic",
                     "default": "",
                     "_backboneForms": {
@@ -714,7 +708,6 @@
                   "woff2-normalItalic": {
                     "type": "string",
                     "isObjectId": true,
-                    "required": false,
                     "title": "Normal Italic",
                     "default": "",
                     "_backboneForms": {
@@ -725,7 +718,6 @@
                   "woff2-boldItalic": {
                     "type": "string",
                     "isObjectId": true,
-                    "required": false,
                     "title": "Bold Italic",
                     "default": "",
                     "_backboneForms": {
@@ -745,8 +737,6 @@
           "items": {
             "font-url": {
               "type": "string",
-              "isObjectId": false,
-              "required": false,
               "title": "Font URL",
               "default": ""
             }
