@@ -16,6 +16,14 @@ class Theme extends Backbone.Controller {
 
   onDataReady() {
     $('html').addClass(Adapt.course.get('_courseStyle'));
+    this.addFavIcon();
+  }
+
+  addFavIcon() {
+    const theme = Adapt.course.get('_vanilla');
+    if (!theme._favIcon._src) return;
+    const $link = $(`<link rel="icon" href="${theme._favIcon._src}" size="192x192" />`);
+    $('head').append($link);
   }
 
   onPostRender(view) {

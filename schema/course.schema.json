@@ -1,0 +1,36 @@
+{
+  "$anchor": "graphic-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {
+        "_vanilla": {
+          "type": "object",
+          "default": {},
+          "properties": {
+            "_favIcon": {
+              "type": "object",
+              "default": {},
+              "title": "FavIcon",
+              "properties": {
+                "_src": {
+                  "type": "string",
+                  "isObjectId": true,
+                  "title": "Image",
+                  "_backboneForms": {
+                    "type": "Asset",
+                    "media": "image"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
