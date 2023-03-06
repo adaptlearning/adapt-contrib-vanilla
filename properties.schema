@@ -1263,6 +1263,14 @@
                   "inputType": {"type":"Select", "options":["top","center","bottom"]},
                   "title": "Set the vertical alignment of the child component(s)",
                   "help": "Defines the vertical alignment of the child component(s) in relation to the block. Top: Aligns descendents to the top of the block. Center: Aligns descendents to the center of the block. Bottom: Aligns descendents to the bottom of the block. The default alignment is `top`."
+                },
+                "_componentHorizontalAlignment": {
+                  "type": "string",
+                  "required": false,
+                  "default": "left",
+                  "inputType": {"type":"Select", "options":["left","center","right"]},
+                  "title": "Set the horizontal alignment of the child component(s)",
+                  "help": "Defines the horizontal alignment of the child component(s) in relation to the block. The default alignment is `left`."
                 }
               }
             }

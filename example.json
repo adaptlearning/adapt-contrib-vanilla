@@ -96,7 +96,8 @@
     "_isDividerBlock": false,
     "_paddingTop": "",
     "_paddingBottom": "",
-    "_componentVerticalAlignment": ""
+    "_componentVerticalAlignment": "",
+    "_componentHorizontalAlignment": ""
 }
 
 // components.json

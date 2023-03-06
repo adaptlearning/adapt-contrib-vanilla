@@ -10,6 +10,7 @@ export default class ThemeBlockView extends ThemeView {
     this.setPaddingTop();
     this.setPaddingBottom();
     this.setComponentVerticalAlignment();
+    this.setComponentHorizontalAlignment();
   }
 
   setPaddingTop() {
@@ -28,6 +29,12 @@ export default class ThemeBlockView extends ThemeView {
     const componentVerticalAlignment = this.model.get('_componentVerticalAlignment');
     if (!componentVerticalAlignment) return;
     this.$el.addClass(`align-vert-${componentVerticalAlignment}`);
+  }
+
+  setComponentHorizontalAlignment() {
+    const componentHorizontalAlignment = this.model.get('_componentHorizontalAlignment');
+    if (!componentHorizontalAlignment) return;
+    this.$el.addClass(`align-horz-${componentHorizontalAlignment}`);
   }
 
   onRemove() {}
