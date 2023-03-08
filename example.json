@@ -1,6 +1,13 @@
 // Available properties
 // --------------------------------------------------
 
+// course.json
+"_vanilla": {
+    "_favIcon": {
+        "_src": ""
+    }
+},
+
 // contentObjects.json
 "_vanilla": {
     "_backgroundImage": {

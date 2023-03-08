@@ -698,7 +698,30 @@
           "type": "object"
         },
         "course": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "_vanilla": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "_favIcon": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "FavIcon",
+                  "properties": {
+                    "_src": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Select a favicon to improve user experience and enforce brand consistency. This will be displayed in places like your browser's address bar, page tabs and bookmarks menu. Usually, a favicon is 16 x 16 pixels in size and stored in the GIF, PNG, or ICO file format."
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         "contentobject": {
           "type": "object",
