@@ -21,7 +21,7 @@ class Theme extends Backbone.Controller {
 
   addFavIcon() {
     const theme = Adapt.course.get('_vanilla');
-    if (!theme._favIcon._src) return;
+    if (!theme?._favIcon?._src) return;
     const $linkStandard = $(`<link rel="icon" href="${theme._favIcon._src}" size="192x192" />`);
     const $linkApple = $(`<link rel="apple-touch-icon" href="${theme._favIcon._src}" />`);
     $('head')
