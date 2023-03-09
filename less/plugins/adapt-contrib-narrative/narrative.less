@@ -22,11 +22,6 @@
   &__progress {
     background-color: @item-color;
     border-radius: 50%;
-
-    .no-touch &:not(.is-selected):hover {
-      background-color: @item-color-hover;
-      .transition(background-color @duration ease-in);
-    }
   }
 
   &__progress.is-visited {
