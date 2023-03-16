@@ -657,6 +657,7 @@
             "properties": {
               "font-family": {
                 "type": "string",
+                "isObjectId": false,
                 "title": "Font Family",
                 "default": ""
               },
@@ -665,20 +666,20 @@
                 "title": "Files",
                 "default": {},
                 "properties": {
-                  "woff2-light": {
+                  "woff2-normal": {
                     "type": "string",
                     "isObjectId": true,
-                    "title": "Light",
+                    "title": "Normal",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
                       "media": "font"
                     }
                   },
-                  "woff2-normal": {
+                  "woff2-light": {
                     "type": "string",
                     "isObjectId": true,
-                    "title": "Normal",
+                    "title": "Light",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -695,20 +696,20 @@
                       "media": "font"
                     }
                   },
-                  "woff2-lightItalic": {
+                  "woff2-normalItalic": {
                     "type": "string",
                     "isObjectId": true,
-                    "title": "Light Italic",
+                    "title": "Normal Italic",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
                       "media": "font"
                     }
                   },
-                  "woff2-normalItalic": {
+                  "woff2-lightItalic": {
                     "type": "string",
                     "isObjectId": true,
-                    "title": "Normal Italic",
+                    "title": "Light Italic",
                     "default": "",
                     "_backboneForms": {
                       "type": "Asset",
@@ -737,6 +738,7 @@
           "items": {
             "font-url": {
               "type": "string",
+              "isObjectId": false,
               "title": "Font URL",
               "default": ""
             }
@@ -745,6 +747,7 @@
         "_fontAssignments": {
           "type": "object",
           "title": "Font Assignments",
+          "legend": "Font Assignments",
           "default": {},
           "properties": {
             "_title": {
@@ -756,13 +759,13 @@
                   "type": "string",
                   "title": "Title Family",
                   "description": "",
-                  "default": ""
+                  "default": "'Open Sans', sans-serif"
                 },
                 "menu-title-weight": {
                   "type": "string",
                   "title": "Menu Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -776,7 +779,7 @@
                   "type": "string",
                   "title": "Menu Item Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -789,7 +792,7 @@
                   "type": "string",
                   "title": "Page Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -802,7 +805,7 @@
                   "type": "string",
                   "title": "Article Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -815,7 +818,7 @@
                   "type": "string",
                   "title": "Block Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -828,7 +831,7 @@
                   "type": "string",
                   "title": "Component Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -841,7 +844,7 @@
                   "type": "string",
                   "title": "Notify Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -854,7 +857,7 @@
                   "type": "string",
                   "title": "Item Title Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -867,40 +870,7 @@
                   "type": "string",
                   "title": "Drawer Item Title Weight",
                   "description": "",
-                  "default": "",
-                  "enum": [
-                    "",
-                    "light",
-                    "normal",
-                    "bold"
-                  ],
-                  "_backboneForms": "Select"
-                }
-              }
-            },
-            "_subtitle": {
-              "type": "object",
-              "title": "Subtitle",
-              "default": {},
-              "properties": {
-                "menu-subtitle-weight": {
-                  "type": "string",
-                  "title": "Menu Subtitle Weight",
-                  "description": "",
-                  "default": "",
-                  "enum": [
-                    "",
-                    "light",
-                    "normal",
-                    "bold"
-                  ],
-                  "_backboneForms": "Select"
-                },
-                "page-subtitle-weight": {
-                  "type": "string",
-                  "title": "Page Subtitle Weight",
-                  "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -920,13 +890,13 @@
                   "type": "string",
                   "title": "Body Family",
                   "description": "",
-                  "default": ""
+                  "default": "'Open Sans', sans-serif"
                 },
                 "body-weight": {
                   "type": "string",
                   "title": "Body Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -939,7 +909,7 @@
                   "type": "string",
                   "title": "Menu Body Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -952,7 +922,7 @@
                   "type": "string",
                   "title": "Menu Item Body Weight",
                   "description": "",
-                  "default": "",
+                  "default": "light",
                   "enum": [
                     "",
                     "light",
@@ -965,7 +935,7 @@
                   "type": "string",
                   "title": "Page Body Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -978,7 +948,7 @@
                   "type": "string",
                   "title": "Quote Body Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -991,7 +961,7 @@
                   "type": "string",
                   "title": "Pull Quote Body Weight",
                   "description": "",
-                  "default": "",
+                  "default": "bold",
                   "enum": [
                     "",
                     "light",
@@ -1002,9 +972,9 @@
                 },
                 "drawer-item-body-weight": {
                   "type": "string",
-                  "title": "Drawer Item Title Weight",
+                  "title": "Drawer Item Body Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -1024,13 +994,13 @@
                   "type": "string",
                   "title": "Instruction Family",
                   "description": "",
-                  "default": ""
+                  "default": "'Open Sans', sans-serif"
                 },
                 "instruction-weight": {
                   "type": "string",
                   "title": "Instruction Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -1038,18 +1008,12 @@
                     "bold"
                   ],
                   "_backboneForms": "Select"
-                },
-                "menu-instruction-family": {
-                  "type": "string",
-                  "title": "Menu Instruction Family",
-                  "description": "",
-                  "default": ""
                 },
                 "menu-instruction-weight": {
                   "type": "string",
                   "title": "Menu Instruction Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -1058,17 +1022,11 @@
                   ],
                   "_backboneForms": "Select"
                 },
-                "page-instruction-family": {
-                  "type": "string",
-                  "title": "Page Instruction Family",
-                  "description": "",
-                  "default": ""
-                },
                 "page-instruction-weight": {
                   "type": "string",
                   "title": "Page Instruction Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -1094,13 +1052,13 @@
                   "type": "string",
                   "title": "Button Family",
                   "description": "",
-                  "default": ""
+                  "default": "'Open Sans', sans-serif"
                 },
                 "btn-weight": {
                   "type": "string",
                   "title": "Button Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -1116,17 +1074,11 @@
               "title": "Link",
               "default": {},
               "properties": {
-                "link-family": {
-                  "type": "string",
-                  "title": "Link Family",
-                  "description": "",
-                  "default": ""
-                },
                 "link-weight": {
                   "type": "string",
                   "title": "Link Weight",
                   "description": "",
-                  "default": "",
+                  "default": "normal",
                   "enum": [
                     "",
                     "light",
@@ -1139,6 +1091,16 @@
             }
           }
         }
+      }
+    },
+    "themeCustomStyle": {
+      "type": "string",
+      "title": "Custom CSS/Less code",
+      "description": "Add any custom CSS or valid Less code here",
+      "default": "",
+      "_backboneForms": {
+        "type": "CodeEditor",
+        "mode": "less"
       }
     },
     "_misc": {
