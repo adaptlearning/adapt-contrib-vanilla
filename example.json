@@ -1,6 +1,13 @@
 // Available properties
 // --------------------------------------------------
 
+// course.json
+"_vanilla": {
+    "_favIcon": {
+        "_src": ""
+    }
+},
+
 // contentObjects.json
 "_vanilla": {
     "_backgroundImage": {
@@ -96,7 +103,8 @@
     "_isDividerBlock": false,
     "_paddingTop": "",
     "_paddingBottom": "",
-    "_componentVerticalAlignment": ""
+    "_componentVerticalAlignment": "",
+    "_componentHorizontalAlignment": ""
 }
 
 // components.json
