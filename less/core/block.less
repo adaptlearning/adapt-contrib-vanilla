@@ -50,7 +50,15 @@
   &.remove-padding-bottom &__inner { padding-bottom: 0; }
 
   // Aligns child components centrally on the vertical axis
-  &.align-vert-center .component__container { align-items: center; }
+  &.align-vert-center {
+    .block__inner,
+    .component__container {
+      min-height: inherit;
+    }
+    .component__container {
+      align-items: center;
+    }
+  }
 
   // Aligns child components to the bottom of the parent block on the vertical axis
   &.align-vert-bottom .component__container {align-items: flex-end; }
