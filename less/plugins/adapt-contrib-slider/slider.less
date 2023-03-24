@@ -1,3 +1,8 @@
+@slider-handle-width: 4rem;
+@slider-handle-height: 4rem;
+
+@slider-track-height: 1rem;
+
 .slider {
   // Numbers
   &__number-container {
@@ -32,8 +37,6 @@
 
   // Scale
   &__scale-container {
-    margin-top: @item-margin * 2;
-    margin-bottom: @item-margin * 4;
     background-color: lighten(@black, 75%);
   }
 
@@ -45,11 +48,11 @@
   &__item-input-track {
     background-color: darken(@background-inverted, 20%);
     border-radius: 10px;
+    overflow: hidden;
   }
 
   &__item-input-fill {
     background-color: @item-color;
-    border-radius: 10px;
   }
 
   // Class to show whether the users selection is in/correct
@@ -71,10 +74,10 @@
     background-color: @validation-error;
   }
 
-  // &__widget.show-correct-answer.is-correct &__item-input-fill,
-  // &__widget.show-correct-answer.is-incorrect &__item-input-fill {
-  //   background-color: @validation-success;
-  // }
+  &__widget.show-correct-answer.is-correct &__item-input-fill,
+  &__widget.show-correct-answer.is-incorrect &__item-input-fill {
+    background-color: @validation-success;
+  }
 
   &__widget.show-correct-answer.is-correct &__number-model-answer,
   &__widget.show-correct-answer.is-incorrect &__number-model-answer {
