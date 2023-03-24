@@ -1,0 +1,81 @@
+// **************
+// Tooltip config   
+// **************
+
+// background colour of tooltip
+@tooltip-color: fade(@black, 85%);
+
+// tooltip corner radius
+@tooltip-radius: 0.35rem;
+
+// offset tooltip from edge
+@tooltip-offset: 0.35rem;
+
+// tooltip arrow
+@tooltip-arrow: true;
+@tooltip-arrow-size: 0.7rem;
+@tooltip-arrow-height: 0.35rem;
+
+.tooltip {
+ font-family: @body-family;
+ color: @white;  
+ font-size: @body-size * 0.9;
+ font-weight: @font-weight-regular;
+ line-height: 1.5;
+ 
+ padding: 0.5rem 0.75rem 0.55rem;
+}
+
+// Custom tooltip animations can go here, but animations MUST not exceed 500ms
+// uncomment below to make changes to animation styles      
+// NB: Transitions wont work as we're using display:none/block on the tooltip
+
+.tooltip {
+  &__container.is-shown & {
+    //animation: toolTip--fadeInDown 0.4s forwards;
+
+	
+    &.is-top {
+      //animation: toolTip--fadeInUp 0.4s forwards;
+    }    
+    &.is-bottom {
+      // default position of tooltip
+    }
+  }
+  
+/*
+  @media (prefers-reduced-motion) {
+    &__container.is-shown & {
+      animation: toolTip--fadeIn 0.25s;
+      &.is-bottom {
+        animation: toolTip--fadeIn 0.25s;
+      }
+    }
+  }
+*/
+}
+
+// animations - (see above) transitions wont work due to display:none/block
+
+/*
+@keyframes toolTip--fadeInUp {
+      0% { opacity: 0; transform: translate(0,0.3rem) scale(0.95)}
+     40% { opacity: 1; }
+    100% { opacity: 1; transform: translate(0,0) scale(1)}
+}
+@keyframes toolTip--fadeIn {
+      0% { opacity: 0; }
+     40% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes toolTip--fadeInDown {
+      0% { opacity: 0; transform: translate(0,-0.3rem) scale(0.95)}
+     40% { opacity: 1; }
+    100% { opacity: 1; transform: translate(0,0) scale(1)}
+}
+@keyframes toolTip--fadeIn-full {
+      0% { opacity: 0; transform: translate(0, -100%)}
+     40% { opacity: 1; }
+    100% { opacity: 1; }
+}
+*/
