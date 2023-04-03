@@ -1,6 +1,10 @@
+@slider-handle-width: 2rem;
+@slider-handle-height: 2rem;
+
+@slider-track-height: .375rem;
+
 .slider {
   // Numbers
-  // --------------------------------------------------
   &__number-container {
     min-height: 2.5rem;
   }
@@ -32,10 +36,7 @@
   }
 
   // Scale
-  // --------------------------------------------------
   &__scale-container {
-    margin-top: @item-margin * 2;
-    margin-bottom: @item-margin * 4;
     background-color: lighten(@black, 75%);
   }
 
@@ -44,45 +45,43 @@
   }
 
   // Slider bar
-  // --------------------------------------------------
-  &__item {
-    margin-bottom: @item-margin * 4;
-  }
-}
-
-// Rangeslider
-// --------------------------------------------------
-.rangeslider {
-  background-color: @disabled;
-
-  &--horizontal {
-    box-shadow: none;
+  &__item-input-track {
+    background-color: darken(@background-inverted, 20%);
+    border-radius: 10px;
+    overflow: hidden;
   }
 
-  &__fill {
+  &__item-input-fill {
     background-color: @item-color;
-    box-shadow: none;
   }
 
-  &__handle {
-    background-image: none;
-    border: 0;
-    box-shadow: 0 2px 5px fade(@black, 30%);
+  // Class to show whether the users selection is in/correct
+  &__widget.show-user-answer.is-correct &__number-selection {
+    background-color: @validation-success;
+    color: @validation-success-inverted;
   }
 
-  &__handle:after {
-    background-image: none;
-  }
-}
-
-// Rangeslider focus styles
-// --------------------------------------------------
-input[type='range']:focus-visible + .rangeslider .rangeslider__handle {
-  html:not(.a11y-disable-focusoutline) & {
-    box-shadow: 0 2px 5px fade(@black, 60%);
+  &__widget.show-user-answer.is-correct &__item-input-fill {
+    background-color: @validation-success;
   }
 
-  html.a11y-disable-focusoutline & {
-    box-shadow: 0 2px 5px fade(@black, 30%);
+  &__widget.show-user-answer.is-incorrect &__number-selection {
+    background-color: @validation-error;
+    color: @validation-error-inverted;
+  }
+
+  &__widget.show-user-answer.is-incorrect &__item-input-fill {
+    background-color: @validation-error;
+  }
+
+  &__widget.show-correct-answer.is-correct &__item-input-fill,
+  &__widget.show-correct-answer.is-incorrect &__item-input-fill {
+    background-color: @validation-success;
+  }
+
+  &__widget.show-correct-answer.is-correct &__number-model-answer,
+  &__widget.show-correct-answer.is-incorrect &__number-model-answer {
+    background-color: @validation-success;
+    color: @validation-success-inverted;
   }
 }
