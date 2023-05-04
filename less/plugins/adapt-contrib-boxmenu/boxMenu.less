@@ -36,12 +36,13 @@
   &__header-inner {
     position: relative;
     .l-container-padding(@menu-header-padding-ver, @menu-header-padding-hoz);
+    background-color: @menu-header-background-color;
   }
 
   &__title {
     margin-bottom: @menu-title-margin;
     .menu-title;
-    color: @heading-color;
+    color: @menu-header-title-color;
   }
 
   &__subtitle {
@@ -52,11 +53,13 @@
   &__body {
     margin-bottom: @menu-body-margin;
     .menu-body;
+    color: @menu-header-body-color;
   }
 
   &__instruction {
     margin-bottom: @menu-instruction-margin;
     .menu-instruction;
+    color: @menu-header-instruction-color;
   }
 
   &__body a,
