@@ -275,6 +275,30 @@
         "required": false,
         "title": "Menu",
         "properties": {
+          "menu-header-background-color": {
+            "title": "Menu header background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "menu-header-title-color": {
+            "title": "Menu header title colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "menu-header-body-color": {
+            "title": "Menu header body colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "menu-header-instruction-color": {
+            "title": "Menu header instruction colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
           "menu-item": {
             "title": "Menu item colour",
             "type": "string",
