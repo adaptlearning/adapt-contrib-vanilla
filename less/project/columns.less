@@ -16,8 +16,8 @@
 // min small viewport takes up 8 out of 12 columns
 // min medium viewport takes up 10 columns
 // if undefined element defaults to 100% width
-.make-columns(xs, @device-width-small, 12);
-.make-columns(sm, 400, 12);
+.make-columns(xs, 0, 12); // deprecated: backward compatibility only
+.make-columns(sm, @device-width-small, 12);
 .make-columns(md, @device-width-medium, 12);
 .make-columns(lg, @device-width-large, 12);
 .make-columns(xl, @device-width-xlarge, 12);
