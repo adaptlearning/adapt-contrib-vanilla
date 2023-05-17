@@ -11,6 +11,7 @@
 // contentObjects.json
 "_vanilla": {
     "_backgroundImage": {
+        "_xlarge": "",
         "_large": "",
         "_medium": "",
         "_small": ""
@@ -21,6 +22,7 @@
         "_backgroundPosition": ""
     },
     "_responsiveClasses": {
+        "_xlarge": "",
         "_large": "",
         "_medium": "",
         "_small": ""
@@ -32,7 +34,8 @@
             "_instruction": ""
         },
         "_backgroundImage": {
-            "_large": "",
+        	"_xlarge": "",
+        	"_large": "",
             "_medium": "",
             "_small": ""
         },
@@ -42,6 +45,7 @@
             "_backgroundPosition": ""
         },
         "_minimumHeights": {
+            "_xlarge": 0,
             "_large": 0,
             "_medium": 0,
             "_small": 0
@@ -57,6 +61,7 @@
         "_instruction": ""
     },
     "_backgroundImage": {
+        "_xlarge": "",
         "_large": "",
         "_medium": "",
         "_small": ""
@@ -67,6 +72,7 @@
         "_backgroundPosition": ""
     },
     "_responsiveClasses": {
+        "_xlarge": "",
         "_large": "",
         "_medium": "",
         "_small": ""
@@ -81,6 +87,7 @@
         "_instruction": ""
     },
     "_backgroundImage": {
+        "_xlarge": "",
         "_large": "",
         "_medium": "",
         "_small": ""
@@ -91,11 +98,13 @@
         "_backgroundPosition": ""
     },
     "_minimumHeights": {
+        "_xlarge": 0,
         "_large": 0,
         "_medium": 0,
         "_small": 0
     },
     "_responsiveClasses": {
+        "_xlarge": "",
         "_large": "",
         "_medium": "",
         "_small": ""

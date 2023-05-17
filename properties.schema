@@ -735,13 +735,21 @@
                   "required": false,
                   "legend": "Page background image",
                   "properties": {
+                    "_xlarge": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Extra large background image, e.g. hd laptop/desktop computers"
+                    },                    
                     "_large": {
                       "type": "string",
                       "required": false,
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Large background image - used on desktop"
+                      "help": "Large background image, e.g. laptop/desktop computers"
                     },
                     "_medium": {
                       "type": "string",
@@ -749,7 +757,7 @@
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Medium background image - used on tablet"
+                      "help": "Medium background image, e.g. tablet devices"
                     },
                     "_small": {
                       "type": "string",
@@ -757,7 +765,7 @@
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Small background image - used on mobile"
+                      "help": "Small background image, e.g. mobile / cellphones"
                     }
                   }
                 },
@@ -797,13 +805,21 @@
                   "required": false,
                   "legend": "Responsive classes",
                   "properties": {
+                    "_xlarge": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Extra large CSS class, e.g. hd laptop/desktop computers"
+                    },
                     "_large": {
                       "type": "string",
                       "required": false,
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Large CSS class - used on desktop"
+                      "help": "Large CSS class, e.g. laptop/desktop computers"
                     },
                     "_medium": {
                       "type": "string",
@@ -811,7 +827,7 @@
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Medium CSS class - used on tablet"
+                      "help": "Medium CSS class, e.g. tablet devices"
                     },
                     "_small": {
                       "type": "string",
@@ -819,7 +835,7 @@
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Small CSS class - used on mobile"
+                      "help": "Small CSS class, e.g. mobile / cellphones"
                     }
                   }
                 },
@@ -863,13 +879,21 @@
                       "required": false,
                       "legend": "Page header background image",
                       "properties": {
+                        "_xlarge": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Extra large background image, e.g. hd laptop/desktop computers"
+                        },
                         "_large": {
                           "type": "string",
                           "required": false,
                           "default": "",
                           "inputType": "Asset:image",
                           "validators": [],
-                          "help": "Large background image - used on desktop"
+                          "help": "Large background image, e.g. laptop/desktop computers"
                         },
                         "_medium": {
                           "type": "string",
@@ -877,7 +901,7 @@
                           "default": "",
                           "inputType": "Asset:image",
                           "validators": [],
-                          "help": "Medium background image - used on tablet"
+                          "help": "Medium background image, e.g. tablet devices"
                         },
                         "_small": {
                           "type": "string",
@@ -885,7 +909,7 @@
                           "default": "",
                           "inputType": "Asset:image",
                           "validators": [],
-                          "help": "Small background image - used on mobile"
+                          "help": "Small background image, e.g. mobile / cellphones"
                         }
                       }
                     },
@@ -925,13 +949,21 @@
                       "required": false,
                       "legend": "Page header minimum height",
                       "properties": {
+                        "_xlarge": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers"
+                        },
                         "_large": {
                           "type": "number",
                           "required": false,
                           "default": "",
                           "inputType": "Number",
                           "validators": ["number"],
-                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. laptop/desktop computers"
                         },
                         "_medium": {
                           "type": "number",
@@ -939,7 +971,7 @@
                           "default": "",
                           "inputType": "Number",
                           "validators": ["number"],
-                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices"
                         },
                         "_small": {
                           "type": "number",
@@ -947,7 +979,7 @@
                           "default": "",
                           "inputType": "Number",
                           "validators": ["number"],
-                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+                          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones"
                         }
                       }
                     }
@@ -1000,13 +1032,21 @@
                   "required": false,
                   "legend": "Article background image",
                   "properties": {
+                    "_xlarge": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Extra large background image, e.g. hd laptop/desktop computers"
+                    },
                     "_large": {
                       "type": "string",
                       "required": false,
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Large background image - used on desktop"
+                      "help": "Large background image, e.g. laptop/desktop computers"
                     },
                     "_medium": {
                       "type": "string",
@@ -1014,7 +1054,7 @@
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Medium background image - used on tablet"
+                      "help": "Medium background image, e.g. tablet devices"
                     },
                     "_small": {
                       "type": "string",
@@ -1022,7 +1062,7 @@
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Small background image - used on mobile"
+                      "help": "Small background image, e.g. mobile / cellphones"
                     }
                   }
                 },
@@ -1062,13 +1102,21 @@
                   "required": false,
                   "legend": "Responsive classes",
                   "properties": {
+                    "_xlarge": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Extra large CSS class, e.g. hd laptop/desktop computers"
+                    },
                     "_large": {
                       "type": "string",
                       "required": false,
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Large CSS class - used on desktop"
+                      "help": "Large CSS class, e.g. laptop/desktop computers"
                     },
                     "_medium": {
                       "type": "string",
@@ -1076,7 +1124,7 @@
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Medium CSS class - used on tablet"
+                      "help": "Medium CSS class, e.g. tablet devices"
                     },
                     "_small": {
                       "type": "string",
@@ -1084,7 +1132,7 @@
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Small CSS class - used on mobile"
+                      "help": "Small CSS class, e.g. mobile / cellphones"
                     }
                   }
                 }
@@ -1135,13 +1183,21 @@
                   "required": false,
                   "legend": "Block background image",
                   "properties": {
+                    "_xlarge": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Extra large background image, e.g. hd laptop/desktop computers"
+                    },
                     "_large": {
                       "type": "string",
                       "required": false,
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Large background image - used on desktop"
+                      "help": "Large background image, e.g. laptop/desktop computers"
                     },
                     "_medium": {
                       "type": "string",
@@ -1149,7 +1205,7 @@
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Medium background image - used on tablet"
+                      "help": "Medium background image, e.g. tablet devices"
                     },
                     "_small": {
                       "type": "string",
@@ -1157,7 +1213,7 @@
                       "default": "",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Small background image - used on mobile"
+                      "help": "Small background image, e.g. mobile / cellphones"
                     }
                   }
                 },
@@ -1197,13 +1253,21 @@
                   "required": false,
                   "legend": "Block minimum height",
                   "properties": {
+                    "_xlarge": {
+                      "type": "number",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Number",
+                      "validators": ["number"],
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers"
+                    },
                     "_large": {
                       "type": "number",
                       "required": false,
                       "default": "",
                       "inputType": "Number",
                       "validators": ["number"],
-                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. laptop/desktop computers"
                     },
                     "_medium": {
                       "type": "number",
@@ -1211,7 +1275,7 @@
                       "default": "",
                       "inputType": "Number",
                       "validators": ["number"],
-                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices"
                     },
                     "_small": {
                       "type": "number",
@@ -1219,7 +1283,7 @@
                       "default": "",
                       "inputType": "Number",
                       "validators": ["number"],
-                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped"
+                      "help": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones"
                     }
                   }
                 },
@@ -1228,13 +1292,21 @@
                   "required": false,
                   "legend": "Responsive classes",
                   "properties": {
+                    "_xlarge": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Extra large CSS class, e.g. hd laptop/desktop computers"
+                    },
                     "_large": {
                       "type": "string",
                       "required": false,
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Large CSS class - used on desktop"
+                      "help": "Large CSS class, e.g. laptop/desktop computers"
                     },
                     "_medium": {
                       "type": "string",
@@ -1242,7 +1314,7 @@
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Medium CSS class - used on tablet"
+                      "help": "Medium CSS class, e.g. tablet devices"
                     },
                     "_small": {
                       "type": "string",
@@ -1250,7 +1322,7 @@
                       "default": "",
                       "inputType": "Text",
                       "validators": [],
-                      "help": "Small CSS class - used on mobile"
+                      "help": "Small CSS class, e.g. mobile / cellphones"
                     }
                   }
                 },

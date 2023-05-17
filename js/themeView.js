@@ -1,5 +1,4 @@
 import Adapt from 'core/js/adapt';
-import device from 'core/js/device';
 
 export default class ThemeView extends Backbone.View {
 
@@ -20,7 +19,6 @@ export default class ThemeView extends Backbone.View {
 
   remove() {
     super.remove();
-
     this.onRemove();
   }
 
@@ -57,70 +55,30 @@ export default class ThemeView extends Backbone.View {
   setBackgroundImage() {
     const backgroundImages = this.model.get('_backgroundImage');
     if (!backgroundImages) return;
-
-    let backgroundImage;
-
-    switch (device.screenSize) {
-      case 'large':
-        backgroundImage = backgroundImages._large;
-        break;
-      case 'medium':
-        backgroundImage = backgroundImages._medium;
-        break;
-      default:
-        backgroundImage = backgroundImages._small;
-    }
-
-    if (backgroundImage) {
-      this.$el.addClass('has-bg-image');
-      this.$background
-        .css('background-image', 'url(' + backgroundImage + ')');
-      return;
-    }
-
-    this.$el.removeClass('has-bg-image');
-    this.$background.css('background-image', '');
+    const backgroundImage = backgroundImages[`_${Adapt.device.screenSize}`] ?? backgroundImages._small;
+    this.$el.toggleClass('has-bg-image', Boolean(backgroundImage));
+    this.$background
+      .css('background-image', backgroundImage ? 'url(' + backgroundImage + ')' : '');
   }
 
   setBackgroundStyles() {
     const styles = this.model.get('_backgroundStyles');
     if (!styles) return;
-
-    this.$background
-      .css({
-        'background-repeat': styles._backgroundRepeat,
-        'background-size': styles._backgroundSize,
-        'background-position': styles._backgroundPosition
-      });
+    this.$background.css({
+      'background-repeat': styles._backgroundRepeat,
+      'background-size': styles._backgroundSize,
+      'background-position': styles._backgroundPosition
+    });
   }
 
   setMinimumHeight() {
     const minimumHeights = this.model.get('_minimumHeights');
     if (!minimumHeights) return;
 
-    let minimumHeight;
-
-    switch (Adapt.device.screenSize) {
-      case 'large':
-        minimumHeight = minimumHeights._large;
-        break;
-      case 'medium':
-        minimumHeight = minimumHeights._medium;
-        break;
-      default:
-        minimumHeight = minimumHeights._small;
-    }
-
-    if (minimumHeight) {
-      this.$el
-        .addClass('has-min-height')
-        .css('min-height', minimumHeight + 'px');
-      return;
-    }
-
+    const minimumHeight = minimumHeights[`_${Adapt.device.screenSize}`] ?? minimumHeights._small;
     this.$el
-      .removeClass('has-min-height')
-      .css('min-height', '');
+      .toggleClass('has-min-height', Boolean(minimumHeight))
+      .css('min-height', minimumHeight ? minimumHeight + 'px' : '');
   }
 
   setResponsiveClasses() {
