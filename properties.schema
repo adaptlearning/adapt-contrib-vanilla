@@ -742,7 +742,7 @@
                       "inputType": "Asset:image",
                       "validators": [],
                       "help": "Extra large background image, e.g. hd laptop/desktop computers"
-                    },                    
+                    },
                     "_large": {
                       "type": "string",
                       "required": false,

@@ -61,5 +61,5 @@ export default class ThemePageView extends ThemeView {
       .toggleClass('has-min-height', Boolean(minimumHeight))
       .css('min-height', minimumHeight ? minimumHeight + 'px' : '');
   }
-  
+
 }
