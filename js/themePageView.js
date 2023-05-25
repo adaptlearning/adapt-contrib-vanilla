@@ -12,9 +12,7 @@ export default class ThemePageView extends ThemeView {
   processHeader() {
     const header = this.model.get('_pageHeader');
     if (!header) return;
-
     const $header = this.$('.page__header');
-
     this.setHeaderTextAlignment(header);
     this.addHeaderBackgroundLayer($header);
     this.setHeaderBackgroundImage(header, $header);
@@ -40,72 +38,28 @@ export default class ThemePageView extends ThemeView {
   setHeaderBackgroundImage(config, $header) {
     const backgroundImages = config._backgroundImage;
     if (!backgroundImages) return;
-
-    let backgroundImage;
-
-    switch (Adapt.device.screenSize) {
-      case 'large':
-        backgroundImage = backgroundImages._large;
-        break;
-      case 'medium':
-        backgroundImage = backgroundImages._medium;
-        break;
-      default:
-        backgroundImage = backgroundImages._small;
-    }
-
-    if (backgroundImage) {
-      $header.addClass('has-bg-image');
-      this.$headerBackground
-        .css('background-image', 'url(' + backgroundImage + ')');
-      return;
-    }
-
-    $header.removeClass('has-bg-image');
-    this.$headerBackground.css('background-image', '');
+    const backgroundImage = backgroundImages[`_${Adapt.device.screenSize}`] ?? backgroundImages._small;
+    $header.toggleClass('has-bg-image', Boolean(backgroundImage));
+    this.$headerBackground.css('background-image', backgroundImage ? 'url(' + backgroundImage + ')' : '');
   }
 
   setHeaderBackgroundStyles(config, $header) {
     const styles = config._backgroundStyles;
     if (!styles) return;
-
-    this.$headerBackground
-      .css({
-        'background-repeat': styles._backgroundRepeat,
-        'background-size': styles._backgroundSize,
-        'background-position': styles._backgroundPosition
-      });
+    this.$headerBackground.css({
+      'background-repeat': styles._backgroundRepeat,
+      'background-size': styles._backgroundSize,
+      'background-position': styles._backgroundPosition
+    });
   }
 
   setHeaderMinimumHeight(config, $header) {
     const minimumHeights = config._minimumHeights;
     if (!minimumHeights) return;
-
-    let minimumHeight;
-
-    switch (Adapt.device.screenSize) {
-      case 'large':
-        minimumHeight = minimumHeights._large;
-        break;
-      case 'medium':
-        minimumHeight = minimumHeights._medium;
-        break;
-      default:
-        minimumHeight = minimumHeights._small;
-    }
-
-    if (minimumHeight) {
-      $header
-        .addClass('has-min-height')
-        .css('min-height', minimumHeight + 'px');
-      return;
-    }
-
+    const minimumHeight = minimumHeights[`_${Adapt.device.screenSize}`] ?? minimumHeights._small;
     $header
-      .removeClass('has-min-height')
-      .css('min-height', '');
+      .toggleClass('has-min-height', Boolean(minimumHeight))
+      .css('min-height', minimumHeight ? minimumHeight + 'px' : '');
   }
-
-  onRemove() {}
 
 }

@@ -64,11 +64,21 @@
               "title": "Background image",
               "default": {},
               "properties": {
+                "_xlarge": {
+                  "type": "string",
+                  "isObjectId": true,
+                  "title": "Extra Large",
+                  "description": "Extra large background image, e.g. hd laptop/desktop computers",
+                  "_backboneForms": {
+                    "type": "Asset",
+                    "media": "image"
+                  }
+                },
                 "_large": {
                   "type": "string",
                   "isObjectId": true,
                   "title": "Large",
-                  "description": "Large background image - used on desktop",
+                  "description": "Large background image, e.g. laptop/desktop computers",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -78,7 +88,7 @@
                   "type": "string",
                   "isObjectId": true,
                   "title": "Medium",
-                  "description": "Medium background image - used on tablet",
+                  "description": "Medium background image, e.g. tablet devices",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -88,7 +98,7 @@
                   "type": "string",
                   "isObjectId": true,
                   "title": "Small",
-                  "description": "Small background image - used on mobile",
+                  "description": "Small background image, e.g. mobile / cellphones",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -155,22 +165,27 @@
               "title": "Responsive classes",
               "default": {},
               "properties": {
-                "_large": {
+                "_xlarge": {
+                  "type": "string",
+                  "title": "Extra large",
+                  "description": "Extra large CSS class, e.g. hd laptop/desktop computers",
+                  "default": ""
+                },
                   "type": "string",
                   "title": "Large",
-                  "description": "Large CSS class - used on desktop",
+                  "description": "Large CSS class, e.g. laptop/desktop computers",
                   "default": ""
                 },
                 "_medium": {
                   "type": "string",
                   "title": "Medium",
-                  "description": "Medium CSS class - used on tablet",
+                  "description": "Medium CSS class, e.g. tablet devices",
                   "default": ""
                 },
                 "_small": {
                   "type": "string",
                   "title": "Small",
-                  "description": "Small CSS class - used on mobile",
+                  "description": "Small CSS class, e.g. mobile / cellphones",
                   "default": ""
                 }
               }

@@ -64,11 +64,21 @@
               "title": "Background image",
               "default": {},
               "properties": {
+                "_xlarge": {
+                  "type": "string",
+                  "isObjectId": true,
+                  "title": "Extra large",
+                  "description": "Extra large background image, e.g. hd laptop/desktop computers",
+                  "_backboneForms": {
+                    "type": "Asset",
+                    "media": "image"
+                  }
+                },
                 "_large": {
                   "type": "string",
                   "isObjectId": true,
                   "title": "Large",
-                  "description": "Large background image - used on desktop",
+                  "description": "Large background image, e.g. laptop/desktop computers",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -78,7 +88,7 @@
                   "type": "string",
                   "isObjectId": true,
                   "title": "Medium",
-                  "description": "Medium background image - used on tablet",
+                  "description": "Medium background image, e.g. tablet devices",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -88,7 +98,7 @@
                   "type": "string",
                   "isObjectId": true,
                   "title": "Small",
-                  "description": "Small background image - used on mobile",
+                  "description": "Small background image, e.g. mobile / cellphones",
                   "_backboneForms": {
                     "type": "Asset",
                     "media": "image"
@@ -155,22 +165,28 @@
               "title": "Block minimum height",
               "default": {},
               "properties": {
+                "_xlarge": {
+                  "type": "number",
+                  "title": "Extra large",
+                  "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers",
+                  "default": 0
+                },
                 "_large": {
                   "type": "number",
                   "title": "Large",
-                  "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
+                  "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped.For e.g. laptop/desktop computers",
                   "default": 0
                 },
                 "_medium": {
                   "type": "number",
                   "title": "Medium",
-                  "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
+                  "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices",
                   "default": 0
                 },
                 "_small": {
                   "type": "number",
                   "title": "Small",
-                  "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped",
+                  "description": "Minimum height should only be used in instances where the block height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones",
                   "default": 0
                 }
               }
@@ -180,22 +196,28 @@
               "title": "Responsive classes",
               "default": {},
               "properties": {
+                "_xlarge": {
+                  "type": "string",
+                  "title": "Extra large",
+                  "description": "Extra large CSS class, e.g. hd laptop/desktop computers",
+                  "default": ""
+                },
                 "_large": {
                   "type": "string",
                   "title": "Large",
-                  "description": "Large CSS class - used on desktop",
+                  "description": "Large CSS class, e.g. laptop/desktop computers",
                   "default": ""
                 },
                 "_medium": {
                   "type": "string",
                   "title": "Medium",
-                  "description": "Medium CSS class - used on tablet",
+                  "description": "Medium CSS class, e.g. tablet devices",
                   "default": ""
                 },
                 "_small": {
                   "type": "string",
                   "title": "Small",
-                  "description": "Small CSS class - used on mobile",
+                  "description": "Small CSS class, e.g. mobile / cellphones",
                   "default": ""
                 }
               }
