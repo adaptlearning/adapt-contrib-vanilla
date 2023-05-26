@@ -171,6 +171,7 @@
                   "description": "Extra large CSS class, e.g. hd laptop/desktop computers",
                   "default": ""
                 },
+                "_large": {
                   "type": "string",
                   "title": "Large",
                   "description": "Large CSS class, e.g. laptop/desktop computers",
