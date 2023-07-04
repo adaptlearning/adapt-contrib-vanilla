@@ -72,17 +72,7 @@
   }
 
   &__btn-icon {
-    margin: @btn-margin / 2;
-    padding: @btn-padding / 2;
-    background-color: @notify-icon;
-    color: @notify-icon-inverted;
-    border-radius: 50%;
-
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @notify-icon-hover;
-      color: @notify-icon-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
+    .notify-btn-icon;
   }
 
   &__close-btn {
@@ -108,4 +98,20 @@
   //     left: 0;
   //   }
   // }
+}
+
+// Global Notify button icon
+// --------------------------------------------------
+.notify-btn-icon() {
+  margin: @btn-margin / 2;
+  padding: @btn-padding / 2;
+  background-color: @notify-icon;
+  color: @notify-icon-inverted;
+  border-radius: 50%;
+
+  .no-touch &:not(.is-disabled):not(.is-locked):hover {
+    background-color: @notify-icon-hover;
+    color: @notify-icon-inverted-hover;
+    .transition(background-color @duration ease-in, color @duration ease-in;);
+  }
 }
