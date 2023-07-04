@@ -1,6 +1,6 @@
 {
   "name": "adapt-contrib-vanilla",
-  "version": "9.6.16",
+  "version": "9.7.0",
   "framework": ">=5.31.3",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
   "bugs": "https://github.com/adaptlearning/adapt-contrib-vanilla/issues",
