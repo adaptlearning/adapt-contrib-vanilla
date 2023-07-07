@@ -1,4 +1,12 @@
 .hotgraphic {
+  &__pin.has-pin-image {
+    background-color: transparent;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      background-color: transparent;
+    }
+  }
+
   &__pin:not(.has-pin-image) {
     background-color: @item-color;
     color: @item-color-inverted;
