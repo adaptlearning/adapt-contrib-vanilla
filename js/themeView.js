@@ -6,8 +6,10 @@ export default class ThemeView extends Backbone.View {
 
   initialize() {
     this.setStyles();
+    this.resetPageViewReady();
 
     this.listenTo(Adapt, {
+      'pageView:ready': this.onPageViewReady,
       'device:changed': this.onDeviceResize,
       remove: this.remove
     });
@@ -15,6 +17,15 @@ export default class ThemeView extends Backbone.View {
 
   onDeviceResize() {
     this.setStyles();
+  }
+
+  onPageViewReady() {
+    // Add a class to <html> after all assets are loaded for a page.
+    $('html').addClass('page-view-ready');
+  }
+
+  resetPageViewReady() {
+    $('html').removeClass('page-view-ready');
   }
 
   remove() {
