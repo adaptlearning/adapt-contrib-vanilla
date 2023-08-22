@@ -1,4 +1,5 @@
 import Adapt from 'core/js/adapt';
+import device from 'core/js/device';
 
 export default class ThemeView extends Backbone.View {
 
@@ -56,7 +57,7 @@ export default class ThemeView extends Backbone.View {
     const backgroundImages = this.model.get('_backgroundImage');
     if (!backgroundImages || !this.$background) return;
 
-    const backgroundImage = backgroundImages[`_${Adapt.device.screenSize}`] ?? backgroundImages._small;
+    const backgroundImage = backgroundImages[`_${device.screenSize}`] ?? backgroundImages._small;
     this.$el.toggleClass('has-bg-image', Boolean(backgroundImage));
     this.$background
       .css('background-image', backgroundImage ? 'url(' + backgroundImage + ')' : '');
@@ -77,7 +78,7 @@ export default class ThemeView extends Backbone.View {
     const minimumHeights = this.model.get('_minimumHeights');
     if (!minimumHeights) return;
 
-    const minimumHeight = minimumHeights[`_${Adapt.device.screenSize}`] ?? minimumHeights._small;
+    const minimumHeight = minimumHeights[`_${device.screenSize}`] ?? minimumHeights._small;
     this.$el
       .toggleClass('has-min-height', Boolean(minimumHeight))
       .css('min-height', minimumHeight ? minimumHeight + 'px' : '');
@@ -89,7 +90,7 @@ export default class ThemeView extends Backbone.View {
 
     this.$el
       .removeClass(Object.values(responsiveClasses))
-      .addClass(responsiveClasses[`_${Adapt.device.screenSize}`]);
+      .addClass(responsiveClasses[`_${device.screenSize}`]);
   }
 
   setCustomStyles() {}

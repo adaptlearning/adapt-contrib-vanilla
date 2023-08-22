@@ -1,5 +1,5 @@
 import ThemeView from './themeView';
-import Adapt from 'core/js/adapt';
+import device from 'core/js/device';
 
 export default class ThemePageView extends ThemeView {
 
@@ -39,7 +39,7 @@ export default class ThemePageView extends ThemeView {
     const backgroundImages = config._backgroundImage;
     if (!backgroundImages || this.$headerBackground) return;
 
-    const backgroundImage = backgroundImages[`_${Adapt.device.screenSize}`] ?? backgroundImages._small;
+    const backgroundImage = backgroundImages[`_${device.screenSize}`] ?? backgroundImages._small;
     $header.toggleClass('has-bg-image', Boolean(backgroundImage));
     this.$headerBackground.css('background-image', backgroundImage ? 'url(' + backgroundImage + ')' : '');
   }
@@ -58,7 +58,7 @@ export default class ThemePageView extends ThemeView {
   setHeaderMinimumHeight(config, $header) {
     const minimumHeights = config._minimumHeights;
     if (!minimumHeights) return;
-    const minimumHeight = minimumHeights[`_${Adapt.device.screenSize}`] ?? minimumHeights._small;
+    const minimumHeight = minimumHeights[`_${device.screenSize}`] ?? minimumHeights._small;
     $header
       .toggleClass('has-min-height', Boolean(minimumHeight))
       .css('min-height', minimumHeight ? minimumHeight + 'px' : '');
