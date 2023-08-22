@@ -37,7 +37,8 @@ export default class ThemePageView extends ThemeView {
 
   setHeaderBackgroundImage(config, $header) {
     const backgroundImages = config._backgroundImage;
-    if (!backgroundImages) return;
+    if (!backgroundImages || this.$headerBackground) return;
+
     const backgroundImage = backgroundImages[`_${Adapt.device.screenSize}`] ?? backgroundImages._small;
     $header.toggleClass('has-bg-image', Boolean(backgroundImage));
     this.$headerBackground.css('background-image', backgroundImage ? 'url(' + backgroundImage + ')' : '');
@@ -45,7 +46,8 @@ export default class ThemePageView extends ThemeView {
 
   setHeaderBackgroundStyles(config, $header) {
     const styles = config._backgroundStyles;
-    if (!styles) return;
+    if (!styles || this.$headerBackground) return;
+
     this.$headerBackground.css({
       'background-repeat': styles._backgroundRepeat,
       'background-size': styles._backgroundSize,
