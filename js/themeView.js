@@ -54,7 +54,7 @@ export default class ThemeView extends Backbone.View {
 
   setBackgroundImage() {
     const backgroundImages = this.model.get('_backgroundImage');
-    if (!backgroundImages) return;
+    if (!backgroundImages || !this.$background) return;
     const backgroundImage = backgroundImages[`_${Adapt.device.screenSize}`] ?? backgroundImages._small;
     this.$el.toggleClass('has-bg-image', Boolean(backgroundImage));
     this.$background
@@ -63,7 +63,7 @@ export default class ThemeView extends Backbone.View {
 
   setBackgroundStyles() {
     const styles = this.model.get('_backgroundStyles');
-    if (!styles) return;
+    if (!styles || !this.$background) return;
     this.$background.css({
       'background-repeat': styles._backgroundRepeat,
       'background-size': styles._backgroundSize,
