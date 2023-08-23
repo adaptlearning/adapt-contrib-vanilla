@@ -115,8 +115,9 @@
                   "type": "string",
                   "title": "Repeat",
                   "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically",
-                  "default": "no-repeat",
+                  "default": "",
                   "enum": [
+                    "",
                     "repeat",
                     "repeat-x",
                     "repeat-y",
@@ -128,8 +129,9 @@
                   "type": "string",
                   "title": "Size",
                   "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container",
-                  "default": "cover",
+                  "default": "",
                   "enum": [
+                    "",
                     "auto",
                     "cover",
                     "contain",
@@ -141,8 +143,9 @@
                   "type": "string",
                   "title": "Position",
                   "description": "The first value is the horizontal position and the second value is the vertical",
-                  "default": "center top",
+                  "default": "",
                   "enum": [
+                    "",
                     "left top",
                     "left center",
                     "left bottom",

@@ -1,5 +1,7 @@
 .block {
   position: relative;
+  height: var(--adapt-viewport-height);
+  overflow: auto;
 
   &.has-bg-image > .background {
     position: absolute;
@@ -14,13 +16,20 @@
 
   &__inner {
     position: relative;
-    .l-container-padding(@block-padding-ver, @block-padding-hoz);
+    padding: 25px 25px 0px;
+    height: calc(100% - max(56px, var(--adapt-navigation-height)));
+    top: max(56px, var(--adapt-navigation-height));
+    overflow: hidden;
   }
 
   &__title {
     margin-bottom: @block-title-margin;
     .block-title;
     color: @heading-color;
+  }
+
+  &__container {
+    height: calc(2 * var(--adapt-viewport-height));
   }
 
   &__body {
@@ -38,16 +47,28 @@
   }
 
   // Double the blocks top or bottom padding
-  &.double-padding-top &__inner { padding-top: @block-padding-ver * 2; }
-  &.double-padding-bottom &__inner { padding-bottom: @block-padding-ver * 2; }
+  &.double-padding-top &__inner {
+    padding-top: @block-padding-ver * 2;
+  }
+  &.double-padding-bottom &__inner {
+    padding-bottom: @block-padding-ver * 2;
+  }
 
   // Half the blocks top or bottom padding
-  &.half-padding-top &__inner { padding-top: @block-padding-ver / 2; }
-  &.half-padding-bottom &__inner { padding-bottom: @block-padding-ver / 2; }
+  &.half-padding-top &__inner {
+    padding-top: @block-padding-ver / 2;
+  }
+  &.half-padding-bottom &__inner {
+    padding-bottom: @block-padding-ver / 2;
+  }
 
   // Remove the top or bottom padding from block
-  &.remove-padding-top &__inner { padding-top: 0; }
-  &.remove-padding-bottom &__inner { padding-bottom: 0; }
+  &.remove-padding-top &__inner {
+    padding-top: 0;
+  }
+  &.remove-padding-bottom &__inner {
+    padding-bottom: 0;
+  }
 
   // Aligns child components centrally on the vertical axis
   &.align-vert-center {
@@ -61,11 +82,17 @@
   }
 
   // Aligns child components to the bottom of the parent block on the vertical axis
-  &.align-vert-bottom .component__container {align-items: flex-end; }
+  &.align-vert-bottom .component__container {
+    align-items: flex-end;
+  }
 
   // Aligns child components centrally on the horizontal axis
-  &.align-horz-center .component__container { justify-content: center; }
+  &.align-horz-center .component__container {
+    justify-content: center;
+  }
 
   // Aligns child components to the right of the parent block on the horizontal axis
-  &.align-horz-right .component__container { justify-content: flex-end; }
+  &.align-horz-right .component__container {
+    justify-content: flex-end;
+  }
 }

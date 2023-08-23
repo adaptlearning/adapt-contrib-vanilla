@@ -6,12 +6,6 @@
   &-icon {
     background-color: @btn-icon-color;
     color: @btn-icon-color-inverted;
-
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @btn-icon-color-hover;
-      color: @btn-icon-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
   }
 
   &-text {
@@ -54,7 +48,32 @@
 
     .dir-rtl & {
       margin-right: inherit;
-      margin-left: @icon-size + (@item-margin * 2) + ((@item-padding * 0.75) * 2);
+      margin-left: @icon-size + (@item-margin * 2) +
+        ((@item-padding * 0.75) * 2);
     }
+  }
+}
+
+.vis-bottom-button {
+  width: 100%;
+  border-radius: 8px;
+  bottom: 0px;
+  position: absolute;
+  margin: 25px 0px;
+  background-color: @purple-button-colour;
+  color: white;
+  font-weight: bold;
+
+  &__container {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    height: 98px;
+  }
+
+  &.is-disabled {
+    background-color: #d6d9e0;
+    color: #9c9eb9;
   }
 }

@@ -20,6 +20,7 @@
 
   &__header {
     position: relative;
+    display: none;
   }
 
   &__header.has-bg-image > .background {
@@ -63,4 +64,12 @@
   &__instruction a {
     .link-text;
   }
+}
+
+html.is-nav-top #wrapper {
+  padding-top: 0px;
+}
+
+#adapt {
+  overflow: hidden;
 }
