@@ -8,7 +8,7 @@
     },
     "with": {
       "properties": {
-        "_vanilla": {
+        "_vanillaVis": {
           "type": "object",
           "title": "Theme",
           "default": {},

@@ -1,11 +1,11 @@
 {
-  "name": "adapt-contrib-vanilla",
-  "version": "9.7.0",
+  "name": "adapt-contrib-vanilla-visibly",
+  "version": "0.0.1",
   "framework": ">=5.31.3",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
   "bugs": "https://github.com/adaptlearning/adapt-contrib-vanilla/issues",
-  "theme": "vanilla",
-  "displayName": "Vanilla",
+  "theme": "vanilla-visibly-2",
+  "displayName": "Vanilla (Visibly -2)",
   "description": "A core bundled theme",
   "main": "js/theme.js",
   "keywords": [
@@ -13,7 +13,7 @@
     "adapt-theme"
   ],
   "license": "GPL-3.0",
-  "targetAttribute": "_vanilla",
+  "targetAttribute": "_vanillaVis",
   "private": true,
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",

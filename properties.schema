@@ -724,7 +724,7 @@
         "course": {
           "type": "object",
           "properties": {
-            "_vanilla": {
+            "_vanillaVis": {
               "type": "object",
               "required": false,
               "properties": {
@@ -750,7 +750,7 @@
         "contentobject": {
           "type": "object",
           "properties": {
-            "_vanilla": {
+            "_vanillaVis": {
               "type": "object",
               "required": false,
               "properties": {
@@ -1016,7 +1016,7 @@
         "article": {
           "type": "object",
           "properties": {
-            "_vanilla": {
+            "_vanillaVis": {
               "type": "object",
               "required": false,
               "properties": {
@@ -1167,7 +1167,7 @@
         "block": {
           "type": "object",
           "properties": {
-            "_vanilla": {
+            "_vanillaVis": {
               "type": "object",
               "required": false,
               "properties": {
@@ -1398,7 +1398,7 @@
         "component": {
           "type": "object",
           "properties": {
-            "_vanilla": {
+            "_vanillaVis": {
               "type": "object",
               "required": false,
               "properties": {
