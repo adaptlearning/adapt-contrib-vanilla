@@ -1,9 +1,13 @@
 @loading-anim-delay: 0.16s;
 
 .loading {
-  background-color: fade(@shadow, @shadow-opacity);
+  background-color: white;
   color: @shadow-inverted;
-  display: none !important;
+  display: block !important;
+
+  &__hidden {
+    display: none !important;
+  }
 
   &__inner,
   &__inner:before,
