@@ -15,14 +15,14 @@
             "title": "Font colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4D4D4D",
+            "default": "",
             "help": "Global body font colour."
           },
           "font-color-inverted": {
             "title": "Font colour inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Global body font colour inverted. Either a lightened/darkened alternative to Font colour."
           },
           "link": {
@@ -55,14 +55,14 @@
             "title": "Heading colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#36CDE8",
+            "default": "",
             "help": "Global title colour."
           },
           "heading-color-inverted": {
             "title": "Heading colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Global title colour inverted. Either a lightened/darkened alternative to Title colour."
           }
         }
@@ -77,14 +77,14 @@
             "title": "Item colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#36CDE8",
+            "default": "",
             "help": "Defines the clickable areas or points of interest in components."
           },
           "item-color-inverted": {
             "title": "Item colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the Item text / icon colour. Should be a colour that provides good contrast against the Item colour."
           },
           "item-color-hover": {
@@ -117,14 +117,14 @@
             "title": "Visited colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#727272",
+            "default": "",
             "help": "Defines the Item colour when it has been visited."
           },
           "visited-inverted": {
             "title": "Visited colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the Item text / icon colour when visited. Should be a colour that provides good contrast against the Item visited colour."
           }
         }
@@ -139,14 +139,14 @@
             "title": "Button colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#4D4D4D",
+            "default": "",
             "help": "Defines component question buttons and navigational elements."
           },
           "btn-color-inverted": {
             "title": "Button colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the button text / icon colour. Should be a colour that provides good contrast against the button colour."
           },
           "btn-color-hover": {
@@ -193,13 +193,13 @@
             "title": "Disabled colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#DDDDDD"
+            "default": ""
           },
           "disabled-inverted": {
             "title": "Disabled colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#000000",
+            "default": "",
             "help": "Defines the button text / icon colour when it is disabled. Should be a colour that provides good contrast against the button disabled colour."
           }
         }
@@ -214,28 +214,28 @@
             "title": "Validation success colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#065f28",
+            "default": "",
             "help": "Defines the question marking success colour."
           },
           "validation-success-inverted": {
             "title": "Validation success colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the question marking success text / icon colour. Should be a colour that provides good contrast against the question marking success colour."
           },
           "validation-error": {
             "title": "Validation error colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ff0000",
+            "default": "",
             "help": "Defines the question marking error colour."
           },
           "validation-error-inverted": {
             "title": "Validation error colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the question marking error text / icon colour. Should be a colour that provices good contrast against the question marking error colour."
           }
         }
@@ -250,21 +250,21 @@
             "title": "Progress fill colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#9096A0",
+            "default": "",
             "help": "Defines the global progress width fill colour."
           },
           "progress-inverted": {
             "title": "Progress background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the global progress fill background colour."
           },
           "progress-border": {
             "title": "Progress border colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#9096A0",
+            "default": "",
             "help": "Defines the global border colour that appears around the progress fill bar."
           }
         }
@@ -376,13 +376,13 @@
             "title": "Navigation background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF"
+            "default": ""
           },
           "nav-inverted": {
             "title": "Navigation background colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#9096A0",
+            "default": "",
             "help": "Defines the general Navigation inverted colour. Should be a colour that provides good contrast against the Navigation colour."
           },
           "nav-icon": {
@@ -463,13 +463,13 @@
             "title": "Notify background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#36CDE8"
+            "default": ""
           },
           "notify-inverted": {
             "title": "Notify background colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the Notify text colour. Should be a colour that provides good contrast against the Notify colour."
           },
           "notify-link": {
@@ -548,13 +548,13 @@
             "title": "Drawer background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#263944"
+            "default": ""
           },
           "drawer-inverted": {
             "title": "Drawer background colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the Drawer text colour. Should be a colour that provides good contrast against the Drawer colour."
           },
           "drawer-link": {
@@ -688,27 +688,27 @@
             "title": "Background colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#000000",
+            "default": "",
             "help": "Sets the generic Background colour. "
           },
           "background-inverted": {
             "title": "Background colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the Background text / icon colour. Should be a colour that provides good contrast against the Background colour."
           },
           "shadow": {
             "title": "Shadow background colour (loading / pop up background)",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#000000"
+            "default": ""
           },
           "shadow-inverted": {
             "title": "Shadow background colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "",
             "help": "Defines the Shadow text / icon colour. Should be a colour that provides good contrast against the Shadow colour."
           }
         }
