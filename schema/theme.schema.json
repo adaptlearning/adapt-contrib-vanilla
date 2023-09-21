@@ -12,14 +12,14 @@
           "type": "string",
           "title": "Font colour",
           "description": "Global body font colour",
-          "default": "#4D4D4D",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "font-color-inverted": {
           "type": "string",
           "title": "Font colour - inverted",
           "description": "Global body font colour inverted. Either a lightened/darkened alternative to Font colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "link": {
@@ -52,14 +52,14 @@
           "type": "string",
           "title": "Heading colour",
           "description": "Global title colour",
-          "default": "#36CDE8",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "heading-color-inverted": {
           "type": "string",
           "title": "Heading colour - inverted",
           "description": "Global title colour inverted. Either a lightened/darkened alternative to Title colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         }
       }
@@ -73,14 +73,14 @@
           "type": "string",
           "title": "Item colour",
           "description": "Defines the clickable areas or points of interest in components",
-          "default": "#36CDE8",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "item-color-inverted": {
           "type": "string",
           "title": "Item colour - inverted",
           "description": "Defines the item text/icon colour. Should be a colour that provides good contrast against the item colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "item-color-hover": {
@@ -113,14 +113,14 @@
           "type": "string",
           "title": "Visited colour",
           "description": "Defines the item colour when it has been visited",
-          "default": "#727272",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "visited-inverted": {
           "type": "string",
           "title": "Visited colour - inverted",
           "description": "Defines the item text/icon colour when visited. Should be a colour that provides good contrast against the item visited colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         }
       }
@@ -134,14 +134,14 @@
           "type": "string",
           "title": "Button colour",
           "description": "Defines component question buttons and navigational elements",
-          "default": "#4D4D4D",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "btn-color-inverted": {
           "type": "string",
           "title": "Button colour - inverted",
           "description": "Defines the button text/icon colour. Should be a colour that provides good contrast against the button colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "btn-color-hover": {
@@ -187,14 +187,14 @@
         "disabled": {
           "type": "string",
           "title": "Disabled colour",
-          "default": "#DDDDDD",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "disabled-inverted": {
           "type": "string",
           "title": "Disabled colour - inverted",
           "description": "Defines the button text/icon colour when it is disabled. Should be a colour that provides good contrast against the button disabled colour",
-          "default": "#000000",
+          "default": "",
           "_backboneForms": "ColourPicker"
         }
       }
@@ -208,28 +208,28 @@
           "type": "string",
           "title": "Validation success colour",
           "description": "Defines the question marking success colour",
-          "default": "#065f28",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "validation-success-inverted": {
           "type": "string",
           "title": "Validation success colour - inverted",
           "description": "Defines the question marking success text/icon colour. Should be a colour that provides good contrast against the question marking success colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "validation-error": {
           "type": "string",
           "title": "Validation error colour",
           "description": "Defines the question marking error colour",
-          "default": "#ff0000",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "validation-error-inverted": {
           "type": "string",
           "title": "Validation error colour - inverted",
           "description": "Defines the question marking error text/icon colour. Should be a colour that provices good contrast against the question marking error colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         }
       }
@@ -243,21 +243,21 @@
           "type": "string",
           "title": "Progress fill colour",
           "description": "Defines the global progress width fill colour",
-          "default": "#9096A0",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "progress-inverted": {
           "type": "string",
           "title": "Progress background colour",
           "description": "Defines the global progress fill background colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "progress-border": {
           "type": "string",
           "title": "Progress border colour",
           "description": "Defines the global border colour that appears around the progress fill bar",
-          "default": "#9096A0",
+          "default": "",
           "_backboneForms": "ColourPicker"
         }
       }
@@ -366,14 +366,14 @@
         "nav": {
           "type": "string",
           "title": "Navigation background colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "nav-inverted": {
           "type": "string",
           "title": "Navigation background colour - inverted",
           "description": "Defines the general navigation inverted colour. Should be a colour that provides good contrast against the navigation colour",
-          "default": "#9096A0",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "nav-icon": {
@@ -452,14 +452,14 @@
         "notify": {
           "type": "string",
           "title": "Notify background colour",
-          "default": "#36CDE8",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "notify-inverted": {
           "type": "string",
           "title": "Notify background colour - inverted",
           "description": "Defines the notify text colour. Should be a colour that provides good contrast against the notify colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "notify-link": {
@@ -536,14 +536,14 @@
         "drawer": {
           "type": "string",
           "title": "Drawer background colour",
-          "default": "#263944",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "drawer-inverted": {
           "type": "string",
           "title": "Drawer background colour - inverted",
           "description": "Defines the drawer text colour. Should be a colour that provides good contrast against the drawer colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "drawer-link": {
@@ -676,27 +676,27 @@
           "type": "string",
           "title": "Background colour",
           "description": "Sets the generic background colour",
-          "default": "#000000",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "background-inverted": {
           "type": "string",
           "title": "Background colour - inverted",
           "description": "Defines the background text/icon colour. Should be a colour that provides good contrast against the background colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "shadow": {
           "type": "string",
           "title": "Shadow background colour (loading/popup background)",
-          "default": "#000000",
+          "default": "",
           "_backboneForms": "ColourPicker"
         },
         "shadow-inverted": {
           "type": "string",
           "title": "Shadow background colour - inverted",
           "description": "Defines the shadow text/icon colour. Should be a colour that provides good contrast against the shadow colour",
-          "default": "#FFFFFF",
+          "default": "",
           "_backboneForms": "ColourPicker"
         }
       }
