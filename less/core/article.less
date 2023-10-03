@@ -1,5 +1,7 @@
 .article {
   position: relative;
+  height: var(--adapt-viewport-height);
+  overflow: auto;
 
   &.has-bg-image > .background {
     position: absolute;
@@ -14,6 +16,10 @@
 
   &__inner {
     position: relative;
+    padding: 25px 25px 0px;
+    height: calc(100% - max(74px, var(--adapt-navigation-height)));
+    top: max(74px, var(--adapt-navigation-height));
+    overflow: hidden;
   }
 
   &__header-inner {
