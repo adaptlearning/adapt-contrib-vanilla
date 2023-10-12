@@ -9,11 +9,21 @@
     color: @item-color-inverted;
     border-radius: @item-border-radius;
 
-    .no-touch &:hover {
+    .no-touch &:not([aria-expanded="true"]):hover {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
+  }
+
+  &.is-complete &__transcript-btn {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  &__transcript-btn[aria-expanded="true"] {
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
   }
 
   &__transcript-body-inline {
