@@ -29,12 +29,7 @@
   }
 
   &-type-overlay &__title {
-    padding-right: @icon-size + @icon-padding;
-
-    .dir-rtl & {
-      padding-right: inherit;
-      padding-left: @icon-size + @icon-padding;
-    }
+    padding-inline-end: @icon-size + @icon-padding;
   }
 
   &-type-overlay &__body a {
@@ -56,11 +51,11 @@
       color: @notify-btn-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
-     
+
      &-icon {
       background-color: @notify-icon;
       color: @notify-icon-inverted;
-  
+
       .no-touch &:hover {
         background-color: @notify-icon-hover;
         color: @notify-icon-inverted-hover;

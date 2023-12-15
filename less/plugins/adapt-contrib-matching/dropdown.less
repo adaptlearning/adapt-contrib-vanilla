@@ -1,9 +1,11 @@
 .dropdown {
   &__btn {
     position: relative;
-    padding: @item-padding (@icon-size + (@item-padding * 2)) @item-padding @item-padding;
+    padding-top: @item-padding;
+    padding-bottom: @item-padding;
+    padding-inline: @item-padding (@icon-size + (@item-padding * 2));
     line-height: @body-line-height;
-    text-align: left;
+    text-align: start;
     background-color: @item-color;
     color: @item-color-inverted;
 
@@ -12,12 +14,6 @@
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
-
-    .dir-rtl & {
-      padding-right: @item-padding;
-      padding-left: @icon-size + (@item-padding * 2);
-      text-align: right;
     }
   }
 
