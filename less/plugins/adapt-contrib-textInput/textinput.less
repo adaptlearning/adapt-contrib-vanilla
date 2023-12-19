@@ -23,13 +23,10 @@
   }
 
   &__textbox {
-    padding: @item-padding (@icon-size + (@item-padding * 2)) @item-padding @item-padding;
+    padding-top: @item-padding;
+    padding-bottom: @item-padding;
+    padding-inline: @item-padding (@icon-size + (@item-padding * 2));
     line-height: @body-line-height;
-
-    .dir-rtl & {
-      padding-left: @icon-size + (@item-padding * 2);
-      padding-right: @item-padding;
-    }
   }
 
   &__state {

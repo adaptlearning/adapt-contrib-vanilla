@@ -20,19 +20,10 @@
 
     // Converted media query to use min width to sync responsive trigger with js
     // https://github.com/adaptlearning/adapt_framework/issues/2865
-    padding-right: unit(@icon-size + @btn-margin + @btn-padding, rem);
-
-    .dir-rtl & {
-      padding-right: inherit;
-      padding-left: unit(@icon-size + @btn-margin + @btn-padding, rem);
-    }
+    padding-inline-end: unit(@icon-size + @btn-margin + @btn-padding, rem);
 
     @media (min-width: @device-width-medium) {
-      padding-right: inherit;
-
-      .dir-rtl & {
-        padding-left: inherit;
-      }
+      padding-inline-end: inherit;
     }
   }
 

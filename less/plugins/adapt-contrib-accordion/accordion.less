@@ -3,9 +3,10 @@
 
   &__btn {
     position: relative;
-    padding: @item-padding;
-    padding-right: @icon-size + (@item-padding * 2);
-    text-align: left;
+    padding-top: @item-padding;
+    padding-bottom: @item-padding;
+    padding-inline: @item-padding (@icon-size + (@item-padding * 2));
+    text-align: start;
     background-color: @item-color;
     color: @item-color-inverted;
     border-radius: @item-border-radius;
@@ -14,12 +15,6 @@
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
-
-    .dir-rtl & {
-      padding-right: @item-padding;
-      padding-left: @icon-size + (@item-padding * 2);
-      text-align: right;
     }
   }
 

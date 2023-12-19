@@ -9,13 +9,9 @@
   }
 
   &__inner {
-    padding: @item-padding;
-    padding-right: unit(@icon-size + @btn-margin + @btn-padding + @item-padding, rem);
-
-    .dir-rtl & {
-      padding-right: @item-padding;
-      padding-left: unit(@icon-size + @btn-margin + @btn-padding + @item-padding, rem);
-    }
+    padding-top: @item-padding;
+    padding-bottom: @item-padding;
+    padding-inline: @item-padding unit(@icon-size + @btn-margin + @btn-padding + @item-padding, rem);
   }
 
   &__title {

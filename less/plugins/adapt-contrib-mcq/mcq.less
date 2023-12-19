@@ -40,11 +40,8 @@
   }
 
   &__text {
-    padding: @item-padding @item-padding @item-padding (@icon-size + (@item-padding * 2));
-
-    .dir-rtl & {
-      padding-left: @item-padding;
-      padding-right: @icon-size + (@item-padding * 2);
-    }
+    padding-top: @item-padding;
+    padding-bottom: @item-padding;
+    padding-inline: (@icon-size + (@item-padding * 2)) @item-padding;
   }
 }
