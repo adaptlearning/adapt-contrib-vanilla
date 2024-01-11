@@ -54,13 +54,25 @@
 @item-color-disabled: @disabled;
 @item-color-inverted-disabled: @disabled-inverted;
 
-// Buttons
+// Content Buttons
 // --------------------------------------------------
 @btn-color: @greyDark;
 @btn-color-inverted: @white;
 
 @btn-color-hover: darken(@btn-color, 10%);
 @btn-color-inverted-hover: @btn-color-inverted;
+
+@btn-color-focus: @btn-color-hover;
+@btn-color-inverted-focus: @btn-color-inverted-hover;
+
+@btn-color-selected: darken(@btn-color, 20%);
+@btn-color-inverted-selected: @btn-color-inverted;
+
+@btn-color-locked: @disabled;
+@btn-color-inverted-locked: @disabled-inverted;
+
+@btn-color-disabled: @disabled;
+@btn-color-inverted-disabled: @disabled-inverted;
 
 // Button icon
 // --------------------------------------------------
