@@ -55,7 +55,7 @@
     background-color: @notify-btn;
     color: @notify-btn-inverted;
 
-    .no-touch &:not(.is-disabled):hover {
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
       background-color: @notify-btn-hover;
       color: @notify-btn-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
