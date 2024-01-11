@@ -34,7 +34,7 @@
 @heading-color: @blue;
 @heading-color-inverted: @white;
 
-// Items - components
+// Content Item (components)
 // --------------------------------------------------
 @item-color: @blue;
 @item-color-inverted: @white;
@@ -42,13 +42,17 @@
 @item-color-hover: darken(@item-color, 10%);
 @item-color-inverted-hover: @item-color-inverted;
 
+@item-color-focus: @item-color-hover;
+@item-color-inverted-focus: @item-color-inverted-hover;
+
 @item-color-selected: darken(@item-color, 20%);
 @item-color-inverted-selected: @item-color-inverted;
 
-// Visited - presentation components
-// --------------------------------------------------
 @visited: darken(@item-color, 15%);
 @visited-inverted: @item-color-inverted;
+
+@item-color-disabled: @disabled;
+@item-color-inverted-disabled: @disabled-inverted;
 
 // Buttons
 // --------------------------------------------------
