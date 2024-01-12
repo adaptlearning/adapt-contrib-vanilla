@@ -1,4 +1,20 @@
 .trickle {
+  &__btn {
+    .btn-color;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .btn-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .btn-color-focus;
+    }
+  }
+
+  &__btn.is-disabled {
+    .btn-color-disabled;
+  }
+
   &__btn-icon {
     display: inline-block;
     vertical-align: middle;
