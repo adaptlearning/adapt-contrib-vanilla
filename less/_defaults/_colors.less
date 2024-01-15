@@ -48,13 +48,13 @@
 @item-color-selected: darken(@item-color, 20%);
 @item-color-inverted-selected: @item-color-inverted;
 
+// aka @item-color-visited but avoiding breaking chnage
+// @visited is only used by presentation components
 @visited: darken(@item-color, 15%);
 @visited-inverted: @item-color-inverted;
 
-// ? Should this be renamed visited rather than disabled?
 @item-color-disabled: @disabled;
 @item-color-inverted-disabled: @disabled-inverted;
-// ? end
 
 // Content Buttons
 // --------------------------------------------------
@@ -76,30 +76,10 @@
 @btn-color-disabled: @disabled;
 @btn-color-inverted-disabled: @disabled-inverted;
 
-// UI button
+// UI (global default for nav, notify, drawer)
 // --------------------------------------------------
-@btn-ui-color: red;
-@btn-ui-color-inverted: white;
-
-@btn-ui-color-hover: blue;
-@btn-ui-color-inverted-hover: white;
-
-@btn-ui-color-focus: green;
-@btn-ui-color-inverted-focus: white;
-
-@btn-ui-color-selected: yellow;
-@btn-ui-color-inverted-selected: black;
-
-@btn-ui-color-disabled: orange;
-@btn-ui-color-inverted-disabled: white;
-
-// Button icon
-// --------------------------------------------------
-@btn-icon-color: @nav-icon;
-@btn-icon-color-inverted: @nav-icon-inverted;
-
-@btn-icon-color-hover: @nav-icon-hover;
-@btn-icon-color-inverted-hover: @nav-icon-inverted-hover;
+@ui-color: @white;
+@ui-color-inverted: @grey;
 
 // Disabled - question components
 // --------------------------------------------------
@@ -143,8 +123,8 @@
 
 // Navigation
 // --------------------------------------------------
-@nav: @white;
-@nav-inverted: @grey;
+@nav: @ui-color;
+@nav-inverted: @ui-color-inverted;
 
 @nav-icon: @nav-inverted;
 @nav-icon-inverted: @nav;
@@ -162,8 +142,8 @@
 
 // Notify
 // --------------------------------------------------
-@notify: @blue;
-@notify-inverted: @white;
+@notify: @ui-color;
+@notify-inverted: @ui-color-inverted;
 
 @notify-link: @notify-inverted;
 
@@ -183,8 +163,8 @@
 
 // Drawer
 // --------------------------------------------------
-@drawer: @blueDark;
-@drawer-inverted: @white;
+@drawer: @ui-color;
+@drawer-inverted: @ui-color-inverted;
 
 @drawer-link: @drawer-inverted;
 
