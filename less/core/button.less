@@ -3,19 +3,28 @@
     margin-top: @btn-margin;
   }
 
+  // ? Should this stay in this file?
+  // ? Specific font styling for text only buttons
   &-text {
     .button-text;
   }
+  // ? end
 
-  // ? Do we move these elsewhere?
+  // ? Should we move these styles elsewhere?
+  // ? A: Yes, in time these should be defined elsewhere as they are generic for
+  // ?  either text or icon buttons. This file focuses on question buttons
   &-text {
+    border-radius: @btn-border-radius;
+  }
+
+  &-icon {
     border-radius: @btn-border-radius;
   }
 
   &-icon.is-locked {
     cursor: not-allowed;
   }
-  // ?
+  // ? end
 
   &__action,
   &__feedback {
