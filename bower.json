@@ -1,6 +1,6 @@
 {
   "name": "adapt-contrib-vanilla-visibly",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "framework": ">=5.31.3",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
   "bugs": "https://github.com/adaptlearning/adapt-contrib-vanilla/issues",
