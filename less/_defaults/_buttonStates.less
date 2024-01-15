@@ -1,6 +1,32 @@
-// Button states
+// States
+// ? Should we rename this file `_states` as it covers more than just button states?
 
 // Content item
+.item-color() {
+  background-color: @item-color;
+  color: @item-color-inverted;
+}
+
+.item-color-hover() {
+  background-color: @item-color-hover;
+  color: @item-color-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.item-color-focus() {
+  background-color: @item-color-focus;
+  color: @item-color-inverted-focus;
+}
+
+.item-color-selected() {
+  background-color: @item-color-selected;
+  color: @item-color-inverted-selected;
+}
+
+.item-color-disabled() {
+  background-color: @item-color-disabled;
+  color: @item-color-inverted-disabled;
+}
 
 // Content buttons
 .btn-color() {
