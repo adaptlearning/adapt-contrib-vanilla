@@ -52,12 +52,17 @@
       color: @menu-item-btn-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
-  }
 
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      background-color: @menu-item-btn-color-focus;
+      color: @menu-item-btn-color-inverted-focus;
+    }
+  }
+  //? do we need 'is-disabled' selector?
   &__button.is-locked,
   &__button.is-disabled {
-    background-color: @disabled;
-    color: @disabled-inverted;
+    background-color: @menu-item-btn-color-locked;
+    color: @menu-item-btn-color-inverted-locked;
   }
 
   &__status {
