@@ -7,16 +7,6 @@
   }
 
   &__btn {
-    margin: @btn-margin / 2;
-    padding: @btn-padding / 2;
-    background-color: @drawer-icon;
-    color: @drawer-icon-inverted;
-    border-radius: 50%;
-
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @drawer-icon-hover;
-      color: @drawer-icon-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
+    .ui-btn--controls;
   }
 }
