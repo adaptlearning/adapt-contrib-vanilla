@@ -25,6 +25,38 @@
   color: @item-color-inverted-disabled;
 }
 
+// Content ui button
+.item-ui-color() {
+  background-color: @item-ui-color;
+  color: @item-ui-color-inverted;
+}
+
+.item-ui-color-hover() {
+  background-color: @item-ui-color-hover;
+  color: @item-ui-color-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.item-ui-color-focus() {
+  background-color: @item-ui-color-focus;
+  color: @item-ui-color-inverted-focus;
+}
+
+.item-ui-color-visited() {
+  background-color: @item-ui-color-visited;
+  color: @item-ui-color-inverted-visited;
+}
+
+.item-ui-color-selected() {
+  background-color: @item-ui-color-selected;
+  color: @item-ui-color-inverted-selected;
+}
+
+.item-ui-color-disabled() {
+  background-color: @item-ui-color-disabled;
+  color: @item-ui-color-inverted-disabled;
+}
+
 // Content buttons
 .btn-color() {
   background-color: @btn-color;

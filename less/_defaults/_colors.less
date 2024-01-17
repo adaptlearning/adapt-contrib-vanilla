@@ -56,6 +56,33 @@
 @item-color-disabled: @disabled;
 @item-color-inverted-disabled: @disabled-inverted;
 
+// Content UI
+// narrative controls/strapline, hotgraphic pin, transcript, trickle, menu item btn
+// logic: if outputting course content into word doc, these buttons wouldn’t need including 
+// for cascading in the _colors.less only
+// TODO: confirm which states are needed
+// --------------------------------------------------
+@item-ui-color: red;
+@item-ui-color-inverted: @white;
+
+@item-ui-color-hover: darken(@item-ui-color, 10%);
+@item-ui-color-inverted-hover: @item-ui-color-inverted;
+
+@item-ui-color-focus: @item-ui-color-hover;
+@item-ui-color-inverted-focus: @item-ui-color-inverted-hover;
+
+@item-ui-color-selected: darken(@item-ui-color, 20%);
+@item-ui-color-inverted-selected: @item-ui-color-inverted;
+
+@item-ui-color-visited: darken(@item-ui-color, 15%);
+@item-ui-color-inverted-visited: @item-ui-color-inverted;
+
+@item-ui-color-locked: @disabled;
+@item-ui-color-inverted-locked: @disabled-inverted;
+
+@item-ui-color-disabled: @disabled;
+@item-ui-color-inverted-disabled: @disabled-inverted;
+
 // Content Buttons
 // --------------------------------------------------
 @btn-color: @greyDark;
@@ -115,17 +142,17 @@
 @menu-item-progress-inverted: @progress-inverted;
 @menu-item-progress-border: @progress-border;
 
-@menu-item-btn-color: @btn-color;
-@menu-item-btn-color-inverted: @btn-color-inverted;
+@menu-item-btn-color: @item-ui-color;
+@menu-item-btn-color-inverted: @item-ui-color-inverted;
 
-@menu-item-btn-color-hover: @btn-color-hover;
-@menu-item-btn-color-inverted-hover: @btn-color-inverted-hover;
+@menu-item-btn-color-hover: @item-ui-color-hover;
+@menu-item-btn-color-inverted-hover: @item-ui-color-inverted-hover;
 
-@menu-item-btn-color-focus: @btn-color-hover;
-@menu-item-btn-color-inverted-focus: @btn-color-inverted-hover;
+@menu-item-btn-color-focus: @item-ui-color-hover;
+@menu-item-btn-color-inverted-focus: @item-ui-color-inverted-hover;
 
-@menu-item-btn-color-locked: @disabled;
-@menu-item-btn-color-inverted-locked: @disabled-inverted;
+@menu-item-btn-color-locked: @item-ui-color-locked;
+@menu-item-btn-color-inverted-locked: @item-ui-color-inverted-locked;
 
 // Navigation
 // --------------------------------------------------
