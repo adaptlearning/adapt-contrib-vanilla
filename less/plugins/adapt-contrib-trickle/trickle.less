@@ -1,18 +1,19 @@
 .trickle {
   &__btn {
-    .btn-color;
+    .item-ui-color;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .btn-color-hover;
+      .item-ui-color-hover;
     }
 
     html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .btn-color-focus;
+      .item-ui-color-focus;
     }
   }
-
+  // ? should this be .item-ui-color-locked instead?
+  // ? I think we only show a disabled btn when content is steplocked 
   &__btn.is-disabled {
-    .btn-color-disabled;
+    .item-ui-color-disabled;
   }
 
   &__btn-icon {

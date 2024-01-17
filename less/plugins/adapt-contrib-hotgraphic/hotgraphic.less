@@ -8,20 +8,16 @@
   }
 
   &__pin:not(.has-pin-image) {
-    background-color: @item-color;
-    color: @item-color-inverted;
+    .item-ui-color;
     border-radius: 50%;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .item-ui-color-hover;
     }
   }
 
   &__pin:not(.has-pin-image).is-visited {
-    background-color: @visited;
-    color: @visited-inverted;
+    .item-ui-color-visited;
   }
 
   // Numbered pins
