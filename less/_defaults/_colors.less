@@ -56,13 +56,12 @@
 @item-color-disabled: @disabled;
 @item-color-inverted-disabled: @disabled-inverted;
 
-// Content UI
+// Content UI (action not content)
 // boxmenu item btn, hotgraphic pin, media transcript, narrative controls/strapline, trickle
-// logic: if outputting course content into word doc, these buttons wouldn’t need including (action not content)
-// TODO: confirm which states are needed
+// logic: if outputting course content into word doc, these buttons wouldn’t need including
 // --------------------------------------------------
-@item-ui-color: red;
-@item-ui-color-inverted: @white;
+@item-ui-color: @item-color;
+@item-ui-color-inverted: @item-color-inverted;
 
 @item-ui-color-hover: darken(@item-ui-color, 10%);
 @item-ui-color-inverted-hover: @item-ui-color-inverted;
