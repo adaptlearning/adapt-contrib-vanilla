@@ -14,6 +14,10 @@
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
       .item-ui-color-hover;
     }
+
+    html:not(.a11y-disable-focusoutline) &:not(.is-disabled):not(.is-locked):focus-visible {
+      .item-ui-color-focus;
+    }
   }
 
   &__pin:not(.has-pin-image).is-visited {
