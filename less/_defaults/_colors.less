@@ -181,17 +181,17 @@
 
 @notify-link-hover: @notify-link;
 
-@notify-btn: @btn-color-inverted;
-@notify-btn-inverted: @btn-color;
-
-@notify-btn-hover: darken(@notify-btn, 10%);
-@notify-btn-inverted-hover: @notify-btn-inverted;
-
 @notify-icon: darken(@notify, 10%);
 @notify-icon-inverted: @notify-inverted;
 
-@notify-icon-hover: darken(@notify, 15%);
+@notify-icon-hover: darken(@notify-icon, 10%);
 @notify-icon-inverted-hover: @notify-icon-inverted;
+
+@notify-btn: @btn-color;
+@notify-btn-inverted: @btn-color-inverted;
+
+@notify-btn-hover: darken(@notify-btn, 10%);
+@notify-btn-inverted-hover: @notify-btn-inverted;
 
 // Drawer
 // --------------------------------------------------
@@ -202,7 +202,7 @@
 
 @drawer-link-hover: @drawer-link;
 
-@drawer-icon: @drawer;
+@drawer-icon: darken(@drawer, 10%);
 @drawer-icon-inverted: @drawer-inverted;
 
 @drawer-icon-hover: darken(@drawer-icon, 10%);
