@@ -2,8 +2,20 @@
 // moved existing shared styles into single mixin
 // replaces .notify-btn-icon mixin
 // ? could shorthand 'controls' to 'ctrl'?
-.ui-btn--controls {
+.ui-btn--controls() {
   margin: @ui-btn-controls-margin;
   padding: @ui-btn-controls-padding;
   border-radius: @ui-btn-controls-border-radius;
+
+}
+
+.notify-ui-btn--controls() {
+  background-color: @notify-icon;
+  color: @notify-icon-inverted;
+}
+
+.notify-ui-btn--controls-hover() {
+  background-color: @notify-icon-hover;
+  color: @notify-icon-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
 }

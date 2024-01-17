@@ -34,6 +34,11 @@
     top: 0;
     right: 0;
     .ui-btn--controls;
+    .notify-ui-btn--controls;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .notify-ui-btn--controls-hover;
+    }
 
     .dir-rtl & {
       right: auto;

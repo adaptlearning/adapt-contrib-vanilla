@@ -9,6 +9,11 @@
   &__controls,
   &__close {
     .ui-btn--controls;
+    .notify-ui-btn--controls;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .notify-ui-btn--controls-hover;
+    }
   }
 
   &__item-title {
