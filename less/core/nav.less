@@ -11,16 +11,13 @@
   }
 
   &__btn {
-    //TODO: separate color/non-color styles into mixins
     margin: @nav-btn-margin (@nav-btn-margin / 2);
-    background-color: @nav-icon;
-    color: @nav-icon-inverted;
+    padding: @nav-btn-padding-ver @nav-btn-padding-hoz;
+    .nav-ui-btn-color--controls;
     border-radius: @nav-btn-border-radius;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @nav-icon-hover;
-      color: @nav-icon-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .nav-ui-btn-color--controls-hover;
     }
   }
 

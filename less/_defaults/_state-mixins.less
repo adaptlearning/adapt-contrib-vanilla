@@ -89,3 +89,36 @@
   color: @btn-color-inverted-disabled;
 }
 
+// UI (global default for nav, notify, drawer)
+.nav-ui-btn-color--controls() {
+  background-color: @nav-icon;
+  color: @nav-icon-inverted;
+}
+
+.nav-ui-btn-color--controls-hover() {
+  background-color: @nav-icon-hover;
+  color: @nav-icon-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.notify-ui-btn-color--controls() {
+  background-color: @notify-icon;
+  color: @notify-icon-inverted;
+}
+
+.notify-ui-btn-color--controls-hover() {
+  background-color: @notify-icon-hover;
+  color: @notify-icon-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.drawer-ui-btn-color--controls() {
+  background-color: @drawer-icon;
+  color: @drawer-icon-inverted;
+}
+
+.drawer-ui-btn-color--controls-hover() {
+  background-color: @drawer-icon-hover;
+  color: @drawer-icon-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
