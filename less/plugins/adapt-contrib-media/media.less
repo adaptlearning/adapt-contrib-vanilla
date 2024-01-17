@@ -11,6 +11,10 @@
     .no-touch &:not([aria-expanded="true"]):hover {
       .item-ui-color-hover;
     }
+
+    html:not(.a11y-disable-focusoutline) &:not([aria-expanded="true"]):focus-visible {
+      .item-ui-color-focus;
+    }
   }
 
   &.is-complete &__transcript-btn {
