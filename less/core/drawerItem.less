@@ -17,6 +17,10 @@
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
       .drawer-item-color-hover;
     }
+
+    html:not(.a11y-disable-focusoutline) &:not(.is-disabled):not(.is-locked):focus-visible {
+      .drawer-item-color-focus;
+    }
   }
 
   //? is disabled state needed?
@@ -25,6 +29,7 @@
     .drawer-item-color-locked
   }
 
+  &__item-btn[aria-current="true"],
   &__item-btn.is-selected {
     .drawer-item-color-selected;
   }

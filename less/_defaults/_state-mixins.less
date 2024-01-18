@@ -94,8 +94,9 @@
   color: @btn-color-inverted-disabled;
 }
 
-// UI (global default for nav, notify, drawer)
+// UI (nav, notify, drawer)
 // ? review use of single dash vs double dash for mixin names
+// ? expand nav and notify mixins to include border?
 .nav-ui-btn-color--controls() {
   background-color: @nav-icon;
   color: @nav-icon-inverted;
@@ -140,6 +141,12 @@
   color: @drawer-item-inverted-hover;
   border-color: @drawer-item-hover;
   .transition(background-color @duration ease-in, color @duration ease-in, border @duration ease-in;);
+}
+
+.drawer-item-color-focus() {
+  background-color: @drawer-item-focus;
+  color: @drawer-item-inverted-focus;
+  border-color: @drawer-item-focus;
 }
 
 .drawer-item-color-locked() {
