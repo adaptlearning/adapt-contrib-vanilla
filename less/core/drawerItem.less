@@ -1,27 +1,23 @@
 .drawer {
-  //TODO: separate color/non-color styles into mixins
   &__item-btn {
     display: block;
-    padding: @item-padding;
-    background-color: @drawer-item;
-    border-bottom: 1px solid @drawer-item-hover;
-    color: @drawer-item-inverted;
+    padding: @item-padding; // ? set padding and margin vars as per Nav and Notify?
+    border-bottom: 1px solid; // TODO: set as var
+    .drawer-item-color();
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @drawer-item-hover;
-      color: @drawer-item-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .drawer-item-color-hover;
     }
   }
 
+  //? is disabled state needed?
+  //? disabled drawer items include locked or selected states only
   &__item-btn.is-disabled {
-    background-color: @disabled;
-    color: @disabled-inverted;
+    .drawer-item-color-locked
   }
 
   &__item-btn.is-selected {
-    background-color: @drawer-item-selected;
-    color: @drawer-item-inverted-selected;
+    .drawer-item-color-selected;
   }
 
   &__item-title {
