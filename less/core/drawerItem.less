@@ -24,11 +24,14 @@
   }
 
   &__item-title {
-    margin-bottom: @drawer-title-margin;
     .drawer-item-title;
     text-align: start;
   }
-
+  
+  &__item-title + &__item-body {
+    margin-top: @drawer-title-margin;
+  }
+  
   &__item-body {
     margin-bottom: @drawer-body-margin;
     .drawer-item-body;
