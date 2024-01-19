@@ -48,23 +48,18 @@
   }
 
   &-type-overlay &__btn {
-    background-color: @notify-btn;
-    color: @notify-btn-inverted;
+    .notify-btn-color;
 
     .no-touch &:hover {
-      background-color: @notify-btn-hover;
-      color: @notify-btn-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .notify-btn-color-hover;
     }
+  }
 
-     &-icon {
-      background-color: @notify-icon;
-      color: @notify-icon-inverted;
+  &-type-overlay &__btn-icon {
+    .notify-ui-btn-color--controls;
 
-      .no-touch &:hover {
-        background-color: @notify-icon-hover;
-        color: @notify-icon-inverted-hover;
-      }
+    .no-touch &:hover {
+      .notify-ui-btn-color--controls-hover;
     }
   }
 }

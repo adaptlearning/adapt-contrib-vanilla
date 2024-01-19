@@ -20,6 +20,11 @@
   color: @item-color-inverted-selected;
 }
 
+.item-color-visited() {
+  background-color: @visited;
+  color: @visited-inverted;
+}
+
 .item-color-disabled() {
   background-color: @item-color-disabled;
   color: @item-color-inverted-disabled;
@@ -97,6 +102,7 @@
 // UI (nav, notify, drawer)
 // ? review use of single dash vs double dash for mixin names
 // ? expand nav and notify mixins to include border?
+// Nav UI
 .nav-ui-btn-color--controls() {
   background-color: @nav-icon;
   color: @nav-icon-inverted;
@@ -108,6 +114,7 @@
   .transition(background-color @duration ease-in, color @duration ease-in;);
 }
 
+// Notify UI
 .notify-ui-btn-color--controls() {
   background-color: @notify-icon;
   color: @notify-icon-inverted;
@@ -119,6 +126,39 @@
   .transition(background-color @duration ease-in, color @duration ease-in;);
 }
 
+// Notify button
+.notify-btn-color() {
+  background-color: @notify-btn;
+  color: @notify-btn-inverted;
+}
+
+.notify-btn-color-hover() {
+  background-color: @notify-btn-hover;
+  color: @notify-btn-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.notify-btn-color-focus() {
+  background-color: @notify-btn-focus;
+  color: @notify-btn-inverted-focus;
+}
+
+.notify-btn-color-selected() {
+  background-color: @notify-btn-selected;
+  color: @notify-btn-inverted-selected;
+}
+
+.notify-btn-color-locked() {
+  background-color: @notify-btn-locked;
+  color: @notify-btn-inverted-locked;
+}
+
+.notify-btn-color-disabled() {
+  background-color: @notify-btn-disabled;
+  color: @notify-btn-inverted-disabled;
+}
+
+// Drawer UI
 .drawer-ui-btn-color--controls() {
   background-color: @drawer-icon;
   color: @drawer-icon-inverted;
@@ -130,6 +170,7 @@
   .transition(background-color @duration ease-in, color @duration ease-in;);
 }
 
+// Drawer item
 .drawer-item-color() {
   background-color: @drawer-item;
   color: @drawer-item-inverted;

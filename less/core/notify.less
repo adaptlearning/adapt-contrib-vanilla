@@ -51,17 +51,26 @@
     margin-top: @btn-margin;
   }
 
+  // Button
   &__btn {
-    background-color: @notify-btn;
-    color: @notify-btn-inverted;
+    margin: @notify-btn-margin;
+    padding: @notify-btn-padding-ver @notify-btn-padding-hoz;
+    .notify-btn-color;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @notify-btn-hover;
-      color: @notify-btn-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .notify-btn-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .notify-btn-color-focus;
     }
   }
 
+  &__btn.is-disabled {
+    .notify-btn-color-disabled;
+  }
+
+  // UI
   &__btn-icon {
     .ui-btn--controls;
     .notify-ui-btn-color--controls;
