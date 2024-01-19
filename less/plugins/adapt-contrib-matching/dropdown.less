@@ -6,25 +6,23 @@
     padding-inline: @item-padding (@icon-size + (@item-padding * 2));
     line-height: @body-line-height;
     text-align: start;
-    background-color: @item-color;
-    color: @item-color-inverted;
+    .item-color;
 
-    .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover,
+    .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
+      .item-color-hover;
+    }
+
     html:not(.a11y-disable-focusoutline) &:focus-visible {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .item-color-focus;
     }
   }
 
   &__btn.is-disabled {
-    background-color: @disabled;
-    color: @disabled-inverted;
+    .item-color-disabled;
   }
 
   &__btn[aria-expanded="true"] {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    .item-color-selected;
   }
 
   &__icon {
@@ -42,14 +40,12 @@
 
 .dropdown-item {
   padding: @item-padding;
-  background-color: @item-color;
+  .item-color;
   border-bottom: 1px solid @item-color-hover;
-  color: @item-color-inverted;
 
+  .no-touch &:hover,
   .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
-    background-color: @item-color-hover;
-    color: @item-color-inverted-hover;
-    .transition(background-color @duration ease-in, color @duration ease-in;);
+    .item-color-hover;
   }
 
   &:focus-visible,
@@ -60,7 +56,6 @@
     // background-color: -webkit-focus-ring-color;
     // color: white;
 
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    .item-color;
   }
 }

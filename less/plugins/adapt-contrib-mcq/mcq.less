@@ -1,15 +1,15 @@
 .mcq-item {
   &__label {
     margin-bottom: @item-margin / 2;
-    background-color: @item-color;
-    color: @item-color-inverted;
+    .item-color;
     border-radius: @item-border-radius;
 
-    .no-touch &:not(.is-disabled):not(.is-selected):hover,
+    .no-touch &:not(.is-disabled):not(.is-selected):hover {
+      .item-color-hover;
+    }
+
     html:not(.a11y-disable-focusoutline) .mcq-item__input:focus-visible + & {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .item-color-focus;
     }
 
     .no-touch &:not(.is-disabled):not(.is-selected):hover .mcq-item__icon {
@@ -18,13 +18,11 @@
   }
 
   &__label.is-disabled {
-    background-color: @disabled;
-    color: @disabled-inverted;
+    .item-color-disabled;
   }
 
   &__label.is-selected {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    .item-color-selected;
   }
 
   &__state {
