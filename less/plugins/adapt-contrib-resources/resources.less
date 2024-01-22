@@ -2,15 +2,12 @@
   &__filter-btn {
     padding: @item-padding (@item-padding / 2);
     .resources-filter-btn;
-    background-color: @drawer-item;
-    border-bottom: 1px solid @drawer-item-hover;
-    border-right: 1px solid @drawer-item-hover;
-    color: @drawer-item-inverted;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    .drawer-item-color;
 
     .no-touch &:not(.is-disabled):not(.is-selected):hover {
-      background-color: @drawer-item-hover;
-      color: @drawer-item-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .drawer-item-color-hover;
     }
 
     &:last-child {
@@ -19,8 +16,7 @@
   }
 
   &__filter-btn.is-selected {
-    background-color: @drawer-item-selected;
-    color: @drawer-item-inverted-selected;
+    .drawer-item-color-selected;
     box-shadow: inset 0 -0.625rem 0 -0.4375rem @drawer-item-selected-underline;
   }
 
