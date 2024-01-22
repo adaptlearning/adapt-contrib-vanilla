@@ -43,26 +43,20 @@
     align-items: center;
   }
 
-  // ? Should we create a mixin here for consistency?
   &__button {
-    background-color: @menu-item-btn-color;
-    color: @menu-item-btn-color-inverted;
+    .menu-item-btn-color;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @menu-item-btn-color-hover;
-      color: @menu-item-btn-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .menu-item-btn-color-hover;
     }
 
     html:not(.a11y-disable-focusoutline) &:focus-visible {
-      background-color: @menu-item-btn-color-focus;
-      color: @menu-item-btn-color-inverted-focus;
+      .menu-item-btn-color-focus;
     }
   }
 
   &__button.is-locked {
-    background-color: @menu-item-btn-color-locked;
-    color: @menu-item-btn-color-inverted-locked;
+    .menu-item-btn-color-locked;
   }
 
   &__status {

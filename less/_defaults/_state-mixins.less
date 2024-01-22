@@ -99,28 +99,49 @@
   color: @btn-color-inverted-disabled;
 }
 
+// Menu item
+.menu-item-btn-color() {
+  background-color: @menu-item-btn-color;
+  color: @menu-item-btn-color-inverted;
+}
+
+.menu-item-btn-color-hover() {
+  background-color: @menu-item-btn-color-hover;
+  color: @menu-item-btn-color-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.menu-item-btn-color-focus() {
+  background-color: @menu-item-btn-color-focus;
+  color: @menu-item-btn-color-inverted-focus;
+}
+
+.menu-item-btn-color-locked() {
+  background-color: @menu-item-btn-color-locked;
+  color: @menu-item-btn-color-inverted-locked;
+}
+
 // UI (nav, notify, drawer)
-// TODO: review use of single dash vs double dash for mixin names
-// ? expand nav and notify mixins to include border?
+// TODO expand nav and notify mixins to include border?
 // Nav UI
-.nav-ui-btn-color--controls() {
+.nav-ui-btn-color-ctrl() {
   background-color: @nav-icon;
   color: @nav-icon-inverted;
 }
 
-.nav-ui-btn-color--controls-hover() {
+.nav-ui-btn-color-ctrl-hover() {
   background-color: @nav-icon-hover;
   color: @nav-icon-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
 }
 
 // Notify UI
-.notify-ui-btn-color--controls() {
+.notify-ui-btn-color-ctrl() {
   background-color: @notify-icon;
   color: @notify-icon-inverted;
 }
 
-.notify-ui-btn-color--controls-hover() {
+.notify-ui-btn-color-ctrl-hover() {
   background-color: @notify-icon-hover;
   color: @notify-icon-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
@@ -159,12 +180,12 @@
 }
 
 // Drawer UI
-.drawer-ui-btn-color--controls() {
+.drawer-ui-btn-color-ctrl() {
   background-color: @drawer-icon;
   color: @drawer-icon-inverted;
 }
 
-.drawer-ui-btn-color--controls-hover() {
+.drawer-ui-btn-color-ctrl-hover() {
   background-color: @drawer-icon-hover;
   color: @drawer-icon-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
