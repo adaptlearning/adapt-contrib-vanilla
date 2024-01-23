@@ -10,13 +10,11 @@
       .item-ui-color-focus;
     }
   }
-  // ? should this be .item-ui-color-locked instead?
-  // ? I think we only show a disabled btn when content is steplocked
-  // * The button itself is in a disabled state rather than locked, not sure if that would have any impact on how we present the visual state
+
   &__btn.is-disabled {
     .item-ui-color-disabled;
   }
-
+  // TODO: add '&__btn.is-locked' state following Trickle PR https://github.com/adaptlearning/adapt-contrib-trickle/pull/209
   &__btn-icon {
     display: inline-block;
     vertical-align: middle;

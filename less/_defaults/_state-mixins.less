@@ -122,7 +122,7 @@
 }
 
 // UI (nav, notify, drawer)
-// TODO expand nav and notify mixins to include border?
+// TODO expand nav and notify mixins to include border
 // Nav UI
 .nav-ui-btn-color-ctrl() {
   background-color: @nav-icon;
@@ -133,6 +133,11 @@
   background-color: @nav-icon-hover;
   color: @nav-icon-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.nav-ui-btn-color-ctrl-focus() {
+  background-color: @nav-icon-focus;
+  color: @nav-icon-inverted-focus;
 }
 
 // Notify UI
