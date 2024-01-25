@@ -24,6 +24,10 @@
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
       .notify-ui-btn-color-ctrl-hover;
     }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .notify-ui-btn-color-ctrl-focus;
+    }
   }
 
   // overlay
@@ -53,6 +57,10 @@
     .no-touch &:hover {
       .notify-btn-color-hover;
     }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .notify-btn-color-focus;
+    }
   }
 
   &-type-overlay &__btn-icon {
@@ -60,6 +68,10 @@
 
     .no-touch &:hover {
       .notify-ui-btn-color-ctrl-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .notify-ui-btn-color-ctrl-focus;
     }
   }
 }
