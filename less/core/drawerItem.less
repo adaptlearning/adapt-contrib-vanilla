@@ -18,7 +18,7 @@
       .drawer-item-color-hover;
     }
 
-    html:not(.a11y-disable-focusoutline) &:not(.is-disabled):not(.is-locked):focus-visible {
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
       .drawer-item-color-focus;
     }
   }
@@ -37,11 +37,11 @@
     .drawer-item-title;
     text-align: start;
   }
-  
+
   &__item-title + &__item-body {
     margin-top: @drawer-title-margin;
   }
-  
+
   &__item-body {
     margin-bottom: @drawer-body-margin;
     .drawer-item-body;
