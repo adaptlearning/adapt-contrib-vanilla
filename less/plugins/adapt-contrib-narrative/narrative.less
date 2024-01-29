@@ -9,14 +9,19 @@
   }
 
   &__controls {
-    background-color: @item-color;
-    color: @item-color-inverted;
+    .item-ui-color;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .item-ui-color-hover;
     }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .item-ui-color-focus;
+    }
+  }
+
+  &__controls.is-disabled {
+    .item-ui-color-disabled;
   }
 
   &__progress {
@@ -34,43 +39,26 @@
 
   &__strapline-btn {
     text-align: start;
-    background-color: @item-color;
-    color: @item-color-inverted;
+    .item-ui-color;
   }
 
   // set icon background color to transparent to 'inherit' strapline styling
+  // prevents icon background obscuring the btn focus outline
   &__strapline-icon {
     background-color: transparent;
-    color: @item-color-inverted;
-  }
-
-  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover,
-  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover &__strapline-icon {
-    color: @item-color-inverted-hover;
-    .transition(background-color @duration ease-in, color @duration ease-in;);
+    color: inherit;
   }
 
   .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover {
-    background-color: @item-color-hover;
+    .item-ui-color-hover;
   }
 
-  // set icon hover background color to transparent to 'inherit' strapline styling
-  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover &__strapline-icon {
-    background-color: transparent;
-  }
-
-  &__strapline-btn.is-visited,
-  &__strapline-btn.is-visited &__strapline-icon {
-    color: @visited-inverted;
+  html:not(.a11y-disable-focusoutline) &__strapline-btn:focus-visible {
+    .item-ui-color-focus;
   }
 
   &__strapline-btn.is-visited {
-    background-color: @visited;
-  }
-
-  // set icon visited background color to transparent to 'inherit' strapline styling
-  &__strapline-btn.is-visited &__strapline-icon {
-    background-color: transparent;
+    .item-ui-color-visited;
   }
 
   &.has-img-zoom &__slider-image-container {
@@ -81,6 +69,7 @@
   &__inner.is-stacked &__content-item {
     margin-bottom: (@item-margin * 4);
   }
+
   &__inner.is-stacked &__content-image {
     margin-bottom: @item-title-margin;
   }

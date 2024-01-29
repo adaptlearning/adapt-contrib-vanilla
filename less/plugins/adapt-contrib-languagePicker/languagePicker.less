@@ -26,6 +26,19 @@
 
   &__language-btn {
     margin: @item-margin / 2;
+    .btn-color;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .btn-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .btn-color-focus;
+    }
+  }
+
+  &__language-btn.is-disabled {
+    .btn-color-disabled;
   }
 }
 

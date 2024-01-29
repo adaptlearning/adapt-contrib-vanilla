@@ -7,16 +7,15 @@
   }
 
   &__btn {
-    margin: @btn-margin / 2;
-    padding: @btn-padding / 2;
-    background-color: @drawer-icon;
-    color: @drawer-icon-inverted;
-    border-radius: 50%;
+    .ui-btn-ctrl;
+    .drawer-ui-btn-color-ctrl;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @drawer-icon-hover;
-      color: @drawer-icon-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .drawer-ui-btn-color-ctrl-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .drawer-ui-btn-color-ctrl-focus;
     }
   }
 }

@@ -8,7 +8,16 @@
 
   &__controls,
   &__close {
-    .notify-btn-icon;
+    .ui-btn-ctrl;
+    .notify-ui-btn-color-ctrl;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .notify-ui-btn-color-ctrl-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .notify-ui-btn-color-ctrl-focus;
+    }
   }
 
   &__item-title {

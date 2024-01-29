@@ -7,25 +7,24 @@
     padding-bottom: @item-padding;
     padding-inline: @item-padding (@icon-size + (@item-padding * 2));
     text-align: start;
-    background-color: @item-color;
-    color: @item-color-inverted;
+    .item-color;
     border-radius: @item-border-radius;
 
     .no-touch &:not(.is-selected):hover {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .item-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .item-color-focus;
     }
   }
 
   &__btn.is-visited {
-    background-color: @visited;
-    color: @visited-inverted;
+    .item-color-visited;
   }
 
   &__btn.is-selected {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    .item-color-selected;
   }
 
   &__icon {

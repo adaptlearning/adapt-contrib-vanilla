@@ -51,19 +51,37 @@
     margin-top: @btn-margin;
   }
 
+  // Button
   &__btn {
-    background-color: @notify-btn;
-    color: @notify-btn-inverted;
+    margin: @notify-btn-margin;
+    padding: @notify-btn-padding-ver @notify-btn-padding-hoz;
+    .notify-btn-color;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @notify-btn-hover;
-      color: @notify-btn-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .notify-btn-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .notify-btn-color-focus;
     }
   }
 
+  &__btn.is-disabled {
+    .notify-btn-color-disabled;
+  }
+
+  // UI
   &__btn-icon {
-    .notify-btn-icon;
+    .ui-btn-ctrl;
+    .notify-ui-btn-color-ctrl;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .notify-ui-btn-color-ctrl-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .notify-ui-btn-color-ctrl-focus;
+    }
   }
 
   &__close-btn {
@@ -89,20 +107,4 @@
   //     left: 0;
   //   }
   // }
-}
-
-// Global Notify button icon
-// --------------------------------------------------
-.notify-btn-icon() {
-  margin: @btn-margin / 2;
-  padding: @btn-padding / 2;
-  background-color: @notify-icon;
-  color: @notify-icon-inverted;
-  border-radius: 50%;
-
-  .no-touch &:not(.is-disabled):not(.is-locked):hover {
-    background-color: @notify-icon-hover;
-    color: @notify-icon-inverted-hover;
-    .transition(background-color @duration ease-in, color @duration ease-in;);
-  }
 }

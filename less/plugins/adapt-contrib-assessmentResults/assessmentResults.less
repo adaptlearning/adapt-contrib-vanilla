@@ -2,4 +2,20 @@
   &__retry-feedback {
     margin-bottom: @component-body-margin;
   }
+
+  &__retry-btn {
+    .btn-color;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .btn-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .btn-color-focus;
+    }
+  }
+
+  &__retry-btn.is-disabled {
+    .btn-color-disabled;
+  }
 }
