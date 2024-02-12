@@ -1,6 +1,6 @@
 .article {
   position: relative;
-  height: var(--adapt-viewport-height);
+  height: calc(var(--adapt-viewport-height) - var(--adapt-navigation-padding));
   overflow: hidden;
   display: none;
 
@@ -19,7 +19,7 @@
     position: relative;
     padding: 0px 25px;
     height: calc(100% - max(88px, var(--adapt-navigation-height)));
-    top: max(88px, var(--adapt-navigation-height));
+    top: calc(max(88px, var(--adapt-navigation-height)) + var(--adapt-navigation-padding));
     overflow: auto;
   }
 
