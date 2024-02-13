@@ -18,7 +18,7 @@
   &__inner {
     position: relative;
     padding: 0px 25px;
-    height: calc(100% - max(88px, var(--adapt-navigation-height)));
+    height: calc(100% - calc(max(88px, var(--adapt-navigation-height)) + var(--adapt-navigation-padding)));
     top: calc(max(88px, var(--adapt-navigation-height)) + var(--adapt-navigation-padding));
     overflow: auto;
   }
