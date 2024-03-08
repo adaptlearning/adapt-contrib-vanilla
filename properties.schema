@@ -710,6 +710,19 @@
             "inputType": "ColourPicker",
             "default": "",
             "help": "Defines the Shadow text / icon colour. Should be a colour that provides good contrast against the Shadow colour."
+          },
+          "loading": {
+            "title": "Loading animation background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "loading-inverted": {
+            "title": "Loading animation colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the loading animation bar colour. Should be a colour that provides good contrast against the loading colour."
           }
         }
       }

@@ -698,6 +698,19 @@
           "description": "Defines the shadow text/icon colour. Should be a colour that provides good contrast against the shadow colour",
           "default": "",
           "_backboneForms": "ColourPicker"
+        },
+        "loading": {
+          "type": "string",
+          "title": "Loading animation background colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "loading-inverted": {
+          "type": "string",
+          "title": "Loading animation colour - inverted",
+          "description": "Defines the loading animation bar colour. Should be a colour that provides good contrast against the loading colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
         }
       }
     }
