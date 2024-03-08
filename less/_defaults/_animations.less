@@ -121,3 +121,15 @@
   .animation(bounceRightOnce 0.5s 0s 1 normal ease-in-out none);
   // name, duration, delay, iteration count, direction, timing-function, fill mode
 }
+
+// 360 spin animation
+// --------------------------------------------------
+.effect-spin() {
+  .keyframes(spin; {
+    0% { transform: rotateZ(0); }
+    100% { transform: rotateZ(360deg); }
+  });
+
+  .animation(spin 1s 0s infinite normal ease-in-out none);
+  // name, duration, delay, iteration count, direction, timing-function, fill mode
+}
