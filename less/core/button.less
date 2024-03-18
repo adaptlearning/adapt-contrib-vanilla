@@ -23,20 +23,20 @@
 
   &__action,
   &__feedback {
-    .btn-color;
+    .btn-color-outline;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .btn-color-hover;
+      .btn-color-outline-hover;
     }
 
     html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .btn-color-focus;
+      .btn-color-outline-focus;
     }
   }
 
   &__action.is-disabled,
   &__feedback.is-disabled {
-    .btn-color-disabled;
+    .btn-color-outline-disabled;
   }
 
   &__marking {

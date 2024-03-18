@@ -2,7 +2,7 @@
 // --------------------------------------------------
 @blue: #117F93;
 @blueDark: #263944;
-@grey: #9096A0;
+@grey: #DDDDDD;
 @greyDark: #4D4D4D;
 @greyLight: #f9f9f9;
 
@@ -48,10 +48,15 @@
 @item-color-selected: darken(@item-color, 20%);
 @item-color-inverted-selected: @item-color-inverted;
 
+// TODO
 // aka @item-color-visited but avoiding breaking chnage
 // @visited is only used by presentation components
 @visited: darken(@item-color, 15%);
 @visited-inverted: @item-color-inverted;
+//
+
+@item-color-visited: @visited;
+@item-color-inverted-visited: @visited-inverted;
 
 @item-color-disabled: @disabled;
 @item-color-inverted-disabled: @disabled-inverted;
@@ -83,6 +88,7 @@
 
 // Content Buttons
 // --------------------------------------------------
+// Filled
 @btn-color: @greyDark;
 @btn-color-inverted: @white;
 
@@ -101,6 +107,50 @@
 @btn-color-disabled: @disabled;
 @btn-color-inverted-disabled: @disabled-inverted;
 
+// Outline
+@btn-color-outline: @btn-color-inverted;
+@btn-color-outline-inverted: @btn-color;
+@btn-color-outline-box-shadow: @btn-color;
+
+@btn-color-outline-hover: darken(@btn-color, 10%);
+@btn-color-outline-inverted-hover: @btn-color-inverted;
+@btn-color-outline-box-shadow-hover: darken(@btn-color, 10%);
+
+@btn-color-outline-focus: @btn-color-hover;
+@btn-color-outline-inverted-focus: @btn-color-inverted-hover;
+@btn-color-outline-box-shadow-focus: @btn-color-hover;
+
+@btn-color-outline-selected: darken(@btn-color, 20%);
+@btn-color-outline-inverted-selected: @btn-color-inverted;
+@btn-color-outline-box-shadow-selected: darken(@btn-color, 20%);
+
+@btn-color-outline-locked: @btn-color-outline;
+@btn-color-outline-inverted-locked: @disabled;
+@btn-color-outline-box-shadow-locked: @disabled;
+
+@btn-color-outline-disabled: @btn-color-outline;
+@btn-color-outline-inverted-disabled: @disabled;
+@btn-color-outline-box-shadow-disabled: @disabled;
+
+// Plain
+@btn-color-plain: transparent;
+@btn-color-plain-inverted: @btn-color;
+
+@btn-color-plain-hover: transparent;
+@btn-color-plain-inverted-hover: darken(@btn-color, 10%);
+
+@btn-color-plain-focus: transparent;
+@btn-color-plain-inverted-focus: @btn-color-hover;
+
+@btn-color-plain-selected: transparent;
+@btn-color-plain-inverted-selected: @btn-color-inverted;
+
+@btn-color-plain-locked: transparent;
+@btn-color-plain-inverted-locked: @disabled;
+
+@btn-color-plain-disabled: transparent;
+@btn-color-plain-inverted-disabled: @disabled;
+
 // UI (global default for nav, notify, drawer)
 // --------------------------------------------------
 @ui-color: @white;
@@ -108,7 +158,7 @@
 
 // Disabled - question components
 // --------------------------------------------------
-@disabled: #DDDDDD;
+@disabled: @grey;
 @disabled-inverted: @black;
 
 // Validation states - question marking
@@ -121,9 +171,9 @@
 
 // Progress
 // --------------------------------------------------
-@progress: @grey;
+@progress: @greyDark;
 @progress-inverted: @white;
-@progress-border: @grey;
+@progress-border: @greyDark;
 
 // Menu
 // --------------------------------------------------
