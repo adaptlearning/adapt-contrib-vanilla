@@ -5,16 +5,12 @@
 // --------------------------------------------------
 @blend-modes: color, color-burn, color-dodge, darken, difference, exclusion, hard-light, hue, lighten, luminosity, multiply, overlay, saturation, screen, soft-light;
 
-.-(@i: length(@blend-modes)) when (@i > 0) {
-  @blend: extract(@blend-modes, @i);
-
-  .background-blend-mode.@{blend} {
-    background-blend-mode: @blend;
+each(@blend-modes, {
+  .background-blend-mode.@{value} {
+    background-blend-mode: @value;
   }
 
-  .mix-blend-mode.@{blend} {
-    mix-blend-mode: @blend;
+  .mix-blend-mode.@{value} {
+    mix-blend-mode: @value;
   }
-
-  .-((@i - 1));
-} .-;
+});
