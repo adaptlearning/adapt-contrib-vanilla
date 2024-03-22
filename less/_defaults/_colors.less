@@ -104,62 +104,23 @@
 @btn-color-locked: @disabled;
 @btn-color-inverted-locked: @disabled-inverted;
 
+// TODO
+// aka @btn-color-disabled but avoiding breaking chnage
+@disabled: @grey;
+@disabled-inverted: @black;
+//
+
 @btn-color-disabled: @disabled;
 @btn-color-inverted-disabled: @disabled-inverted;
 
 // Outline
-@btn-color-outline: @btn-color-inverted;
-@btn-color-outline-inverted: @btn-color;
-@btn-color-outline-box-shadow: @btn-color;
-
-@btn-color-outline-hover: darken(@btn-color, 10%);
-@btn-color-outline-inverted-hover: @btn-color-inverted;
-@btn-color-outline-box-shadow-hover: darken(@btn-color, 10%);
-
-@btn-color-outline-focus: @btn-color-hover;
-@btn-color-outline-inverted-focus: @btn-color-inverted-hover;
-@btn-color-outline-box-shadow-focus: @btn-color-hover;
-
-@btn-color-outline-selected: darken(@btn-color, 20%);
-@btn-color-outline-inverted-selected: @btn-color-inverted;
-@btn-color-outline-box-shadow-selected: darken(@btn-color, 20%);
-
-@btn-color-outline-locked: @btn-color-outline;
-@btn-color-outline-inverted-locked: @disabled;
-@btn-color-outline-box-shadow-locked: @disabled;
-
-@btn-color-outline-disabled: @btn-color-outline;
-@btn-color-outline-inverted-disabled: @disabled;
-@btn-color-outline-box-shadow-disabled: @disabled;
-
-// Plain
-@btn-color-plain: transparent;
-@btn-color-plain-inverted: @btn-color;
-
-@btn-color-plain-hover: transparent;
-@btn-color-plain-inverted-hover: darken(@btn-color, 10%);
-
-@btn-color-plain-focus: transparent;
-@btn-color-plain-inverted-focus: @btn-color-hover;
-
-@btn-color-plain-selected: transparent;
-@btn-color-plain-inverted-selected: @btn-color-inverted;
-
-@btn-color-plain-locked: transparent;
-@btn-color-plain-inverted-locked: @disabled;
-
-@btn-color-plain-disabled: transparent;
-@btn-color-plain-inverted-disabled: @disabled;
+@btn-color-border-width: 1px;
+@btn-color-border-color: @btn-color;
 
 // UI (global default for nav, notify, drawer)
 // --------------------------------------------------
 @ui-color: @white;
 @ui-color-inverted: @greyDark;
-
-// Disabled - question components
-// --------------------------------------------------
-@disabled: @grey;
-@disabled-inverted: @black;
 
 // Validation states - question marking
 // --------------------------------------------------

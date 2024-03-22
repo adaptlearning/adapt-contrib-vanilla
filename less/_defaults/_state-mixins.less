@@ -68,6 +68,8 @@
 }
 
 // Content buttons
+// Default
+// Filled
 .btn-color() {
   background-color: @btn-color;
   color: @btn-color-inverted;
@@ -99,164 +101,69 @@
   color: @btn-color-inverted-disabled;
 }
 
-@button-states-single:
-  item-color,
-  btn-color;
-
-each(@button-states-single, {
-  .@{value} {
-    background-color: @@value;
-    color: ~'@{@{value}-inverted}';
-  }
-
-  .@{value}-hover {
-    background-color: ~'@{@{value}-hover}';
-    color: ~'@{@{value}-inverted-hover}';
-  }
-
-  .@{value}-focus {
-    background-color: ~'@{@{value}-focus}';
-    color: ~'@{@{value}-inverted-focus}';
-  }
-
-  .@{value}-selected {
-    background-color: ~'@{@{value}-selected}';
-    color: ~'@{@{value}-inverted-selected}';
-  }
-
-  & when not (@value = btn-color) {
-  // & when not (@value = btn-color) or (@value = btn-color-outline) {
-    .@{value}-visited {
-      background-color: ~'@{@{value}-visited}';
-      color: ~'@{@{value}-inverted-visited}';
-    }
-  }
-
-  & when not (@value = item-color) {
-    .@{value}-locked {
-      background-color: ~'@{@{value}-locked}';
-      color: ~'@{@{value}-inverted-locked}';
-    }
-  }
-
-  .@{value}-disabled {
-    background-color: ~'@{@{value}-disabled}';
-    color: ~'@{@{value}-inverted-disabled}';
-  }
-});
-
-// @button-states-multi: {
-//   btn-color: btn-color-inverted;
-// }
-
-// each(@button-states-multi, {
-//   .@{key} {
-//     background-color: @@key;
-//     color: @@value;
-//   }
-// });
-
-
-// Filled
-.btn-color-filled() {
-  background-color: @btn-color;
-  color: @btn-color-inverted;
-}
-
-.btn-color-filled-hover() {
-  background-color: @btn-color-hover;
-  color: @btn-color-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.btn-color-filled-focus() {
-  background-color: @btn-color-focus;
-  color: @btn-color-inverted-focus;
-}
-
-.btn-color-filled-selected() {
-  background-color: @btn-color-selected;
-  color: @btn-color-inverted-selected;
-}
-
-.btn-color-filled-locked() {
-  background-color: @btn-color-locked;
-  color: @btn-color-inverted-locked;
-}
-
-.btn-color-filled-disabled() {
-  background-color: @btn-color-disabled;
-  color: @btn-color-inverted-disabled;
-}
-
 // Outline
 .btn-color-outline() {
-  background-color: @btn-color-outline;
-  color: @btn-color-outline-inverted;
-  box-shadow: 0 0 0 1px @btn-color-outline-box-shadow inset;
+  background-color: @btn-color-inverted;
+  color: @btn-color;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color inset;
 }
 
 .btn-color-outline-hover() {
-  background-color: @btn-color-outline-hover;
-  color: @btn-color-outline-inverted-hover;
-  box-shadow: 0 0 0 1px @btn-color-outline-box-shadow-hover inset;
+  .btn-color-hover;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-hover inset;
   .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
 }
 
 .btn-color-outline-focus() {
-  background-color: @btn-color-outline-focus;
-  color: @btn-color-outline-inverted-focus;
-  box-shadow: 0 0 0 1px @btn-color-outline-box-shadow-focus inset;
+  .btn-color-focus;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-focus inset;
 }
 
 .btn-color-outline-selected() {
-  background-color: @btn-color-outline-selected;
-  color: @btn-color-outline-inverted-selected;
-  box-shadow: 0 0 0 1px @btn-color-outline-box-shadow-selected inset;
+  .btn-color-selected;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-selected inset;
 }
 
 .btn-color-outline-locked() {
-  background-color: @btn-color-outline-locked;
-  color: @btn-color-outline-inverted-locked;
-  box-shadow: 0 0 0 1px @btn-color-outline-box-shadow-locked inset;
+  .btn-color-locked;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-locked inset;
 }
 
 .btn-color-outline-disabled() {
-  background-color: @btn-color-outline-disabled;
-  color: @btn-color-outline-inverted-disabled;
-  box-shadow: 0 0 0 1px @btn-color-outline-box-shadow-disabled inset;
+  .btn-color-disabled;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-disabled inset;
 }
 
 // Plain
 .btn-color-plain() {
-  background-color: @btn-color-plain;
-  color: @btn-color-plain-inverted;
+  background-color: transparent;
+  color: @btn-color;
 }
 
 .btn-color-plain-hover() {
-  background-color: @btn-color-plain-hover;
-  color: @btn-color-plain-inverted-hover;
+  background-color: transparent;
+  color: @btn-color-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
 }
 
 .btn-color-plain-focus() {
-  background-color: @btn-color-plain-focus;
-  color: @btn-color-plain-inverted-focus;
+  background-color: transparent;
+  color: @btn-color-focus;
 }
 
 .btn-color-plain-selected() {
-  background-color: @btn-color-plain-selected;
-  color: @btn-color-plain-inverted-selected;
+  background-color: transparent;
+  color: @btn-color-selected;
 }
 
 .btn-color-plain-locked() {
-  background-color: @btn-color-plain-locked;
-  color: @btn-color-plain-inverted-locked;
+  background-color: transparent;
+  color: @btn-color-locked;
 }
 
 .btn-color-plain-disabled() {
-  background-color: @btn-color-plain-disabled;
-  color: @btn-color-plain-inverted-disabled;
+  background-color: transparent;
+  color: @btn-color-disabled;
 }
 
 

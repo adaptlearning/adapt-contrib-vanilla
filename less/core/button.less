@@ -21,8 +21,10 @@
   }
   // TODO END
 
-  &__action,
-  &__feedback {
+  // TODO
+  // undo overrides
+  // currently implemented for testing purposes
+  &__action {
     .btn-color-outline;
 
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -34,10 +36,26 @@
     }
   }
 
-  &__action.is-disabled,
-  &__feedback.is-disabled {
+  &__feedback {
+    .btn-color-plain;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .btn-color-plain-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .btn-color-plain-focus;
+    }
+  }
+
+  &__action.is-disabled {
     .btn-color-outline-disabled;
   }
+
+  &__feedback.is-disabled {
+    .btn-color-plain-disabled;
+  }
+  // end
 
   &__marking {
     padding: @item-padding * 0.75;
