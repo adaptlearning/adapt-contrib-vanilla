@@ -1,3 +1,8 @@
+// Custom classes
+// e.g. 'col-sm-8 col-md-10'
+// min small viewport takes up 8 out of 12 columns
+// min medium viewport takes up 10 columns
+// if undefined element defaults to 100% width
 .make-columns(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
   @media (min-width: @media-query) {
     .boxmenu-item.col-@{size}-@{iteration} {
@@ -11,13 +16,56 @@
   .make-columns(@size, @media-query, @count, (@iteration + 1));
 }
 
-// Custom classes
-// e.g. 'col-sm-8 col-md-10'
-// min small viewport takes up 8 out of 12 columns
-// min medium viewport takes up 10 columns
-// if undefined element defaults to 100% width
 .make-columns(xs, 0, 12); // deprecated: backward compatibility only
 .make-columns(sm, @device-width-small, 12);
 .make-columns(md, @device-width-medium, 12);
 .make-columns(lg, @device-width-large, 12);
 .make-columns(xl, @device-width-xlarge, 12);
+
+// Custom push classes
+// e.g. 'col-push-sm-2 col-push-md-1'
+// min small viewport indents 2 columns from the left (or right for RTL)
+// min medium viewport indents 1 column from the left (or right for RTL)
+// if undefined element defaults to 100% width
+.make-columns-push(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
+  @media (min-width: @media-query) {
+    .boxmenu-item.col-push-@{size}-@{iteration} {
+      margin-inline-start: (@iteration * 100% / @count);
+    }
+    .component.col-push-@{size}-@{iteration} {
+      margin-inline-start: (@iteration * 100% / @count);
+    }
+  }
+
+  .make-columns-push(@size, @media-query, @count, (@iteration + 1));
+}
+
+.make-columns-push(xs, 0, 12); // deprecated: backward compatibility only
+.make-columns-push(sm, @device-width-small, 12);
+.make-columns-push(md, @device-width-medium, 12);
+.make-columns-push(lg, @device-width-large, 12);
+.make-columns-push(xl, @device-width-xlarge, 12);
+
+// Custom pull classes
+// e.g. 'col-pull-sm-2 col-pull-md-1'
+// min small viewport indents 2 columns from the right (or left for RTL)
+// min medium viewport indents 1 column from the right (or left for RTL)
+// if undefined element defaults to 100% width
+.make-columns-pull(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
+  @media (min-width: @media-query) {
+    .boxmenu-item.col-pull-@{size}-@{iteration} {
+      margin-inline-end: (@iteration * 100% / @count);
+    }
+    .component.col-pull-@{size}-@{iteration} {
+      margin-inline-end: (@iteration * 100% / @count);
+    }
+  }
+
+  .make-columns-pull(@size, @media-query, @count, (@iteration + 1));
+}
+
+.make-columns-pull(xs, 0, 12); // deprecated: backward compatibility only
+.make-columns-pull(sm, @device-width-small, 12);
+.make-columns-pull(md, @device-width-medium, 12);
+.make-columns-pull(lg, @device-width-large, 12);
+.make-columns-pull(xl, @device-width-xlarge, 12);
