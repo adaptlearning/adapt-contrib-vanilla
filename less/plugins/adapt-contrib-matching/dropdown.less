@@ -46,14 +46,15 @@
   border-bottom: 1px solid @item-color-hover;
   color: @item-color-inverted;
 
-  .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
+  .no-touch &:not(:focus-visible):hover,
+  .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"]:hover {
     background-color: @item-color-hover;
     color: @item-color-inverted-hover;
     .transition(background-color @duration ease-in, color @duration ease-in;);
   }
 
   &:focus-visible,
-  &[aria-selected="true"] {
+  .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"] {
     // This code can be used to style a non-native dropdown as closely
     // as possible to the default browser settings
     // background-color: Highlight;
