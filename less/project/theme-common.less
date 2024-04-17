@@ -42,14 +42,14 @@
 
   .narrative {
     &__progress {
-      background-color: @@color-inverted;
+      background-color: fade(@@color-inverted, 50%);
       color: @@color;
       border-color: inherit;
     }
 
     &__progress.is-selected {
-      background-color: @@color;
-      color: @@color-inverted;
+      background-color: @@color-inverted;
+      color: @@color;
       border-color: @@color-inverted;
     }
   }
@@ -71,7 +71,7 @@
 
   & when (@color = transparent-light) {
     .narrative {
-      &__progress {
+      &__progress, &__progress.is-selected {
         color: @white;
       }
     }
