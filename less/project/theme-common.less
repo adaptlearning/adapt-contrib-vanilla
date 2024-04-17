@@ -42,11 +42,15 @@
 
   .narrative {
     &__progress {
-      background-color: fade(@@color-inverted, 50%);
+      background-color: @@color-inverted;
+      color: @@color;
+      border-color: inherit;
     }
 
     &__progress.is-selected {
-      background-color: @@color-inverted;
+      background-color: @@color;
+      color: @@color-inverted;
+      border-color: @@color-inverted;
     }
   }
 }
