@@ -22,48 +22,46 @@
 .make-columns(lg, @device-width-large, 12);
 .make-columns(xl, @device-width-xlarge, 12);
 
-// Custom column push classes
-// e.g. 'col-push-sm-2 col-push-md-1'
+// Custom column starting margin classes
+// e.g. 'margin-start-sm-2 margin-start-md-1'
 // min small viewport indents 2 columns from the left (or right for RTL)
 // min medium viewport indents 1 column from the left (or right for RTL)
-// if undefined, element defaults to 100% width
-.make-columns-push(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
+.make-margin-start(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
   @media (min-width: @media-query) {
-    .boxmenu-item.col-push-@{size}-@{iteration} {
+    .boxmenu-item.margin-start-@{size}-@{iteration} {
       margin-inline-start: (@iteration * 100% / @count);
     }
-    .component.col-push-@{size}-@{iteration} {
+    .component.margin-start-@{size}-@{iteration} {
       margin-inline-start: (@iteration * 100% / @count);
     }
   }
 
-  .make-columns-push(@size, @media-query, @count, (@iteration + 1));
+  .make-margin-start(@size, @media-query, @count, (@iteration + 1));
 }
 
-.make-columns-push(sm, @device-width-small, 12);
-.make-columns-push(md, @device-width-medium, 12);
-.make-columns-push(lg, @device-width-large, 12);
-.make-columns-push(xl, @device-width-xlarge, 12);
+.make-margin-start(sm, @device-width-small, 12);
+.make-margin-start(md, @device-width-medium, 12);
+.make-margin-start(lg, @device-width-large, 12);
+.make-margin-start(xl, @device-width-xlarge, 12);
 
-// Custom column pull classes
-// e.g. 'col-pull-sm-2 col-pull-md-1'
+// Custom column ending margin classes
+// e.g. 'margin-end-sm-2 margin-end-md-1'
 // min small viewport indents 2 columns from the right (or left for RTL)
 // min medium viewport indents 1 column from the right (or left for RTL)
-// if undefined, element defaults to 100% width
-.make-columns-pull(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
+.make-margin-end(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
   @media (min-width: @media-query) {
-    .boxmenu-item.col-pull-@{size}-@{iteration} {
+    .boxmenu-item.margin-end-@{size}-@{iteration} {
       margin-inline-end: (@iteration * 100% / @count);
     }
-    .component.col-pull-@{size}-@{iteration} {
+    .component.margin-end-@{size}-@{iteration} {
       margin-inline-end: (@iteration * 100% / @count);
     }
   }
 
-  .make-columns-pull(@size, @media-query, @count, (@iteration + 1));
+  .make-margin-end(@size, @media-query, @count, (@iteration + 1));
 }
 
-.make-columns-pull(sm, @device-width-small, 12);
-.make-columns-pull(md, @device-width-medium, 12);
-.make-columns-pull(lg, @device-width-large, 12);
-.make-columns-pull(xl, @device-width-xlarge, 12);
+.make-margin-end(sm, @device-width-small, 12);
+.make-margin-end(md, @device-width-medium, 12);
+.make-margin-end(lg, @device-width-large, 12);
+.make-margin-end(xl, @device-width-xlarge, 12);
