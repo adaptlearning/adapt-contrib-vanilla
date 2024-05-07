@@ -43,10 +43,37 @@
   .narrative {
     &__progress {
       background-color: fade(@@color-inverted, 50%);
+      color: @@color;
+      border-color: inherit;
     }
 
     &__progress.is-selected {
       background-color: @@color-inverted;
+      color: @@color;
+      border-color: @@color-inverted;
+    }
+  }
+
+  & when (@color = transparent-dark) {
+    .narrative {
+      &__progress {
+        background-color: darken(@@color-inverted, 50%);
+        color: @@color-inverted;
+        border-color: @@color;
+      }
+  
+      &__progress.is-selected  {
+        background-color: @@color-inverted;
+        color: darken(@@color-inverted, 50%);
+      }
+    }
+  }
+
+  & when (@color = transparent-light) {
+    .narrative {
+      &__progress, &__progress.is-selected {
+        color: @white;
+      }
     }
   }
 }
