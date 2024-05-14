@@ -279,6 +279,12 @@
           "default": "",
           "_backboneForms": "ColourPicker"
         },
+        "menu-header-subtitle-color": {
+          "type": "string",
+          "title": "Menu header subtitle colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
         "menu-header-body-color": {
           "type": "string",
           "title": "Menu header body colour",

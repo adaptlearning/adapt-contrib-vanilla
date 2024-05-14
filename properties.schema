@@ -287,6 +287,12 @@
             "inputType": "ColourPicker",
             "default": ""
           },
+          "menu-header-subtitle-color": {
+            "title": "Menu header subtitle colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
           "menu-header-body-color": {
             "title": "Menu header body colour",
             "type": "string",
