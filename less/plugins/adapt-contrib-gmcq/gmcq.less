@@ -1,6 +1,10 @@
 .gmcq-item {
   &__label {
     margin: @item-margin;
+
+    .no-touch &:not(.is-disabled):not(.is-selected):hover .gmcq-item__icon {
+      .effect-scalePulse;
+    }
   }
 
   &__option {

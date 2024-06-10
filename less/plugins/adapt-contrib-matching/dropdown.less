@@ -38,17 +38,25 @@
   }
 }
 
+.dropdown__list {
+  border: 0.19rem solid @item-color-selected;
+}
+
 .dropdown-item {
   padding: @item-padding;
   .item-color;
-  border-bottom: 1px solid @item-color-hover;
+  // border-bottom: 1px solid @item-color-hover;
+
+  // &:last-child {
+  //   border-bottom: none;
+  // }
 
   .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
     .item-color-hover;
   }
 
   &:focus-visible,
-  &[aria-selected="true"] {
+  .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"] {
     // This code can be used to style a non-native dropdown as closely
     // as possible to the default browser settings
     // background-color: Highlight;
