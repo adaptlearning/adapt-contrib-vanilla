@@ -393,7 +393,6 @@
 
 
 // UI (nav, notify, drawer)
-// ! TODO expand nav and notify mixins to include border
 // ? should we change nav ui mixins to 'ui-btn-ctrl-color' for consistency with other color variable naming 
 // and consistency with .ui-btn-ctrl;
 // Nav UI
@@ -452,7 +451,6 @@
 
 
 // Notify UI
-// TODO needs disabled states e.g. Hotgraphic controls for first/last item 
 // Default - Filled
 .notify-ui-btn-color-ctrl() {
   background-color: @notify-icon;
@@ -468,6 +466,11 @@
 .notify-ui-btn-color-ctrl-focus() {
   background-color: @notify-icon-focus;
   color: @notify-icon-inverted-focus;
+}
+
+.notify-ui-btn-color-ctrl-disabled() {
+  background-color: @notify-icon-disabled;
+  color: @notify-icon-inverted-disabled;
 }
 
 // Outline
