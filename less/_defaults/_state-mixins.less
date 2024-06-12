@@ -508,6 +508,7 @@
 
 
 // Notify button
+// Default - Filled
 .notify-btn-color() {
   background-color: @notify-btn;
   color: @notify-btn-inverted;
@@ -539,7 +540,74 @@
   color: @notify-btn-inverted-disabled;
 }
 
+// Outline
+.notify-btn-color-outline() {
+  background-color: @notify-btn-inverted;
+  color: @notify-btn;
+  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn inset;
+}
+
+.notify-btn-color-outline-hover() {
+  .notify-btn-color-hover;
+  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.notify-btn-color-outline-focus() {
+  .notify-btn-color-focus;
+  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-focus inset;
+}
+
+.notify-btn-color-outline-selected() {
+  .notify-btn-color-selected;
+  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-selected inset;
+}
+
+.notify-btn-color-outline-locked() {
+  .notify-btn-color-locked;
+  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-locked inset;
+}
+
+.notify-btn-color-outline-disabled() {
+  .notify-btn-color-disabled;
+  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-disabled inset;
+}
+
+// Plain
+.notify-btn-color-plain() {
+  background-color: transparent;
+  color: @notify-btn;
+}
+
+.notify-btn-color-plain-hover() {
+  background-color: transparent;
+  color: @notify-btn-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.notify-btn-color-plain-focus() {
+  background-color: transparent;
+  color: @notify-btn-focus;
+}
+
+.notify-btn-color-plain-selected() {
+  background-color: transparent;
+  color: @notify-btn-selected;
+}
+
+.notify-btn-color-plain-locked() {
+  background-color: transparent;
+  color: @notify-btn-locked;
+}
+
+.notify-btn-color-plain-disabled() {
+  background-color: transparent;
+  color: @notify-btn-disabled;
+}
+
+
 // Drawer UI
+// Default - Filled
 .drawer-ui-btn-color-ctrl() {
   background-color: @drawer-icon;
   color: @drawer-icon-inverted;
@@ -556,7 +624,43 @@
   color: @drawer-icon-inverted-focus;
 }
 
+// Outline
+.drawer-ui-btn-color-ctrl-outline() {
+  background-color: @drawer-icon;
+  color: @drawer-icon-inverted;
+  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon-inverted inset;
+}
+
+.drawer-ui-btn-color-ctrl-outline-hover() {
+  .drawer-ui-btn-color-ctrl-hover;
+  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.drawer-ui-btn-color-ctrl-outline-focus() {
+  .drawer-ui-btn-color-ctrl-focus;
+  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon inset;
+}
+
+// Plain
+.drawer-ui-btn-color-ctrl-plain() {
+  background-color: transparent;
+  color: @drawer-icon-inverted;
+}
+
+.drawer-ui-btn-color-ctrl-plain-hover() {
+  background-color: transparent;
+  color: @drawer-icon-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.drawer-ui-btn-color-ctrl-plain-focus() {
+  background-color: transparent;
+  color: @drawer-icon-focus;
+}
+
 // Drawer item
+// Default - Filled
 .drawer-item-color() {
   background-color: @drawer-item;
   color: @drawer-item-inverted;
@@ -586,4 +690,49 @@
   background-color: @drawer-item-selected;
   color: @drawer-item-inverted-selected;
   border-color: @drawer-item-hover;
+}
+
+// Outline
+.drawer-item-color-outline() {
+  background-color: @drawer-item-inverted;
+  color: @drawer-item;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item inset;
+}
+
+.drawer-item-color-outline-hover() {
+  .drawer-item-color-hover;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.drawer-item-color-outline-focus() {
+  .drawer-item-color-focus;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-focus inset;
+}
+
+.drawer-item-color-outline-selected() {
+  .drawer-item-color-selected;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-selected inset;
+}
+
+// Plain
+.drawer-item-color-plain() {
+  background-color: transparent;
+  color: @drawer-item;
+}
+
+.drawer-item-color-plain-hover() {
+  background-color: transparent;
+  color: @drawer-item-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.drawer-item-color-plain-focus() {
+  background-color: transparent;
+  color: @drawer-item-focus;
+}
+
+.drawer-item-color-plain-selected() {
+  background-color: transparent;
+  color: @drawer-item-selected;
 }
