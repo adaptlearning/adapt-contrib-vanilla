@@ -1,4 +1,7 @@
+// TODO separate mixins into separate 'button type' files
+
 // Content item
+// Default - Filled
 .item-color() {
   background-color: @item-color;
   color: @item-color-inverted;
@@ -63,11 +66,42 @@
   box-shadow: 0 0 0 @item-color-border-width @item-color-disabled inset;
 }
 
+// Plain
+// ? do we need to include the duplicate styles e.g. 'background-color: transparent' applies to all?
+.item-color-plain() {
+  background-color: transparent;
+  color: @item-color;
+}
 
+.item-color-plain-hover() {
+  background-color: transparent;
+  color: @item-color-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
 
+.item-color-plain-focus() {
+  background-color: transparent;
+  color: @item-color-focus;
+}
+
+.item-color-plain-selected() {
+  background-color: transparent;
+  color: @item-color-selected;
+}
+
+.item-color-plain-locked() {
+  background-color: transparent;
+  color: @item-color-locked;
+}
+
+.item-color-plain-disabled() {
+  background-color: transparent;
+  color: @item-color-disabled;
+}
 
 
 // Content item ui button
+// Default - Filled
 .item-ui-color() {
   background-color: @item-ui-color;
   color: @item-ui-color-inverted;
@@ -103,6 +137,72 @@
   background-color: @item-ui-color-disabled;
   color: @item-ui-color-inverted-disabled;
 }
+
+// Outline
+.item-ui-color-outline() {
+  background-color: @item-ui-color-inverted;
+  color: @item-ui-color;
+  box-shadow: 0 0 0 @item-ui-color-border-width @item-color inset;
+}
+
+.item-ui-color-outline-hover() {
+  .item-ui-color-hover;
+  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.item-ui-color-outline-focus() {
+  .item-ui-color-focus;
+  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-focus inset;
+}
+
+.item-ui-color-outline-selected() {
+  .item-ui-color-selected;
+  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-selected inset;
+}
+
+.item-ui-color-outline-visited() {
+  .item-ui-color-visited;
+  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-visited inset;
+}
+
+.item-ui-color-outline-disabled() {
+  .item-ui-color-disabled;
+  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-disabled inset;
+}
+
+// Plain
+.item-ui-color-plain() {
+  background-color: transparent;
+  color: @item-ui-color;
+}
+
+.item-ui-color-plain-hover() {
+  background-color: transparent;
+  color: @item-ui-color-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.item-ui-color-plain-focus() {
+  background-color: transparent;
+  color: @item-ui-color-focus;
+}
+
+.item-ui-color-plain-selected() {
+  background-color: transparent;
+  color: @item-ui-color-selected;
+}
+
+.item-ui-color-plain-locked() {
+  background-color: transparent;
+  color: @item-ui-color-locked;
+}
+
+.item-ui-color-plain-disabled() {
+  background-color: transparent;
+  color: @item-ui-color-disabled;
+}
+
 
 // Content buttons
 // Default - Filled
@@ -146,7 +246,6 @@
 
 .btn-color-outline-hover() {
   .btn-color-hover;
-  background-color: red;
   box-shadow: 0 0 0 @btn-color-border-width @btn-color-hover inset;
   .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
 }
@@ -204,10 +303,8 @@
 }
 
 
-
-
-
 // Menu item
+// Default - Filled
 .menu-item-btn-color() {
   background-color: @menu-item-btn-color;
   color: @menu-item-btn-color-inverted;
@@ -229,9 +326,78 @@
   color: @menu-item-btn-color-inverted-locked;
 }
 
+// Outline
+.menu-item-btn-color-outline() {
+  background-color: @menu-item-btn-color-inverted;
+  color: @menu-item-btn-color;
+  box-shadow: 0 0 0 @menu-item-btn-color-border-width @btn-color inset;
+}
+
+.menu-item-btn-color-outline-hover() {
+  .menu-item-btn-color-hover;
+  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.menu-item-btn-color-outline-focus() {
+  .menu-item-btn-color-focus;
+  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-focus inset;
+}
+
+.menu-item-btn-color-outline-selected() {
+  .menu-item-btn-color-selected;
+  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-selected inset;
+}
+
+.menu-item-btn-color-outline-locked() {
+  .menu-item-btn-color-locked;
+  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-locked inset;
+}
+
+.menu-item-btn-color-outline-disabled() {
+  .menu-item-btn-color-disabled;
+  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-disabled inset;
+}
+
+// Plain
+.menu-item-btn-color-plain() {
+  background-color: transparent;
+  color: @menu-item-btn-color;
+}
+
+.menu-item-btn-color-plain-hover() {
+  background-color: transparent;
+  color: @menu-item-btn-color-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.menu-item-btn-color-plain-focus() {
+  background-color: transparent;
+  color: @menu-item-btn-color-focus;
+}
+
+.menu-item-btn-color-plain-selected() {
+  background-color: transparent;
+  color: @menu-item-btn-color-selected;
+}
+
+.menu-item-btn-color-plain-locked() {
+  background-color: transparent;
+  color: @menu-item-btn-color-locked;
+}
+
+.menu-item-btn-color-plain-disabled() {
+  background-color: transparent;
+  color: @menu-item-btn-color-disabled;
+}
+
+
 // UI (nav, notify, drawer)
 // ! TODO expand nav and notify mixins to include border
+// ? should we change nav ui mixins to 'ui-btn-ctrl-color' for consistency with other color variable naming 
+// and consistency with .ui-btn-ctrl;
 // Nav UI
+// Default - Filled
 .nav-ui-btn-color-ctrl() {
   background-color: @nav-icon;
   color: @nav-icon-inverted;
@@ -248,7 +414,46 @@
   color: @nav-icon-inverted-focus;
 }
 
+// Outline
+// TODO need to invert .pagelevelprogress__indicator border color
+.nav-ui-btn-color-ctrl-outline() {
+  background-color: @nav-icon-inverted;
+  color: @nav-icon;
+  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon inset;
+}
+
+.nav-ui-btn-color-ctrl-outline-hover() {
+  .nav-ui-btn-color-ctrl-hover;
+  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.nav-ui-btn-color-ctrl-outline-focus() {
+  .nav-ui-btn-color-ctrl-focus;
+  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon inset;
+}
+
+// Plain
+.nav-ui-btn-color-ctrl-plain() {
+  background-color: transparent;
+  color: @nav-icon;
+}
+
+.nav-ui-btn-color-ctrl-plain-hover() {
+  background-color: transparent;
+  color: @nav-icon-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.nav-ui-btn-color-ctrl-plain-focus() {
+  background-color: transparent;
+  color: @nav-icon-focus;
+}
+
+
 // Notify UI
+// TODO needs disabled states e.g. Hotgraphic controls for first/last item 
+// Default - Filled
 .notify-ui-btn-color-ctrl() {
   background-color: @notify-icon;
   color: @notify-icon-inverted;
@@ -264,6 +469,43 @@
   background-color: @notify-icon-focus;
   color: @notify-icon-inverted-focus;
 }
+
+// Outline
+.notify-ui-btn-color-ctrl-outline() {
+  background-color: @notify-icon;
+  color: @notify-icon-inverted;
+  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-inverted inset;
+}
+
+.notify-ui-btn-color-ctrl-outline-hover() {
+  .notify-ui-btn-color-ctrl-hover;
+  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.notify-ui-btn-color-ctrl-outline-focus() {
+  .notify-ui-btn-color-ctrl-focus;
+  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon inset;
+}
+
+// Plain
+.notify-ui-btn-color-ctrl-plain() {
+  background-color: transparent;
+  color: @notify-icon-inverted;
+}
+
+.notify-ui-btn-color-ctrl-plain-hover() {
+  background-color: transparent;
+  color: @notify-icon-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.notify-ui-btn-color-ctrl-plain-focus() {
+  background-color: transparent;
+  color: @notify-icon-focus;
+}
+
+
 
 // Notify button
 .notify-btn-color() {
