@@ -8,14 +8,29 @@
 
   &__btn {
     .ui-btn-ctrl;
-    .drawer-ui-btn-ctrl-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .drawer-ui-btn-ctrl-color-hover;
+    & when (@drawer-ui-btn-style = filled) {
+      .drawer-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .drawer-ui-btn-ctrl-color-hover;
+      }
+  
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .drawer-ui-btn-ctrl-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .drawer-ui-btn-ctrl-color-focus;
+    & when (@drawer-ui-btn-style = outline) {
+      .drawer-ui-btn-ctrl-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .drawer-ui-btn-ctrl-color-outline-hover;
+      }
+  
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .drawer-ui-btn-ctrl-color-outline-focus;
+      }
     }
   }
 }

@@ -13,15 +13,30 @@
   &__btn {
     margin: @nav-btn-margin (@nav-btn-margin / 2);
     padding: @nav-btn-padding-ver @nav-btn-padding-hoz;
-    .nav-ui-btn-ctrl-color;
     border-radius: @nav-btn-border-radius;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .nav-ui-btn-ctrl-color-hover;
+    & when (@nav-ui-btn-style = filled) {
+      .nav-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .nav-ui-btn-ctrl-color-hover;
+      }
+  
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .nav-ui-btn-ctrl-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .nav-ui-btn-ctrl-color-focus;
+    & when (@nav-ui-btn-style = outline) {
+      .nav-ui-btn-ctrl-color-outline;
+      
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .nav-ui-btn-ctrl-color-outline-hover;
+      }
+  
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .nav-ui-btn-ctrl-color-outline-focus;
+      }
     }
   }
 

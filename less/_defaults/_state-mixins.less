@@ -1,5 +1,17 @@
 // TODO separate mixins into separate 'button type' files
 
+// ! Temp button style vars - naming tbc
+@content-item-style: outline;
+@content-ui-btn-style: outline;
+@button-style: outline; // content-button
+@menu-item-btn: outline;
+@global-ui-btn-style: outline;
+@nav-ui-btn-style: @global-ui-btn-style;
+@notify-btn-style: outline;
+@notify-ui-btn-style: @global-ui-btn-style;
+@drawer-ui-btn-style: @global-ui-btn-style;
+@drawer-item-style: outline;
+
 // Content item
 // Default - Filled
 .item-color() {
@@ -392,8 +404,7 @@
 
 
 // UI (nav, notify, drawer)
-// ? should we change nav ui mixins to 'ui-btn-ctrl-color' for consistency with other color variable naming 
-// and consistency with .ui-btn-ctrl;
+
 // Nav UI
 // Default - Filled
 .nav-ui-btn-ctrl-color() {
@@ -715,6 +726,11 @@
 .drawer-item-color-outline-selected() {
   .drawer-item-color-selected;
   box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-selected inset;
+}
+
+.drawer-item-color-outline-locked() {
+  .drawer-item-color-locked;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-locked inset;
 }
 
 // Plain

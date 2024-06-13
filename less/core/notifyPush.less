@@ -34,14 +34,29 @@
     top: 0;
     right: 0;
     .ui-btn-ctrl;
-    .notify-ui-btn-ctrl-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .notify-ui-btn-ctrl-color-hover;
+    & when (@notify-ui-btn-style = filled) {
+      .notify-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .notify-ui-btn-ctrl-color-focus;
+    & when (@notify-ui-btn-style = outline) {
+      .notify-ui-btn-ctrl-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-outline-focus;
+      }
     }
 
     .dir-rtl & {
