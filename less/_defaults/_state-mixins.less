@@ -67,7 +67,6 @@
 }
 
 // Plain
-// ? do we need to include the duplicate styles e.g. 'background-color: transparent' applies to all?
 .item-color-plain() {
   background-color: transparent;
   color: @item-color;
@@ -330,7 +329,7 @@
 .menu-item-btn-color-outline() {
   background-color: @menu-item-btn-color-inverted;
   color: @menu-item-btn-color;
-  box-shadow: 0 0 0 @menu-item-btn-color-border-width @btn-color inset;
+  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color inset;
 }
 
 .menu-item-btn-color-outline-hover() {
@@ -429,7 +428,7 @@
 
 .nav-ui-btn-color-ctrl-outline-focus() {
   .nav-ui-btn-color-ctrl-focus;
-  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon inset;
+  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon-focus inset;
 }
 
 // Plain
@@ -488,7 +487,7 @@
 
 .notify-ui-btn-color-ctrl-outline-focus() {
   .notify-ui-btn-color-ctrl-focus;
-  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon inset;
+  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-focus inset;
 }
 
 // Plain
@@ -642,7 +641,7 @@
 
 .drawer-ui-btn-color-ctrl-outline-focus() {
   .drawer-ui-btn-color-ctrl-focus;
-  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon inset;
+  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon-focus inset;
 }
 
 // Plain
