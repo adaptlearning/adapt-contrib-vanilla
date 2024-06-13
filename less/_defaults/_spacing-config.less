@@ -9,22 +9,31 @@
 
 @item-border-radius: 0.25rem;
 
+// Content UI (action not content)
+// --------------------------------------------------
+@item-ui-color-border-width: 1px;
+
 // Content Button
 // --------------------------------------------------
 @btn-margin: 1rem;
 @btn-padding: 1rem;
 
 @btn-border-radius: 0.25rem;
+@btn-color-border-width: 1px;
 
 // TODO: separate font/element vars into separate files
 // wait until work has been reviewed/approved to make it easier to diff compare
 // UI Button
 // --------------------------------------------------
 @ui-btn-controls-margin: @btn-margin / 2;
-
 @ui-btn-controls-padding: @btn-padding / 2;
 
 @ui-btn-controls-border-radius: 50%;
+
+// Menu
+// ? remove 'color' from 'border-width' vars ?
+// --------------------------------------------------
+@menu-item-btn-color-border-width: 1px;
 
 // Navigation
 // --------------------------------------------------
@@ -41,6 +50,8 @@
 
 @notify-btn-padding-ver: @btn-padding / 2;
 @notify-btn-padding-hoz: @btn-padding;
+
+@notify-btn-border-width: 1px;
 
 // Drawer item
 // --------------------------------------------------
