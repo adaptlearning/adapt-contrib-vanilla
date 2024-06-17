@@ -8,20 +8,45 @@
   }
 
   &__pin:not(.has-pin-image) {
-    .item-ui-color;
     border-radius: 50%;
 
+    & when (@content-ui-btn-style = filled) {
+      .item-ui-color;
+    }
+
+    & when (@content-ui-btn-style = outline) {
+      .item-ui-color-outline;
+    }
+
     .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .item-ui-color-hover;
+      & when (@content-ui-btn-style = filled) {
+        .item-ui-color-hover;
+      }
+
+      & when (@content-ui-btn-style = outline) {
+        .item-ui-color-outline-hover;
+      }
     }
 
     html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .item-ui-color-focus;
+      & when (@content-ui-btn-style = filled) {
+        .item-ui-color-focus;
+      }
+
+      & when (@content-ui-btn-style = outline) {
+        .item-ui-color-outline-focus;
+      }
     }
   }
 
   &__pin:not(.has-pin-image).is-visited {
-    .item-ui-color-visited;
+    & when (@content-ui-btn-style = filled) {
+      .item-ui-color-visited;
+    }
+
+    & when (@content-ui-btn-style = outline) {
+      .item-ui-color-outline-visited;
+    }
   }
 
   // Numbered pins

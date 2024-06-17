@@ -4,18 +4,38 @@
   }
 
   &__retry-btn {
-    .btn-color;
+    & when (@button-style = filled) {
+      .btn-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .btn-color-hover;
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .btn-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .btn-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .btn-color-focus;
+    & when (@button-style = outline) {
+      .btn-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .btn-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .btn-color-outline-focus;
+      }
     }
   }
 
   &__retry-btn.is-disabled {
-    .btn-color-disabled;
+    & when (@button-style = filled) {
+      .btn-color-disabled;
+    }
+
+    & when (@button-style = outline) {
+      .btn-color-outline-disabled;
+    }
   }
 }

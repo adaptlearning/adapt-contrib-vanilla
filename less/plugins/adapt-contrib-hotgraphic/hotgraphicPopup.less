@@ -9,18 +9,37 @@
   &__controls,
   &__close {
     .ui-btn-ctrl;
-    .notify-ui-btn-ctrl-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .notify-ui-btn-ctrl-color-hover;
+    & when (@notify-ui-btn-style = filled) {
+      .notify-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-focus;
+      }
+
+      &.is-disabled {
+        .notify-ui-btn-ctrl-color-disabled;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .notify-ui-btn-ctrl-color-focus;
-    }
+    & when (@notify-ui-btn-style = outline) {
+      .notify-ui-btn-ctrl-color-outline;
 
-    &.is-disabled {
-      .notify-ui-btn-ctrl-color-disabled;
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-outline-focus;
+      }
+
+      &.is-disabled {
+        .notify-ui-btn-ctrl-color-outline-disabled;
+      }
     }
   }
 

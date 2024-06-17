@@ -4,7 +4,7 @@
 @content-item-style: outline;
 @content-ui-btn-style: outline;
 @button-style: outline; // content-button
-@menu-item-btn: outline;
+@menu-item-btn-style: outline;
 @global-ui-btn-style: outline;
 @nav-ui-btn-style: @global-ui-btn-style;
 @notify-btn-style: outline;
@@ -175,6 +175,11 @@
 .item-ui-color-outline-visited() {
   .item-ui-color-visited;
   box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-visited inset;
+}
+
+.item-ui-color-outline-locked() {
+  .item-ui-color-locked;
+  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-locked inset;
 }
 
 .item-ui-color-outline-disabled() {
@@ -499,6 +504,11 @@
 .notify-ui-btn-ctrl-color-outline-focus() {
   .notify-ui-btn-ctrl-color-focus;
   box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-focus inset;
+}
+
+.notify-ui-btn-ctrl-color-outline-disabled() {
+  .notify-ui-btn-ctrl-color-disabled;
+  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-disabled inset;
 }
 
 // Plain

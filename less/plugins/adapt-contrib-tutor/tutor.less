@@ -19,14 +19,29 @@
 
   &__btn-icon {
     .ui-btn-ctrl;
-    .notify-ui-btn-ctrl-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .notify-ui-btn-ctrl-color-hover;
+    & when (@notify-ui-btn-style = filled) {
+      .notify-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .notify-ui-btn-ctrl-color-focus;
+    & when (@notify-ui-btn-style = outline) {
+      .notify-ui-btn-ctrl-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-outline-focus;
+      }
     }
   }
 
@@ -52,26 +67,54 @@
   }
 
   &-type-overlay &__btn {
-    .notify-btn-color;
+    & when (@notify-btn-style = filled) {
+      .notify-btn-color;
 
-    .no-touch &:hover {
-      .notify-btn-color-hover;
+      .no-touch &:hover {
+        .notify-btn-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-btn-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .notify-btn-color-focus;
+    & when (@notify-btn-style = outline) {
+      .notify-btn-color-outline;
+
+      .no-touch &:hover {
+        .notify-btn-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-btn-color-outline-focus;
+      }
     }
   }
 
   &-type-overlay &__btn-icon {
-    .notify-ui-btn-ctrl-color;
+    & when (@notify-ui-btn-style = filled) {
+      .notify-ui-btn-ctrl-color;
 
-    .no-touch &:hover {
-      .notify-ui-btn-ctrl-color-hover;
+      .no-touch &:hover {
+        .notify-ui-btn-ctrl-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .notify-ui-btn-ctrl-color-focus;
+    & when (@notify-ui-btn-style = outline) {
+      .notify-ui-btn-ctrl-color-outline;
+
+      .no-touch &:hover {
+        .notify-ui-btn-ctrl-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-outline-focus;
+      }
     }
   }
 }

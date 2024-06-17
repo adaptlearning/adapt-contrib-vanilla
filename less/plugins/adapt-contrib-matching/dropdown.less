@@ -6,23 +6,50 @@
     padding-inline: @item-padding (@icon-size + (@item-padding * 2));
     line-height: @body-line-height;
     text-align: start;
-    .item-color;
 
-    .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
-      .item-color-hover;
+    & when (@content-item-style = filled) {
+      .item-color;
+
+      .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
+        .item-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .item-color-focus;
+    & when (@content-item-style = outline) {
+      .item-color-outline;
+
+      .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
+        .item-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-color-outline-focus;
+      }
     }
   }
 
   &__btn.is-disabled {
-    .item-color-disabled;
+    & when (@content-item-style = filled) {
+      .item-color-disabled;
+    }
+
+    & when (@content-item-style = outline) {
+      .item-color-outline-disabled;
+    }
   }
 
   &__btn[aria-expanded="true"] {
-    .item-color-selected;
+    & when (@content-item-style = filled) {
+      .item-color-selected;
+    }
+
+    & when (@content-item-style = outline) {
+      .item-color-outline-selected;
+    }
   }
 
   &__icon {
@@ -44,25 +71,55 @@
 
 .dropdown-item {
   padding: @item-padding;
-  .item-color;
-  // border-bottom: 1px solid @item-color-hover;
 
-  // &:last-child {
-  //   border-bottom: none;
-  // }
+  & when (@content-item-style = filled) {
+    .item-color;
+    border-bottom: 1px solid @item-color-hover;
 
-  .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
-    .item-color-hover;
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
+      .item-color-hover;
+    }
+
+    &:focus-visible,
+    .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"] {
+      // This code can be used to style a non-native dropdown as closely
+      // as possible to the default browser settings
+      // background-color: Highlight;
+      // background-color: -webkit-focus-ring-color;
+      // color: white;
+
+      .item-color-selected;
+    }
   }
 
-  &:focus-visible,
-  .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"] {
-    // This code can be used to style a non-native dropdown as closely
-    // as possible to the default browser settings
-    // background-color: Highlight;
-    // background-color: -webkit-focus-ring-color;
-    // color: white;
+  & when (@content-item-style = outline) {
+    .item-color-outline;
+    // TODO review application of 'outline' styles vs existing border styles
+    // ? should border-bottom styles replace mixin box-shadow ?
+    
+    // border-bottom: 1px solid @item-color-hover;
 
-    .item-color-selected;
+    // &:last-child {
+    //   border-bottom: none;
+    // }
+
+    .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
+      .item-color-outline-hover;
+    }
+
+    &:focus-visible,
+    .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"] {
+      // This code can be used to style a non-native dropdown as closely
+      // as possible to the default browser settings
+      // background-color: Highlight;
+      // background-color: -webkit-focus-ring-color;
+      // color: white;
+
+      .item-color-outline-selected;
+    }
   }
 }

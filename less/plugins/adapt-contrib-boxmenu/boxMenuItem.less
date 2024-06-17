@@ -44,19 +44,39 @@
   }
 
   &__button {
-    .menu-item-btn-color;
+    & when (@menu-item-btn-style = filled) {
+      .menu-item-btn-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .menu-item-btn-color-hover;
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .menu-item-btn-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .menu-item-btn-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .menu-item-btn-color-focus;
+    & when (@menu-item-btn-style = outline) {
+      .menu-item-btn-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .menu-item-btn-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .menu-item-btn-color-outline-focus;
+      }
     }
   }
 
   &__button.is-locked {
-    .menu-item-btn-color-locked;
+    & when (@menu-item-btn-style = filled) {
+      .menu-item-btn-color-locked;
+    }
+
+    & when (@menu-item-btn-style = outline) {
+      .menu-item-btn-color-outline-locked;
+    }
   }
 
   &__status {

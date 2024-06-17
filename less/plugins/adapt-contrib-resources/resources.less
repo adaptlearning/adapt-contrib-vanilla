@@ -4,14 +4,30 @@
     .resources-filter-btn;
     border-bottom: 1px solid;
     border-right: 1px solid;
-    .drawer-item-color;
 
-    .no-touch &:not(.is-disabled):not(.is-selected):hover {
-      .drawer-item-color-hover;
+    & when (@drawer-item-style = filled) {
+      .drawer-item-color;
+
+      .no-touch &:not(.is-disabled):not(.is-selected):hover {
+        .drawer-item-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .drawer-item-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .drawer-item-color-focus;
+    // TODO review application of 'outline' styles vs existing border and box-shadow styles
+    & when (@drawer-item-style = outline) {
+      .drawer-item-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-selected):hover {
+        .drawer-item-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .drawer-item-color-outline-focus;
+      }
     }
 
     &:last-child {

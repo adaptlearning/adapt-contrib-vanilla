@@ -56,7 +56,7 @@
     margin: @notify-btn-margin;
     padding: @notify-btn-padding-ver @notify-btn-padding-hoz;
 
-    & when (@nav-ui-btn-style = filled) {
+    & when (@notify-btn-style = filled) {
       .notify-btn-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -68,7 +68,7 @@
       }
     }
 
-    & when (@nav-ui-btn-style = outline) {
+    & when (@notify-btn-style = outline) {
       .notify-btn-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {

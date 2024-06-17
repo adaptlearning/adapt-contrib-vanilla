@@ -1,22 +1,48 @@
 .trickle {
   &__btn {
-    .item-ui-color;
+    & when (@content-ui-btn-style = filled) {
+      .item-ui-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      .item-ui-color-hover;
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .item-ui-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-ui-color-focus;
+      }
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .item-ui-color-focus;
+    & when (@content-ui-btn-style = outline) {
+      .item-ui-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .item-ui-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-ui-color-outline-focus;
+      }
     }
   }
 
   &__btn.is-disabled {
-    .item-ui-color-disabled;
+    & when (@content-ui-btn-style = filled) {
+      .item-ui-color-disabled;
+    }
+
+    & when (@content-ui-btn-style = outline) {
+      .item-ui-color-outline-disabled;
+    }
   }
 
   &__btn.is-locked {
-    .item-ui-color-locked;
+    & when (@content-ui-btn-style = filled) {
+      .item-ui-color-locked;
+    }
+
+    & when (@content-ui-btn-style = outline) {
+      .item-ui-color-outline-locked;
+    }
   }
   
   &__btn-icon {
