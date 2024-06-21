@@ -4,7 +4,7 @@
   }
 
   &__retry-btn {
-    & when (@button-style = filled) {
+    & when (@btn-color-style = filled) {
       .btn-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -16,7 +16,7 @@
       }
     }
 
-    & when (@button-style = outline) {
+    & when (@btn-color-style = outline) {
       .btn-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -30,11 +30,11 @@
   }
 
   &__retry-btn.is-disabled {
-    & when (@button-style = filled) {
+    & when (@btn-color-style = filled) {
       .btn-color-disabled;
     }
 
-    & when (@button-style = outline) {
+    & when (@btn-color-style = outline) {
       .btn-color-outline-disabled;
     }
   }

@@ -9,25 +9,25 @@
     text-align: start;
     border-radius: @item-border-radius;
 
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color;
 
       .no-touch &:not(.is-selected):hover {
         .item-color-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .item-color-focus;
       }
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline;
 
       .no-touch &:not(.is-selected):hover {
         .item-color-outline-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .item-color-outline-focus;
       }
@@ -35,21 +35,21 @@
   }
 
   &__btn.is-visited {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-visited;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-visited;
     }
   }
 
   &__btn.is-selected {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-selected;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-selected;
     }
   }

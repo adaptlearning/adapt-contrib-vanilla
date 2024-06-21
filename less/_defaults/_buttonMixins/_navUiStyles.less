@@ -1,0 +1,56 @@
+// --------------------------------------------------
+// NAV UI COLOUR MIXINS
+// --------------------------------------------------
+
+// Default - Filled
+.nav-ui-btn-ctrl-color() {
+  background-color: @nav-icon;
+  color: @nav-icon-inverted;
+}
+
+.nav-ui-btn-ctrl-color-hover() {
+  background-color: @nav-icon-hover;
+  color: @nav-icon-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.nav-ui-btn-ctrl-color-focus() {
+  background-color: @nav-icon-focus;
+  color: @nav-icon-inverted-focus;
+}
+
+// Outline
+// TODO need to invert .pagelevelprogress__indicator border color
+.nav-ui-btn-ctrl-color-outline() {
+  background-color: @nav-icon-inverted;
+  color: @nav-icon;
+  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon inset;
+}
+
+.nav-ui-btn-ctrl-color-outline-hover() {
+  .nav-ui-btn-ctrl-color-hover;
+  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.nav-ui-btn-ctrl-color-outline-focus() {
+  .nav-ui-btn-ctrl-color-focus;
+  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon-focus inset;
+}
+
+// Plain
+.nav-ui-btn-ctrl-color-plain() {
+  background-color: transparent;
+  color: @nav-icon;
+}
+
+.nav-ui-btn-ctrl-color-plain-hover() {
+  background-color: transparent;
+  color: @nav-icon-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.nav-ui-btn-ctrl-color-plain-focus() {
+  background-color: transparent;
+  color: @nav-icon-focus;
+}

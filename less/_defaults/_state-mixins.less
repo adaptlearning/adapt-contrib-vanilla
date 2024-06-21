@@ -1,766 +1,135 @@
-// TODO separate mixins into separate 'button type' files
-
-// ! Temp button style vars - naming tbc
-@content-item-style: outline;
-@content-ui-btn-style: outline;
-@button-style: outline; // content-button
-@menu-item-btn-style: outline;
-@global-ui-btn-style: outline;
-@nav-ui-btn-style: @global-ui-btn-style;
-@notify-btn-style: outline;
-@notify-ui-btn-style: @global-ui-btn-style;
-@drawer-ui-btn-style: @global-ui-btn-style;
-@drawer-item-style: outline;
-
-// Content item
-// Default - Filled
-.item-color() {
-  background-color: @item-color;
-  color: @item-color-inverted;
-}
-
-.item-color-hover() {
-  background-color: @item-color-hover;
-  color: @item-color-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.item-color-focus() {
-  background-color: @item-color-focus;
-  color: @item-color-inverted-focus;
-}
-
-.item-color-selected() {
-  background-color: @item-color-selected;
-  color: @item-color-inverted-selected;
-}
-
-.item-color-visited() {
-  background-color: @visited;
-  color: @visited-inverted;
-}
-
-.item-color-disabled() {
-  background-color: @item-color-disabled;
-  color: @item-color-inverted-disabled;
-}
-
-// Outline
-.item-color-outline() {
-  background-color: @item-color-inverted;
-  color: @item-color;
-  box-shadow: 0 0 0 @item-color-border-width @item-color inset;
-}
-
-.item-color-outline-hover() {
-  .item-color-hover;
-  box-shadow: 0 0 0 @item-color-border-width @item-color-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.item-color-outline-focus() {
-  .item-color-focus;
-  box-shadow: 0 0 0 @item-color-border-width @item-color-focus inset;
-}
-
-.item-color-outline-selected() {
-  .item-color-selected;
-  box-shadow: 0 0 0 @item-color-border-width @item-color-selected inset;
-}
-
-.item-color-outline-visited() {
-  .item-color-visited;
-  box-shadow: 0 0 0 @item-color-border-width @item-color-visited inset;
-}
-
-.item-color-outline-disabled() {
-  .item-color-disabled;
-  box-shadow: 0 0 0 @item-color-border-width @item-color-disabled inset;
-}
-
-// Plain
-.item-color-plain() {
-  background-color: transparent;
-  color: @item-color;
-}
-
-.item-color-plain-hover() {
-  background-color: transparent;
-  color: @item-color-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.item-color-plain-focus() {
-  background-color: transparent;
-  color: @item-color-focus;
-}
-
-.item-color-plain-selected() {
-  background-color: transparent;
-  color: @item-color-selected;
-}
-
-.item-color-plain-locked() {
-  background-color: transparent;
-  color: @item-color-locked;
-}
-
-.item-color-plain-disabled() {
-  background-color: transparent;
-  color: @item-color-disabled;
-}
-
-
-// Content item ui button
-// Default - Filled
-.item-ui-color() {
-  background-color: @item-ui-color;
-  color: @item-ui-color-inverted;
-}
-
-.item-ui-color-hover() {
-  background-color: @item-ui-color-hover;
-  color: @item-ui-color-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.item-ui-color-focus() {
-  background-color: @item-ui-color-focus;
-  color: @item-ui-color-inverted-focus;
-}
-
-.item-ui-color-visited() {
-  background-color: @item-ui-color-visited;
-  color: @item-ui-color-inverted-visited;
-}
-
-.item-ui-color-selected() {
-  background-color: @item-ui-color-selected;
-  color: @item-ui-color-inverted-selected;
-}
-
-.item-ui-color-locked() {
-  background-color: @item-ui-color-locked;
-  color: @item-ui-color-inverted-locked;
-}
-
-.item-ui-color-disabled() {
-  background-color: @item-ui-color-disabled;
-  color: @item-ui-color-inverted-disabled;
-}
-
-// Outline
-.item-ui-color-outline() {
-  background-color: @item-ui-color-inverted;
-  color: @item-ui-color;
-  box-shadow: 0 0 0 @item-ui-color-border-width @item-color inset;
-}
-
-.item-ui-color-outline-hover() {
-  .item-ui-color-hover;
-  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.item-ui-color-outline-focus() {
-  .item-ui-color-focus;
-  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-focus inset;
-}
-
-.item-ui-color-outline-selected() {
-  .item-ui-color-selected;
-  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-selected inset;
-}
-
-.item-ui-color-outline-visited() {
-  .item-ui-color-visited;
-  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-visited inset;
-}
-
-.item-ui-color-outline-locked() {
-  .item-ui-color-locked;
-  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-locked inset;
-}
-
-.item-ui-color-outline-disabled() {
-  .item-ui-color-disabled;
-  box-shadow: 0 0 0 @item-ui-color-border-width @item-ui-color-disabled inset;
-}
-
-// Plain
-.item-ui-color-plain() {
-  background-color: transparent;
-  color: @item-ui-color;
-}
-
-.item-ui-color-plain-hover() {
-  background-color: transparent;
-  color: @item-ui-color-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.item-ui-color-plain-focus() {
-  background-color: transparent;
-  color: @item-ui-color-focus;
-}
-
-.item-ui-color-plain-selected() {
-  background-color: transparent;
-  color: @item-ui-color-selected;
-}
-
-.item-ui-color-plain-locked() {
-  background-color: transparent;
-  color: @item-ui-color-locked;
-}
-
-.item-ui-color-plain-disabled() {
-  background-color: transparent;
-  color: @item-ui-color-disabled;
-}
-
-
-// Content buttons
-// Default - Filled
-.btn-color() {
-  background-color: @btn-color;
-  color: @btn-color-inverted;
-}
-
-.btn-color-hover() {
-  background-color: @btn-color-hover;
-  color: @btn-color-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.btn-color-focus() {
-  background-color: @btn-color-focus;
-  color: @btn-color-inverted-focus;
-}
-
-.btn-color-selected() {
-  background-color: @btn-color-selected;
-  color: @btn-color-inverted-selected;
-}
-
-.btn-color-locked() {
-  background-color: @btn-color-locked;
-  color: @btn-color-inverted-locked;
-}
-
-.btn-color-disabled() {
-  background-color: @btn-color-disabled;
-  color: @btn-color-inverted-disabled;
-}
-
-// Outline
-.btn-color-outline() {
-  background-color: @btn-color-inverted;
-  color: @btn-color;
-  box-shadow: 0 0 0 @btn-color-border-width @btn-color inset;
-}
-
-.btn-color-outline-hover() {
-  .btn-color-hover;
-  box-shadow: 0 0 0 @btn-color-border-width @btn-color-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.btn-color-outline-focus() {
-  .btn-color-focus;
-  box-shadow: 0 0 0 @btn-color-border-width @btn-color-focus inset;
-}
-
-.btn-color-outline-selected() {
-  .btn-color-selected;
-  box-shadow: 0 0 0 @btn-color-border-width @btn-color-selected inset;
-}
-
-.btn-color-outline-locked() {
-  .btn-color-locked;
-  box-shadow: 0 0 0 @btn-color-border-width @btn-color-locked inset;
-}
-
-.btn-color-outline-disabled() {
-  .btn-color-disabled;
-  box-shadow: 0 0 0 @btn-color-border-width @btn-color-disabled inset;
-}
-
-// Plain
-.btn-color-plain() {
-  background-color: transparent;
-  color: @btn-color;
-}
-
-.btn-color-plain-hover() {
-  background-color: transparent;
-  color: @btn-color-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.btn-color-plain-focus() {
-  background-color: transparent;
-  color: @btn-color-focus;
-}
-
-.btn-color-plain-selected() {
-  background-color: transparent;
-  color: @btn-color-selected;
-}
-
-.btn-color-plain-locked() {
-  background-color: transparent;
-  color: @btn-color-locked;
-}
-
-.btn-color-plain-disabled() {
-  background-color: transparent;
-  color: @btn-color-disabled;
-}
-
-
-// Menu item
-// Default - Filled
-.menu-item-btn-color() {
-  background-color: @menu-item-btn-color;
-  color: @menu-item-btn-color-inverted;
-}
-
-.menu-item-btn-color-hover() {
-  background-color: @menu-item-btn-color-hover;
-  color: @menu-item-btn-color-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.menu-item-btn-color-focus() {
-  background-color: @menu-item-btn-color-focus;
-  color: @menu-item-btn-color-inverted-focus;
-}
-
-.menu-item-btn-color-locked() {
-  background-color: @menu-item-btn-color-locked;
-  color: @menu-item-btn-color-inverted-locked;
-}
-
-// Outline
-.menu-item-btn-color-outline() {
-  background-color: @menu-item-btn-color-inverted;
-  color: @menu-item-btn-color;
-  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color inset;
-}
-
-.menu-item-btn-color-outline-hover() {
-  .menu-item-btn-color-hover;
-  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.menu-item-btn-color-outline-focus() {
-  .menu-item-btn-color-focus;
-  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-focus inset;
-}
-
-.menu-item-btn-color-outline-selected() {
-  .menu-item-btn-color-selected;
-  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-selected inset;
-}
-
-.menu-item-btn-color-outline-locked() {
-  .menu-item-btn-color-locked;
-  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-locked inset;
-}
-
-.menu-item-btn-color-outline-disabled() {
-  .menu-item-btn-color-disabled;
-  box-shadow: 0 0 0 @menu-item-btn-color-border-width @menu-item-btn-color-disabled inset;
-}
-
-// Plain
-.menu-item-btn-color-plain() {
-  background-color: transparent;
-  color: @menu-item-btn-color;
-}
-
-.menu-item-btn-color-plain-hover() {
-  background-color: transparent;
-  color: @menu-item-btn-color-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.menu-item-btn-color-plain-focus() {
-  background-color: transparent;
-  color: @menu-item-btn-color-focus;
-}
-
-.menu-item-btn-color-plain-selected() {
-  background-color: transparent;
-  color: @menu-item-btn-color-selected;
-}
-
-.menu-item-btn-color-plain-locked() {
-  background-color: transparent;
-  color: @menu-item-btn-color-locked;
-}
-
-.menu-item-btn-color-plain-disabled() {
-  background-color: transparent;
-  color: @menu-item-btn-color-disabled;
-}
-
-
-// UI (nav, notify, drawer)
-
-// Nav UI
-// Default - Filled
-.nav-ui-btn-ctrl-color() {
-  background-color: @nav-icon;
-  color: @nav-icon-inverted;
-}
-
-.nav-ui-btn-ctrl-color-hover() {
-  background-color: @nav-icon-hover;
-  color: @nav-icon-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.nav-ui-btn-ctrl-color-focus() {
-  background-color: @nav-icon-focus;
-  color: @nav-icon-inverted-focus;
-}
-
-// Outline
-// TODO need to invert .pagelevelprogress__indicator border color
-.nav-ui-btn-ctrl-color-outline() {
-  background-color: @nav-icon-inverted;
-  color: @nav-icon;
-  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon inset;
-}
-
-.nav-ui-btn-ctrl-color-outline-hover() {
-  .nav-ui-btn-ctrl-color-hover;
-  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.nav-ui-btn-ctrl-color-outline-focus() {
-  .nav-ui-btn-ctrl-color-focus;
-  box-shadow: 0 0 0 @nav-icon-border-width @nav-icon-focus inset;
-}
-
-// Plain
-.nav-ui-btn-ctrl-color-plain() {
-  background-color: transparent;
-  color: @nav-icon;
-}
-
-.nav-ui-btn-ctrl-color-plain-hover() {
-  background-color: transparent;
-  color: @nav-icon-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.nav-ui-btn-ctrl-color-plain-focus() {
-  background-color: transparent;
-  color: @nav-icon-focus;
-}
-
-
-// Notify UI
-// Default - Filled
-.notify-ui-btn-ctrl-color() {
-  background-color: @notify-icon;
-  color: @notify-icon-inverted;
-}
-
-.notify-ui-btn-ctrl-color-hover() {
-  background-color: @notify-icon-hover;
-  color: @notify-icon-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.notify-ui-btn-ctrl-color-focus() {
-  background-color: @notify-icon-focus;
-  color: @notify-icon-inverted-focus;
-}
-
-.notify-ui-btn-ctrl-color-disabled() {
-  background-color: @notify-icon-disabled;
-  color: @notify-icon-inverted-disabled;
-}
-
-// Outline
-.notify-ui-btn-ctrl-color-outline() {
-  background-color: @notify-icon;
-  color: @notify-icon-inverted;
-  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-inverted inset;
-}
-
-.notify-ui-btn-ctrl-color-outline-hover() {
-  .notify-ui-btn-ctrl-color-hover;
-  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.notify-ui-btn-ctrl-color-outline-focus() {
-  .notify-ui-btn-ctrl-color-focus;
-  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-focus inset;
-}
-
-.notify-ui-btn-ctrl-color-outline-disabled() {
-  .notify-ui-btn-ctrl-color-disabled;
-  box-shadow: 0 0 0 @notify-icon-border-width @notify-icon-disabled inset;
-}
-
-// Plain
-.notify-ui-btn-ctrl-color-plain() {
-  background-color: transparent;
-  color: @notify-icon-inverted;
-}
-
-.notify-ui-btn-ctrl-color-plain-hover() {
-  background-color: transparent;
-  color: @notify-icon-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.notify-ui-btn-ctrl-color-plain-focus() {
-  background-color: transparent;
-  color: @notify-icon-focus;
-}
-
-
-
-// Notify button
-// Default - Filled
-.notify-btn-color() {
-  background-color: @notify-btn;
-  color: @notify-btn-inverted;
-}
-
-.notify-btn-color-hover() {
-  background-color: @notify-btn-hover;
-  color: @notify-btn-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.notify-btn-color-focus() {
-  background-color: @notify-btn-focus;
-  color: @notify-btn-inverted-focus;
-}
-
-.notify-btn-color-selected() {
-  background-color: @notify-btn-selected;
-  color: @notify-btn-inverted-selected;
-}
-
-.notify-btn-color-locked() {
-  background-color: @notify-btn-locked;
-  color: @notify-btn-inverted-locked;
-}
-
-.notify-btn-color-disabled() {
-  background-color: @notify-btn-disabled;
-  color: @notify-btn-inverted-disabled;
-}
-
-// Outline
-.notify-btn-color-outline() {
-  background-color: @notify-btn-inverted;
-  color: @notify-btn;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn inset;
-}
-
-.notify-btn-color-outline-hover() {
-  .notify-btn-color-hover;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.notify-btn-color-outline-focus() {
-  .notify-btn-color-focus;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-focus inset;
-}
-
-.notify-btn-color-outline-selected() {
-  .notify-btn-color-selected;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-selected inset;
-}
-
-.notify-btn-color-outline-locked() {
-  .notify-btn-color-locked;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-locked inset;
-}
-
-.notify-btn-color-outline-disabled() {
-  .notify-btn-color-disabled;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-disabled inset;
-}
-
-// Plain
-.notify-btn-color-plain() {
-  background-color: transparent;
-  color: @notify-btn;
-}
-
-.notify-btn-color-plain-hover() {
-  background-color: transparent;
-  color: @notify-btn-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.notify-btn-color-plain-focus() {
-  background-color: transparent;
-  color: @notify-btn-focus;
-}
-
-.notify-btn-color-plain-selected() {
-  background-color: transparent;
-  color: @notify-btn-selected;
-}
-
-.notify-btn-color-plain-locked() {
-  background-color: transparent;
-  color: @notify-btn-locked;
-}
-
-.notify-btn-color-plain-disabled() {
-  background-color: transparent;
-  color: @notify-btn-disabled;
-}
-
-
-// Drawer UI
-// Default - Filled
-.drawer-ui-btn-ctrl-color() {
-  background-color: @drawer-icon;
-  color: @drawer-icon-inverted;
-}
-
-.drawer-ui-btn-ctrl-color-hover() {
-  background-color: @drawer-icon-hover;
-  color: @drawer-icon-inverted-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.drawer-ui-btn-ctrl-color-focus() {
-  background-color: @drawer-icon-focus;
-  color: @drawer-icon-inverted-focus;
-}
-
-// Outline
-.drawer-ui-btn-ctrl-color-outline() {
-  background-color: @drawer-icon;
-  color: @drawer-icon-inverted;
-  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon-inverted inset;
-}
-
-.drawer-ui-btn-ctrl-color-outline-hover() {
-  .drawer-ui-btn-ctrl-color-hover;
-  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.drawer-ui-btn-ctrl-color-outline-focus() {
-  .drawer-ui-btn-ctrl-color-focus;
-  box-shadow: 0 0 0 @drawer-icon-border-width @drawer-icon-focus inset;
-}
-
-// Plain
-.drawer-ui-btn-ctrl-color-plain() {
-  background-color: transparent;
-  color: @drawer-icon-inverted;
-}
-
-.drawer-ui-btn-ctrl-color-plain-hover() {
-  background-color: transparent;
-  color: @drawer-icon-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.drawer-ui-btn-ctrl-color-plain-focus() {
-  background-color: transparent;
-  color: @drawer-icon-focus;
-}
-
-// Drawer item
-// Default - Filled
-.drawer-item-color() {
-  background-color: @drawer-item;
-  color: @drawer-item-inverted;
-  border-color: @drawer-item-hover;
-}
-
-.drawer-item-color-hover() {
-  background-color: @drawer-item-hover;
-  color: @drawer-item-inverted-hover;
-  border-color: @drawer-item-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in, border @duration ease-in;);
-}
-
-.drawer-item-color-focus() {
-  background-color: @drawer-item-focus;
-  color: @drawer-item-inverted-focus;
-  border-color: @drawer-item-focus;
-}
-
-.drawer-item-color-locked() {
-  background-color: @disabled;
-  color: @disabled-inverted;
-  border-color: @drawer-item-hover;
-}
-
-.drawer-item-color-selected() {
-  background-color: @drawer-item-selected;
-  color: @drawer-item-inverted-selected;
-  border-color: @drawer-item-hover;
-}
-
-// Outline
-.drawer-item-color-outline() {
-  background-color: @drawer-item-inverted;
-  color: @drawer-item;
-  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item inset;
-}
-
-.drawer-item-color-outline-hover() {
-  .drawer-item-color-hover;
-  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-hover inset;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
-
-.drawer-item-color-outline-focus() {
-  .drawer-item-color-focus;
-  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-focus inset;
-}
-
-.drawer-item-color-outline-selected() {
-  .drawer-item-color-selected;
-  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-selected inset;
-}
-
-.drawer-item-color-outline-locked() {
-  .drawer-item-color-locked;
-  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-locked inset;
-}
-
-// Plain
-.drawer-item-color-plain() {
-  background-color: transparent;
-  color: @drawer-item;
-}
-
-.drawer-item-color-plain-hover() {
-  background-color: transparent;
-  color: @drawer-item-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
-
-.drawer-item-color-plain-focus() {
-  background-color: transparent;
-  color: @drawer-item-focus;
-}
-
-.drawer-item-color-plain-selected() {
-  background-color: transparent;
-  color: @drawer-item-selected;
-}
+// ! TODO Temp button style vars - naming tbc
+// PR required - https://github.com/adaptlearning/adapt_framework/pull/3578
+// config.json
+  // "themeVariables": {
+  //   "_styles": {
+  //     "item-color-style": "outline",
+  //     "item-ui-color-style": "outline",
+  //     "btn-color-style": "outline",
+  //     "menu-item-btn-color-style": "outline",
+  //     "ui-color-style": "outline",
+  //     "nav-ui-btn-ctrl-color-style": "outline",
+  //     "notify-ui-btn-ctrl-color-style": "outline",
+  //     "notify-btn-color-style": "outline",
+  //     "drawer-ui-btn-ctrl-color-style": "outline",
+  //     "drawer-item-color-style": "outline"
+  //   },
+  //   "_global": {
+  //     "font-color": "",
+  //     "font-color-inverted": "",
+  //     "link": "",
+  //     "link-inverted": "",
+  //     "link-hover": "",
+  //     "link-inverted-hover": "",
+  //     "heading-color": "",
+  //     "heading-color-inverted": ""
+  //   },
+  //   "_items": {
+  //     "item-color": "",
+  //     "item-color-inverted": "",
+  //     "item-color-hover": "",
+  //     "item-color-inverted-hover": "",
+  //     "item-color-selected": "",
+  //     "item-color-inverted-selected": "",
+  //     "visited": "",
+  //     "visited-inverted": ""
+  //   },
+  //   "_buttons": {
+  //     "btn-color": "",
+  //     "btn-color-inverted": "",
+  //     "btn-color-hover": "",
+  //     "btn-color-inverted-hover": "",
+  //     "btn-icon-color": "",
+  //     "btn-icon-color-inverted": "",
+  //     "btn-icon-color-hover": "",
+  //     "btn-icon-color-inverted-hover": "",
+  //     "disabled": "",
+  //     "disabled-inverted": ""
+  //   },
+  //   "_validation": {
+  //     "validation-success": "",
+  //     "validation-success-inverted": "",
+  //     "validation-error": "",
+  //     "validation-error-inverted": ""
+  //   },
+  //   "_progress": {
+  //     "progress": "",
+  //     "progress-inverted": "",
+  //     "progress-border": ""
+  //   },
+  //   "_menu": {
+  //     "menu-header-background-color": "",
+  //     "menu-header-title-color": "",
+  //     "menu-header-subtitle-color": "",
+  //     "menu-header-body-color": "",
+  //     "menu-header-instruction-color": "",
+  //     "menu-item": "",
+  //     "menu-item-inverted": "",
+  //     "menu-item-border-color": "",
+  //     "menu-item-progress": "",
+  //     "menu-item-progress-inverted": "",
+  //     "menu-item-progress-border": "",
+  //     "menu-item-btn-color": "green",
+  //     "menu-item-btn-color-inverted": "",
+  //     "menu-item-btn-color-hover": "",
+  //     "menu-item-btn-color-inverted-hover": ""
+  //   },
+  //   "_nav": {
+  //     "nav": "",
+  //     "nav-inverted": "",
+  //     "nav-icon": "",
+  //     "nav-icon-inverted": "",
+  //     "nav-icon-hover": "",
+  //     "nav-icon-inverted-hover": "",
+  //     "nav-progress": "",
+  //     "nav-progress-inverted": "",
+  //     "nav-progress-border": "",
+  //     "nav-progress-hover": "",
+  //     "nav-progress-inverted-hover": "",
+  //     "nav-progress-border-hover": ""
+  //   },
+  //   "_notify": {
+  //     "notify": "",
+  //     "notify-inverted": "",
+  //     "notify-link": "",
+  //     "notify-link-hover": "",
+  //     "notify-btn": "",
+  //     "notify-btn-inverted": "",
+  //     "notify-btn-hover": "",
+  //     "notify-btn-inverted-hover": "",
+  //     "notify-icon": "",
+  //     "notify-icon-inverted": "",
+  //     "notify-icon-hover": "",
+  //     "notify-icon-inverted-hover": ""
+  //   },
+  //   "_drawer": {
+  //     "drawer": "",
+  //     "drawer-inverted": "",
+  //     "drawer-link": "",
+  //     "drawer-link-hover": "",
+  //     "drawer-icon": "",
+  //     "drawer-icon-inverted": "",
+  //     "drawer-icon-hover": "",
+  //     "drawer-icon-inverted-hover": "",
+  //     "drawer-item": "",
+  //     "drawer-item-inverted": "",
+  //     "drawer-item-hover": "",
+  //     "drawer-item-inverted-hover": "",
+  //     "drawer-item-selected": "",
+  //     "drawer-item-inverted-selected": "",
+  //     "drawer-progress": "",
+  //     "drawer-progress-inverted": "",
+  //     "drawer-progress-border": "",
+  //     "drawer-progress-hover": "",
+  //     "drawer-progress-inverted-hover": "",
+  //     "drawer-progress-border-hover": ""
+  //   },
+  //   "_misc": {
+  //     "background": "",
+  //     "background-inverted": "",
+  //     "shadow": "",
+  //     "shadow-inverted": "",
+  //     "loading": "",
+  //     "loading-inverted": ""
+  //   }
+  // }

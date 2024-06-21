@@ -3,7 +3,7 @@
     margin-bottom: @item-margin / 2;
     border-radius: @item-border-radius;
 
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color;
 
       .no-touch &:not(.is-disabled):not(.is-selected):hover {
@@ -15,7 +15,7 @@
       }
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-selected):hover {
@@ -33,21 +33,21 @@
   }
 
   &__label.is-disabled {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-disabled;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-disabled;
     }
   }
 
   &__label.is-selected {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-selected;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-selected;
     }
   }

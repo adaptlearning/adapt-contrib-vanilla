@@ -7,7 +7,7 @@
     padding: @item-padding;
     border-radius: @item-border-radius;
 
-    & when (@content-ui-btn-style = filled) {
+    & when (@item-ui-color-style = filled) {
       .item-ui-color;
 
       .no-touch &:not([aria-expanded="true"]):hover {
@@ -19,7 +19,7 @@
       }
     }
 
-    & when (@content-ui-btn-style = outline) {
+    & when (@item-ui-color-style = outline) {
       .item-ui-color-outline;
 
       .no-touch &:not([aria-expanded="true"]):hover {
@@ -33,21 +33,21 @@
   }
 
   &.is-complete &__transcript-btn {
-    & when (@content-ui-btn-style = filled) {
+    & when (@item-ui-color-style = filled) {
       .item-ui-color-visited;
     }
 
-    & when (@content-ui-btn-style = outline) {
+    & when (@item-ui-color-style = outline) {
       .item-ui-color-outline-visited;
     }
   }
 
   &__transcript-btn[aria-expanded="true"] {
-    & when (@content-ui-btn-style = filled) {
+    & when (@item-ui-color-style = filled) {
       .item-ui-color-selected;
     }
 
-    & when (@content-ui-btn-style = outline) {
+    & when (@item-ui-color-style = outline) {
       .item-ui-color-outline-selected;
     }
   }

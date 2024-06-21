@@ -1,0 +1,100 @@
+// --------------------------------------------------
+// ITEM COLOUR MIXINS
+// --------------------------------------------------
+
+// Default - Filled
+.item-color() {
+  background-color: @item-color;
+  color: @item-color-inverted;
+}
+
+.item-color-hover() {
+  background-color: @item-color-hover;
+  color: @item-color-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.item-color-focus() {
+  background-color: @item-color-focus;
+  color: @item-color-inverted-focus;
+}
+
+.item-color-selected() {
+  background-color: @item-color-selected;
+  color: @item-color-inverted-selected;
+}
+
+.item-color-visited() {
+  background-color: @visited;
+  color: @visited-inverted;
+}
+
+.item-color-disabled() {
+  background-color: @item-color-disabled;
+  color: @item-color-inverted-disabled;
+}
+
+// Outline
+.item-color-outline() {
+  background-color: @item-color-inverted;
+  color: @item-color;
+  box-shadow: 0 0 0 @item-color-border-width @item-color inset;
+}
+
+.item-color-outline-hover() {
+  .item-color-hover;
+  box-shadow: 0 0 0 @item-color-border-width @item-color-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.item-color-outline-focus() {
+  .item-color-focus;
+  box-shadow: 0 0 0 @item-color-border-width @item-color-focus inset;
+}
+
+.item-color-outline-selected() {
+  .item-color-selected;
+  box-shadow: 0 0 0 @item-color-border-width @item-color-selected inset;
+}
+
+.item-color-outline-visited() {
+  .item-color-visited;
+  box-shadow: 0 0 0 @item-color-border-width @item-color-visited inset;
+}
+
+.item-color-outline-disabled() {
+  .item-color-disabled;
+  box-shadow: 0 0 0 @item-color-border-width @item-color-disabled inset;
+}
+
+// Plain
+.item-color-plain() {
+  background-color: transparent;
+  color: @item-color;
+}
+
+.item-color-plain-hover() {
+  background-color: transparent;
+  color: @item-color-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.item-color-plain-focus() {
+  background-color: transparent;
+  color: @item-color-focus;
+}
+
+.item-color-plain-selected() {
+  background-color: transparent;
+  color: @item-color-selected;
+}
+
+.item-color-plain-locked() {
+  background-color: transparent;
+  color: @item-color-locked;
+}
+
+.item-color-plain-disabled() {
+  background-color: transparent;
+  color: @item-color-disabled;
+}

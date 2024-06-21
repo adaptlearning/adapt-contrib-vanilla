@@ -20,7 +20,7 @@
   &__btn-icon {
     .ui-btn-ctrl;
 
-    & when (@notify-ui-btn-style = filled) {
+    & when (@notify-ui-btn-ctrl-color-style = filled) {
       .notify-ui-btn-ctrl-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -32,7 +32,7 @@
       }
     }
 
-    & when (@notify-ui-btn-style = outline) {
+    & when (@notify-ui-btn-ctrl-color-style = outline) {
       .notify-ui-btn-ctrl-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -67,7 +67,7 @@
   }
 
   &-type-overlay &__btn {
-    & when (@notify-btn-style = filled) {
+    & when (@notify-btn-color-style = filled) {
       .notify-btn-color;
 
       .no-touch &:hover {
@@ -79,7 +79,7 @@
       }
     }
 
-    & when (@notify-btn-style = outline) {
+    & when (@notify-btn-color-style = outline) {
       .notify-btn-color-outline;
 
       .no-touch &:hover {
@@ -93,7 +93,7 @@
   }
 
   &-type-overlay &__btn-icon {
-    & when (@notify-ui-btn-style = filled) {
+    & when (@notify-ui-btn-ctrl-color-style = filled) {
       .notify-ui-btn-ctrl-color;
 
       .no-touch &:hover {
@@ -105,7 +105,7 @@
       }
     }
 
-    & when (@notify-ui-btn-style = outline) {
+    & when (@notify-ui-btn-ctrl-color-style = outline) {
       .notify-ui-btn-ctrl-color-outline;
 
       .no-touch &:hover {

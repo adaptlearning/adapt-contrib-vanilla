@@ -12,25 +12,25 @@
       border: @drawer-item-border-width solid;
     }
 
-    & when (@drawer-item-style = filled) {
+    & when (@drawer-item-color-style = filled) {
       .drawer-item-color();
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .drawer-item-color-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .drawer-item-color-focus;
       }
     }
 
-    & when (@drawer-item-style = outline) {
+    & when (@drawer-item-color-style = outline) {
       .drawer-item-color-outline();
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .drawer-item-color-outline-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .drawer-item-color-outline-focus;
       }
@@ -39,11 +39,11 @@
 
   &__item-btn.is-locked,
   &__item-btn.is-disabled {
-    & when (@drawer-item-style = filled) {
+    & when (@drawer-item-color-style = filled) {
       .drawer-item-color-locked;
     }
 
-    & when (@drawer-item-style = outline) {
+    & when (@drawer-item-color-style = outline) {
       .drawer-item-color-outline-locked;
     }
   }
@@ -51,11 +51,11 @@
   // aria-current="true" is used by languagePicker
   &__item-btn[aria-current="true"],
   &__item-btn.is-selected {
-    & when (@drawer-item-style = filled) {
+    & when (@drawer-item-color-style = filled) {
       .drawer-item-color-selected;
     }
 
-    & when (@drawer-item-style = outline) {
+    & when (@drawer-item-color-style = outline) {
       .drawer-item-color-outline-selected;
     }
   }

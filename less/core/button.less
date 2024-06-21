@@ -1,10 +1,9 @@
-@button-style: outline;
 .btn {
   &__container {
     margin-top: @btn-margin;
   }
 
-  // TODO Move generic button styling to new file
+  // ! TODO Move generic button styling to new file
   &-text {
     .button-text;
   }
@@ -22,17 +21,14 @@
   }
   // TODO END
 
-  // TODO
-  // undo overrides
-  // currently implemented for testing purposes
   &__action {
-    & when (@button-style = filled) {
+    & when (@btn-color-style = filled) {
       .btn-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .btn-color-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .btn-color-focus;
       }
@@ -42,13 +38,13 @@
       }
     }
 
-    & when (@button-style = outline) {
+    & when (@btn-color-style = outline) {
       .btn-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .btn-color-outline-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .btn-color-outline-focus;
       }
@@ -60,13 +56,13 @@
   }
 
   &__feedback {
-    & when (@button-style = filled) {
+    & when (@btn-color-style = filled) {
       .btn-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .btn-color-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .btn-color-focus;
       }
@@ -76,13 +72,13 @@
       }
     }
 
-    & when (@button-style = outline) {
+    & when (@btn-color-style = outline) {
       .btn-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .btn-color-outline-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .btn-color-outline-focus;
       }
@@ -92,7 +88,6 @@
       }
     }
   }
-  // end
 
   &__marking {
     padding: @item-padding * 0.75;

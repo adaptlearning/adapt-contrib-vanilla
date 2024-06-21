@@ -56,25 +56,25 @@
     margin: @notify-btn-margin;
     padding: @notify-btn-padding-ver @notify-btn-padding-hoz;
 
-    & when (@notify-btn-style = filled) {
+    & when (@notify-btn-color-style = filled) {
       .notify-btn-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .notify-btn-color-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .notify-btn-color-focus;
       }
     }
 
-    & when (@notify-btn-style = outline) {
+    & when (@notify-btn-color-style = outline) {
       .notify-btn-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .notify-btn-color-outline-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .notify-btn-color-outline-focus;
       }
@@ -82,11 +82,11 @@
   }
 
   &__btn.is-disabled {
-    & when (@notify-btn-style = filled) {
+    & when (@notify-btn-color-style = filled) {
       .notify-btn-color-disabled;
     }
 
-    & when (@notify-btn-style = outline) {
+    & when (@notify-btn-color-style = outline) {
       .notify-btn-color-outline-disabled;
     }
   }
@@ -95,25 +95,25 @@
   &__btn-icon {
     .ui-btn-ctrl;
 
-    & when (@notify-btn-style = filled) {
+    & when (@notify-btn-color-style = filled) {
       .notify-ui-btn-ctrl-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .notify-ui-btn-ctrl-color-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .notify-ui-btn-ctrl-color-focus;
       }
     }
 
-    & when (@notify-btn-style = outline) {
+    & when (@notify-btn-color-style = outline) {
       .notify-ui-btn-ctrl-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .notify-ui-btn-ctrl-color-outline-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .notify-ui-btn-ctrl-color-outline-focus;
       }

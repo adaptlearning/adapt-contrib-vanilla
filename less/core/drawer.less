@@ -9,25 +9,25 @@
   &__btn {
     .ui-btn-ctrl;
 
-    & when (@drawer-ui-btn-style = filled) {
+    & when (@drawer-ui-btn-ctrl-color-style = filled) {
       .drawer-ui-btn-ctrl-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .drawer-ui-btn-ctrl-color-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .drawer-ui-btn-ctrl-color-focus;
       }
     }
 
-    & when (@drawer-ui-btn-style = outline) {
+    & when (@drawer-ui-btn-ctrl-color-style = outline) {
       .drawer-ui-btn-ctrl-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .drawer-ui-btn-ctrl-color-outline-hover;
       }
-  
+
       html:not(.a11y-disable-focusoutline) &:focus-visible {
         .drawer-ui-btn-ctrl-color-outline-focus;
       }

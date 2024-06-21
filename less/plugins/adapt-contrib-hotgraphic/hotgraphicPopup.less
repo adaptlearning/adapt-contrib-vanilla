@@ -10,7 +10,7 @@
   &__close {
     .ui-btn-ctrl;
 
-    & when (@notify-ui-btn-style = filled) {
+    & when (@notify-ui-btn-ctrl-color-style = filled) {
       .notify-ui-btn-ctrl-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -26,7 +26,7 @@
       }
     }
 
-    & when (@notify-ui-btn-style = outline) {
+    & when (@notify-ui-btn-ctrl-color-style = outline) {
       .notify-ui-btn-ctrl-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {

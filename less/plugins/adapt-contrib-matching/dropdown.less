@@ -7,7 +7,7 @@
     line-height: @body-line-height;
     text-align: start;
 
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color;
 
       .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
@@ -19,7 +19,7 @@
       }
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline;
 
       .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
@@ -33,21 +33,21 @@
   }
 
   &__btn.is-disabled {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-disabled;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-disabled;
     }
   }
 
   &__btn[aria-expanded="true"] {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-selected;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-selected;
     }
   }
@@ -72,7 +72,7 @@
 .dropdown-item {
   padding: @item-padding;
 
-  & when (@content-item-style = filled) {
+  & when (@item-color-style = filled) {
     .item-color;
     border-bottom: 1px solid @item-color-hover;
 
@@ -96,11 +96,11 @@
     }
   }
 
-  & when (@content-item-style = outline) {
+  & when (@item-color-style = outline) {
     .item-color-outline;
     // TODO review application of 'outline' styles vs existing border styles
     // ? should border-bottom styles replace mixin box-shadow ?
-    
+
     // border-bottom: 1px solid @item-color-hover;
 
     // &:last-child {

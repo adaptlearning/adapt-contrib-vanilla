@@ -12,51 +12,51 @@
     padding: @item-padding / 2;
     border-radius: @item-border-radius;
 
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline;
     }
   }
 
   .no-touch &__label:not(.is-disabled):not(.is-selected):hover &__option {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-hover;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-hover;
     }
   }
 
   html:not(.a11y-disable-focusoutline) &__input:focus-visible + &__label &__option {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-focus;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-focus;
     }
   }
 
   &__label.is-disabled &__option {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-disabled;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-disabled;
     }
   }
 
   &__label.is-selected &__option {
-    & when (@content-item-style = filled) {
+    & when (@item-color-style = filled) {
       .item-color-selected;
     }
 
-    & when (@content-item-style = outline) {
+    & when (@item-color-style = outline) {
       .item-color-outline-selected;
     }
   }
