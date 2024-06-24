@@ -3,12 +3,12 @@
     margin-top: @btn-margin;
   }
 
-  // ! TODO Move generic button styling to new file
   &-text {
     .button-text;
   }
 
   &-text {
+    // ! TODO set border-radius vars per button type
     border-radius: @btn-border-radius;
   }
 
@@ -18,51 +18,5 @@
 
   &-icon.is-locked {
     cursor: not-allowed;
-  }
-  // ! TODO END
-
-  &__action,
-  &__feedback {
-    & when (@btn-color-style = filled) {
-      .btn-color;
-
-      .no-touch &:not(.is-disabled):not(.is-locked):hover {
-        .btn-color-hover;
-      }
-
-      html:not(.a11y-disable-focusoutline) &:focus-visible {
-        .btn-color-focus;
-      }
-
-      &.is-disabled {
-        .btn-color-disabled;
-      }
-    }
-
-    & when (@btn-color-style = outline) {
-      .btn-color-outline;
-
-      .no-touch &:not(.is-disabled):not(.is-locked):hover {
-        .btn-color-outline-hover;
-      }
-
-      html:not(.a11y-disable-focusoutline) &:focus-visible {
-        .btn-color-outline-focus;
-      }
-
-      &.is-disabled {
-        .btn-color-outline-disabled;
-      }
-    }
-  }
-
-  &__marking {
-    padding: @item-padding * 0.75;
-    border-radius: 50%;
-  }
-
-  .can-show-marking &__action.is-full-width,
-  .can-show-marking &__feedback.is-full-width {
-    margin-inline-end: @icon-size + (@item-margin * 2) + ((@item-padding * 0.75) * 2);
   }
 }
