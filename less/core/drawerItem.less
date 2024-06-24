@@ -11,8 +11,10 @@
       width: calc(100% ~'-' @total-margin);
       border: @drawer-item-border-width solid;
     }
+  }
 
-    & when (@drawer-item-color-style = filled) {
+  & when (@drawer-item-color-style = filled) {
+    &__item-btn {
       .drawer-item-color();
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -24,7 +26,20 @@
       }
     }
 
-    & when (@drawer-item-color-style = outline) {
+    &__item-btn.is-locked,
+    &__item-btn.is-disabled {
+      .drawer-item-color-locked;
+    }
+
+    // aria-current="true" is used by languagePicker
+    &__item-btn[aria-current="true"],
+    &__item-btn.is-selected {
+      .drawer-item-color-selected;
+    }
+  }
+
+  & when (@drawer-item-color-style = outline) {
+    &__item-btn {
       .drawer-item-color-outline();
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -35,27 +50,15 @@
         .drawer-item-color-outline-focus;
       }
     }
-  }
 
-  &__item-btn.is-locked,
-  &__item-btn.is-disabled {
-    & when (@drawer-item-color-style = filled) {
-      .drawer-item-color-locked;
-    }
-
-    & when (@drawer-item-color-style = outline) {
+    &__item-btn.is-locked,
+    &__item-btn.is-disabled {
       .drawer-item-color-outline-locked;
     }
-  }
 
-  // aria-current="true" is used by languagePicker
-  &__item-btn[aria-current="true"],
-  &__item-btn.is-selected {
-    & when (@drawer-item-color-style = filled) {
-      .drawer-item-color-selected;
-    }
-
-    & when (@drawer-item-color-style = outline) {
+    // aria-current="true" is used by languagePicker
+    &__item-btn[aria-current="true"],
+    &__item-btn.is-selected {
       .drawer-item-color-outline-selected;
     }
   }
