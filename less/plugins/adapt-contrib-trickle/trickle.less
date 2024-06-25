@@ -1,6 +1,6 @@
 .trickle {
-  &__btn {
-    & when (@item-ui-color-style = filled) {
+  & when (@item-ui-color-style = filled) {
+    &__btn {
       .item-ui-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -12,7 +12,17 @@
       }
     }
 
-    & when (@item-ui-color-style = outline) {
+    &__btn.is-disabled {
+      .item-ui-color-disabled;
+    }
+
+    &__btn.is-locked {
+      .item-ui-color-locked;
+    }
+  }
+
+  & when (@item-ui-color-style = outline) {
+    &__btn {
       .item-ui-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -23,24 +33,12 @@
         .item-ui-color-outline-focus;
       }
     }
-  }
 
-  &__btn.is-disabled {
-    & when (@item-ui-color-style = filled) {
-      .item-ui-color-disabled;
-    }
-
-    & when (@item-ui-color-style = outline) {
+    &__btn.is-disabled {
       .item-ui-color-outline-disabled;
     }
-  }
 
-  &__btn.is-locked {
-    & when (@item-ui-color-style = filled) {
-      .item-ui-color-locked;
-    }
-
-    & when (@item-ui-color-style = outline) {
+    &__btn.is-locked {
       .item-ui-color-outline-locked;
     }
   }

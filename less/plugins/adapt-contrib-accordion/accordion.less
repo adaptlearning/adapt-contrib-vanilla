@@ -8,8 +8,10 @@
     padding-inline: @item-padding (@icon-size + (@item-padding * 2));
     text-align: start;
     border-radius: @item-border-radius;
+  }
 
-    & when (@item-color-style = filled) {
+  & when (@item-color-style = filled) {
+    &__btn {
       .item-color;
 
       .no-touch &:not(.is-selected):hover {
@@ -21,7 +23,17 @@
       }
     }
 
-    & when (@item-color-style = outline) {
+    &__btn.is-visited {
+      .item-color-visited;
+    }
+
+    &__btn.is-selected {
+      .item-color-selected;
+    }
+  }
+
+  & when (@item-color-style = outline) {
+    &__btn {
       .item-color-outline;
 
       .no-touch &:not(.is-selected):hover {
@@ -32,24 +44,12 @@
         .item-color-outline-focus;
       }
     }
-  }
 
-  &__btn.is-visited {
-    & when (@item-color-style = filled) {
-      .item-color-visited;
-    }
-
-    & when (@item-color-style = outline) {
+    &__btn.is-visited {
       .item-color-outline-visited;
     }
-  }
 
-  &__btn.is-selected {
-    & when (@item-color-style = filled) {
-      .item-color-selected;
-    }
-
-    & when (@item-color-style = outline) {
+    &__btn.is-selected {
       .item-color-outline-selected;
     }
   }

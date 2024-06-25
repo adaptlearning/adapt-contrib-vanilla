@@ -8,8 +8,8 @@
     .link-text;
   }
 
-  &__controls {
-    & when (@item-ui-color-style = filled) {
+  & when (@item-ui-color-style = filled) {
+    &__controls {
       .item-ui-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -21,7 +21,13 @@
       }
     }
 
-    & when (@item-ui-color-style = outline) {
+    &__controls.is-disabled {
+      .item-ui-color-disabled;
+    }
+  }
+
+  & when (@item-ui-color-style = outline) {
+    &__controls {
       .item-ui-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -32,14 +38,8 @@
         .item-ui-color-outline-focus;
       }
     }
-  }
 
-  &__controls.is-disabled {
-    & when (@item-ui-color-style = filled) {
-      .item-ui-color-disabled;
-    }
-
-    & when (@item-ui-color-style = outline) {
+    &__controls.is-disabled {
       .item-ui-color-outline-disabled;
     }
   }
@@ -65,13 +65,41 @@
 
   &__strapline-btn {
     text-align: start;
+  }
 
-    & when (@item-ui-color-style = filled) {
+  & when (@item-ui-color-style = filled) {
+    &__strapline-btn {
       .item-ui-color;
     }
 
-    & when (@item-ui-color-style = outline) {
+    .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover {
+      .item-ui-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &__strapline-btn:focus-visible {
+      .item-ui-color-focus;
+    }
+
+    &__strapline-btn.is-visited {
+      .item-ui-color-visited;
+    }
+  }
+
+  & when (@item-ui-color-style = outline) {
+    &__strapline-btn {
       .item-ui-color-outline;
+    }
+
+    .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover {
+      .item-ui-color-outline-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &__strapline-btn:focus-visible {
+      .item-ui-color-outline-focus;
+    }
+
+    &__strapline-btn.is-visited {
+      .item-ui-color-outline-visited;
     }
   }
 
@@ -80,36 +108,6 @@
   &__strapline-icon {
     background-color: transparent;
     color: inherit;
-  }
-
-  .no-touch &__strapline-btn:not(.is-disabled):not(.is-locked):hover {
-    & when (@item-ui-color-style = filled) {
-      .item-ui-color-hover;
-    }
-
-    & when (@item-ui-color-style = outline) {
-      .item-ui-color-outline-hover;
-    }
-  }
-
-  html:not(.a11y-disable-focusoutline) &__strapline-btn:focus-visible {
-    & when (@item-ui-color-style = filled) {
-      .item-ui-color-focus;
-    }
-
-    & when (@item-ui-color-style = outline) {
-      .item-ui-color-outline-focus;
-    }
-  }
-
-  &__strapline-btn.is-visited {
-    & when (@item-ui-color-style = filled) {
-      .item-ui-color-visited;
-    }
-
-    & when (@item-ui-color-style = outline) {
-      .item-ui-color-outline-visited;
-    }
   }
 
   &.has-img-zoom &__slider-image-container {

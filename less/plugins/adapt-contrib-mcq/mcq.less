@@ -3,7 +3,13 @@
     margin-bottom: @item-margin / 2;
     border-radius: @item-border-radius;
 
-    & when (@item-color-style = filled) {
+    .no-touch &:not(.is-disabled):not(.is-selected):hover .mcq-item__icon {
+      .effect-scalePulse;
+    }
+  }
+
+  & when (@item-color-style = filled) {
+    &__label {
       .item-color;
 
       .no-touch &:not(.is-disabled):not(.is-selected):hover {
@@ -15,7 +21,17 @@
       }
     }
 
-    & when (@item-color-style = outline) {
+    &__label.is-disabled {
+      .item-color-disabled;
+    }
+
+    &__label.is-selected {
+      .item-color-selected;
+    }
+  }
+
+  & when (@item-color-style = outline) {
+    &__label {
       .item-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-selected):hover {
@@ -27,27 +43,11 @@
       }
     }
 
-    .no-touch &:not(.is-disabled):not(.is-selected):hover .mcq-item__icon {
-      .effect-scalePulse;
-    }
-  }
-
-  &__label.is-disabled {
-    & when (@item-color-style = filled) {
-      .item-color-disabled;
-    }
-
-    & when (@item-color-style = outline) {
+    &__label.is-disabled {
       .item-color-outline-disabled;
     }
-  }
 
-  &__label.is-selected {
-    & when (@item-color-style = filled) {
-      .item-color-selected;
-    }
-
-    & when (@item-color-style = outline) {
+    &__label.is-selected {
       .item-color-outline-selected;
     }
   }

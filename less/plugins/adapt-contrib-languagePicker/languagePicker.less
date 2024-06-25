@@ -26,8 +26,10 @@
 
   &__language-btn {
     margin: @item-margin / 2;
+  }
 
-    & when (@btn-color-style = filled) {
+  & when (@btn-color-style = filled) {
+    &__language-btn {
       .btn-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -39,7 +41,13 @@
       }
     }
 
-    & when (@btn-color-style = outline) {
+    &__language-btn.is-disabled {
+      .btn-color-disabled;
+    }
+  }
+
+  & when (@btn-color-style = outline) {
+    &__language-btn {
       .btn-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -50,14 +58,8 @@
         .btn-color-outline-focus;
       }
     }
-  }
 
-  &__language-btn.is-disabled {
-    & when (@btn-color-style = filled) {
-      .btn-color-disabled;
-    }
-
-    & when (@btn-color-style = outline) {
+    &__language-btn.is-disabled {
       .btn-color-outline-disabled;
     }
   }

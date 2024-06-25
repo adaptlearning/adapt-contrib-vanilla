@@ -9,8 +9,10 @@
 
   &__pin:not(.has-pin-image) {
     border-radius: 50%;
+  }
 
-    & when (@item-ui-color-style = filled) {
+  & when (@item-ui-color-style = filled) {
+    &__pin:not(.has-pin-image) {
       .item-ui-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -22,7 +24,13 @@
       }
     }
 
-    & when (@item-ui-color-style = outline) {
+    &__pin:not(.has-pin-image).is-visited {
+      .item-ui-color-visited;
+    }
+  }
+
+  & when (@item-ui-color-style = outline) {
+    &__pin:not(.has-pin-image) {
       .item-ui-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -33,14 +41,8 @@
         .item-ui-color-outline-focus;
       }
     }
-  }
 
-  &__pin:not(.has-pin-image).is-visited {
-    & when (@item-ui-color-style = filled) {
-      .item-ui-color-visited;
-    }
-
-    & when (@item-ui-color-style = outline) {
+    &__pin:not(.has-pin-image).is-visited {
       .item-ui-color-outline-visited;
     }
   }

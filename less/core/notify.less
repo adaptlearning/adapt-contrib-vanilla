@@ -55,8 +55,10 @@
   &__btn {
     margin: @notify-btn-margin;
     padding: @notify-btn-padding-ver @notify-btn-padding-hoz;
+  }
 
-    & when (@notify-btn-color-style = filled) {
+  & when (@notify-btn-color-style = filled) {
+    &__btn {
       .notify-btn-color;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -68,7 +70,13 @@
       }
     }
 
-    & when (@notify-btn-color-style = outline) {
+    &__btn.is-disabled {
+      .notify-btn-color-disabled;
+    }
+  }
+
+  & when (@notify-btn-color-style = outline) {
+    &__btn {
       .notify-btn-color-outline;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
@@ -79,14 +87,8 @@
         .notify-btn-color-outline-focus;
       }
     }
-  }
 
-  &__btn.is-disabled {
-    & when (@notify-btn-color-style = filled) {
-      .notify-btn-color-disabled;
-    }
-
-    & when (@notify-btn-color-style = outline) {
+    &__btn.is-disabled {
       .notify-btn-color-outline-disabled;
     }
   }

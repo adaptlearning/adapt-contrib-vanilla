@@ -6,8 +6,10 @@
     padding-inline: @item-padding (@icon-size + (@item-padding * 2));
     line-height: @body-line-height;
     text-align: start;
+  }
 
-    & when (@item-color-style = filled) {
+  & when (@item-color-style = filled) {
+    &__btn {
       .item-color;
 
       .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
@@ -19,7 +21,17 @@
       }
     }
 
-    & when (@item-color-style = outline) {
+    &__btn.is-disabled {
+      .item-color-disabled;
+    }
+
+    &__btn[aria-expanded="true"] {
+      .item-color-selected;
+    }
+  }
+
+  & when (@item-color-style = outline) {
+    &__btn {
       .item-color-outline;
 
       .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
@@ -30,24 +42,12 @@
         .item-color-outline-focus;
       }
     }
-  }
 
-  &__btn.is-disabled {
-    & when (@item-color-style = filled) {
-      .item-color-disabled;
-    }
-
-    & when (@item-color-style = outline) {
+    &__btn.is-disabled {
       .item-color-outline-disabled;
     }
-  }
 
-  &__btn[aria-expanded="true"] {
-    & when (@item-color-style = filled) {
-      .item-color-selected;
-    }
-
-    & when (@item-color-style = outline) {
+    &__btn[aria-expanded="true"] {
       .item-color-outline-selected;
     }
   }
