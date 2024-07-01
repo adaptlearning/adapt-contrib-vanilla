@@ -1,0 +1,100 @@
+// --------------------------------------------------
+// BUTTON COLOUR MIXINS
+// --------------------------------------------------
+
+// Default - Filled
+.btn-color() {
+  background-color: @btn-color;
+  color: @btn-color-inverted;
+}
+
+.btn-color-hover() {
+  background-color: @btn-color-hover;
+  color: @btn-color-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.btn-color-focus() {
+  background-color: @btn-color-focus;
+  color: @btn-color-inverted-focus;
+}
+
+.btn-color-selected() {
+  background-color: @btn-color-selected;
+  color: @btn-color-inverted-selected;
+}
+
+.btn-color-locked() {
+  background-color: @btn-color-locked;
+  color: @btn-color-inverted-locked;
+}
+
+.btn-color-disabled() {
+  background-color: @btn-color-disabled;
+  color: @btn-color-inverted-disabled;
+}
+
+// Outline
+.btn-color-outline() {
+  background-color: @btn-color-inverted;
+  color: @btn-color;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color inset;
+}
+
+.btn-color-outline-hover() {
+  .btn-color-hover;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.btn-color-outline-focus() {
+  .btn-color-focus;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-focus inset;
+}
+
+.btn-color-outline-selected() {
+  .btn-color-selected;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-selected inset;
+}
+
+.btn-color-outline-locked() {
+  .btn-color-locked;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-locked inset;
+}
+
+.btn-color-outline-disabled() {
+  .btn-color-disabled;
+  box-shadow: 0 0 0 @btn-color-border-width @btn-color-disabled inset;
+}
+
+// Plain
+.btn-color-plain() {
+  background-color: transparent;
+  color: @btn-color;
+}
+
+.btn-color-plain-hover() {
+  background-color: transparent;
+  color: @btn-color-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.btn-color-plain-focus() {
+  background-color: transparent;
+  color: @btn-color-focus;
+}
+
+.btn-color-plain-selected() {
+  background-color: transparent;
+  color: @btn-color-selected;
+}
+
+.btn-color-plain-locked() {
+  background-color: transparent;
+  color: @btn-color-locked;
+}
+
+.btn-color-plain-disabled() {
+  background-color: transparent;
+  color: @btn-color-disabled;
+}

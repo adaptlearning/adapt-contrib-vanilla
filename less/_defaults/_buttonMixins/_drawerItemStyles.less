@@ -1,0 +1,85 @@
+// --------------------------------------------------
+// DRAWER ITEM COLOUR MIXINS
+// --------------------------------------------------
+
+// Default - Filled
+.drawer-item-color() {
+  background-color: @drawer-item;
+  color: @drawer-item-inverted;
+  border-color: @drawer-item-hover;
+}
+
+.drawer-item-color-hover() {
+  background-color: @drawer-item-hover;
+  color: @drawer-item-inverted-hover;
+  border-color: @drawer-item-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in, border @duration ease-in;);
+}
+
+.drawer-item-color-focus() {
+  background-color: @drawer-item-focus;
+  color: @drawer-item-inverted-focus;
+  border-color: @drawer-item-focus;
+}
+
+.drawer-item-color-locked() {
+  background-color: @disabled;
+  color: @disabled-inverted;
+  border-color: @drawer-item-hover;
+}
+
+.drawer-item-color-selected() {
+  background-color: @drawer-item-selected;
+  color: @drawer-item-inverted-selected;
+  border-color: @drawer-item-hover;
+}
+
+// Outline
+.drawer-item-color-outline() {
+  background-color: @drawer-item-inverted;
+  color: @drawer-item;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item inset;
+}
+
+.drawer-item-color-outline-hover() {
+  .drawer-item-color-hover;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.drawer-item-color-outline-focus() {
+  .drawer-item-color-focus;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-focus inset;
+}
+
+.drawer-item-color-outline-selected() {
+  .drawer-item-color-selected;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-selected inset;
+}
+
+.drawer-item-color-outline-locked() {
+  .drawer-item-color-locked;
+  box-shadow: 0 0 0 @drawer-item-border-width @drawer-item-locked inset;
+}
+
+// Plain
+.drawer-item-color-plain() {
+  background-color: transparent;
+  color: @drawer-item;
+}
+
+.drawer-item-color-plain-hover() {
+  background-color: transparent;
+  color: @drawer-item-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.drawer-item-color-plain-focus() {
+  background-color: transparent;
+  color: @drawer-item-focus;
+}
+
+.drawer-item-color-plain-selected() {
+  background-color: transparent;
+  color: @drawer-item-selected;
+}

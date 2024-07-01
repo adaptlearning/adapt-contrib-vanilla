@@ -1,4 +1,48 @@
 .trickle {
+  & when (@item-ui-color-style = filled) {
+    &__btn {
+      .item-ui-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .item-ui-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-ui-color-focus;
+      }
+    }
+
+    &__btn.is-disabled {
+      .item-ui-color-disabled;
+    }
+
+    &__btn.is-locked {
+      .item-ui-color-locked;
+    }
+  }
+
+  & when (@item-ui-color-style = outline) {
+    &__btn {
+      .item-ui-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .item-ui-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-ui-color-outline-focus;
+      }
+    }
+
+    &__btn.is-disabled {
+      .item-ui-color-outline-disabled;
+    }
+
+    &__btn.is-locked {
+      .item-ui-color-outline-locked;
+    }
+  }
+
   &__btn-icon {
     display: inline-block;
     vertical-align: middle;
