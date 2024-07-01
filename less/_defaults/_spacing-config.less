@@ -12,7 +12,8 @@
 
 // Content UI (action not content)
 // --------------------------------------------------
-@item-ui-color-border-width: 1px;
+@item-ui-border-radius: @item-border-radius;
+@item-ui-border-width: @item-color-border-width;
 
 // Content Button
 // --------------------------------------------------
@@ -28,11 +29,12 @@
 @ui-btn-controls-padding: @btn-padding / 2;
 
 @ui-btn-controls-border-radius: 50%;
+@ui-btn-controls-border-width: 1px;
 
 // Menu
-// ? remove 'color' from 'border-width' vars ?
 // --------------------------------------------------
-@menu-item-btn-color-border-width: 1px;
+@menu-item-btn-border-radius: @item-ui-border-radius;
+@menu-item-btn-border-width: @item-ui-border-width;
 
 // Navigation
 // --------------------------------------------------
@@ -42,6 +44,7 @@
 @nav-btn-padding-hoz: @icon-padding;
 
 @nav-btn-border-radius: 0;
+@nav-btn-border-width: 1px;
 
 // Notify button
 // --------------------------------------------------
