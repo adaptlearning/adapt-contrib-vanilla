@@ -48,9 +48,9 @@
 @item-color-selected: darken(@item-color, 20%);
 @item-color-inverted-selected: @item-color-inverted;
 
-// ! TODO
-// aka @item-color-visited but avoiding breaking chnage
-// @visited is only used by presentation components
+// DEPRECATED
+// replaced by @item-color-visited and @item-color-inverted-visited
+// Note: @visited is only used by presentation components
 @visited: darken(@item-color, 15%);
 @visited-inverted: @item-color-inverted;
 //
@@ -107,13 +107,11 @@
 @btn-color-locked: @disabled;
 @btn-color-inverted-locked: @disabled-inverted;
 
-// ! TODO
-// aka @btn-color-disabled but avoiding breaking chnage
+
+// DEPRECATED
+// replaced by @btn-color-disabled and @btn-color-disabled-inverted
 @disabled: @grey;
 @disabled-inverted: @black;
-
-@btn-color-disabled: @disabled;
-@btn-color-disabled-inverted: @disabled-inverted;
 //
 
 @btn-color-disabled: @disabled;
