@@ -4,87 +4,97 @@
 
 // Default - Filled
 .menu-item-btn-color() {
-  background-color: @menu-item-btn-color;
-  color: @menu-item-btn-color-inverted;
+  // background-color: @menu-item-btn-color;
+  // color: @menu-item-btn-color-inverted;
+  background-color: var(--adapt-menu-item-btn-color);
+  color: var(--adapt-menu-item-btn-color-inverted);
 }
 
 .menu-item-btn-color-hover() {
-  background-color: @menu-item-btn-color-hover;
-  color: @menu-item-btn-color-inverted-hover;
+  // background-color: @menu-item-btn-color-hover;
+  // color: @menu-item-btn-color-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
+  background-color: var(--adapt-menu-item-btn-color-hover);
+  color: var(--adapt-menu-item-btn-color-inverted-hover);
 }
 
 .menu-item-btn-color-focus() {
-  background-color: @menu-item-btn-color-focus;
-  color: @menu-item-btn-color-inverted-focus;
+  // background-color: @menu-item-btn-color-focus;
+  // color: @menu-item-btn-color-inverted-focus;
+  background-color: var(--adapt-menu-item-btn-color-focus);
+  color: var(--adapt-menu-item-btn-color-inverted-focus);
 }
 
 .menu-item-btn-color-locked() {
-  background-color: @menu-item-btn-color-locked;
-  color: @menu-item-btn-color-inverted-locked;
+  // background-color: @menu-item-btn-color-locked;
+  // color: @menu-item-btn-color-inverted-locked;
+  background-color: var(--adapt-menu-item-btn-color-locked);
+  color: var(--adapt-menu-item-btn-color-inverted-locked);
 }
 
 // Outline
 .menu-item-btn-color-outline() {
-  background-color: @menu-item-btn-color-inverted;
-  color: @menu-item-btn-color;
-  box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color inset;
+  // background-color: @menu-item-btn-color-inverted;
+  // color: @menu-item-btn-color;
+  // box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color inset;
+  background-color: var(--adapt-menu-item-btn-color-inverted);
+  color: var(--adapt-menu-item-btn-color);
+  box-shadow: 0 0 0 @menu-item-btn-border-width var(--adapt-menu-item-btn-color) inset;
 }
 
 .menu-item-btn-color-outline-hover() {
-  .menu-item-btn-color-hover;
-  box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-hover inset;
+  // .menu-item-btn-color-hover;
+  // box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-hover inset;
   .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+  background-color: var(--adapt-menu-item-btn-color-hover);
+  color: var(--adapt-menu-item-btn-color-inverted-hover);
+  box-shadow: 0 0 0 @menu-item-btn-border-width var(--adapt-menu-item-btn-color-hover) inset;
 }
 
 .menu-item-btn-color-outline-focus() {
-  .menu-item-btn-color-focus;
-  box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-focus inset;
-}
-
-.menu-item-btn-color-outline-selected() {
-  .menu-item-btn-color-selected;
-  box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-selected inset;
+  // .menu-item-btn-color-focus;
+  // box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-focus inset;
+  background-color: var(--adapt-menu-item-btn-color-focus);
+  color: var(--adapt-menu-item-btn-color-inverted-focus);
+  box-shadow: 0 0 0 @menu-item-btn-border-width var(--adapt-menu-item-btn-color-focus) inset;
 }
 
 .menu-item-btn-color-outline-locked() {
-  .menu-item-btn-color-locked;
-  box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-locked inset;
-}
-
-.menu-item-btn-color-outline-disabled() {
-  .menu-item-btn-color-disabled;
-  box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-disabled inset;
+  // .menu-item-btn-color-locked;
+  // box-shadow: 0 0 0 @menu-item-btn-border-width @menu-item-btn-color-locked inset;
+  background-color: var(--adapt-menu-item-btn-color-focus);
+  color: var(--adapt-menu-item-btn-color-inverted-focus);
+  box-shadow: 0 0 0 @menu-item-btn-border-width var(--adapt-menu-item-btn-color-locked) inset;
 }
 
 // Plain
-.menu-item-btn-color-plain() {
-  background-color: transparent;
-  color: @menu-item-btn-color;
-}
+// .menu-item-btn-color-plain() {
+//   background-color: transparent;
+//   color: @menu-item-btn-color;
+// }
 
-.menu-item-btn-color-plain-hover() {
-  background-color: transparent;
-  color: @menu-item-btn-color-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
+// .menu-item-btn-color-plain-hover() {
+//   background-color: transparent;
+//   color: @menu-item-btn-color-hover;
+//   .transition(background-color @duration ease-in, color @duration ease-in;);
+// }
 
-.menu-item-btn-color-plain-focus() {
-  background-color: transparent;
-  color: @menu-item-btn-color-focus;
-}
+// .menu-item-btn-color-plain-focus() {
+//   background-color: transparent;
+//   color: @menu-item-btn-color-focus;
+// }
 
-.menu-item-btn-color-plain-selected() {
-  background-color: transparent;
-  color: @menu-item-btn-color-selected;
-}
+// .menu-item-btn-color-plain-selected() {
+//   background-color: transparent;
+//   color: @menu-item-btn-color-selected;
+// }
 
-.menu-item-btn-color-plain-locked() {
-  background-color: transparent;
-  color: @menu-item-btn-color-locked;
-}
+// .menu-item-btn-color-plain-locked() {
+//   background-color: transparent;
+//   color: @menu-item-btn-color-locked;
+// }
 
-.menu-item-btn-color-plain-disabled() {
-  background-color: transparent;
-  color: @menu-item-btn-color-disabled;
-}
+// .menu-item-btn-color-plain-disabled() {
+//   background-color: transparent;
+//   color: @menu-item-btn-color-disabled;
+// }

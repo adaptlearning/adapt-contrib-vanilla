@@ -1,8 +1,10 @@
 .notify {
   &__popup {
-    background-color: @notify;
-    color: @notify-inverted;
+    // background-color: @notify;
+    // color: @notify-inverted;
     .transition(margin-top @duration, top @duration;);
+    background-color: var(--adapt-notify);
+    color: var(--adapt-notify-inverted);
   }
 
   &__popup-inner {
@@ -39,10 +41,12 @@
   &__body a,
   &__instruction a {
     .link-text;
-    color: @notify-link;
+    // color: @notify-link;
+    color: var(--adapt-notify-link);
 
     .no-touch &:hover {
-      color: @notify-link-hover;
+      // color: @notify-link-hover;
+      color: var(--adapt-notify-link-hover);
       .transition(color @duration ease-in);
     }
   }

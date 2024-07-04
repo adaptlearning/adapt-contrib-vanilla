@@ -1,12 +1,14 @@
 .matching {
   &__widget.is-disabled &-item__select-icon {
-    color: @disabled-inverted;
+    // color: @disabled-inverted;
+    color: var(--adapt-disabled-inverted);
   }
 
   // Error highlight
   // --------------------------------------------------
   &__widget:not(.is-complete) &-item__select-container.has-error .dropdown__btn {
     box-shadow: 0 0 0 1px @validation-error inset;
+    box-shadow: 0 0 0 1px var(--adapt-validation-error) inset;
   }
 }
 

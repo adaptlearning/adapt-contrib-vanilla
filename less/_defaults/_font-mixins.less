@@ -15,7 +15,8 @@ body {
   font-size: @body-size;
   font-weight: @body-weight;
   line-height: @body-line-height;
-  color: @font-color;
+  // color: @font-color;
+  color: var(--adapt-font-color);
 
   // Set up a language specific font override.
   // This will need to be uncommented out, duplicated and updated if there are
@@ -49,10 +50,12 @@ body {
   font-size: @link-size;
   font-weight: @link-weight;
   line-height: @link-line-height;
-  color: @link;
+  // color: @link;
+  color: var(--adapt-link);
 
   .no-touch &:hover {
-    color: @link-hover;
+    // color: @link-hover;
+    color: var(--adapt-link-hover);
     .transition(color @duration ease-in);
   }
 }

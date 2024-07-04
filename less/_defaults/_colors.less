@@ -1,10 +1,27 @@
 // Colour definitions
 // --------------------------------------------------
-@blue: #117F93;
-@blueDark: #263944;
-@grey: #DDDDDD;
-@greyDark: #4D4D4D;
-@greyLight: #f9f9f9;
+
+:root {
+  --adapt-white: hsl(0, 100%, 100%);
+  --adapt-black: hsl(0, 100%, 0%);
+
+  --adapt-green: hsl(143, 88%, 20%);
+  --adapt-red: hsl(0, 100%, 50%);
+
+  --adapt-transparent: hsla(0, 0%, 0%, 0);
+
+  --adapt-blue: hsl(189, 79%, 32%);
+  --adapt-blue-dark: hsl(202, 28%, 21%);
+  --adapt-grey: hsl(0, 0%, 87%);
+  --adapt-grey-dark: hsl(0, 0%, 30%);
+  --adapt-grey-light: hsl(0, 0%, 98%);
+}
+
+// @blue: #117F93;
+// @blueDark: #263944;
+// @grey: #DDDDDD;
+// @greyDark: #4D4D4D;
+// @greyLight: #f9f9f9;
 
 // These variables are used to change the colour of text
 // Primary use is for altering the text colour over a background image
@@ -20,276 +37,541 @@
 
 // Body, link, and heading colour
 // --------------------------------------------------
-@body-background-color: @white;
+:root {
+  --adapt-body-background-color: var(--adapt-white);
 
-@font-color: @greyDark;
-@font-color-inverted: @white;
+  --adapt-font-color: var(--adapt-grey-dark);
+  --adapt-font-color-inverted: var(--adapt-white) ;
 
-@link: @font-color;
-@link-inverted: @font-color-inverted;
+  --adapt-link: var(--adapt-font-color);
+  --adapt-link-inverted: var(--adapt-font-color-inverted);
 
-@link-hover: @link;
-@link-inverted-hover: @link-inverted;
+  --adapt-link-hover: var(--adapt-link);
+  --adapt-link-inverted-hover: var(--adapt-link-inverted);
 
-@heading-color: @blue;
-@heading-color-inverted: @white;
+  --adapt-heading-color: var(--adapt-blue);
+  --adapt-heading-color-inverted: var(--adapt-white);
+}
+
+// @body-background-color: @white;
+
+// @font-color: @greyDark;
+// @font-color-inverted: @white;
+
+// @link: @font-color;
+// @link-inverted: @font-color-inverted;
+
+// @link-hover: @link;
+// @link-inverted-hover: @link-inverted;
+
+// @heading-color: @blue;
+// @heading-color-inverted: @white;
 
 // Content Item (components)
 // --------------------------------------------------
-@item-color: @blue;
-@item-color-inverted: @white;
+:root {
+  --adapt-item-color: var(--adapt-blue);
+  --adapt-item-color-inverted: var(--adapt-white);
 
-@item-color-hover: darken(@item-color, 10%);
-@item-color-inverted-hover: @item-color-inverted;
+  --adapt-item-color-hover: ~'hsla(from var(--adapt-item-color) h s calc(l - 10) / 1)';
+  --adapt-item-color-inverted-hover: var(--adapt-item-color-inverted);
 
-@item-color-focus: @item-color-hover;
-@item-color-inverted-focus: @item-color-inverted-hover;
+  --adapt-item-color-focus: var(--adapt-item-color-hover);
+  --adapt-item-color-inverted-focus: var(--adapt-item-color-inverted-hover;);
 
-@item-color-selected: darken(@item-color, 20%);
-@item-color-inverted-selected: @item-color-inverted;
+  --adapt-item-color-selected: ~'hsla(from var(--adapt-item-color) h s calc(l - 20) / 1)';
+  --adapt-item-color-inverted-selected: var(--adapt-item-color-inverted);
+
+  --adapt-visited: ~'hsla(from var(--adapt-item-color) h s calc(l - 15) / 1)';
+  --adapt-visited-inverted: var(--adapt-item-color-inverted);
+
+  --adapt-item-color-visited: ~'hsla(from var(--adapt-item-color) h s calc(l - 15) / 1)';
+  --adapt-item-color-inverted-visited: var(--adapt-item-color-inverted);
+
+  --adapt-item-color-disabled: var(--adapt-grey);
+  --adapt-item-color-inverted-disabled: var(--adapt-black);
+
+  --adapt-item-color-border-color: var(--adapt-item-color);
+}
+
+// @item-color: @blue;
+// @item-color-inverted: @white;
+
+// @item-color-hover: darken(@item-color, 10%);
+// @item-color-inverted-hover: @item-color-inverted;
+
+// @item-color-focus: @item-color-hover;
+// @item-color-inverted-focus: @item-color-inverted-hover;
+
+// @item-color-selected: darken(@item-color, 20%);
+// @item-color-inverted-selected: @item-color-inverted;
 
 // DEPRECATED
 // replaced by @item-color-visited and @item-color-inverted-visited
 // Note: @visited is only used by presentation components
-@visited: darken(@item-color, 15%);
-@visited-inverted: @item-color-inverted;
+// @visited: darken(@item-color, 15%);
+// @visited-inverted: @item-color-inverted;
 //
 
-@item-color-visited: @visited;
-@item-color-inverted-visited: @visited-inverted;
+// @item-color-visited: @visited;
+// @item-color-inverted-visited: @visited-inverted;
 
-@item-color-disabled: @disabled;
-@item-color-inverted-disabled: @disabled-inverted;
+// @item-color-disabled: @disabled;
+// @item-color-inverted-disabled: @disabled-inverted;
 
 // Outline
-@item-color-border-color: @item-color;
+// @item-color-border-color: @item-color;
 
 // Content UI (action not content)
 // boxmenu item btn, hotgraphic pin, media transcript, narrative controls/strapline, trickle
 // logic: if outputting course content into word doc, these buttons wouldn’t need including
 // --------------------------------------------------
-@item-ui-color: @item-color;
-@item-ui-color-inverted: @item-color-inverted;
+:root {
+  --adapt-item-ui-color: var(--adapt-item-color);
+  --adapt-item-ui-color-inverted: var(--adapt-item-color-inverted);
 
-@item-ui-color-hover: darken(@item-ui-color, 10%);
-@item-ui-color-inverted-hover: @item-ui-color-inverted;
+  --adapt-item-ui-color-hover: ~'hsla(from var(--adapt-item-ui-color) h s calc(1 - 10) / 1)';
+  --adapt-item-ui-color-inverted-hover: var(--adapt-item-ui-color-inverted);
 
-@item-ui-color-focus: @item-ui-color-hover;
-@item-ui-color-inverted-focus: @item-ui-color-inverted-hover;
+  --adapt-item-ui-color-focus: var(--adapt-item-ui-color-hover);
+  --adapt-item-ui-color-inverted-focus: var(--adapt-item-ui-color-inverted-hover);
 
-@item-ui-color-selected: darken(@item-ui-color, 20%);
-@item-ui-color-inverted-selected: @item-ui-color-inverted;
+  --adapt-item-ui-color-selected: ~'hsla(from var(--adapt-item-ui-color) h s calc(l - 20) / 1)';
+  --adapt-item-ui-color-inverted-selected: var(--adapt-ui-color-inverted);
 
-@item-ui-color-visited: darken(@item-ui-color, 15%);
-@item-ui-color-inverted-visited: @item-ui-color-inverted;
+  --adapt-item-ui-color-visited: ~'hsla(from var(--adapt-item-ui-color) h s calc(l - 15) / 1)';
+  --adapt-item-ui-color-inverted-visited: var(--adapt-item-ui-color-inverted);
 
-@item-ui-color-locked: @disabled;
-@item-ui-color-inverted-locked: @disabled-inverted;
+  --adapt-item-ui-color-locked: var(--adapt-item-color-disabled);
+  --adapt-item-ui-color-inverted-locked: var(--adapt-item-color-inverted-disabled);
 
-@item-ui-color-disabled: @disabled;
-@item-ui-color-inverted-disabled: @disabled-inverted;
+  --adapt-item-ui-color-disabled: var(--adapt-item-color-disabled);;
+  --adapt-item-ui-color-inverted-disabled: var(--adapt-item-color-inverted-disabled);
+}
+
+// @item-ui-color: @item-color;
+// @item-ui-color-inverted: @item-color-inverted;
+
+// @item-ui-color-hover: darken(@item-ui-color, 10%);
+// @item-ui-color-inverted-hover: @item-ui-color-inverted;
+
+// @item-ui-color-focus: @item-ui-color-hover;
+// @item-ui-color-inverted-focus: @item-ui-color-inverted-hover;
+
+// @item-ui-color-selected: darken(@item-ui-color, 20%);
+// @item-ui-color-inverted-selected: @item-ui-color-inverted;
+
+// @item-ui-color-visited: darken(@item-ui-color, 15%);
+// @item-ui-color-inverted-visited: @item-ui-color-inverted;
+
+// @item-ui-color-locked: @disabled;
+// @item-ui-color-inverted-locked: @disabled-inverted;
+
+// @item-ui-color-disabled: @disabled;
+// @item-ui-color-inverted-disabled: @disabled-inverted;
 
 // Content Buttons
 // --------------------------------------------------
+:root {
+  --adapt-btn-color: hsla(0, 0%, 30%, 1);
+  --adapt-btn-color-inverted: hsla(0, 0, 100%, 1);
+
+  --adapt-btn-color-hover: ~'hsla(from var(--adapt-btn-color) h s calc(l - 10) / 1)';
+  --adapt-btn-color-inverted-hover: var(--adapt-btn-color-inverted);
+
+  --adapt-btn-colr-focus: var(--adapt-btn-color-hover);
+  --adapt-btn-colr-inverted-focus: var(--adapt-btn-color-inverted-hover);
+
+  --adapt-btn-color-selected: ~'hsla(from var(--adapt-btn-color) h s calc(l - 20) / 1)';
+  --adapt-btn-color-inverted-selected: var(--adapt-btn-color-inverted);
+
+  --adapt-disabled: hsla(0, 0%, 87%, 1);
+  --adapt-disabled-inverted: hsla(0, 0%, 0%, 1);
+
+  --adapt-btn-color-disabled: hsla(0, 0%, 87%, 1);
+  --adapt-btn-color-inverted-disabled: hsla(0, 0%, 0%, 1);
+
+  --adapt-btn-color-locked: var(--adapt-btn-color-disabled);
+  --adapt-btn-color-inverted-locked: var(--adapt-btn-color-inverted-disabled);
+}
+
 // Filled
-@btn-color: @greyDark;
-@btn-color-inverted: @white;
+// @btn-color: @greyDark;
+// @btn-color-inverted: @white;
 
-@btn-color-hover: darken(@btn-color, 10%);
-@btn-color-inverted-hover: @btn-color-inverted;
+// @btn-color-hover: darken(@btn-color, 10%);
+// @btn-color-inverted-hover: @btn-color-inverted;
 
-@btn-color-focus: @btn-color-hover;
-@btn-color-inverted-focus: @btn-color-inverted-hover;
+// @btn-color-focus: @btn-color-hover;
+// @btn-color-inverted-focus: @btn-color-inverted-hover;
 
-@btn-color-selected: darken(@btn-color, 20%);
-@btn-color-inverted-selected: @btn-color-inverted;
-
-@btn-color-locked: @disabled;
-@btn-color-inverted-locked: @disabled-inverted;
-
+// @btn-color-selected: darken(@btn-color, 20%);
+// @btn-color-inverted-selected: @btn-color-inverted;
 
 // DEPRECATED
 // replaced by @btn-color-disabled and @btn-color-disabled-inverted
-@disabled: @grey;
-@disabled-inverted: @black;
+// @disabled: @grey;
+// @disabled-inverted: @black;
 //
 
-@btn-color-disabled: @disabled;
-@btn-color-inverted-disabled: @disabled-inverted;
+// @btn-color-disabled: @disabled;
+// @btn-color-inverted-disabled: @disabled-inverted;
+
+// @btn-color-locked: @disabled;
+// @btn-color-inverted-locked: @disabled-inverted;
 
 // UI (global default for nav, notify, drawer)
 // --------------------------------------------------
-@ui-color: @white;
-@ui-color-inverted: @greyDark;
+:root {
+  --adapt-ui-color: var(--adapt-white);
+  --adapt-ui-color-inverted: var(--adapt-grey-dark);
+}
+
+// @ui-color: @white;
+// @ui-color-inverted: @greyDark;
 
 // Validation states - question marking
 // --------------------------------------------------
-@validation-success: #065f28;
-@validation-success-inverted: @white;
+:root {
+  --adapt-validation-success: var(--adapt-green);
+  --adapt-validation-success-inverted: var(--adapt-white);
 
-@validation-error: #ff0000;
-@validation-error-inverted: @white;
+  --adapt-validation-error: var(--adapt-red);
+  --adapt-validation-error-inverted: var(--adapt-white);
+}
+
+// @validation-success: #065f28;
+// @validation-success-inverted: @white;
+
+// @validation-error: #ff0000;
+// @validation-error-inverted: @white;
 
 // Progress
 // --------------------------------------------------
-@progress: @greyDark;
-@progress-inverted: @white;
-@progress-border: @greyDark;
+:root {
+  --adapt-progress: var(--adapt-grey-dark);
+  --adapt-progress-inverted: var(--adapt-white);
+  --adapt-progress-border: var(--adapt-grey-dark);
+}
+
+// @progress: @greyDark;
+// @progress-inverted: @white;
+// @progress-border: @greyDark;
 
 // Menu
 // --------------------------------------------------
-@menu-header-background-color: transparent;
-@menu-header-title-color: @heading-color;
-@menu-header-subtitle-color: @heading-color;
-@menu-header-body-color: @font-color;
-@menu-header-instruction-color: @font-color;
+:root {
+  --adapt-menu-header-background-color: var(--adapt-transparent);
+  --adapt-menu-header-title-color: var(--adapt-heading-color);
+  --adapt-menu-header-subtitle-color: var(--adapt-heading-color);
+  --adapt-menu-header-body-color: var(--adapt-font-color);
+  --adapt-menu-header-instruction-color: var(--adapt-font-color);
 
-@menu-item: @white;
-@menu-item-inverted: @font-color;
-@menu-item-border-color: @item-color;
+  --adapt-menu-item: var(--adapt-white);
+  --adapt-menu-item-inverted: var(--adapt-font-color);
+  --adapt-menu-item-border-color: var(--adapt-font-color);
 
-@menu-item-progress: @progress;
-@menu-item-progress-inverted: @progress-inverted;
-@menu-item-progress-border: @progress-border;
+  --adapt-menu-item-progress: var(--adapt-progress);
+  --adapt-menu-item-progress-inverted: var(--adapt-progress-inverted);
+  --adapt-menu-item-progress-border: var(--adapt-progress-border);
 
-@menu-item-btn-color: @item-ui-color;
-@menu-item-btn-color-inverted: @item-ui-color-inverted;
+  --adapt-menu-item-btn-color: hsla(0, 100%, 50%, .5);
+  --adapt-menu-item-btn-color-inverted: hsla(0, 0%, 0%, 1);
 
-@menu-item-btn-color-hover: @item-ui-color-hover;
-@menu-item-btn-color-inverted-hover: @item-ui-color-inverted-hover;
+  --adapt-menu-item-btn-color-hover: ~'hsla(from var(--adapt-menu-item-btn-color) h s calc(l - 10) / 1)';
+  --adapt-menu-item-btn-color-inverted-hover: ~'hsla(from var(--adapt-menu-item-btn-color-inverted) h s calc(l + 100) / 1)';
 
-@menu-item-btn-color-focus: @item-ui-color-hover;
-@menu-item-btn-color-inverted-focus: @item-ui-color-inverted-hover;
+  --adapt-menu-item-btn-color-focus: ~'hsla(from var(--adapt-menu-item-btn-color-hover) calc(h + 100) s l / 1)';
+  --adapt-menu-item-btn-color-inverted-focus: ~'hsla(from var(--adapt-menu-item-btn-color-inverted-hover) h s l / 1)';
 
-@menu-item-btn-color-locked: @item-ui-color-locked;
-@menu-item-btn-color-inverted-locked: @item-ui-color-inverted-locked;
+  --adapt-menu-item-btn-color-locked: ~'hsla(from var(--adapt-btn-color-disabled) calc(h + 100) s l / 1)';
+  --adapt-menu-item-btn-color-inverted-locked: ~'hsla(from var(--adapt-btn-color-disabled-inverted) h s l / 1)';
+}
+
+// @menu-header-background-color: transparent;
+// @menu-header-title-color: @heading-color;
+// @menu-header-subtitle-color: @heading-color;
+// @menu-header-body-color: @font-color;
+// @menu-header-instruction-color: @font-color;
+
+// @menu-item: @white;
+// @menu-item-inverted: @font-color;
+// @menu-item-border-color: @item-color;
+// @menu-item-border-color: @font-color;
+
+// @menu-item-progress: @progress;
+// @menu-item-progress-inverted: @progress-inverted;
+// @menu-item-progress-border: @progress-border;
+
+// @menu-item-btn-color: @item-ui-color;
+// @menu-item-btn-color-inverted: @item-ui-color-inverted;
+
+// @menu-item-btn-color-hover: @item-ui-color-hover;
+// @menu-item-btn-color-inverted-hover: @item-ui-color-inverted-hover;
+
+// @menu-item-btn-color-focus: @item-ui-color-hover;
+// @menu-item-btn-color-inverted-focus: @item-ui-color-inverted-hover;
+
+// @menu-item-btn-color-locked: @item-ui-color-locked;
+// @menu-item-btn-color-inverted-locked: @item-ui-color-inverted-locked;
 
 // Navigation
 // --------------------------------------------------
-@nav: @ui-color;
-@nav-inverted: @ui-color-inverted;
+:root {
+  --adapt-nav: var(--adapt-ui-color);
+  --adapt-nav-inverted: var(--adapt-ui-color-inverted);
+
+  // UI
+  --adapt-nav-icon: var(--adapt-nav-inverted);
+  --adapt-nav-icon-inverted: var(--adapt-nav);
+
+  --adapt-nav-icon-hover: ~'hsla(from var(--adapt-nav-icon) h s calc(l - 10) / 1)';
+  --adapt-nav-icon-inverted-hover: var(--adapt-nav-icon-inverted);
+
+  --adapt-nav-icon-focus: var(--adapt-nav-icon-hover);
+  --adapt-nav-icon-inverted-focus: var(--adapt-nav-icon-inverted-hover);
+
+  --adapt-nav-progress: var(--adapt-nav-icon-inverted);
+  --adapt-nav-progress-inverted: var(--adapt-nav-icon);
+  --adapt-nav-progress-border: var(--adapt-nav-icon-inverted);
+
+  --adapt-nav-progress-hover: var(--adapt-nav-icon-inverted-hover);
+  --adapt-nav-progress-inverted-hover: var(--adapt-nav-progress-inverted);
+  --adapt-nav-progress-border-hover: var(--adapt-nav-progress-border);
+}
+
+// @nav: @ui-color;
+// @nav-inverted: @ui-color-inverted;
 
 // UI
-@nav-icon: @nav-inverted;
-@nav-icon-inverted: @nav;
+// @nav-icon: @nav-inverted;
+// @nav-icon-inverted: @nav;
 
-@nav-icon-hover: darken(@nav-icon, 10%);
-@nav-icon-inverted-hover: @nav-icon-inverted;
+// @nav-icon-hover: darken(@nav-icon, 10%);
+// @nav-icon-inverted-hover: @nav-icon-inverted;
 
-@nav-icon-focus: @nav-icon-hover;
-@nav-icon-inverted-focus: @nav-icon-inverted-hover;
+// @nav-icon-focus: @nav-icon-hover;
+// @nav-icon-inverted-focus: @nav-icon-inverted-hover;
 
-@nav-progress: @nav-icon-inverted;
-@nav-progress-inverted: @nav-icon;
-@nav-progress-border: @nav-icon-inverted;
+// @nav-progress: @nav-icon-inverted;
+// @nav-progress-inverted: @nav-icon;
+// @nav-progress-border: @nav-icon-inverted;
 
-@nav-progress-hover: @nav-icon-inverted-hover;
-@nav-progress-inverted-hover: @nav-progress-inverted;
-@nav-progress-border-hover: @nav-progress-border;
+// @nav-progress-hover: @nav-icon-inverted-hover;
+// @nav-progress-inverted-hover: @nav-progress-inverted;
+// @nav-progress-border-hover: @nav-progress-border;
 
 // Notify
 // --------------------------------------------------
-@notify: @ui-color;
-@notify-inverted: @ui-color-inverted;
+:root {
+  --adapt-notify: var(--adapt-ui-color);
+  --adapt-notify-inverted: var(--adapt-ui-color-inverted);
 
-@notify-link: @notify-inverted;
+  --adapt-notify-link: var(--adapt-notify-inverted);
 
-@notify-link-hover: @notify-link;
+  --adapt-notify-link-hover: var(--adapt-notify-link);
+
+  --adapt-notify-icon: ~'hsla(from var(--adapt-notify) h s calc(l - 10) / 1)';
+  --adapt-notify-icon-inverted: var(--adapt-notify-inverted);
+
+  --adapt-notify-icon-hover: ~'hsla(from var(--adapt-notify-icon) h s calc(l - 10) / 1)';
+  --adapt-notify-icon-inverted-hover: var(--adapt-notify-icon-inverted);
+
+  --adapt-notify-icon-focus: var(--adapt-notify-icon-hover);
+  --adapt-notify-icon-inverted-focus: var(--adapt-notify-icon-inverted-hover);
+
+  --adapt-notify-icon-disabled: var(--adapt-item-color-disabled);
+  --adapt-notify-icon-inverted-disabled: var(--adapt-item-color-inverted-disabled);
+
+  // --adapt-icon-border-width: ;
+
+  --adapt-notify-btn: var(--adapt-btn-color);
+  --adapt-notify-btn-inverted: var(--adapt-btn-color-inverted);
+
+  --adapt-notify-btn-hover: ~'hsla(from var(--adapt-notify-btn) h s calc(l - 10) / 1)';
+  --adapt-notify-btn-inverted-hover: var(--adapt-notify-btn-inverted);
+
+  --adapt-notify-btn-focus: var(--adapt-btn-color-focus);
+  --adapt-notify-btn-inverted-focus: var(--adapt-btn-color-inverted-focus);
+
+  --adapt-notify-btn-selected: var(--adapt-btn-color-selected);
+  --adapt-notify-btn-inverted-selected: var(--adapt-btn-color-inverted-selected);
+
+  --adapt-notify-btn-locked: var(--adapt-btn-color-locked);
+  --adapt-notify-btn-inverted-locked: var(--adapt-btn-color-inverted-locked);
+
+  --adapt-notify-btn-disabled: var(--adapt-btn-color-disabled);
+  --adapt-notify-btn-inverted-disabled: var(--adapt-btn-color-inverted-disabled);
+}
+
+// @notify: @ui-color;
+// @notify-inverted: @ui-color-inverted;
+
+// @notify-link: @notify-inverted;
+
+// @notify-link-hover: @notify-link;
 
 // UI
-@notify-icon: darken(@notify, 10%);
-@notify-icon-inverted: @notify-inverted;
+// @notify-icon: darken(@notify, 10%);
+// @notify-icon-inverted: @notify-inverted;
 
-@notify-icon-hover: darken(@notify-icon, 10%);
-@notify-icon-inverted-hover: @notify-icon-inverted;
+// @notify-icon-hover: darken(@notify-icon, 10%);
+// @notify-icon-inverted-hover: @notify-icon-inverted;
 
-@notify-icon-focus: @notify-icon-hover;
-@notify-icon-inverted-focus: @notify-icon-inverted-hover;
+// @notify-icon-focus: @notify-icon-hover;
+// @notify-icon-inverted-focus: @notify-icon-inverted-hover;
 
-@notify-icon-disabled: @disabled;
-@notify-icon-inverted-disabled: @disabled-inverted;
+// @notify-icon-disabled: @disabled;
+// @notify-icon-inverted-disabled: @disabled-inverted;
 
 // Button
-@notify-btn: @btn-color;
-@notify-btn-inverted: @btn-color-inverted;
+// @notify-btn: @btn-color;
+// @notify-btn-inverted: @btn-color-inverted;
 
-@notify-btn-hover: darken(@notify-btn, 10%);
-@notify-btn-inverted-hover: @notify-btn-inverted;
+// @notify-btn-hover: darken(@notify-btn, 10%);
+// @notify-btn-inverted-hover: @notify-btn-inverted;
 
-@notify-btn-focus: @btn-color-focus;
-@notify-btn-inverted-focus: @btn-color-inverted-focus;
+// @notify-btn-focus: @btn-color-focus;
+// @notify-btn-inverted-focus: @btn-color-inverted-focus;
 
-@notify-btn-selected: @btn-color-selected;
-@notify-btn-inverted-selected: @btn-color-inverted-selected;
+// @notify-btn-selected: @btn-color-selected;
+// @notify-btn-inverted-selected: @btn-color-inverted-selected;
 
-@notify-btn-locked: @btn-color-locked;
-@notify-btn-inverted-locked: @btn-color-inverted-locked;
+// @notify-btn-locked: @btn-color-locked;
+// @notify-btn-inverted-locked: @btn-color-inverted-locked;
 
-@notify-btn-disabled: @btn-color-disabled;
-@notify-btn-inverted-disabled: @btn-color-inverted-disabled;
+// @notify-btn-disabled: @btn-color-disabled;
+// @notify-btn-inverted-disabled: @btn-color-inverted-disabled;
 
 // Drawer
 // --------------------------------------------------
-@drawer: @ui-color;
-@drawer-inverted: @ui-color-inverted;
+:root {
+  --adapt-drawer: var(--adapt-ui-color);
+  --adapt-drawer-inverted: var(--adapt-ui-color-inverted);
 
-@drawer-link: @drawer-inverted;
+  --adapt-drawer-link: var(--adapt-drawer-inverted);
 
-@drawer-link-hover: @drawer-link;
+  --adapt-drawer-link-hover: var(--adapt-drawer-link);
+
+  --adapt-drawer-icon: ~'hsla(from var(--adapt-drawer) h s calc(l - 10) / 1)';
+  --adapt-drawer-icon-inverted: var(--adapt-drawer-inverted);
+
+  --adapt-drawer-icon-hover: ~'hsla(from var(--adapt-drawer-icon) h s l / 1)';
+  --adapt-drawer-icon-inverted-hover: var(--adapt-drawer-icon-inverted);
+
+  --adapt-drawer-icon-focus: var(--adapt-drawer-icon-hover);
+  --adapt-drawer-icon-inverted-focus: var(--adapt-drawer-icon-inverted-hover);
+
+  // --adapt-icon-border-width: ;
+
+  // // Item
+  --adapt-drawer-item: var(--adapt-drawer);
+  --adapt-drawer-item-inverted: var(--adapt-drawer-inverted);
+
+  --adapt-drawer-item-hover: ~'hsla(from var(--adapt-drawer-item) h s l / 1)';
+  --adapt-drawer-item-inverted-hover: var(--adapt-drawer-item-inverted);
+
+  --adapt-drawer-item-focus: var(--adapt-drawer-item-hover);
+  --adapt-drawer-item-inverted-focus: var(--adapt-drawer-item-inverted-hover);
+
+  --adapt-drawer-item-selected: ~'hsla(from var(--adapt-drawer-item) h s calc(l - 20) / 1)';
+  --adapt-drawer-item-inverted-selected: var(--adapt-drawer-item-inverted);
+  --adapt-drawer-item-selected-underline: var(--adapt-drawer-item-inverted);
+
+  --adapt-drawer-item-locked: var(--adapt-item-color-disabled);
+  --adapt-drawer-item-locked-inverted: var(--adapt-item-color-inverted-disabled);
+
+  --adapt-drawer-progress: var(--adapt-drawer-item-inverted);
+  --adapt-drawer-progress-inverted: var(--adapt-drawer-item);
+  --adapt-drawer-progress-border: var(--adapt-drawer-item-inverted);
+
+  --adapt-drawer-progress-hover: var(--adapt-drawer-item-inverted-hover);
+  --adapt-drawer-progress-inverted-hover: var(--adapt-drawer-item-hover);
+  --adapt-drawer-progress-border-hover: var(--adapt-drawer-progress-border);
+}
+
+// @drawer: @ui-color;
+// @drawer-inverted: @ui-color-inverted;
+
+// @drawer-link: @drawer-inverted;
+
+// @drawer-link-hover: @drawer-link;
 
 // UI
-@drawer-icon: darken(@drawer, 10%);
-@drawer-icon-inverted: @drawer-inverted;
+// @drawer-icon: darken(@drawer, 10%);
+// @drawer-icon-inverted: @drawer-inverted;
 
-@drawer-icon-hover: darken(@drawer-icon, 10%);
-@drawer-icon-inverted-hover: @drawer-icon-inverted;
+// @drawer-icon-hover: darken(@drawer-icon, 10%);
+// @drawer-icon-inverted-hover: @drawer-icon-inverted;
 
-@drawer-icon-focus: @drawer-icon-hover;
-@drawer-icon-inverted-focus: @drawer-icon-inverted-hover;
+// @drawer-icon-focus: @drawer-icon-hover;
+// @drawer-icon-inverted-focus: @drawer-icon-inverted-hover;
 
 // Item
-@drawer-item: @drawer;
-@drawer-item-inverted: @drawer-inverted;
+// @drawer-item: @drawer;
+// @drawer-item-inverted: @drawer-inverted;
 
-@drawer-item-hover: darken(@drawer-item, 10%);
-@drawer-item-inverted-hover: @drawer-item-inverted;
+// @drawer-item-hover: darken(@drawer-item, 10%);
+// @drawer-item-inverted-hover: @drawer-item-inverted;
 
-@drawer-item-focus: darken(@drawer-item-hover, 10%);
-@drawer-item-inverted-focus: @drawer-item-inverted-hover;
+// @drawer-item-focus: darken(@drawer-item-hover, 10%);
+// @drawer-item-inverted-focus: @drawer-item-inverted-hover;
 
-@drawer-item-selected: darken(@drawer-item, 20%);
-@drawer-item-inverted-selected: @drawer-item-inverted;
-@drawer-item-selected-underline: @drawer-item-inverted;
+// @drawer-item-selected: darken(@drawer-item, 20%);
+// @drawer-item-inverted-selected: @drawer-item-inverted;
+// @drawer-item-selected-underline: @drawer-item-inverted;
 
-@drawer-item-locked: @disabled;
-@drawer-item-inverted-locked: @disabled-inverted;
+// @drawer-item-locked: @disabled;
+// @drawer-item-inverted-locked: @disabled-inverted;
 
-@drawer-progress: @drawer-item-inverted;
-@drawer-progress-inverted: @drawer-item;
-@drawer-progress-border: @drawer-item-inverted;
+// @drawer-progress: @drawer-item-inverted;
+// @drawer-progress-inverted: @drawer-item;
+// @drawer-progress-border: @drawer-item-inverted;
 
-@drawer-progress-hover: @drawer-item-inverted-hover;
-@drawer-progress-inverted-hover: @drawer-item-hover;
-@drawer-progress-border-hover: @drawer-progress-border;
+// @drawer-progress-hover: @drawer-item-inverted-hover;
+// @drawer-progress-inverted-hover: @drawer-item-hover;
+// @drawer-progress-border-hover: @drawer-progress-border;
 
 // Pull quote
 // --------------------------------------------------
-@pull-quote: @greyLight;
-@pull-quote-inverted: @font-color;
-@pull-quote-border: @blue;
+:root {
+  --adapt-pull-quote: var(--adapt-grey-light);
+  --adapt-pull-quote-inverted: var(--adapt-font-color);
+  --adapt-pull-quote-border: var(--adapt-blue);
+}
+
+// @pull-quote: @greyLight;
+// @pull-quote-inverted: @font-color;
+// @pull-quote-border: @blue;
 
 // Background
 // --------------------------------------------------
-@background: @black;
-@background-inverted: @white;
+:root {
+  --adapt-background: var(--adapt-black);
+  --adapt-background-inverted: var(--adapt-white);
+}
+
+// @background: @black;
+// @background-inverted: @white;
 
 // Shadow
 // --------------------------------------------------
-@shadow: @black;
-@shadow-inverted: @white;
+:root {
+  --adapt-shadow: var(--adapt-black);
+  --adapt-shadow-inverted: var(--adapt-white);
+  // --adapt-shadow-opacity: ;
+}
+
+// @shadow: @black;
+// @shadow-inverted: @white;
 @shadow-opacity: 50%;
 
 // Loading
 // --------------------------------------------------
-@loading: @black;
-@loading-inverted: @white;
+:root {
+  --adapt-loading: var(--adapt-black);
+  --adapt-loading-inverted: var(--adapt-white);
+}
+
+// @loading: @black;
+// @loading-inverted: @white;

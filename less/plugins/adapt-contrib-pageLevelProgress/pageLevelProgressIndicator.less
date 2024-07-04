@@ -10,15 +10,18 @@
 .pagelevelprogress {
   &__indicator {
     border-radius: @progress-border-radius;
-    border-color: @progress-border;
+    // border-color: @progress-border;
+    border-color: var(--adapt-progress-border);
   }
 
   &__indicator-inner {
-    background-color: @progress-inverted;
+    // background-color: @progress-inverted;
+    background-color: var(--adapt-progress-inverted);
   }
 
   &__indicator-bar {
-    background-color: @progress;
+    // background-color: @progress;
+    background-color: var(--adapt-progress);
     .transition(width @progress-duration linear);
   }
 }
@@ -27,15 +30,18 @@
 // --------------------------------------------------
 .menu-item__progress {
   .pagelevelprogress__indicator {
-    border-color: @menu-item-progress-border;
+    // border-color: @menu-item-progress-border;
+    border-color: var(--adapt-menu-item-progress-border);
   }
 
   .pagelevelprogress__indicator-inner {
-    background-color: @menu-item-progress-inverted;
+    // background-color: @menu-item-progress-inverted;
+    background-color: var(--adapt-menu-item-progress-inverted);
   }
 
   .pagelevelprogress__indicator-bar {
-    background-color: @menu-item-progress;
+    // background-color: @menu-item-progress;
+    background-color: var(--adapt-menu-item-progress);
   }
 }
 
@@ -43,34 +49,41 @@
 // --------------------------------------------------
 .pagelevelprogress__nav-btn {
   .pagelevelprogress__indicator {
-    border-color: @nav-progress-border;
+    // border-color: @nav-progress-border;
+    border-color: var(--adapt-nav-progress-border);
 
     & when (@nav-ui-btn-ctrl-color-style = outline) {
-      border-color: @nav-progress-inverted;
+      // border-color: @nav-progress-inverted;
+      border-color: var(--adapt-nav-progress-inverted);
     }
   }
 
   .pagelevelprogress__indicator-inner {
-    background-color: @nav-progress-inverted;
+    // background-color: @nav-progress-inverted;
+    background-color: var(--adapt-nav-progress-inverted);
   }
 
   .pagelevelprogress__indicator-bar {
-    background-color: @nav-progress;
+    // background-color: @nav-progress;
+    background-color: var(--adapt-nav-progress);
   }
 
   .no-touch &:hover {
     .pagelevelprogress__indicator {
-      border-color: @nav-progress-border-hover;
+      // border-color: @nav-progress-border-hover;
+      border-color: var(--adapt-nav-progress-border-hover);
       .transition(border-color @duration ease-in);
     }
 
     .pagelevelprogress__indicator-inner {
-      background-color: @nav-progress-inverted-hover;
+      // background-color: @nav-progress-inverted-hover;
+      background-color: var(--adapt-nav-progress-inverted-hover);
       .transition(background-color @duration ease-in);
     }
 
     .pagelevelprogress__indicator-bar {
-      background-color: @nav-progress-hover;
+      // background-color: @nav-progress-hover;
+      background-color: var(--adapt-nav-progress-hover);
       .transition(background-color @duration ease-in);
     }
   }
@@ -80,30 +93,36 @@
 // --------------------------------------------------
 .pagelevelprogress__item-btn:not(.is-disabled) {
   .pagelevelprogress__indicator {
-    border-color: @drawer-progress-border;
+    // border-color: @drawer-progress-border;
+    border-color: var(--adapt-drawer-progress-border);
   }
 
   .pagelevelprogress__indicator-inner {
-    background-color: @drawer-progress-inverted;
+    // background-color: @drawer-progress-inverted;
+    background-color: var(--adapt-drawer-progress-inverted);
   }
 
   .pagelevelprogress__indicator-bar {
-    background-color: @drawer-progress;
+    // background-color: @drawer-progress;
+    background-color: var(--adapt-drawer-progress);
   }
 
   .no-touch &:hover {
     .pagelevelprogress__indicator {
-      border-color: @drawer-progress-border-hover;
+      // border-color: @drawer-progress-border-hover;
+      border-color: var(--adapt-drawer-progress-border-hover);
       .transition(border-color @duration ease-in);
     }
 
     .pagelevelprogress__indicator-inner {
-      background-color: @drawer-progress-inverted-hover;
+      // background-color: @drawer-progress-inverted-hover;
+      background-color: var(--adapt-drawer-progress-inverted-hover);
       .transition(background-color @duration ease-in);
     }
 
     .pagelevelprogress__indicator-bar {
-      background-color: @drawer-progress-hover;
+      // background-color: @drawer-progress-hover;
+      background-color: var(--adapt-drawer-progress-hover);
       .transition(background-color @duration ease-in);
     }
   }
@@ -111,14 +130,17 @@
 
 .pagelevelprogress__item-btn.is-disabled {
   .pagelevelprogress__indicator {
-    border-color: @disabled-inverted;
+    // border-color: @disabled-inverted;
+    border-color: var(--adapt-disabled-inverted);
   }
 
   .pagelevelprogress__indicator-inner {
-    background-color: @disabled;
+    // background-color: @disabled;
+    background-color: var(--adapt-disabled);
   }
 
   .pagelevelprogress__indicator-bar {
-    background-color: @disabled-inverted;
+    // background-color: @disabled-inverted;
+    background-color: var(--adapt-disabled-inverted);
   }
 }

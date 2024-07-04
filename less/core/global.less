@@ -1,5 +1,6 @@
 body {
-  background-color: @body-background-color;
+  // background-color: @body-background-color;
+  background-color: var(--adapt-body-background-color);
 }
 
 .inline-icon {
@@ -29,9 +30,14 @@ figure {
 .aside-pull-quote {
   margin: @item-margin * 2;
   padding: @item-padding;
-  border-bottom: 2px solid @pull-quote-border;
-  background-color: @pull-quote;
-  color: @pull-quote-inverted;
+  // border-bottom: 2px solid @pull-quote-border;
+  // background-color: @pull-quote;
+  // color: @pull-quote-inverted;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--adapt-pull-quote-border);
+  background-color: var(--adapt-pull-quote);
+  color: var(--adapt-pull-quot-inverted);
  .pull-quote-body;
 
   @media (min-width: @device-width-medium) {

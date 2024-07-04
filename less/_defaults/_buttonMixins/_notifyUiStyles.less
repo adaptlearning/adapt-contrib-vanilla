@@ -4,62 +4,82 @@
 
 // Default - Filled
 .notify-ui-btn-ctrl-color() {
-  background-color: @notify-icon;
-  color: @notify-icon-inverted;
+  // background-color: @notify-icon;
+  // color: @notify-icon-inverted;
+  background-color: var(--adapt-notify-icon);
+  color: var(--adapt-notify-icon-inveretd);
 }
 
 .notify-ui-btn-ctrl-color-hover() {
-  background-color: @notify-icon-hover;
-  color: @notify-icon-inverted-hover;
+  // background-color: @notify-icon-hover;
+  // color: @notify-icon-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
+  background-color: var(--adapt-notify-icon-hover);
+  color: var(--adapt-notify-icon-inveretd-hover);
 }
 
 .notify-ui-btn-ctrl-color-focus() {
-  background-color: @notify-icon-focus;
-  color: @notify-icon-inverted-focus;
+  // background-color: @notify-icon-focus;
+  // color: @notify-icon-inverted-focus;
+  background-color: var(--adapt-notify-icon-focus);
+  color: var(--adapt-notify-icon-inveretd-focus);
 }
 
 .notify-ui-btn-ctrl-color-disabled() {
-  background-color: @notify-icon-disabled;
-  color: @notify-icon-inverted-disabled;
+  // background-color: @notify-icon-disabled;
+  // color: @notify-icon-inverted-disabled;
+  background-color: var(--adapt-notify-icon-disabled);
+  color: var(--adapt-notify-icon-inverted-disabled);
 }
 
 // Outline
 .notify-ui-btn-ctrl-color-outline() {
-  background-color: @notify-icon;
-  color: @notify-icon-inverted;
-  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-inverted inset;
+  // background-color: @notify-icon;
+  // color: @notify-icon-inverted;
+  // box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-inverted inset;
+  background-color: var(--adapt-notify-icon);
+  color: var(--adapt-notify-icon-inverted);
+  box-shadow: 0 0 0 @ui-btn-controls-border-width var(--adapt-notify-icon-inverted) inset;
 }
 
 .notify-ui-btn-ctrl-color-outline-hover() {
-  .notify-ui-btn-ctrl-color-hover;
-  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-hover inset;
+  // .notify-ui-btn-ctrl-color-hover;
+  // box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-hover inset;
   .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+  background-color: var(--adapt-notify-icon-hover);
+  color: var(--adapt-notify-icon-inveretd-hover);
+  box-shadow: 0 0 0 @ui-btn-controls-border-width var(--adapt-notify-icon-hover) inset;
 }
 
 .notify-ui-btn-ctrl-color-outline-focus() {
-  .notify-ui-btn-ctrl-color-focus;
-  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-focus inset;
+  // .notify-ui-btn-ctrl-color-focus;
+  // box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-focus inset;
+  background-color: var(--adapt-notify-icon-focus);
+  color: var(--adapt-notify-icon-inveretd-focus);
+  box-shadow: 0 0 0 @ui-btn-controls-border-width var(--adapt-notify-icon-focus) inset;
 }
 
 .notify-ui-btn-ctrl-color-outline-disabled() {
-  .notify-ui-btn-ctrl-color-disabled;
-  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-disabled inset;
+  // .notify-ui-btn-ctrl-color-disabled;
+  // box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-disabled inset;
+  background-color: var(--adapt-notify-icon-disabled);
+  color: var(--adapt-notify-icon-inverted-disabled);
+  box-shadow: 0 0 0 @ui-btn-controls-border-width var(--adapt-notify-icon-disabled) inset;
 }
 
 // Plain
-.notify-ui-btn-ctrl-color-plain() {
-  background-color: transparent;
-  color: @notify-icon-inverted;
-}
+// .notify-ui-btn-ctrl-color-plain() {
+//   background-color: transparent;
+//   color: @notify-icon-inverted;
+// }
 
-.notify-ui-btn-ctrl-color-plain-hover() {
-  background-color: transparent;
-  color: @notify-icon-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
-}
+// .notify-ui-btn-ctrl-color-plain-hover() {
+//   background-color: transparent;
+//   color: @notify-icon-hover;
+//   .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+// }
 
-.notify-ui-btn-ctrl-color-plain-focus() {
-  background-color: transparent;
-  color: @notify-icon-focus;
-}
+// .notify-ui-btn-ctrl-color-plain-focus() {
+//   background-color: transparent;
+//   color: @notify-icon-focus;
+// }

@@ -1,16 +1,22 @@
 .glossary {
   &__item-description {
     padding: @item-padding;
-    border-bottom: 1px solid @drawer-item-hover;
-    color: @drawer-item-inverted;
+    // border-bottom: 1px solid @drawer-item-hover;
+    // color: @drawer-item-inverted;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: var(--adapt-drawer-item-hover);
+    color: var(--adapt-drawer-item-inverted);
   }
 
   &__item-description a {
     .link-text;
-    color: @drawer-link;
+    // color: @drawer-link;
+    color: var(--adapt-drawer-link);
 
     .no-touch &:hover {
-      color: @drawer-link-hover;
+      // color: @drawer-link-hover;
+      color: var(--adapt-drawer-link-hover);
       .transition(color @duration ease-in);
     }
   }
@@ -18,7 +24,11 @@
   &__item-not-found {
     padding: @item-padding;
     line-height: @title-line-height;
-    border-bottom: 1px solid @drawer-item-hover;
-    color: @drawer-item-inverted;
+    // border-bottom: 1px solid @drawer-item-hover;
+    // color: @drawer-item-inverted;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: var(--adapt-drawer-item-hover);
+    color: var(--adapt-drawer-item-inverted);
   }
 }

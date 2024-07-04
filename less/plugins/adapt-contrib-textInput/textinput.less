@@ -1,12 +1,16 @@
 .textinput {
   &__widget.is-disabled &-item__textbox {
-    background-color: @disabled;
-    border-color: @disabled;
-    color: @disabled-inverted;
+    // background-color: @disabled;
+    // border-color: @disabled;
+    // color: @disabled-inverted;
+    background-color: var(--adapt-disabled);
+    border-color: var(--adapt-disabled);
+    color: var(--adapt-disabled-inverted);
   }
 
   &__widget.is-disabled &-item__icon {
-    color: @disabled-inverted;
+    // color: @disabled-inverted;
+    color: var(--adapt-disabled-inverted);
   }
 }
 

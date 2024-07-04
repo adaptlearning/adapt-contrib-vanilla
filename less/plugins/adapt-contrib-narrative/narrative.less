@@ -45,22 +45,31 @@
   }
 
   &__progress {
-    background-color: @item-color;
-    color: @item-color-inverted;
-    border-color: @item-color-inverted;
+    // background-color: @item-color;
+    // color: @item-color-inverted;
+    // border-color: @item-color-inverted;
+    background-color: var(--adapt-item-color);
+    color: var(--adapt-item-color-inverted);
+    border-color: var(--adapt-item-color-inverted);
     border-radius: 50%;
   }
 
   &__progress.is-visited {
-    background-color: @visited;
-    color: @visited-inverted;
-    border-color: @visited-inverted;
+    // background-color: @visited;
+    // color: @visited-inverted;
+    // border-color: @visited-inverted;
+    background-color: var(--adapt-visited);
+    color: var(--adapt-inverted-visited);
+    border-color: var(--adapt-inverted-visited);
   }
 
   &__progress.is-selected {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
-    border-color: @item-color-selected;
+    // background-color: @item-color-selected;
+    // color: @item-color-inverted-selected;
+    // border-color: @item-color-selected;
+    background-color: var(--adapt-item-color-selected);
+    color: var(--adapt-item-color-inverted-selected);
+    border-color: var(--adapt-item-color-inverted-selected);
   }
 
   &__strapline-btn {

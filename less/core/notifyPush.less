@@ -1,6 +1,8 @@
 .notify-push {
-  background-color: @notify;
-  color: @notify-inverted;
+  // background-color: @notify;
+  // color: @notify-inverted;
+  background-color: var(--adapt-notify);
+  color: var(--adapt-notify-inverted);
   .transform(translateY(25px));
   .transition(opacity @duration ease-in-out, transform @duration ease-in-out;);
 
@@ -21,10 +23,12 @@
 
   &__body a {
     .link-text;
-    color: @notify-link;
+    // color: @notify-link;
+    color: var(--adapt-notify-link);
 
     .no-touch &:hover {
-      color: @notify-link-hover;
+      // color: @notify-link-hover;
+      color: var(--adapt-notify-link-hover);
       .transition(color @duration ease-in);
     }
   }

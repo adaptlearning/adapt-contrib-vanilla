@@ -1,6 +1,8 @@
 .loading {
-  background-color: fade(@shadow, @shadow-opacity);
-  color: @shadow-inverted;
+  // background-color: fade(@shadow, @shadow-opacity);
+  // color: @shadow-inverted;
+  background-color: var(--adapt-shadow);
+  color: var(--adapt-shadow-inverted);
 
   &__inner {
     .l-fill-viewport-absolute;
@@ -10,8 +12,12 @@
   &__inner {
     width: 3rem;
     height: 3rem;
-    border: .25rem solid fade(@loading, 50%);
-    border-top-color: @loading-inverted;
+    // border: .25rem solid fade(@loading, 50%);
+    // border-top-color: @loading-inverted;
+    border-width: .25rem;
+    border-style: solid;
+    border-color: var(--adapt-loading);
+    border-top-color: var(--adapt-loading-inverted);
     border-radius: 50%;
     .effect-spin;
   }

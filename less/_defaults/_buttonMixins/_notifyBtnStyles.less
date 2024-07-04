@@ -4,97 +4,127 @@
 
 // Default - Filled
 .notify-btn-color() {
-  background-color: @notify-btn;
-  color: @notify-btn-inverted;
+  // background-color: @notify-btn;
+  // color: @notify-btn-inverted;
+  background-color: var(--adapt-notify-btn);
+  color: var(--adapt-notify-btn-inverted);
 }
 
 .notify-btn-color-hover() {
-  background-color: @notify-btn-hover;
-  color: @notify-btn-inverted-hover;
+  // background-color: @notify-btn-hover;
+  // color: @notify-btn-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
+  background-color: var(--adapt-notify-btn-hover);
+  color: var(--adapt-notify-btn-inverted-hover);
 }
 
 .notify-btn-color-focus() {
-  background-color: @notify-btn-focus;
-  color: @notify-btn-inverted-focus;
+  // background-color: @notify-btn-focus;
+  // color: @notify-btn-inverted-focus;
+  background-color: var(--adapt-notify-btn-focus);
+  color: var(--adapt-notify-btn-inverted-focus);
 }
 
 .notify-btn-color-selected() {
-  background-color: @notify-btn-selected;
-  color: @notify-btn-inverted-selected;
+  // background-color: @notify-btn-selected;
+  // color: @notify-btn-inverted-selected;
+  background-color: var(--adapt-notify-btn-selected);
+  color: var(--adapt-notify-btn-inverted-selected);
 }
 
 .notify-btn-color-locked() {
-  background-color: @notify-btn-locked;
-  color: @notify-btn-inverted-locked;
+  // background-color: @notify-btn-locked;
+  // color: @notify-btn-inverted-locked;
+  background-color: var(--adapt-notify-btn-locked);
+  color: var(--adapt-notify-btn-inverted-locked);
 }
 
 .notify-btn-color-disabled() {
-  background-color: @notify-btn-disabled;
-  color: @notify-btn-inverted-disabled;
+  // background-color: @notify-btn-disabled;
+  // color: @notify-btn-inverted-disabled;
+  background-color: var(--adapt-notify-btn-disabled);
+  color: var(--adapt-notify-btn-inverted-disabled);
 }
 
 // Outline
 .notify-btn-color-outline() {
-  background-color: @notify-btn-inverted;
-  color: @notify-btn;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn inset;
+//   background-color: @notify-btn-inverted;
+//   color: @notify-btn;
+//   box-shadow: 0 0 0 @notify-btn-border-width @notify-btn inset;
+  background-color: var(--adapt-notify-btn-inverted);
+  color: var(--adapt-notify-btn);
+  box-shadow: 0 0 0 @notify-btn-border-width var(--adapt-notify-btn) inset;
 }
 
 .notify-btn-color-outline-hover() {
-  .notify-btn-color-hover;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-hover inset;
+  // .notify-btn-color-hover;
+  // box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-hover inset;
   .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+  background-color: var(--adapt-notify-btn-hover);
+  color: var(--adapt-notify-btn-inverted-hover);
+  box-shadow: 0 0 0 @notify-btn-border-width var(--adapt-notify-btn-hover) inset;
 }
 
 .notify-btn-color-outline-focus() {
-  .notify-btn-color-focus;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-focus inset;
+  // .notify-btn-color-focus;
+  // box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-focus inset;
+  background-color: var(--adapt-notify-btn-focus);
+  color: var(--adapt-notify-btn-inverted-focus);
+  box-shadow: 0 0 0 @notify-btn-border-width var(--adapt-notify-btn-focus) inset;
 }
 
 .notify-btn-color-outline-selected() {
-  .notify-btn-color-selected;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-selected inset;
+  // .notify-btn-color-selected;
+  // box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-selected inset;
+  background-color: var(--adapt-notify-btn-selected);
+  color: var(--adapt-notify-btn-inverted-selected);
+  box-shadow: 0 0 0 @notify-btn-border-width var(--adapt-notify-btn-selected) inset;
 }
 
 .notify-btn-color-outline-locked() {
-  .notify-btn-color-locked;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-locked inset;
+  // .notify-btn-color-locked;
+  // box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-locked inset;
+  background-color: var(--adapt-notify-btn-locked);
+  color: var(--adapt-notify-btn-inverted-locked);
+  box-shadow: 0 0 0 @notify-btn-border-width var(--adapt-notify-btn-locked) inset;
 }
 
 .notify-btn-color-outline-disabled() {
-  .notify-btn-color-disabled;
-  box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-disabled inset;
+  // .notify-btn-color-disabled;
+  // box-shadow: 0 0 0 @notify-btn-border-width @notify-btn-disabled inset;
+  background-color: var(--adapt-notify-btn-disabled);
+  color: var(--adapt-notify-btn-inverted-disabled);
+  box-shadow: 0 0 0 @notify-btn-border-width var(--adapt-notify-btn-disabled) inset;
 }
 
 // Plain
-.notify-btn-color-plain() {
-  background-color: transparent;
-  color: @notify-btn;
-}
+// .notify-btn-color-plain() {
+//   background-color: transparent;
+//   color: @notify-btn;
+// }
 
-.notify-btn-color-plain-hover() {
-  background-color: transparent;
-  color: @notify-btn-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
+// .notify-btn-color-plain-hover() {
+//   background-color: transparent;
+//   color: @notify-btn-hover;
+//   .transition(background-color @duration ease-in, color @duration ease-in;);
+// }
 
-.notify-btn-color-plain-focus() {
-  background-color: transparent;
-  color: @notify-btn-focus;
-}
+// .notify-btn-color-plain-focus() {
+//   background-color: transparent;
+//   color: @notify-btn-focus;
+// }
 
-.notify-btn-color-plain-selected() {
-  background-color: transparent;
-  color: @notify-btn-selected;
-}
+// .notify-btn-color-plain-selected() {
+//   background-color: transparent;
+//   color: @notify-btn-selected;
+// }
 
-.notify-btn-color-plain-locked() {
-  background-color: transparent;
-  color: @notify-btn-locked;
-}
+// .notify-btn-color-plain-locked() {
+//   background-color: transparent;
+//   color: @notify-btn-locked;
+// }
 
-.notify-btn-color-plain-disabled() {
-  background-color: transparent;
-  color: @notify-btn-disabled;
-}
+// .notify-btn-color-plain-disabled() {
+//   background-color: transparent;
+//   color: @notify-btn-disabled;
+// }

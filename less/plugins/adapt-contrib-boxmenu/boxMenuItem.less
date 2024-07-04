@@ -5,10 +5,15 @@
     width: 100%;
     margin: 0 @menu-item-padding-hoz @menu-item-padding-ver;
     padding: @menu-item-inner-padding-ver @menu-item-inner-padding-hoz;
-    background-color: @menu-item;
-    color: @menu-item-inverted;
-    border: 1px solid @menu-item-border-color;
+    // background-color: @menu-item;
+    // color: @menu-item-inverted;
+    // border: 1px solid @menu-item-border-color;
     border-radius: @item-border-radius;
+    background-color: var(--adapt-menu-item);
+    color: var(--adapt-menu-item-inverted);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--adapt-menu-item-border-color);
   }
 
   &__image-container {

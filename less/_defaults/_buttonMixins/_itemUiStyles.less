@@ -4,107 +4,142 @@
 
 // Default - Filled
 .item-ui-color() {
-  background-color: @item-ui-color;
-  color: @item-ui-color-inverted;
+  // background-color: @item-ui-color;
+  // color: @item-ui-color-inverted;
+  background-color: var(--adapt-item-ui-color);
+  color: var(--adapt-item-ui-color-inverted);
 }
 
 .item-ui-color-hover() {
-  background-color: @item-ui-color-hover;
-  color: @item-ui-color-inverted-hover;
+  // background-color: @item-ui-color-hover;
+  // color: @item-ui-color-inverted-hover;
   .transition(background-color @duration ease-in, color @duration ease-in;);
+  background-color: var(--adapt-item-ui-color-hover);
+  color: var(--adapt-item-ui-color-inverted-hover);
 }
 
 .item-ui-color-focus() {
-  background-color: @item-ui-color-focus;
-  color: @item-ui-color-inverted-focus;
+  // background-color: @item-ui-color-focus;
+  // color: @item-ui-color-inverted-focus;
+  background-color: var(--adapt-item-ui-color-focus);
+  color: var(--adapt-item-ui-color-inverted-focus);
 }
 
 .item-ui-color-visited() {
-  background-color: @item-ui-color-visited;
-  color: @item-ui-color-inverted-visited;
+  // background-color: @item-ui-color-visited;
+  // color: @item-ui-color-inverted-visited;
+  background-color: var(--adapt-item-ui-color-visited);
+  color: var(--adapt-item-ui-color-inverted-visited);
 }
 
 .item-ui-color-selected() {
-  background-color: @item-ui-color-selected;
-  color: @item-ui-color-inverted-selected;
+  // background-color: @item-ui-color-selected;
+  // color: @item-ui-color-inverted-selected;
+  background-color: var(--adapt-item-ui-color-selected);
+  color: var(--adapt-item-ui-color-inverted-selected);
 }
 
 .item-ui-color-locked() {
-  background-color: @item-ui-color-locked;
-  color: @item-ui-color-inverted-locked;
+  // background-color: @item-ui-color-locked;
+  // color: @item-ui-color-inverted-locked;
+  background-color: var(--adapt-item-ui-color-locked);
+  color: var(--adapt-item-ui-color-inverted-locked);
 }
 
 .item-ui-color-disabled() {
-  background-color: @item-ui-color-disabled;
-  color: @item-ui-color-inverted-disabled;
+  // background-color: @item-ui-color-disabled;
+  // color: @item-ui-color-inverted-disabled;
+  background-color: var(--adapt-item-ui-color-disabled);
+  color: var(--adapt-item-ui-color-inverted-disabled);
 }
 
 // Outline
 .item-ui-color-outline() {
-  background-color: @item-ui-color-inverted;
-  color: @item-ui-color;
-  box-shadow: 0 0 0 @item-ui-border-width @item-color inset;
+  // background-color: @item-ui-color-inverted;
+  // color: @item-ui-color;
+  // box-shadow: 0 0 0 @item-ui-border-width @item-color inset;
+  background-color: var(--adapt-item-ui-color-inverted);
+  color: var(--adapt-item-ui-color);
+  box-shadow: 0 0 0 @item-ui-border-width var(--adapt-item-ui-color) inset;
 }
 
 .item-ui-color-outline-hover() {
-  .item-ui-color-hover;
-  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-hover inset;
+  // .item-ui-color-hover;
+  // box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-hover inset;
   .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+  background-color: var(--adapt-item-ui-color-hover);
+  color: var(--adapt-item-ui-color-inverted-hover);
+  box-shadow: 0 0 0 @item-ui-border-width var(--adapt-item-ui-color-hover) inset;
 }
 
 .item-ui-color-outline-focus() {
-  .item-ui-color-focus;
-  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-focus inset;
+  // .item-ui-color-focus;
+  // box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-focus inset;
+  background-color: var(--adapt-item-ui-color-focus);
+  color: var(--adapt-item-ui-color-inverted-focus);
+  box-shadow: 0 0 0 @item-ui-border-width var(--adapt-item-ui-color-focus) inset;
 }
 
 .item-ui-color-outline-selected() {
-  .item-ui-color-selected;
-  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-selected inset;
+  // .item-ui-color-selected;
+  // box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-selected inset;
+  background-color: var(--adapt-item-ui-color-selected);
+  color: var(--adapt-item-ui-color-inverted-selected);
+  box-shadow: 0 0 0 @item-ui-border-width var(--adapt-item-ui-color-selected) inset;
 }
 
 .item-ui-color-outline-visited() {
-  .item-ui-color-visited;
-  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-visited inset;
+  // .item-ui-color-visited;
+  // box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-visited inset;
+  background-color: var(--adapt-item-ui-color-visited);
+  color: var(--adapt-item-ui-color-inverted-visited);
+  box-shadow: 0 0 0 @item-ui-border-width var(--adapt-item-ui-color-visited) inset;
 }
 
 .item-ui-color-outline-locked() {
-  .item-ui-color-locked;
-  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-locked inset;
+  // .item-ui-color-locked;
+  // box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-locked inset;
+  background-color: var(--adapt-item-ui-color-locked);
+  color: var(--adapt-item-ui-color-inverted-locked);
+  box-shadow: 0 0 0 @item-ui-border-width var(--adapt-item-ui-color-locked) inset;
 }
 
 .item-ui-color-outline-disabled() {
-  .item-ui-color-disabled;
-  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-disabled inset;
+  // .item-ui-color-disabled;
+  // box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-disabled inset;
+  background-color: var(--adapt-item-ui-color-disabled);
+  color: var(--adapt-item-ui-color-inverted-disabled);
+  box-shadow: 0 0 0 @item-ui-border-width var(--adapt-item-ui-color-disabled) inset;
 }
 
 // Plain
-.item-ui-color-plain() {
-  background-color: transparent;
-  color: @item-ui-color;
-}
+// .item-ui-color-plain() {
+//   background-color: transparent;
+//   color: @item-ui-color;
+// }
 
-.item-ui-color-plain-hover() {
-  background-color: transparent;
-  color: @item-ui-color-hover;
-  .transition(background-color @duration ease-in, color @duration ease-in;);
-}
+// .item-ui-color-plain-hover() {
+//   background-color: transparent;
+//   color: @item-ui-color-hover;
+//   .transition(background-color @duration ease-in, color @duration ease-in;);
+// }
 
-.item-ui-color-plain-focus() {
-  background-color: transparent;
-  color: @item-ui-color-focus;
-}
+// .item-ui-color-plain-focus() {
+//   background-color: transparent;
+//   color: @item-ui-color-focus;
+// }
 
-.item-ui-color-plain-selected() {
-  background-color: transparent;
-  color: @item-ui-color-selected;
-}
+// .item-ui-color-plain-selected() {
+//   background-color: transparent;
+//   color: @item-ui-color-selected;
+// }
 
-.item-ui-color-plain-locked() {
-  background-color: transparent;
-  color: @item-ui-color-locked;
-}
+// .item-ui-color-plain-locked() {
+//   background-color: transparent;
+//   color: @item-ui-color-locked;
+// }
 
-.item-ui-color-plain-disabled() {
-  background-color: transparent;
-  color: @item-ui-color-disabled;
-}
+// .item-ui-color-plain-disabled() {
+//   background-color: transparent;
+//   color: @item-ui-color-disabled;
+// }

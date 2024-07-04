@@ -36,31 +36,36 @@
   &__header-inner {
     position: relative;
     .l-container-padding(@menu-header-padding-ver, @menu-header-padding-hoz);
-    background-color: @menu-header-background-color;
+    // background-color: @menu-header-background-color;
+    background-color: var(--adapt-menu-header-background-color);
   }
 
   &__title {
     margin-bottom: @menu-title-margin;
     .menu-title;
-    color: @menu-header-title-color;
+    // color: @menu-header-title-color;
+    color: var(--adapt-menu-header-title-color);
   }
 
   &__subtitle {
     margin-bottom: @menu-subtitle-margin;
     .menu-subtitle;
-    color: @menu-header-subtitle-color;
+    // color: @menu-header-subtitle-color;
+    color: var(--adapt-menu-header-subtitle-color);
   }
 
   &__body {
     margin-bottom: @menu-body-margin;
     .menu-body;
-    color: @menu-header-body-color;
+    // color: @menu-header-body-color;
+    color: var(--adapt-menu-header-body-color);
   }
 
   &__instruction {
     margin-bottom: @menu-instruction-margin;
     .menu-instruction;
-    color: @menu-header-instruction-color;
+    // color: @menu-header-instruction-color;
+    color: var(--adapt-menu-header-instruction-color);
   }
 
   &__body a,

@@ -18,13 +18,18 @@
 
   &__checkbox-label {
     margin-inline-start: @item-margin;
-    color: @drawer-item-inverted;
+    // color: @drawer-item-inverted;
+    color: var(--adapt-drawer-item-inverted);
   }
 
   &__search-container,
   &__index-container {
-    background-color: @drawer;
-    border-bottom: 1px solid @drawer-item-hover;
+    // background-color: @drawer;
+    // border-bottom: 1px solid @drawer-item-hover;
+    background-color: var(--adapt-drawer);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--adapt-drawer-item-hover);
   }
 
   &__index-item {
@@ -37,17 +42,21 @@
 
   &__index-link {
     .link-text;
-    color: @drawer-link;
+    // color: @drawer-link;
+    color: var(--adapt-drawer-link);
 
     .no-touch &:hover {
-      color: @drawer-link-hover;
+      // color: @drawer-link-hover;
+      color: var(--adapt-drawer-link-hover);
       .transition(color @duration ease-in);
     }
   }
 
   &__items-group-header {
-    background-color: @drawer-item-hover;
-    color: @drawer-item-inverted-hover;
+    // background-color: @drawer-item-hover;
+    // color: @drawer-item-inverted-hover;
+    background-color: var(--adapt-drawer-item-hover);
+    color: var(--adapt-drawer-item-inverted-hover);
     text-align: center;
   }
 }

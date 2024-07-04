@@ -1,9 +1,14 @@
 .drawer {
-  background-color: @drawer;
-  color: @drawer-inverted;
+  // background-color: @drawer;
+  // color: @drawer-inverted;
+  background-color: var(--adapt-drawer);
+  color: var(--adapt-drawer-inverted);
 
   &__toolbar {
-    border-bottom: 1px solid @drawer-item-hover;
+    // border-bottom: 1px solid @drawer-item-hover;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--adapt-drawer-item-hover);
   }
 
   &__btn {
