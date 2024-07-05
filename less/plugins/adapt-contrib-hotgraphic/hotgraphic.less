@@ -7,13 +7,10 @@
     }
   }
 
-  &__pin:not(.has-pin-image) {
-    border-radius: 50%;
-  }
-
   & when (@item-ui-color-style = filled) {
     &__pin:not(.has-pin-image) {
       .item-ui-color;
+      border-radius: 50%;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .item-ui-color-hover;
@@ -32,6 +29,7 @@
   & when (@item-ui-color-style = outline) {
     &__pin:not(.has-pin-image) {
       .item-ui-color-outline;
+      border-radius: 50%;
 
       .no-touch &:not(.is-disabled):not(.is-locked):hover {
         .item-ui-color-outline-hover;

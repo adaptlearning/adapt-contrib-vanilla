@@ -9,16 +9,6 @@
     min-height: 2.5rem;
   }
 
-  &__number,
-  &__number-selection,
-  &__number-model-answer {
-    height: 2.5rem;
-    width: 2.5rem;
-    line-height: 2.5;
-    text-align: center;
-    border-radius: 50%;
-  }
-
   &__widget:not(.is-disabled) &__number {
     cursor: pointer;
   }
@@ -29,6 +19,16 @@
 
   &__number-model-answer {
     .item-color;
+  }
+
+  &__number,
+  &__number-selection,
+  &__number-model-answer {
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: 50%;
   }
 
   // Scale

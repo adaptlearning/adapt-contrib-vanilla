@@ -11,6 +11,7 @@
   & when (@item-color-style = filled) {
     &__btn {
       .item-color;
+      border-radius: 0;
 
       .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
         .item-color-hover;
@@ -33,6 +34,7 @@
   & when (@item-color-style = outline) {
     &__btn {
       .item-color-outline;
+      border-radius: 0;
 
       .no-touch &:not(.is-disabled):not([aria-expanded="true"]):hover {
         .item-color-outline-hover;
@@ -74,6 +76,7 @@
 
   & when (@item-color-style = filled) {
     .item-color;
+    border-radius: 0;
     border-bottom: 1px solid @item-color-hover;
 
     &:last-child {
@@ -102,6 +105,7 @@
 
   & when (@item-color-style = outline) {
     .item-color-outline;
+    border-radius: 0;
 
     // ! TODO review application of 'outline' styles vs existing border styles
     // ? should border-bottom styles replace mixin box-shadow ?
