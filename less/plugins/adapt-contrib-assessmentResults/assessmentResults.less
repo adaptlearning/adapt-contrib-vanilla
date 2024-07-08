@@ -2,4 +2,40 @@
   &__retry-feedback {
     margin-bottom: @component-body-margin;
   }
+
+  & when (@btn-color-style = filled) {
+    &__retry-btn {
+      .btn-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .btn-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .btn-color-focus;
+      }
+    }
+
+    &__retry-btn.is-disabled {
+      .btn-color-disabled;
+    }
+  }
+
+  & when (@btn-color-style = outline) {
+    &__retry-btn {
+      .btn-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .btn-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .btn-color-outline-focus;
+      }
+    }
+
+    &__retry-btn.is-disabled {
+      .btn-color-outline-disabled;
+    }
+  }
 }

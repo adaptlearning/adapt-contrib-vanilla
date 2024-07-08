@@ -10,26 +10,50 @@
   &__option {
     margin-top: @item-margin;
     padding: @item-padding / 2;
-    background-color: @item-color;
-    color: @item-color-inverted;
-    border-radius: @item-border-radius;
   }
 
-  .no-touch &__label:not(.is-disabled):not(.is-selected):hover &__option,
-  html:not(.a11y-disable-focusoutline) &__input:focus-visible + &__label &__option {
-    background-color: @item-color-hover;
-    color: @item-color-inverted-hover;
-    .transition(background-color @duration ease-in, color @duration ease-in;);
+  & when (@item-color-style = filled) {
+    &__option {
+      .item-color;
+    }
+
+    .no-touch &__label:not(.is-disabled):not(.is-selected):hover &__option {
+      .item-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &__input:focus-visible + &__label &__option {
+      .item-color-focus;
+    }
+
+    &__label.is-disabled &__option {
+      .item-color-disabled;
+    }
+
+    &__label.is-selected &__option {
+      .item-color-selected;
+    }
   }
 
-  &__label.is-disabled &__option {
-    background-color: @disabled;
-    color: @disabled-inverted;
-  }
+  & when (@item-color-style = outline) {
+    &__option {
+      .item-color-outline;
+    }
 
-  &__label.is-selected &__option {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+    .no-touch &__label:not(.is-disabled):not(.is-selected):hover &__option {
+      .item-color-outline-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &__input:focus-visible + &__label &__option {
+      .item-color-outline-focus;
+    }
+
+    &__label.is-disabled &__option {
+      .item-color-outline-disabled;
+    }
+
+    &__label.is-selected &__option {
+      .item-color-outline-selected;
+    }
   }
 
   &__state {

@@ -1,30 +1,54 @@
 .mcq-item {
   &__label {
     margin-bottom: @item-margin / 2;
-    background-color: @item-color;
-    color: @item-color-inverted;
-    border-radius: @item-border-radius;
-
-    .no-touch &:not(.is-disabled):not(.is-selected):hover,
-    html:not(.a11y-disable-focusoutline) .mcq-item__input:focus-visible + & {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
 
     .no-touch &:not(.is-disabled):not(.is-selected):hover .mcq-item__icon {
       .effect-scalePulse;
     }
   }
 
-  &__label.is-disabled {
-    background-color: @disabled;
-    color: @disabled-inverted;
+  & when (@item-color-style = filled) {
+    &__label {
+      .item-color;
+
+      .no-touch &:not(.is-disabled):not(.is-selected):hover {
+        .item-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) .mcq-item__input:focus-visible + & {
+        .item-color-focus;
+      }
+    }
+
+    &__label.is-disabled {
+      .item-color-disabled;
+    }
+
+    &__label.is-selected {
+      .item-color-selected;
+    }
   }
 
-  &__label.is-selected {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+  & when (@item-color-style = outline) {
+    &__label {
+      .item-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-selected):hover {
+        .item-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) .mcq-item__input:focus-visible + & {
+        .item-color-outline-focus;
+      }
+    }
+
+    &__label.is-disabled {
+      .item-color-outline-disabled;
+    }
+
+    &__label.is-selected {
+      .item-color-outline-selected;
+    }
   }
 
   &__state {
