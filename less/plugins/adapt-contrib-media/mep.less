@@ -20,11 +20,11 @@
 
 @mejs-cc-size: 0.75rem;
 
-.mejs-container {
+.mejs__container {
   // Play icon override
   // --------------------------------------------------
-  .mejs-overlay {
-    .mejs-overlay-button {
+  .mejs__overlay {
+    .mejs__overlay-button {
       .transform(translate(-50%,-50%));
       height: (@icon-size * 2) + @icon-padding;
       width: (@icon-size * 2) + @icon-padding;
@@ -42,12 +42,12 @@
       }
     }
 
-    .invert-play-icon & .mejs-overlay-button {
+    .invert-play-icon & .mejs__overlay-button {
       color: @black;
       box-shadow: 0 0 0 3px @black;
     }
 
-    .no-touch &:hover .mejs-overlay-button {
+    .no-touch &:hover .mejs__overlay-button {
       background-position: 0 0;
       opacity: 1;
       .transition(opacity @duration ease-in);
@@ -68,44 +68,44 @@
 
   // Colour overrides
   // --------------------------------------------------
-  .mejs-controls {
+  .mejs__controls {
     background: none;
     background-color: @mejs-color;
   }
 
-  .mejs-controls .mejs-time,
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
+  .mejs__controls .mejs__time,
+  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li {
     color: @mejs-color-inverted;
   }
 
-  .mejs-controls .mejs-button button {
+  .mejs__controls .mejs__button button {
     color: @mejs-icon;
   }
 
-  .mejs-controls .mejs-time-rail .mejs-time-total,
-  .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+  .mejs__controls .mejs__time-rail .mejs__time-total,
+  .mejs__controls .mejs__volume-button .mejs__volume-slider .mejs__volume-total {
     background: none;
     background-color: @mejs-time-total;
   }
 
-  .mejs-controls .mejs-time-rail .mejs-time-loaded {
+  .mejs__controls .mejs__time-rail .mejs__time-loaded {
     background: none;
     background-color: @mejs-time-loaded;
   }
 
-  .mejs-controls .mejs-time-rail .mejs-time-current,
-  .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+  .mejs__controls .mejs__time-rail .mejs__time-current,
+  .mejs__controls .mejs__volume-button .mejs__volume-slider .mejs__volume-current {
     background: none;
     background-color: @mejs-time-current;
   }
 
-  .mejs-controls .mejs-captions-button .mejs-captions-selector,
-  .mejs-controls .mejs-volume-button .mejs-volume-slider {
+  .mejs__controls .mejs__captions-button .mejs__captions-selector,
+  .mejs__controls .mejs__volume-button .mejs__volume-slider {
     background: none;
     background-color: @mejs-color;
   }
 
-  .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+  .mejs__controls .mejs__volume-button .mejs__volume-slider .mejs__volume-handle {
     background: none;
     background-color: @mejs-time-current;
   }
@@ -114,60 +114,60 @@
   // Icon classes must be defined in core/fonts/vanilla or
   // a custom font must be set up in the theme
   // --------------------------------------------------
-  .mejs-controls .mejs-play button {
+  .mejs__controls .mejs__play button {
     .icon-video-play;
   }
 
-  .mejs-controls .mejs-pause button {
+  .mejs__controls .mejs__pause button {
     .icon-video-pause;
   }
 
-  .mejs-controls .mejs-fullscreen-button button {
+  .mejs__controls .mejs__fullscreen-button button {
     .icon-video-fullscreen;
   }
 
-  .mejs-controls .mejs-unfullscreen button {
+  .mejs__controls .mejs__unfullscreen button {
     .icon-video-exit-fullscreen;
   }
 
-  .mejs-controls .mejs-mute button {
+  .mejs__controls .mejs__mute button {
     .icon-sound;
   }
 
-  .mejs-controls .mejs-unmute button {
+  .mejs__controls .mejs__unmute button {
     .icon-sound-mute;
   }
 
-  .mejs-controls .mejs-captions-button button {
+  .mejs__controls .mejs__captions-button button {
     .icon-video-captions-off-2;
   }
 
-  .mejs-controls .mejs-captions-enabled button {
+  .mejs__controls .mejs__captions-enabled button {
     .icon-video-captions;
   }
 
   // Player controls
   // --------------------------------------------------
-  .mejs-controls {
+  .mejs__controls {
     height: @mejs-controls-height;
   }
 
-  .mejs-controls .mejs-time-rail {
+  .mejs__controls .mejs__time-rail {
     height: @mejs-time-rail-height;
     margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
     padding: 0;
   }
 
-  .mejs-controls .mejs-time-rail span {
+  .mejs__controls .mejs__time-rail span {
     height: @mejs-time-rail-height;
   }
 
-  .mejs-controls .mejs-time-rail .mejs-time-total {
+  .mejs__controls .mejs__time-rail .mejs__time-total {
     height: @mejs-time-rail-height;
     margin: 0;
   }
 
-  .mejs-controls .mejs-time {
+  .mejs__controls .mejs__time {
     height: @mejs-time-size;
     margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
     padding: 0;
@@ -177,13 +177,13 @@
 
   // Button icon style overrides
   // --------------------------------------------------
-  .mejs-controls .mejs-button {
+  .mejs__controls .mejs__button {
     height: @icon-size;
     width: @icon-size;
     margin: @mejs-margin / 2;
   }
 
-  .mejs-controls .mejs-button button {
+  .mejs__controls .mejs__button button {
     .icon;
     height: @icon-size;
     width: @icon-size;
@@ -193,7 +193,7 @@
 
   // Current time pop float on time rail hover
   // --------------------------------------------------
-  .mejs-controls .mejs-time-rail .mejs-time-float {
+  .mejs__controls .mejs__time-rail .mejs__time-float {
     top: -1.5rem;
     height: calc(~'@{mejs-time-float-size} + 2px');
     width: calc(~'@{mejs-time-float-width} + 2px');
@@ -204,7 +204,7 @@
     border-color: @black;
   }
 
-  .mejs-controls .mejs-time-rail .mejs-time-float-current {
+  .mejs__controls .mejs__time-rail .mejs__time-float-current {
     height: @mejs-time-float-size;
     width: @mejs-time-float-width;
     margin: 0;
@@ -212,14 +212,14 @@
     line-height: 1;
   }
 
-  .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  .mejs__controls .mejs__time-rail .mejs__time-float-corner {
     top: @mejs-time-float-width / 2;
     left: @mejs-time-float-width / 2;
     .transform(translate(-50%,-50%));
     border-color: @white transparent transparent transparent;
   }
 
-  .mejs-controls .mejs-time-rail span {
+  .mejs__controls .mejs__time-rail span {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -227,7 +227,7 @@
 
   // Closed captions pop up selector
   // --------------------------------------------------
-  .mejs-controls .mejs-captions-button .mejs-captions-selector {
+  .mejs__controls .mejs__captions-button .mejs__captions-selector {
     bottom: @mejs-controls-height - @mejs-margin;
     left: -@mejs-margin / 2;
     right: auto;
@@ -239,19 +239,19 @@
     line-height: 1;
   }
 
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
+  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li {
     display: flex;
     align-items: center;
     margin: 0;
     padding: @mejs-margin / 2;
   }
 
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
+  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li input {
     margin: 0;
     float: none;
   }
 
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
+  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li label {
     float: none;
     width: auto;
     margin-left: @mejs-margin;
@@ -262,17 +262,17 @@
 
   // Closed captions
   // --------------------------------------------------
-  .mejs-captions-layer {
+  .mejs__captions-layer {
     font-size: @body-size;
     line-height: @body-line-height;
     color: inherit;
   }
 
-  .mejs-captions-position-hover {
+  .mejs__captions-position-hover {
     bottom: @mejs-controls-height + @mejs-time-rail-height;
   }
 
-  .mejs-captions-text {
+  .mejs__captions-text {
     padding: 0.25rem;
     background: none;
     background-color: @black;
@@ -287,7 +287,7 @@
     padding-bottom: @mejs-controls-height;
   }
 
-  .mejs-video:not(.mejs-container-fullscreen) .mejs-controls {
+  .mejs__video:not(.mejs__container-fullscreen) .mejs__controls {
     bottom: -@mejs-controls-height;
   }
 }
