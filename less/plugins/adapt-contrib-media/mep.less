@@ -23,48 +23,48 @@
 .mejs__container {
   // Play icon override
   // --------------------------------------------------
-  .mejs__overlay {
-    .mejs__overlay-button {
-      .transform(translate(-50%,-50%));
-      height: (@icon-size * 2) + @icon-padding;
-      width: (@icon-size * 2) + @icon-padding;
-      margin: 0;
-      padding: @icon-padding / 2;
-      background: none;
-      box-shadow: 0 0 0 3px @white;
-      border-radius: 50%;
-      color: @white;
-      opacity: .75;
+  // .mejs__overlay {
+  //   .mejs__overlay-button {
+  //     .transform(translate(-50%,-50%));
+  //     height: (@icon-size * 2) + @icon-padding;
+  //     width: (@icon-size * 2) + @icon-padding;
+  //     margin: 0;
+  //     padding: @icon-padding / 2;
+  //     background: none;
+  //     box-shadow: 0 0 0 3px @white;
+  //     border-radius: 50%;
+  //     color: @white;
+  //     opacity: .75;
 
-      @media (min-width: @device-width-small) {
-        height: (@icon-size * 3) + @icon-padding;
-        width: (@icon-size * 3) + @icon-padding;
-      }
-    }
+  //     @media (min-width: @device-width-small) {
+  //       height: (@icon-size * 3) + @icon-padding;
+  //       width: (@icon-size * 3) + @icon-padding;
+  //     }
+  //   }
 
-    .invert-play-icon & .mejs__overlay-button {
-      color: @black;
-      box-shadow: 0 0 0 3px @black;
-    }
+  //   .invert-play-icon & .mejs__overlay-button {
+  //     color: @black;
+  //     box-shadow: 0 0 0 3px @black;
+  //   }
 
-    .no-touch &:hover .mejs__overlay-button {
-      background-position: 0 0;
-      opacity: 1;
-      .transition(opacity @duration ease-in);
-    }
+  //   .no-touch &:hover .mejs__overlay-button {
+  //     background-position: 0 0;
+  //     opacity: 1;
+  //     .transition(opacity @duration ease-in);
+  //   }
 
-    .icon {
-      .icon-video-play;
-    }
+  //   .icon {
+  //     .icon-video-play;
+  //   }
 
-    .icon:before {
-      font-size: @icon-size * 2;
+  //   .icon:before {
+  //     font-size: @icon-size * 2;
 
-      @media (min-width: @device-width-small) {
-        font-size: @icon-size * 3;
-      }
-    }
-  }
+  //     @media (min-width: @device-width-small) {
+  //       font-size: @icon-size * 3;
+  //     }
+  //   }
+  // }
 
   // Colour overrides
   // --------------------------------------------------
@@ -114,167 +114,160 @@
   // Icon classes must be defined in core/fonts/vanilla or
   // a custom font must be set up in the theme
   // --------------------------------------------------
-  .mejs__controls .mejs__play button {
-    .icon-video-play;
-  }
+  // .mejs__controls .mejs__play button {
+  //   .icon-video-play;
+  // }
 
-  .mejs__controls .mejs__pause button {
-    .icon-video-pause;
-  }
+  // .mejs__controls .mejs__pause button {
+  //   .icon-video-pause;
+  // }
 
-  .mejs__controls .mejs__fullscreen-button button {
-    .icon-video-fullscreen;
-  }
+  // .mejs__controls .mejs__fullscreen-button button {
+  //   .icon-video-fullscreen;
+  // }
 
-  .mejs__controls .mejs__unfullscreen button {
-    .icon-video-exit-fullscreen;
-  }
+  // .mejs__controls .mejs__unfullscreen button {
+  //   .icon-video-exit-fullscreen;
+  // }
 
-  .mejs__controls .mejs__mute button {
-    .icon-sound;
-  }
+  // .mejs__controls .mejs__mute button {
+  //   .icon-sound;
+  // }
 
-  .mejs__controls .mejs__unmute button {
-    .icon-sound-mute;
-  }
+  // .mejs__controls .mejs__unmute button {
+  //   .icon-sound-mute;
+  // }
 
-  .mejs__controls .mejs__captions-button button {
-    .icon-video-captions-off-2;
-  }
+  // .mejs__controls .mejs__captions-button button {
+  //   .icon-video-captions-off-2;
+  // }
 
-  .mejs__controls .mejs__captions-enabled button {
-    .icon-video-captions;
-  }
+  // .mejs__controls .mejs__captions-enabled button {
+  //   .icon-video-captions;
+  // }
 
   // Player controls
   // --------------------------------------------------
-  .mejs__controls {
-    height: @mejs-controls-height;
-  }
+  // .mejs__controls {
+  //   height: @mejs-controls-height;
+  // }
 
-  .mejs__controls .mejs__time-rail {
-    height: @mejs-time-rail-height;
-    margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
-    padding: 0;
-  }
+  // .mejs__controls .mejs__time-rail {
+  //   height: @mejs-time-rail-height;
+  //   margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
+  //   padding: 0;
+  // }
 
-  .mejs__controls .mejs__time-rail span {
-    height: @mejs-time-rail-height;
-  }
+  // .mejs__controls .mejs__time-rail span {
+  //   height: @mejs-time-rail-height;
+  // }
 
-  .mejs__controls .mejs__time-rail .mejs__time-total {
-    height: @mejs-time-rail-height;
-    margin: 0;
-  }
+  // .mejs__controls .mejs__time-rail .mejs__time-total {
+  //   height: @mejs-time-rail-height;
+  //   margin: 0;
+  // }
 
-  .mejs__controls .mejs__time {
-    height: @mejs-time-size;
-    margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
-    padding: 0;
-    font-size: @mejs-time-size;
-    line-height: 1;
-  }
+  // .mejs__controls .mejs__time {
+  //   height: @mejs-time-size;
+  //   margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
+  //   padding: 0;
+  //   font-size: @mejs-time-size;
+  //   line-height: 1;
+  // }
 
   // Button icon style overrides
   // --------------------------------------------------
-  .mejs__controls .mejs__button {
-    height: @icon-size;
-    width: @icon-size;
-    margin: @mejs-margin / 2;
-  }
+  // .mejs__controls .mejs__button {
+  //   height: @icon-size;
+  //   width: @icon-size;
+  //   margin: @mejs-margin / 2;
+  // }
 
-  .mejs__controls .mejs__button button {
-    .icon;
-    height: @icon-size;
-    width: @icon-size;
-    margin: 0;
-    background: none;
-  }
+  // .mejs__controls .mejs__button button {
+  //   .icon;
+  //   height: @icon-size;
+  //   width: @icon-size;
+  //   margin: 0;
+  //   background: none;
+  // }
 
   // Current time pop float on time rail hover
   // --------------------------------------------------
-  .mejs__controls .mejs__time-rail .mejs__time-float {
-    top: -1.5rem;
-    height: calc(~'@{mejs-time-float-size} + 2px');
-    width: calc(~'@{mejs-time-float-width} + 2px');
-    margin-left: -@mejs-time-float-width / 2;
-    background: none;
-    background-color: @white;
-    color: @black;
-    border-color: @black;
-  }
+  // .mejs__controls .mejs__time-rail .mejs__time-float {
+  //   top: -1.5rem;
+  //   height: calc(~'@{mejs-time-float-size} + 2px');
+  //   width: calc(~'@{mejs-time-float-width} + 2px');
+  //   margin-left: -@mejs-time-float-width / 2;
+  //   background: none;
+  //   background-color: @white;
+  //   color: @black;
+  //   border-color: @black;
+  // }
 
-  .mejs__controls .mejs__time-rail .mejs__time-float-current {
-    height: @mejs-time-float-size;
-    width: @mejs-time-float-width;
-    margin: 0;
-    font-size: @mejs-time-float-size;
-    line-height: 1;
-  }
+  // .mejs__controls .mejs__time-rail .mejs__time-float-current {
+  //   height: @mejs-time-float-size;
+  //   width: @mejs-time-float-width;
+  //   margin: 0;
+  //   font-size: @mejs-time-float-size;
+  //   line-height: 1;
+  // }
 
-  .mejs__controls .mejs__time-rail .mejs__time-float-corner {
-    top: @mejs-time-float-width / 2;
-    left: @mejs-time-float-width / 2;
-    .transform(translate(-50%,-50%));
-    border-color: @white transparent transparent transparent;
-  }
+  // .mejs__controls .mejs__time-rail .mejs__time-float-corner {
+  //   top: @mejs-time-float-width / 2;
+  //   left: @mejs-time-float-width / 2;
+  //   .transform(translate(-50%,-50%));
+  //   border-color: @white transparent transparent transparent;
+  // }
 
   .mejs__controls .mejs__time-rail span {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
   }
 
   // Closed captions pop up selector
   // --------------------------------------------------
-  .mejs__controls .mejs__captions-button .mejs__captions-selector {
-    bottom: @mejs-controls-height - @mejs-margin;
-    left: -@mejs-margin / 2;
-    right: auto;
-    width: 6rem;
-    height: 6.5rem;
-    padding: @mejs-margin;
-    overflow-y: scroll;
+  // .mejs__controls .mejs__captions-button .mejs__captions-selector {
+  //   bottom: @mejs-controls-height - @mejs-margin;
+  //   left: -@mejs-margin / 2;
+  //   right: auto;
+  //   width: 6rem;
+  //   height: 6.5rem;
+  //   padding: @mejs-margin;
+  //   overflow-y: scroll;
+  //   font-size: @mejs-cc-size;
+  //   line-height: 1;
+  // }
+
+  // .mejs__controls .mejs__captions-button .mejs__captions-selector ul li {
+  //   display: flex;
+  //   align-items: center;
+  //   margin: 0;
+  //   padding: @mejs-margin / 2;
+  // }
+
+  // .mejs__controls .mejs__captions-button .mejs__captions-selector ul li input {
+  //   margin: 0;
+  //   float: none;
+  // }
+
+  .mejs__captions-selector-label,
+  .mejs__chapters-selector-label {
     font-size: @mejs-cc-size;
-    line-height: 1;
+    
   }
-
-  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: @mejs-margin / 2;
-  }
-
-  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li input {
-    margin: 0;
-    float: none;
-  }
-
-  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li label {
-    float: none;
-    width: auto;
-    margin-left: @mejs-margin;
-    padding: 0;
-    font-size: @mejs-cc-size;
-    line-height: 1;
-  }
+  // .mejs__controls .mejs__captions-button .mejs__captions-selector ul li label {
+  //   float: none;
+  //   width: auto;
+  //   margin-left: @mejs-margin;
+  //   padding: 0;
+  
+  //   line-height: 1;
+  // }
 
   // Closed captions
   // --------------------------------------------------
-  .mejs__captions-layer {
+  video::cue {
     font-size: @body-size;
     line-height: @body-line-height;
-    color: inherit;
-  }
-
-  .mejs__captions-position-hover {
-    bottom: @mejs-controls-height + @mejs-time-rail-height;
-  }
-
-  .mejs__captions-text {
-    padding: 0.25rem;
-    background: none;
     background-color: @black;
     color: @white;
   }
