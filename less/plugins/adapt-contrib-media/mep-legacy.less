@@ -1,24 +1,24 @@
 // Overrides for mejs player v2.21.2
 // --------------------------------------------------
-@mejs-color: @black;
-@mejs-color-inverted: @white;
+@mejs-legacy-color: @black;
+@mejs-legacy-color-inverted: @white;
 
-@mejs-icon: @white;
+@mejs-legacy-icon: @white;
 
-@mejs-time-current: @white;
-@mejs-time-loaded: darken(@white, 25%);
-@mejs-time-total: darken(@white, 50%);
+@mejs-legacy-time-current: @white;
+@mejs-legacy-time-loaded: darken(@white, 25%);
+@mejs-legacy-time-total: darken(@white, 50%);
 
-@mejs-controls-height: 2rem;
-@mejs-time-rail-height: 0.5rem;
-@mejs-margin: 0.5rem;
+@mejs-legacy-controls-height: 2rem;
+@mejs-legacy-time-rail-height: 0.5rem;
+@mejs-legacy-margin: 0.5rem;
 
-@mejs-time-size: 0.75rem;
+@mejs-legacy-time-size: 0.75rem;
 
-@mejs-time-float-size: 0.75rem;
-@mejs-time-float-width: 2rem;
+@mejs-legacy-time-float-size: 0.75rem;
+@mejs-legacy-time-float-width: 2rem;
 
-@mejs-cc-size: 0.75rem;
+@mejs-legacy-cc-size: 0.75rem;
 
 .mejs-container {
   // Play icon override
@@ -70,44 +70,44 @@
   // --------------------------------------------------
   .mejs-controls {
     background: none;
-    background-color: @mejs-color;
+    background-color: @mejs-legacy-color;
   }
 
   .mejs-controls .mejs-time,
   .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
-    color: @mejs-color-inverted;
+    color: @mejs-legacy-color-inverted;
   }
 
   .mejs-controls .mejs-button button {
-    color: @mejs-icon;
+    color: @mejs-legacy-icon;
   }
 
   .mejs-controls .mejs-time-rail .mejs-time-total,
   .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
     background: none;
-    background-color: @mejs-time-total;
+    background-color: @mejs-legacy-time-total;
   }
 
   .mejs-controls .mejs-time-rail .mejs-time-loaded {
     background: none;
-    background-color: @mejs-time-loaded;
+    background-color: @mejs-legacy-time-loaded;
   }
 
   .mejs-controls .mejs-time-rail .mejs-time-current,
   .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
     background: none;
-    background-color: @mejs-time-current;
+    background-color: @mejs-legacy-time-current;
   }
 
   .mejs-controls .mejs-captions-button .mejs-captions-selector,
   .mejs-controls .mejs-volume-button .mejs-volume-slider {
     background: none;
-    background-color: @mejs-color;
+    background-color: @mejs-legacy-color;
   }
 
   .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
     background: none;
-    background-color: @mejs-time-current;
+    background-color: @mejs-legacy-time-current;
   }
 
   // Icon overrides
@@ -149,29 +149,29 @@
   // Player controls
   // --------------------------------------------------
   .mejs-controls {
-    height: @mejs-controls-height;
+    height: @mejs-legacy-controls-height;
   }
 
   .mejs-controls .mejs-time-rail {
-    height: @mejs-time-rail-height;
-    margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
+    height: @mejs-legacy-time-rail-height;
+    margin: ((@mejs-legacy-controls-height - @mejs-legacy-time-rail-height) / 2) @mejs-legacy-margin;
     padding: 0;
   }
 
   .mejs-controls .mejs-time-rail span {
-    height: @mejs-time-rail-height;
+    height: @mejs-legacy-time-rail-height;
   }
 
   .mejs-controls .mejs-time-rail .mejs-time-total {
-    height: @mejs-time-rail-height;
+    height: @mejs-legacy-time-rail-height;
     margin: 0;
   }
 
   .mejs-controls .mejs-time {
-    height: @mejs-time-size;
-    margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
+    height: @mejs-legacy-time-size;
+    margin: ((@mejs-legacy-time-size / 2) + (@mejs-legacy-margin / 2)) @mejs-legacy-margin;
     padding: 0;
-    font-size: @mejs-time-size;
+    font-size: @mejs-legacy-time-size;
     line-height: 1;
   }
 
@@ -180,7 +180,7 @@
   .mejs-controls .mejs-button {
     height: @icon-size;
     width: @icon-size;
-    margin: @mejs-margin / 2;
+    margin: @mejs-legacy-margin / 2;
   }
 
   .mejs-controls .mejs-button button {
@@ -195,9 +195,9 @@
   // --------------------------------------------------
   .mejs-controls .mejs-time-rail .mejs-time-float {
     top: -1.5rem;
-    height: calc(~'@{mejs-time-float-size} + 2px');
-    width: calc(~'@{mejs-time-float-width} + 2px');
-    margin-left: -@mejs-time-float-width / 2;
+    height: calc(~'@{mejs-legacy-time-float-size} + 2px');
+    width: calc(~'@{mejs-legacy-time-float-width} + 2px');
+    margin-left: -@mejs-legacy-time-float-width / 2;
     background: none;
     background-color: @white;
     color: @black;
@@ -205,16 +205,16 @@
   }
 
   .mejs-controls .mejs-time-rail .mejs-time-float-current {
-    height: @mejs-time-float-size;
-    width: @mejs-time-float-width;
+    height: @mejs-legacy-time-float-size;
+    width: @mejs-legacy-time-float-width;
     margin: 0;
-    font-size: @mejs-time-float-size;
+    font-size: @mejs-legacy-time-float-size;
     line-height: 1;
   }
 
   .mejs-controls .mejs-time-rail .mejs-time-float-corner {
-    top: @mejs-time-float-width / 2;
-    left: @mejs-time-float-width / 2;
+    top: @mejs-legacy-time-float-width / 2;
+    left: @mejs-legacy-time-float-width / 2;
     .transform(translate(-50%,-50%));
     border-color: @white transparent transparent transparent;
   }
@@ -228,14 +228,14 @@
   // Closed captions pop up selector
   // --------------------------------------------------
   .mejs-controls .mejs-captions-button .mejs-captions-selector {
-    bottom: @mejs-controls-height - @mejs-margin;
-    left: -@mejs-margin / 2;
+    bottom: @mejs-legacy-controls-height - @mejs-legacy-margin;
+    left: -@mejs-legacy-margin / 2;
     right: auto;
     width: 6rem;
     height: 6.5rem;
-    padding: @mejs-margin;
+    padding: @mejs-legacy-margin;
     overflow-y: scroll;
-    font-size: @mejs-cc-size;
+    font-size: @mejs-legacy-cc-size;
     line-height: 1;
   }
 
@@ -243,7 +243,7 @@
     display: flex;
     align-items: center;
     margin: 0;
-    padding: @mejs-margin / 2;
+    padding: @mejs-legacy-margin / 2;
   }
 
   .mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
@@ -254,9 +254,9 @@
   .mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
     float: none;
     width: auto;
-    margin-left: @mejs-margin;
+    margin-left: @mejs-legacy-margin;
     padding: 0;
-    font-size: @mejs-cc-size;
+    font-size: @mejs-legacy-cc-size;
     line-height: 1;
   }
 
@@ -269,7 +269,7 @@
   }
 
   .mejs-captions-position-hover {
-    bottom: @mejs-controls-height + @mejs-time-rail-height;
+    bottom: @mejs-legacy-controls-height + @mejs-legacy-time-rail-height;
   }
 
   .mejs-captions-text {
@@ -284,10 +284,10 @@
 // --------------------------------------------------
 .offset-media-controls {
   .media__widget {
-    padding-bottom: @mejs-controls-height;
+    padding-bottom: @mejs-legacy-controls-height;
   }
 
   .mejs-video:not(.mejs-container-fullscreen) .mejs-controls {
-    bottom: -@mejs-controls-height;
+    bottom: -@mejs-legacy-controls-height;
   }
 }

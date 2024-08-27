@@ -15,8 +15,8 @@
 
 @mejs-time-size: 0.75rem;
 
-@mejs-time-float-size: 0.75rem;
-@mejs-time-float-width: 2rem;
+// @mejs-time-float-size: 0.75rem;
+// @mejs-time-float-width: 2rem;
 
 @mejs-cc-size: 0.75rem;
 
@@ -71,43 +71,43 @@
   .mejs__controls {
     background: none;
     background-color: @mejs-color;
-  }
 
-  .mejs__controls .mejs__time,
-  .mejs__controls .mejs__captions-button .mejs__captions-selector ul li {
-    color: @mejs-color-inverted;
-  }
-
-  .mejs__controls .mejs__button button {
-    color: @mejs-icon;
-  }
-
-  .mejs__controls .mejs__time-rail .mejs__time-total,
-  .mejs__controls .mejs__volume-button .mejs__volume-slider .mejs__volume-total {
-    background: none;
-    background-color: @mejs-time-total;
-  }
-
-  .mejs__controls .mejs__time-rail .mejs__time-loaded {
-    background: none;
-    background-color: @mejs-time-loaded;
-  }
-
-  .mejs__controls .mejs__time-rail .mejs__time-current,
-  .mejs__controls .mejs__volume-button .mejs__volume-slider .mejs__volume-current {
-    background: none;
-    background-color: @mejs-time-current;
-  }
-
-  .mejs__controls .mejs__captions-button .mejs__captions-selector,
-  .mejs__controls .mejs__volume-button .mejs__volume-slider {
-    background: none;
-    background-color: @mejs-color;
-  }
-
-  .mejs__controls .mejs__volume-button .mejs__volume-slider .mejs__volume-handle {
-    background: none;
-    background-color: @mejs-time-current;
+    .mejs__time,
+    .mejs__captions-button .mejs__captions-selector ul li {
+      color: @mejs-color-inverted;
+    }
+  
+    .mejs__button button {
+      color: @mejs-icon;
+    }
+  
+    .mejs__time-rail .mejs__time-total,
+    .mejs__volume-button .mejs__volume-slider .mejs__volume-total {
+      background: none;
+      background-color: @mejs-time-total;
+    }
+  
+    .mejs__time-rail .mejs__time-loaded {
+      background: none;
+      background-color: @mejs-time-loaded;
+    }
+  
+    .mejs__time-rail .mejs__time-current,
+    .mejs__volume-button .mejs__volume-slider .mejs__volume-current {
+      background: none;
+      background-color: @mejs-time-current;
+    }
+  
+    .mejs__captions-button .mejs__captions-selector,
+    .mejs__volume-button .mejs__volume-slider {
+      background: none;
+      background-color: @mejs-color;
+    }
+  
+    .mejs__volume-button .mejs__volume-slider .mejs__volume-handle {
+      background: none;
+      background-color: @mejs-time-current;
+    }
   }
 
   // Icon overrides
@@ -193,16 +193,15 @@
 
   // Current time pop float on time rail hover
   // --------------------------------------------------
-  // .mejs__controls .mejs__time-rail .mejs__time-float {
-  //   top: -1.5rem;
-  //   height: calc(~'@{mejs-time-float-size} + 2px');
-  //   width: calc(~'@{mejs-time-float-width} + 2px');
-  //   margin-left: -@mejs-time-float-width / 2;
-  //   background: none;
-  //   background-color: @white;
-  //   color: @black;
-  //   border-color: @black;
-  // }
+  .mejs__controls .mejs__time-rail .mejs__time-float {
+    // top: -1.5rem;
+    // height: calc(~'@{mejs-time-float-size} + 2px');
+    // width: calc(~'@{mejs-time-float-width} + 2px');
+    // margin-left: -@mejs-time-float-width / 2;
+    background-color: @white;
+    color: @black;
+    border-color: @black;
+  }
 
   // .mejs__controls .mejs__time-rail .mejs__time-float-current {
   //   height: @mejs-time-float-size;
@@ -212,12 +211,12 @@
   //   line-height: 1;
   // }
 
-  // .mejs__controls .mejs__time-rail .mejs__time-float-corner {
-  //   top: @mejs-time-float-width / 2;
-  //   left: @mejs-time-float-width / 2;
-  //   .transform(translate(-50%,-50%));
-  //   border-color: @white transparent transparent transparent;
-  // }
+  .mejs__controls .mejs__time-rail .mejs__time-float-corner {
+    // top: @mejs-time-float-width / 2;
+    // left: @mejs-time-float-width / 2;
+    // .transform(translate(-50%,-50%));
+    border-color: @white transparent transparent transparent;
+  }
 
   .mejs__controls .mejs__time-rail span {
     border-radius: 0;
@@ -259,7 +258,7 @@
   //   width: auto;
   //   margin-left: @mejs-margin;
   //   padding: 0;
-  
+
   //   line-height: 1;
   // }
 
