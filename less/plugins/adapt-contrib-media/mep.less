@@ -4,6 +4,7 @@
 @mejs-color-inverted: @white;
 
 @mejs-icon: @white;
+@mejs-icon-size: 1.25rem;
 
 @mejs-time-current: @white;
 @mejs-time-loaded: darken(@white, 25%);
@@ -114,37 +115,54 @@
   // Icon classes must be defined in core/fonts/vanilla or
   // a custom font must be set up in the theme
   // --------------------------------------------------
-  // .mejs__controls .mejs__play button {
-  //   .icon-video-play;
-  // }
+  .mejs__playpause-button,
+  .mejs__fullscreen-button,
+  .mejs__volume-button,
+  .mejs__captions-button {
+    svg { display: none }
 
-  // .mejs__controls .mejs__pause button {
-  //   .icon-video-pause;
-  // }
+    button {
+      .icon;
 
-  // .mejs__controls .mejs__fullscreen-button button {
-  //   .icon-video-fullscreen;
-  // }
+      &::before { font-size: @mejs-icon-size }
+    }
+  }
 
-  // .mejs__controls .mejs__unfullscreen button {
-  //   .icon-video-exit-fullscreen;
-  // }
+  .mejs__controls .mejs__play button {
+    .icon-video-play;
+  }
 
-  // .mejs__controls .mejs__mute button {
-  //   .icon-sound;
-  // }
+  .mejs__controls .mejs__pause button {
+    .icon-video-pause;
+  }
 
-  // .mejs__controls .mejs__unmute button {
-  //   .icon-sound-mute;
-  // }
+  .mejs__controls .mejs__fullscreen-button button {
+    .icon-video-fullscreen;
+  }
 
-  // .mejs__controls .mejs__captions-button button {
-  //   .icon-video-captions-off-2;
-  // }
+  .mejs__controls .mejs__unfullscreen button {
+    .icon-video-exit-fullscreen;
+  }
 
-  // .mejs__controls .mejs__captions-enabled button {
-  //   .icon-video-captions;
-  // }
+  .mejs__controls .mejs__mute button {
+    .icon-sound;
+  }
+
+  .mejs__controls .mejs__unmute button {
+    .icon-sound-mute;
+  }
+
+  .mejs__captions-button-toggle {
+    opacity: 1;
+  }
+
+  .mejs__captions-button.mejs__captions-enabled button {
+    .icon-video-captions-off-2;
+  }
+
+  .mejs__captions-button:not(.mejs__captions-enabled) button {
+    .icon-video-captions;
+  }
 
   // Player controls
   // --------------------------------------------------
@@ -184,7 +202,7 @@
   // }
 
   // .mejs__controls .mejs__button button {
-  //   .icon;
+  //   // .icon;
   //   height: @icon-size;
   //   width: @icon-size;
   //   margin: 0;
