@@ -43,7 +43,6 @@
       left: inherit;
       right: @item-padding;
     }
-
   }
 
   &:not(.is-vertical) &__icon {
@@ -74,20 +73,10 @@
   // vertical items
   &.is-vertical &__btn {
     padding-inline: @item-padding;
-    text-align: center;
   }
 
   &.is-vertical &__title-icon,
   &.is-vertical &__title {
-    display: block;
     padding-bottom: @icon-padding / 2;
-  }
-
-  &.is-vertical &__icon {
-    display: block;
-  }
-
-  &.is-vertical &__content {
-    text-align: center;
   }
 }
