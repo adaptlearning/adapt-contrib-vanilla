@@ -5,7 +5,8 @@
     position: relative;
     padding-top: @item-padding;
     padding-bottom: @item-padding;
-    padding-inline: @item-padding (@icon-size + (@item-padding * 2));
+    padding-inline-start: @item-padding;
+    padding-inline-end: @icon-size + (@item-padding * 2);
     text-align: start;
     background-color: @item-color;
     color: @item-color-inverted;
@@ -18,6 +19,10 @@
     }
   }
 
+  &__btn.has-title-icon {
+    padding-inline-start: @icon-size + (@item-padding * 2);
+  }
+
   &__btn.is-visited {
     background-color: @visited;
     color: @visited-inverted;
@@ -28,7 +33,20 @@
     color: @item-color-inverted-selected;
   }
 
-  &__icon {
+  &:not(.is-vertical) &__title-icon {
+    position: absolute;
+    top: 50%;
+    left: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      left: inherit;
+      right: @item-padding;
+    }
+
+  }
+
+  &:not(.is-vertical) &__icon {
     position: absolute;
     top: 50%;
     right: @item-padding;
@@ -51,5 +69,25 @@
 
   &.has-img-zoom &__image-container {
     .img-zoom();
+  }
+
+  // vertical items
+  &.is-vertical &__btn {
+    padding-inline: @item-padding;
+    text-align: center;
+  }
+
+  &.is-vertical &__title-icon,
+  &.is-vertical &__title {
+    display: block;
+    padding-bottom: @icon-padding / 2;
+  }
+
+  &.is-vertical &__icon {
+    display: block;
+  }
+
+  &.is-vertical &__content {
+    text-align: center;
   }
 }
