@@ -33,7 +33,7 @@
     color: @item-color-inverted-selected;
   }
 
-  &:not(.is-vertical) &__title-icon {
+  &:not(.is-center-aligned) &__title-icon {
     position: absolute;
     top: 50%;
     left: @item-padding;
@@ -45,7 +45,7 @@
     }
   }
 
-  &:not(.is-vertical) &__icon {
+  &:not(.is-center-aligned) &__icon {
     position: absolute;
     top: 50%;
     right: @item-padding;
@@ -71,12 +71,12 @@
   }
 
   // vertical items
-  &.is-vertical &__btn {
+  &.is-center-aligned &__btn {
     padding-inline: @item-padding;
   }
 
-  &.is-vertical &__title-icon,
-  &.is-vertical &__title {
+  &.is-center-aligned &__title-icon,
+  &.is-center-aligned &__title {
     padding-bottom: @icon-padding / 2;
   }
 }
