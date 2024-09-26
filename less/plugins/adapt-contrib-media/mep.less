@@ -163,76 +163,81 @@
 
   // Player controls
   // --------------------------------------------------
-  // .mejs__controls {
-  //   height: @mejs-controls-height;
-  // }
+  .mejs__controls {
+    height: @mejs-controls-height;
 
-  // .mejs__controls .mejs__time-rail {
-  //   height: @mejs-time-rail-height;
-  //   margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
-  //   padding: 0;
-  // }
+    .mejs__time-rail {
+      height: @mejs-time-rail-height;
+      margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
+      padding: 0;
+    }
 
-  // .mejs__controls .mejs__time-rail span {
-  //   height: @mejs-time-rail-height;
-  // }
+    .mejs__time-rail span {
+      height: @mejs-time-rail-height;
+    }
 
-  // .mejs__controls .mejs__time-rail .mejs__time-total {
-  //   height: @mejs-time-rail-height;
-  //   margin: 0;
-  // }
+    .mejs__time-rail .mejs__time-total {
+      height: @mejs-time-rail-height;
+      margin: 0;
+    }
 
-  // .mejs__controls .mejs__time {
-  //   height: @mejs-time-size;
-  //   margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
-  //   padding: 0;
-  //   font-size: @mejs-time-size;
-  //   line-height: 1;
-  // }
+    .mejs__time {
+      height: @mejs-time-size;
+      margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
+      padding: 0;
+      font-size: @mejs-time-size;
+      line-height: 1;
+    }
+  }
 
   // Button icon style overrides
   // --------------------------------------------------
-  // .mejs__controls .mejs__button {
-  //   height: @icon-size;
-  //   width: @icon-size;
-  //   margin: @mejs-margin / 2;
-  // }
+  .mejs__controls .mejs__button {
+    height: @icon-size;
+    width: @icon-size;
+    margin: @mejs-margin / 2;
 
-  // .mejs__controls .mejs__button button {
-  //   // .icon;
-  //   height: @icon-size;
-  //   width: @icon-size;
-  //   margin: 0;
-  //   background: none;
-  // }
+    button {
+      height: @icon-size;
+      width: @icon-size;
+      margin: 0;
+    }
+  }
+
+  .mejs__controls .mejs__button.mejs__speed-button,
+  .mejs__controls .mejs__button.mejs__speed-button button {
+    width: 2.25rem;
+  }
 
   // Current time pop float on time rail hover
   // --------------------------------------------------
-  .mejs__controls .mejs__time-rail .mejs__time-float {
-    height: calc(~'@{mejs-time-float-size} + 0.375rem');
-    width: @mejs-time-float-width;
-    background-color: @white;
-    color: @black;
-    border-color: @black;
-  }
+  .mejs__controls {
+    .mejs__time-rail .mejs__time-float {
+      height: calc(~'@{mejs-time-float-size} + 0.375rem');
+      width: @mejs-time-float-width;
+      background-color: @white;
+      color: @black;
+      border-color: @black;
+    }
 
-  .mejs__controls .mejs__time-rail .mejs__time-float-current {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-size: @mejs-time-float-size;
-    line-height: 1;
-  }
+    .mejs__time-rail .mejs__time-float-current {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      font-size: @mejs-time-float-size;
+      line-height: 1;
+    }
 
-  .mejs__controls .mejs__time-rail .mejs__time-float-corner {
-    border-color: @white transparent transparent transparent;
-  }
+    .mejs__time-rail .mejs__time-float-corner {
+      border-color: @white transparent transparent transparent;
+    }
 
-  .mejs__controls .mejs__time-rail span {
-    border-radius: 0;
+    .mejs__time-rail span {
+      border-radius: 0;
+    }
   }
 
   // Closed captions pop up selector
