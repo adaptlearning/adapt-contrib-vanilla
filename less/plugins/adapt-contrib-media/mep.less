@@ -24,48 +24,43 @@
 .mejs__container {
   // Play icon override
   // --------------------------------------------------
-  // .mejs__overlay {
-  //   .mejs__overlay-button {
-  //     .transform(translate(-50%,-50%));
-  //     height: (@icon-size * 2) + @icon-padding;
-  //     width: (@icon-size * 2) + @icon-padding;
-  //     margin: 0;
-  //     padding: @icon-padding / 2;
-  //     background: none;
-  //     box-shadow: 0 0 0 3px @white;
-  //     border-radius: 50%;
-  //     color: @white;
-  //     opacity: .75;
+  .mejs__overlay {
+    .mejs__overlay-button {
+      height: (@icon-size * 2) + @icon-padding;
+      width: (@icon-size * 2) + @icon-padding;
+      box-shadow: 0 0 0 3px @white;
+      border-radius: 50%;
+      color: @white;
+      opacity: 0.75;
+      .icon;
+      .icon-video-play;
 
-  //     @media (min-width: @device-width-small) {
-  //       height: (@icon-size * 3) + @icon-padding;
-  //       width: (@icon-size * 3) + @icon-padding;
-  //     }
-  //   }
+      @media (min-width: @device-width-small) {
+        height: (@icon-size * 3) + @icon-padding;
+        width: (@icon-size * 3) + @icon-padding;
+      }
 
-  //   .invert-play-icon & .mejs__overlay-button {
-  //     color: @black;
-  //     box-shadow: 0 0 0 3px @black;
-  //   }
+      &::before {
+        font-size: @icon-size * 2;
 
-  //   .no-touch &:hover .mejs__overlay-button {
-  //     background-position: 0 0;
-  //     opacity: 1;
-  //     .transition(opacity @duration ease-in);
-  //   }
+        @media (min-width: @device-width-small) {
+          font-size: @icon-size * 3;
+        }
+      }
 
-  //   .icon {
-  //     .icon-video-play;
-  //   }
+      svg { display: none }
+    }
 
-  //   .icon:before {
-  //     font-size: @icon-size * 2;
+    .invert-play-icon & .mejs__overlay-button {
+      color: @black;
+      box-shadow: 0 0 0 3px @black;
+    }
 
-  //     @media (min-width: @device-width-small) {
-  //       font-size: @icon-size * 3;
-  //     }
-  //   }
-  // }
+    .no-touch &:hover .mejs__overlay-button {
+      opacity: 1;
+      .transition(opacity @duration ease-in);
+    }
+  }
 
   // Colour overrides
   // --------------------------------------------------
@@ -276,7 +271,6 @@
   //   width: auto;
   //   margin-left: @mejs-margin;
   //   padding: 0;
-
   //   line-height: 1;
   // }
 
