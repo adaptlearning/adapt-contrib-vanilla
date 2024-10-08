@@ -45,3 +45,19 @@
     padding-inline: (@icon-size + (@item-padding * 2)) @item-padding;
   }
 }
+
+.mcq.can-show-correctness {
+  .mcq-item__state-correctness {
+    left: inherit;
+    right: @item-padding;
+
+    .dir-rtl & {
+      right: inherit;
+      left: @item-padding;
+    }
+  }
+
+  .mcq-item__text {
+    padding-inline: (@icon-size + (@item-padding * 2));
+  }
+}
