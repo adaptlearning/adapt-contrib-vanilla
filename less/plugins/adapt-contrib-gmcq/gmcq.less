@@ -41,3 +41,16 @@
     text-align: center;
   }
 }
+
+.gmcq:not(.can-show-correctness) {
+  .gmcq-item__option {
+    position: relative;
+  }
+
+  .gmcq-item__state-correctness {
+    position: absolute;
+    top: @item-padding / 2;
+    left: 0;
+    right: 0;
+  }
+}
