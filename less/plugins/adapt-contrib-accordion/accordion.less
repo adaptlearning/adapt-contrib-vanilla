@@ -5,7 +5,8 @@
     position: relative;
     padding-top: @item-padding;
     padding-bottom: @item-padding;
-    padding-inline: @item-padding (@icon-size + (@item-padding * 2));
+    padding-inline-start: @item-padding;
+    padding-inline-end: @icon-size + (@item-padding * 2);
     text-align: start;
     background-color: @item-color;
     color: @item-color-inverted;
@@ -18,6 +19,10 @@
     }
   }
 
+  &__btn.has-title-icon {
+    padding-inline-start: @icon-size + (@item-padding * 2);
+  }
+
   &__btn.is-visited {
     background-color: @visited;
     color: @visited-inverted;
@@ -28,7 +33,19 @@
     color: @item-color-inverted-selected;
   }
 
-  &__icon {
+  &:not(.is-center-aligned) &__title-icon {
+    position: absolute;
+    top: 50%;
+    left: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      left: inherit;
+      right: @item-padding;
+    }
+  }
+
+  &:not(.is-center-aligned) &__icon {
     position: absolute;
     top: 50%;
     right: @item-padding;
@@ -51,5 +68,15 @@
 
   &.has-img-zoom &__image-container {
     .img-zoom();
+  }
+
+  // vertical items
+  &.is-center-aligned &__btn {
+    padding-inline: @item-padding;
+  }
+
+  &.is-center-aligned &__title-icon,
+  &.is-center-aligned &__title {
+    padding-bottom: @icon-padding / 2;
   }
 }
