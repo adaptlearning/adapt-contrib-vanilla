@@ -20,3 +20,28 @@
     }
   }
 }
+
+.drawer:not(.disable-animation) {
+  .transition(left @duration ease-in, right @duration ease-in, transform @duration ease-in, opacity @duration ease-in;);
+  opacity: 0;
+
+  &.is-position-auto,
+  &.is-position-right {
+    &.anim-open-after {
+      opacity: 1;
+    }
+    &.anim-close-after {
+      opacity: 0;
+    }
+  }
+
+  .dir-rtl &:not(.is-position-right),
+  &.is-position-left {
+    &.anim-open-after {
+      opacity: 1;
+    }
+    &.anim-close-after {
+      opacity: 0;
+    }
+  }
+}

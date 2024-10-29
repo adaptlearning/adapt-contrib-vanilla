@@ -2,7 +2,6 @@
   &__popup {
     background-color: @notify;
     color: @notify-inverted;
-    .transition(margin-top @duration, top @duration;);
   }
 
   &__popup-inner {
@@ -104,5 +103,42 @@
     background-color: @notify-icon-hover;
     color: @notify-icon-inverted-hover;
     .transition(background-color @duration ease-in, color @duration ease-in;);
+  }
+}
+
+
+.notify:not(.disable-animation) > .notify__popup {
+  .transition(margin-top @duration, top @duration, transform @duration ease-in, opacity @duration ease-in, height @duration ease-in;);
+  opacity: 0;
+
+  .anim-open-before& {
+    opacity: 0;
+  }
+
+  .anim-open-after& {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+
+  .anim-close-after& {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+}
+
+.notify:not(.disable-animation) > .notify__shadow {
+  .transition(opacity @duration ease-in;);
+  opacity: 0;
+
+  .anim-open-before& {
+    opacity: 0;
+  }
+
+  .anim-open-after& {
+    opacity: 1;
+  }
+
+  .anim-close-after& {
+    opacity: 0;
   }
 }
