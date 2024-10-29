@@ -112,12 +112,12 @@
   opacity: 0;
   transform: translateY(0%);
 
-  .anim-open-after& {
+  .anim-show-after& {
     transform: translateY(-50%);
     opacity: 1;
   }
 
-  .anim-close-after& {
+  .anim-hide-after& {
     transform: translateY(0%);
     opacity: 0;
   }
@@ -127,11 +127,11 @@
   .transition(opacity @duration ease-in;);
   opacity: 0;
 
-  .anim-open-after& {
+  .anim-show-after& {
     opacity: 1;
   }
 
-  .anim-close-after& {
+  .anim-hide-after& {
     opacity: 0;
   }
 }
