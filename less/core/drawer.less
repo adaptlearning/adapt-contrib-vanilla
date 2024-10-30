@@ -22,7 +22,7 @@
 }
 
 .drawer:not(.disable-animation) {
-  .transition(left @duration ease-in, right @duration ease-in, transform @duration ease-in, opacity @duration ease-in;);
+  .transition(left var(--drawerDuration) @animation-easing, right var(--drawerDuration) @animation-easing, transform var(--drawerDuration) @animation-easing, opacity var(--drawerDuration) @animation-easing;);
   opacity: 0;
 
   &.is-position-auto,

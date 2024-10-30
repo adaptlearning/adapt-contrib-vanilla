@@ -108,7 +108,7 @@
 
 
 .notify:not(.disable-animation) > .notify__popup {
-  .transition(margin-top @duration, top @duration, transform @duration ease-in, opacity @duration ease-in, height @duration ease-in;);
+  .transition(margin-top 0.4s @animation-easing, top 0.4s @animation-easing, transform 0.4s @animation-easing, opacity 0.4s @animation-easing, height 0.4s @animation-easing;);
   opacity: 0;
   transform: translateY(0%);
 
@@ -124,7 +124,7 @@
 }
 
 .notify:not(.disable-animation) > .notify__shadow {
-  .transition(opacity @duration ease-in;);
+  .transition(opacity 0.4s @animation-easing;);
   opacity: 0;
 
   .anim-show-after& {
