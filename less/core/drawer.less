@@ -20,3 +20,28 @@
     }
   }
 }
+
+.drawer:not(.disable-animation) {
+  .transition(left var(--adapt-drawer-duration) @animation-easing, right var(--adapt-drawer-duration) @animation-easing, transform var(--adapt-drawer-duration) @animation-easing, opacity var(--adapt-drawer-duration) @animation-easing;);
+  opacity: 0;
+
+  &.is-position-auto,
+  &.is-position-right {
+    &.anim-show-after {
+      opacity: 1;
+    }
+    &.anim-hide-after {
+      opacity: 0;
+    }
+  }
+
+  .dir-rtl &:not(.is-position-right),
+  &.is-position-left {
+    &.anim-show-after {
+      opacity: 1;
+    }
+    &.anim-hide-after {
+      opacity: 0;
+    }
+  }
+}
