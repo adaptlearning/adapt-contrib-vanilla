@@ -83,8 +83,7 @@
       border-bottom: none;
     }
 
-    .no-touch &:hover,
-    .no-touch .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"]:hover {
+    .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
       .item-color-hover;
     }
 
@@ -92,7 +91,7 @@
       .item-color-focus;
     }
 
-    .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"] {
+    &[aria-selected="true"] {
       // This code can be used to style a non-native dropdown as closely
       // as possible to the default browser settings
       // background-color: Highlight;
