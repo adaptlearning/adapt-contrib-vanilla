@@ -7,7 +7,51 @@
     .button-text;
   }
 
+  &-text.is-locked,
   &-icon.is-locked {
     cursor: not-allowed;
+  }
+
+  // DEPRECATED
+  // legacy color styles for generic .btn-text and .btn-icon 
+  // color mixins applied to plugin selectors instead
+  &-text {
+    .btn-color;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .btn-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .btn-color-focus;
+    }
+  }
+
+  &-text.is-disabled {
+    .btn-color-disabled;
+  }
+
+  &-text.is-locked {
+    .btn-color-locked;
+  }
+
+  &-icon {
+    .nav-ui-btn-ctrl-color;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .nav-ui-btn-ctrl-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .nav-ui-btn-ctrl-color-focus;
+    }
+  }
+
+  &-icon.is-disabled {
+    .nav-ui-btn-ctrl-color-disabled;
+  }
+
+  &-icon.is-locked {
+    .nav-ui-btn-ctrl-color-locked;
   }
 }
