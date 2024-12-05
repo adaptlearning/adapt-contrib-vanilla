@@ -87,10 +87,7 @@
       .item-color-hover;
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .item-color-focus;
-    }
-
+    &:focus-visible,
     &[aria-selected="true"] {
       // This code can be used to style a non-native dropdown as closely
       // as possible to the default browser settings
@@ -105,27 +102,19 @@
   & when (@item-color-style = outline) {
     .item-color-outline;
     border-radius: 0;
-
-    // ! TODO review application of 'outline' styles vs existing border styles
-    // ? should border-bottom styles replace mixin box-shadow ?
-    // * trial out turning off box shadow and replace with border
-    box-shadow: 0 0 0 0 black inset !important;
+    box-shadow: none;
     border-bottom: 1px solid @item-color-hover;
 
     &:last-child {
       border-bottom: none;
     }
 
-    .no-touch &:hover,
-    .no-touch .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"]:hover {
+    .no-touch &:not(:focus-visible):not([aria-selected="true"]):hover {
       .item-color-outline-hover;
     }
 
-    html:not(.a11y-disable-focusoutline) &:focus-visible {
-      .item-color-outline-focus;
-    }
-
-    .dropdown__btn.is-selected + .dropdown__list &[aria-selected="true"] {
+    &:focus-visible,
+    &[aria-selected="true"] {
       .item-color-outline-selected;
     }
   }
