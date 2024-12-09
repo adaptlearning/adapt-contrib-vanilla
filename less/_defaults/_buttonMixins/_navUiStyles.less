@@ -1,0 +1,50 @@
+// --------------------------------------------------
+// NAV UI COLOUR MIXINS
+// --------------------------------------------------
+
+// Default - Filled
+.nav-ui-btn-ctrl-color() {
+  background-color: @nav-icon;
+  color: @nav-icon-inverted;
+  border-radius: @nav-btn-border-radius;
+}
+
+.nav-ui-btn-ctrl-color-hover() {
+  background-color: @nav-icon-hover;
+  color: @nav-icon-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.nav-ui-btn-ctrl-color-focus() {
+  background-color: @nav-icon-focus;
+  color: @nav-icon-inverted-focus;
+}
+
+.nav-ui-btn-ctrl-color-locked() {
+  background-color: @nav-icon-locked;
+  color: @nav-icon-inverted-locked;
+}
+
+.nav-ui-btn-ctrl-color-disabled() {
+  background-color: @nav-icon-disabled;
+  color: @nav-icon-inverted-disabled;
+}
+
+// Outline
+.nav-ui-btn-ctrl-color-outline() {
+  background-color: @nav-icon-inverted;
+  color: @nav-icon;
+  box-shadow: 0 0 0 @nav-btn-border-width @nav-icon inset;
+  border-radius: @nav-btn-border-radius;
+}
+
+.nav-ui-btn-ctrl-color-outline-hover() {
+  .nav-ui-btn-ctrl-color-hover;
+  box-shadow: 0 0 0 @nav-btn-border-width @nav-icon-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.nav-ui-btn-ctrl-color-outline-focus() {
+  .nav-ui-btn-ctrl-color-focus;
+  box-shadow: 0 0 0 @nav-btn-border-width @nav-icon-focus inset;
+}
