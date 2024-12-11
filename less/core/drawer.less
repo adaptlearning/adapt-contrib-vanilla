@@ -22,14 +22,22 @@
 }
 
 .drawer:not(.disable-animation) {
-  .transition(left var(--adapt-drawer-duration) @animation-easing, right var(--adapt-drawer-duration) @animation-easing, transform var(--adapt-drawer-duration) @animation-easing, opacity var(--adapt-drawer-duration) @animation-easing;);
   opacity: 0;
+  
+  &.anim-show-before {
+    .transition(left var(--adapt-drawer-duration) var(--adapt-drawer-show-easing), right var(--adapt-drawer-duration) var(--adapt-drawer-show-easing), transform var(--adapt-drawer-duration) var(--adapt-drawer-show-easing), opacity var(--adapt-drawer-duration) var(--adapt-drawer-show-easing););
+  }
+
+  &.anim-hide-before {
+    .transition(left var(--adapt-drawer-duration) var(--adapt-drawer-hide-easing), right var(--adapt-drawer-duration) var(--adapt-drawer-hide-easing), transform var(--adapt-drawer-duration) var(--adapt-drawer-hide-easing), opacity var(--adapt-drawer-duration) var(--adapt-drawer-hide-easing););
+  }
 
   &.is-position-auto,
   &.is-position-right {
     &.anim-show-after {
       opacity: 1;
     }
+
     &.anim-hide-after {
       opacity: 0;
     }
@@ -40,6 +48,7 @@
     &.anim-show-after {
       opacity: 1;
     }
+
     &.anim-hide-after {
       opacity: 0;
     }
