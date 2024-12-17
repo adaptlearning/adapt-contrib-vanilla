@@ -34,6 +34,20 @@
     text-align: center;
   }
 
+  // Hotgraphic with pin images
+  // --------------------------------------------------
+  &__pin.has-pin-image &__pin-number,
+  &__pin.has-pin-image.is-visited .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @visited;
+    color: @visited-inverted;
+    border-radius: 50%;
+    height: @icon-size * 2;
+    width: @icon-size * 2;
+  }
+
   // Hotgraphic as tiles
   // --------------------------------------------------
   &__tile.is-visited .icon {
