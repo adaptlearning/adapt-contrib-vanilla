@@ -2,30 +2,74 @@
 // --------------------------------------------------
 @icon-padding: 1rem;
 
-// Item
+// Content Item
 // --------------------------------------------------
 @item-margin: 0.5rem;
 @item-padding: 1rem;
 
 @item-border-radius: 0.25rem;
+@item-color-border-width: 1px;
 
-// Button
+// Content UI (action not content)
+// --------------------------------------------------
+@item-ui-border-radius: @item-border-radius;
+@item-ui-border-width: @item-color-border-width;
+
+// Content Button
 // --------------------------------------------------
 @btn-margin: 1rem;
 @btn-padding: 1rem;
 
 @btn-border-radius: 0.25rem;
+@btn-color-border-width: 1px;
+
+// UI Button
+// --------------------------------------------------
+@ui-btn-controls-margin: @btn-margin / 2;
+@ui-btn-controls-padding: @btn-padding / 2;
+
+@ui-btn-controls-border-radius: 50%;
+@ui-btn-controls-border-width: 1px;
+
+// Menu
+// --------------------------------------------------
+@menu-item-btn-border-radius: @item-ui-border-radius;
+@menu-item-btn-border-width: @item-ui-border-width;
 
 // Navigation
 // --------------------------------------------------
 @nav-btn-margin: 0;
 
-@nav-btn-border-radius: 0;
+@nav-btn-padding-ver: @icon-padding;
+@nav-btn-padding-hoz: @icon-padding;
 
+@nav-btn-border-radius: 0;
+@nav-btn-border-width: 1px;
+
+// Notify button
+// --------------------------------------------------
+@notify-btn-margin: 0;
+
+@notify-btn-padding-ver: @btn-padding / 2;
+@notify-btn-padding-hoz: @btn-padding;
+
+@notify-btn-border-radius: @btn-border-radius;
+@notify-btn-border-width: 1px;
+
+// Drawer item
+// --------------------------------------------------
+@drawer-item-margin: 0;
+
+@drawer-item-padding-ver: @item-padding;
+@drawer-item-padding-hoz: @item-padding;
+
+@drawer-item-border-radius: 0;
+@drawer-item-border-width: 1px;
 
 // Progress
 // --------------------------------------------------
 @progress-border-radius: 50px;
+
 
 // Menu header text margin
 // --------------------------------------------------
