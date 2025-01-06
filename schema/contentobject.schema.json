@@ -20,7 +20,6 @@
               "properties": {
                 "_xlarge": {
                   "type": "string",
-                  "isObjectId": true,
                   "title": "Extra large",
                   "description": "Extra large background image, e.g. hd laptop/desktop computers",
                   "_backboneForms": {
@@ -30,7 +29,6 @@
                 },
                 "_large": {
                   "type": "string",
-                  "isObjectId": true,
                   "title": "Large",
                   "description": "Large background image, e.g. laptop/desktop computers",
                   "_backboneForms": {
@@ -40,7 +38,6 @@
                 },
                 "_medium": {
                   "type": "string",
-                  "isObjectId": true,
                   "title": "Medium",
                   "description": "Medium background image, e.g. tablet devices",
                   "_backboneForms": {
@@ -50,7 +47,6 @@
                 },
                 "_small": {
                   "type": "string",
-                  "isObjectId": true,
                   "title": "Small",
                   "description": "Small background image, e.g. mobile / cellphones",
                   "_backboneForms": {
@@ -200,7 +196,6 @@
                   "properties": {
                     "_xlarge": {
                       "type": "string",
-                      "isObjectId": true,
                       "title": "Extra large",
                       "description": "Extra large background image, e.g. hd laptop/desktop computers",
                       "_backboneForms": {
@@ -210,7 +205,6 @@
                     },
                     "_large": {
                       "type": "string",
-                      "isObjectId": true,
                       "title": "Large",
                       "description": "Large background image, e.g. laptop/desktop computers",
                       "_backboneForms": {
@@ -220,7 +214,6 @@
                     },
                     "_medium": {
                       "type": "string",
-                      "isObjectId": true,
                       "title": "Medium",
                       "description": "Medium background image, e.g. tablet devices",
                       "_backboneForms": {
@@ -230,7 +223,6 @@
                     },
                     "_small": {
                       "type": "string",
-                      "isObjectId": true,
                       "title": "Small",
                       "description": "Small background image, e.g. mobile / cellphones",
                       "_backboneForms": {
