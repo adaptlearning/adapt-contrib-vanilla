@@ -79,16 +79,32 @@
 // Drawer overrides
 // --------------------------------------------------
 .pagelevelprogress__item-btn:not(.is-disabled) {
-  .pagelevelprogress__indicator {
-    border-color: @drawer-progress-border;
+  & when (@drawer-item-color-style = filled) {
+    .pagelevelprogress__indicator {
+      border-color: @drawer-progress-border;
+    }
+
+    .pagelevelprogress__indicator-inner {
+      background-color: @drawer-progress-inverted;
+    }
+
+    .pagelevelprogress__indicator-bar {
+      background-color: @drawer-progress;
+    }
   }
 
-  .pagelevelprogress__indicator-inner {
-    background-color: @drawer-progress-inverted;
-  }
+  & when (@drawer-item-color-style = outline) {
+    .pagelevelprogress__indicator {
+      border-color: @drawer-progress-inverted;
+    }
 
-  .pagelevelprogress__indicator-bar {
-    background-color: @drawer-progress;
+    .pagelevelprogress__indicator-inner {
+      background-color: @drawer-progress;
+    }
+
+    .pagelevelprogress__indicator-bar {
+      background-color: @drawer-progress-inverted;
+    }
   }
 
   .no-touch &:hover {

@@ -102,7 +102,6 @@
 @btn-color-locked: @disabled;
 @btn-color-inverted-locked: @disabled-inverted;
 
-
 // DEPRECATED
 // replaced by @btn-color-disabled and @btn-color-disabled-inverted
 @disabled: @grey;
@@ -207,8 +206,8 @@
 @notify-link-hover: @notify-link;
 
 // UI
-@notify-icon: darken(@notify, 10%);
-@notify-icon-inverted: @notify-inverted;
+@notify-icon: @notify-inverted;
+@notify-icon-inverted: @notify;
 
 @notify-icon-hover: darken(@notify-icon, 10%);
 @notify-icon-inverted-hover: @notify-icon-inverted;
@@ -248,8 +247,8 @@
 @drawer-link-hover: @drawer-link;
 
 // UI
-@drawer-icon: darken(@drawer, 10%);
-@drawer-icon-inverted: @drawer-inverted;
+@drawer-icon: @drawer-inverted;
+@drawer-icon-inverted: @drawer;
 
 @drawer-icon-hover: darken(@drawer-icon, 10%);
 @drawer-icon-inverted-hover: @drawer-icon-inverted;
@@ -264,7 +263,7 @@
 @drawer-item-hover: darken(@drawer-item, 10%);
 @drawer-item-inverted-hover: @drawer-item-inverted;
 
-@drawer-item-focus: darken(@drawer-item-hover, 10%);
+@drawer-item-focus: @drawer-item-hover;
 @drawer-item-inverted-focus: @drawer-item-inverted-hover;
 
 @drawer-item-selected: darken(@drawer-item, 20%);
