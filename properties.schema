@@ -78,7 +78,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the clickable areas or points of interest in components."
+            "help": "Defines the selectable areas or points of interest in components."
           },
           "item-color-inverted": {
             "title": "Item colour - inverted",
@@ -127,14 +127,13 @@
             "help": "Defines the item text / icon colour when selected. Should be a colour that provides good contrast against the item selected colour."
           },
           "visited": {
-            "title": "Visited colour",
+            "title": "Item colour - visited",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Defines the item colour when it has been visited."
+            "default": ""
           },
           "visited-inverted": {
-            "title": "Visited colour - inverted",
+            "title": "Item colour - inverted visited",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
@@ -166,7 +165,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the clickable areas in components that don't contain course content."
+            "help": "Defines the selectable areas in components that don't contain course content."
           },
           "item-ui-color-inverted": {
             "title": "Item UI colour - inverted",
@@ -334,17 +333,17 @@
             "help": "Defines the button text / icon colour when locked. Should be a colour that provides good contrast against the button locked colour."
           },
           "disabled": {
-            "title": "Disabled colour",
+            "title": "Button colour - disabled",
             "type": "string",
             "inputType": "ColourPicker",
             "default": ""
           },
           "disabled-inverted": {
-            "title": "Disabled colour - inverted",
+            "title": "Button colour - inverted disabled",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the button text / icon colour when it is disabled. Should be a colour that provides good contrast against the button disabled colour."
+            "help": "Defines the button text / icon colour when disabled. Should be a colour that provides good contrast against the button disabled colour."
           },
           "btn-icon-color": {
             "title": "Button icon colour",

@@ -74,7 +74,7 @@
         "item-color": {
           "type": "string",
           "title": "Item colour",
-          "description": "Defines the clickable areas or points of interest in components.",
+          "description": "Defines the selectable areas or points of interest in components.",
           "default": "",
           "_backboneForms": "ColourPicker"
         },
@@ -126,14 +126,13 @@
         },
         "visited": {
           "type": "string",
-          "title": "Visited colour",
-          "description": "Defines the item colour when it has been visited.",
+          "title": "Item colour - visited",
           "default": "",
           "_backboneForms": "ColourPicker"
         },
         "visited-inverted": {
           "type": "string",
-          "title": "Visited colour - inverted",
+          "title": "Item colour - inverted visited",
           "description": "Defines the item text / icon colour when visited. Should be a colour that provides good contrast against the item visited colour.",
           "default": "",
           "_backboneForms": "ColourPicker"
@@ -162,7 +161,7 @@
         "item-ui-color": {
           "type": "string",
           "title": "Item UI colour",
-          "description": "Defines the clickable areas in components that don't contain course content.",
+          "description": "Defines the selectable areas in components that don't contain course content.",
           "default": "",
           "_backboneForms": "ColourPicker"
         },
@@ -327,14 +326,14 @@
         },
         "disabled": {
           "type": "string",
-          "title": "Disabled colour",
+          "title": "Button colour - disabled",
           "default": "",
           "_backboneForms": "ColourPicker"
         },
         "disabled-inverted": {
           "type": "string",
-          "title": "Disabled colour - inverted",
-          "description": "Defines the button text / icon colour when it is disabled. Should be a colour that provides good contrast against the button disabled colour.",
+          "title": "Button colour - inverted disabled",
+          "description": "Defines the button text / icon colour when disabled. Should be a colour that provides good contrast against the button disabled colour.",
           "default": "",
           "_backboneForms": "ColourPicker"
         },
