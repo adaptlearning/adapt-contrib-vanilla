@@ -1,3 +1,16 @@
 .shadow {
   background-color: fade(@shadow, @shadow-opacity);
 }
+
+.shadow:not(.disable-animation) {
+  .transition(opacity @duration ease-in;);
+  opacity: 0;
+
+  &.anim-show-after {
+    opacity: 1;
+  }
+
+  &.anim-hide-after {
+    opacity: 0;
+  }
+}
