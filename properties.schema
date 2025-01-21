@@ -23,7 +23,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Global body font colour inverted. Either a lightened/darkened alternative to Font colour."
+            "help": "Global body font colour inverted. Either a lightened / darkened alternative to Font colour."
           },
           "link": {
             "title": "Link font colour",
@@ -36,7 +36,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Global link font colour inverted. Either a lightened/darkened alternative to Link colour."
+            "help": "Global link font colour inverted. Either a lightened / darkened alternative to Link colour."
           },
           "link-hover": {
             "title": "Link font colour - hover",
@@ -49,7 +49,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Global link font colour when hovered over inverted. Either a lightened/darkened alternative to Link hover colour."
+            "help": "Global link font colour when hovered over inverted. Either a lightened / darkened alternative to Link hover colour."
           },
           "heading-color": {
             "title": "Heading colour",
@@ -63,7 +63,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Global title colour inverted. Either a lightened/darkened alternative to Title colour."
+            "help": "Global title colour inverted. Either a lightened / darkened alternative to Title colour."
           }
         }
       },
@@ -71,21 +71,21 @@
       "_items": {
         "type": "object",
         "required": false,
-        "title": "Items (Components)",
+        "title": "Content Items (components)",
         "properties": {
           "item-color": {
             "title": "Item colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the clickable areas or points of interest in components."
+            "help": "Defines the selectable areas or points of interest in components."
           },
           "item-color-inverted": {
             "title": "Item colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Item text / icon colour. Should be a colour that provides good contrast against the Item colour."
+            "help": "Defines the item text / icon colour. Should be a colour that provides good contrast against the item colour."
           },
           "item-color-hover": {
             "title": "Item colour - hover",
@@ -98,7 +98,20 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Item text / icon colour when hovered over. Should be a colour that provides good contrast against the Item hover colour."
+            "help": "Defines the item text / icon colour when hovered over. Should be a colour that provides good contrast against the item hover colour."
+          },
+          "item-color-focus": {
+            "title": "Item colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "item-color-inverted-focus": {
+            "title": "Item colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item text / icon colour when focused. Should be a colour that provides good contrast against the item focus colour."
           },
           "item-color-selected": {
             "title": "Item colour - selected",
@@ -111,21 +124,139 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Item text / icon colour when selected. Should be a colour that provides good contrast against the Item selected colour."
+            "help": "Defines the item text / icon colour when selected. Should be a colour that provides good contrast against the item selected colour."
           },
           "visited": {
-            "title": "Visited colour",
+            "title": "Item colour - visited",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
-            "help": "Defines the Item colour when it has been visited."
+            "default": ""
           },
           "visited-inverted": {
-            "title": "Visited colour - inverted",
+            "title": "Item colour - inverted visited",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Item text / icon colour when visited. Should be a colour that provides good contrast against the Item visited colour."
+            "help": "Defines the item text / icon colour when visited. Should be a colour that provides good contrast against the item visited colour."
+          },
+          "item-color-disabled": {
+            "title": "Item colour - disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "item-color-inverted-disabled": {
+            "title": "Item colour - inverted disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item text / icon colour when disabled. Should be a colour that provides good contrast against the item disabled colour."
+          }
+        }
+      },
+
+      "_itemsUi": {
+        "type": "object",
+        "required": false,
+        "title": "Content Items UI (action not content)",
+        "properties": {
+          "item-ui-color": {
+            "title": "Item UI colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the selectable areas in components that don't contain course content."
+          },
+          "item-ui-color-inverted": {
+            "title": "Item UI colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item UI text / icon colour. Should be a colour that provides good contrast against the item UI colour."
+          },
+          "item-ui-color-hover": {
+            "title": "Item UI colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": ""
+          },
+          "item-ui-color-inverted-hover": {
+            "title": "Item UI colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item UI text / icon colour when hovered over. Should be a colour that provides good contrast against the item UI hover colour."
+          },
+          "item-ui-color-focus": {
+            "title": "Item UI colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": ""
+          },
+          "item-ui-color-inverted-focus": {
+            "title": "Item UI colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item UI text / icon colour when focused. Should be a colour that provides good contrast against the item UI focus colour."
+          },
+          "item-ui-color-selected": {
+            "title": "Item UI colour - selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": ""
+          },
+          "item-ui-color-inverted-selected": {
+            "title": "Item UI colour - inverted selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item UI text / icon colour when selected. Should be a colour that provides good contrast against the item UI selected colour."
+          },
+          "item-ui-color-visited": {
+            "title": "Item UI colour - visited",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": ""
+          },
+          "item-ui-color-inverted-visited": {
+            "title": "Item UI colour - inverted visited",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item UI text / icon colour when visited. Should be a colour that provides good contrast against the item UI visited colour."
+          },
+          "item-ui-color-locked": {
+            "title": "Item UI colour - locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": ""
+          },
+          "item-ui-color-inverted-locked": {
+            "title": "Item UI colour - inverted locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item UI text / icon colour when locked. Should be a colour that provides good contrast against the item UI locked colour."
+          },
+          "item-ui-color-disabled": {
+            "title": "Item UI colour - disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": ""
+          },
+          "item-ui-color-inverted-disabled": {
+            "title": "Item UI colour - inverted disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the item UI text / icon colour when disabled. Should be a colour that provides good contrast against the item UI disabled colour."
           }
         }
       },
@@ -162,6 +293,58 @@
             "default": "",
             "help": "Defines the button text / icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour."
           },
+          "btn-color-focus": {
+            "title": "Button colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "btn-color-inverted-focus": {
+            "title": "Button colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the button text / icon colour when focused. Should be a colour that provides good contrast against the button focus colour."
+          },
+          "btn-color-selected": {
+            "title": "Button colour - selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "btn-color-inverted-selected": {
+            "title": "Button colour - inverted selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the button text / icon colour when selected. Should be a colour that provides good contrast against the button selected colour."
+          },
+          "btn-color-locked": {
+            "title": "Button colour - locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "btn-color-inverted-locked": {
+            "title": "Button colour - inverted locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the button text / icon colour when locked. Should be a colour that provides good contrast against the button locked colour."
+          },
+          "disabled": {
+            "title": "Button colour - disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "disabled-inverted": {
+            "title": "Button colour - inverted disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the button text / icon colour when disabled. Should be a colour that provides good contrast against the button disabled colour."
+          },
           "btn-icon-color": {
             "title": "Button icon colour",
             "type": "string",
@@ -188,19 +371,28 @@
             "inputType": "ColourPicker",
             "default": "",
             "help": "Defines the button icon colour when hovered over. Should be a colour that provides good contrast against the button hover colour."
-          },
-          "disabled": {
-            "title": "Disabled colour",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": ""
-          },
-          "disabled-inverted": {
-            "title": "Disabled colour - inverted",
+          }
+        }
+      },
+
+      "_globalUi": {
+        "type": "object",
+        "required": false,
+        "title": "Global UI",
+        "properties": {
+          "ui-color": {
+            "title": "UI colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the button text / icon colour when it is disabled. Should be a colour that provides good contrast against the button disabled colour."
+            "help": "Defines the global UI colour scheme for nav, notify, and drawer."
+          },
+          "ui-color-inverted": {
+            "title": "UI colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the global UI text / icon colour. Should be a colour that provides good contrast against the global UI colour."
           }
         }
       },
@@ -236,7 +428,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the question marking error text / icon colour. Should be a colour that provices good contrast against the question marking error colour."
+            "help": "Defines the question marking error text / icon colour. Should be a colour that provides good contrast against the question marking error colour."
           }
         }
       },
@@ -316,7 +508,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Menu Item text colour. Should be a colour that provides good contrast against the Menu Item colour."
+            "help": "Defines the menu item text colour. Should be a colour that provides good contrast against the menu item colour."
           },
           "menu-item-border-color": {
             "title": "Menu item border colour",
@@ -329,14 +521,14 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Menu Item specific global progress width fill override colour."
+            "help": "Defines the menu-item-specific progress width fill override colour."
           },
           "menu-item-progress-inverted": {
             "title": "Menu item progress background colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Menu Item specific global progress fill background override colour."
+            "help": "Defines the menu-item-specific progress fill background override colour."
           },
           "menu-item-progress-border": {
             "title": "Menu item progress border colour",
@@ -355,7 +547,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Menu Item button text colour. Should be a colour that provides good contrast against the Menu Item button colour."
+            "help": "Defines the menu item button text colour. Should be a colour that provides good contrast against the menu item button colour."
           },
           "menu-item-btn-color-hover": {
             "title": "Menu item button background colour - hover",
@@ -368,7 +560,33 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Menu Item button text colour when hovered over. Should be a colour that provides good contrast against the Menu Item button hover colour."
+            "help": "Defines the menu item button text colour when hovered over. Should be a colour that provides good contrast against the menu item button hover colour."
+          },
+          "menu-item-btn-color-focus": {
+            "title": "Menu item button background colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "menu-item-btn-color-inverted-focus": {
+            "title": "Menu item button background colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the menu item button text colour when focused. Should be a colour that provides good contrast against the menu item button focus colour."
+          },
+          "menu-item-btn-color-locked": {
+            "title": "Menu item button background colour - locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "menu-item-btn-color-inverted-locked": {
+            "title": "Menu item button background colour - inverted locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the menu item button text colour when locked. Should be a colour that provides good contrast against the menu item button locked colour."
           }
         }
       },
@@ -376,7 +594,7 @@
       "_nav": {
         "type": "object",
         "required": false,
-        "title": "Navigation",
+        "title": "Navigation bar",
         "properties": {
           "nav": {
             "title": "Navigation background colour",
@@ -389,7 +607,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the general Navigation inverted colour. Should be a colour that provides good contrast against the Navigation colour."
+            "help": "Defines the general navigation inverted colour. Should be a colour that provides good contrast against the navigation colour."
           },
           "nav-icon": {
             "title": "Navigation button background colour",
@@ -402,7 +620,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Navigation Btn text / icon colour. Should be a colour that provides good contrast against the Navigation Btn colour."
+            "help": "Defines the navigation button text / icon colour. Should be a colour that provides good contrast against the navigation button colour."
           },
           "nav-icon-hover": {
             "title": "Navigation button background colour - hover",
@@ -415,21 +633,60 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Navigation button text / icon colour when hovered over. Should be a colour that provides good contrast against the Navigation button hover colour."
+            "help": "Defines the navigation button text / icon colour when hovered over. Should be a colour that provides good contrast against the navigation button hover colour."
+          },
+          "nav-icon-focus": {
+            "title": "Navigation button background colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "nav-icon-inverted-focus": {
+            "title": "Navigation button background colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the navigation button text / icon colour when focused. Should be a colour that provides good contrast against the navigation button focus colour."
+          },
+          "nav-icon-locked": {
+            "title": "Navigation button background colour - locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "nav-icon-inverted-locked": {
+            "title": "Navigation button background colour - inverted locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the navigation button text / icon colour when locked. Should be a colour that provides good contrast against the navigation button locked colour."
+          },
+          "nav-icon-disabled": {
+            "title": "Navigation button background colour - disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "nav-icon-inverted-disabled": {
+            "title": "Navigation button background colour - inverted disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the navigation button text / icon colour when disabled. Should be a colour that provides good contrast against the navigation button disabled colour."
           },
           "nav-progress": {
             "title": "Navigation progress fill color",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Navigation specific progress width fill override colour."
+            "help": "Defines the navigation-specific progress width fill override colour."
           },
           "nav-progress-inverted": {
             "title": "Navigation progress background color - inverted",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Navigation specific progress fill background override colour."
+            "help": "Defines the navigation-specific progress fill background override colour."
           },
           "nav-progress-border": {
             "title": "Navigation progress border colour",
@@ -442,14 +699,14 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Navigation specific progress width fill override colour when hovered over."
+            "help": "Defines the navigation-specific progress width fill override colour when hovered over."
           },
           "nav-progress-inverted-hover": {
             "title": "Navigation progress background color - inverted hover",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Navigation specific progress fill background override colour when hovered over."
+            "help": "Defines the navigation-specific progress fill background override colour when hovered over."
           },
           "nav-progress-border-hover": {
             "title": "Navigation progress border colour - hover",
@@ -463,7 +720,7 @@
       "_notify": {
         "type": "object",
         "required": false,
-        "title": "Notify (pop up)",
+        "title": "Notify (popup)",
         "properties": {
           "notify": {
             "title": "Notify background colour",
@@ -476,7 +733,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Notify text colour. Should be a colour that provides good contrast against the Notify colour."
+            "help": "Defines the notify text colour. Should be a colour that provides good contrast against the notify colour."
           },
           "notify-link": {
             "title": "Notify link font colour",
@@ -490,32 +747,6 @@
             "inputType": "ColourPicker",
             "default": ""
           },
-          "notify-btn": {
-            "title": "Notify button background colour",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": ""
-          },
-          "notify-btn-inverted": {
-            "title": "Notify button background colour - inverted",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": "",
-            "help": "Defines the Notify button text / icon colour. Should be a colour that provides good contrast against the Notify button colour."
-          },
-          "notify-btn-hover": {
-            "title": "Notify button background colour - hover",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": ""
-          },
-          "notify-btn-inverted-hover": {
-            "title": "Notify button background colour - inverted hover",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": "",
-            "help": "Defines the Notify button text / icon colour when hovered over. Should be a colour that provides good contrast against the Notify button hover colour."
-          },
           "notify-icon": {
             "title": "Notify icon button background colour",
             "type": "string",
@@ -527,7 +758,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Notify Icon inverse colour. Should be a colour that provides good contrast against the Notify Icon colour."
+            "help": "Defines the notify icon inverse colour. Should be a colour that provides good contrast against the notify icon colour."
           },
           "notify-icon-hover": {
             "title": "Notify icon button background colour - hover",
@@ -540,7 +771,111 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Notify Icon colour when hovered over. Should be a colour that provides good contrast against the Notify Icon colour."
+            "help": "Defines the notify icon colour when hovered over. Should be a colour that provides good contrast against the notify icon hover colour."
+          },
+          "notify-icon-focus": {
+            "title": "Notify icon button background colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-icon-inverted-focus": {
+            "title": "Notify icon button background colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify icon colour when focused. Should be a colour that provides good contrast against the notify icon focus colour."
+          },
+          "notify-icon-disabled": {
+            "title": "Notify icon button background colour - disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-icon-inverted-disabled": {
+            "title": "Notify icon button background colour - inverted disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify icon colour when disabled. Should be a colour that provides good contrast against the notify icon disabled colour."
+          },
+          "notify-btn": {
+            "title": "Notify button background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-btn-inverted": {
+            "title": "Notify button background colour - inverted",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify button text / icon colour. Should be a colour that provides good contrast against the notify button colour."
+          },
+          "notify-btn-hover": {
+            "title": "Notify button background colour - hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-btn-inverted-hover": {
+            "title": "Notify button background colour - inverted hover",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify button text / icon colour when hovered over. Should be a colour that provides good contrast against the notify button hover colour."
+          },
+          "notify-btn-focus": {
+            "title": "Notify button background colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-btn-inverted-focus": {
+            "title": "Notify button background colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify button text / icon colour when focused. Should be a colour that provides good contrast against the notify button focus colour."
+          },
+          "notify-btn-selected": {
+            "title": "Notify button background colour - selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-btn-inverted-selected": {
+            "title": "Notify button background colour - inverted selected",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify button text / icon colour when selected. Should be a colour that provides good contrast against the notify button selected colour."
+          },
+          "notify-btn-locked": {
+            "title": "Notify button background colour - locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-btn-inverted-locked": {
+            "title": "Notify button background colour - inverted locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify button text / icon colour when locked. Should be a colour that provides good contrast against the notify button locked colour."
+          },
+          "notify-btn-disabled": {
+            "title": "Notify button background colour - disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "notify-btn-inverted-disabled": {
+            "title": "Notify button background colour - inverted disabled",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the notify button text / icon colour when disabled. Should be a colour that provides good contrast against the notify button disabled colour."
           }
         }
       },
@@ -561,7 +896,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer text colour. Should be a colour that provides good contrast against the Drawer colour."
+            "help": "Defines the drawer text colour. Should be a colour that provides good contrast against the Drawer colour."
           },
           "drawer-link": {
             "title": "Drawer link font colour",
@@ -586,7 +921,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer Icon button inverse colour. Should be a colour that provides good contrast against the Drawer Icon button colour"
+            "help": "Defines the drawer icon button inverse colour. Should be a colour that provides good contrast against the drawer icon button colour."
           },
           "drawer-icon-hover": {
             "title": "Drawer icon button background colour - hover",
@@ -599,7 +934,20 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer Icon button inverse colour when hovered over. Should be a colour that provides good contrast against the Drawer Icon button hover colour."
+            "help": "Defines the drawer icon button inverse colour when hovered over. Should be a colour that provides good contrast against the drawer icon button hover colour."
+          },
+          "drawer-icon-focus": {
+            "title": "Drawer icon button background colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "drawer-icon-inverted-focus": {
+            "title": "Drawer icon button background colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the drawer icon button inverse colour when focused. Should be a colour that provides good contrast against the drawer icon button focus colour."
           },
           "drawer-item": {
             "title": "Drawer item background colour",
@@ -612,7 +960,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer Item text / icon colour. Should be a colour that provides good contrast against the Drawer Item colour."
+            "help": "Defines the drawer item text / icon colour. Should be a colour that provides good contrast against the drawer item colour."
           },
           "drawer-item-hover": {
             "title": "Drawer item background colour - hover",
@@ -625,7 +973,20 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer Item text / icon colour when hovered over. Should be a colour that provides good contrast against the Drawer Item hover colour."
+            "help": "Defines the drawer item text / icon colour when hovered over. Should be a colour that provides good contrast against the drawer item hover colour."
+          },
+          "drawer-item-focus": {
+            "title": "Drawer item background colour - focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "drawer-item-inverted-focus": {
+            "title": "Drawer item background colour - inverted focus",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the drawer item text / icon colour when focused. Should be a colour that provides good contrast against the drawer item focus colour."
           },
           "drawer-item-selected": {
             "title": "Drawer item background colour - selected",
@@ -638,49 +999,62 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer Item text / icon colour when selected. Should be a colour that provides good contrast against the Drawer Item selected colour."
+            "help": "Defines the drawer item text / icon colour when selected. Should be a colour that provides good contrast against the drawer item selected colour."
+          },
+          "drawer-item-locked": {
+            "title": "Drawer item background colour - locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "drawer-item-inverted-locked": {
+            "title": "Drawer item background colour - inverted locked",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the drawer item text / icon colour when locked. Should be a colour that provides good contrast against the drawer item locked colour."
           },
           "drawer-progress": {
             "title": "Drawer progress fill colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer-specific progress width fill override colour."
+            "help": "Defines the drawer-specific progress width fill override colour."
           },
           "drawer-progress-inverted": {
             "title": "Drawer progress background colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer-specific progress fill background override colour."
+            "help": "Defines the drawer-specific progress fill background override colour."
           },
           "drawer-progress-border": {
             "title": "Drawer progress border colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer-specific border override colour that appears around the progress fill bar."
+            "help": "Defines the drawer-specific border override colour that appears around the progress fill bar."
           },
           "drawer-progress-hover": {
             "title": "Drawer progress colour - hover",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer-specific progress width fill override colour when hovered over."
+            "help": "Defines the drawer-specific progress width fill override colour when hovered over."
           },
           "drawer-progress-inverted-hover": {
             "title": "Drawer progress colour - inverted hover",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer-specific progress fill background override colour when hovered over."
+            "help": "Defines the drawer-specific progress fill background override colour when hovered over."
           },
           "drawer-progress-border-hover": {
             "title": "Drawer progress border colour - hover",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Drawer-specific border override colour that appears around the progress fill bar when hovered over."
+            "help": "Defines the drawer-specific border override colour that appears around the progress fill bar when hovered over."
           }
         }
       },
@@ -702,10 +1076,10 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Background text / icon colour. Should be a colour that provides good contrast against the Background colour."
+            "help": "Defines the background text / icon colour. Should be a colour that provides good contrast against the background colour."
           },
           "shadow": {
-            "title": "Shadow background colour (loading / pop up background)",
+            "title": "Shadow background colour (loading / popup background)",
             "type": "string",
             "inputType": "ColourPicker",
             "default": ""
@@ -715,7 +1089,7 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "",
-            "help": "Defines the Shadow text / icon colour. Should be a colour that provides good contrast against the Shadow colour."
+            "help": "Defines the shadow text / icon colour. Should be a colour that provides good contrast against the shadow colour."
           },
           "loading": {
             "title": "Loading animation background colour",
@@ -733,6 +1107,7 @@
         }
       }
     },
+
     "pluginLocations": {
       "type": "object",
       "required": true,
