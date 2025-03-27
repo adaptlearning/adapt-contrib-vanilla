@@ -1,6 +1,6 @@
 .boxmenu-item {
   display: flex;
-  
+
   &__inner {
     width: 100%;
     margin: 0 @menu-item-padding-hoz @menu-item-padding-ver;
@@ -43,21 +43,40 @@
     align-items: center;
   }
 
-  &__button {
-    background-color: @menu-item-btn-color;
-    color: @menu-item-btn-color-inverted;
+  & when (@menu-item-btn-color-style = filled) {
+    &__button {
+      .menu-item-btn-color;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @menu-item-btn-color-hover;
-      color: @menu-item-btn-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .menu-item-btn-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .menu-item-btn-color-focus;
+      }
+    }
+
+    &__button.is-locked {
+      .menu-item-btn-color-locked;
     }
   }
 
-  &__button.is-locked,
-  &__button.is-disabled {
-    background-color: @disabled;
-    color: @disabled-inverted;
+  & when (@menu-item-btn-color-style = outline) {
+    &__button {
+      .menu-item-btn-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .menu-item-btn-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .menu-item-btn-color-outline-focus;
+      }
+    }
+
+    &__button.is-locked {
+      .menu-item-btn-color-outline-locked;
+    }
   }
 
   &__status {
