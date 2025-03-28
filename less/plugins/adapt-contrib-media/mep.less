@@ -4,6 +4,7 @@
 @mejs-color-inverted: @white;
 
 @mejs-icon: @white;
+@mejs-icon-size: 1.25rem;
 
 @mejs-time-current: @white;
 @mejs-time-loaded: darken(@white, 25%);
@@ -16,265 +17,247 @@
 @mejs-time-size: 0.75rem;
 
 @mejs-time-float-size: 0.75rem;
-@mejs-time-float-width: 2rem;
+@mejs-time-float-width: 2.375rem;
 
 @mejs-cc-size: 0.75rem;
 
-.mejs-container {
+.mejs__container {
   // Play icon override
   // --------------------------------------------------
-  .mejs-overlay {
-    .mejs-overlay-button {
-      .transform(translate(-50%,-50%));
+  .mejs__overlay {
+    .mejs__overlay-button {
       height: (@icon-size * 2) + @icon-padding;
       width: (@icon-size * 2) + @icon-padding;
-      margin: 0;
-      padding: @icon-padding / 2;
-      background: none;
-      box-shadow: 0 0 0 3px @white;
+      box-shadow: 0 0 0 0.1875rem @white;
       border-radius: 50%;
       color: @white;
-      opacity: .75;
+      opacity: 0.75;
+      .icon;
+      .icon-video-play;
 
       @media (min-width: @device-width-small) {
         height: (@icon-size * 3) + @icon-padding;
         width: (@icon-size * 3) + @icon-padding;
       }
+
+      &::before {
+        font-size: @icon-size * 2;
+
+        @media (min-width: @device-width-small) {
+          font-size: @icon-size * 3;
+        }
+      }
+
+      svg { display: none }
     }
 
-    .invert-play-icon & .mejs-overlay-button {
+    .invert-play-icon & .mejs__overlay-button {
       color: @black;
-      box-shadow: 0 0 0 3px @black;
+      box-shadow: 0 0 0 0.1875rem @black;
     }
 
-    .no-touch &:hover .mejs-overlay-button {
-      background-position: 0 0;
+    .no-touch &:hover .mejs__overlay-button {
       opacity: 1;
       .transition(opacity @duration ease-in);
-    }
-
-    .icon {
-      .icon-video-play;
-    }
-
-    .icon:before {
-      font-size: @icon-size * 2;
-
-      @media (min-width: @device-width-small) {
-        font-size: @icon-size * 3;
-      }
     }
   }
 
   // Colour overrides
   // --------------------------------------------------
-  .mejs-controls {
+  .mejs__controls {
     background: none;
     background-color: @mejs-color;
-  }
 
-  .mejs-controls .mejs-time,
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
-    color: @mejs-color-inverted;
-  }
-
-  .mejs-controls .mejs-button button {
-    color: @mejs-icon;
-  }
-
-  .mejs-controls .mejs-time-rail .mejs-time-total,
-  .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
-    background: none;
-    background-color: @mejs-time-total;
-  }
-
-  .mejs-controls .mejs-time-rail .mejs-time-loaded {
-    background: none;
-    background-color: @mejs-time-loaded;
-  }
-
-  .mejs-controls .mejs-time-rail .mejs-time-current,
-  .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
-    background: none;
-    background-color: @mejs-time-current;
-  }
-
-  .mejs-controls .mejs-captions-button .mejs-captions-selector,
-  .mejs-controls .mejs-volume-button .mejs-volume-slider {
-    background: none;
-    background-color: @mejs-color;
-  }
-
-  .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
-    background: none;
-    background-color: @mejs-time-current;
+    .mejs__time,
+    .mejs__captions-button .mejs__captions-selector ul li {
+      color: @mejs-color-inverted;
+    }
+  
+    .mejs__button button {
+      color: @mejs-icon;
+    }
+  
+    .mejs__time-rail .mejs__time-total,
+    .mejs__volume-button .mejs__volume-slider .mejs__volume-total {
+      background: none;
+      background-color: @mejs-time-total;
+    }
+  
+    .mejs__time-rail .mejs__time-loaded {
+      background: none;
+      background-color: @mejs-time-loaded;
+    }
+  
+    .mejs__time-rail .mejs__time-current,
+    .mejs__volume-button .mejs__volume-slider .mejs__volume-current {
+      background: none;
+      background-color: @mejs-time-current;
+    }
+  
+    .mejs__captions-button .mejs__captions-selector,
+    .mejs__volume-button .mejs__volume-slider {
+      background: none;
+      background-color: @mejs-color;
+    }
+  
+    .mejs__volume-button .mejs__volume-slider .mejs__volume-handle {
+      background: none;
+      background-color: @mejs-time-current;
+    }
   }
 
   // Icon overrides
   // Icon classes must be defined in core/fonts/vanilla or
   // a custom font must be set up in the theme
   // --------------------------------------------------
-  .mejs-controls .mejs-play button {
-    .icon-video-play;
+  .mejs__playpause-button,
+  .mejs__fullscreen-button,
+  .mejs__volume-button,
+  .mejs__captions-button {
+    svg { display: none }
+
+    button {
+      .icon;
+
+      &::before { font-size: @mejs-icon-size }
+    }
   }
 
-  .mejs-controls .mejs-pause button {
-    .icon-video-pause;
+  .mejs__controls {
+    .mejs__play button {
+      .icon-video-play;
+    }
+
+    .mejs__pause button {
+      .icon-video-pause;
+    }
+
+    .mejs__replay button {
+      .icon-video-replay;
+    }
+
+    .mejs__fullscreen-button button {
+      .icon-video-fullscreen;
+    }
+
+    .mejs__unfullscreen button {
+      .icon-video-exit-fullscreen;
+    }
+
+    .mejs__mute button {
+      .icon-sound;
+    }
+
+    .mejs__unmute button {
+      .icon-sound-mute;
+    }
   }
 
-  .mejs-controls .mejs-fullscreen-button button {
-    .icon-video-fullscreen;
+  .mejs__captions-button-toggle {
+    opacity: 1;
   }
 
-  .mejs-controls .mejs-unfullscreen button {
-    .icon-video-exit-fullscreen;
-  }
-
-  .mejs-controls .mejs-mute button {
-    .icon-sound;
-  }
-
-  .mejs-controls .mejs-unmute button {
-    .icon-sound-mute;
-  }
-
-  .mejs-controls .mejs-captions-button button {
-    .icon-video-captions-off-2;
-  }
-
-  .mejs-controls .mejs-captions-enabled button {
+  .mejs__captions-button.mejs__captions-enabled button {
     .icon-video-captions;
+  }
+
+  .mejs__captions-button:not(.mejs__captions-enabled) button {
+    .icon-video-captions-off-2;
   }
 
   // Player controls
   // --------------------------------------------------
-  .mejs-controls {
+  .mejs__controls {
+    padding: 0;
     height: @mejs-controls-height;
-  }
+    align-items: center;
 
-  .mejs-controls .mejs-time-rail {
-    height: @mejs-time-rail-height;
-    margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
-    padding: 0;
-  }
+    .mejs__time-rail {
+      height: @mejs-time-rail-height;
+      margin: ((@mejs-controls-height - @mejs-time-rail-height) / 2) @mejs-margin;
+      padding: 0;
+    }
 
-  .mejs-controls .mejs-time-rail span {
-    height: @mejs-time-rail-height;
-  }
+    .mejs__time-rail span {
+      height: @mejs-time-rail-height;
+    }
 
-  .mejs-controls .mejs-time-rail .mejs-time-total {
-    height: @mejs-time-rail-height;
-    margin: 0;
-  }
+    .mejs__time-rail .mejs__time-total {
+      height: @mejs-time-rail-height;
+      margin: 0;
+    }
 
-  .mejs-controls .mejs-time {
-    height: @mejs-time-size;
-    margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
-    padding: 0;
-    font-size: @mejs-time-size;
-    line-height: 1;
+    .mejs__time {
+      height: @mejs-time-size;
+      margin: ((@mejs-time-size / 2) + (@mejs-margin / 2)) @mejs-margin;
+      padding: 0;
+      font-size: @mejs-time-size;
+      line-height: 1;
+    }
   }
 
   // Button icon style overrides
   // --------------------------------------------------
-  .mejs-controls .mejs-button {
+  .mejs__controls .mejs__button {
     height: @icon-size;
     width: @icon-size;
     margin: @mejs-margin / 2;
+
+    button {
+      height: @icon-size;
+      width: @icon-size;
+      margin: 0;
+    }
   }
 
-  .mejs-controls .mejs-button button {
-    .icon;
-    height: @icon-size;
-    width: @icon-size;
-    margin: 0;
-    background: none;
+  .mejs__controls .mejs__button.mejs__speed-button,
+  .mejs__controls .mejs__button.mejs__speed-button button {
+    width: 2.25rem;
   }
 
   // Current time pop float on time rail hover
   // --------------------------------------------------
-  .mejs-controls .mejs-time-rail .mejs-time-float {
-    top: -1.5rem;
-    height: calc(~'@{mejs-time-float-size} + 2px');
-    width: calc(~'@{mejs-time-float-width} + 2px');
-    margin-left: -@mejs-time-float-width / 2;
-    background: none;
-    background-color: @white;
-    color: @black;
-    border-color: @black;
-  }
+  .mejs__controls {
+    .mejs__time-rail .mejs__time-float {
+      height: calc(~'@{mejs-time-float-size} + 0.375rem');
+      width: @mejs-time-float-width;
+      background-color: @white;
+      color: @black;
+      border-color: @black;
+    }
 
-  .mejs-controls .mejs-time-rail .mejs-time-float-current {
-    height: @mejs-time-float-size;
-    width: @mejs-time-float-width;
-    margin: 0;
-    font-size: @mejs-time-float-size;
-    line-height: 1;
-  }
+    .mejs__time-rail .mejs__time-float-current {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      font-size: @mejs-time-float-size;
+      line-height: 1;
+    }
 
-  .mejs-controls .mejs-time-rail .mejs-time-float-corner {
-    top: @mejs-time-float-width / 2;
-    left: @mejs-time-float-width / 2;
-    .transform(translate(-50%,-50%));
-    border-color: @white transparent transparent transparent;
-  }
+    .mejs__time-rail .mejs__time-float-corner {
+      border-color: @white transparent transparent transparent;
+    }
 
-  .mejs-controls .mejs-time-rail span {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
+    .mejs__time-rail span {
+      border-radius: 0;
+    }
   }
 
   // Closed captions pop up selector
   // --------------------------------------------------
-  .mejs-controls .mejs-captions-button .mejs-captions-selector {
-    bottom: @mejs-controls-height - @mejs-margin;
-    left: -@mejs-margin / 2;
-    right: auto;
-    width: 6rem;
-    height: 6.5rem;
-    padding: @mejs-margin;
-    overflow-y: scroll;
-    font-size: @mejs-cc-size;
-    line-height: 1;
-  }
-
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: @mejs-margin / 2;
-  }
-
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
-    margin: 0;
-    float: none;
-  }
-
-  .mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
-    float: none;
-    width: auto;
-    margin-left: @mejs-margin;
-    padding: 0;
-    font-size: @mejs-cc-size;
-    line-height: 1;
+  .mejs__captions-selector-label,
+  .mejs__chapters-selector-label {
+    font-size: @mejs-cc-size; 
   }
 
   // Closed captions
   // --------------------------------------------------
-  .mejs-captions-layer {
+  &:not(.mejs__container-fullscreen) video::cue {
     font-size: @body-size;
     line-height: @body-line-height;
-    color: inherit;
-  }
-
-  .mejs-captions-position-hover {
-    bottom: @mejs-controls-height + @mejs-time-rail-height;
-  }
-
-  .mejs-captions-text {
-    padding: 0.25rem;
-    background: none;
     background-color: @black;
     color: @white;
   }
@@ -287,7 +270,7 @@
     padding-bottom: @mejs-controls-height;
   }
 
-  .mejs-video:not(.mejs-container-fullscreen) .mejs-controls {
+  .mejs__video:not(.mejs__container-fullscreen) .mejs__controls {
     bottom: -@mejs-controls-height;
   }
 }
