@@ -27,6 +27,42 @@
   &__language-btn {
     margin: @item-margin / 2;
   }
+
+  & when (@btn-color-style = filled) {
+    &__language-btn {
+      .btn-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .btn-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .btn-color-focus;
+      }
+    }
+
+    &__language-btn.is-disabled {
+      .btn-color-disabled;
+    }
+  }
+
+  & when (@btn-color-style = outline) {
+    &__language-btn {
+      .btn-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .btn-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .btn-color-outline-focus;
+      }
+    }
+
+    &__language-btn.is-disabled {
+      .btn-color-outline-disabled;
+    }
+  }
 }
 
 // Language picker notify confirmation override

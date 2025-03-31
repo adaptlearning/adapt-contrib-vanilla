@@ -7,16 +7,30 @@
   }
 
   &__btn {
-    margin: @btn-margin / 2;
-    padding: @btn-padding / 2;
-    background-color: @drawer-icon;
-    color: @drawer-icon-inverted;
-    border-radius: 50%;
+    .ui-btn-ctrl;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @drawer-icon-hover;
-      color: @drawer-icon-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+    & when (@drawer-ui-btn-ctrl-color-style = filled) {
+      .drawer-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .drawer-ui-btn-ctrl-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .drawer-ui-btn-ctrl-color-focus;
+      }
+    }
+
+    & when (@drawer-ui-btn-ctrl-color-style = outline) {
+      .drawer-ui-btn-ctrl-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .drawer-ui-btn-ctrl-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .drawer-ui-btn-ctrl-color-outline-focus;
+      }
     }
   }
 }

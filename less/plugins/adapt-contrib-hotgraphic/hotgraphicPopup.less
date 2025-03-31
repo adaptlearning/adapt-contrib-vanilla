@@ -8,7 +8,39 @@
 
   &__controls,
   &__close {
-    .notify-btn-icon;
+    .ui-btn-ctrl;
+
+    & when (@notify-ui-btn-ctrl-color-style = filled) {
+      .notify-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-focus;
+      }
+
+      &.is-disabled {
+        .notify-ui-btn-ctrl-color-disabled;
+      }
+    }
+
+    & when (@notify-ui-btn-ctrl-color-style = outline) {
+      .notify-ui-btn-ctrl-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .notify-ui-btn-ctrl-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .notify-ui-btn-ctrl-color-outline-focus;
+      }
+
+      &.is-disabled {
+        .notify-ui-btn-ctrl-color-outline-disabled;
+      }
+    }
   }
 
   &__item-title {

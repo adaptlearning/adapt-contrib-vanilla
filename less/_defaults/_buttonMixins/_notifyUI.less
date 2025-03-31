@@ -1,0 +1,48 @@
+// --------------------------------------------------
+// NOTIFY UI COLOUR MIXINS
+// --------------------------------------------------
+
+// Default - Filled
+.notify-ui-btn-ctrl-color() {
+  background-color: @notify-icon;
+  color: @notify-icon-inverted;
+}
+
+.notify-ui-btn-ctrl-color-hover() {
+  background-color: @notify-icon-hover;
+  color: @notify-icon-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.notify-ui-btn-ctrl-color-focus() {
+  background-color: @notify-icon-focus;
+  color: @notify-icon-inverted-focus;
+}
+
+.notify-ui-btn-ctrl-color-disabled() {
+  background-color: @notify-icon-disabled;
+  color: @notify-icon-inverted-disabled;
+}
+
+// Outline
+.notify-ui-btn-ctrl-color-outline() {
+  background-color: @notify-icon-inverted;
+  color: @notify-icon;
+  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon inset;
+}
+
+.notify-ui-btn-ctrl-color-outline-hover() {
+  .notify-ui-btn-ctrl-color-hover;
+  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.notify-ui-btn-ctrl-color-outline-focus() {
+  .notify-ui-btn-ctrl-color-focus;
+  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-focus inset;
+}
+
+.notify-ui-btn-ctrl-color-outline-disabled() {
+  .notify-ui-btn-ctrl-color-disabled;
+  box-shadow: 0 0 0 @ui-btn-controls-border-width @notify-icon-disabled inset;
+}

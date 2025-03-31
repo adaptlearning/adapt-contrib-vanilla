@@ -3,53 +3,55 @@
     margin-top: @btn-margin;
   }
 
-  &-icon {
-    background-color: @btn-icon-color;
-    color: @btn-icon-color-inverted;
-
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @btn-icon-color-hover;
-      color: @btn-icon-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
-  }
-
   &-text {
     .button-text;
   }
 
-  &-text {
-    background-color: @btn-color;
-    color: @btn-color-inverted;
-    border-radius: @btn-border-radius;
-
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @btn-color-hover;
-      color: @btn-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
-  }
-
-  &-icon.is-disabled,
-  &-text.is-disabled {
-    background-color: @disabled;
-    color: @disabled-inverted;
-  }
-
-  &-icon.is-locked,
-  &-text.is-locked {
-    background-color: @disabled;
-    color: @disabled-inverted;
+  &-text.is-locked,
+  &-icon.is-locked {
     cursor: not-allowed;
   }
 
-  &__marking {
-    padding: @item-padding * 0.75;
-    border-radius: 50%;
+  // DEPRECATED
+  // legacy color styles for generic .btn-text and .btn-icon 
+  // color mixins applied to plugin selectors instead
+  &-text {
+    .btn-color;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .btn-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .btn-color-focus;
+    }
   }
 
-  .can-show-marking &__action.is-full-width,
-  .can-show-marking &__feedback.is-full-width {
-    margin-inline-end: @icon-size + (@item-margin * 2) + ((@item-padding * 0.75) * 2);
+  &-text.is-disabled {
+    .btn-color-disabled;
+  }
+
+  &-text.is-locked {
+    .btn-color-locked;
+  }
+
+  &-icon {
+    .nav-ui-btn-ctrl-color;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      .nav-ui-btn-ctrl-color-hover;
+    }
+
+    html:not(.a11y-disable-focusoutline) &:focus-visible {
+      .nav-ui-btn-ctrl-color-focus;
+    }
+  }
+
+  &-icon.is-disabled {
+    .nav-ui-btn-ctrl-color-disabled;
+  }
+
+  &-icon.is-locked {
+    .nav-ui-btn-ctrl-color-locked;
   }
 }

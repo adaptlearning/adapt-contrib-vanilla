@@ -5,25 +5,50 @@
 
   &__transcript-btn {
     padding: @item-padding;
-    background-color: @item-color;
-    color: @item-color-inverted;
-    border-radius: @item-border-radius;
+  }
 
-    .no-touch &:not([aria-expanded="true"]):hover {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+  & when (@item-ui-color-style = filled) {
+    &__transcript-btn {
+      .item-ui-color;
+
+      .no-touch &:not([aria-expanded="true"]):hover {
+        .item-ui-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:not([aria-expanded="true"]):focus-visible {
+        .item-ui-color-focus;
+      }
+    }
+
+    &.is-complete &__transcript-btn {
+      .item-ui-color-visited;
+    }
+
+    &__transcript-btn[aria-expanded="true"] {
+      .item-ui-color-selected;
     }
   }
 
-  &.is-complete &__transcript-btn {
-    background-color: @visited;
-    color: @visited-inverted;
-  }
+  & when (@item-ui-color-style = outline) {
+    &__transcript-btn {
+      .item-ui-color-outline;
 
-  &__transcript-btn[aria-expanded="true"] {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+      .no-touch &:not([aria-expanded="true"]):hover {
+        .item-ui-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:not([aria-expanded="true"]):focus-visible {
+        .item-ui-color-outline-focus;
+      }
+    }
+
+    &.is-complete &__transcript-btn {
+      .item-ui-color-outline-visited;
+    }
+
+    &__transcript-btn[aria-expanded="true"] {
+      .item-ui-color-outline-selected;
+    }
   }
 
   &__transcript-body-inline {

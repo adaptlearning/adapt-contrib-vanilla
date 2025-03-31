@@ -8,29 +8,54 @@
     padding-inline-start: @item-padding;
     padding-inline-end: @icon-size + (@item-padding * 2);
     text-align: start;
-    background-color: @item-color;
-    color: @item-color-inverted;
-    border-radius: @item-border-radius;
-
-    .no-touch &:not(.is-selected):hover {
-      background-color: @item-color-hover;
-      color: @item-color-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
   }
-
+  
   &__btn.has-title-icon {
     padding-inline-start: @icon-size + (@item-padding * 2);
   }
 
-  &__btn.is-visited {
-    background-color: @visited;
-    color: @visited-inverted;
+  & when (@item-color-style = filled) {
+    &__btn {
+      .item-color;
+
+      .no-touch &:not(.is-selected):hover {
+        .item-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-color-focus;
+      }
+    }
+
+    &__btn.is-visited {
+      .item-color-visited;
+    }
+
+    &__btn.is-selected {
+      .item-color-selected;
+    }
   }
 
-  &__btn.is-selected {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
+  & when (@item-color-style = outline) {
+    &__btn {
+      .item-color-outline;
+
+      .no-touch &:not(.is-selected):hover {
+        .item-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .item-color-outline-focus;
+      }
+    }
+
+    &__btn.is-visited {
+      .item-color-outline-visited;
+    }
+
+    &__btn.is-selected {
+      .item-color-outline-selected;
+    }
   }
 
   &:not(.is-center-aligned) &__title-icon {

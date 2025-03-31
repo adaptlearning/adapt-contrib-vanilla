@@ -1,0 +1,80 @@
+// --------------------------------------------------
+// ITEM UI COLOUR MIXINS
+// --------------------------------------------------
+
+// Default - Filled
+.item-ui-color() {
+  background-color: @item-ui-color;
+  color: @item-ui-color-inverted;
+  border-radius: @item-ui-border-radius;
+}
+
+.item-ui-color-hover() {
+  background-color: @item-ui-color-hover;
+  color: @item-ui-color-inverted-hover;
+  .transition(background-color @duration ease-in, color @duration ease-in;);
+}
+
+.item-ui-color-focus() {
+  background-color: @item-ui-color-focus;
+  color: @item-ui-color-inverted-focus;
+}
+
+.item-ui-color-visited() {
+  background-color: @item-ui-color-visited;
+  color: @item-ui-color-inverted-visited;
+}
+
+.item-ui-color-selected() {
+  background-color: @item-ui-color-selected;
+  color: @item-ui-color-inverted-selected;
+}
+
+.item-ui-color-locked() {
+  background-color: @item-ui-color-locked;
+  color: @item-ui-color-inverted-locked;
+}
+
+.item-ui-color-disabled() {
+  background-color: @item-ui-color-disabled;
+  color: @item-ui-color-inverted-disabled;
+}
+
+// Outline
+.item-ui-color-outline() {
+  background-color: @item-ui-color-inverted;
+  color: @item-ui-color;
+  box-shadow: 0 0 0 @item-ui-border-width @item-color inset;
+  border-radius: @item-ui-border-radius;
+}
+
+.item-ui-color-outline-hover() {
+  .item-ui-color-hover;
+  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-hover inset;
+  .transition(background-color @duration ease-in, color @duration ease-in, box-shadow @duration ease-in;);
+}
+
+.item-ui-color-outline-focus() {
+  .item-ui-color-focus;
+  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-focus inset;
+}
+
+.item-ui-color-outline-selected() {
+  .item-ui-color-selected;
+  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-selected inset;
+}
+
+.item-ui-color-outline-visited() {
+  .item-ui-color-visited;
+  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-visited inset;
+}
+
+.item-ui-color-outline-locked() {
+  .item-ui-color-locked;
+  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-locked inset;
+}
+
+.item-ui-color-outline-disabled() {
+  .item-ui-color-disabled;
+  box-shadow: 0 0 0 @item-ui-border-width @item-ui-color-disabled inset;
+}

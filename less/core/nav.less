@@ -12,14 +12,30 @@
 
   &__btn {
     margin: @nav-btn-margin (@nav-btn-margin / 2);
-    background-color: @nav-icon;
-    color: @nav-icon-inverted;
-    border-radius: @nav-btn-border-radius;
+    padding: @nav-btn-padding-ver @nav-btn-padding-hoz;
 
-    .no-touch &:not(.is-disabled):not(.is-locked):hover {
-      background-color: @nav-icon-hover;
-      color: @nav-icon-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
+    & when (@nav-ui-btn-ctrl-color-style = filled) {
+      .nav-ui-btn-ctrl-color;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .nav-ui-btn-ctrl-color-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .nav-ui-btn-ctrl-color-focus;
+      }
+    }
+
+    & when (@nav-ui-btn-ctrl-color-style = outline) {
+      .nav-ui-btn-ctrl-color-outline;
+
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        .nav-ui-btn-ctrl-color-outline-hover;
+      }
+
+      html:not(.a11y-disable-focusoutline) &:focus-visible {
+        .nav-ui-btn-ctrl-color-outline-focus;
+      }
     }
   }
 
