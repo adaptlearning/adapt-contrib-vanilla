@@ -224,6 +224,19 @@ strong {
 
 // Drawer
 // --------------------------------------------------
+.drawer-title() {
+  font-family: @drawer-title-family;
+  font-size: @drawer-title-size * @drawer-title-mobile-percentage;
+  font-weight: @drawer-title-weight;
+  line-height: @drawer-title-line-height;
+  letter-spacing: @drawer-title-letter-spacing;
+  text-transform: @drawer-title-text-transform;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @drawer-title-size;
+  }
+}
+
 .drawer-item-title() {
   font-family: @drawer-item-title-family;
   font-size: @drawer-item-title-size;

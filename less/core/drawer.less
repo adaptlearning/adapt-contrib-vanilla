@@ -6,6 +6,17 @@
     border-bottom: 1px solid @drawer-item-hover;
   }
 
+  &__header {
+    padding-block: @drawer-header-padding-ver;
+    padding-inline: @drawer-header-padding-hoz;
+    border-bottom: 1px solid @drawer-item-hover;
+  }
+
+  &__title {
+    margin-bottom: @drawer-title-margin;
+    .drawer-title;
+  }
+
   &__btn {
     .ui-btn-ctrl;
 
@@ -37,7 +48,7 @@
 
 .drawer:not(.disable-animation) {
   opacity: 0;
-  
+
   &.anim-show-before {
     .transition(left var(--adapt-drawer-duration) var(--adapt-drawer-show-easing), right var(--adapt-drawer-duration) var(--adapt-drawer-show-easing), opacity var(--adapt-drawer-duration) var(--adapt-drawer-show-easing););
   }
