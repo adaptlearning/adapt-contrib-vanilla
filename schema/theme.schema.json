@@ -727,6 +727,13 @@
           "default": "",
           "_backboneForms": "ColourPicker"
         },
+        "notify-title-color": {
+          "type": "string",
+          "title": "Notify title colour",
+          "description": "Defines the notify title text colour. Should be a colour that provides good contrast against the notify colour.",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
         "notify-link": {
           "type": "string",
           "title": "Notify link font colour",
