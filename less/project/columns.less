@@ -26,7 +26,7 @@
 // e.g. 'margin-start-sm-2 margin-start-md-1'
 // min small viewport indents 2 columns from the left (or right for RTL)
 // min medium viewport indents 1 column from the left (or right for RTL)
-.make-margin-start(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
+.make-margin-start(@size, @media-query, @count, @iteration: 0) when (@count >= @iteration) {
   @media (min-width: @media-query) {
     .boxmenu-item.margin-start-@{size}-@{iteration} {
       margin-inline-start: (@iteration * 100% / @count);
@@ -48,7 +48,7 @@
 // e.g. 'margin-end-sm-2 margin-end-md-1'
 // min small viewport indents 2 columns from the right (or left for RTL)
 // min medium viewport indents 1 column from the right (or left for RTL)
-.make-margin-end(@size, @media-query, @count, @iteration: 1) when (@count >= @iteration) {
+.make-margin-end(@size, @media-query, @count, @iteration: 0) when (@count >= @iteration) {
   @media (min-width: @media-query) {
     .boxmenu-item.margin-end-@{size}-@{iteration} {
       margin-inline-end: (@iteration * 100% / @count);
