@@ -122,6 +122,32 @@
   // name, duration, delay, iteration count, direction, timing-function, fill mode
 }
 
+// bounceUpOnce animation
+// --------------------------------------------------
+.effect-bounceUpOnce() {
+  .keyframes(bounceUpOnce; {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  });
+
+  .animation(bounceUpOnce 0.5s 0s 1 normal ease-in-out none);
+  // name, duration, delay, iteration count, direction, timing-function, fill mode
+}
+
+// bounceDownOnce animation
+// --------------------------------------------------
+.effect-bounceDownOnce() {
+  .keyframes(bounceDownOnce; {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+  });
+
+  .animation(bounceDownOnce 0.5s 0s 1 normal ease-in-out none);
+  // name, duration, delay, iteration count, direction, timing-function, fill mode
+}
+
 // 360 spin animation
 // --------------------------------------------------
 .effect-spin() {
