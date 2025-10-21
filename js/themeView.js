@@ -43,6 +43,7 @@ export default class ThemeView extends Backbone.View {
     if (!textAlignment) return;
 
     if (textAlignment._title) this.$el.addClass(`title-align-${textAlignment._title}`);
+    if (textAlignment._subtitle) this.$el.addClass(`subtitle-align-${textAlignment._subtitle}`);
     if (textAlignment._body) this.$el.addClass(`body-align-${textAlignment._body}`);
     if (textAlignment._instruction) this.$el.addClass(`instruction-align-${textAlignment._instruction}`);
   }
