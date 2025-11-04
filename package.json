@@ -50,13 +50,15 @@
               "files": "migrations/*.js",
               "from": "@@CURRENT_VERSION",
               "to": "${lastRelease.version}",
-              "countMatches": true
+              "countMatches": true,
+              "allowEmptyPaths": true
             },
             {
               "files": "migrations/*.js",
               "from": "@@RELEASE_VERSION",
               "to": "${nextRelease.version}",
-              "countMatches": true
+              "countMatches": true,
+              "allowEmptyPaths": true
             }
           ]
         }
