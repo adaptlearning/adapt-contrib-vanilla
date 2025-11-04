@@ -1,6 +1,6 @@
 {
   "name": "adapt-contrib-vanilla",
-  "version": "9.25.0",
+  "version": "9.26.0",
   "framework": ">=5.31.3",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-vanilla",
   "bugs": "https://github.com/adaptlearning/adapt-contrib-vanilla/issues",
@@ -50,13 +50,15 @@
               "files": "migrations/*.js",
               "from": "@@CURRENT_VERSION",
               "to": "${lastRelease.version}",
-              "countMatches": true
+              "countMatches": true,
+              "allowEmptyPaths": true
             },
             {
               "files": "migrations/*.js",
               "from": "@@RELEASE_VERSION",
               "to": "${nextRelease.version}",
-              "countMatches": true
+              "countMatches": true,
+              "allowEmptyPaths": true
             }
           ]
         }
