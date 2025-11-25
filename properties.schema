@@ -1274,6 +1274,14 @@
                           "title": "Title alignment",
                           "help": "Set the alignment of the page title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
                         },
+                        "_subtitle": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Subtitle alignment",
+                          "help": "Set the alignment of the page subtitle. Left: Aligns the subtitle to the left of the container. Center: Aligns the subtitle to the center of the container. Right: Aligns the subtitle to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        },
                         "_body": {
                           "type": "string",
                           "required": false,
