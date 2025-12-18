@@ -17,6 +17,30 @@
     .l-container-padding(@block-padding-ver, @block-padding-hoz);
   }
 
+  &__header.has-bg-image {
+    position: relative;
+
+    > .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+    }
+  }
+
+  &__header.has-min-height {
+    display: flex;
+  }
+
+  &__header-inner {
+    position: relative;
+    z-index: 1;
+  }
+
   &__title {
     margin-bottom: @block-title-margin;
     .block-title;
