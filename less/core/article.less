@@ -29,6 +29,11 @@
       background-size: cover;
       background-position: center top;
     }
+
+    .article__header-inner {
+      position: relative;
+      z-index: 1;
+    }
   }
 
   &__header.has-min-height {
@@ -37,8 +42,6 @@
 
   &__header-inner {
     .l-container-padding(@article-header-padding-ver, @article-header-padding-hoz);
-    position: relative;
-    z-index: 1;
   }
 
   &__title {
