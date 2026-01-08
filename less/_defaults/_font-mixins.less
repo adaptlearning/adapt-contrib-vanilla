@@ -57,16 +57,6 @@ body {
   }
 }
 
-.priority-label() {
-  display: flex;
-  align-items: center;
-  column-gap: (@icon-padding / 4);
-
-  .icon {
-    .icon-exclamation;
-  }
-}
-
 b,
 strong {
   font-weight: @font-weight-bold;
@@ -344,6 +334,18 @@ strong {
 
   @media (min-width: @device-width-medium) {
     font-size: @pull-quote-body-size;
+  }
+}
+
+// Priority labels - optional or required
+// --------------------------------------------------
+.priority-label() {
+  display: flex;
+  align-items: center;
+  column-gap: (@icon-padding / 4);
+
+  .icon {
+    .icon-exclamation;
   }
 }
 
