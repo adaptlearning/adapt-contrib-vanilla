@@ -12,7 +12,7 @@ export default class ThemePageView extends ThemeView {
     const header = this.model.get('_pageHeader');
     if (!header) return;
     const $header = this.$('.page__header');
-    this.setHeaderTextAlignment(header);
+    this.setTextAlignment(header);
     this.addHeaderBackgroundLayer($header);
     this.setHeaderBackgroundImage(header, $header);
     this.setHeaderBackgroundStyles(header, $header);

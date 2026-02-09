@@ -38,8 +38,8 @@ export default class ThemeView extends Backbone.View {
     this.$el.addClass(this.className());
   }
 
-  setTextAlignment() {
-    const textAlignment = this.model.get('_textAlignment');
+  setTextAlignment(config = this.model) {
+    const textAlignment = config.get?.('_textAlignment') ?? config._textAlignment;
     if (!textAlignment) return;
 
     if (textAlignment._title) this.$el.addClass(`title-align-${textAlignment._title}`);
@@ -95,16 +95,6 @@ export default class ThemeView extends Backbone.View {
   }
 
   setCustomStyles() {}
-
-  setHeaderTextAlignment(config) {
-    const textAlignment = config._textAlignment;
-    if (!textAlignment) return;
-
-    if (textAlignment._title) this.$el.addClass(`title-align-${textAlignment._title}`);
-    if (textAlignment._subtitle) this.$el.addClass(`subtitle-align-${textAlignment._subtitle}`);
-    if (textAlignment._body) this.$el.addClass(`body-align-${textAlignment._body}`);
-    if (textAlignment._instruction) this.$el.addClass(`instruction-align-${textAlignment._instruction}`);
-  }
 
   addHeaderBackgroundLayer($header) {
     if ($header.find(' > .background').length) return;

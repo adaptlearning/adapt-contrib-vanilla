@@ -18,7 +18,7 @@ export default class ThemeBlockView extends ThemeView {
     const header = this.model.get('_blockHeader');
     if (!header) return;
     const $header = this.$('.block__header');
-    this.setHeaderTextAlignment(header);
+    this.setTextAlignment(header);
     this.addHeaderBackgroundLayer($header);
     this.setHeaderBackgroundImage(header, $header);
     this.setHeaderBackgroundStyles(header, $header);

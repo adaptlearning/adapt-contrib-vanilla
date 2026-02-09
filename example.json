@@ -79,11 +79,6 @@
         "_small": ""
     },
     "_articleHeader": {
-        "_textAlignment": {
-            "_title": "",
-            "_body": "",
-            "_instruction": ""
-        },
         "_backgroundImage": {
             "_xlarge": "",
             "_large": "",
@@ -140,11 +135,6 @@
     "_componentVerticalAlignment": "",
     "_componentHorizontalAlignment": "",
     "_blockHeader": {
-        "_textAlignment": {
-            "_title": "",
-            "_body": "",
-            "_instruction": ""
-        },
         "_backgroundImage": {
             "_xlarge": "",
             "_large": "",

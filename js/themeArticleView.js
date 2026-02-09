@@ -12,7 +12,7 @@ export default class ThemeArticleView extends ThemeView {
     const header = this.model.get('_articleHeader');
     if (!header) return;
     const $header = this.$('.article__header');
-    this.setHeaderTextAlignment(header);
+    this.setTextAlignment(header);
     this.addHeaderBackgroundLayer($header);
     this.setHeaderBackgroundImage(header, $header);
     this.setHeaderBackgroundStyles(header, $header);
