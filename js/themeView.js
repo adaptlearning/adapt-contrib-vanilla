@@ -38,8 +38,8 @@ export default class ThemeView extends Backbone.View {
     this.$el.addClass(this.className());
   }
 
-  setTextAlignment() {
-    const textAlignment = this.model.get('_textAlignment');
+  setTextAlignment(config = this.model) {
+    const textAlignment = config.get?.('_textAlignment') ?? config._textAlignment;
     if (!textAlignment) return;
 
     if (textAlignment._title) this.$el.addClass(`title-align-${textAlignment._title}`);
@@ -95,6 +95,41 @@ export default class ThemeView extends Backbone.View {
   }
 
   setCustomStyles() {}
+
+  addHeaderBackgroundLayer($header) {
+    if ($header.find(' > .background').length) return;
+    this.$headerBackground = $('<div class="background" aria-hidden="true"></div>')
+      .prependTo($header);
+  }
+
+  setHeaderBackgroundImage(config, $header) {
+    const backgroundImages = config._backgroundImage;
+    if (!backgroundImages || !this.$headerBackground) return;
+
+    const backgroundImage = backgroundImages[`_${device.screenSize}`] ?? backgroundImages._small;
+    $header.toggleClass('has-bg-image', Boolean(backgroundImage));
+    this.$headerBackground.css('background-image', backgroundImage ? 'url(' + backgroundImage + ')' : '');
+  }
+
+  setHeaderBackgroundStyles(config, $header) {
+    const styles = config._backgroundStyles;
+    if (!styles || !this.$headerBackground) return;
+
+    this.$headerBackground.css({
+      'background-repeat': styles._backgroundRepeat,
+      'background-size': styles._backgroundSize,
+      'background-position': styles._backgroundPosition
+    });
+  }
+
+  setHeaderMinimumHeight(config, $header) {
+    const minimumHeights = config._minimumHeights;
+    if (!minimumHeights) return;
+    const minimumHeight = minimumHeights[`_${device.screenSize}`] ?? minimumHeights._small;
+    $header
+      .toggleClass('has-min-height', Boolean(minimumHeight))
+      .css('min-height', minimumHeight ? minimumHeight + 'px' : '');
+  }
 
   onRemove() {}
 

@@ -1561,6 +1561,153 @@
                       "help": "Small CSS class, e.g. mobile / cellphones"
                     }
                   }
+                },
+                "_articleHeader": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Article header",
+                  "properties": {
+                    "_textAlignment": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Text alignment",
+                      "properties": {
+                        "_title": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Title alignment",
+                          "help": "Set the alignment of the article title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        },
+                        "_body": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Body alignment",
+                          "help": "Set the alignment of the article body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        },
+                        "_instruction": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Instruction alignment",
+                          "help": "Set the alignment of the article instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        }
+                      }
+                    },
+                    "_backgroundImage": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Article header background image",
+                      "properties": {
+                        "_xlarge": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Extra large background image, e.g. hd laptop/desktop computers"
+                        },
+                        "_large": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Large background image, e.g. laptop/desktop computers"
+                        },
+                        "_medium": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Medium background image, e.g. tablet devices"
+                        },
+                        "_small": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Small background image, e.g. mobile / cellphones"
+                        }
+                      }
+                    },
+                    "_backgroundStyles": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Article header background image styles",
+                      "properties": {
+                        "_backgroundRepeat": {
+                          "type": "string",
+                          "required": false,
+                          "default": "no-repeat",
+                          "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+                          "title": "Set if/how the background image repeats",
+                          "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
+                        },
+                        "_backgroundSize": {
+                          "type": "string",
+                          "required": false,
+                          "default": "cover",
+                          "inputType": {"type":"Select", "options":["auto","cover","contain","100% 100%"]},
+                          "title": "Set the size of the background image",
+                          "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container."
+                        },
+                        "_backgroundPosition": {
+                          "type": "string",
+                          "required": false,
+                          "default": "center top",
+                          "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+                          "title": "Set the position of the background image",
+                          "help": "The first value is the horizontal position and the second value is the vertical."
+                        }
+                      }
+                    },
+                    "_minimumHeights": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Article header minimum height",
+                      "properties": {
+                        "_xlarge": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers"
+                        },
+                        "_large": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. laptop/desktop computers"
+                        },
+                        "_medium": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices"
+                        },
+                        "_small": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones"
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -1792,6 +1939,153 @@
                   "inputType": {"type":"Select", "options":["left","center","right"]},
                   "title": "Set the horizontal alignment of the child component(s)",
                   "help": "Defines the horizontal alignment of the child component(s) in relation to the block. The default alignment is `left`."
+                },
+                "_blockHeader": {
+                  "type": "object",
+                  "required": false,
+                  "legend": "Block header",
+                  "properties": {
+                    "_textAlignment": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Text alignment",
+                      "properties": {
+                        "_title": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Title alignment",
+                          "help": "Set the alignment of the block title. Left: Aligns the title to the left of the container. Center: Aligns the title to the center of the container. Right: Aligns the title to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        },
+                        "_body": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Body alignment",
+                          "help": "Set the alignment of the block body. Left: Aligns the body to the left of the container. Center: Aligns the body to the center of the container. Right: Aligns the body to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        },
+                        "_instruction": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": {"type":"Select", "options":["","left","center","right"]},
+                          "title": "Instruction alignment",
+                          "help": "Set the alignment of the block instruction. Left: Aligns the instruction to the left of the container. Center: Aligns the instruction to the center of the container. Right: Aligns the instruction to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction."
+                        }
+                      }
+                    },
+                    "_backgroundImage": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Block header background image",
+                      "properties": {
+                        "_xlarge": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Extra large background image, e.g. hd laptop/desktop computers"
+                        },
+                        "_large": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Large background image, e.g. laptop/desktop computers"
+                        },
+                        "_medium": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Medium background image, e.g. tablet devices"
+                        },
+                        "_small": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "help": "Small background image, e.g. mobile / cellphones"
+                        }
+                      }
+                    },
+                    "_backgroundStyles": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Block header background image styles",
+                      "properties": {
+                        "_backgroundRepeat": {
+                          "type": "string",
+                          "required": false,
+                          "default": "no-repeat",
+                          "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+                          "title": "Set if/how the background image repeats",
+                          "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
+                        },
+                        "_backgroundSize": {
+                          "type": "string",
+                          "required": false,
+                          "default": "cover",
+                          "inputType": {"type":"Select", "options":["auto","cover","contain","100% 100%"]},
+                          "title": "Set the size of the background image",
+                          "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container."
+                        },
+                        "_backgroundPosition": {
+                          "type": "string",
+                          "required": false,
+                          "default": "center top",
+                          "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+                          "title": "Set the position of the background image",
+                          "help": "The first value is the horizontal position and the second value is the vertical."
+                        }
+                      }
+                    },
+                    "_minimumHeights": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Block header minimum height",
+                      "properties": {
+                        "_xlarge": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers"
+                        },
+                        "_large": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. laptop/desktop computers"
+                        },
+                        "_medium": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices"
+                        },
+                        "_small": {
+                          "type": "number",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Number",
+                          "validators": ["number"],
+                          "help": "Minimum height should only be used in instances where the block header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones"
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

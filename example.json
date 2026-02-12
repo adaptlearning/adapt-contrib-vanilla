@@ -77,6 +77,25 @@
         "_large": "",
         "_medium": "",
         "_small": ""
+    },
+    "_articleHeader": {
+        "_backgroundImage": {
+            "_xlarge": "",
+            "_large": "",
+            "_medium": "",
+            "_small": ""
+        },
+        "_backgroundStyles": {
+            "_backgroundSize": "",
+            "_backgroundRepeat": "",
+            "_backgroundPosition": ""
+        },
+        "_minimumHeights": {
+            "_xlarge": 0,
+            "_large": 0,
+            "_medium": 0,
+            "_small": 0
+        }
     }
 }
 
@@ -114,7 +133,26 @@
     "_paddingTop": "",
     "_paddingBottom": "",
     "_componentVerticalAlignment": "",
-    "_componentHorizontalAlignment": ""
+    "_componentHorizontalAlignment": "",
+    "_blockHeader": {
+        "_backgroundImage": {
+            "_xlarge": "",
+            "_large": "",
+            "_medium": "",
+            "_small": ""
+        },
+        "_backgroundStyles": {
+            "_backgroundSize": "",
+            "_backgroundRepeat": "",
+            "_backgroundPosition": ""
+        },
+        "_minimumHeights": {
+            "_xlarge": 0,
+            "_large": 0,
+            "_medium": 0,
+            "_small": 0
+        }
+    }
 }
 
 // components.json
