@@ -23,6 +23,30 @@
     .block-priority;
   }
 
+  &__header.has-bg-image {
+    position: relative;
+
+    > .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .block__header-inner {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__header-inner {
+    .l-container-padding(@block-header-padding-ver, @block-header-padding-hoz);
+  }
+
   &__title {
     margin-bottom: @block-title-margin;
     .block-title;

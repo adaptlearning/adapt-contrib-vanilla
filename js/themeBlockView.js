@@ -7,10 +7,22 @@ export default class ThemeBlockView extends ThemeView {
   }
 
   setCustomStyles() {
+    this.processHeader();
     this.setPaddingTop();
     this.setPaddingBottom();
     this.setComponentVerticalAlignment();
     this.setComponentHorizontalAlignment();
+  }
+
+  processHeader() {
+    const header = this.model.get('_blockHeader');
+    if (!header) return;
+    const $header = this.$('.block__header');
+    this.setTextAlignment(header);
+    this.addHeaderBackgroundLayer($header);
+    this.setHeaderBackgroundImage(header, $header);
+    this.setHeaderBackgroundStyles(header, $header);
+    this.setHeaderMinimumHeight(header, $header);
   }
 
   setPaddingTop() {

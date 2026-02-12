@@ -161,6 +161,19 @@
                       ],
                       "_backboneForms": "Select"
                     },
+                    "_subtitle": {
+                      "type": "string",
+                      "title": "Subtitle alignment",
+                      "description": "Set the alignment of the page subtitle. Left: Aligns the subtitle to the left of the container. Center: Aligns the subtitle to the center of the container. Right: Aligns the subtitle to the right of the container. The alignment automatically inverses for right-to-left languages. The default is `` which inherits the natural page direction.",
+                      "default": "",
+                      "enum": [
+                        "",
+                        "left",
+                        "center",
+                        "right"
+                      ],
+                      "_backboneForms": "Select"
+                    },
                     "_body": {
                       "type": "string",
                       "title": "Body alignment",

@@ -59,6 +59,138 @@
                 }
               }
             },
+            "_articleHeader": {
+              "type": "object",
+              "title": "Article header",
+              "default": {},
+              "properties": {
+                "_backgroundImage": {
+                  "type": "object",
+                  "title": "Header background image",
+                  "default": {},
+                  "properties": {
+                    "_xlarge": {
+                      "type": "string",
+                      "title": "Extra large",
+                      "description": "Extra large background image, e.g. hd laptop/desktop computers",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "_large": {
+                      "type": "string",
+                      "title": "Large",
+                      "description": "Large background image, e.g. laptop/desktop computers",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "title": "Medium",
+                      "description": "Medium background image, e.g. tablet devices",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "_small": {
+                      "type": "string",
+                      "title": "Small",
+                      "description": "Small background image, e.g. mobile / cellphones",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    }
+                  }
+                },
+                "_backgroundStyles": {
+                  "type": "object",
+                  "title": "Header background image styles",
+                  "default": {},
+                  "properties": {
+                    "_backgroundRepeat": {
+                      "type": "string",
+                      "title": "Repeat",
+                      "description": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically",
+                      "default": "no-repeat",
+                      "enum": [
+                        "repeat",
+                        "repeat-x",
+                        "repeat-y",
+                        "no-repeat"
+                      ],
+                      "_backboneForms": "Select"
+                    },
+                    "_backgroundSize": {
+                      "type": "string",
+                      "title": "Size",
+                      "description": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible. 100% 100%: Resize the background image to match the dimensions of the container",
+                      "default": "cover",
+                      "enum": [
+                        "auto",
+                        "cover",
+                        "contain",
+                        "100% 100%"
+                      ],
+                      "_backboneForms": "Select"
+                    },
+                    "_backgroundPosition": {
+                      "type": "string",
+                      "title": "Position",
+                      "description": "The first value is the horizontal position and the second value is the vertical",
+                      "default": "center top",
+                      "enum": [
+                        "left top",
+                        "left center",
+                        "left bottom",
+                        "center top",
+                        "center center",
+                        "center bottom",
+                        "right top",
+                        "right center",
+                        "right bottom"
+                      ],
+                      "_backboneForms": "Select"
+                    }
+                  }
+                },
+                "_minimumHeights": {
+                  "type": "object",
+                  "title": "Header minimum height",
+                  "default": {},
+                  "properties": {
+                    "_xlarge": {
+                      "type": "number",
+                      "title": "Extra large",
+                      "description": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. hd laptop/desktop computers",
+                      "default": 0
+                    },
+                    "_large": {
+                      "type": "number",
+                      "title": "Large",
+                      "description": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. laptop/desktop computers",
+                      "default": 0
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "title": "Medium",
+                      "description": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. tablet devices",
+                      "default": 0
+                    },
+                    "_small": {
+                      "type": "number",
+                      "title": "Small",
+                      "description": "Minimum height should only be used in instances where the article header height needs to be greater than the content e.g. to prevent a background image being cropped. For e.g. mobile / cellphones",
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            },
             "_backgroundImage": {
               "type": "object",
               "title": "Background image",
