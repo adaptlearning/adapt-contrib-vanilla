@@ -2,8 +2,11 @@
   &__popup {
     background-color: @notify;
     color: @notify-inverted;
-    width: calc(100% ~'-'@item-padding);
     .l-container-responsive(@max-notify-width);
+
+    & when not (@max-notify-width = 100%) {
+      width: calc(100% ~'-'@item-padding);
+    }
   }
 
   &__popup-inner {
