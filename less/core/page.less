@@ -19,6 +19,7 @@
 
   &__header {
     position: relative;
+    background-color: @page-header-background-color;
   }
 
   &__header.has-bg-image > .background {
@@ -46,22 +47,25 @@
   &__title {
     margin-bottom: @page-title-margin;
     .page-title;
-    color: @heading-color;
+    color: @page-header-title-color;
   }
 
   &__subtitle {
     margin-bottom: @page-subtitle-margin;
     .page-subtitle;
+    color: @page-header-subtitle-color;
   }
 
   &__body {
     margin-bottom: @page-body-margin;
     .page-body;
+    color: @page-header-body-color;
   }
 
   &__instruction {
     margin-bottom: @page-instruction-margin;
     .page-instruction;
+    color: @page-header-instruction-color;
   }
 
   &__body a,
