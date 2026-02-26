@@ -31,7 +31,6 @@ export default class ThemePageView extends ThemeView {
       .addClass('page__image')
       .attr('src', graphic._src)
       .attr('alt', graphic.alt || '');
-    if (!graphic.alt) $image.attr('aria-hidden', 'true');
     $imageContainer.append($image);
     $headerInner.prepend($imageContainer);
   }
