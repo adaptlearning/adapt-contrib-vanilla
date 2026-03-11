@@ -8,8 +8,34 @@
     .boxmenu-item.col-@{size}-@{iteration} {
       width: (@iteration * 100% / @count);
     }
+    .block.col-@{size}-@{iteration} {
+      width: (@iteration * 100% / @count);
+    }
     .component.col-@{size}-@{iteration} {
       width: (@iteration * 100% / @count);
+    }
+
+    // Additional styles required to extend column layout support to blocks
+    // for consistency with component column styles in core/less/core/component.less
+    .block__container:has(.col-@{size}-@{iteration}) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+
+      @media (min-width: @device-width-medium) {
+        flex-direction: row;
+      }
+    }
+
+    // Optional Article class 'contain-content-container'
+    // contain width of child block to 70rem (1120px), inline with default content width
+    // without class, child blocks span full course width
+    // --------------------------------------------------
+    .article.contain-content-container .block__container:has(.col-@{size}-@{iteration}) {
+      .l-container-responsive(@max-content-width);
     }
   }
 
@@ -29,6 +55,9 @@
 .make-margin-start(@size, @media-query, @count, @iteration: 0) when (@count >= @iteration) {
   @media (min-width: @media-query) {
     .boxmenu-item.margin-start-@{size}-@{iteration} {
+      margin-inline-start: (@iteration * 100% / @count);
+    }
+    .block.margin-start-@{size}-@{iteration} {
       margin-inline-start: (@iteration * 100% / @count);
     }
     .component.margin-start-@{size}-@{iteration} {
@@ -51,6 +80,9 @@
 .make-margin-end(@size, @media-query, @count, @iteration: 0) when (@count >= @iteration) {
   @media (min-width: @media-query) {
     .boxmenu-item.margin-end-@{size}-@{iteration} {
+      margin-inline-end: (@iteration * 100% / @count);
+    }
+    .block.margin-end-@{size}-@{iteration} {
       margin-inline-end: (@iteration * 100% / @count);
     }
     .component.margin-end-@{size}-@{iteration} {
