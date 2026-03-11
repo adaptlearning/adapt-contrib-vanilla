@@ -29,6 +29,14 @@
         flex-direction: row;
       }
     }
+
+    // Optional Article class 'contain-content-container'
+    // contain width of child block to 70rem (1120px), inline with default content width
+    // without class, child blocks span full course width
+    // --------------------------------------------------
+    .article.contain-content-container .block__container:has(.col-@{size}-@{iteration}) {
+      .l-container-responsive(@max-content-width);
+    }
   }
 
   .make-columns(@size, @media-query, @count, (@iteration + 1));
