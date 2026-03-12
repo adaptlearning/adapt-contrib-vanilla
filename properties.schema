@@ -64,6 +64,13 @@
             "inputType": "ColourPicker",
             "default": "",
             "help": "Global title colour inverted. Either a lightened / darkened alternative to Title colour."
+          },
+          "body-background-color": {
+            "title": "Body background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "The background colour of the main body element."
           }
         }
       },
@@ -1001,6 +1008,13 @@
             "default": "",
             "help": "Defines the drawer item text / icon colour when selected. Should be a colour that provides good contrast against the drawer item selected colour."
           },
+          "drawer-item-selected-underline": {
+            "title": "Drawer item colour - selected underline",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "Defines the colour of the underline that appears beneath the selected drawer item."
+          },
           "drawer-item-locked": {
             "title": "Drawer item background colour - locked",
             "type": "string",
@@ -1059,6 +1073,33 @@
         }
       },
 
+      "_pullQuote": {
+        "type": "object",
+        "required": false,
+        "title": "Pull Quote",
+        "properties": {
+          "pull-quote": {
+            "title": "Pull quote background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "pull-quote-inverted": {
+            "title": "Pull quote text colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "The text colour for pull quote elements. Should provide good contrast against the pull quote background colour."
+          },
+          "pull-quote-border": {
+            "title": "Pull quote border colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          }
+        }
+      },
+
       "_misc": {
         "type": "object",
         "required": false,
@@ -1091,6 +1132,13 @@
             "default": "",
             "help": "Defines the shadow text / icon colour. Should be a colour that provides good contrast against the shadow colour."
           },
+          "shadow-opacity": {
+            "title": "Shadow opacity",
+            "type": "string",
+            "inputType": "Text",
+            "default": "",
+            "help": "The opacity of the shadow overlay used behind loading indicators and popups. Accepts a percentage value e.g. 50%."
+          },
           "loading": {
             "title": "Loading animation background colour",
             "type": "string",
@@ -1103,6 +1151,27 @@
             "inputType": "ColourPicker",
             "default": "",
             "help": "Defines the loading animation bar colour. Should be a colour that provides good contrast against the loading colour."
+          }
+        }
+      },
+
+      "_tooltip": {
+        "type": "object",
+        "required": false,
+        "title": "Tooltip",
+        "properties": {
+          "tooltip-color": {
+            "title": "Tooltip background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "tooltip-text-color": {
+            "title": "Tooltip text colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "",
+            "help": "The text colour for tooltip elements. Should provide good contrast against the tooltip background colour."
           }
         }
       }
