@@ -31,13 +31,13 @@
     }
 
     
-    // Contain width of child block to 70rem (1120px), inline with default content width
+    // Contain width of child blocks to 70rem (1120px), inline with default content width
     .article .block__container:has(.col-@{size}-@{iteration}) {
       .l-container-responsive(@max-content-width);
     }
 
     // Optional article class 'extend-container'
-    // Extend width of article to max page width
+    // Extend width of child blocks to max page width
     // --------------------------------------------------
     .article.extend-container .block__container:has(.col-@{size}-@{iteration}) {
       max-width: @max-page-width;
