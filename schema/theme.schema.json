@@ -62,6 +62,13 @@
           "description": "Global title colour inverted. Either a lightened / darkened alternative to Title colour.",
           "default": "",
           "_backboneForms": "ColourPicker"
+        },
+        "body-background-color": {
+          "type": "string",
+          "title": "Body background colour",
+          "description": "The background colour of the main body element.",
+          "default": "",
+          "_backboneForms": "ColourPicker"
         }
       }
     },
@@ -1000,6 +1007,13 @@
           "default": "",
           "_backboneForms": "ColourPicker"
         },
+        "drawer-item-selected-underline": {
+          "type": "string",
+          "title": "Drawer item colour - selected underline",
+          "description": "Defines the colour of the underline that appears beneath the selected drawer item.",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
         "drawer-item-locked": {
           "type": "string",
           "title": "Drawer item background colour - locked",
@@ -1058,6 +1072,33 @@
       }
     },
 
+    "_pullQuote": {
+      "type": "object",
+      "title": "Pull Quote",
+      "default": {},
+      "properties": {
+        "pull-quote": {
+          "type": "string",
+          "title": "Pull quote background colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "pull-quote-inverted": {
+          "type": "string",
+          "title": "Pull quote text colour",
+          "description": "The text colour for pull quote elements. Should provide good contrast against the pull quote background colour.",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "pull-quote-border": {
+          "type": "string",
+          "title": "Pull quote border colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        }
+      }
+    },
+
     "_misc": {
       "type": "object",
       "title": "Miscellaneous",
@@ -1090,6 +1131,12 @@
           "default": "",
           "_backboneForms": "ColourPicker"
         },
+        "shadow-opacity": {
+          "type": "string",
+          "title": "Shadow opacity",
+          "description": "The opacity of the shadow overlay used behind loading indicators and popups. Accepts a percentage value e.g. 50%.",
+          "default": ""
+        },
         "loading": {
           "type": "string",
           "title": "Loading animation background colour",
@@ -1100,6 +1147,27 @@
           "type": "string",
           "title": "Loading animation colour - inverted",
           "description": "Defines the loading animation bar colour. Should be a colour that provides good contrast against the loading colour.",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        }
+      }
+    },
+
+    "_tooltip": {
+      "type": "object",
+      "title": "Tooltip",
+      "default": {},
+      "properties": {
+        "tooltip-color": {
+          "type": "string",
+          "title": "Tooltip background colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "tooltip-text-color": {
+          "type": "string",
+          "title": "Tooltip text colour",
+          "description": "The text colour for tooltip elements. Should provide good contrast against the tooltip background colour.",
           "default": "",
           "_backboneForms": "ColourPicker"
         }
