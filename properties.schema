@@ -1261,6 +1261,32 @@
                   "type": "object",
                   "required": false,
                   "properties": {
+                    "_graphic": {
+                      "type": "object",
+                      "required": false,
+                      "legend": "Header image",
+                      "properties": {
+                        "_src": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Asset:image",
+                          "validators": [],
+                          "title": "Source",
+                          "help": "This image will appear above the page header title"
+                        },
+                        "alt": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "inputType": "Text",
+                          "validators": [],
+                          "title": "Alternative text",
+                          "help": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+                          "translatable": true
+                        }
+                      }
+                    },
                     "_textAlignment": {
                       "type": "object",
                       "required": false,
