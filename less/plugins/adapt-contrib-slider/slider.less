@@ -32,16 +32,18 @@
   }
 
   // Lozenge shape when prefix or suffix is present
-  &__widget.has-scale-step-prefix &__number,
-  &__widget.has-scale-step-prefix &__number-selection,
-  &__widget.has-scale-step-prefix &__number-model-answer,
-  &__widget.has-scale-step-suffix &__number,
-  &__widget.has-scale-step-suffix &__number-selection,
-  &__widget.has-scale-step-suffix &__number-model-answer {
-    width: auto;
-    min-width: 2.5rem;
-    padding: 0 0.5rem;
-    border-radius: 1.25rem;
+  &__widget {
+    &.has-scale-step-prefix,
+    &.has-scale-step-suffix {
+      .slider__number,
+      .slider__number-selection,
+      .slider__number-model-answer {
+        width: auto;
+        min-width: 2.5rem;
+        padding: 0 0.5rem;
+        border-radius: 1.25rem;
+      }
+    }
   }
 
   // Scale
