@@ -3,6 +3,9 @@
 
 @slider-track-height: .375rem;
 
+// Min width to show prefix/suffix affixes on scale step numbers
+@slider-affix-breakpoint: @device-width-medium;
+
 .slider {
   // Numbers
   &__number-container {
@@ -31,20 +34,31 @@
     border-radius: 50%;
   }
 
-  // Lozenge shape when prefix or suffix is present
-  &__widget {
-    &.has-scale-step-prefix,
-    &.has-scale-step-suffix {
-      .slider__number,
-      .slider__number-selection,
-      .slider__number-model-answer {
-        width: auto;
-        min-width: 2.5rem;
-        padding: 0 0.5rem;
-        border-radius: @item-ui-border-radius;
-        white-space: nowrap;
-        line-height: normal;
+  @media (min-width: @slider-affix-breakpoint) {
+    // Lozenge shape when prefix or suffix is present
+    &__widget {
+      &.has-scale-step-prefix,
+      &.has-scale-step-suffix {
+        .slider__number,
+        .slider__number-selection,
+        .slider__number-model-answer {
+          width: auto;
+          min-width: 2.5rem;
+          padding: 0 0.5rem;
+          border-radius: @item-ui-border-radius;
+          white-space: nowrap;
+          line-height: normal;
+        }
       }
+    }
+  }
+
+  &__scale-step-prefix,
+  &__scale-step-suffix {
+    display: none;
+
+    @media (min-width: @slider-affix-breakpoint) {
+      display: inline;
     }
   }
 
