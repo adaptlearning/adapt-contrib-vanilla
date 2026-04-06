@@ -28,6 +28,10 @@
         "_small": ""
     },
     "_pageHeader": {
+        "_graphic": {
+            "_src": "",
+            "alt": ""
+        },
         "_textAlignment": {
             "_title": "",
             "_subtitle": "",

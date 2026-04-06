@@ -143,6 +143,31 @@
               "title": "Header",
               "default": {},
               "properties": {
+                "_graphic": {
+                  "type": "object",
+                  "title": "Header image",
+                  "default": {},
+                  "properties": {
+                    "_src": {
+                      "type": "string",
+                      "title": "Source",
+                      "description": "This image will appear above the page header title",
+                      "_backboneForms": {
+                        "type": "Asset",
+                        "media": "image"
+                      }
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alternative text",
+                      "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+                      "default": "",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    }
+                  }
+                },
                 "_textAlignment": {
                   "type": "object",
                   "title": "Text alignment",
