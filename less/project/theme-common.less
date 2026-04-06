@@ -81,6 +81,45 @@
 
 }
 
+// Header color mixin
+// Add to menu/page/article/block to enable
+// e.g. 'header-color transparent-dark'
+// Note: both arguments must be predefined variables
+// --------------------------------------------------
+.header-color-mixin(black, white);
+.header-color-mixin(background, background-inverted);
+.header-color-mixin(transparent-light, font-color);
+.header-color-mixin(transparent-dark, font-color-inverted);
+
+.header-color-mixin(@color, @color-inverted) {
+
+.header-color.@{color} {
+  .menu,
+  .page,
+  .article,
+  .block {
+    &__header {
+      background-color: @@color;
+    }
+  }
+
+  .menu,
+  .page,
+  .article,
+  .block {
+    &__title,
+    &__subtitle,
+    &__body,
+    &__body a,
+    &__instruction,
+    &__instruction a {
+      color: @@color-inverted;
+    }
+  }
+}
+
+}
+
 // styles associated with _textAlignment property
 // --------------------------------------------------
 .text-align-mixin(page);
