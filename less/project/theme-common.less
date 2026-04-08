@@ -94,19 +94,14 @@
 .header-color-mixin(@color, @color-inverted) {
 
 .header-color.@{color} {
-  .menu,
-  .page,
-  .article,
-  .block {
+  &.menu .menu,
+  &.page .page,
+  &.article .article,
+  &.block .block {
     &__header {
       background-color: @@color;
     }
-  }
 
-  .menu,
-  .page,
-  .article,
-  .block {
     &__title,
     &__subtitle,
     &__body,
