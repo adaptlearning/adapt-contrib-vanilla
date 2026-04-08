@@ -4,7 +4,7 @@
 
 // Background color mixin
 // Can be added to course, contentObject, article, block, or component to enable
-// e.g. 'bg-color black'
+// e.g. 'bg-color black' or 'bg-color bg-black' (prefixed, safe to combine with header-color)
 // Note: both arguments must be predefined variables
 // --------------------------------------------------
 .bg-color-mixin(black, white);
@@ -15,7 +15,8 @@
 
 .bg-color-mixin(@color, @color-inverted) {
 
-.bg-color.@{color} {
+.bg-color.@{color},
+.bg-color.bg-@{color} {
   background-color: @@color;
   color: @@color-inverted;
 
@@ -83,7 +84,7 @@
 
 // Header color mixin
 // Add to menu/page/article/block to enable
-// e.g. 'header-color transparent-dark'
+// e.g. 'header-color transparent-dark' or 'header-color header-transparent-dark' (prefixed, safe to combine with bg-color)
 // Note: both arguments must be predefined variables
 // --------------------------------------------------
 .header-color-mixin(black, white);
@@ -93,7 +94,8 @@
 
 .header-color-mixin(@color, @color-inverted) {
 
-.header-color.@{color} {
+.header-color.@{color},
+.header-color.header-@{color} {
   &.menu .menu,
   &.page .page,
   &.article .article,
