@@ -454,6 +454,44 @@
       }
     },
 
+    "_page": {
+      "type": "object",
+      "title": "Page",
+      "default": {},
+      "properties": {
+        "page-header-background-color": {
+          "type": "string",
+          "title": "Page header background colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "page-header-title-color": {
+          "type": "string",
+          "title": "Page header title colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "page-header-subtitle-color": {
+          "type": "string",
+          "title": "Page header subtitle colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "page-header-body-color": {
+          "type": "string",
+          "title": "Page header body colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        },
+        "page-header-instruction-color": {
+          "type": "string",
+          "title": "Page header instruction colour",
+          "default": "",
+          "_backboneForms": "ColourPicker"
+        }
+      }
+    },
+
     "_menu": {
       "type": "object",
       "title": "Menu",

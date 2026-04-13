@@ -462,6 +462,44 @@
         }
       },
 
+      "_page": {
+        "type": "object",
+        "required": false,
+        "title": "Page",
+        "properties": {
+          "page-header-background-color": {
+            "title": "Page header background colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "page-header-title-color": {
+            "title": "Page header title colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "page-header-subtitle-color": {
+            "title": "Page header subtitle colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "page-header-body-color": {
+            "title": "Page header body colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          },
+          "page-header-instruction-color": {
+            "title": "Page header instruction colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": ""
+          }
+        }
+      },
+
       "_menu": {
         "type": "object",
         "required": false,
