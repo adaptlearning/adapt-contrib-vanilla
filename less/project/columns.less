@@ -17,7 +17,7 @@
 
     // Additional styles required to extend column layout support to blocks
     // for consistency with component column styles in core/less/core/component.less
-    .block__container:has(.col-@{size}-@{iteration}) {
+    .block__container:has(.block.col-@{size}-@{iteration}) {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -32,14 +32,14 @@
 
     
     // Contain width of child blocks to 70rem (1120px), inline with default content width
-    .article .block__container:has(.col-@{size}-@{iteration}) {
+    .article .block__container:has(.block.col-@{size}-@{iteration}) {
       .l-container-responsive(@max-content-width);
     }
 
     // Optional article class 'extend-container'
     // Extend width of child blocks to max page width
     // --------------------------------------------------
-    .article.extend-container .block__container:has(.col-@{size}-@{iteration}) {
+    .article.extend-container .block__container:has(.block.col-@{size}-@{iteration}) {
       max-width: @max-page-width;
     }
   }
