@@ -4,7 +4,9 @@
 // course.json
 "_vanilla": {
     "_favIcon": {
-        "_src": ""
+        "_src": "",
+        "_svg": "",
+        "_appleTouch": ""
     }
 },
 
