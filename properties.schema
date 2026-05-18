@@ -1233,14 +1233,34 @@
                   "type": "object",
                   "required": false,
                   "legend": "FavIcon",
+                  "help": "Favicons appear in browser tabs, bookmarks, and on mobile devices when learners add your course to their home screen. The Image below is used as the base favicon and as a fallback for the Apple touch icon. Optionally provide an SVG for sharper rendering at any size, or a dedicated Apple touch icon for iOS home screens.",
                   "properties": {
                     "_src": {
                       "type": "string",
                       "required": false,
                       "default": "",
+                      "title": "Image",
                       "inputType": "Asset:image",
                       "validators": [],
-                      "help": "Select a favicon to improve user experience and enforce brand consistency. This will be displayed in places like your browser's address bar, page tabs and bookmarks menu. Usually, a favicon is 16 x 16 pixels in size and stored in the GIF, PNG, or ICO file format."
+                      "help": "Base favicon used in browser tabs and bookmarks. If a separate Apple touch icon is set below, use a 32 x 32 PNG. Otherwise this image is also used as the Apple touch icon, so use a 180 x 180 PNG."
+                    },
+                    "_svg": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "SVG icon",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Optional vector favicon. Modern browsers prefer this over the PNG when set, producing a sharper icon at any size. SVG only."
+                    },
+                    "_appleTouch": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Apple touch icon",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Optional dedicated icon for iOS home screens. PNG only, 180 x 180 pixels recommended. If empty, the Image above is used."
                     }
                   }
                 }
