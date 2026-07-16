@@ -163,7 +163,18 @@
 
 }
 
-// classes to hide content above / below medium breakpoint
+// classes to hide content at a given screen size (aligns with config.json _screenSize)
+// stack classes to hide across multiple sizes, e.g. class="hide-on-small hide-on-medium"
+// --------------------------------------------------
+.size-small .hide-on-small,
+.size-medium .hide-on-medium,
+.size-large .hide-on-large,
+.size-xlarge .hide-on-xlarge {
+  display: none;
+}
+
+// legacy classes, retained for backwards compatibility
+// prefer the screen-size classes above
 // --------------------------------------------------
 .hide-on-desktop {
   @media (min-width: @device-width-medium) {
