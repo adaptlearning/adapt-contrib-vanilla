@@ -20,7 +20,7 @@
   img {
     transition: transform @duration @easing;
 
-    .no-touch &:hover {
+    .no-touch:not(.is-prefers-reduced-motion) &:hover {
       transform: scale(@scale);
     }
   }
@@ -34,7 +34,7 @@
 // on smaller devices
 // https://github.com/adaptlearning/adapt_framework/issues/2675
 // --------------------------------------------------
-.has-animation {
+html:not(.is-prefers-reduced-motion) .has-animation {
   overflow: hidden;
 }
 
@@ -60,14 +60,20 @@
 .on-screen-anim(@selector; @opacity-before; @opacity-after; @transition-delay; @transform-before; @transform-after) {
   .@{selector}-before > div {
     opacity: @opacity-before;
-    transform: @transform-before;
     transition: all @animation-duration @animation-easing, visibility 0s linear 0s;
     transition-delay: @transition-delay;
+
+    html:not(.is-prefers-reduced-motion) & {
+      transform: @transform-before;
+    }
   }
 
   .@{selector}-after > div {
     opacity: @opacity-after;
-    transform: @transform-after;
+
+    html:not(.is-prefers-reduced-motion) & {
+      transform: @transform-after;
+    }
   }
 }
 
