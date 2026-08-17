@@ -82,6 +82,22 @@
     }
   }
 
+  // Move the toggle icon to the start of the button (default is the end)
+  &.has-icon-left &__btn {
+    padding-inline-start: @icon-size + (@item-padding * 2);
+    padding-inline-end: @item-padding;
+  }
+
+  &.has-icon-left:not(.is-center-aligned) &__icon {
+    right: auto;
+    left: @item-padding;
+
+    .dir-rtl & {
+      left: auto;
+      right: @item-padding;
+    }
+  }
+
   &__content {
     padding: @item-padding;
     border-radius: @item-border-radius;
