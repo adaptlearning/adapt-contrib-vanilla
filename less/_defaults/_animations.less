@@ -20,7 +20,9 @@
   img {
     transition: transform @duration @easing;
 
-    .no-touch &:hover {
+    // `no-touch` and `is-prefers-reduced-motion` are both set on `html`, so the reduced
+    // motion check belongs on the same compound selector rather than as an ancestor.
+    .no-touch:not(.is-prefers-reduced-motion) &:hover {
       transform: scale(@scale);
     }
   }
@@ -33,8 +35,11 @@
 // Add an overflow to the animation container to stop horizontal scrolling
 // on smaller devices
 // https://github.com/adaptlearning/adapt_framework/issues/2675
+//
+// Only needed while the element is translated. With reduced motion there is no transform, so the
+// clip is left off to avoid cutting a focus outline on an element at the container edge.
 // --------------------------------------------------
-.has-animation {
+html:not(.is-prefers-reduced-motion) .has-animation {
   overflow: hidden;
 }
 
@@ -57,17 +62,30 @@
 .on-screen-anim(fade-in-left; 0; 1; @animation-delay; translateX(-100px); translateX(0));
 .on-screen-anim(fade-in-right; 0; 1; @animation-delay; translateX(100px); translateX(0));
 
+// The opacity fade is applied unconditionally; only the transform is withheld when the learner
+// prefers reduced motion. Movement, scaling and parallax are what trigger vestibular discomfort,
+// a fade is not, so the entrance effect degrades rather than disappearing.
+//
+// Driven by core's `is-prefers-reduced-motion` html class rather than a bare
+// `@media (prefers-reduced-motion: reduce)` query, so that the course's
+// `_accessibility._options._isPrefersReducedMotionEnabled` setting stays in control.
 .on-screen-anim(@selector; @opacity-before; @opacity-after; @transition-delay; @transform-before; @transform-after) {
   .@{selector}-before > div {
     opacity: @opacity-before;
-    transform: @transform-before;
     transition: all @animation-duration @animation-easing, visibility 0s linear 0s;
     transition-delay: @transition-delay;
+
+    html:not(.is-prefers-reduced-motion) & {
+      transform: @transform-before;
+    }
   }
 
   .@{selector}-after > div {
     opacity: @opacity-after;
-    transform: @transform-after;
+
+    html:not(.is-prefers-reduced-motion) & {
+      transform: @transform-after;
+    }
   }
 }
 
