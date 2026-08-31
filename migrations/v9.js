@@ -182,7 +182,8 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
   mutateContent('adapt-contrib-vanilla - add _vanilla._minimumHeights._xlarge to block', async (content) => {
     blocks.forEach(block => {
       if (!_.has(block, '_vanilla._minimumHeights') || _.has(block, '_vanilla._minimumHeights._xlarge')) return;
-      block._vanilla._minimumHeights._xlarge = 0;
+      if (!block._vanilla._minimumHeights._large) return;
+      block._vanilla._minimumHeights._xlarge = block._vanilla._minimumHeights._large;
     });
     return true;
   });
@@ -199,17 +200,23 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
   mutateContent('adapt-contrib-vanilla - add _vanilla._pageHeader._minimumHeights._xlarge to contentObject', async (content) => {
     contentObjects.forEach(contentObject => {
       if (!_.has(contentObject, '_vanilla._pageHeader._minimumHeights') || _.has(contentObject, '_vanilla._pageHeader._minimumHeights._xlarge')) return;
-      contentObject._vanilla._pageHeader._minimumHeights._xlarge = 0;
+      if (!contentObject._vanilla._pageHeader._minimumHeights._large) return;
+      contentObject._vanilla._pageHeader._minimumHeights._xlarge = contentObject._vanilla._pageHeader._minimumHeights._large;
     });
     return true;
   });
 
+  // _xlarge is carried over from _large where _large is set, and left unset otherwise
+  // so themeView.js's `?? _small` fallback still applies. Where _large is empty the key
+  // must be absent; where it is set, _xlarge must be present. The value is not compared,
+  // because an _xlarge already authored on the content is skipped by the mutation's
+  // idempotency guard and legitimately differs from _large.
+  const isXlargeResolved = (values) => values._large ? _.has(values, '_xlarge') : !_.has(values, '_xlarge');
+
   checkContent('adapt-contrib-vanilla - check _vanilla._backgroundImage._xlarge', async (content) => {
     const isValid = [...articles, ...blocks, ...contentObjects].every(item => {
       if (!_.has(item, '_vanilla._backgroundImage')) return true;
-      const image = item._vanilla._backgroundImage;
-      // _large carried over where set, left unset otherwise so the _small fallback applies
-      return image._large ? image._xlarge === image._large : !_.has(image, '_xlarge');
+      return isXlargeResolved(item._vanilla._backgroundImage);
     });
     if (!isValid) throw new Error('adapt-contrib-vanilla - _vanilla._backgroundImage._xlarge not carried over from _large');
     return true;
@@ -222,24 +229,29 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
   });
 
   checkContent('adapt-contrib-vanilla - check block._vanilla._minimumHeights._xlarge', async (content) => {
-    const isValid = blocks.every(block => !_.has(block, '_vanilla._minimumHeights') || typeof block._vanilla._minimumHeights._xlarge === 'number');
-    if (!isValid) throw new Error('adapt-contrib-vanilla - block._vanilla._minimumHeights._xlarge not added');
+    const isValid = blocks.every(block => {
+      if (!_.has(block, '_vanilla._minimumHeights')) return true;
+      return isXlargeResolved(block._vanilla._minimumHeights);
+    });
+    if (!isValid) throw new Error('adapt-contrib-vanilla - block._vanilla._minimumHeights._xlarge not carried over from _large');
     return true;
   });
 
   checkContent('adapt-contrib-vanilla - check contentObject._vanilla._pageHeader._backgroundImage._xlarge', async (content) => {
     const isValid = contentObjects.every(contentObject => {
       if (!_.has(contentObject, '_vanilla._pageHeader._backgroundImage')) return true;
-      const image = contentObject._vanilla._pageHeader._backgroundImage;
-      return image._large ? image._xlarge === image._large : !_.has(image, '_xlarge');
+      return isXlargeResolved(contentObject._vanilla._pageHeader._backgroundImage);
     });
     if (!isValid) throw new Error('adapt-contrib-vanilla - contentObject._vanilla._pageHeader._backgroundImage._xlarge not carried over from _large');
     return true;
   });
 
   checkContent('adapt-contrib-vanilla - check contentObject._vanilla._pageHeader._minimumHeights._xlarge', async (content) => {
-    const isValid = contentObjects.every(contentObject => !_.has(contentObject, '_vanilla._pageHeader._minimumHeights') || typeof contentObject._vanilla._pageHeader._minimumHeights._xlarge === 'number');
-    if (!isValid) throw new Error('adapt-contrib-vanilla - contentObject._vanilla._pageHeader._minimumHeights._xlarge not added');
+    const isValid = contentObjects.every(contentObject => {
+      if (!_.has(contentObject, '_vanilla._pageHeader._minimumHeights')) return true;
+      return isXlargeResolved(contentObject._vanilla._pageHeader._minimumHeights);
+    });
+    if (!isValid) throw new Error('adapt-contrib-vanilla - contentObject._vanilla._pageHeader._minimumHeights._xlarge not carried over from _large');
     return true;
   });
 
@@ -259,7 +271,15 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
     content: [
       { _id: 'a-100', _type: 'article', _vanilla: { _backgroundImage: { _large: 'desktop.jpg', _medium: 'tablet.jpg', _small: 'mobile.jpg' } } },
       { _id: 'b-100', _type: 'block', _vanilla: { _backgroundImage: { _large: 'desktop.jpg', _medium: '', _small: '' }, _minimumHeights: { _large: 400, _medium: 0, _small: 0 } } },
-      { _id: 'co-100', _type: 'page', _vanilla: { _backgroundImage: { _large: '', _medium: '', _small: 'mobile.jpg' }, _pageHeader: { _backgroundImage: { _large: 'header.jpg', _medium: '', _small: '' } } } }
+      { _id: 'co-100', _type: 'page', _vanilla: { _backgroundImage: { _large: '', _medium: '', _small: 'mobile.jpg' }, _pageHeader: { _backgroundImage: { _large: 'header.jpg', _medium: '', _small: '' }, _minimumHeights: { _large: 300, _medium: 0, _small: 0 } } } }
+    ]
+  });
+
+  testSuccessWhere('correct version with a pre-existing _xlarge that differs from _large', {
+    fromPlugins: [{ name: 'adapt-contrib-vanilla', version: '9.6.13' }],
+    content: [
+      { _id: 'a-100', _type: 'article', _vanilla: { _backgroundImage: { _large: 'desktop.jpg', _medium: '', _small: '', _xlarge: 'custom-hd.jpg' } } },
+      { _id: 'b-100', _type: 'block', _vanilla: { _minimumHeights: { _large: 400, _medium: 0, _small: 0, _xlarge: 600 } } }
     ]
   });
 
