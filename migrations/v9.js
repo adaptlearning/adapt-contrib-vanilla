@@ -156,13 +156,20 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
     return articles.length || blocks.length || contentObjects.length;
   });
 
-  // _backgroundImage._xlarge is deliberately left unset, here and on _pageHeader below.
-  // themeView.js reads `_backgroundImage[`_${device.screenSize}`] ?? _backgroundImage._small`
-  // and `??` only falls through on nullish, so writing '' would suppress that fallback and
-  // blank the background at >=1280px for any course relying on it. The schema gives _xlarge
-  // no default for the same reason, so leaving it absent matches a freshly authored course.
-  // _responsiveClasses._xlarge and _minimumHeights._xlarge do carry schema defaults ('' and
-  // 0), so those are set below.
+  // Introducing _xlarge caps the large breakpoint at 1279px, so content that previously
+  // rendered as 'large' at >=1280px now resolves to 'xlarge'. Carry _large over to preserve
+  // what those courses displayed. Where _large is empty there is nothing to carry, so leave
+  // _xlarge unset: themeView.js reads `_backgroundImage[`_${device.screenSize}`] ??
+  // _backgroundImage._small` and `??` only falls through on nullish, so an absent key keeps
+  // the _small fallback working for courses authored small-first.
+  mutateContent('adapt-contrib-vanilla - add _vanilla._backgroundImage._xlarge to article, block and contentObject', async (content) => {
+    [...articles, ...blocks, ...contentObjects].forEach(item => {
+      if (!_.has(item, '_vanilla._backgroundImage') || _.has(item, '_vanilla._backgroundImage._xlarge')) return;
+      if (!item._vanilla._backgroundImage._large) return;
+      item._vanilla._backgroundImage._xlarge = item._vanilla._backgroundImage._large;
+    });
+    return true;
+  });
 
   mutateContent('adapt-contrib-vanilla - add _vanilla._responsiveClasses._xlarge to article, block and contentObject', async (content) => {
     [...articles, ...blocks, ...contentObjects].forEach(item => {
@@ -180,6 +187,15 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
     return true;
   });
 
+  mutateContent('adapt-contrib-vanilla - add _vanilla._pageHeader._backgroundImage._xlarge to contentObject', async (content) => {
+    contentObjects.forEach(contentObject => {
+      if (!_.has(contentObject, '_vanilla._pageHeader._backgroundImage') || _.has(contentObject, '_vanilla._pageHeader._backgroundImage._xlarge')) return;
+      if (!contentObject._vanilla._pageHeader._backgroundImage._large) return;
+      contentObject._vanilla._pageHeader._backgroundImage._xlarge = contentObject._vanilla._pageHeader._backgroundImage._large;
+    });
+    return true;
+  });
+
   mutateContent('adapt-contrib-vanilla - add _vanilla._pageHeader._minimumHeights._xlarge to contentObject', async (content) => {
     contentObjects.forEach(contentObject => {
       if (!_.has(contentObject, '_vanilla._pageHeader._minimumHeights') || _.has(contentObject, '_vanilla._pageHeader._minimumHeights._xlarge')) return;
@@ -188,9 +204,14 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
     return true;
   });
 
-  checkContent('adapt-contrib-vanilla - check _vanilla._backgroundImage._xlarge is left unset', async (content) => {
-    const isValid = [...articles, ...blocks, ...contentObjects].every(item => !_.has(item, '_vanilla._backgroundImage') || !_.has(item, '_vanilla._backgroundImage._xlarge'));
-    if (!isValid) throw new Error('adapt-contrib-vanilla - _vanilla._backgroundImage._xlarge should be left unset so the _small fallback applies');
+  checkContent('adapt-contrib-vanilla - check _vanilla._backgroundImage._xlarge', async (content) => {
+    const isValid = [...articles, ...blocks, ...contentObjects].every(item => {
+      if (!_.has(item, '_vanilla._backgroundImage')) return true;
+      const image = item._vanilla._backgroundImage;
+      // _large carried over where set, left unset otherwise so the _small fallback applies
+      return image._large ? image._xlarge === image._large : !_.has(image, '_xlarge');
+    });
+    if (!isValid) throw new Error('adapt-contrib-vanilla - _vanilla._backgroundImage._xlarge not carried over from _large');
     return true;
   });
 
@@ -206,9 +227,13 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
     return true;
   });
 
-  checkContent('adapt-contrib-vanilla - check contentObject._vanilla._pageHeader._backgroundImage._xlarge is left unset', async (content) => {
-    const isValid = contentObjects.every(contentObject => !_.has(contentObject, '_vanilla._pageHeader._backgroundImage') || !_.has(contentObject, '_vanilla._pageHeader._backgroundImage._xlarge'));
-    if (!isValid) throw new Error('adapt-contrib-vanilla - contentObject._vanilla._pageHeader._backgroundImage._xlarge should be left unset so the _small fallback applies');
+  checkContent('adapt-contrib-vanilla - check contentObject._vanilla._pageHeader._backgroundImage._xlarge', async (content) => {
+    const isValid = contentObjects.every(contentObject => {
+      if (!_.has(contentObject, '_vanilla._pageHeader._backgroundImage')) return true;
+      const image = contentObject._vanilla._pageHeader._backgroundImage;
+      return image._large ? image._xlarge === image._large : !_.has(image, '_xlarge');
+    });
+    if (!isValid) throw new Error('adapt-contrib-vanilla - contentObject._vanilla._pageHeader._backgroundImage._xlarge not carried over from _large');
     return true;
   });
 
@@ -226,6 +251,15 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
       { _id: 'a-100', _type: 'article', _vanilla: { _backgroundImage: { _large: '', _medium: '', _small: '' }, _responsiveClasses: { _large: '', _medium: '', _small: '' } } },
       { _id: 'b-100', _type: 'block', _vanilla: { _backgroundImage: { _large: '', _medium: '', _small: '' }, _minimumHeights: { _large: 0, _medium: 0, _small: 0 }, _responsiveClasses: { _large: '', _medium: '', _small: '' } } },
       { _id: 'co-100', _type: 'page', _vanilla: { _backgroundImage: { _large: '', _medium: '', _small: '' }, _responsiveClasses: { _large: '', _medium: '', _small: '' }, _pageHeader: { _backgroundImage: { _large: '', _medium: '', _small: '' }, _minimumHeights: { _large: 0, _medium: 0, _small: 0 } } } }
+    ]
+  });
+
+  testSuccessWhere('correct version with authored background images to carry over to _xlarge', {
+    fromPlugins: [{ name: 'adapt-contrib-vanilla', version: '9.6.13' }],
+    content: [
+      { _id: 'a-100', _type: 'article', _vanilla: { _backgroundImage: { _large: 'desktop.jpg', _medium: 'tablet.jpg', _small: 'mobile.jpg' } } },
+      { _id: 'b-100', _type: 'block', _vanilla: { _backgroundImage: { _large: 'desktop.jpg', _medium: '', _small: '' }, _minimumHeights: { _large: 400, _medium: 0, _small: 0 } } },
+      { _id: 'co-100', _type: 'page', _vanilla: { _backgroundImage: { _large: '', _medium: '', _small: 'mobile.jpg' }, _pageHeader: { _backgroundImage: { _large: 'header.jpg', _medium: '', _small: '' } } } }
     ]
   });
 
