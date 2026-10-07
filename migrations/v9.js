@@ -145,7 +145,7 @@ describe('adapt-contrib-vanilla - v9.6.0 > v9.6.13', async () => {
 });
 
 describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
-  let articles, blocks, contentObjects;
+  let articles, blocks, contentObjects, authoredXlarge;
 
   whereFromPlugin('adapt-contrib-vanilla - from v9.6.13', { name: 'adapt-contrib-vanilla', version: '<9.6.15' });
 
@@ -153,6 +153,9 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
     articles = content.filter(item => item._type === 'article');
     blocks = content.filter(item => item._type === 'block');
     contentObjects = content.filter(item => ['page', 'menu'].includes(item._type));
+    // Record the _xlarge values already authored on the content before the mutations run
+    authoredXlarge = [...articles, ...blocks, ...contentObjects].flatMap(item => ['_backgroundImage', '_minimumHeights', '_pageHeader._backgroundImage', '_pageHeader._minimumHeights']
+      .filter(key => _.has(item, `_vanilla.${key}._xlarge`)).map(key => `${item._id}${key}`));
     return articles.length || blocks.length || contentObjects.length;
   });
 
@@ -207,16 +210,19 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
   });
 
   // _xlarge is carried over from _large where _large is set, and left unset otherwise
-  // so themeView.js's `?? _small` fallback still applies. Where _large is empty the key
-  // must be absent; where it is set, _xlarge must be present. The value is not compared,
-  // because an _xlarge already authored on the content is skipped by the mutation's
-  // idempotency guard and legitimately differs from _large.
-  const isXlargeResolved = (values) => values._large ? _.has(values, '_xlarge') : !_.has(values, '_xlarge');
+  // so themeView.js's `?? _small` fallback still applies. Where _large is set, _xlarge must
+  // equal it; where _large is empty the key must be absent. An _xlarge already authored on
+  // the content is skipped by the mutation's idempotency guard, so it is exempt from both.
+  const isXlargeResolved = (item, key) => {
+    if (authoredXlarge.includes(`${item._id}${key}`)) return true;
+    const values = _.get(item, `_vanilla.${key}`);
+    return values._large ? values._xlarge === values._large : !_.has(values, '_xlarge');
+  };
 
   checkContent('adapt-contrib-vanilla - check _vanilla._backgroundImage._xlarge', async (content) => {
     const isValid = [...articles, ...blocks, ...contentObjects].every(item => {
       if (!_.has(item, '_vanilla._backgroundImage')) return true;
-      return isXlargeResolved(item._vanilla._backgroundImage);
+      return isXlargeResolved(item, '_backgroundImage');
     });
     if (!isValid) throw new Error('adapt-contrib-vanilla - _vanilla._backgroundImage._xlarge not carried over from _large');
     return true;
@@ -231,7 +237,7 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
   checkContent('adapt-contrib-vanilla - check block._vanilla._minimumHeights._xlarge', async (content) => {
     const isValid = blocks.every(block => {
       if (!_.has(block, '_vanilla._minimumHeights')) return true;
-      return isXlargeResolved(block._vanilla._minimumHeights);
+      return isXlargeResolved(block, '_minimumHeights');
     });
     if (!isValid) throw new Error('adapt-contrib-vanilla - block._vanilla._minimumHeights._xlarge not carried over from _large');
     return true;
@@ -240,7 +246,7 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
   checkContent('adapt-contrib-vanilla - check contentObject._vanilla._pageHeader._backgroundImage._xlarge', async (content) => {
     const isValid = contentObjects.every(contentObject => {
       if (!_.has(contentObject, '_vanilla._pageHeader._backgroundImage')) return true;
-      return isXlargeResolved(contentObject._vanilla._pageHeader._backgroundImage);
+      return isXlargeResolved(contentObject, '_pageHeader._backgroundImage');
     });
     if (!isValid) throw new Error('adapt-contrib-vanilla - contentObject._vanilla._pageHeader._backgroundImage._xlarge not carried over from _large');
     return true;
@@ -249,7 +255,7 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
   checkContent('adapt-contrib-vanilla - check contentObject._vanilla._pageHeader._minimumHeights._xlarge', async (content) => {
     const isValid = contentObjects.every(contentObject => {
       if (!_.has(contentObject, '_vanilla._pageHeader._minimumHeights')) return true;
-      return isXlargeResolved(contentObject._vanilla._pageHeader._minimumHeights);
+      return isXlargeResolved(contentObject, '_pageHeader._minimumHeights');
     });
     if (!isValid) throw new Error('adapt-contrib-vanilla - contentObject._vanilla._pageHeader._minimumHeights._xlarge not carried over from _large');
     return true;
@@ -280,6 +286,15 @@ describe('adapt-contrib-vanilla - v9.6.13 > v9.6.15', async () => {
     content: [
       { _id: 'a-100', _type: 'article', _vanilla: { _backgroundImage: { _large: 'desktop.jpg', _medium: '', _small: '', _xlarge: 'custom-hd.jpg' } } },
       { _id: 'b-100', _type: 'block', _vanilla: { _minimumHeights: { _large: 400, _medium: 0, _small: 0, _xlarge: 600 } } }
+    ]
+  });
+
+  testSuccessWhere('correct version with a pre-existing _xlarge and an empty _large', {
+    fromPlugins: [{ name: 'adapt-contrib-vanilla', version: '9.6.13' }],
+    content: [
+      { _id: 'a-100', _type: 'article', _vanilla: { _backgroundImage: { _large: '', _medium: '', _small: '', _xlarge: '' } } },
+      { _id: 'b-100', _type: 'block', _vanilla: { _minimumHeights: { _large: 0, _medium: 0, _small: 0, _xlarge: 0 } } },
+      { _id: 'co-100', _type: 'page', _vanilla: { _pageHeader: { _backgroundImage: { _large: '', _medium: '', _small: '', _xlarge: '' }, _minimumHeights: { _large: 0, _medium: 0, _small: 0, _xlarge: 0 } } } }
     ]
   });
 
