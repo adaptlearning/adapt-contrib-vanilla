@@ -6,6 +6,13 @@
     border-bottom: 1px solid @drawer-item-hover;
   }
 
+  // Visible drawer heading (core#665)
+  &__title:not(.aria-label) {
+    padding: @drawer-item-padding-ver @drawer-item-padding-hoz;
+    border-bottom: 1px solid @drawer-item-hover;
+    .drawer-title;
+  }
+
   &__btn {
     .ui-btn-ctrl;
 
