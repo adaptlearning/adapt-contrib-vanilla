@@ -82,6 +82,36 @@
     }
   }
 
+  // Move the toggle icon to the start of the button (default is the end)
+  &.has-icon-left:not(.is-center-aligned) &__btn {
+    padding-inline-start: @icon-size + (@item-padding * 2);
+    padding-inline-end: @item-padding;
+  }
+
+  &.has-icon-left:not(.is-center-aligned) &__icon {
+    right: auto;
+    left: @item-padding;
+
+    .dir-rtl & {
+      left: auto;
+      right: @item-padding;
+    }
+  }
+
+  // With a title icon too, keep the toggle at the edge and move the title icon one slot inward
+  &.has-icon-left:not(.is-center-aligned) &__btn.has-title-icon {
+    padding-inline-start: (@icon-size * 2) + (@item-padding * 3);
+  }
+
+  &.has-icon-left:not(.is-center-aligned) &__title-icon {
+    left: @icon-size + (@item-padding * 2);
+
+    .dir-rtl & {
+      left: auto;
+      right: @icon-size + (@item-padding * 2);
+    }
+  }
+
   &__content {
     padding: @item-padding;
     border-radius: @item-border-radius;
